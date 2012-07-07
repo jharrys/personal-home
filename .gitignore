@@ -48,7 +48,8 @@ pgadmin.log
 .s*
 .t*
 .u*
-.v*
+# .v* - for .vimrc
+.viminfo
 .w*
 .x*
 .y*
