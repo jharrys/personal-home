@@ -1,0 +1,56 @@
+Host *
+ControlMaster auto
+ControlPath ~/.ssh/connections/%r_%h_%p
+
+Host mpivm2
+HostName mpivm2.chpc.utah.edu
+Compression yes
+PermitLocalCommand yes
+ForwardX11Trusted yes
+
+Host cibuild1
+HostName mpivm2.chpc.utah.edu
+User mpici
+IdentityFile ~/.ssh/mpici.rsa_id
+Compression yes
+PermitLocalCommand yes
+ForwardX11Trusted yes
+
+Host cibuild2
+HostName mpivm3.chpc.utah.edu
+IdentityFile ~/.ssh/mpici.rsa_id
+User mpici
+Compression yes
+PermitLocalCommand yes
+ForwardX11Trusted yes
+
+Host mpivm3
+HostName mpivm3.chpc.utah.edu
+Compression yes
+PermitLocalCommand yes
+ForwardX11Trusted yes
+
+Host mpigrant
+HostName mpigrant
+User john
+PermitLocalCommand yes
+ForwardX11Trusted yes
+
+Host Xmpigrant
+HostName mpigrant
+PermitLocalCommand yes
+ForwardX11Trusted yes
+ForwardX11 yes
+
+Host mirthmatch
+HostName mirthmatch
+Compression yes
+PermitLocalCommand yes
+ForwardX11Trusted yes
+
+Host mirthconn
+HostName mpimconn
+Compression yes
+PermitLocalCommand yes
+ForwardX11Trusted yes
+ForwardX11 yes

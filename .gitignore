@@ -1,0 +1,81 @@
+# My Unix Home
+
+#
+# Temp Stuff
+#
+*~
+.*~
+*.swp
+*.bak
+
+#
+# Miscellaneous
+#
+.CFUserTextEncoding
+.DCOPserver*
+.*DS_Store*
+.ICEauthority
+.IntelliJ*
+.JIRAClient
+.MacOSX
+.Trash
+.X*
+pgadmin.log
+
+#
+# Dot files
+#
+.a*
+.bash_history
+.boswars
+.c*
+.d*
+.e*
+.f*
+# .g* - .gitignore and others should not be ignored
+.gnupg
+.h*
+.i*
+# .j* - I have the .jfunctions
+.k*
+.l*
+.m*
+.n*
+.o*
+.p*
+.q*
+.r*
+.s*
+.t*
+.u*
+.v*
+.w*
+.x*
+.y*
+.z*
+
+#
+# Directories to ignore
+#
+Applications
+Archives
+Code Splices
+Conferences
+Desktop
+Documents
+Downloads
+EBooks
+Library
+Movies
+Music
+Network
+nethome
+Pictures
+Public
+PurchasedSoftware
+Sites
+Templates
+Tooling
+Wallpaper
+WorkCenter
+Workspaces

@@ -1,0 +1,41 @@
+[gui]
+	recentrepo = /home/john/Workspace/github/felix
+	recentrepo = /home/john/Workspace/github/felix
+[user]
+	name = John Harris
+	email = john.a.harris@utah.edu
+[core]
+	autocrlf = input
+	excludesfile = /Users/john/.gitignore_global
+[color]
+	branch = auto
+	status = auto
+	diff = auto
+	ui = auto
+[alias]
+	visual = !gitk&
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	gdiff = difftool -g --
+	dlog = log --oneline --decorate --graph
+	pushtag = push --tags
+[merge]
+	tool = extMerge
+[mergetool "extMerge"]
+	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	trustExitCode = false
+[diff]
+	guitool = opendiff
+[diff "docx"]
+	textconv = git.docx.textconv
+[diff "doc"]
+	textconv = antiword
+[diff "ghost"]
+	textconv = ps2ascii
+[diff "strings"]
+	textconv = strings

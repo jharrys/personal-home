@@ -1,0 +1,2 @@
+nvidia-xconfig --add-argb-glx-visuals --allow-glx-with-composite --composite --damage-events --disable-glx-root-clipping --dynamic-twinview --flip --randr-rotation --render-accel --render-extension
+# --only-one-x-screen --no-xinerama

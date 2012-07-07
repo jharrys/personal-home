@@ -1,0 +1,354 @@
+#!/bin/bash
+
+######################################################
+###                                                ###
+### From David Richardson comes the following gem: ###
+###        "The Most Finest Firewall"              ###
+###   (to rephrase a sign seen on Acts of Gord)    ###
+###                                                ###
+###             Version 2005-04-29                 ###
+###                                                ###
+######################################################
+
+######################################################
+###                                                ###
+### All the real config information is futher down ###
+###                                                ###
+######################################################
+
+# Flush the current rules
+/sbin/service iptables stop
+
+# Save the current rules
+/bin/mv /etc/sysconfig/iptables /etc/sysconfig/iptables.old
+
+### Default firewall from RHEL4 install, allowing ssh
+### (for information only)
+#
+# *filter
+# :INPUT ACCEPT [0:0]
+# :FORWARD ACCEPT [0:0]
+# :OUTPUT ACCEPT [0:0]
+# :RH-Firewall-1-INPUT - [0:0]
+# -A INPUT -j RH-Firewall-1-INPUT
+# -A FORWARD -j RH-Firewall-1-INPUT
+# -A RH-Firewall-1-INPUT -i lo -j ACCEPT
+# -A RH-Firewall-1-INPUT -p icmp --icmp-type any -j ACCEPT
+# -A RH-Firewall-1-INPUT -p 50 -j ACCEPT
+# -A RH-Firewall-1-INPUT -p 51 -j ACCEPT
+# -A RH-Firewall-1-INPUT -p udp --dport 5353 -d 224.0.0.251 -j ACCEPT
+# -A RH-Firewall-1-INPUT -p udp -m udp --dport 631 -j ACCEPT
+# -A RH-Firewall-1-INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+# -A RH-Firewall-1-INPUT -j REJECT --reject-with icmp-host-prohibited
+# COMMIT
+
+####################################################
+###                                              ###
+###       Now define the service chains          ###
+###    These chains are just infrastructure      ###
+### Feel free to comment out any you don't need  ###
+###   ("iptables -L" will be cleaner if you do)  ###
+###        Feel free to define new ones          ###
+###  Or feel free to skip this section entirely  ###
+###                                              ###
+####################################################
+
+# ssh is tcp/22
+iptables -N SSH
+iptables -A SSH -p tcp --dport 22  -j ACCEPT
+
+# web is tcp/8080, tcp/443, tcp/80
+iptables -N WEB
+iptables -A WEB -p tcp --dport 80  -j ACCEPT
+iptables -A WEB -p tcp --dport 8080  -j ACCEPT
+iptables -A WEB -p tcp --dport 443 -j ACCEPT
+
+#snmp
+iptables -A WEB -p tcp --dport 161 -j ACCEPT
+iptables -A WEB -p udp --dport 161 -j ACCEPT
+
+# arkeia is tcp/617
+iptables -N ARKEIA
+iptables -A ARKEIA -p tcp --dport 617 -j ACCEPT
+
+# samba is udp/137, udp/138, tcp/139, tcp/445
+iptables -N SAMBA
+iptables -A SAMBA -p udp --dport 137 -j ACCEPT
+iptables -A SAMBA -p udp --dport 138 -j ACCEPT
+iptables -A SAMBA -p tcp --dport 139 -j ACCEPT
+iptables -A SAMBA -p tcp --dport 445 -j ACCEPT
+
+# cups is tcp/631
+#iptables -N CUPS
+#iptables -A CUPS -p tcp --dport 631 -j ACCEPT
+
+# portmap is port 111, both tcp and udp
+# portmap is not needed for nfs4
+iptables -N PORTMAP
+iptables -A PORTMAP -p tcp --dport 111 -j ACCEPT
+iptables -A PORTMAP -p udp --dport 111 -j ACCEPT
+
+# nfs4 is tcp and udp, port 2049 
+iptables -N NFS4
+iptables -A NFS4 -p tcp --dport 2049 -j ACCEPT
+iptables -A NFS4 -p udp --dport 2049 -j ACCEPT
+
+# nfs is nfs (2049), statd (4000), lockd (4001), and mountd (4002)
+  # To force those services to those ports, add
+  # >STATD_PORT=40000
+  # >LOCKD_TCPPORT=40001
+  # >LOCKD_UDPPORT=40001
+  # >MOUNTD_PORT=40002
+  # to /etc/sysconfig/nfs
+iptables -N NFS
+iptables -A NFS -p tcp --dport 2049 -j ACCEPT
+iptables -A NFS -p udp --dport 2049 -j ACCEPT
+iptables -A NFS -p tcp --dport 40000 -j ACCEPT
+iptables -A NFS -p udp --dport 40000 -j ACCEPT
+iptables -A NFS -p tcp --dport 40001 -j ACCEPT
+iptables -A NFS -p udp --dport 40001 -j ACCEPT
+iptables -A NFS -p tcp --dport 40002 -j ACCEPT
+iptables -A NFS -p udp --dport 40002 -j ACCEPT
+iptables -A NFS -p tcp --dport 40003 -j ACCEPT
+iptables -A NFS -p udp --dport 40003 -j ACCEPT
+iptables -A NFS -p tcp --dport 40004 -j ACCEPT
+iptables -A NFS -p udp --dport 40004 -j ACCEPT
+iptables -A NFS -p tcp --dport 40005 -j ACCEPT
+iptables -A NFS -p udp --dport 40005 -j ACCEPT
+
+# nis is ypserv (716), yppasswdd (715 udp only)
+# for ypserv add YPSERV_ARGS in /etc/sysconfig/network
+# for ypxfrd add YPXFRD_ARGS in /etc/sysconfig/network
+# for yppasswdd add YPPASSWDD_ARGS in /etc/sysconfig/yppasswdd
+# for ypbind add OTHER_YPBIND_OPTS in /etc/sysconfig/ypbind
+iptables -N NIS
+iptables -A NIS -p tcp --dport 716 -j ACCEPT
+iptables -A NIS -p udp --dport 716 -j ACCEPT
+iptables -A NIS -p udp --dport 715 -j ACCEPT
+iptables -A NIS -p tcp --dport 697 -j ACCEPT
+iptables -A NIS -p udp --dport 697 -j ACCEPT
+iptables -A NIS -p tcp --dport 718 -j ACCEPT
+iptables -A NIS -p udp --dport 718 -j ACCEPT
+
+# 3dm is tcp/8888
+#iptables -N 3DM
+#iptables -A 3DM -p tcp --dport 8888 -j ACCEPT
+
+# mail is smtp (tcp/25), pop3 (tcp/110), and imap4 (tcp/143)
+iptables -N MAIL
+iptables -A MAIL -p tcp --dport 25  -j ACCEPT
+#iptables -A MAIL -p tcp --dport 110 -j ACCEPT
+#iptables -A MAIL -p tcp --dport 143 -j ACCEPT
+
+# encmail is the encrypted mail services:
+# smtps (tcp/465 or tcp/587), pop3s (tcp/995), and imaps (tcp/993)
+iptables -N ENCMAIL
+iptables -A ENCMAIL -p tcp --dport 465 -j ACCEPT
+iptables -A ENCMAIL -p tcp --dport 587 -j ACCEPT
+#iptables -A ENCMAIL -p tcp --dport 995 -j ACCEPT
+#iptables -A ENCMAIL -p tcp --dport 993 -j ACCEPT
+
+# dns is udp/53 and tcp/53 (zone transfers and large queries use tcp)
+iptables -N DNS
+iptables -A DNS -p tcp --dport 53 -j ACCEPT
+iptables -A DNS -p udp --dport 53 -j ACCEPT
+
+# mysql is tcp/3306
+iptables -N MYSQL
+iptables -A MYSQL -p tcp --dport 3306 -j ACCEPT
+
+# postgres is tcp/5432
+iptables -N POSTGRES
+iptables -A POSTGRES -p tcp --dport 5432 -j ACCEPT
+
+# ipsec is protocols 50 and 51
+iptables -N IPSEC
+iptables -A IPSEC -p 50 -j ACCEPT
+iptables -A IPSEC -p 51 -j ACCEPT
+
+# icmp covers both ping and traceroute
+iptables -N PING
+iptables -A PING -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A PING -p udp  --dport traceroute:33498 -j ACCEPT
+
+# dingo webservice
+#iptables -N DINGOWS
+#iptables -A DINGOWS -p tcp --dport 8080 -j ACCEPT
+
+# AccessGrid Stuff
+#iptables -N ACCESSGRID
+#iptables -A ACCESSGRID 
+
+# FURTHeR Access
+#iptables -N FURTHER
+#iptables -A FURTHER -j ACCEPT
+#iptables -A FURTHER -p tcp --dport 8101 -j ACCEPT
+#iptables -A FURTHER -p tcp --dport 9000 -j ACCEPT
+
+##################################################
+###                                            ###
+###     Actually configure the firewall        ###
+### You should prolly start reading here again ###
+###                                            ###
+##################################################
+
+# First set policy
+# This is good basic policy for most machines
+iptables -P INPUT   DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT  ACCEPT
+
+# Trust localhost
+iptables -A INPUT -i lo -j ACCEPT
+
+# AccessGrid Multicast
+#iptables -A INPUT -i eth1 -d 224.0.0.0/4 -j ACCEPT
+#iptables -A INPUT -i eth1 -d 233.0.0.0/4 -j ACCEPT
+
+# Trust our own interfaces, too
+###
+### Change the IP in the line below to your own IP ###
+###
+MYIP=`ip -f inet -o addr |grep -v " lo " |tr -s ' ' | awk '{ print $4 }' |awk -F'/' '{ print $1 }'`
+iptables -A INPUT -s $MYIP -d $MYIP -j ACCEPT
+
+# Allow established connections
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+### Here is where you should put any rules
+### you want processed before the general rules
+
+###
+### Now, split traffic from the input chain to the appropriate sub-chains ###
+###
+
+# For every group, we must:
+# 1) define a new chain for it
+# 2) send the appropriate traffic to it
+# 3) define what services are allowed on that chain
+
+# The following chains exist for accepting traffic related to a particular service.
+# To use these chains, just jump to it.
+# SSH      -- ssh server
+# WEB      -- web server
+# ARKEIA   -- arkeia client or server
+# SAMBA    -- samba (windows file sharing) server
+# CUPS     -- print server
+# PORTMAP  -- portmap, required for nfs (but not nfs4)
+# NFS4     -- nfs 4
+# NFS      -- nfs 2 or 3 (and all associated ports)
+# 3DM      -- 3ware configuration daemon
+# MAIL     -- mail servers (smtp, pop, imap) (and encrypted versions)
+# DNS      -- dns server
+# MYSQL    -- mysql server
+# POSTGRES -- postgresql server
+# IPSEC    -- ipsec
+# PING     -- ping and traceroute
+
+### The whitelist
+### Any machines on the whitelist will be trusted
+### The whitelist is processed before the blacklist
+# Create the chain
+iptables -N WHITELIST
+# Send traffic there
+# iptables -A INPUT -s 192.168.0.1 -j WHITELIST
+# JH 2010-08-17 harris.bmi.utah.edu is 155.101.230.139
+iptables -A INPUT -s 155.101.230.139 -j WHITELIST
+# Accept it
+iptables -A WHITELIST -j ACCEPT
+
+### The blacklist
+### Any machines you want to ignore entirely
+### The blacklist is processed after the whitelist
+# Create the check
+iptables -N BLACKLIST
+# Send traffic there
+# iptables -A INPUT -s 192.168.0.2 -j BLACKLIST
+# Drop it on the floor and pretend we never saw it
+iptables -A BLACKLIST -j DROP
+
+### The BMI networks
+# Create the chain
+iptables -N BMI
+# Send the traffic there
+iptables -A INPUT -s 155.101.230.0/24  -j BMI
+iptables -A INPUT -s 155.101.3.193  -j BMI
+iptables -A INPUT -s 155.101.3.194  -j BMI
+
+### The CHPC networks
+# Create the chain
+iptables -N CHPC
+# Send the traffic there
+iptables -A INPUT -s 155.101.8.0/24  -j CHPC
+iptables -A INPUT -s 155.101.3.0/24  -j CHPC
+iptables -A INPUT -s 155.101.16.0/24 -j CHPC
+iptables -A INPUT -s 155.101.31.0/24 -j CHPC
+iptables -A INPUT -s 155.101.172.0/24 -j CHPC
+iptables -A INPUT -s 155.101.208.0/24 -j CHPC
+iptables -A INPUT -s 155.101.230.0/24 -j CHPC
+iptables -A INPUT -s 155.101.240.0/24 -j CHPC
+iptables -A INPUT -s 155.101.242.0/25 -j CHPC
+iptables -A INPUT -s 155.101.243.0/24 -j CHPC
+iptables -A INPUT -s 155.100.0.0/16 -j CHPC
+
+# Define what we're going to accept
+#iptables -A CHPC -j 3DM
+#Open to stream server and SNMP
+##CHANGED 12/03/09 -- SL
+iptables -A CHPC -j SSH
+iptables -A CHPC -j MYSQL
+iptables -A CHPC -j POSTGRES
+
+### The INSCC Network
+# Create the chain
+iptables -N INSCC
+# Send the traffic there
+iptables -A INPUT -s 155.101.0.0/19  -j INSCC
+iptables -A INPUT -s 172.17.0.0/16   -j INSCC
+
+# Define what we're going to accept
+iptables -A INSCC -j SSH
+#iptables -A INSCC -j DINGOWS
+
+
+### The campus networks
+# Create the chain
+iptables -N UNIVERSITY
+# Send the traffic there (now you see why I create separate chains for each group)
+iptables -A INPUT -s 155.97.0.0/16   -j UNIVERSITY
+iptables -A INPUT -s 155.98.0.0/16   -j UNIVERSITY
+iptables -A INPUT -s 155.99.0.0/16   -j UNIVERSITY
+iptables -A INPUT -s 155.100.0.0/16  -j UNIVERSITY
+iptables -A INPUT -s 155.101.0.0/16  -j UNIVERSITY
+iptables -A INPUT -s 128.110.0.0/16  -j UNIVERSITY
+
+# Define what we're going to accept
+iptables -A UNIVERSITY -j PING
+iptables -A UNIVERSITY -j MYSQL 
+#iptables -A UNIVERSITY -j FURTHER
+
+##The World
+# Create the chain
+iptables -N WORLD
+# Send the traffic there
+iptables -A INPUT -s 0/0 -j WORLD
+#Define what we're going to accept
+iptables -A WORLD -j WEB
+
+### Now, for those of you playing along at home, you may have notice that
+### the CHPC, INSCC, and UNIVERSITY chains overlap. This means that
+### anything allowed to the UNIVERSITY chain does not need to be listed
+### on the CHPC or INSCC chains.
+
+### Allow backups to talk to our Arkeia client
+iptables -A INPUT -s 155.101.12.24 -j ARKEIA
+
+### An example of logging rejections for debugging purposes ... will need to disable
+iptables -A INPUT -j LOG --log-prefix "** <REJECTED by JH> **" --log-level 4
+
+# A nice default rule for any other incoming traffic.
+# We'll reject it, but we'll tell the other guy that we rejected it.
+iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
+
+# Now we've created the whole big mess. Save it out.
+/sbin/iptables-save > /etc/sysconfig/iptables

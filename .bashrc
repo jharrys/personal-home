@@ -1,0 +1,246 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+function _commonsetup() {
+
+	# Set bash options
+	shopt -s histappend lithist
+	set INPUTRC='~/.inputrc'
+
+	# History options
+	# "messes up with command numbering" export HISTCONTROL=ignoreboth:erasedups
+	export HISTSIZE=2000
+	export HISTFILESIZE=2000
+	export HISTTIMEFORMAT="%d/%m/%y %T "
+
+	# Used by many command line apps
+	VISUAL=vim
+	export VISUAL
+
+	CDPATH='.:~/:..:../..:~/Wallpaper:~/Work Center/Bioinformatics Center:~/Work Center/GE Center:~/Work Center/HIXEP:~/Desktop:~/Documents:~/Downloads:~/EBooks:~/Documents/Life Documents:~/Workspaces'
+	export CDPATH
+
+	# The prompt I like
+	#PS1='\w\n\u@\h \!|\$> '
+	# This path contains the git branch, if the dir is part of a git repo (requires git-completion for bash)
+	PS1='[\W$(__git_ps1 " (%s)")]\n\u@\h: <\!>]\$ '
+
+	#
+	## ALIASES
+	#
+
+	# General
+	alias mv='mv -i'
+	alias cp='cp -i'
+	alias ll='ls -l'
+	alias vi='vim'
+	alias la='ls -Al'
+	alias lld='ls -Al |grep ^d'
+	alias elias='vim ~/.bashrc'
+	alias ralias='. ~/.bashrc'
+	alias getw='wget -N -r -nH -nd --no-parent'
+	alias rsync='rsync -avuz --progress'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
+	alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
+
+	# History
+	alias r='fc'				# "r 10" or "r 10 20"; rerun 10 or rerun 10 through 20 (can also be given as string)
+	alias rl='fc -l'			# "rl 10 20" - lists history 10 to 20
+	alias rr='fc -s'			# "rr old=new 10" - rerun command 10 sub old with new (instead of 10, can use string)
+	alias hsync='history -a ; history -n'
+
+	alias web='python -m SimpleHTTPServer'						# with no arg, the server is listening on 8000
+	alias fnung='find / \( -nouser -o -nogroup \) -print'		# find files/dirs with no user or no group
+	alias uneven='findUnevenPermissions.py'						# find uneven permissions
+
+	# Wget aliases
+	alias wget-asfirefox='wget --user-agent="Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.3) Gecko/2008092416 Firefox/3.0.3"'
+	alias wget-back='wget -b'									# Backgrounds wget download: "get-back http://my.favorite.com/file.zip"
+	alias wget-verify='wget --spider'							# Verifies that url works: "get-verify http://my.favorite.com/file.zip"
+	alias wget-resume='wget -c'									# Resume partially downloaded file: "wget-resume http://my.favorite.com/file.zip"
+	alias wget-retry='wget --tries=30'							# Default retries is 20, this ups it to 30: "wget-retry http://my.favorite.com/file.zip"
+	alias wget-mirror='wget --mirror -p --convert-links -P'		# Download full website; -p download all to properly display html; --convert-links for local viewing; -P tell it where to save
+																# "wget-mirror ./DIR-OF-MY-FAV-SITE-MIRRORED http://my.favorite.com"
+	alias wget-reject='wget --reject='							# Specify types to Reject such as gif: "wget-reject gif http://my.favorite.com"
+	alias wget-log-err='wget -o'								# Log stderr to specified file: "wget-log-err ./err.log http://my.favorite.com"
+	alias wget-accept='wget -r -A'								# Download recursively, Accept types specified: "wget-accept pdf http://pdf.favorites.com"
+
+	# Tidy up xml
+	alias tidyxml='tidy -i -q -w 0 -xml'
+
+	# Update Locate database
+	alias locupd='cd /; sudo /usr/libexec/locate.updatedb'
+
+	# Strings and Binary files
+	alias binstr='strings -a'		# binstr binfile (searches full file and certain sections from TK_STRINGS_DEFAULT_SECTIONS)
+	alias binstrn='strings -n'		# binstrn 2 binfile (returns strings >=2)
+	alias binstrm='strings -f'		# binstrf /bin/* (searches all bin files)
+	alias binstro='strings -o'		# binstro binfile (returns strings with their octal offset)
+
+	# Convert deb to rpm and rpm to deb
+	alias alien='alien -r'			# To convert deb to rpm
+
+	###########################
+	###### Development ########
+	###########################
+	
+	# Patching
+	alias dry='patch -Np1 --dry-run'							# Do a dry run of the patch - add the "< file.patch"
+	alias dp='LC_ALL=C TZ=UTC diff -aNru'						# Create a unified patch from diff - add the "original target > file.patch"
+
+	# GIT stuff
+	alias gitinit='git init'									# gitinit - creates bare git (use "git add .")
+	alias gitinitbare='git init --bare'							# gitinitbare /some/dirproject.git - creates git repo without work local files
+	alias gitrepo='git clone'									# gitrepo ~/existing/repo ~/new/repo -OR- gitrepo ssh://john@host/srv/git/some.git
+	alias gitrh='git reset --hard'								# Reset working local (wl), index and HEAD ref to all be the same - to HEAD if no arg
+	alias gitrs='git reset --soft'								# Reset HEAD ref to arg you give - leaves wl and index as is (wl and index may not match)
+	alias gitcln='git clean -d -n'								# Clean wl (dry-run), deleting unstage files also (reset --hard doesn't anymore)
+	alias gitcl='git clean -d'									# Clean wl (real), deleting unstage files also (reset --hard doesn't anymore)
+	alias gitdf='git diff --name-only'							# Diff, producing only names that changed (provide branch name for diff between current and other branch - remote/branch also)
+	alias gitdfstat='git diff --numstat'						# Diff, producing number stats
+	alias gitdfstaged='git diff --cached'						# Diff what you've staged
+	alias gitcleancheckout='git checkout -f'					# Throws away ALL UN-committed work, leaving new files untouched (never committed before) - and checks out CLEAN.
+	alias gitconfig='git config --global'						# Apply aliases or other configs globally: gitconfig alias.co checkout - sets up co for checkout
+	alias gitlistcommittedfiles='git ls-files'
+	alias gitstashlist='git stash list'
+	alias gitstashsave='git stash save'							# gitsavestash "Put message here to remind you of what you stashed"
+	alias gitstashclear='git stash clear'						# delete stash
+	alias gitstash='git stash apply'							# Load back the stash
+	alias gitbrlist='git branch -a'								# List both remote & local branches
+	alias gitchp='git cherry-pick'								# gitchp SHA1-COMMIT - merges SHA1-COMMIT into current branch
+	alias gitaddp='git add -p'									# gitaddp - let's you pick the changes interactively as your shown diffs
+	alias gitrebasei='git rebase -i'							# gitrebasei HEAD~3 - interactively rewrite history; delete pick to remove commit, 'edit' & 'squash' 
+
+	# Maven stuff
+	alias mvnhelp='mvn help:help -Ddetail=true' 					# helpmemaven
+	alias mvnc='mvn clean'											# mvn clean
+	alias mvncp='mvn clean package'									# mvn clean package
+	alias mvncpskip='mvn clean package -Dmaven.test.skip=true'		# mvn clean package and skip all the tests
+	alias mvnci='mvn clean install'									# mvn clean install
+	alias mvnciskip='mvn clean install -Dmaven.test.skip=true'		# mvn clean package and skip all the tests
+	alias mvnp='mvn package'										# mvn package without the clean
+	alias mvnpskip='mvn package -Dmaven.test.skip=true'				# mvn package and skip all the tests
+	alias mvni='mvn install'										# mvn install without the clean
+	alias mvniskip='mvn install -Dmaven.test.skip=true'				# mvn install and skip all the tests
+	alias mvnfurther='mvn --settings ~/.m2/further-settings.xml'	# Run further's mvn
+	alias mvntest='mvn test'										# mntest -Dtest=fqclassname - run a single test, give the fqcn
+	alias mvninstfile='mvn install:install-file'					# mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy 
+																	# -Dversion=1 -Dpackaging=jar -DgeneratePom=true
+	alias mvnreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'
+
+
+	# my functions
+	. ~/bin/john_functions
+}
+
+function _darwinsetup() {
+
+	if [ -z "$JAVA_VERSION" ]; then
+		JAVA_VERSION="CurrentJDK"
+		export JAVA_VERSION
+	else
+		echo "Using Java version: $JAVA_VERSION"
+	fi
+	if [ -z "$JAVA_HOME" ]; then
+		JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/${JAVA_VERSION}/Home
+		export JAVA_HOME
+	fi
+
+	PATH=/usr/local/git/bin:$PATH
+	export PATH
+
+	MANPATH=/usr/local/git/share/man:$MANPATH
+	export MANPATH
+
+	# MAVEN ENVIRONMENT
+	M2_HOME="/usr/share/maven"
+	MAVEN_OPTS="-Xmx256m"
+	export MAVEN_OPTS M2_HOME
+
+	# ALIASES
+	alias text='open /Applications/TextEdit.app'
+
+	# MacVim Editor
+	alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'				# MacVim
+	alias gvim-diff='/Applications/MacVim.app/Contents/MacOS/Vim -g -d'		# MacVim in diff mode like vimdiff
+
+	# Emacs Editor
+	alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'				# Emacs
+
+	# Virtual Box applications
+	export DEFAULTVM="Fedora 13"		# Set the default VM to work against
+	alias v='VBoxManage --nologo'
+	alias vlist='VBoxManage --nologo list runningvms'
+	alias vc='echo "DefaultVM: $DEFAULTVM";VBoxManage --nologo controlvm "$DEFAULTVM"'
+	alias vs='echo "DefaultVM: $DEFAULTVM";VBoxManage --nologo startvm "$DEFAULTVM"'
+
+	# Query AddressBook
+	alias qadd="sqlite3 -separator ',' ~/Library/Application\ Support/AddressBook/AddressBook-v22.abcddb \"select e.ZADDRESSNORMALIZED,p.ZFIRSTNAME,p.ZLASTNAME,p.ZORGANIZATION from ZABCDRECORD as p, ZABCDEMAILADDRESS as e WHERE e.ZOWNER=p.Z_PK;\""
+
+	. /sw/bin/init.sh
+
+}
+
+function _linuxsetup() {
+
+	# The following command will get the first octet of the IP associated with eth0
+	#myeth0ip=`ip -o -f inet addr |grep eth0 |awk '{ print $4 }' |cut -d . -f 1`
+
+	# Currently disabled because U of U Research is whitelisted
+	#if [ "$myeth0ip" = "3" ]; then
+	#  HTTP_PROXY="http://gems.setpac.ge.com/pac.pac"
+	#  export HTTP_PROXY
+	#fi
+
+	# Variables
+	#JAVA_HOME=/etc/alternatives/java_sdk_1.6.0
+	JAVA_HOME=/usr/java/jdk1.6.0_18
+	export JAVA_HOME
+
+	#JDK_HOME=/etc/alternatives/java_sdk_1.6.0
+	JDK_HOME=/usr/java/jdk1.6.0_18
+	export JDK_HOME
+
+	M2_HOME=~/Applications/apache-maven-2.2.1
+	export M2_HOME
+
+	PATH=$M2_HOME/bin:/opt/subversion/bin:$PATH
+	export PATH
+
+	LD_LIBRARY_PATH=/usr/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+	export LD_LIBRARY_PATH
+
+	MANPATH=/usr/share/man:/usr/share/man/en:/usr/kerberos/man:/usr/local/share/man:/usr/java/jdk1.6.0_17/man
+	export MANPATH
+
+	# ALIASES
+	alias yl='yum list installed'
+	alias yr='yum remove -y'
+	alias yli='yum localinstall -y --nogpgcheck'
+
+}
+
+#
+## main (start here)
+#
+
+darwin=false
+
+case "`uname`" in
+	Darwin*) darwin=true
+	;;
+esac
+
+# Execute pre common setup
+_commonsetup
+
+# Execute specific setups, override any from common
+if $darwin; then
+	_darwinsetup
+else
+	_linuxsetup
+fi
+

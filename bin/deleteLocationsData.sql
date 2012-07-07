@@ -1,0 +1,11 @@
+delete from entity.organization_address where create_user_id = 'LocationMgmt'; 
+delete from entity.organization_name where create_user_id = 'LocationMgmt'; 
+delete from entity.organization_telecom where create_user_id = 'LocationMgmt'; 
+delete from entity.address where create_user_id = 'LocationMgmt'; 
+delete from entity.external_id where create_user_id = 'LocationMgmt'; 
+delete from entity.instance where create_user_id = 'LocationMgmt';  
+delete from entity.telecom where create_user_id = 'LocationMgmt';  
+delete from entity.entity_role_relationship where parent_role_obj_sk_id in (SELECT entity_role_obj_sk_id from  entity.entity_role where create_user_id = 'LocationMgmt'); 
+delete from entity.entity_role_relationship where child_role_obj_sk_id in (SELECT entity_role_obj_sk_id from  entity.entity_role where create_user_id = 'LocationMgmt'); 
+delete from entity.entity_role where create_user_id = 'LocationMgmt'; delete from entity.organization where create_user_id = 'LocationMgmt'; 
+delete from coherence.relation_cache;
