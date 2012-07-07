@@ -1,6 +1,8 @@
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/connections/%r_%h_%p
+IdentityFile ~/.ssh/esa_id_rsa_2011
+IdentityFile ~/.ssh/git_rsa
 
 Host pl3.projectlocker.com
 HostName pl3.projectlocker.com
