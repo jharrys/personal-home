@@ -35,14 +35,14 @@ pgadmin.log
 # .g* - .gitignore and others should not be ignored
 .gnupg
 .h*
-.i*
-# .j* - I have the .jfunctions
+# .i* - for .inputrc
+.j*
 .k*
 .l*
-.m*
+# .m* - for .mintty
 .n*
 .o*
-.p*
+# .p* - for .profile
 .q*
 .r*
 .s*
