@@ -1,5 +1,22 @@
 # .bashrc
 
+#
+#   Bash login (interactive) does the following:
+#       <bold>login shell</bold> : is one whose first character of arg[0] is a '-' or '--login'
+#       <bold>interactive shell</bold> : is one started without non-option args or without the -c or started with -i
+#
+#       As Interactive, Login shell -OR- Non-Interactive with --login option       
+#       1. Reads /etc/profile if it exists
+#       2. Searches for (a) ~/.bash_profile, (b) ~/.bash_login, (c) ~/.profile in this order
+#       3. Executes only one of a, b or c <- the first one that it finds in the search order above
+#
+#       As Interactive but NOT Login shell
+#       1. Reads ~/.bashrc
+#
+#       Non-Interactive (usually running a shell script) - read the manual. Looks for BASH_ENV for the file to read.
+#
+#
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -20,9 +37,6 @@ function _commonsetup() {
 	# Used by many command line apps
 	VISUAL=vim
 	export VISUAL
-
-	CDPATH='.:~/:..:../..:~/Wallpaper:~/Work Center/Bioinformatics Center:~/Work Center/GE Center:~/Work Center/HIXEP:~/Desktop:~/Documents:~/Downloads:~/EBooks:~/Documents/Life Documents:~/Workspaces'
-	export CDPATH
 
 	# The prompt I like
 	#PS1='\w\n\u@\h \!|\$> '
@@ -187,13 +201,16 @@ function _darwinsetup() {
 function _linuxsetup() {
 
 	# The following command will get the first octet of the IP associated with eth0
-	#myeth0ip=`ip -o -f inet addr |grep eth0 |awk '{ print $4 }' |cut -d . -f 1`
+	# myeth0ip=`ip -o -f inet addr |grep eth0 |awk '{ print $4 }' |cut -d . -f 1`
 
 	# Currently disabled because U of U Research is whitelisted
 	#if [ "$myeth0ip" = "3" ]; then
 	#  HTTP_PROXY="http://gems.setpac.ge.com/pac.pac"
 	#  export HTTP_PROXY
 	#fi
+    
+    CDPATH='.:~/:..:../..:~/Pictures/Wallpaper:~/Desktop:~/Documents:~/Downloads:~/Documents/Google Drive:~/Documents/Life Documents:~/Workspaces'
+	export CDPATH
 
 	# Variables
 	#JAVA_HOME=/etc/alternatives/java_sdk_1.6.0
@@ -223,15 +240,33 @@ function _linuxsetup() {
 
 }
 
+function _cygwinsetup() {
+
+    CDPATH='.:~/:..:../..:~/winhome/Pictures/Wallpaper:~/winhome/Desktop:~/winhome/Documents:~/winhome/Downloads:~/winhome/Documents/Google Drive'
+	export CDPATH
+
+	# Variables
+
+	# ALIASES
+
+}
+
+
 #
 ## main (start here)
 #
 
 darwin=false
+cygwin=false
+linux=false
 
 case "`uname`" in
 	Darwin*) darwin=true
 	;;
+    CYGWIN*) cygwin=true
+    ;;
+    *) linux=true
+    ;;
 esac
 
 # Execute pre common setup
@@ -240,6 +275,8 @@ _commonsetup
 # Execute specific setups, override any from common
 if $darwin; then
 	_darwinsetup
+elif $cygwin; then
+    _cygwinsetup
 else
 	_linuxsetup
 fi
