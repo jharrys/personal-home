@@ -1,14 +1,13 @@
 Host *
-ControlMaster auto
+#ControlMaster auto
 ControlPath ~/.ssh/connections/%r_%h_%p
-IdentityFile ~/.ssh/esa_id_rsa_2011
-IdentityFile ~/.ssh/git_rsa
+IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 
 Host pl3.projectlocker.com
 HostName pl3.projectlocker.com
 Compression yes
 PermitLocalCommand yes
-IdentityFile ~/.ssh/esa_id_rsa_2011
+IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 
 Host mpivm2
 HostName mpivm2.chpc.utah.edu
