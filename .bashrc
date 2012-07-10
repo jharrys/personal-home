@@ -227,6 +227,10 @@ function _linuxsetup() {
 	PATH=$M2_HOME/bin:/opt/subversion/bin:$PATH
 	export PATH
 
+    # Add sbin dirs
+    PATH=/sbin:/usr/sbin:$PATH
+    export PATH
+
 	LD_LIBRARY_PATH=/usr/lib64:/usr/local/lib:$LD_LIBRARY_PATH
 	export LD_LIBRARY_PATH
 
