@@ -1,11 +1,8 @@
-[gui]
-	recentrepo = /home/john/Workspace/github/felix
-	recentrepo = /home/john/Workspace/github/felix
 [user]
-	name = John Harris
-	email = john.a.harris@utah.edu
+	name = John Harris on Cygwin
+	email = harris.johnny@gmail.com
 [core]
-	autocrlf = input
+	autocrlf = false
 	excludesfile = /Users/john/.gitignore_global
 [color]
 	branch = auto
