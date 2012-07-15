@@ -33,16 +33,22 @@ pgadmin.log
 .e*
 .f*
 # .g* - .gitignore and others should not be ignored
-.gnupg
+.gc*
+.gn*
+.gs*
+.gt*
+
 .h*
 # .i* - for .inputrc
 .j*
 .k*
 .l*
 # .m* - for .mintty
+.mozilla
 .n*
 .o*
 # .p* - for .profile
+.pulse*
 .q*
 .r*
 .s*
@@ -66,6 +72,7 @@ Desktop
 Documents
 Downloads
 EBooks
+esa-db
 Library
 Movies
 Music

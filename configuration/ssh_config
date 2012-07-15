@@ -3,6 +3,13 @@ Host *
 ControlPath ~/.ssh/connections/%r_%h_%p
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 
+Host esa
+HostName esaserver01
+Compression yes
+PermitLocalCommand yes
+IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
+User oracle
+
 Host pl3.projectlocker.com
 HostName pl3.projectlocker.com
 Compression yes
