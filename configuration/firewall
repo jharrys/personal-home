@@ -299,6 +299,10 @@ iptables -A CHPC -j SSH
 iptables -A CHPC -j MYSQL
 iptables -A CHPC -j POSTGRES
 
+# Create a DHCP chain for DHCP client requests
+iptables -N DHCP
+iptables -A DHCP -p udp --dport 67:68 --sport 67:68 -j ACCEPT
+
 ### The INSCC Network
 # Create the chain
 iptables -N INSCC
@@ -339,6 +343,9 @@ iptables -A WORLD -j WEB
 ### the CHPC, INSCC, and UNIVERSITY chains overlap. This means that
 ### anything allowed to the UNIVERSITY chain does not need to be listed
 ### on the CHPC or INSCC chains.
+
+### Allow DHCP requests
+iptables -I INPUT -j DHCP
 
 ### Allow backups to talk to our Arkeia client
 iptables -A INPUT -s 155.101.12.24 -j ARKEIA
