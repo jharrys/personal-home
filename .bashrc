@@ -127,6 +127,7 @@ function _commonsetup() {
 	alias gitchp='git cherry-pick'								# gitchp SHA1-COMMIT - merges SHA1-COMMIT into current branch
 	alias gitaddp='git add -p'									# gitaddp - let's you pick the changes interactively as your shown diffs
 	alias gitrebasei='git rebase -i'							# gitrebasei HEAD~3 - interactively rewrite history; delete pick to remove commit, 'edit' & 'squash' 
+    alias gitrmbr='read -p "branch: " BR;git push origin :$BR'  # delete remote branch on origin - git push origin :remotebranch 
 
 	# Maven stuff
 	alias mvnhelp='mvn help:help -Ddetail=true' 					# helpmemaven
