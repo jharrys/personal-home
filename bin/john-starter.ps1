@@ -5,8 +5,8 @@ $fileName = "john-starter_logFile_${startTime}.log"
 $logFile = $env:temp + "\${filename}"
 
 # Sleep, because the connection takes a while to setup or break down
-#write-Output "${startTime}: $key is not found in the process list. Nothing to stop." | out-File -append $logFile
-#Start-Sleep -Seconds 30
+write-Output "${startTime}: $key is not found in the process list. Nothing to stop." | out-File -append $logFile
+Start-Sleep -Seconds 30
 
 # Declare the variables (eventually this should live in a configuration file)
 [bool] $notHome = $false
