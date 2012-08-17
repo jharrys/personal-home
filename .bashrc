@@ -41,6 +41,10 @@ function _commonsetup() {
 	# The prompt I like
 	#PS1='\w\n\u@\h \!|\$> '
 	# This path contains the git branch, if the dir is part of a git repo (requires git-completion for bash)
+    GIT_PS1_SHOWDIRTYSTATE=true         # * unstaged, + staged
+    GIT_PS1_SHOWSTASHSTATE=true         # $ stashed
+    GIT_PS1_SHOWUNTRACKEDFILES=true     # % untracked
+    GIT_PS1_SHOWUPSTREAM="auto"         # < behind, > ahead, <> diverged
 	PS1='[\W$(__git_ps1 " (%s)")]\n\u@\h: <\!>]\$ '
 
 	#
