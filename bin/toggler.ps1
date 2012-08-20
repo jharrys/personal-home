@@ -3,7 +3,9 @@
 # 
 # This script uses the event log channel Microsoft-Windows-NetworkProfile/Operational event id 10000
 # to identify the TCP/IP network we have connected to. If the network is CO.IHC.COM then we are at work.
-# The task scheduler needs to trigger on event id 10000 for this log channel, and it needs to pass the event in.
+# The task scheduler needs to trigger on event id 10000 (connect) and 10001 (disconnect) for this log channel, and it needs to pass the event in.
+# so the invariables for a connected state to Intermountain is: event id 10000, network name CO.IHC.COM, state 5
+# so the invariables for a dis-connected state to Intermountain is: event id 10001, network name CO.IHC.COM, state 2
 # 
 # NOTE: When creating the task in the task scheduler you will need do the following:
 #	1) create the task completely
@@ -13,29 +15,30 @@
 #	  <ValueQueries>
 #        <Value name="eventChannel">Event/System/Channel</Value>
 #        <Value name="eventRecordID">Event/System/EventRecordID</Value>
-#        <Value name="eventSeverity">Event/System/Level</Value>
+#        <Value name="networkName">Event/EventData/Name</Value>
+#        <Value name="eventState">Event/EventData/State</Value>
 #      </ValueQueries>
 #	5) delete task in task scheduler
 #	6) import task from modified file.xml
-#	7) make sure the Value names match the argument names you pass in the action: -eventRecordID $(eventRecordID) -eventChannel $(eventChannel)
+#	7) make sure the Value names match the argument names you pass in the action: -eventRecordID $(eventRecordID) -eventChannel $(eventChannel) -networkName $(networkName) -eventState $(eventState)
 #	8) done
-#
-# NOTE2: Possible states: work, notwork, forcework, forcenotwork
 
-param($eventRecordID,$eventChannel)
+#param
+#	(
+#		$eventRecordID,
+#		$eventChannel,
+#		[Parameter(Mandatory=$true)]
+#		[AllowNull()]
+#		[AllowEmptyString()]
+#		[string]$networkName,
+#		$eventState
+#	)
 
 # Declare all the variables (eventually this should live in a configuration file)
 [datetime] $myDate = Get-Date
-[string] $logFile = $env:temp + "\toggler.${startTime}.log"
 [string] $startTime = [string]::format("{0}{1:d2}{2:d2}_{3:d2}{4:d2}{5:d2}", $myDate.year,$myDate.month,$myDate.day,$myDate.hour,$myDate.minute,$myDate.second)
-[string] $newState = $null				# can be one of work, notwork, forcework, forcenotwork
-[string] $existingState = $null		  # can be one of work, notwork
-[string] $state_work = "work"
-[string] $state_notwork = "notwork"
-[string] $state_forcework = "forcework"
-[string] $state_forcenotwork = "forcenotwork"
+[string] $logFile = $env:temp + "\toggler.${script:startTime}.log"
 [string] $workConnectionString = "CO.IHC.COM"
-[string] $togglerStateFile = $env:homepath + "\.toggler"
 [hashtable] $homeMounts = @{
 	share="\\zax\mnt\nethome\john"
 	drive="z:"
@@ -44,10 +47,11 @@ param($eventRecordID,$eventChannel)
 }
 [hashtable] $atWorkApps = @{
 	# make sure key is common process name and value is full path to process
-	communicator="C:\Program Files (x86)\Microsoft Office Communicator\communicator.exe"
-	onexcui="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcui.exe"
-	onexcengine="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
-	OUTLOOK="C:\Program Files (x86)\Microsoft Office\Office14\OUTLOOK.EXE"
+	"communicator"="C:\Program Files (x86)\Microsoft Office Communicator\communicator.exe"
+	"onexcui"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcui.exe"
+	"onexcengine"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
+	"OUTLOOK"="C:\Program Files (x86)\Microsoft Office\Office14\OUTLOOK.EXE"
+	"SmartSettings"="C:\Program Files\Dell\Feature Enhancement Pack\SmartSettings.exe"
 }
 [hashtable] $atWorkServices = @{
 	# make sure key is common process name and value is full path to process
@@ -56,6 +60,7 @@ param($eventRecordID,$eventChannel)
 [hashtable] $atHomeApps = @{
 	# make sure key is common process name and value is full path to process
 	"googledrivesync" = "C:\Program Files (x86)\Google\Drive\googledrivesync.exe"
+	"iTunesHelper" = "C:\Program Files (x86)\iTunes\iTunesHelper.exe"
 }
 [hashtable] $atHomeServices = @{
 	# make sure key is common process name and value is full path to process
@@ -64,29 +69,8 @@ param($eventRecordID,$eventChannel)
 	"WMPNetworkSvc" = "C:\Program Files\Windows Media Player\wmpnetwk.exe"
 	"NfsClnt" = "C:\Windows\system32\nfsclnt.exe"
 }
-
-Function IdentifyNetwork-FromEvent() {
-	# Identify network using the event log channel Microsoft-Windows-NetworkProfile/Operational
-	# >> leave in for testing purposes - $event = get-winevent -LogName "Microsoft-Windows-NetworkProfile/Operational" -FilterXPath "<QueryList><Query Id=`"0`" Path=`"Microsoft-Windows-NetworkProfile/Operational`"> <Select Path=`"Microsoft-Windows-NetworkProfile/Operational`">*[System[(EventRecordID=2566)]]</Select> </Query> </QueryList>"
-	$event = get-winevent -LogName "${eventChannel}" -FilterXPath "<QueryList>  <Query Id=`"0`" Path=`"${eventChannel}`"> <Select Path=`"${eventChannel}`">*[System[(EventRecordID=${eventRecordID})]]</Select> </Query> </QueryList>"
-	[xml]$eventXml = [xml]($event.ToXml())
-	$ns = New-Object Xml.XmlNamespaceManager $eventXml.NameTable
-	$ns.AddNamespace( "ev", "http://schemas.microsoft.com/win/2004/08/events/event" )
-	$nodeList = $eventXml.selectnodes("/ev:Event/ev:EventData/ev:Data[@Name='Name']", $ns)
-	foreach ($eventNode in $nodeList) {
-	  $connectionName = $eventNode."#text"
-	  if ($connectionName -eq $workConnectionString) {
-	  	$msg = "${startTime}: >> New network connection established to ${connectionName}. <<"
-		Write-Output $msg |  out-file -append $logFile
-		$newState = $state_work
-	  }
-	}
-	
-	if (($newState -eq $null) -or ($newState -eq "")) {
-		$msg = "${startTime}: >> New network connection is not work related <<"
-		Write-Output $msg |  out-file -append $logFile
-	}
-}
+[string] $atWorkPrinter = "LP-S2-COPY01 on http://lpv-ps01"
+[string] $atHomePrinter = "Dad's Canon MX710 series Printer"
 
 Function Stop-LocationProcesses($processes, $services) {
 
@@ -96,15 +80,15 @@ Function Stop-LocationProcesses($processes, $services) {
 			$proc = Get-Process -ErrorAction SilentlyContinue $key
 			if ($proc -ne $null) {
 				Stop-Process -ProcessName $key
-				$msg = "${startTime}: Stopped application $key."
+				$msg = "${script:startTime}: Stopped application $key."
 			} else {
-				$msg = "${startTime}: $key is not found in the process list. Nothing to stop."
+				$msg = "${script:startTime}: $key is not found in the process list. Nothing to stop."
 			}
-			Write-Output $msg |   out-file -append $logFile
+			Write-Output $msg |   out-file -append $script:logFile
 		} Catch [System.Exception] {
 			# Write-Host only outputs to console and then dumps it. So it doesn't actually go to a file descriptor
-			$msg = "${startTime}: Application $key is not running."
-			Write-Error $msg |  out-file -append $logFile
+			$msg = "${script:startTime}: Application $key is not running."
+			Write-Error $msg |  out-file -append $script:logFile
 		} Finally {
 			# Write-Host -ForegroundColor Green "In Finally block."
 		}
@@ -116,22 +100,23 @@ Function Stop-LocationProcesses($processes, $services) {
 			$svc = Get-Service -ErrorAction SilentlyContinue $key
 			if ($svc.Status -ne "Stopped") {
 				Stop-Service -Name $key
-				$msg = "${startTime}: Stopped service $key."
+				$msg = "${script:startTime}: Stopped service $key."
 			} else {
-				$msg = "${startTime}: $key service is not running. Nothing to stop."
+				$msg = "${script:startTime}: $key service is not running. Nothing to stop."
 			}
-			Write-Output $msg |  out-file -append $logFile
+			Write-Output $msg |  out-file -append $script:logFile
 		} Catch [System.Exception] {
 			# Write-Host only outputs to console and then dumps it. So it doesn't actually go to a file descriptor
-			$msg = "${startTime}: Service $key is not running."
-			Write-Output $msg |  out-file -append $logFile
+			$msg = "${script:startTime}: Service $key is not running."
+			Write-Output $msg |  out-file -append $script:logFile
 		} Finally {
 			# Write-Host -ForegroundColor Green "In Finally block."
 		}
 	}
+	
 }
 
-Function Start-LocationProcesses($processes, $services) {
+Function Start-LocationProcesses($processes, $services, $defaultPrinter) {
 
 	# Service
 	foreach ($key in $services.Keys) {
@@ -139,14 +124,14 @@ Function Start-LocationProcesses($processes, $services) {
 			$svc = Get-Service -ErrorAction SilentlyContinue $key
 			if ($svc.Status -eq "Stopped") {
 				Start-Service -Name $key
-				$msg = "${startTime}: Started service $key."
+				$msg = "${script:startTime}: Started service $key."
 			} else {
-				$msg = "${startTime}: $key may already be started."
+				$msg = "${script:startTime}: $key may already be started."
 			}
-			Write-Output $msg |  out-file -append $logFile
+			Write-Output $msg |  out-file -append $script:logFile
 		} Catch [System.Exception] {
-			$msg = "${startTime}: Could not start service $processes.Get_Item($key)."
-			Write-Error $msg |  out-file -append $logFile
+			$msg = "${script:startTime}: Could not start service $processes.Get_Item($key)."
+			Write-Error $msg |  out-file -append $script:logFile
 		} Finally {
 	 		# Write-Host -ForegroundColor Green "In Finally block."
 		}
@@ -158,112 +143,172 @@ Function Start-LocationProcesses($processes, $services) {
 			$proc = Get-Process -ErrorAction SilentlyContinue $key
 			if ($proc -eq $null) {
 				Start-Process -WindowStyle Minimized $processes.Get_Item($key)
-				$msg = "${startTime}: Started application $key."
+				$msg = "${script:startTime}: Started application $key."
 			} else {
-				$msg = "${startTime}: $key is already running."
+				$msg = "${script:startTime}: $key is already running."
 			}
-			Write-Output $msg |  out-file -append $logFile
+			Write-Output $msg |  out-file -append $script:logFile
 		} Catch [System.Exception] {
-			$msg = "${startTime}: Could not start application $processes.Get_Item($key)."
-			Write-Error $msg |  out-file -append $logFile
+			$msg = "${script:startTime}: Could not start application $processes.Get_Item($key)."
+			Write-Error $msg |  out-file -append $script:logFile
 		} Finally {
 	 		# Write-Host -ForegroundColor Green "In Finally block."
 		}
 	}
+	
+	# Default Printer (not working ... too slow)
+#	$printer = Get-WmiObject -Query "Select * from Win32_Printer Where Name = `'$defaultPrinter`'"
+#	$printer.SetDefaultPrinter()
+
 }
 
 Function Work-Workflow() {
-	$msg = "${startTime}: [Stopping home services and applications ...]"
-	Write-Output $msg |  out-file -append $logFile
-#	Stop-LocationProcesses $atHomeApps $atHomeServices
+	$msg = "${script:startTime}: [Stopping home services and applications ...]"
+	Write-Output $msg |  out-file -append $script:logFile
+	Stop-LocationProcesses $script:atHomeApps $script:atHomeServices
 	
-	$msg = "${startTime}: [Starting work services and applications ...]"
-	Write-Output $msg |  out-file -append $logFile
-#	Start-LocationProcesses $atWorkApps $atWorkServices
-
-	# update the togglerStateFile with the new state
-	Write-Output $state_work | out-file $togglerStateFile
+	$msg = "${script:startTime}: [Starting work services and applications ...]"
+	Write-Output $msg |  out-file -append $script:logFile
+	Start-LocationProcesses $script:atWorkApps $script:atWorkServices $script:atWorkPrinter
+	
+	invoke-command -scriptblock {"C:\Users\lpjharri\AppData\Local\Microsoft\Windows\Themes\john.theme"}
 }
 
 Function NotWork-Workflow() {
-	$msg = "${startTime}: [Stopping work services and applications ...]"
-	Write-Output $msg |  out-file -append $logFile
-#	Stop-LocationProcesses $atWorkApps $atWorkServices
+	$msg = "${script:startTime}: [Stopping work services and applications ...]"
+	Write-Output $msg |  out-file -append $script:logFile
+	Stop-LocationProcesses $script:atWorkApps $script:atWorkServices
 	
-	$msg = "${startTime}: [Starting home services and applications ...]"
-	Write-Output $msg |  out-file -append $logFile
-#	Start-LocationProcesses $atHomeApps $atHomeServices
-
-	# update the togglerStateFile with the new state
-	Write-Output $state_notwork | out-file $togglerStateFile
+	$msg = "${script:startTime}: [Starting home services and applications ...]"
+	Write-Output $msg |  out-file -append $script:logFile
+	Start-LocationProcesses $script:atHomeApps $script:atHomeServices $script:atHomePrinter
+	invoke-command -scriptblock {"C:\Users\lpjharri\AppData\Local\Microsoft\Windows\Themes\john.theme"}
 }
 
-Function Initialize-Toggler() {
-	# Read togglerStateFile to see where we were before, maybe we don't have to execute
-	# possible options: work, notwork, forcework, forcenotwork
-	if ([System.IO.File]::Exists($togglerStateFile)) {
-		[string] $existingState = ([System.IO.File]::OpenText($togglerStateFile).readtoend()).Trim()
-		$msg = "${startTime}: Toggler state file says $existingState"
-		Write-Output $msg |  out-file -append $logFile
-	}
+[bool] $isLastArgParam = $false
+[bool] $isCurrentArgParam = $false
+$lastArg = $null
 
-	# Check to see if we're being run directly, if so then bypass event lookup and go toggle
-	if (($eventRecordID -eq $null) -and ($eventChannel -eq $null)) {
-		$msg = "${startTime}: Toggler is being run directly (it has not been triggered by a network connection event)"
-		Write-Output $msg | out-File -Append $logFile
-		
-		# Because we're being run directly we know newState won't be populated, so check existingState to see if we're being forced into a new state
-		# if not, default to state_notwork
-		if (($existingState -ceq $state_forcework) -or ($existingState -ceq $state_forcenotwork)) {
-			$newState = $existingState
+foreach($arg in $args) {
+	$arg = $arg.toString()
+	if($arg.StartsWith('-')) {
+		$isCurrentArgParam = $true
+		$var = $arg.TrimStart('-')
+	} else {
+		$isCurrentArgParam = $false
+		$val = $arg
+	}
+	
+	if ((!$isLastArgParam) -and ($isCurrentArgParam)) {
+		# first pass or previous arg was a value and we are starting with a new parameter
+		$isLastArgParam = $isCurrentArgParam
+	} elseif (($isLastArgParam) -and (!$isCurrentArgParam)) {
+		# previous arg is a parameter, new arg is a value
+		New-Variable $var $val
+		$isLastArgParam = $false
+	} elseif (($isLastArgParam) -and ($isCurrentArgParam)) {
+		# both previous and current are params, meaning one of the params was given is null
+		New-Variable $lastArg $null
+	} else {
+		$msg = "This script requires named parameters.  lastArg=$lastArg; var=$var; val=$val"
+		Write-Output $msg |  out-file -append $script:logFile
+	}
+	$lastArg = $var
+}
+
+$msg = "${script:startTime}: Started Processing."
+$msg = $msg + "`r`n${script:startTime}: eventChannel = $script:eventChannel"
+$msg = $msg + "`r`n${script:startTime}: eventRecordID = $script:eventRecordID"
+$msg = $msg + "`r`n${script:startTime}: networkName = $script:networkName"
+$msg = $msg + "`r`n${script:startTime}: eventState = $script:eventState"
+Write-Output $msg |  out-file -append $script:logFile
+
+$popupMsg = $null
+$popupTitle = $null
+$popupType = $null
+
+if(($script:eventChannel -eq $null) -and ($script:eventRecordID -eq $null) -and ($script:eventState -eq $null) -and ($script:networkName -eq $null)) {
+	$msg = "Being run directly, so probably want to force a change."
+	Write-Output $msg |  out-file -append $script:logFile
+	
+	$script:popupType = 3
+	$script:popupTitle = "Toggle Work/NotWork"
+	$script:popupMsg = "Yes (to run work options)`r`n No (to run non-work options)`r`n Cancel (to not do anything)"
+} else {
+	if (($script:networkName -ne $null) -and ($script:networkName -ne "")) {
+		if ($script:networkName -ceq $script:workConnectionString) {
+			$script:popupType = 1
+			if ($script:eventState -eq 5) {
+				$script:popupTitle = "$script:workConnectionString Connected"
+				$script:popupMsg = "Connected to work. Start work apps & services?"
+			} elseif ($script:eventState -eq 2) {
+				$script:popupTitle = "$script:workConnectionString Dis-connected"
+				$script:popupMsg = "Dis-connected from work. Start non-work apps & services?"	
+			} else {
+				$msg = "Didn't write this script to catch this event ($script:eventState)"
+				Write-Output $msg |  out-file -append $script:logFile
+			}
 		} else {
-			$newState = $state_notwork
+			$msg = "Ignore event. Not looking for what we want."
+			Write-Output $msg |  out-file -append $script:logFile
+			exit
 		}
-
-		Toggle-Me
 	} else {
-		$msg = "${startTime}: Received network event. Identifying Network ..."
-		Write-Output $msg | out-File -Append $logFile
-		
-		IdentifyNetwork-FromEvent
-		Toggle-Me
+		$msg = "Ignore event. Not looking for what we want."
+		Write-Output $msg |  out-file -append $script:logFile
+		exit
 	}
 }
+$msg = "${script:startTime}: popupType=$script:popupType; popupTitle=$script:popupTitle; popupMsg=$script:popupMsg"
+Write-Output $msg |  out-file -append $script:logFile
 
-Function Toggle-Me() {
-	# Let the toggling begin
-	if ($newState -ceq $state_forcework) {
-		$msg = "${startTime}: the use of force has been requested. changing to $state_work"
-		Write-Output $msg |  out-file -append $logFile
-		
-		Work-Workflow
-	} elseif ($newState -ceq $state_forcenotwork) {
-		$msg = "${startTime}: the use of force has been requested. changing to $state_notwork"
-		Write-Output $msg |  out-file -append $logFile
-		
-		NotWork-Workflow
-	} elseif ($newState -ceq $existingState) {
-		$msg = "${startTime}: new requested state [$newState] is the same as existing state [$existingState]. Not doing anything."
-		Write-Output $msg |  out-file -append $logFile
-	} else {
-		if ($newState -ceq $state_work) {
-			$msg = "${startTime}: changing to new state ($newState)."
-			Write-Output $msg |  out-file -append $logFile
-			
+# Popup Types 
+# 0 Show OK button.
+# 1 Show OK and Cancel buttons.
+# 2 Show Abort, Retry, and Ignore buttons.
+# 3 Show Yes, No, and Cancel buttons.
+# 4 Show Yes and No buttons.
+# 5 Show Retry and Cancel buttons
+$hey = new-object -comobject wscript.shell
+$answer = $hey.popup($script:popupMsg,0,$script:popupTitle,$script:popupType)
+
+$msg = "${script:startTime}: Answer to popup was: $answer."
+Write-Output $msg |  out-file -append $script:logFile
+
+switch ($answer) {
+	1 { 
+			if ($script:eventState -eq 5) {
+				$msg = "${script:startTime}: Calling Work-Workflow"
+				Write-Output $msg |  out-file -append $script:logFile
+				Work-Workflow
+			} elseif ($script:eventState -eq 2) {
+				$msg = "${script:startTime}: Calling NotWork-Workflow"
+				Write-Output $msg |  out-file -append $script:logFile
+				NotWork-Workflow
+			} else {
+				$msg = "${script:startTime}: eventState not valid ($script:eventState)"
+				Write-Output $msg |  out-file -append $script:logFile
+			}
+			break;
+		}
+		2 {
+			$msg = "${script:startTime}: You canceled me, so I'm not changing anything, bye."
+			Write-Output $msg |  out-file -append $script:logFile
+			break;
+		}
+		6 {
+			$msg = "${script:startTime}: Choosing to run Work-Workflow"
+			Write-Output $msg |  out-file -append $script:logFile
 			Work-Workflow
-		} elseif ($newState -ceq $state_notwork) {
-			$msg = "${startTime}: changing to new state ($newState)."
-			Write-Output $msg |  out-file -append $logFile
-			
-			NotWork-Workflow
-		} else {
-			$msg = "${startTime}: the new state ($newState) cannot be figured out. No processes or services have been stopped or started."
-			Write-Output $msg |  out-file -append $logFile
+			break;
 		}
-	}
+		7 {
+			$msg = "${script:startTime}: Choosing to run NotWork-Workflow"
+			Write-Output $msg |  out-file -append $script:logFile
+			NotWork-Workflow
+			break;
+		}
 }
 
-Initialize-Toggler
-
-$msg = "${startTime}: Finished Processing."
-Write-Output $msg |  out-file -append $logFile
+$msg = "${script:startTime}: Finished Processing."
+Write-Output $msg |  out-file -append $script:logFile
