@@ -189,8 +189,15 @@ Function NotWork-Workflow() {
 [bool] $isCurrentArgParam = $false
 $lastArg = $null
 
+$msg = "Arguments given = $args"
+Write-Output $msg |  out-file -append $script:logFile
+
 foreach($arg in $args) {
-	$arg = $arg.toString()
+	if ($arg -ne $null) {
+		$arg = $arg.toString()
+	} else {
+		continue
+	}
 	if($arg.StartsWith('-')) {
 		$isCurrentArgParam = $true
 		$var = $arg.TrimStart('-')
