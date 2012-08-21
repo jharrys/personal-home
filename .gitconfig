@@ -89,8 +89,10 @@
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	gdiff = difftool -g --
+    worddiff = diff --word-diff
 	dlog = log --oneline --decorate --graph
     pushtag = push --tags
+    pushih = push ihc master
 
 # Configure merge attributes
 # ** define tools based on cygwin, windows or linux
