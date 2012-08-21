@@ -55,7 +55,7 @@
 }
 [hashtable] $atWorkServices = @{
 	# make sure key is common process name and value is full path to process
-	"DFEPService" = "C:\Program Files\Dell\Feature Enhancement Pack\DFEPService.exe"
+	#"DFEPService" = "C:\Program Files\Dell\Feature Enhancement Pack\DFEPService.exe"
 }
 [hashtable] $atHomeApps = @{
 	# make sure key is common process name and value is full path to process
