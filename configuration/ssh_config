@@ -17,6 +17,12 @@ PermitLocalCommand yes
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 User oracle
 
+Host plthruproxy
+ProxyCommand connect -4 -p 22 -a userpass -d -S lpjharri@proxylp.ihc.com:8080 pl3.projectlocker.com 22
+Compression yes
+PermitLocalCommand yes
+IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
+
 Host pl3.projectlocker.com
 HostName pl3.projectlocker.com
 Compression yes

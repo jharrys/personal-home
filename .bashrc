@@ -150,6 +150,12 @@ function _commonsetup() {
 																	# -Dversion=1 -Dpackaging=jar -DgeneratePom=true
 	alias mvnreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'
 
+    # screen or tmux commands
+    alias screen='screen ${SHELL} -l'
+
+    # ip performance testing
+    alias testperfasserver='iperf -s'                               # runs as a server
+    alias testperfasclient='iperf -c'                               # needs host name to test against
 
 	# my functions
 	. ~/bin/john_functions
