@@ -80,11 +80,11 @@ Function Stop-LocationProcesses($processes, $services) {
 			$proc = Get-Process -ErrorAction SilentlyContinue $key
 			if ($proc -ne $null) {
 				Stop-Process -ProcessName $key
-				$msg = "${script:startTime}: Stopped application $key."
+#				$msg = "${script:startTime}: Stopped application $key."
 			} else {
-				$msg = "${script:startTime}: $key is not found in the process list. Nothing to stop."
+#				$msg = "${script:startTime}: $key is not found in the process list. Nothing to stop."
 			}
-			Write-Output $msg |   out-file -append $script:logFile
+#			Write-Output $msg |   out-file -append $script:logFile
 		} Catch [System.Exception] {
 			# Write-Host only outputs to console and then dumps it. So it doesn't actually go to a file descriptor
 			$msg = "${script:startTime}: Application $key is not running."
@@ -100,11 +100,11 @@ Function Stop-LocationProcesses($processes, $services) {
 			$svc = Get-Service -ErrorAction SilentlyContinue $key
 			if ($svc.Status -ne "Stopped") {
 				Stop-Service -Name $key
-				$msg = "${script:startTime}: Stopped service $key."
+#				$msg = "${script:startTime}: Stopped service $key."
 			} else {
-				$msg = "${script:startTime}: $key service is not running. Nothing to stop."
+#				$msg = "${script:startTime}: $key service is not running. Nothing to stop."
 			}
-			Write-Output $msg |  out-file -append $script:logFile
+#			Write-Output $msg |  out-file -append $script:logFile
 		} Catch [System.Exception] {
 			# Write-Host only outputs to console and then dumps it. So it doesn't actually go to a file descriptor
 			$msg = "${script:startTime}: Service $key is not running."
@@ -124,11 +124,11 @@ Function Start-LocationProcesses($processes, $services, $defaultPrinter) {
 			$svc = Get-Service -ErrorAction SilentlyContinue $key
 			if ($svc.Status -eq "Stopped") {
 				Start-Service -Name $key
-				$msg = "${script:startTime}: Started service $key."
+#				$msg = "${script:startTime}: Started service $key."
 			} else {
-				$msg = "${script:startTime}: $key may already be started."
+#				$msg = "${script:startTime}: $key may already be started."
 			}
-			Write-Output $msg |  out-file -append $script:logFile
+#			Write-Output $msg |  out-file -append $script:logFile
 		} Catch [System.Exception] {
 			$msg = "${script:startTime}: Could not start service $processes.Get_Item($key)."
 			Write-Error $msg |  out-file -append $script:logFile
@@ -143,11 +143,11 @@ Function Start-LocationProcesses($processes, $services, $defaultPrinter) {
 			$proc = Get-Process -ErrorAction SilentlyContinue $key
 			if ($proc -eq $null) {
 				Start-Process -WindowStyle Minimized $processes.Get_Item($key)
-				$msg = "${script:startTime}: Started application $key."
+#				$msg = "${script:startTime}: Started application $key."
 			} else {
-				$msg = "${script:startTime}: $key is already running."
+#				$msg = "${script:startTime}: $key is already running."
 			}
-			Write-Output $msg |  out-file -append $script:logFile
+#			Write-Output $msg |  out-file -append $script:logFile
 		} Catch [System.Exception] {
 			$msg = "${script:startTime}: Could not start application $processes.Get_Item($key)."
 			Write-Error $msg |  out-file -append $script:logFile
@@ -163,24 +163,24 @@ Function Start-LocationProcesses($processes, $services, $defaultPrinter) {
 }
 
 Function Work-Workflow() {
-	$msg = "${script:startTime}: [Stopping home services and applications ...]"
-	Write-Output $msg |  out-file -append $script:logFile
+#	$msg = "${script:startTime}: [Stopping home services and applications ...]"
+#	Write-Output $msg |  out-file -append $script:logFile
 	Stop-LocationProcesses $script:atHomeApps $script:atHomeServices
 	
-	$msg = "${script:startTime}: [Starting work services and applications ...]"
-	Write-Output $msg |  out-file -append $script:logFile
+#	$msg = "${script:startTime}: [Starting work services and applications ...]"
+#	Write-Output $msg |  out-file -append $script:logFile
 	Start-LocationProcesses $script:atWorkApps $script:atWorkServices $script:atWorkPrinter
 	
 	invoke-command -scriptblock {"C:\Users\lpjharri\AppData\Local\Microsoft\Windows\Themes\john.theme"}
 }
 
 Function NotWork-Workflow() {
-	$msg = "${script:startTime}: [Stopping work services and applications ...]"
-	Write-Output $msg |  out-file -append $script:logFile
+#	$msg = "${script:startTime}: [Stopping work services and applications ...]"
+#	Write-Output $msg |  out-file -append $script:logFile
 	Stop-LocationProcesses $script:atWorkApps $script:atWorkServices
 	
-	$msg = "${script:startTime}: [Starting home services and applications ...]"
-	Write-Output $msg |  out-file -append $script:logFile
+#	$msg = "${script:startTime}: [Starting home services and applications ...]"
+#	Write-Output $msg |  out-file -append $script:logFile
 	Start-LocationProcesses $script:atHomeApps $script:atHomeServices $script:atHomePrinter
 	invoke-command -scriptblock {"C:\Users\lpjharri\AppData\Local\Microsoft\Windows\Themes\john.theme"}
 }
@@ -189,8 +189,8 @@ Function NotWork-Workflow() {
 [bool] $isCurrentArgParam = $false
 $lastArg = $null
 
-$msg = "Arguments given = $args"
-Write-Output $msg |  out-file -append $script:logFile
+#$msg = "Arguments given = $args"
+#Write-Output $msg |  out-file -append $script:logFile
 
 foreach($arg in $args) {
 	if ($arg -ne $null) {
@@ -217,26 +217,26 @@ foreach($arg in $args) {
 		# both previous and current are params, meaning one of the params was given is null
 		New-Variable $lastArg $null
 	} else {
-		$msg = "This script requires named parameters.  lastArg=$lastArg; var=$var; val=$val"
-		Write-Output $msg |  out-file -append $script:logFile
+#		$msg = "This script requires named parameters.  lastArg=$lastArg; var=$var; val=$val"
+#		Write-Output $msg |  out-file -append $script:logFile
 	}
 	$lastArg = $var
 }
 
-$msg = "${script:startTime}: Started Processing."
-$msg = $msg + "`r`n${script:startTime}: eventChannel = $script:eventChannel"
-$msg = $msg + "`r`n${script:startTime}: eventRecordID = $script:eventRecordID"
-$msg = $msg + "`r`n${script:startTime}: networkName = $script:networkName"
-$msg = $msg + "`r`n${script:startTime}: eventState = $script:eventState"
-Write-Output $msg |  out-file -append $script:logFile
+#$msg = "${script:startTime}: Started Processing."
+#$msg = $msg + "`r`n${script:startTime}: eventChannel = $script:eventChannel"
+#$msg = $msg + "`r`n${script:startTime}: eventRecordID = $script:eventRecordID"
+#$msg = $msg + "`r`n${script:startTime}: networkName = $script:networkName"
+#$msg = $msg + "`r`n${script:startTime}: eventState = $script:eventState"
+#Write-Output $msg |  out-file -append $script:logFile
 
 $popupMsg = $null
 $popupTitle = $null
 $popupType = $null
 
 if(($script:eventChannel -eq $null) -and ($script:eventRecordID -eq $null) -and ($script:eventState -eq $null) -and ($script:networkName -eq $null)) {
-	$msg = "Being run directly, so probably want to force a change."
-	Write-Output $msg |  out-file -append $script:logFile
+#	$msg = "Being run directly, so probably want to force a change."
+#	Write-Output $msg |  out-file -append $script:logFile
 	
 	$script:popupType = 3
 	$script:popupTitle = "Toggle Work/NotWork"
@@ -252,22 +252,22 @@ if(($script:eventChannel -eq $null) -and ($script:eventRecordID -eq $null) -and 
 				$script:popupTitle = "$script:workConnectionString Dis-connected"
 				$script:popupMsg = "Dis-connected from work. Start non-work apps & services?"	
 			} else {
-				$msg = "Didn't write this script to catch this event ($script:eventState)"
-				Write-Output $msg |  out-file -append $script:logFile
+#				$msg = "Didn't write this script to catch this event ($script:eventState)"
+#				Write-Output $msg |  out-file -append $script:logFile
 			}
 		} else {
-			$msg = "Ignore event. Not looking for what we want."
-			Write-Output $msg |  out-file -append $script:logFile
+#			$msg = "Ignore event. Not looking for what we want."
+#			Write-Output $msg |  out-file -append $script:logFile
 			exit
 		}
 	} else {
-		$msg = "Ignore event. Not looking for what we want."
-		Write-Output $msg |  out-file -append $script:logFile
+#		$msg = "Ignore event. Not looking for what we want."
+#		Write-Output $msg |  out-file -append $script:logFile
 		exit
 	}
 }
-$msg = "${script:startTime}: popupType=$script:popupType; popupTitle=$script:popupTitle; popupMsg=$script:popupMsg"
-Write-Output $msg |  out-file -append $script:logFile
+#$msg = "${script:startTime}: popupType=$script:popupType; popupTitle=$script:popupTitle; popupMsg=$script:popupMsg"
+#Write-Output $msg |  out-file -append $script:logFile
 
 # Popup Types 
 # 0 Show OK button.
@@ -279,43 +279,43 @@ Write-Output $msg |  out-file -append $script:logFile
 $hey = new-object -comobject wscript.shell
 $answer = $hey.popup($script:popupMsg,0,$script:popupTitle,$script:popupType)
 
-$msg = "${script:startTime}: Answer to popup was: $answer."
-Write-Output $msg |  out-file -append $script:logFile
+#$msg = "${script:startTime}: Answer to popup was: $answer."
+#Write-Output $msg |  out-file -append $script:logFile
 
 switch ($answer) {
 	1 { 
 			if ($script:eventState -eq 5) {
-				$msg = "${script:startTime}: Calling Work-Workflow"
-				Write-Output $msg |  out-file -append $script:logFile
+#				$msg = "${script:startTime}: Calling Work-Workflow"
+#				Write-Output $msg |  out-file -append $script:logFile
 				Work-Workflow
 			} elseif ($script:eventState -eq 2) {
-				$msg = "${script:startTime}: Calling NotWork-Workflow"
-				Write-Output $msg |  out-file -append $script:logFile
+#				$msg = "${script:startTime}: Calling NotWork-Workflow"
+#				Write-Output $msg |  out-file -append $script:logFile
 				NotWork-Workflow
 			} else {
-				$msg = "${script:startTime}: eventState not valid ($script:eventState)"
-				Write-Output $msg |  out-file -append $script:logFile
+#				$msg = "${script:startTime}: eventState not valid ($script:eventState)"
+#				Write-Output $msg |  out-file -append $script:logFile
 			}
 			break;
 		}
 		2 {
-			$msg = "${script:startTime}: You canceled me, so I'm not changing anything, bye."
-			Write-Output $msg |  out-file -append $script:logFile
+#			$msg = "${script:startTime}: You canceled me, so I'm not changing anything, bye."
+#			Write-Output $msg |  out-file -append $script:logFile
 			break;
 		}
 		6 {
-			$msg = "${script:startTime}: Choosing to run Work-Workflow"
-			Write-Output $msg |  out-file -append $script:logFile
+#			$msg = "${script:startTime}: Choosing to run Work-Workflow"
+#			Write-Output $msg |  out-file -append $script:logFile
 			Work-Workflow
 			break;
 		}
 		7 {
-			$msg = "${script:startTime}: Choosing to run NotWork-Workflow"
-			Write-Output $msg |  out-file -append $script:logFile
+#			$msg = "${script:startTime}: Choosing to run NotWork-Workflow"
+#			Write-Output $msg |  out-file -append $script:logFile
 			NotWork-Workflow
 			break;
 		}
 }
 
-$msg = "${script:startTime}: Finished Processing."
-Write-Output $msg |  out-file -append $script:logFile
+#$msg = "${script:startTime}: Finished Processing."
+#Write-Output $msg |  out-file -append $script:logFile
