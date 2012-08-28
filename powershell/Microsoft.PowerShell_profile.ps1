@@ -5,8 +5,9 @@
 #
 
 # *** Variables ***
-New-Variable -Name ProfileFolder -Value (Split-Path $PROFILE -Parent)
+New-Variable -name ProfileFolder -Value (Split-Path $PROFILE -Parent)
 New-Variable -name temp -value $([io.path]::gettemppath()) -Description "Temp directory"
+New-Variable -name vboxdevmachine -value "ESA Application Design" -Description "holds the name of the VirtualBox machine I use"
 
 # *** Aliases ***
 
@@ -21,11 +22,39 @@ New-Alias -name slog -value Start-Transcript -description "Start logging my powe
 New-Alias -name plog -value Stop-Transcript -description "Stop logging my powershell commands"
 New-Alias -name grep -value Select-String -description "grep for string"
 New-Alias -name drives -value Get-PSDrive | sort provider
+New-Alias -name vvm -value Save-VBoxMachine -description "Save the state of the current running virtual box machine by name of $vboxdevmachine"
+New-Alias -name svm -value Start-VBoxMachine -description "Start the virtual box machine by name of $vboxdevmachine"
+New-Alias -name pvm -value Stop-VBoxMachine -description "Stop the current running virtual box machine by name of $vboxdevmachine"
+New-Alias -name hvm -value Show-VBoxMachine -description "Show details of the virtual box machine by name of $vboxdevmachine"
 
 # *** PS Drive ***
 New-PSDrive -PSProvider filesystem -Root ${env:programw6432}\Oracle\VirtualBox -Name VBox | Out-Null
 
 # *** Function ***
+
+Function Show-VBoxMachine
+{
+	cd vbox:
+	.\VBoxManage.exe showvminfo $vboxdevmachine --details
+}
+
+Function Save-VBoxMachine
+{
+	cd vbox:
+	.\VBoxManage.exe controlvm $vboxdevmachine savestate
+}
+
+Function Start-VBoxMachine
+{
+	cd vbox:
+	.\VBoxManage.exe startvm $vboxdevmachine --type headless
+}
+
+Function Stop-VBoxMachine
+{
+	cd vbox:
+	.\VBoxManage.exe controlvm $vboxdevmachine acpipowerbutton
+}
 
 Function Tips
 {
