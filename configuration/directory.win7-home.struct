@@ -1,0 +1,55 @@
+.
++--.VirtualBox/
++--.grails/
++--.ssh -> /home/lpjharri/.ssh
++--AppData/
++--Application Data -> /cygdrive/c/Users/lpjharri/AppData/Roaming
++--Contacts/
++--Cookies -> /cygdrive/c/Users/lpjharri/AppData/Roaming/Microsoft/Windows/Cookies
++--Desktop/
++--Documents/
+|  +--Applications/
+|  |  +--Cyginstall/
+|  |  +--SpringSource/
+|  +--Archived Intermountain Projects/
+|  +--Enterprise Solutions Architecture/
+|  +--Google Drive/
+|  +--Icons/
+|  +--MailArchives/
+|  +--My Received Files/
+|  +--OneNote Notebooks/
+|  +--PowerWF Studio/
+|  +--SourceControl/
+|  |  +--Ruby Cookbook Source/
+|  |  +--esa/
+|  |  +--gitolite-admin/
+|  |  +--jdbc-drivers/
+|  |  +--sts-workspace/
+|  |  |  +--RemoteSystemsTempFiles/
+|  |  |  +--Servers/
+|  |  |  +--Servers2/
+|  |  |  +--esa/
+|  |  |  +--esa-db/
+|  |  |  +--esa-ui/
+|  |  |  +--grails-pomodoro/
+|  |  |  +--mybook/
+|  |  +--utility_john/
+|  +--Sysinternal Tools/
+|  +--VirtualBox VMs/
+|  +--WindowsPowerShell -> /home/lpjharri/powershell
++--Downloads/
++--Favorites/
++--Links/
++--Local Settings -> /cygdrive/c/Users/lpjharri/AppData/Local
++--Mounts/
++--My Documents/
++--My Music/
++--My Pictures/
++--My Videos/
++--Searches/
++--Signatures/
++--Tracing/
++--.bash_history
++--.gitconfig
++--.gitignore
++--.gitignore_global

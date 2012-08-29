@@ -257,12 +257,14 @@ function _linuxsetup() {
 
 function _cygwinsetup() {
 
-    CDPATH='.:~/:..:../..:~/winhome/Pictures/Wallpaper:~/winhome/Desktop:~/winhome/Documents:~/winhome/Downloads:~/winhome/Documents/Google Drive'
+    CDPATH='.:~/:..:../..:~/winhome/Pictures/Wallpaper:~/winhome/Desktop:~/winhome/Documents:~/winhome/Downloads:~/winhome/Documents/Google Drive:~/winhome/Documents/SourceControl:~/winhome/Documents/SourceControl/sts-workspace'
 	export CDPATH
 
 	# Variables
 
 	# ALIASES
+    alias w7='cd ${HOME}/winhome/AppData/Roaming/Microsoft/Windows'
+    alias w7libs='cd ${HOME}/winhome/AppData/Roaming/Microsoft/Windows/Libraries'
 
 }
 

@@ -4,6 +4,11 @@
 #	Version 1.0
 #
 
+# *** Imports / Modules ***
+
+# pscx version 3.0 Beta 1 (http://pscx.codeplex.com/)
+Import-Module pscx -arg ~\Documents\WindowsPowerShell\Modules\Pscx\Pscx.UserPreferences.ps1
+
 # *** Variables ***
 New-Variable -name ProfileFolder -Value (Split-Path $PROFILE -Parent)
 New-Variable -name temp -value $([io.path]::gettemppath()) -Description "Temp directory"
@@ -26,11 +31,20 @@ New-Alias -name vvm -value Save-VBoxMachine -description "Save the state of the 
 New-Alias -name svm -value Start-VBoxMachine -description "Start the virtual box machine by name of $vboxdevmachine"
 New-Alias -name pvm -value Stop-VBoxMachine -description "Stop the current running virtual box machine by name of $vboxdevmachine"
 New-Alias -name hvm -value Show-VBoxMachine -description "Show details of the virtual box machine by name of $vboxdevmachine"
+New-Alias -name papp -value Start-PortableApps -description "Start the PortableApps from USB Thumbdrive"
 
 # *** PS Drive ***
 New-PSDrive -PSProvider filesystem -Root ${env:programw6432}\Oracle\VirtualBox -Name VBox | Out-Null
+New-PSDrive -PSProvider filesystem -Root S:\LP\User\lpjharri -Name shome | Out-Null
+New-PSDrive -PSProvider filesystem -Root E:\ -Name papps | Out-Null
 
 # *** Function ***
+
+Function Start-PortableApps
+{
+	cd papps:
+	.\Start.exe
+}
 
 Function Show-VBoxMachine
 {
@@ -73,6 +87,16 @@ Function Tips
 	Write-Host 'put % and .. together: 1..20 | % {md "Folder $_"}'
 	Write-Host
 	Write-Host '** check out robocopy (very fast copy operations) **'
+	Write-Host
+	Write-Host 'PSCX: tail, touch, su, srts, call, e (edit file), fhex, fxml, cvxml, gcb (get clipboard), ocb (out clipboard), ln'
+	Write-Host 'Enable Explorer Context Menu "Open Powershell Here": Enable-OpenPowerShellHere'
+	Write-Host
+	Write-Host 'You can send email to. Use Send-MailMessage'
+}
+
+Function emailme([string] $To = "john.harris@imail.org", [string] $Subject = "From Powershell 3.0 cmdlet", [string] $Body = "Forgot to include body to the email")
+{
+	Send-MailMessage -To $To -SmtpServer "smtp.co.ihc.com" -Port 25 -From "john.harris@imail.org" -Subject $Subject -Body $Body
 }
 
 Function Ascii-Table
