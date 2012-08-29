@@ -50,6 +50,6 @@
 +--Signatures/
 +--Tracing/
 +--.bash_history
-+--.gitconfig
-+--.gitignore
-+--.gitignore_global
++--.gitconfig -> /home/lpjharri/configuration/git.windows/.gitconfig (hard links)
++--.gitignore -> /home/lpjharri/configuration/git.windows/.gitignore (hard links)
++--.gitignore_global -> /home/lpjharri/configuration/git.windows/.gitignore_global (hard links)
