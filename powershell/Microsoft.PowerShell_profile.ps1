@@ -94,7 +94,20 @@ Function Tips
 	Write-Host 'You can send email to. Use Send-MailMessage'
 }
 
-Function emailme([string] $To = "john.harris@imail.org", [string] $Subject = "From Powershell 3.0 cmdlet", [string] $Body = "Forgot to include body to the email")
+Function emailme([string] $To = "john.harris@imail.org", [string] $Subject = "From Powershell 3.0 cmdlet", [string] $Body = "Forgot to include body to the email", [string] $Attachment = $null)
+{
+
+	Process {
+		$Attachment = $_
+		if(($Attachment -eq $null) -or ($Attachment -eq "")) {
+			Send-MailMessage -To $To -SmtpServer "smtp.co.ihc.com" -Port 25 -From "john.harris@imail.org" -Subject $Subject -Body $Body
+		} else {
+			Send-MailMessage -To $To -SmtpServer "smtp.co.ihc.com" -Port 25 -From "john.harris@imail.org" -Subject $Subject -Body $Body -Attachment $Attachment
+		}
+	}
+}
+
+Function eme([string] $To = "harris.johnny@gmail.com", [string] $Subject = "Info from work", [string] $Body = "Forgot to include body to the email")
 {
 	Send-MailMessage -To $To -SmtpServer "smtp.co.ihc.com" -Port 25 -From "john.harris@imail.org" -Subject $Subject -Body $Body
 }
