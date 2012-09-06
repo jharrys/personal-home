@@ -131,7 +131,7 @@
 
 # Configure http proxy settings
 [http]
-	proxy = http://lpjharri:JJk5llNn@proxylp.ihc.com:8080
+    ;proxy = http://lpjharri:JJk5llNn@proxylp.ihc.com:8080
 
 # Settings to allow for instantly browsing my working repository in gitweb
 [instaweb]

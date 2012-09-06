@@ -32,6 +32,8 @@ New-Alias -name svm -value Start-VBoxMachine -description "Start the virtual box
 New-Alias -name pvm -value Stop-VBoxMachine -description "Stop the current running virtual box machine by name of $vboxdevmachine"
 New-Alias -name hvm -value Show-VBoxMachine -description "Show details of the virtual box machine by name of $vboxdevmachine"
 New-Alias -name papp -value Start-PortableApps -description "Start the PortableApps from USB Thumbdrive"
+New-Alias -name jcp -value Do-Checkpoint -description "Create a Windows 7 Restore Point"
+New-Alias -name lcp -value Get-ComputerRestorePoint -description "List the Windows 7 Restore Points"
 
 # *** PS Drive ***
 New-PSDrive -PSProvider filesystem -Root ${env:programw6432}\Oracle\VirtualBox -Name VBox | Out-Null
@@ -39,6 +41,11 @@ New-PSDrive -PSProvider filesystem -Root S:\LP\User\lpjharri -Name shome | Out-N
 New-PSDrive -PSProvider filesystem -Root E:\ -Name papps | Out-Null
 
 # *** Function ***
+
+Function Do-Checkpoint([String] $Description="John Checkpoint")
+{
+	Checkpoint-Computer -Description $Description
+}
 
 Function Start-PortableApps
 {
