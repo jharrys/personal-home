@@ -1,4 +1,5 @@
 # My Unix Home
+rubygems
 
 #
 # Temp Stuff
@@ -33,6 +34,7 @@ pgadmin.log
 .e*
 .f*
 # .g* - .gitignore and others should not be ignored
+.gem
 .gc*
 .gn*
 .gs*
@@ -55,6 +57,7 @@ pgadmin.log
 .t*
 .u*
 # .v* - for .vimrc
+.vmc_*
 .viminfo
 .w*
 .x*
