@@ -57,6 +57,7 @@ pgadmin.log
 .t*
 .u*
 # .v* - for .vimrc
+.vboxclient*
 .vmc_*
 .viminfo
 .w*
