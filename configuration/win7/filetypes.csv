@@ -1,0 +1,714 @@
+,audio,,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Perceived Type,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+,image,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Perceived Type,,,,,
+,MAPI/Attachment,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Perceived Type,,,,,
+,MAPI/Folder,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Perceived Type,,,,,
+,MyMusic,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Perceived Type,,,,,
+,MyPictures,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Perceived Type,,,,,
+,MyVideo,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Perceived Type,,,,,
+,system,,,,,*,*,0x00100001,0x00000000,"%SystemRoot%\system32\imageres.dll,-67",7/13/2009 10:53:38 PM,Perceived Type,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+,text,,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\imageres.dll,-102",7/13/2009 10:53:38 PM,Perceived Type,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+,video,,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Perceived Type,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+,AcroRD32.exe,,,,,,,0x00000000,0x00000000,,11/4/2011 1:26:36 PM,Application,,,,,
+,ehshell.exe,,,,,,,0x00000000,0x00000000,,11/21/2010 12:30:49 AM,Application,,,,,
+,Groove.exe,,,,,,,0x00000000,0x00000000,,7/5/2012 4:35:51 PM,Application,,,,,
+,iexplore.exe,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Application,,,,,
+,iTunes.exe,iTunes Music Player,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-128",7/7/2012 4:52:14 PM,Application,,iTunes,10.6.3.25,iTunes,Apple Inc.
+,javaws.exe,,,,,,,0x00000000,0x00000000,,8/2/2012 1:17:38 PM,Application,,,,,
+,mspaint.exe,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Application,,,,,
+,notepad.exe,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Application,,,,,
+,ois.exe,,,,,,,0x00000000,0x00000000,,7/5/2012 4:35:45 PM,Application,,,,,
+,photoviewer.dll,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Application,,,,,
+,powershell.exe,,,,,,,0x00000000,0x00000000,,7/13/2012 3:26:14 PM,Application,,,,,
+,sublime_text.exe,,,,,,,0x00000000,0x00000000,,8/17/2012 8:50:58 PM,Application,,,,,
+,Winword.exe,,,,,,,0x00000000,0x00000000,,7/6/2012 10:34:32 AM,Application,,,,,
+,wmplayer.exe,Windows Media Player,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Application,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+,wordpad.exe,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Application,,,,,
+*,,,,,,,*,0x00000000,0x00000000,,9/4/2012 10:37:32 AM,Standard,,,,,
+.386,vxdfile,Virtual Device Driver,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.3g2,WMP11.AssocFile.3G2,3GPP2 Audio/Video,video/3gpp2,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.3gp,WMP11.AssocFile.3GP,3GPP Audio/Video,video/3gpp,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.3gp2,WMP11.AssocFile.3G2,3GPP2 Audio/Video,video/3gpp2,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.3gpp,WMP11.AssocFile.3GP,3GPP Audio/Video,video/3gpp,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.5vw,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.a,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.aa,,,audio/audible,audio,,,,0x00000000,0x00000000,,7/7/2012 4:52:14 PM,Standard,,,,,
+.AAC,WMP11.AssocFile.ADTS,ADTS Audio,audio/vnd.dlna.adts,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 11:09:22 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.aax,,,audio/vnd.audible.aax,audio,,,,0x00000000,0x00000000,,7/7/2012 4:52:14 PM,Standard,,,,,
+.accda,Access.ACCDAExtension.14,Microsoft Access Add-in,application/msaccess.addin,,,,,0x00000000,0x00000000,"""C:\Program Files (x86)\Microsoft Office\Office14\ACCICONS.EXE"",40",7/5/2012 4:44:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.accdb,Access.Application.14,Microsoft Access Database,application/msaccess,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,1",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.accdc,Access.ACCDCFile.14,Microsoft Access Signed Package,application/msaccess.cab,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,61",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.accde,Access.ACCDEFile.14,Microsoft Access ACCDE Database,application/msaccess.exec,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,44",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.accdr,Access.ACCDRFile.14,Microsoft Access Runtime Application,application/msaccess.runtime,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,44",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.accdt,Access.ACCDTFile.14,Microsoft Access Template,application/msaccess.template,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,2",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.accdu,Access.WizardUserDataFile.14,Microsoft Access Add-in Data,,,,,,0x00000000,0x00000000,"""C:\Program Files (x86)\Microsoft Office\Office14\ACCICONS.EXE"",41",7/5/2012 4:44:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.accdw,Access.WebApplicationReference.14,Microsoft Access Web Application,application/msaccess.webapplication,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,65",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.accft,Access.ACCFTFile.14,Microsoft Access Template,application/msaccess.ftemplate,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,2",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.acl,ACLFile,AutoCorrect List File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:35:44 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.acp,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.acrobatsecuritysettings,AcroExch.acrobatsecuritysettings,Adobe Acrobat Security Settings Document,application/vnd.adobe.acrobat-security-settings,,,,,0x00010000,0x00000000,,11/4/2011 1:26:22 PM,Standard,,,,,
+.ade,Access.ADEFile.14,Microsoft Access Project Extension,application/msaccess,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,52",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.adn,Access.BlankProjectTemplate.14,Microsoft Access Blank Project Template,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,53",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.adp,Access.Project.14,Microsoft Access Project,application/msaccess,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,53",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ADT,WMP11.AssocFile.ADTS,ADTS Audio,audio/vnd.dlna.adts,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 11:09:22 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.ADTS,WMP11.AssocFile.ADTS,ADTS Audio,audio/vnd.dlna.adts,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 11:09:22 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.ai,,,application/postscript,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.aif,WMP11.AssocFile.AIFF,AIFF Format Sound,audio/aiff,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.aifc,WMP11.AssocFile.AIFF,AIFF Format Sound,audio/aiff,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.aiff,WMP11.AssocFile.AIFF,AIFF Format Sound,audio/aiff,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.ani,anifile,Animated Cursor,,,,,,0x00000000,0x00000000,%1,7/13/2009 10:53:38 PM,Standard,,,,,
+.ans,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.apc,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.api,AcroExch.Plugin,,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{AC76BA86-7AD7-1033-7B44-A93000000001}\APIFile_8.ico,0",11/4/2011 1:26:21 PM,Standard,,,,,
+.application,Application.Manifest,Application Manifest,application/x-ms-application,,,,,0x00010000,0x00001000,"%SystemRoot%\system32\dfshim.dll,1",7/13/2009 10:53:38 PM,Standard,,Microsoft® .NET Framework,4.0.31106.0 (Main.031106-0000),ClickOnce Application Deployment Support Library,Microsoft Corporation
+.appref-ms,Application.Reference,Application Reference,,,,,,0x00020000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.aps,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ARN,Autoruns.Logfile.1,Autoruns Log File,,,,,,0x00000000,0x00000000,"""C:\Users\lpjharri\Documents\Sysinternal Tools\Autoruns\autoruns.exe"",0",7/16/2012 7:49:16 AM,Standard,,Sysinternals autoruns,11.31,Autostart program viewer,Sysinternals - www.sysinternals.com
+.art,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.artask,AR.Shortcut.4,AR Shortcut File,AR.Shortcut.4,,,,,0x00010000,0x00000000,"C:\Windows\Installer\{989AA9F3-15B5-47CD-82D8-0954D98E771E}\Icon_ARTask.exe,0",7/5/2012 4:30:11 PM,Standard,,InstallShield,14.0.162,InstallShield,Macrovision Corporation
+.asa,aspfile,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.asc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ascx,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.asf,WMP11.AssocFile.ASF,Windows Media Audio/Video file,video/x-ms-asf,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.asm,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.asmx,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.asp,aspfile,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.aspx,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.asx,WMP11.AssocFile.ASX,Windows Media Audio/Video playlist,video/x-ms-asf,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.atc,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.au,WMP11.AssocFile.AU,AU Format Sound,audio/basic,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.avi,WMP11.AssocFile.AVI,Video Clip,video/avi,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-731",11/21/2010 12:30:49 AM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.aw,AWFile,Answer Wizard File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:35:44 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.bas,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.bat,batfile,Windows Batch File,,,,,,0x00000430,0x00000000,"%SystemRoot%\System32\imageres.dll,-68",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.bcp,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.bfr,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.bgi,BGInfo.Config.1,BGInfo Configuration File,,,,,,0x00000000,0x00000000,"""C:\Program Files (x86)\Microsoft BGInfo\bginfo.exe"",0",7/27/2012 11:16:33 PM,Standard,,BGInfo,"4, 16, 0, 0",BGInfo - Wallpaper text configurator,Sysinternals
+.bin,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.bkf,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.blg,Diagnostic.Perfmon.Document,Performance Monitor File,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\wdc.dll,-10024",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Performance Monitor,Microsoft Corporation
+.bmp,Paint.Picture,Bitmap Image,image/bmp,image,*,,,0x00000000,0x00000000,"%systemroot%\system32\imageres.dll,-70",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.bsc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.c,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.c2r,MediaCenter.C2R,,,,,,,0x00000000,0x00000000,"%SystemRoot%\ehome\ehdrop.dll,-204",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Mediacenter.DropTarget Module,Microsoft Corporation
+.cab,CABFolder,Cabinet File,,compressed,,,,0x00000000,0x00000000,"%SystemRoot%\system32\cabview.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Cabinet File Viewer Shell Extension,Microsoft Corporation
+.camp,campfile,WCS Viewing Condition Profile,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\colorui.dll,-17",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft Color Control Panel,Microsoft Corporation
+.cap,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.cat,CATFile,Security Catalog,application/vnd.ms-pki.seccat,,,,,0x00000000,0x00000000,"cryptui.dll,-3418",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.cc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.cda,WMP11.AssocFile.CDA,CD Audio Track,,,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.cdda,,,,,,,,0x00000000,0x00000000,,7/7/2012 4:52:14 PM,Standard,,,,,
+.cdmp,cdmpfile,WCS Device Profile,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\colorui.dll,-16",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft Color Control Panel,Microsoft Corporation
+.cdx,aspfile,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.cdxml,Microsoft.PowerShellCmdletDefinitionXML.1,,,Text,,,,0x00020000,0x00000000,,8/14/2012 1:22:51 AM,Standard,,,,,
+.cer,CERFile,Security Certificate,application/x-x509-ca-cert,,,,,0x00000000,0x00000000,"cryptui.dll,-3410",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.cgm,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.chk,chkfile,Recovered File Fragments,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.chm,chm.file,Compiled HTML Help file,,,,,,0x00000000,0x00000000,"%SystemRoot%\hh.exe,0",7/13/2009 10:53:38 PM,Standard,,HTML Help,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® HTML Help Executable,Microsoft Corporation
+.clixml,powerse.clixml,PowerShell Object XML,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Devfarm Software\PowerSE\PowerSE.exe,5",8/15/2012 1:02:51 PM,Standard,,,,,
+.cls,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.cmd,cmdfile,Windows Command Script,,,,,,0x00000430,0x00000000,"%SystemRoot%\System32\imageres.dll,-68",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.cod,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.com,comfile,MS-DOS Application,,,,,,0x00000030,0x00000000,"%SystemRoot%\System32\shell32.dll,2",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Shell Common Dll,Microsoft Corporation
+.compositefont,Windows.CompositeFont,Composite Font File,,,,,,0x00000000,0x00000000,"C:\Windows\System32\PresentationHost.exe,2",7/13/2009 10:53:38 PM,Standard,,Microsoft® .NET Framework,4.0.31106.0 built by: Main,Windows Presentation Foundation Host,Microsoft Corporation
+.config,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.contact,contact_wab_auto_file,Contact File,text/x-ms-contact,,,,,0x00000000,0x00000000,"%ProgramFiles%\Windows Mail\wab.exe,1",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Contacts,Microsoft Corporation
+.cpl,cplfile,Control Panel Item,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.cpp,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.crd,Microsoft.InformationCard,Information Card,,,,*,,0x0012bff9,0x00000000,"C:\Windows\System32\icardres.dll,-4112",7/13/2009 10:53:38 PM,Standard,,Microsoft® .NET Framework,3.0.4506.4926 (NetFXw7.030729-4900),Windows CardSpace,Microsoft Corporation
+.crds,Microsoft.WindowsCardSpaceBackup,Information Card Store,,,,*,,0x0012bff9,0x00000000,"C:\Windows\System32\icardres.dll,-4113",7/13/2009 10:53:38 PM,Standard,,Microsoft® .NET Framework,3.0.4506.4926 (NetFXw7.030729-4900),Windows CardSpace,Microsoft Corporation
+.crl,CRLFile,Certificate Revocation List,application/pkix-crl,,,,,0x00000000,0x00000000,"cryptui.dll,-3417",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.crt,CERFile,Security Certificate,application/x-x509-ca-cert,,,,,0x00000000,0x00000000,"cryptui.dll,-3410",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.crtx,CRTXFile,Microsoft Office Chart Template,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\OART.DLL,-5000",7/5/2012 4:35:45 PM,Standard,,Microsoft Office 2010,14.0.6106.5005,Microsoft OfficeArt,Microsoft Corporation
+.cs,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.csa,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.csproj,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.css,CSSfile,Cascading Style Sheet Document,text/css,text,,,,0x00010000,0x00000000,"C:\Windows\System32\shell32.dll,-151",7/13/2009 10:53:38 PM,Standard,Applications\sublime_text.exe,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Shell Common Dll,Microsoft Corporation
+.csv,Excel.CSV,Microsoft Excel Comma Separated Values File,application/vnd.ms-excel,text,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,9",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.cur,curfile,Cursor,,,,,,0x00000000,0x00000000,%1,7/13/2009 10:53:38 PM,Standard,,,,,
+.cxx,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dat,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.datasource,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.db,dbfile,Data Base File,,,,,,0x00000000,0x00000000,"imageres.dll,-67",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.dbg,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dbs,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dct,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.def,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.der,CERFile,Security Certificate,application/x-x509-ca-cert,,,,,0x00000000,0x00000000,"cryptui.dll,-3410",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.desklink,CLSID\{9E56BE61-C50F-11CF-9A2C-00A0C90A90CE},Desktop Shortcut,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\imageres.dll,-110",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.det,Outlook.File.det.14,Office Data File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:46:09 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.diagcab,Diagnostic.Cabinet,Diagnostic Cabinet,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\msdt.exe,-10013",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Diagnostics Troubleshooting Wizard,Microsoft Corporation
+.diagcfg,Diagnostic.Config,Diagnostic Configuration,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\msdt.exe,-10015",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Diagnostics Troubleshooting Wizard,Microsoft Corporation
+.diagpkg,Diagnostic.Document,Diagnostic Document,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\msdt.exe,-10011",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Diagnostics Troubleshooting Wizard,Microsoft Corporation
+.dib,Paint.Picture,Bitmap Image,image/bmp,image,,,,0x00000000,0x00000000,"%systemroot%\system32\imageres.dll,-70",7/5/2012 4:35:45 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.dic,txtfile,Text Document,,,,,,0x00010000,0x00000000,"%SystemRoot%\system32\imageres.dll,-102",7/5/2012 4:36:15 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.diff,unified_diff_file,,,,,,,0x00000000,0x00000000,,8/22/2012 9:17:26 AM,Standard,,,,,
+.disco,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.diz,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dl_,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dll,dllfile,Application Extension,application/x-msdownload,,,*,*,0x00000001,0x00000000,"imageres.dll,-67",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.doc,Word.Document.8,Microsoft Word 97 - 2003 Document,application/msword,,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,1",7/5/2012 4:36:15 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.dochtml,wordhtmlfile,Microsoft Word HTML Document,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,11",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.docm,Word.DocumentMacroEnabled.12,Microsoft Word Macro-Enabled Document,application/vnd.ms-word.document.macroEnabled.12,document,,,,0x00000000,0x0000002c,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,15",7/5/2012 4:36:13 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.docmhtml,wordmhtmlfile,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\WINWORD.EXE,-16",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6024.1000,Microsoft Word,Microsoft Corporation
+.docx,Word.Document.12,Microsoft Word Document,,document,,,,0x00000000,0x0000002c,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,13",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.docxml,wordxmlfile,Microsoft Word XML Document,,,,,,0x00000000,0x0000002c,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,12",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.dos,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dot,Word.Template.8,Microsoft Word 97 - 2003 Template,application/msword,,,,,0x00000000,0x0000002c,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,2",7/5/2012 4:36:15 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.dothtml,wordhtmltemplate,Microsoft Word HTML Template,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,9",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.dotm,Word.TemplateMacroEnabled.12,Microsoft Word Macro-Enabled Template,application/vnd.ms-word.template.macroEnabled.12,document,,,,0x00000000,0x0000002c,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,16",7/5/2012 4:36:13 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.dotx,Word.Template.12,Microsoft Word Template,,document,,,,0x00000000,0x0000002c,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,14",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.dqy,dqyfile,Microsoft Excel ODBC Query File,,,,,,0x00000010,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\EXCEL.EXE,-271",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6112.5000,Microsoft Excel,Microsoft Corporation
+.drv,drvfile,Device Driver,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dsn,MSDASQL,Microsoft OLE DB Provider for ODBC Drivers,,,,,,0x00000000,0x00000000,"%CommonProgramFiles%\System\Ole DB\msdasql.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),OLE DB Provider for ODBC Drivers,Microsoft Corporation
+.dsp,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dsw,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.dtd,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.DVR,MediaCenter.DVR,Microsoft Recorded TV Show,,video,,,,0x00000000,0x00000000,"%SystemRoot%\ehome\ehres.dll,4",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Media Center Resources,Microsoft Corporation
+.DVR-MS,MediaCenter.DVR-MS,Microsoft Recorded TV Show,,video,,,,0x00000000,0x00000000,"%SystemRoot%\ehome\ehres.dll,4",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Media Center Resources,Microsoft Corporation
+.dwfx,Windows.XPSReachViewer,XPS Document,model/vnd.dwfx+xps,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\xpsrchvw.exe,-109",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),XPS Viewer,Microsoft Corporation
+.easmx,Windows.XPSReachViewer,XPS Document,model/vnd.easmx+xps,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\xpsrchvw.exe,-109",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),XPS Viewer,Microsoft Corporation
+.edrwx,Windows.XPSReachViewer,XPS Document,model/vnd.edrwx+xps,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\xpsrchvw.exe,-109",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),XPS Viewer,Microsoft Corporation
+.elm,ELMFile,Microsoft Office Themes File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:35:44 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.emf,emffile,EMF File,,image,,,,0x00000000,0x00000000,"%SystemRoot%\system32\mspaint.exe,-3",7/5/2012 4:35:45 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Paint,Microsoft Corporation
+.eml,Outlook.File.eml.14,E-mail Message,,,,,,0x00000000,0x00000000,,7/5/2012 4:46:09 PM,Standard,Outlook.File.eml.14,,,,
+.enc,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.eprtx,Windows.XPSReachViewer,XPS Document,model/vnd.eprtx+xps,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\xpsrchvw.exe,-109",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),XPS Viewer,Microsoft Corporation
+.eps,,,application/postscript,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.erf,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.etp,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.evt,evtfile,,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\miguiresource.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),MIG wini32 resources,Microsoft Corporation
+.evtx,evtxfile,,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\miguiresource.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),MIG wini32 resources,Microsoft Corporation
+.ex_,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.exc,txtfile,Text Document,,,,,,0x00010000,0x00000000,"%SystemRoot%\system32\imageres.dll,-102",7/5/2012 4:36:15 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.exe,exefile,Application,application/x-msdownload,,,,,0x00000738,0x00000000,%1,7/13/2009 10:53:38 PM,Standard,,,,,
+.exp,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ext,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.eyb,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.faq,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.fdc,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.fdf,AcroExch.FDFDoc,Adobe Acrobat Forms Document,application/vnd.fdf,,,,,0x00010000,0x00000000,"C:\Windows\Installer\{AC76BA86-7AD7-1033-7B44-A93000000001}\FDFFile_8.ico,0",11/4/2011 1:26:21 PM,Standard,,,,,
+.fdm,Outlook.File.fdm.14,Outlook Form Definition,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:46:09 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.fif,,,application/fractals,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.fky,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.fnd,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.fnt,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.fon,fonfile,Font file,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\fontext.dll,-419",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Font Folder,Microsoft Corporation
+.gadget,Windows.gadget,Windows Gadget,,,,,,0x00110000,0x00000000,"%ProgramFiles%\Windows Sidebar\sbdrop.dll,-1",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Sidebar droptarget,Microsoft Corporation
+.gcsx,GCSXFile,Microsoft Office SmartArt Graphic Color Variation,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\OART.DLL,-3000",7/5/2012 4:35:45 PM,Standard,,Microsoft Office 2010,14.0.6106.5005,Microsoft OfficeArt,Microsoft Corporation
+.gdoc,GoogleDrive.gdoc,Google document,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Google\Drive\googledrivesync.exe,-1",7/7/2012 4:45:48 PM,Standard,,Google Drive,1.3.3209.2688,Google Drive,Google
+.gdraw,GoogleDrive.gdraw,Google drawing,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Google\Drive\googledrivesync.exe,-2",7/7/2012 4:45:48 PM,Standard,,Google Drive,1.3.3209.2688,Google Drive,Google
+.gform,GoogleDrive.gform,Google form,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Google\Drive\googledrivesync.exe,-3",7/7/2012 4:45:48 PM,Standard,,Google Drive,1.3.3209.2688,Google Drive,Google
+.gfs,GrooveStub,Microsoft SharePoint Workspace Remote File,,,,,,0x00000000,0x00000000,%1,7/5/2012 4:34:07 PM,Standard,,,,,
+.ghi,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.gif,giffile,GIF Image,image/gif,image,,,,0x00000000,0x00000000,"%SystemRoot%\System32\imageres.dll,-71",11/21/2010 12:30:49 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.glink,GoogleDrive.glink,Google Drive link,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Google\Drive\googledrivesync.exe,-4",7/7/2012 4:45:48 PM,Standard,,Google Drive,1.3.3209.2688,Google Drive,Google
+.glk,GrooveLinkFile,Microsoft SharePoint Workspace Shortcut,,,,,,0x00000000,0x00000000,,7/5/2012 4:35:51 PM,Standard,,,,,
+.glox,GLOXFile,Microsoft Office SmartArt Graphic Layout,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\OART.DLL,-3000",7/5/2012 4:35:45 PM,Standard,,Microsoft Office 2010,14.0.6106.5005,Microsoft OfficeArt,Microsoft Corporation
+.gmmp,gmmpfile,WCS Gamut Mapping Profile,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\colorui.dll,-18",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft Color Control Panel,Microsoft Corporation
+.gotomeeting,CitrixOnline.Collab,GoToMeeting Action,,,,,,0x00000000,0x00000000,,8/8/2012 2:10:24 PM,Standard,,,,,
+.gotomeeting952,CitrixOnline.Collab952,GoToMeeting Action,,,,,,0x00000000,0x00000000,,8/8/2012 2:10:24 PM,Standard,,,,,
+.gqsx,GQSXFile,Microsoft Office SmartArt Graphic Quick Style,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\OART.DLL,-3000",7/5/2012 4:35:45 PM,Standard,,Microsoft Office 2010,14.0.6106.5005,Microsoft OfficeArt,Microsoft Corporation
+.gra,MSGraph.Chart.8,Microsoft Graph Chart,,,,,,0x00010000,0x00000000,,7/5/2012 4:35:49 PM,Standard,,,,,
+.groovy,groovy_auto_file,,,,,,,0x00000000,0x00000000,,8/23/2012 11:13:38 AM,Standard,,,,,
+.group,group_wab_auto_file,Contact Group File,text/x-ms-group,,,,,0x00000000,0x00000000,"%ProgramFiles%\Windows Mail\wab.exe,2",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Contacts,Microsoft Corporation
+.grp,MSProgramGroup,Microsoft Program Group,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.grv,GrooveFile,Microsoft SharePoint Workspace File,application/vnd.groove-injector,,,,,0x00000100,0x00000000,,7/5/2012 4:36:29 PM,Standard,,,,,
+.gsa,GrooveSpaceArchive,Microsoft SharePoint Workspace Space Archive,,,,,,0x00000100,0x00000000,,7/5/2012 4:35:52 PM,Standard,,,,,
+.gsheet,GoogleDrive.gsheet,Google spreadsheet,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Google\Drive\googledrivesync.exe,-5",7/7/2012 4:45:48 PM,Standard,,Google Drive,1.3.3209.2688,Google Drive,Google
+.gslides,GoogleDrive.gslides,Google presentation,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Google\Drive\googledrivesync.exe,-6",7/7/2012 4:45:48 PM,Standard,,Google Drive,1.3.3209.2688,Google Drive,Google
+.gsp,gsp_auto_file,,,,,,,0x00000000,0x00000000,,8/23/2012 6:22:25 PM,Standard,,,,,
+.gta,GrooveToolArchive,Microsoft SharePoint Workspace Tool Archive,,,,,,0x00000100,0x00000000,,7/5/2012 4:35:51 PM,Standard,,,,,
+.gtable,GoogleDrive.gtable,Google table,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Google\Drive\googledrivesync.exe,-7",7/7/2012 4:45:48 PM,Standard,,Google Drive,1.3.3209.2688,Google Drive,Google
+.gz,,,application/x-gzip,compressed,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.h,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.H1C,h1cfile,Windows Help Collection Definition File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\apds.dll,-207",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® Help Data Services Module,Microsoft Corporation
+.H1D,h1dfile,Windows Help Validator File,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.H1F,h1ffile,Windows Help Include File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\apds.dll,-219",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® Help Data Services Module,Microsoft Corporation
+.H1H,h1hfile,Windows Help Merged Hierarchy,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.H1K,h1kfile,Windows Help Index File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\apds.dll,-209",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® Help Data Services Module,Microsoft Corporation
+.H1Q,h1qfile,Windows Help Merged Query Index,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\apds.dll,-216",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® Help Data Services Module,Microsoft Corporation
+.H1S,h1sfile,Compiled Windows Help file,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\apds.dll,-210",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® Help Data Services Module,Microsoft Corporation
+.H1T,h1tfile,Windows Help Table of Contents File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\apds.dll,-211",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® Help Data Services Module,Microsoft Corporation
+.H1V,h1vfile,Windows Help Virtual Topic Definition File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\apds.dll,-212",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® Help Data Services Module,Microsoft Corporation
+.H1W,h1wfile,Windows Help Merged Keyword Index,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.hdd,progId_VirtualBox.Shell.hdd,Virtual Hard Disk,application/x-virtualbox-hdd,,,,,0x00000000,0x00000000,"""C:\Program Files\Oracle\VirtualBox\VBoxRes.dll"",-306",9/13/2012 7:54:05 AM,Standard,,Oracle VM VirtualBox,4.2.0.80737,VirtualBox Resources,Oracle Corporation
+.hdp,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.hhc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.hlp,hlpfile,Help File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\shell32.dll,23",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Shell Common Dll,Microsoft Corporation
+.hol,Outlook.File.hol.14,Outlook Holidays,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\outicon.exe,6",7/5/2012 4:46:09 PM,Standard,Outlook.File.hol.14,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.hpp,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.hqx,,,application/mac-binhex40,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.hta,htafile,HTML Application,application/hta,text,,,,0x00100000,0x00000000,"C:\Windows\System32\mshta.exe,1",7/13/2009 10:53:38 PM,Standard,,Windows® Internet Explorer,8.00.7600.16385 (win7_rtm.090713-1255),Microsoft (R) HTML Application host,Microsoft Corporation
+.htc,,,text/x-component,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.htm,ChromeHTML,Chrome HTML Document,text/html,text,,,,0x00000000,0x00000000,"C:\Users\lpjharri\AppData\Local\Google\Chrome\Application\chrome.exe,0",7/6/2012 11:08:02 AM,Standard,ChromeHTML,Google Chrome,21.0.1180.89,Google Chrome,Google Inc.
+.html,ChromeHTML,Chrome HTML Document,text/html,text,,,,0x00000000,0x00000000,"C:\Users\lpjharri\AppData\Local\Google\Chrome\Application\chrome.exe,0",7/6/2012 11:08:02 AM,Standard,ChromeHTML,Google Chrome,21.0.1180.89,Google Chrome,Google Inc.
+.htt,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.htw,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.htx,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.hxa,MSHelp.hxa.2.5,Microsoft Help Attribute Definition File,application/xml,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-206",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxc,MSHelp.hxc.2.5,Microsoft Help Collection Definition File,application/xml,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-207",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxd,MSHelp.hxd.2.5,Microsoft Help Validator File,application/octet-stream,system,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-213",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxe,MSHelp.hxe.2.5,Microsoft Help Samples Definition File,application/xml,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-208",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxf,MSHelp.hxf.2.5,Microsoft Help Include File,application/xml,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-219",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxh,MSHelp.hxh.2.5,Microsoft Help Merged Hierarchy File,application/octet-stream,system,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-214",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxi,MSHelp.hxi.2.5,Microsoft Help Compiled Index File,application/octet-stream,system,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-215",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxk,MSHelp.hxk.2.5,Microsoft Help Index File,application/xml,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-209",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxq,MSHelp.hxq.2.5,Microsoft Help Merged Query Index File,application/octet-stream,system,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-216",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxr,MSHelp.hxr.2.5,Microsoft Help Merged Attribute Index File,application/octet-stream,system,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-218",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxs,MSHelp.hxs.2.5,Microsoft Help Compiled Storage File,application/octet-stream,system,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-210",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxt,MSHelp.hxt.2.5,Microsoft Help Table of Contents File,application/xml,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-211",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxv,MSHelp.hxv.2.5,Microsoft Help Virtual Topic Definition File,application/xml,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-212",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxw,MSHelp.hxa.2.5,Microsoft Help Attribute Definition File,application/octet-stream,system,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll,-206",7/5/2012 4:35:46 PM,Standard,,Microsoft ® Help 2.5,2.05.50727.4039 (QFE.050727-4000),Microsoft® Help Data Services Module,Microsoft Corporation
+.hxx,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.i,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ibq,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.icc,icmfile,ICC Profile,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\colorui.dll,-15",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft Color Control Panel,Microsoft Corporation
+.icl,IconLibraryFile,Icon Library,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.icm,icmfile,ICC Profile,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\colorui.dll,-15",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft Color Control Panel,Microsoft Corporation
+.ico,icofile,Icon,image/x-icon,image,,,,0x00000000,0x00000000,%1,7/13/2009 10:53:38 PM,Standard,,,,,
+.ics,Outlook.File.ics.14,iCalendar File,text/calendar,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\outicon.exe,2",7/5/2012 4:46:09 PM,Standard,Outlook.File.ics.14,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.idl,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.idq,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ilk,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.imc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.img,Windows.IsoFile,Disc Image File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\isoburn.exe,-101",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Disc Image Burning Tool,Microsoft Corporation
+.in_,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.inc,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.inf,inffile,Setup Information,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\imageres.dll,-69",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.infopathxml,InfoPath.Document.3,Microsoft InfoPath Form,application/ms-infopath.xml,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\inficon.exe,1",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6120.5000,Microsoft Office 2010 component,Microsoft Corporation
+.ini,inifile,Configuration Settings,,text,,,,0x00000000,0x00000000,"imageres.dll,-69",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.inl,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.inv,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.inx,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ipa,iTunes.ipa,Apple Device Application File,application/x-itunes-ipa,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-166",7/7/2012 4:52:15 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.ipg,iTunes.ipg,iPod Game File,application/x-itunes-ipg,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-162",7/7/2012 4:52:15 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.ipsw,iTunes.ipsw,Apple Device Software Update File,application/x-itunes-ipsw,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-163",7/7/2012 4:52:15 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.iqy,iqyfile,Microsoft Excel Web Query File,text/x-ms-iqy,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\EXCEL.EXE,-270",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6112.5000,Microsoft Excel,Microsoft Corporation
+.iso,Windows.IsoFile,Disc Image File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\isoburn.exe,-101",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Disc Image Burning Tool,Microsoft Corporation
+.itb,,,,,,,,0x00000000,0x00000000,,7/7/2012 4:52:15 PM,Standard,,,,,
+.itdb,iTunes.itdb,iTunes Database File,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-145",7/7/2012 4:52:15 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.ite,iTunes.ite,iTunes Extras,application/x-itunes-ite,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-167",7/7/2012 4:52:15 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.itl,iTunes.itl,iTunes Music Database File,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-145",7/7/2012 4:52:14 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.itlp,iTunes.itlp,,application/x-itunes-itlp,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-168",7/7/2012 4:52:15 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.itls,iTunes.itls,iTunes Live Stream File,application/x-itunes-itls,text,,,,0x00010000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-148",7/7/2012 4:52:15 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.itms,iTunes.itms,iTunes Music Store URL,application/x-itunes-itms,text,,,,0x00010000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-161",7/7/2012 4:52:14 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.itpc,iTunes.itpc,Podcast Subscription File,application/x-itunes-itpc,text,,,,0x00010000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-148",7/7/2012 4:52:15 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.IVF,,,,video,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ivm,ivm_auto_file,,,,,,,0x00000000,0x00000008,"C:\Program Files (x86)\Avaya Modular Messaging\Client\\VR.exe,0",7/5/2012 5:17:38 PM,Standard,,Modular Messaging,"9,2,350,5012",Voice Recorder,Avaya Inc.
+.jar,jarfile,Executable Jar File,,,,,,0x00000000,0x00000000,,8/13/2012 12:07:52 AM,Standard,,,,,
+.jav,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.java,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.jbf,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.jfif,pjpegfile,JPEG Image,image/jpeg,image,,,,0x00010000,0x00000000,"%SystemRoot%\System32\imageres.dll,-72",7/5/2012 4:35:45 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.jnlp,JNLPFile,JNLP File,application/x-java-jnlp-file,,,,,0x00010000,0x00000000,,8/13/2012 12:08:11 AM,Standard,,,,,
+.jnt,jntfile,Journal Document,,,,,,0x00000000,0x00000000,"""%ProgramFiles%\Windows Journal\Journal.exe"",1",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Journal,Microsoft Corporation
+.Job,JobObject,Task Scheduler Task Object,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.jod,Microsoft.Jet.OLEDB.4.0,Microsoft.Jet.OLEDB.4.0,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.jpe,jpegfile,JPEG Image,image/jpeg,image,,,,0x00010000,0x00000000,"%SystemRoot%\System32\imageres.dll,-72",7/5/2012 4:35:45 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.jpeg,jpegfile,JPEG Image,image/jpeg,image,,,,0x00010000,0x00000000,"%SystemRoot%\System32\imageres.dll,-72",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.jpg,jpegfile,JPEG Image,image/jpeg,image,,,,0x00010000,0x00000000,"%SystemRoot%\System32\imageres.dll,-72",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.js,JSFile,JScript Script File,,,,,,0x00000000,0x00000000,"C:\Windows\System32\WScript.exe,3",7/13/2009 10:53:38 PM,Standard,,Microsoft ® Windows Script Host,5.8.7600.16385,Microsoft ® Windows Based Script Host,Microsoft Corporation
+.JSE,JSEFile,JScript Encoded File,,,,,,0x00000000,0x00000000,"C:\Windows\System32\WScript.exe,3",7/13/2009 10:53:38 PM,Standard,,Microsoft ® Windows Script Host,5.8.7600.16385,Microsoft ® Windows Based Script Host,Microsoft Corporation
+.json,json_auto_file,,,,,,,0x00000000,0x00000000,,8/27/2012 6:09:19 PM,Standard,,,,,
+.jtp,jtpfile,Journal Template,,,,,,0x00000000,0x00000000,"""%ProgramFiles%\Windows Journal\Journal.exe"",2",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Journal,Microsoft Corporation
+.jtx,Windows.XPSReachViewer,XPS Document,application/x-jtx+xps,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\xpsrchvw.exe,-109",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),XPS Viewer,Microsoft Corporation
+.kci,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.label,Label,Property List,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\shell32.dll,-253",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Shell Common Dll,Microsoft Corporation
+.laccdb,Access.LockFile.14,Microsoft Access Record-Locking Information,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\MSACCESS.EXE,42",7/5/2012 4:44:41 PM,Standard,,Microsoft Office 2010,14.0.6024.1000,Microsoft Access,Microsoft Corporation
+.latex,,,application/x-latex,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ldb,Access.LockFile.14,Microsoft Access Record-Locking Information,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\MSACCESS.EXE,42",7/5/2012 4:44:41 PM,Standard,,Microsoft Office 2010,14.0.6024.1000,Microsoft Access,Microsoft Corporation
+.lex,LEXFile,Dictionary File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:35:44 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.lgn,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.lib,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.library-ms,LibraryFolder,Library Folder,application/windows-library+xml,,*,,,0x00100000,0x00000000,"%SystemRoot%\System32\imageres.dll,-8",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.lnk,lnkfile,Shortcut,,,*,*,,0x00000001,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.local,,,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.log,txtfile,Text Document,,,,,,0x00010000,0x00000000,"%SystemRoot%\system32\imageres.dll,-102",7/13/2009 10:53:38 PM,Standard,Applications\sublime_text.exe,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.lst,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.m14,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.m1v,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.M2T,WMP11.AssocFile.M2TS,AVCHD Video,video/vnd.dlna.mpeg-tts,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.M2TS,WMP11.AssocFile.M2TS,AVCHD Video,video/vnd.dlna.mpeg-tts,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.M2V,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.m3u,WMP11.AssocFile.m3u,M3U file,audio/mpegurl,text,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.m3u8,,,audio/x-mpegurl,text,,,,0x00000000,0x00000000,,7/7/2012 4:52:14 PM,Standard,,,,,
+.m4a,WMP11.AssocFile.M4A,MPEG-4 Audio,audio/m4a,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-738",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.m4b,,,audio/m4b,audio,,,,0x00000000,0x00000000,,7/7/2012 4:52:14 PM,Standard,,,,,
+.m4p,,,audio/m4p,audio,,,,0x00000000,0x00000000,,7/7/2012 4:52:14 PM,Standard,,,,,
+.m4r,iTunes.m4r,Ringtone,audio/x-m4r,audio,,,,0x00000000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-164",7/7/2012 4:52:14 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.m4v,WMP11.AssocFile.MP4,MP4 Video,video/x-m4v,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mad,Access.Shortcut.Module.1,Microsoft Access Module Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,10",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.maf,Access.Shortcut.Form.1,Microsoft Access Form Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,7",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mag,Access.Shortcut.Diagram.1,Microsoft Access Diagram Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,49",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mak,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.mam,Access.Shortcut.Macro.1,Microsoft Access Macro Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,9",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.man,,,application/x-troff-man,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.manifest,,,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.mapimail,CLSID\{9E56BE60-C50F-11CF-9A2C-00A0C90A90CE},Mail Service,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\sendmail.dll,-2001",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Send Mail,Microsoft Corporation
+.maq,Access.Shortcut.Query.1,Microsoft Access Query Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,6",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mar,Access.Shortcut.Report.1,Microsoft Access Report Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,8",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mas,Access.Shortcut.StoredProcedure.1,Microsoft Access Stored Procedure Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,50",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mat,Access.Shortcut.Table.1,Microsoft Access Table Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,5",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mau,Access.Shortcut.Function.1,,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,60",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mav,Access.Shortcut.View.1,Microsoft Access View Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,6",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.maw,Access.Shortcut.DataAccessPage.1,Microsoft Access Data Access Page Shortcut,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,49",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mcl,MediaCenter.MCL,,,,,,,0x00000000,0x00000000,"%SystemRoot%\eHome\ehdrop.dll,-205",11/21/2010 12:30:49 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Mediacenter.DropTarget Module,Microsoft Corporation
+.mda,Access.Extension.14,Microsoft Access Add-in,application/msaccess,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,40",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mdb,Access.MDBFile,Microsoft Access Database,application/msaccess,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,63",7/5/2012 4:44:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mdbhtml,accesshtmlfile,Microsoft Access HTML Document,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,58",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mde,Access.MDEFile.14,Microsoft Access MDE Database,application/msaccess,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,62",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mdn,Access.BlankDatabaseTemplate.14,Microsoft Access Blank Database Template,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,64",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mdt,Access.WizardDataFile.14,Microsoft Access Add-in Data,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,41",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mdw,Access.Workgroup.14,Microsoft Access Workgroup Information,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,43",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mfp,MacromediaFlashPaper.MacromediaFlashPaper,Macromedia Flash Paper,application/x-shockwave-flash,,,,,0x00000000,0x00000000,"C:\Users\lpjharri\AppData\Local\Google\Chrome\Application\chrome.exe,0",9/21/2012 9:15:43 AM,Standard,,Google Chrome,21.0.1180.89,Google Chrome,Google Inc.
+.mgc,MediaCatalogMGC,Media Catalog File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\MSTORE.EXE,0",7/5/2012 4:35:45 PM,Standard,,Microsoft Clip Organizer,14.0.4750.1000,Clip Organizer,Microsoft Corporation
+.mht,mhtmlfile,MHTML Document,message/rfc822,,,,,0x00000000,0x00000000,"""%1""",11/4/2011 1:29:22 PM,Standard,,,,,
+.mhtml,mhtmlfile,MHTML Document,message/rfc822,,,,,0x00000000,0x00000000,"""%1""",7/13/2009 10:53:38 PM,Standard,,,,,
+.mid,WMP11.AssocFile.MIDI,MIDI Sequence,audio/mid,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.midi,WMP11.AssocFile.MIDI,MIDI Sequence,audio/mid,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mig,migfile,Migration Store,,,,,,0x00000000,0x00000000,"%systemroot%\system32\migwiz\migwiz.exe,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Easy Transfer Application,Microsoft Corporation
+.mk,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.mlc,LpkSetup.1,Language Pack File_,,,,,,0x00000000,0x00000000,"%systemroot%\system32\lpksetup.exe,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Language Pack Installer,Microsoft Corporation
+.mmf,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.mml,MediaCatalogMML,Media Catalog File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\MSTORE.EXE,0",7/5/2012 4:35:45 PM,Standard,,Microsoft Clip Organizer,14.0.4750.1000,Clip Organizer,Microsoft Corporation
+.mmo,mmssuboptionsfile,MMS Subscriber Options Configuration,application/x-mmo,,,,,0x00000000,0x00000000,C:\Program Files (x86)\Avaya Modular Messaging\\Common\gv.ico,7/5/2012 5:17:37 PM,Standard,,,,,
+.mmw,MediaCatalogMMW,Media Catalog File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\MSTORE.EXE,0",7/5/2012 4:35:45 PM,Standard,,Microsoft Clip Organizer,14.0.4750.1000,Clip Organizer,Microsoft Corporation
+.MOD,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mov,WMP11.AssocFile.MOV,QuickTime Movie,video/quicktime,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.movie,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.mp2,WMP11.AssocFile.MP3,MP3 Format Sound,audio/mpeg,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-732",7/7/2012 4:52:14 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mp2v,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mp3,WMP11.AssocFile.MP3,MP3 Format Sound,audio/mpeg,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-732",11/21/2010 12:30:49 AM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mp4,WMP11.AssocFile.MP4,MP4 Video,video/mp4,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mp4v,WMP11.AssocFile.MP4,MP4 Video,video/mp4,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mpa,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mpe,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mpeg,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mpf,MediaPackageFile,Clip Organizer Media Package File,application/vnd.ms-mediapackage,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0057-0000-0000-0000000FF1CE}\cagicon.exe,0",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.mpg,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mpv2,WMP11.AssocFile.MPEG,Movie Clip,video/mpeg,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-733",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.msc,MSCFile,Microsoft Common Console Document,,,,,,0x00100000,0x00000000,%1,7/13/2009 10:53:38 PM,Standard,,,,,
+.msdvd,Windows.DVD.Maker,,,,,,,0x00000000,0x00000000,"%ProgramFiles%\DVD Maker\DVDMaker.exe,-440",11/21/2010 12:31:01 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows DVD Maker,Microsoft Corporation
+.msg,Outlook.File.msg.14,Outlook Item,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\outicon.exe,1",7/5/2012 4:46:09 PM,Standard,Outlook.File.msg.14,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.msi,Msi.Package,Windows Installer Package,,,,,,0x00100000,0x00000000,"C:\Windows\system32\msiexec.exe,0",7/13/2009 10:53:38 PM,Standard,,Windows Installer - Unicode,5.0.7600.16385 (win7_rtm.090713-1255),Windows® installer,Microsoft Corporation
+.msp,Msi.Patch,Windows Installer Patch,,,,,,0x00100000,0x00000000,"C:\Windows\system32\msiexec.exe,0",7/13/2009 10:53:38 PM,Standard,,Windows Installer - Unicode,5.0.7600.16385 (win7_rtm.090713-1255),Windows® installer,Microsoft Corporation
+.msrcincident,RemoteAssistance.1,Windows Remote Assistance Invitation,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.msstyles,msstylesfile,Windows Visual Style File,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\themeui.dll,-701",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Theme API,Microsoft Corporation
+.msu,Microsoft.System.Update.1,Microsoft Update Standalone Package,,,,,,0x00000000,0x00000000,"""%systemroot%\system32\wusa.exe"",-101",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Update Standalone Installer,Microsoft Corporation
+.MTS,WMP11.AssocFile.M2TS,AVCHD Video,video/vnd.dlna.mpeg-tts,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.mv,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.mydocs,CLSID\{ECF03A32-103D-11d2-854D-006008059367},MyDocs Drop Target,,,,*,,0x00000001,0x00000000,"%SystemRoot%\system32\imageres.dll,-1002",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.ncb,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.nfo,MSInfoFile,MSInfo Configuration File,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\msinfo32.exe,-10002",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),System Information,Microsoft Corporation
+.nk2,Outlook.File.nk2.14,Outlook Nickname File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:46:09 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.nls,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.nvr,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.obj,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.oc_,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ocx,ocxfile,ActiveX control,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.odc,odcfile,Microsoft Office Data Connection,text/x-ms-odc,,,,,0x00000000,0x00000000,"""%1""",7/5/2012 4:33:28 PM,Standard,,,,,
+.odccubefile,odccubefile,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSORES.DLL,-246",7/5/2012 4:33:28 PM,Standard,,Microsoft Office 2010,14.0.6107.5000,Microsoft Office 2010 component,Microsoft Corporation
+.odcdatabasefile,odcdatabasefile,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSORES.DLL,-247",7/5/2012 4:33:28 PM,Standard,,Microsoft Office 2010,14.0.6107.5000,Microsoft Office 2010 component,Microsoft Corporation
+.odcnewfile,odcnewfile,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSORES.DLL,-248",7/5/2012 4:33:28 PM,Standard,,Microsoft Office 2010,14.0.6107.5000,Microsoft Office 2010 component,Microsoft Corporation
+.odctablefile,odctablefile,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSORES.DLL,-245",7/5/2012 4:33:28 PM,Standard,,Microsoft Office 2010,14.0.6107.5000,Microsoft Office 2010 component,Microsoft Corporation
+.odh,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.odl,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.odp,PowerPoint.OpenDocumentPresentation.12,OpenDocument Presentation,application/vnd.oasis.opendocument.presentation,document,,,,0x00000000,0x0000000a,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,20",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ods,Excel.OpenDocumentSpreadsheet.12,OpenDocument Spreadsheet,application/vnd.oasis.opendocument.spreadsheet,document,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,32",7/5/2012 4:35:50 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.odt,Word.OpenDocumentText.12,OpenDocument Text,application/vnd.oasis.opendocument.text,document,,,,0x00000000,0x0000002c,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,17",7/5/2012 4:36:15 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ofs,Outlook.File.ofs.14,Outlook Form Regions,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:46:09 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.oft,Outlook.File.oft.14,Outlook Item Template,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\outicon.exe,1",7/5/2012 4:46:09 PM,Standard,Outlook.File.oft.14,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.one,OneNote.Section.1,Microsoft OneNote Section,application/msonenote,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\joticon.exe,1",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.onepkg,OneNote.Package,Microsoft OneNote Single File Package,application/msonenote,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\joticon.exe,2",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.onetoc,OneNote.TableOfContents,Microsoft OneNote 2003 Table Of Contents,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\joticon.exe,3",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.onetoc2,OneNote.TableOfContents.12,Microsoft OneNote Table Of Contents,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\joticon.exe,3",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.opc,OPCFile,Microsoft Clean-up Wizard File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:35:44 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.oqy,oqyfile,Microsoft Excel OLAP Query File,,,,,,0x00000010,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\EXCEL.EXE,-275",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6112.5000,Microsoft Excel,Microsoft Corporation
+.osdx,opensearchdescription,OpenSearch Description File,application/opensearchdescription+xml,,,,,0x00110000,0x00000000,"%SystemRoot%\system32\imageres.dll,-1025",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.ost,Outlook.File.ost.14,Outlook Data File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\OUTLOOK.EXE,11",7/5/2012 4:46:09 PM,Standard,,Microsoft Outlook,14.0.6117.5001,Microsoft Outlook,Microsoft Corporation
+.otf,otffile,OpenType Font file,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\fontext.dll,-419",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Font Folder,Microsoft Corporation
+.otm,Outlook.File.otm.14,Outlook VBA Project File,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:46:09 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ova,progId_VirtualBox.Shell.ova,Open Virtualization Format Archive,application/x-virtualbox-ova,,,,,0x00000000,0x00000000,"""C:\Program Files\Oracle\VirtualBox\VBoxRes.dll"",-302",9/13/2012 7:54:05 AM,Standard,,Oracle VM VirtualBox,4.2.0.80737,VirtualBox Resources,Oracle Corporation
+.ovf,progId_VirtualBox.Shell.ovf,Open Virtualization Format,application/x-virtualbox-ovf,,,,,0x00000000,0x00000000,"""C:\Program Files\Oracle\VirtualBox\VBoxRes.dll"",-301",9/13/2012 7:54:05 AM,Standard,,Oracle VM VirtualBox,4.2.0.80737,VirtualBox Resources,Oracle Corporation
+.p10,P10File,Certificate Request,application/pkcs10,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.p12,PFXFile,Personal Information Exchange,application/x-pkcs12,,,,,0x00000000,0x00000000,"cryptui.dll,-3425",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.p7b,SPCFile,PKCS #7 Certificates,application/x-pkcs7-certificates,,,,,0x00000000,0x00000000,"cryptui.dll,-3410",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.p7c,certificate_wab_auto_file,Digital ID File,application/pkcs7-mime,,,,,0x00000000,0x00000000,"%ProgramFiles%\Windows Mail\wab.exe,1",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Contacts,Microsoft Corporation
+.p7m,P7MFile,PKCS #7 MIME Message,application/pkcs7-mime,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.p7r,P7RFile,Certificate Request Response,application/x-pkcs7-certreqresp,,,,,0x00000000,0x00000000,"cryptui.dll,-3410",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.p7s,P7SFile,PKCS #7 Signature,application/pkcs7-signature,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pab,Outlook.File.pab.14,Outlook Personal Address Book,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:46:09 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.patch,unified_diff_file,,,,,,,0x00000000,0x00000000,,8/22/2012 9:17:26 AM,Standard,,,,,
+.pbk,pbkfile,Dial-Up Phonebook,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\rasdlg.dll,-562",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Remote Access Common Dialog API,Microsoft Corporation
+.pcap,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.pcapng,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.pcast,iTunes.pcast,Podcast Subscription File,application/x-podcast,text,,,,0x00010000,0x00000000,"C:\Program Files (x86)\iTunes\iTunes.exe,-148",7/7/2012 4:52:14 PM,Standard,,iTunes,10.6.3.25,iTunes,Apple Inc.
+.pcb,PCBFile,,,,,,,0x00000000,0x00000000,,7/5/2012 4:35:42 PM,Standard,,,,,
+.pch,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pdb,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pdf,AcroExch.Document,Adobe Acrobat Document,application/pdf,,,,,0x00010000,0x00000000,,11/4/2011 1:26:21 PM,Standard,,,,,
+.pdfxml,AcroExch.pdfxml,Adobe Acrobat PDFXML Document,application/vnd.adobe.pdfxml,,,,,0x00010000,0x00000000,,11/4/2011 1:26:22 PM,Standard,,,,,
+.pds,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pdx,PDXFileType,Acrobat Catalog Index,application/vnd.adobe.pdx,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{AC76BA86-7AD7-1033-7B44-A93000000001}\PDXFile_8.ico,0",11/4/2011 1:26:21 PM,Standard,,,,,
+.perfmoncfg,Diagnostic.Perfmon.Config,Performance Monitor Configuration,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\wdc.dll,-10038",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Performance Monitor,Microsoft Corporation
+.pfm,pfmfile,Type 1 Font file,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\fontext.dll,-419",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Font Folder,Microsoft Corporation
+.pfx,PFXFile,Personal Information Exchange,application/x-pkcs12,,,,,0x00000000,0x00000000,"cryptui.dll,-3425",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.php3,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pic,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pif,piffile,Shortcut to MS-DOS Program,,,,*,,0x00000001,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pko,PKOFile,Public Key Security Object,application/vnd.ms-pki.pko,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pkt,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.pl,pl_auto_file,,,text,,,,0x00000000,0x00000000,,9/22/2012 6:56:11 PM,Standard,pl_auto_file,,,,
+.plg,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pls,,,audio/scpls,text,,,,0x00000000,0x00000000,,7/7/2012 4:52:14 PM,Standard,,,,,
+.pma,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pmc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.PML,ProcMon.Logfile.1,ProcMon Log File,,,,,,0x00000000,0x00000000,"""C:\Users\lpjharri\Documents\Sysinternal Tools\ProcessMonitor\Procmon.exe"",0",7/9/2012 7:22:26 PM,Standard,,Sysinternals Procmon,3.01,Process Monitor,Sysinternals - www.sysinternals.com
+.pmr,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.pnf,pnffile,Precompiled Setup Information,,,,*,*,0x00000001,0x00000000,"%SystemRoot%\system32\imageres.dll,-67",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.png,pngfile,PNG Image,image/png,image,,,,0x00010000,0x00000000,"%SystemRoot%\System32\imageres.dll,-83",11/21/2010 12:30:49 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.pot,PowerPoint.Template.8,Microsoft PowerPoint 97-2003 Template,application/vnd.ms-powerpoint,,,,,0x00000000,0x0000000a,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,13",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.pothtml,powerpointhtmltemplate,Microsoft PowerPoint HTML Template,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,7",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.potm,PowerPoint.TemplateMacroEnabled.12,Microsoft PowerPoint Macro-Enabled Design Template,application/vnd.ms-powerpoint.template.macroEnabled.12,document,,,,0x00000000,0x0000000a,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,18",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.potx,PowerPoint.Template.12,Microsoft PowerPoint Template,,document,,,,0x00000000,0x0000000a,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,11",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ppa,PowerPoint.Addin.8,Microsoft PowerPoint 97-2003 Addin,application/vnd.ms-powerpoint,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,14",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ppam,PowerPoint.Addin.12,Microsoft PowerPoint Addin,application/vnd.ms-powerpoint.addin.macroEnabled.12,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,15",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.pps,PowerPoint.SlideShow.8,Microsoft PowerPoint 97-2003 Slide Show,application/vnd.ms-powerpoint,,,,,0x00000000,0x0000000a,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,16",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ppsm,PowerPoint.SlideShowMacroEnabled.12,Microsoft PowerPoint Macro-Enabled Slide Show,application/vnd.ms-powerpoint.slideshow.macroEnabled.12,document,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,4",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ppsx,PowerPoint.SlideShow.12,Microsoft PowerPoint Slide Show,,document,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,12",7/5/2012 4:38:37 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ppt,PowerPoint.Show.8,Microsoft PowerPoint 97-2003 Presentation,application/vnd.ms-powerpoint,,,,,0x00000000,0x0000000a,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,17",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.ppthtml,powerpointhtmlfile,Microsoft PowerPoint HTML Document,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,9",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.pptm,PowerPoint.ShowMacroEnabled.12,Microsoft PowerPoint Macro-Enabled Presentation,application/vnd.ms-powerpoint.presentation.macroEnabled.12,document,,,,0x00000000,0x0000000a,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,19",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.pptmhtml,powerpointmhtmlfile,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\POWERPNT.EXE,-1308",7/5/2012 4:36:14 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft PowerPoint,Microsoft Corporation
+.pptx,PowerPoint.Show.12,Microsoft PowerPoint Presentation,,document,,,,0x00000000,0x0000000a,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,10",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.pptxml,powerpointxmlfile,Microsoft PowerPoint XML Presentation,,,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,1",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.prc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.prf,prffile,PICS Rules File,application/pics-rules,,,,,0x00000000,0x00000000,"msrating.dll,3",7/13/2009 10:53:38 PM,Standard,,Windows® Internet Explorer,8.00.7600.16385 (win7_rtm.090713-1255),Internet Ratings and Local User Management DLL,Microsoft Corporation
+.printerExport,brmFile,Printer Migration File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\printbrmui.exe,-104",11/21/2010 12:30:49 AM,Standard,,PrintBrm Application,"1, 0, 0, 0",PrintBrm Application,
+.properties,properties_auto_file,,,,,,,0x00000000,0x00000000,,8/31/2012 4:30:15 PM,Standard,,,,,
+.ps,,,application/postscript,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ps1,powerse.ps1,PowerShell Script,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Devfarm Software\PowerSE\PowerSE.exe,1",8/15/2012 1:02:51 PM,Standard,Applications\sublime_text.exe,,,,
+.ps1xml,powerse.ps1xml,PowerShell Configuration,,Text,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Devfarm Software\PowerSE\PowerSE.exe,5",8/15/2012 1:02:51 PM,Standard,,,,,
+.psc1,powerse.psc1,PowerShell Console,application/PowerShell,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Devfarm Software\PowerSE\PowerSE.exe,5",8/15/2012 1:02:51 PM,Standard,,,,,
+.psd,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.psd1,powerse.psd1,PowerShell Module Manifest,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Devfarm Software\PowerSE\PowerSE.exe,3",8/15/2012 1:02:51 PM,Standard,,,,,
+.psm1,powerse.psm1,PowerShell Script Module,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Devfarm Software\PowerSE\PowerSE.exe,2",8/15/2012 1:02:51 PM,Standard,,,,,
+.pssc,Microsoft.PowerShellSessionConfiguration.1,,,Text,,,,0x00020000,0x00000000,,8/14/2012 1:22:51 AM,Standard,,,,,
+.pst,Outlook.File.pst.14,Outlook Data File,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\outicon.exe,5",7/5/2012 4:46:09 PM,Standard,Outlook.File.pst.14,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.pwz,PowerPoint.Wizard.8,Microsoft PowerPoint Wizard,application/vnd.ms-powerpoint,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\pptico.exe,3",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.qds,SavedDsQuery,Directory Query,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\dsquery.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Directory Service Find,Microsoft Corporation
+.que,SMSDataFile,SMS Data File,,,,,,0x00000000,0x00000000,C:\Windows\SysWOW64\CCM\hermes.ico,11/4/2011 1:25:26 PM,Standard,,,,,
+.rat,ratfile,Rating System File,application/rat-file,,,,,0x00000000,0x00000000,"msrating.dll,8",7/13/2009 10:53:38 PM,Standard,,Windows® Internet Explorer,8.00.7600.16385 (win7_rtm.090713-1255),Internet Ratings and Local User Management DLL,Microsoft Corporation
+.rc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.rc2,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.rct,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.RDP,RDP.File,Remote Desktop Connection,,,,,,0x00100000,0x00000000,%systemroot%\system32\mstsc.exe,7/13/2009 10:53:38 PM,Standard,,,,,
+.reg,regfile,Registration Entries,,,,,,0x00100000,0x00000000,"%SystemRoot%\regedit.exe,1",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Registry Editor,Microsoft Corporation
+.rels,xmlfile,XML Document,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\msxml3.dll,0",7/5/2012 4:35:43 PM,Standard,,Microsoft(R) MSXML 3.0 SP11,8.110.7601.17857,MSXML 3.0 SP11,Microsoft Corporation
+.res,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.resmoncfg,Diagnostic.Resmon.Config,Resource Monitor Configuration,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\wdc.dll,-10040",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Performance Monitor,Microsoft Corporation
+.rf5,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.rgs,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.rle,rlefile,RLE File,,image,,,,0x00000000,0x00000000,"%SystemRoot%\system32\mspaint.exe,-3",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Paint,Microsoft Corporation
+.rll,dllfile,Application Extension,,,,*,*,0x00000001,0x00000000,"imageres.dll,-67",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.rmi,WMP11.AssocFile.MIDI,MIDI Sequence,audio/mid,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.rmp,,,application/vnd.rn-rn_music_package,,,,,0x00000000,0x00000000,,7/7/2012 4:52:15 PM,Standard,,,,,
+.rpc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.rqy,rqyfile,Microsoft Excel OLE DB Query File,text/x-ms-rqy,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\EXCEL.EXE,-271",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6112.5000,Microsoft Excel,Microsoft Corporation
+.rsp,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.rtf,Word.RTF.8,Rich Text Format,application/msword,document,,,,0x00000000,0x0000002c,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,1",7/5/2012 4:36:15 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.rul,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.s,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.sbr,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.sc2,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.scc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.SCCM.VAppLauncher,SCCM.VAppLauncher,,,,,,,0x00000000,0x00000000,,11/4/2011 1:25:25 PM,Standard,,,,,
+.scd,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.scf,SHCmdFile,Windows Explorer Command,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.sch,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.scp,txtfile,Text Document,,,,,,0x00010000,0x00000000,"%SystemRoot%\system32\imageres.dll,-102",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.scr,scrfile,Screen saver,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.sct,scriptletfile,Windows Script Component,text/scriptlet,,,,,0x00000000,0x00000000,"C:\Windows\system32\scrobj.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft ® Windows ® Script Component Runtime,5.8.7600.16385,Windows ® Script Component Runtime,Microsoft Corporation
+.sdf,Microsoft SQL Server Compact Edition Database File,SQL Server Compact Edition Database File,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v3.5\sqlceme35.dll,-1",7/5/2012 4:35:49 PM,Standard,,Microsoft SQL Server Compact,3.5.5692.0,Managed Extensions (32-bit),Microsoft Corporation
+.sdl,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.search-ms,SearchFolder,Saved Search,,,,,,0x00100000,0x00000000,"%SystemRoot%\System32\imageres.dll,-8",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.searchConnector-ms,SearchConnectorFolder,Search Connector Folder,application/windows-search-connector+xml,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\imageres.dll,-1025",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.secstore,AcroExch.SecStore,,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{AC76BA86-7AD7-1033-7B44-A93000000001}\SecStoreFile.ico,0",11/4/2011 1:26:21 PM,Standard,,,,,
+.sed,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.sfcache,RDBFileProperties.1,ReadyBoost Cache File,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\sysmain.dll,-300",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Superfetch Service Host,Microsoft Corporation
+.sh,sh_auto_file,,,,,,,0x00000000,0x00000000,,9/13/2012 3:14:50 PM,Standard,,,,,
+.shtm,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.shtml,ChromeHTML,Chrome HTML Document,,text,,,,0x00000000,0x00000000,"C:\Users\lpjharri\AppData\Local\Google\Chrome\Application\chrome.exe,0",7/6/2012 11:08:02 AM,Standard,ChromeHTML,Google Chrome,21.0.1180.89,Google Chrome,Google Inc.
+.sit,,,application/x-stuffit,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.sldm,PowerPoint.SlideMacroEnabled.12,Microsoft PowerPoint Macro-Enabled Slide,application/vnd.ms-powerpoint.slide.macroEnabled.12,document,,,,0x00000000,0x00000000,,7/5/2012 4:36:14 PM,Standard,,,,,
+.sldx,PowerPoint.Slide.12,Microsoft PowerPoint Slide,,document,,,,0x00000000,0x00000000,,7/5/2012 4:36:14 PM,Standard,,,,,
+.slk,Excel.SLK,Microsoft Excel SLK Data Import Format,application/vnd.ms-excel,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,10",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.slupkg-ms,MSSppPackageFile,XrML Digital License Package,application/x-ms-license,,,,,0x00010000,0x00000000,"shell32.dll,-45",7/13/2009 10:54:10 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Shell Common Dll,Microsoft Corporation
+.snd,WMP11.AssocFile.AU,AU Format Sound,audio/basic,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.snippet,powerse.snippet,Snippet,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Devfarm Software\PowerSE\PowerSE.exe,5",8/15/2012 1:02:51 PM,Standard,,,,,
+.snoop,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.sol,,,text/plain,,,,,0x00000000,0x00000000,,9/21/2012 9:15:43 AM,Standard,,,,,
+.sor,,,text/plain,,,,,0x00000000,0x00000000,,9/21/2012 9:15:43 AM,Standard,,,,,
+.spc,SPCFile,PKCS #7 Certificates,application/x-pkcs7-certificates,,,,,0x00000000,0x00000000,"cryptui.dll,-3410",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.spl,ShockwaveFlash.ShockwaveFlash,Shockwave Flash Object,application/futuresplash,,,,,0x00000000,0x00000000,,9/21/2012 9:15:43 AM,Standard,,,,,
+.sql,sql_auto_file,,,text,,,,0x00000000,0x00000000,,8/25/2012 12:46:17 PM,Standard,,,,,
+.sr_,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.srf,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.sst,CertificateStoreFile,Microsoft Serialized Certificate Store,application/vnd.ms-pki.certstore,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.stl,STLFile,Certificate Trust List,application/vnd.ms-pki.stl,,,,,0x00000000,0x00000000,"cryptui.dll,-3413",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
+.stm,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.struct,struct_auto_file,,,,,,,0x00000000,0x00000000,,8/29/2012 12:28:42 PM,Standard,,,,,
+.swf,ShockwaveFlash.ShockwaveFlash,Shockwave Flash Object,application/x-shockwave-flash,,,,,0x00000000,0x00000000,,9/21/2012 9:15:42 AM,Standard,,,,,
+.sy_,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.syc,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.sym,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.sys,sysfile,System file,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tab,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tar,,,application/x-tar,compressed,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tdl,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.text,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tgz,,,application/x-compressed,compressed,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.theme,themefile,Windows Theme File,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\themeui.dll,-701",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Theme API,Microsoft Corporation
+.themepack,themepackfile,Windows Theme Pack,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\themeui.dll,-704",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Theme API,Microsoft Corporation
+.thmx,OfficeTheme.12,Microsoft Office Theme,application/vnd.ms-officetheme,,,,,0x00000000,0x08000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\misc.exe,19",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.tif,TIFImage.Document,,image/tiff,image,,,,0x00000000,0x00000000,"%SystemRoot%\System32\imageres.dll,-122",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.tiff,TIFImage.Document,,image/tiff,image,,,,0x00000000,0x00000000,"%SystemRoot%\System32\imageres.dll,-122",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.tlb,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tlh,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tli,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tpc,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.tr1,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.trace,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.trc,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.trg,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.TS,WMP11.AssocFile.TTS,MPEG-2 TS Video,video/vnd.dlna.mpeg-tts,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.tsp,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tsv,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.ttc,ttcfile,TrueType Collection Font file,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\fontext.dll,-419",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Font Folder,Microsoft Corporation
+.ttf,ttffile,TrueType Font file,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\fontext.dll,-419",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Font Folder,Microsoft Corporation
+.TTS,WMP11.AssocFile.TTS,MPEG-2 TS Video,video/vnd.dlna.mpeg-tts,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.txt,txtfile,Text Document,text/plain,text,*,,,0x00010000,0x00000000,"%SystemRoot%\system32\imageres.dll,-102",7/13/2009 10:53:38 PM,Standard,Applications\sublime_text.exe,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.udf,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.UDL,MSDASC,Microsoft Data Link,,,,,,0x00000000,0x00000000,"%CommonProgramFiles%\System\Ole DB\oledb32.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),OLE DB Core Services,Microsoft Corporation
+.udt,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.URL,InternetShortcut,,,,,,,0x00000002,0x00000000,"C:\Windows\System32\url.dll,5",7/13/2009 10:53:38 PM,Standard,,Windows® Internet Explorer,8.00.7601.17874 (win7sp1_gdr.120626-1620),Internet Shortcut Shell Extension DLL,Microsoft Corporation
+.user,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.usr,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.uxdc,UXDCFILE,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSORES.DLL,-560",7/5/2012 4:35:43 PM,Standard,,Microsoft Office 2010,14.0.6107.5000,Microsoft Office 2010 component,Microsoft Corporation
+.vb,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.VBE,VBEFile,VBScript Encoded File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\WScript.exe,2",7/13/2009 10:53:38 PM,Standard,,Microsoft ® Windows Script Host,5.8.7600.16385,Microsoft ® Windows Based Script Host,Microsoft Corporation
+.vbox,progId_VirtualBox.Shell.vbox,VirtualBox Machine Definition,application/x-virtualbox-vbox,,,,,0x00000000,0x00000000,"""C:\Program Files\Oracle\VirtualBox\VBoxRes.dll"",-201",9/13/2012 7:54:05 AM,Standard,,Oracle VM VirtualBox,4.2.0.80737,VirtualBox Resources,Oracle Corporation
+.vbox-extpack,progId_VirtualBox.Shell.vbox-extpack,VirtualBox Extension Pack,application/x-virtualbox-vbox-extpack,,,,,0x00000000,0x00000000,"""C:\Program Files\Oracle\VirtualBox\VBoxRes.dll"",-202",9/13/2012 7:54:05 AM,Standard,,Oracle VM VirtualBox,4.2.0.80737,VirtualBox Resources,Oracle Corporation
+.vbproj,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.vbs,VBSFile,VBScript Script File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\WScript.exe,2",7/13/2009 10:53:38 PM,Standard,,Microsoft ® Windows Script Host,5.8.7600.16385,Microsoft ® Windows Based Script Host,Microsoft Corporation
+.vbx,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.vcf,Outlook.File.vcf.14,vCard File,text/x-vcard,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\outicon.exe,3",7/5/2012 4:46:09 PM,Standard,Outlook.File.vcf.14,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vcg,GrooveVCard,Microsoft SharePoint Workspace VCard,application/vnd.groove-vcard,,,,,0x00000100,0x00000000,,7/5/2012 4:36:29 PM,Standard,,,,,
+.vcproj,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.vcs,Outlook.File.vcs.14,vCalendar File,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\outicon.exe,2",7/5/2012 4:46:09 PM,Standard,Outlook.File.vcs.14,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vdi,progId_VirtualBox.Shell.vdi,Virtual Disk Image,application/x-virtualbox-vdi,,,,,0x00000000,0x00000000,"""C:\Program Files\Oracle\VirtualBox\VBoxRes.dll"",-303",9/13/2012 7:54:05 AM,Standard,,Oracle VM VirtualBox,4.2.0.80737,VirtualBox Resources,Oracle Corporation
+.vdw,Visio.WebDrawing.14,Microsoft Visio Web Drawing,application/vnd.visio.webdrawing,,,,,0x00000000,0x00000008,"C:\PROGRA~2\MICROS~1\Office14\VISIO.EXE,-32",7/5/2012 5:13:31 PM,Standard,,Microsoft Office 2010,14.0.6122.5000,Microsoft Visio,Microsoft Corporation
+.vdx,Visio.Drawing.11,Microsoft Visio Drawing,application/vnd.visio,,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0057-0000-0000-0000000FF1CE}\visicon.exe,1",7/5/2012 5:13:27 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vhd,progId_VirtualBox.Shell.vhd,Virtual Hard Disk,application/x-virtualbox-vhd,,,,,0x00000000,0x00000000,"""C:\Program Files\Oracle\VirtualBox\VBoxRes.dll"",-305",9/13/2012 7:54:05 AM,Standard,,Oracle VM VirtualBox,4.2.0.80737,VirtualBox Resources,Oracle Corporation
+.viw,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.vmc_token,vmc_token_auto_file,,,,,,,0x00000000,0x00000000,,9/13/2012 7:43:59 AM,Standard,,,,,
+.vmdk,progId_VirtualBox.Shell.vmdk,Virtual Machine Disk Format,application/x-virtualbox-vmdk,,,,,0x00000000,0x00000000,"""C:\Program Files\Oracle\VirtualBox\VBoxRes.dll"",-304",9/13/2012 7:54:05 AM,Standard,,Oracle VM VirtualBox,4.2.0.80737,VirtualBox Resources,Oracle Corporation
+.vob,,,,video,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.vsd,Visio.Drawing.11,Microsoft Visio Drawing,application/vnd.visio,,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0057-0000-0000-0000000FF1CE}\visicon.exe,1",7/5/2012 5:13:27 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vsl,Visio.AddOn.11,Microsoft Visio Add-On,application/vnd.visio,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\VISIO.EXE,-28",7/5/2012 5:13:31 PM,Standard,,Microsoft Office 2010,14.0.6122.5000,Microsoft Visio,Microsoft Corporation
+.vspscc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.vss,Visio.Stencil.11,Microsoft Visio Stencil,application/vnd.visio,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0057-0000-0000-0000000FF1CE}\visicon.exe,2",7/5/2012 5:13:27 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vsscc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.vssscc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.vst,Visio.Template.11,Microsoft Visio Template,application/vnd.visio,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0057-0000-0000-0000000FF1CE}\visicon.exe,3",7/5/2012 5:13:27 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vstemplate,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.vsto,bootstrap.vsto.1,VSTO Deployment Manifest,application/x-ms-vsto,,,,,0x00010000,0x00001000,"C:\Program Files (x86)\Common Files\Microsoft Shared\VSTO\vstoee.dll,0",7/5/2012 4:34:06 PM,Standard,,Microsoft® Visual Studio® 2010,10.0.31007.0 built by: VSTO_Rel,Visual Studio Tools for Office Execution Engine,Microsoft Corporation
+.vsu,Visio.CustomUI.11,Microsoft Visio Custom Toolbars,application/vnd.visio,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\VISIO.EXE,-30",7/5/2012 5:13:31 PM,Standard,,Microsoft Office 2010,14.0.6122.5000,Microsoft Visio,Microsoft Corporation
+.vsw,Visio.Workspace.11,Microsoft Visio Workspace,application/vnd.visio,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0057-0000-0000-0000000FF1CE}\visicon.exe,4",7/5/2012 5:13:27 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vsx,Visio.Stencil.11,Microsoft Visio Stencil,application/vnd.visio,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0057-0000-0000-0000000FF1CE}\visicon.exe,2",7/5/2012 5:13:27 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vtx,Visio.Template.11,Microsoft Visio Template,application/vnd.visio,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0057-0000-0000-0000000FF1CE}\visicon.exe,3",7/5/2012 5:13:27 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.vxd,vxdfile,Virtual Device Driver,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.wab,wab_auto_file,Address Book File,,,,,,0x00000000,0x00000000,"%ProgramFiles%\Windows Mail\wab.exe,10",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Contacts,Microsoft Corporation
+.wav,WMP11.AssocFile.WAV,Wave Sound,audio/wav,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-734",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wave,,,audio/wav,audio,,,,0x00000000,0x00000000,,7/7/2012 4:52:14 PM,Standard,,,,,
+.wax,WMP11.AssocFile.WAX,Windows Media Audio shortcut,audio/x-ms-wax,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wbcat,wbcatfile,Windows Backup Catalog File,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\sdclt.exe,-5500",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Microsoft® Windows Backup,Microsoft Corporation
+.wbk,Word.Backup.8,Microsoft Word Backup Document,application/msword,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,4",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.wcx,wcxfile,Workspace Configuration File,,,,,,0x00000000,0x00000000,%systemroot%\system32\tsworkspace.dll,7/13/2009 10:53:38 PM,Standard,,,,,
+.wdp,wdpfile,Windows Media Photo,image/vnd.ms-photo,image,,,,0x00010000,0x00000000,"%SystemRoot%\System32\wmphoto.dll,-400",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Media Photo Codec,Microsoft Corporation
+.webpnp,webpnpFile,Web Point And Print File,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\oleprn.dll,-200",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Oleprn DLL,Microsoft Corporation
+.wiz,Word.Wizard.8,Microsoft Word Wizard,application/msword,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\wordicon.exe,3",7/5/2012 4:35:42 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.wizhtml,accessthmltemplate,Microsoft Access HTML Template,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\accicons.exe,59",7/5/2012 4:44:40 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.wll,Word.Addin.8,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:15 PM,Standard,,,,,
+.wlt,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.wm,WMP11.AssocFile.ASF,Windows Media Audio/Video file,video/x-ms-wm,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wma,WMP11.AssocFile.WMA,Windows Media Audio file,audio/x-ms-wma,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-735",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.WMD,WMP11.AssocFile.WMD,Windows Media Player Download Package,application/x-ms-wmd,,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wmdb,WMP.WMDBFile,Windows Media Library,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wmf,wmffile,WMF File,,image,,,,0x00000000,0x00000000,"%SystemRoot%\system32\mspaint.exe,-3",7/5/2012 4:35:45 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Paint,Microsoft Corporation
+.wmp,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.WMS,WMP11.AssocFile.WMS,Windows Media Player Skin File,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-617",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wmv,WMP11.AssocFile.WMV,Windows Media Audio/Video file,video/x-ms-wmv,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-736",11/21/2010 12:30:48 AM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wmx,WMP11.AssocFile.ASX,Windows Media Audio/Video playlist,video/x-ms-wmx,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wmz,WMP11.AssocFile.WMZ,Windows Media Player Skin Package,application/x-ms-wmz,compressed,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-617",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wpc,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.wpl,WMP11.AssocFile.WPL,Windows Media playlist,application/vnd.ms-wpl,audio,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-616",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.wps,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:15 PM,Standard,,,,,
+.wpt,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:15 PM,Standard,,,,,
+.wpz,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
+.wri,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.wsc,scriptletfile,Windows Script Component,text/scriptlet,,,,,0x00000000,0x00000000,"C:\Windows\system32\scrobj.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft ® Windows ® Script Component Runtime,5.8.7600.16385,Windows ® Script Component Runtime,Microsoft Corporation
+.wsdl,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.WSF,WSFFile,Windows Script File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\WScript.exe,2",7/13/2009 10:53:38 PM,Standard,,Microsoft ® Windows Script Host,5.8.7600.16385,Microsoft ® Windows Based Script Host,Microsoft Corporation
+.WSH,WSHFile,Windows Script Host Settings File,,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\WScript.exe,1",7/13/2009 10:53:38 PM,Standard,,Microsoft ® Windows Script Host,5.8.7600.16385,Microsoft ® Windows Based Script Host,Microsoft Corporation
+.wsz,,,,compressed,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.wtf,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:15 PM,Standard,,,,,
+.WTV,MediaCenter.WTVFile,Windows Recorded TV Show,,video,,,,0x00000000,0x00000000,"C:\Windows\System32\sberes.dll,-301",11/21/2010 12:30:49 AM,Standard,,Microsoft® Windows® Operating System,6.6.7600.16385 (win7_rtm.090713-1255),DirectShow Stream Buffer Filter Resouces.,Microsoft Corporation
+.wtx,txtfile,Text Document,,,,,,0x00010000,0x00000000,"%SystemRoot%\system32\imageres.dll,-102",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.wvx,WMP11.AssocFile.WVX,Windows Media Audio/Video playlist,video/x-ms-wvx,video,,,,0x00110000,0x00000000,"%SystemRoot%\system32\wmploc.dll,-730",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,12.0.7600.16385 (win7_rtm.090713-1255),Windows Media Player Resources,Microsoft Corporation
+.x,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.xaml,Windows.XamlDocument,Windows Markup File,application/xaml+xml,,,,,0x00010000,0x00001000,"C:\Windows\System32\PresentationHost.exe,2",7/13/2009 10:53:38 PM,Standard,,Microsoft® .NET Framework,4.0.31106.0 built by: Main,Windows Presentation Foundation Host,Microsoft Corporation
+.xbap,Windows.Xbap,XAML Browser Application,application/x-ms-xbap,,,,,0x00010000,0x00001000,"C:\Windows\System32\PresentationHost.exe,3",7/13/2009 10:53:38 PM,Standard,,Microsoft® .NET Framework,4.0.31106.0 built by: Main,Windows Presentation Foundation Host,Microsoft Corporation
+.xdp,AcroExch.XDPDoc,Adobe Acrobat XML Data Package File,application/vnd.adobe.xdp+xml,,,,,0x00010000,0x00000000,"C:\Windows\Installer\{AC76BA86-7AD7-1033-7B44-A93000000001}\XDPFile_8.ico,0",11/4/2011 1:26:21 PM,Standard,,,,,
+.xdr,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.xevgenxml,XEV.GenericApp,,,,,*,,0x00000001,0x00000000,"%SystemRoot%\System32\msxml3.dll,0",7/5/2012 4:34:06 PM,Standard,,Microsoft(R) MSXML 3.0 SP11,8.110.7601.17857,MSXML 3.0 SP11,Microsoft Corporation
+.xfdf,AcroExch.XFDFDoc,Adobe Acrobat Forms Document,application/vnd.adobe.xfdf,,,,,0x00010000,0x00000000,"C:\Windows\Installer\{AC76BA86-7AD7-1033-7B44-A93000000001}\XFDFFile_8.ico,0",11/4/2011 1:26:21 PM,Standard,,,,,
+.xht,ChromeHTML,Chrome HTML Document,,,,,,0x00000000,0x00000000,"C:\Users\lpjharri\AppData\Local\Google\Chrome\Application\chrome.exe,0",7/6/2012 11:08:02 AM,Standard,ChromeHTML,Google Chrome,21.0.1180.89,Google Chrome,Google Inc.
+.xhtml,ChromeHTML,Chrome HTML Document,,,,,,0x00000000,0x00000000,"C:\Users\lpjharri\AppData\Local\Google\Chrome\Application\chrome.exe,0",7/6/2012 11:08:02 AM,Standard,ChromeHTML,Google Chrome,21.0.1180.89,Google Chrome,Google Inc.
+.xix,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.xla,Excel.Addin,Microsoft Excel Add-In,application/vnd.ms-excel,,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,6",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlam,Excel.AddInMacroEnabled,Microsoft Excel Add-In,application/vnd.ms-excel.addin.macroEnabled.12,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,6",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlb,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.xlc,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.xld,Excel.Dialog,Microsoft Excel 5.0 DialogSheet,application/vnd.ms-excel,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,12",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlk,Excel.Backup,Microsoft Excel Backup File,application/vnd.ms-excel,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,5",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xll,Excel.XLL,Microsoft Excel XLL Add-In,application/vnd.ms-excel,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,8",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlm,Excel.Macrosheet,Microsoft Excel 4.0 Macro,application/vnd.ms-excel,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,2",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xls,Excel.Sheet.8,Microsoft Excel 97-2003 Worksheet,application/vnd.ms-excel,,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,28",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlsb,Excel.SheetBinaryMacroEnabled.12,Microsoft Excel Binary Worksheet,application/vnd.ms-excel.sheet.binary.macroEnabled.12,document,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,27",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlshtml,Excelhtmlfile,Microsoft Excel HTML Document,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,26",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlsm,Excel.SheetMacroEnabled.12,Microsoft Excel Macro-Enabled Worksheet,application/vnd.ms-excel.sheet.macroEnabled.12,document,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,30",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlsmhtml,excelmhtmlfile,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\EXCEL.EXE,-277",7/5/2012 4:35:49 PM,Standard,,Microsoft Office 2010,14.0.6112.5000,Microsoft Excel,Microsoft Corporation
+.xlsx,Excel.Sheet.12,Microsoft Excel Worksheet,,document,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,1",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlt,Excel.Template.8,Microsoft Excel Template,application/vnd.ms-excel,,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,29",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlthtml,Excelhtmltemplate,Microsoft Excel HTML Template,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,14",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xltm,Excel.TemplateMacroEnabled,Microsoft Excel Macro-Enabled Template,application/vnd.ms-excel.template.macroEnabled.12,document,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,31",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xltx,Excel.Template,Microsoft Excel Template,,document,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,4",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlw,Excel.Workspace,Microsoft Excel Workspace,application/vnd.ms-excel,,,,,0x00000000,0x00000008,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\xlicons.exe,7",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
+.xlxml,Excelxmlss,Microsoft Excel XML Worksheet,,,,,,0x00000000,0x00000008,"C:\PROGRA~2\MICROS~1\Office14\EXCEL.EXE,-282",7/5/2012 4:35:51 PM,Standard,,Microsoft Office 2010,14.0.6112.5000,Microsoft Excel,Microsoft Corporation
+.xml,powerse.xml,XML,text/xml,text,,,,0x00000000,0x00000000,"""%1""",8/15/2012 1:02:51 PM,Standard,Applications\sublime_text.exe,,,,
+.xps,Windows.XPSReachViewer,XPS Document,application/vnd.ms-xpsdocument,,,,,0x00000000,0x00000000,"%SystemRoot%\System32\xpsrchvw.exe,-109",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),XPS Viewer,Microsoft Corporation
+.xrm-ms,MSSppLicenseFile,XrML Digital License,text/xml,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.xsd,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.xsf,InfoPath.SolutionManifest.3,Microsoft InfoPath Form Definition File,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\inficon.exe,2",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6120.5000,Microsoft Office 2010 component,Microsoft Corporation
+.xsl,xslfile,XSL Stylesheet,text/xml,text,,,,0x00010000,0x00000000,"%SystemRoot%\System32\msxml3.dll,1",7/5/2012 4:36:12 PM,Standard,,Microsoft(R) MSXML 3.0 SP11,8.110.7601.17857,MSXML 3.0 SP11,Microsoft Corporation
+.xslt,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
+.xsn,InfoPath.Solution.3,Microsoft InfoPath Form Template,,,,,,0x00000000,0x00000000,"C:\Windows\Installer\{90140000-0011-0000-0000-0000000FF1CE}\inficon.exe,2",7/5/2012 4:35:41 PM,Standard,,Microsoft Office 2010,14.0.6120.5000,Microsoft Office 2010 component,Microsoft Corporation
+.xtp,XTPFile,Microsoft InfoPath Template Part File,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Microsoft Office\Office14\INFOPATH.EXE,1",7/5/2012 4:36:12 PM,Standard,,Microsoft Office InfoPath,14.0.6120.5000,Microsoft InfoPath 2010,Microsoft Corporation
+.xtp2,XTP2File,Microsoft InfoPath Template Part File,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Microsoft Office\Office14\INFOPATH.EXE,1",7/5/2012 4:36:12 PM,Standard,,Microsoft Office InfoPath,14.0.6120.5000,Microsoft InfoPath 2010,Microsoft Corporation
+.z,,,application/x-compress,compressed,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.z96,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.zfsendtotarget,CLSID\{888DCA60-FC0A-11CF-8F0F-00C04FD7D062},Compressed (zipped) Folder SendTo Target,,,,*,,0x00000001,0x00000000,%SystemRoot%\system32\zipfldr.dll,7/13/2009 10:53:38 PM,Standard,,,,,
+.zip,CompressedFolder,Compressed (zipped) Folder,application/x-zip-compressed,compressed,,,,0x00000000,0x00000000,%SystemRoot%\system32\zipfldr.dll,7/13/2009 10:53:38 PM,Standard,,,,,
+Directory,File Folder,File Folder,,,,,*,0x000001d2,0x00000000,"%SystemRoot%\System32\shell32.dll,3",9/4/2012 10:37:32 AM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Shell Common Dll,Microsoft Corporation
+Folder,Folder,Folder,,,,,,0x000003d2,0x00000000,"%SystemRoot%\System32\shell32.dll,3",9/4/2012 10:37:32 AM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Windows Shell Common Dll,Microsoft Corporation

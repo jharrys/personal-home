@@ -47,12 +47,12 @@ Public Sub TaskStatusReport()
                 
                 If (currentTask.Complete = True) Then
                     ' Completed tasks
-                    Report = Report & AddToReportIfNotBlank(Completed(MeRnd(0, 2)), currentTask.Subject & ". ")
-                    Report = Report & AddToReportIfNotBlank(Finished(MeRnd(0, 2)), currentTask.DateCompleted & ".", True)
+                    Report = Report & AddToReportIfNotBlank(Completed(JRnd(0, 2)), currentTask.Subject & ". ")
+                    Report = Report & AddToReportIfNotBlank(Finished(JRnd(0, 2)), currentTask.DateCompleted & ".", True)
                 Else
                     ' Pending tasks
-                    Report = Report & AddToReportIfNotBlank(Working(MeRnd(0, 2)), currentTask.Subject & ". ")
-                    Report = Report & AddToReportIfNotBlank(About(MeRnd(0, 2)), currentTask.PercentComplete & "% complete.", True)
+                    Report = Report & AddToReportIfNotBlank(Working(JRnd(0, 2)), currentTask.Subject & ". ")
+                    Report = Report & AddToReportIfNotBlank(About(JRnd(0, 2)), currentTask.PercentComplete & "% complete.", True)
                 End If
                 
                 ' Common
@@ -88,7 +88,12 @@ Private Function AddToReportIfNotBlank(FieldName As String, FieldValue As String
     End If
     
 End Function
-Private Function MeRnd(lower As Integer, upper As Integer)
+Private Function AddSummary()
+    Dim result As String
+    result = ""
+    
+End Function
+Private Function JRnd(lower As Integer, upper As Integer)
     Dim result As Integer
     
     Randomize
@@ -124,6 +129,57 @@ Public Sub CreateReportAsEmail(Title As String, Report As String)
     
 Exiting:
         Set Session = Nothing
+        Exit Sub
+On_Error:
+    MsgBox "error=" & Err.Number & " " & Err.Description
+    Resume Exiting
+
+End Sub
+
+Public Sub AddFullSignature()
+    On Error GoTo On_Error
+    
+    Dim editor
+    Dim selection
+    Dim signature As String
+    
+    Set signature = vbCrLf & "Johnnie Harris" & vbCrLf & "Enterprise Solutions Architect" & vbCrLf _
+                    & "Intermountain Healthcare" & vbCrLf & "P (801) 442-5527" & vbCrLf _
+                    & "E johnnie.harris@imail.org" & vbCrLf & vbCrLf & "------------------------" _
+                    & vbCrLf & "He who can no longer pause to wonder and stand rapt in awe, is " _
+                    & "as good as dead... ~Albert Einstein"
+    
+    Set editor = Application.ActiveInspector.WordEditor
+    Set selection = doc.Windows(1).selection
+    selection.TypeText Text:=signature
+        
+    
+Exiting:
+        Exit Sub
+On_Error:
+    MsgBox "error=" & Err.Number & " " & Err.Description
+    Resume Exiting
+
+End Sub
+
+Public Sub AddQuickSignature()
+    On Error GoTo On_Error
+    
+    Dim editor
+    Dim selection
+    Dim signature As String
+    
+    Set signature = vbCrLf & "johnnie harris" & vbCrLf & "|esa|801.442.5527|johnnie.harris@imail.org|" & vbCrLf _
+                    & "------------------------" _
+                    & vbCrLf & "He who can no longer pause to wonder and stand rapt in awe, is " _
+                    & "as good as dead... ~Albert Einstein"
+    
+    Set editor = Application.ActiveInspector.WordEditor
+    Set selection = doc.Windows(1).selection
+    selection.TypeText Text:=signature
+        
+    
+Exiting:
         Exit Sub
 On_Error:
     MsgBox "error=" & Err.Number & " " & Err.Description
