@@ -139,19 +139,24 @@ End Sub
 Public Sub AddFullSignature()
     On Error GoTo On_Error
     
-    Dim editor
-    Dim selection
+    Dim activeMessage As MailItem
     Dim signature As String
     
-    Set signature = vbCrLf & "Johnnie Harris" & vbCrLf & "Enterprise Solutions Architect" & vbCrLf _
-                    & "Intermountain Healthcare" & vbCrLf & "P (801) 442-5527" & vbCrLf _
-                    & "E johnnie.harris@imail.org" & vbCrLf & vbCrLf & "------------------------" _
-                    & vbCrLf & "He who can no longer pause to wonder and stand rapt in awe, is " _
-                    & "as good as dead... ~Albert Einstein"
+    signature = vbCrLf & "<p>Johnnie Harris </p> " & vbCrLf _
+                    & "<p><small>" _
+                    & "Enterprise Solutions Architect <br>" & vbCrLf _
+                    & "Intermountain Healthcare <br>" & vbCrLf _
+                    & "P (801) 442-5527 <br>" & vbCrLf _
+                    & "E johnnie.harris@imail.org</p>" _
+                    & "</small>" _
+                    & "<p><hr align='left' style='width: 15%' />" _
+                    & vbCrLf & vbCrLf & "<small style='font-size:60%'>""He who can no longer pause to wonder and stand rapt in awe, is " _
+                    & "as good as dead..."" ~Albert Einstein</small>" _
+                    & "</p>"
     
-    Set editor = Application.ActiveInspector.WordEditor
-    Set selection = doc.Windows(1).selection
-    selection.TypeText Text:=signature
+    Set activeMessage = ActiveInspector.currentItem
+    
+    activeMessage.HTMLBody = activeMessage.HTMLBody & signature
         
     
 Exiting:
@@ -165,19 +170,45 @@ End Sub
 Public Sub AddQuickSignature()
     On Error GoTo On_Error
     
-    Dim editor
-    Dim selection
+    Dim activeMessage As MailItem
     Dim signature As String
     
-    Set signature = vbCrLf & "johnnie harris" & vbCrLf & "|esa|801.442.5527|johnnie.harris@imail.org|" & vbCrLf _
-                    & "------------------------" _
-                    & vbCrLf & "He who can no longer pause to wonder and stand rapt in awe, is " _
-                    & "as good as dead... ~Albert Einstein"
+    signature = vbCrLf & "<p>~ johnnie @ <small>esa|801.442.5527|johnnie.harris@imail.org</small></p>" & vbCrLf _
+                    & "<p><hr align='left' style='width: 15%' />" _
+                    & vbCrLf & vbCrLf & "<small style='font-size:60%'>""He who can no longer pause to wonder and stand rapt in awe, is " _
+                    & "as good as dead..."" ~Albert Einstein</small>" _
+                    & "</p>"
     
-    Set editor = Application.ActiveInspector.WordEditor
-    Set selection = doc.Windows(1).selection
-    selection.TypeText Text:=signature
+    Set activeMessage = ActiveInspector.currentItem
+    
+    activeMessage.HTMLBody = activeMessage.HTMLBody & signature
         
+    
+Exiting:
+        Exit Sub
+On_Error:
+    MsgBox "error=" & Err.Number & " " & Err.Description
+    Resume Exiting
+
+End Sub
+Public Sub TestAddQuickSignature()
+    On Error GoTo On_Error
+    
+    Dim activeMessage As MailItem
+    Dim signature As String
+    
+    signature = vbCrLf & "<p>~ johnnie @ <small>esa|801.442.5527|johnnie.harris@imail.org</small></p>" & vbCrLf _
+                    & "<p><hr align='left' style='width: 15%' />" _
+                    & vbCrLf & vbCrLf & "<small style='font-size:60%'>""He who can no longer pause to wonder and stand rapt in awe, is " _
+                    & "as good as dead..."" ~Albert Einstein</small>" _
+                    & "</p>"
+    
+    Set activeMessage = ActiveInspector.currentItem
+    
+    activeMessage.HTMLBody = activeMessage.HTMLBody & signature
+    
+    Dim newbod As String
+    newbod = activeMessage.HTMLBody
     
 Exiting:
         Exit Sub
