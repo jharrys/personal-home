@@ -141,7 +141,7 @@
 .diagpkg,Diagnostic.Document,Diagnostic Document,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\msdt.exe,-10011",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Diagnostics Troubleshooting Wizard,Microsoft Corporation
 .dib,Paint.Picture,Bitmap Image,image/bmp,image,,,,0x00000000,0x00000000,"%systemroot%\system32\imageres.dll,-70",7/5/2012 4:35:45 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
 .dic,txtfile,Text Document,,,,,,0x00010000,0x00000000,"%SystemRoot%\system32\imageres.dll,-102",7/5/2012 4:36:15 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
-.diff,unified_diff_file,,,,,,,0x00000000,0x00000000,,8/22/2012 9:17:26 AM,Standard,,,,,
+.diff,unified_diff_file,,,,,,,0x00000000,0x00000000,,10/1/2012 4:51:42 PM,Standard,,,,,
 .disco,,,,,,,,0x00000000,0x00000000,,7/5/2012 4:36:12 PM,Standard,,,,,
 .diz,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .dl_,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
@@ -201,6 +201,7 @@
 .gfs,GrooveStub,Microsoft SharePoint Workspace Remote File,,,,,,0x00000000,0x00000000,%1,7/5/2012 4:34:07 PM,Standard,,,,,
 .ghi,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .gif,giffile,GIF Image,image/gif,image,,,,0x00000000,0x00000000,"%SystemRoot%\System32\imageres.dll,-71",11/21/2010 12:30:49 AM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Windows Image Resource,Microsoft Corporation
+.gitignore_global,gitignore_global_auto_file,,,,,,,0x00000000,0x00000000,,10/2/2012 6:58:39 PM,Standard,,,,,
 .glink,GoogleDrive.glink,Google Drive link,,,,,,0x00000000,0x00000000,"C:\Program Files (x86)\Google\Drive\googledrivesync.exe,-4",7/7/2012 4:45:48 PM,Standard,,Google Drive,1.3.3209.2688,Google Drive,Google
 .glk,GrooveLinkFile,Microsoft SharePoint Workspace Shortcut,,,,,,0x00000000,0x00000000,,7/5/2012 4:35:51 PM,Standard,,,,,
 .glox,GLOXFile,Microsoft Office SmartArt Graphic Layout,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\MICROS~1\Office14\OART.DLL,-3000",7/5/2012 4:35:45 PM,Standard,,Microsoft Office 2010,14.0.6106.5005,Microsoft OfficeArt,Microsoft Corporation
@@ -438,7 +439,7 @@
 .p7r,P7RFile,Certificate Request Response,application/x-pkcs7-certreqresp,,,,,0x00000000,0x00000000,"cryptui.dll,-3410",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),Microsoft Trust UI Provider,Microsoft Corporation
 .p7s,P7SFile,PKCS #7 Signature,application/pkcs7-signature,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .pab,Outlook.File.pab.14,Outlook Personal Address Book,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSOICONS.EXE,6",7/5/2012 4:46:09 PM,Standard,,Microsoft Office 2010,14.0.6009.1000,Microsoft Office 2010 component,Microsoft Corporation
-.patch,unified_diff_file,,,,,,,0x00000000,0x00000000,,8/22/2012 9:17:26 AM,Standard,,,,,
+.patch,unified_diff_file,,,,,,,0x00000000,0x00000000,,10/1/2012 4:51:42 PM,Standard,,,,,
 .pbk,pbkfile,Dial-Up Phonebook,,,,,,0x00000000,0x00000000,"%SystemRoot%\system32\rasdlg.dll,-562",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7600.16385 (win7_rtm.090713-1255),Remote Access Common Dialog API,Microsoft Corporation
 .pcap,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
 .pcapng,wireshark-capture-file,Wireshark capture file,,,,,,0x00000000,0x00000000,"""C:\Program Files\Wireshark\wireshark.exe"",1",7/6/2012 11:57:32 AM,Standard,,Wireshark,1.6.2,Wireshark,"The Wireshark developer community, http://www.wireshark.org/"
@@ -565,6 +566,7 @@
 .sys,sysfile,System file,,system,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .tab,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .tar,,,application/x-tar,compressed,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
+.tc,TrueCryptVolume,TrueCrypt Volume,,,,,,0x00000000,0x00000000,"C:\Program Files\TrueCrypt\TrueCrypt.exe,1",10/5/2012 9:15:58 AM,Standard,,TrueCrypt,7.1a,TrueCrypt,TrueCrypt Foundation
 .tdl,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .text,,,,text,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .tgz,,,application/x-compressed,compressed,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
@@ -591,7 +593,7 @@
 .udf,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .UDL,MSDASC,Microsoft Data Link,,,,,,0x00000000,0x00000000,"%CommonProgramFiles%\System\Ole DB\oledb32.dll,0",7/13/2009 10:53:38 PM,Standard,,Microsoft® Windows® Operating System,6.1.7601.17514 (win7sp1_rtm.101119-1850),OLE DB Core Services,Microsoft Corporation
 .udt,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
-.URL,InternetShortcut,,,,,,,0x00000002,0x00000000,"C:\Windows\System32\url.dll,5",7/13/2009 10:53:38 PM,Standard,,Windows® Internet Explorer,8.00.7601.17874 (win7sp1_gdr.120626-1620),Internet Shortcut Shell Extension DLL,Microsoft Corporation
+.URL,InternetShortcut,,,,,,,0x00000002,0x00000000,"C:\Windows\System32\url.dll,5",7/13/2009 10:53:38 PM,Standard,,Windows® Internet Explorer,8.00.7601.17940 (win7sp1_gdr.120824-0334),Internet Shortcut Shell Extension DLL,Microsoft Corporation
 .user,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .usr,,,,,,,,0x00000000,0x00000000,,7/13/2009 10:53:38 PM,Standard,,,,,
 .uxdc,UXDCFILE,,,,,,,0x00000000,0x00000000,"C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE14\MSORES.DLL,-560",7/5/2012 4:35:43 PM,Standard,,Microsoft Office 2010,14.0.6107.5000,Microsoft Office 2010 component,Microsoft Corporation
