@@ -46,6 +46,7 @@ pgadmin.log
 .k*
 .l*
 # .m* - for .mintty
+.mcop
 .mozilla
 .n*
 .o*

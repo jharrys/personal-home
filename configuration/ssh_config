@@ -10,6 +10,13 @@ PermitLocalCommand yes
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 User john
 
+Host esaui
+HostName lpv-ideadev07
+Compression yes
+PermitLocalCommand yes
+IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
+User lpjharri
+
 Host esa
 HostName esaserver01
 Compression yes
