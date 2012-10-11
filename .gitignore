@@ -61,6 +61,7 @@ pgadmin.log
 .vboxclient*
 .vmc_*
 .viminfo
+.vnc
 .w*
 .x*
 .y*

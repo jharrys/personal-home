@@ -15,6 +15,7 @@ HostName lpv-ideadev07
 Compression yes
 PermitLocalCommand yes
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
+ForwardX11Trusted yes
 User lpjharri
 
 Host esa
