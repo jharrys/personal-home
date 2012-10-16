@@ -3,6 +3,12 @@ Host *
 ControlPath ~/.ssh/connections/%r_%h_%p
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 
+Host solutions
+HostName 159.212.143.162
+Compression yes
+PermitLocalCommand yes
+IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
+
 Host zax
 HostName 192.168.2.2
 Compression yes
