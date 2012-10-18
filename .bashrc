@@ -150,6 +150,9 @@ function _commonsetup() {
 																	# -Dversion=1 -Dpackaging=jar -DgeneratePom=true
 	alias mvnreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'
 
+    # tomcat/esaui work (lpv-ideadev07)
+    alias esapush='scp /home/lpjharri/winhome/Documents/SourceControl/sts-workspace/esa-ui/esa-ui.war lpv-ideadev07:tmp'
+
     # screen or tmux commands
     alias screen='screen ${SHELL} -l'
 
