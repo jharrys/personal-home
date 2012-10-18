@@ -54,6 +54,7 @@ pgadmin.log
 .pulse*
 .q*
 .r*
+!.rtbashrc
 .s*
 .t*
 .u*

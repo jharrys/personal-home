@@ -1,0 +1,138 @@
+# .bashrc
+
+#
+#   Bash login (interactive) does the following:
+#       <bold>login shell</bold> : is one whose first character of arg[0] is a '-' or '--login'
+#       <bold>interactive shell</bold> : is one started without non-option args or without the -c or started with -i
+#
+#       As Interactive, Login shell -OR- Non-Interactive with --login option       
+#       1. Reads /etc/profile if it exists
+#       2. Searches for (a) ~/.bash_profile, (b) ~/.bash_login, (c) ~/.profile in this order
+#       3. Executes only one of a, b or c <- the first one that it finds in the search order above
+#
+#       As Interactive but NOT Login shell
+#       1. Reads ~/.bashrc
+#
+#       Non-Interactive (usually running a shell script) - read the manual. Looks for BASH_ENV for the file to read.
+#
+#
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Set bash options
+shopt -s histappend lithist
+set INPUTRC='~/.inputrc'
+
+# History options
+# "messes up with command numbering" export HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE=2000
+export HISTFILESIZE=2000
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+# Used by many command line apps
+VISUAL=vim
+export VISUAL
+
+CDPATH='.:~/:..:../..:~/Pictures/Wallpaper:~/Desktop:~/Documents:~/Downloads:~/Documents/Google Drive:~/Documents/Life Documents:~/Workspaces'
+export CDPATH
+
+# Variables
+#JAVA_HOME=/etc/alternatives/java_sdk_1.6.0
+JAVA_HOME=/usr/java/jdk1.6.0_18
+export JAVA_HOME
+
+#JDK_HOME=/etc/alternatives/java_sdk_1.6.0
+JDK_HOME=/usr/java/jdk1.6.0_18
+export JDK_HOME
+
+PATH=/opt/subversion/bin:$PATH
+export PATH
+
+# Add sbin dirs
+PATH=/sbin:/usr/sbin:$PATH
+export PATH
+
+LD_LIBRARY_PATH=/usr/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+
+MANPATH=/usr/share/man:/usr/share/man/en:/usr/kerberos/man:/usr/local/share/man:/usr/java/jdk1.6.0_17/man
+export MANPATH
+
+# ALIASES
+
+# Yum
+alias yl='yum list installed'
+alias yr='yum remove -y'
+alias yli='yum localinstall -y --nogpgcheck'
+
+# General
+alias mv='mv -i'
+alias cp='cp -i'
+alias ll='ls -l'
+alias vi='vim'
+alias la='ls -Al'
+alias lld='ls -Al |grep ^d'
+alias elias='vim ~/.bashrc'
+alias ralias='. ~/.bashrc'
+alias getw='wget -N -r -nH -nd --no-parent'
+alias rsync='rsync -avuz --progress'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
+alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
+
+# History
+alias r='fc'				# "r 10" or "r 10 20"; rerun 10 or rerun 10 through 20 (can also be given as string)
+alias rl='fc -l'			# "rl 10 20" - lists history 10 to 20
+alias rr='fc -s'			# "rr old=new 10" - rerun command 10 sub old with new (instead of 10, can use string)
+alias hsync='history -a ; history -n'
+
+alias web='python -m SimpleHTTPServer'						# with no arg, the server is listening on 8000
+alias fnung='find / \( -nouser -o -nogroup \) -print'		# find files/dirs with no user or no group
+alias uneven='findUnevenPermissions.py'						# find uneven permissions
+
+# Wget aliases
+alias wget-asfirefox='wget --user-agent="Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.3) Gecko/2008092416 Firefox/3.0.3"'
+alias wget-back='wget -b'									# Backgrounds wget download: "get-back http://my.favorite.com/file.zip"
+alias wget-verify='wget --spider'							# Verifies that url works: "get-verify http://my.favorite.com/file.zip"
+alias wget-resume='wget -c'									# Resume partially downloaded file: "wget-resume http://my.favorite.com/file.zip"
+alias wget-retry='wget --tries=30'							# Default retries is 20, this ups it to 30: "wget-retry http://my.favorite.com/file.zip"
+alias wget-mirror='wget --mirror -p --convert-links -P'		# Download full website; -p download all to properly display html; --convert-links for local viewing; -P tell it where to save
+# "wget-mirror ./DIR-OF-MY-FAV-SITE-MIRRORED http://my.favorite.com"
+alias wget-reject='wget --reject='							# Specify types to Reject such as gif: "wget-reject gif http://my.favorite.com"
+alias wget-log-err='wget -o'								# Log stderr to specified file: "wget-log-err ./err.log http://my.favorite.com"
+alias wget-accept='wget -r -A'								# Download recursively, Accept types specified: "wget-accept pdf http://pdf.favorites.com"
+
+# Tidy up xml
+alias tidyxml='tidy -i -q -w 0 -xml'
+
+# Update Locate database
+alias locupd='cd /; sudo /usr/libexec/locate.updatedb'
+
+# Strings and Binary files
+alias binstr='strings -a'		# binstr binfile (searches full file and certain sections from TK_STRINGS_DEFAULT_SECTIONS)
+alias binstrn='strings -n'		# binstrn 2 binfile (returns strings >=2)
+alias binstrm='strings -f'		# binstrf /bin/* (searches all bin files)
+alias binstro='strings -o'		# binstro binfile (returns strings with their octal offset)
+
+# Convert deb to rpm and rpm to deb
+alias alien='alien -r'			# To convert deb to rpm
+
+# screen or tmux commands
+alias screen='screen ${SHELL} -l'
+
+# ip performance testing
+alias testperfasserver='iperf -s'                               # runs as a server
+alias testperfasclient='iperf -c'                               # needs host name to test against
+
+# tomcat
+alias tss='service tomcat start'
+alias tsp='service tomcat stop'
+alias tlog='cd /usr/share/tomcat7/latest/logs'
+alias tcd='cd /usr/share/tomcat7/latest'
+alias tapp='cd /usr/share/tomcat7/latest/webapps'
+alias tcls='cd /usr/share/tomcat7/latest/logs;for x in *;do >$x; done;cd -'
+alias thcls='cd /usr/share/tomcat7/latest/logs;rm -f *'
+alias tps='ps -ef |grep [t]omcat'
+alias tcp='rm -rf /usr/share/tomcat7/latest/webapps/esa-ui*;cp ~lpjharri/tmp/esa-ui.war /usr/share/tomcat7/latest/webapps/;if [ $? -eq 0 ]; then echo copied;else echo NOT copied;fi'
+alias ttail='cd /usr/share/tomcat7/latest/logs;tail -f catalina.log catalina.out localhost.log'
