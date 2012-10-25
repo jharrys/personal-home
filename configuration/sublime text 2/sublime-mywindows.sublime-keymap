@@ -1,4 +1,7 @@
 [
 	{ "keys": ["ctrl+shift+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":false} },
-	{ "keys": ["ctrl+shift+alt+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":true} }
+	{ "keys": ["ctrl+shift+alt+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":true} },
+	{ "keys": ["alt+d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" }
 ]
