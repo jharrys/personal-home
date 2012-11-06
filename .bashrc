@@ -33,6 +33,8 @@ function _commonsetup() {
 	export HISTSIZE=2000
 	export HISTFILESIZE=2000
 	export HISTTIMEFORMAT="%d/%m/%y %T "
+    # don't record any commands that start with a space
+    export HISTIGNORE=' *'
 
 	# Used by many command line apps
 	VISUAL=vim
