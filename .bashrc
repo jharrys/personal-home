@@ -141,6 +141,7 @@ function _commonsetup() {
 	alias gitaddp='git add -p'									# gitaddp - let's you pick the changes interactively as your shown diffs
 	alias gitrebasei='git rebase -i'							# gitrebasei HEAD~3 - interactively rewrite history; delete pick to remove commit, 'edit' & 'squash' 
     alias gitrmbr='read -p "branch: " BR;git push origin :$BR'  # delete remote branch on origin - git push origin :remotebranch 
+    alias gitrmtag='read -p "tag: " BR;git push origin :refs/tags/$BR'  # delete remote tag on origin - git push origin :remotetag 
 
 	# Maven stuff
 	alias mvnhelp='mvn help:help -Ddetail=true' 					# helpmemaven
