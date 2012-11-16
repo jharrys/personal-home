@@ -73,6 +73,21 @@ function _commonsetup() {
 	alias rsync='rsync -avuz --progress'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
 	alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
 
+    # Time savers
+    alias a='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
+    alias _tsLargestDirs='find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn'
+    alias _tsLargeFiles='find . -size +1000000 -ls'
+    alias _tsWhoHasFileOpen?='fuser'
+    
+        ## commands that will require sudo
+    if [ $UID -ne 0 ]; then
+        alias reboot='sudo reboot'
+        alias useradd='sudo /usr/sbin/useradd'
+        alias adduser='sudo /usr/sbin/useradd'
+        alias userdel='sudo /usr/sbin/userdel -f'
+        alias deluser='sudo /usr/sbin/userdel -f'
+    fi
+
 	# History
 	alias r='fc'				# "r 10" or "r 10 20"; rerun 10 or rerun 10 through 20 (can also be given as string)
 	alias rl='fc -l'			# "rl 10 20" - lists history 10 to 20
