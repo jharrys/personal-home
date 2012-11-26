@@ -171,7 +171,7 @@ Function Work-Workflow() {
 #	Write-Output $msg |  out-file -append $script:logFile
 	Start-LocationProcesses $script:atWorkApps $script:atWorkServices $script:atWorkPrinter
 	
-	invoke-command -scriptblock {"C:\Users\lpjharri\AppData\Local\Microsoft\Windows\Themes\john.theme"}
+	invoke-command -scriptblock {"C:\Users\lpjharri\AppData\Local\Microsoft\Windows\Themes\john-work-yellow-tahoma.theme"}
 }
 
 Function NotWork-Workflow() {
@@ -182,7 +182,7 @@ Function NotWork-Workflow() {
 #	$msg = "${script:startTime}: [Starting home services and applications ...]"
 #	Write-Output $msg |  out-file -append $script:logFile
 	Start-LocationProcesses $script:atHomeApps $script:atHomeServices $script:atHomePrinter
-	invoke-command -scriptblock {"C:\Users\lpjharri\AppData\Local\Microsoft\Windows\Themes\john.theme"}
+	invoke-command -scriptblock {"C:\Users\lpjharri\AppData\Local\Microsoft\Windows\Themes\john-work-yellow-tahoma.theme"}
 }
 
 [bool] $isLastArgParam = $false
