@@ -3,6 +3,10 @@
 +--.grails/
 +--.ssh -> /home/lpjharri/.ssh
 +--AppData/
+|  +--Local/
+|  |  +--Microsoft/
+|  |  |  +--Windows/
+|  |  |  |  +--Themes -> /cygdrive/c/Users/lpjharri/configuration/win7/Themes
 +--Application Data -> /cygdrive/c/Users/lpjharri/AppData/Roaming
 +--Contacts/
 +--Cookies -> /cygdrive/c/Users/lpjharri/AppData/Roaming/Microsoft/Windows/Cookies
