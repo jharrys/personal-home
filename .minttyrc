@@ -1,5 +1,14 @@
 BoldAsFont=yes
 Transparency=glass
-FontHeight=9
+FontHeight=10
 FontIsBold=no
-Font=Consolas
+Font=Courier New
+FontSmoothing=full
+CtrlShiftShortcuts=yes
+ScrollbackLines=10000000
+Scrollbar=left
+PgUpDnScroll=yes
+Term=xterm-256color
+Printer=CutePDF Writer
+Columns=101
+Rows=35
