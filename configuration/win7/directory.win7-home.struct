@@ -2,18 +2,21 @@
 +--.VirtualBox/
 +--.grails/
 +--.ssh -> /home/lpjharri/.ssh
+|  +--config -> $HOME\configuration\ssh_config
 +--AppData/
 |  +--Local/
 |  |  +--Microsoft/
 |  |  |  +--Windows/
-|  |  |  |  +--Themes -> /cygdrive/c/Users/lpjharri/configuration/win7/Themes
+|  |  |  |  +--Themes -> $HOME\configuration\win7\Themes
 |  +--Roaming/
 |  |  +--Microsoft/
 |  |  |  +--Windows/
-|  |  |  |  +--Libraries -> /cygdrive/c/Users/lpjharri/configuration/win7/Libraries
-+--Application Data -> /cygdrive/c/Users/lpjharri/AppData/Roaming
+|  |  |  |  +--Libraries -> $HOME\configuration\win7\Libraries
++--Application Data -> $HOME\AppData\Roaming
++--bin -> \cygwin\home\lpjharri\bin
++--configuration -> \cygwin\home\lpjharri\configuration
 +--Contacts/
-+--Cookies -> /cygdrive/c/Users/lpjharri/AppData/Roaming/Microsoft/Windows/Cookies
++--Cookies -> $HOME\AppData\Roaming\Microsoft\Windows\Cookies
 +--Desktop/
 +--Documents/
 |  +--Applications/
@@ -22,7 +25,7 @@
 |  +--Archived Intermountain Projects/
 |  +--Enterprise Solutions Architecture/
 |  +--Google Drive/
-|  +--Icons/ -> Google Drive/Icons
+|  +--Icons/ -> $HOME\Documents\Google Drive\Icons
 |  +--MailArchives/
 |  +--My Received Files/
 |  +--OneNote Notebooks/
@@ -44,16 +47,20 @@
 |  |  +--utility_john/
 |  +--Sysinternal Tools/
 |  +--VirtualBox VMs/
-|  +--WindowsPowerShell -> /home/lpjharri/powershell
+|  +--WindowsPowerShell -> /home/lpjharri/configuration/win7/powershell
 +--Downloads/
 +--Favorites/
 +--Links/
-+--Local Settings -> /cygdrive/c/Users/lpjharri/AppData/Local
++--Local Settings -> $HOME\AppData\Local
 +--Mounts/
+|  +--p90x (sandisk 8 GiB)
+|  +--patriot (my 32 GiB)
+|  +--toshiba (my 1 TiB)
+|  +--westerndigital (my 150 GiB) - going bad
 +--My Documents/
 +--My Music/
-+--My Pictures/
-|  +--Wallpaper/ -> Google Drive/Wallpaper
++--Pictures/
+|  +--Wallpaper/ -> $HOME\Documents\Google Drive\Wallpaper
 +--My Videos/
 +--Searches/
 +--Signatures/
