@@ -7,6 +7,10 @@
 |  |  +--Microsoft/
 |  |  |  +--Windows/
 |  |  |  |  +--Themes -> /cygdrive/c/Users/lpjharri/configuration/win7/Themes
+|  +--Roaming/
+|  |  +--Microsoft/
+|  |  |  +--Windows/
+|  |  |  |  +--Libraries -> /cygdrive/c/Users/lpjharri/configuration/win7/Libraries
 +--Application Data -> /cygdrive/c/Users/lpjharri/AppData/Roaming
 +--Contacts/
 +--Cookies -> /cygdrive/c/Users/lpjharri/AppData/Roaming/Microsoft/Windows/Cookies
