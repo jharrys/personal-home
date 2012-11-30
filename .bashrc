@@ -198,6 +198,9 @@ function _commonsetup() {
 
     alias trycolors='eval $( dircolors -b ~/configuration/linux/dircolors.txt ); ls'
 
+    # project aliases
+    alias mntesa='mount //co-lp-vmpfile1/eisa-share ./eisa-share/ -o user=lpjharri'
+
 	# my functions
 	. ~/bin/john_functions
 }
