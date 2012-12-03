@@ -68,6 +68,7 @@
 	"iPod Service" = "C:\Program Files\iPod\bin\iPodService.exe"
 	"WMPNetworkSvc" = "C:\Program Files\Windows Media Player\wmpnetwk.exe"
 	"NfsClnt" = "C:\Windows\system32\nfsclnt.exe"
+	"AllShare Play Service" = "C:\Program Files\Samsung\AllShare Play\AllShare Play Service.exe"
 }
 [string] $atWorkPrinter = "LP-S2-COPY01 on http://lpv-ps01"
 [string] $atHomePrinter = "Dad's Canon MX710 series Printer"
