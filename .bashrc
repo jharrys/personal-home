@@ -96,6 +96,7 @@ function _commonsetup() {
         alias adduser='sudo /usr/sbin/useradd'
         alias userdel='sudo /usr/sbin/userdel -f'
         alias deluser='sudo /usr/sbin/userdel -f'
+        alias mntesa='sudo mkdir -p /mnt/eisa-share; sudo mount //co-lp-vmpfile1/eisa-share /mnt/eisa-share/ -o user=lpjharri'
     fi
 
 	# History
@@ -197,9 +198,6 @@ function _commonsetup() {
     alias testperfasclient='iperf -c'                               # needs host name to test against
 
     alias trycolors='eval $( dircolors -b ~/configuration/linux/dircolors.txt ); ls'
-
-    # project aliases
-    alias mntesa='mount //co-lp-vmpfile1/eisa-share ./eisa-share/ -o user=lpjharri'
 
 	# my functions
 	. ~/bin/john_functions
