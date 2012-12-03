@@ -96,6 +96,9 @@ function _commonsetup() {
         alias adduser='sudo /usr/sbin/useradd'
         alias userdel='sudo /usr/sbin/userdel -f'
         alias deluser='sudo /usr/sbin/userdel -f'
+        alias newgroupnogid='sudo /usr/sbin/groupadd'
+        alias newgroupgid='read -p "gid? " GID;sudo /usr/sbin/groupadd --gid ${GID}'
+        alias adduser2group='read -p "groups(separate by ,)? " GR;sudo /usr/sbin/usermod --append --groups ${GR}'
         alias mntesa='sudo mkdir -p /mnt/eisa-share; sudo mount //co-lp-vmpfile1/eisa-share /mnt/eisa-share/ -o user=lpjharri'
     fi
 
