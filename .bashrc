@@ -100,6 +100,7 @@ function _commonsetup() {
         alias newgroupgid='read -p "gid? " GID;sudo /usr/sbin/groupadd --gid ${GID}'
         alias adduser2group='read -p "groups(separate by ,)? " GR;sudo /usr/sbin/usermod --append --groups ${GR}'
         alias mntesa='sudo mkdir -p /mnt/eisa-share; sudo mount //co-lp-vmpfile1/eisa-share /mnt/eisa-share/ -o user=lpjharri'
+        alias umntesa='cd /tmp;sudo umount /mnt/eisa-share/;cd -'
     fi
 
 	# History
