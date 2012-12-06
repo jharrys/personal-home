@@ -61,6 +61,8 @@
 	# make sure key is common process name and value is full path to process
 	"googledrivesync" = "C:\Program Files (x86)\Google\Drive\googledrivesync.exe"
 	"iTunesHelper" = "C:\Program Files (x86)\iTunes\iTunesHelper.exe"
+	"AllShare Play" = "C:\Program Files\Samsung\AllShare Play\AllShare Play.exe"
+	"AllShare Play Launcher" = "C:\Program Files\Samsung\AllShare Play\utils\AllShare Play Launcher.exe"
 }
 [hashtable] $atHomeServices = @{
 	# make sure key is common process name and value is full path to process
@@ -68,6 +70,7 @@
 	"iPod Service" = "C:\Program Files\iPod\bin\iPodService.exe"
 	"WMPNetworkSvc" = "C:\Program Files\Windows Media Player\wmpnetwk.exe"
 	"NfsClnt" = "C:\Windows\system32\nfsclnt.exe"
+	"AllShare Framework DMS" = "C:\Program Files\Samsung\AllShare Framework DMS\1.3.06\AllShareFrameworkManagerDMS.exe"
 	"AllShare Play Service" = "C:\Program Files\Samsung\AllShare Play\AllShare Play Service.exe"
 }
 [string] $atWorkPrinter = "LP-S2-COPY01 on http://lpv-ps01"
