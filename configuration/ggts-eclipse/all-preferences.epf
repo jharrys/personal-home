@@ -1,4 +1,4 @@
-#Sat Nov 10 22:20:46 MST 2012
+#Wed Dec 05 18:21:17 MST 2012
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_new_line_in_empty_anonymous_type_declaration=insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_after_label=do not insert
 /instance/org.eclipse.jdt.ui/cleanup.make_parameters_final=false
@@ -12,6 +12,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindSpinLoop=FindSpinLoop|true
 /instance/org.eclipse.egit.ui/BranchProjectTracker__C\:\\Users\\lpjharri\\Documents\\SourceControl\\sts-workspace\\grails-pomodoro\\.git_master=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="master">\r\n<project>/</project>\r\n</projects>
 /instance/org.eclipse.ant.ui/useAnnotationsPrefPage=true
+/instance/org.eclipse.ui.editors/changeIndicationColor=0,128,192
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.cleanupprofiles.version=2
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_closing_angle_bracket_in_type_parameters=insert
 /instance/org.eclipse.ui.editors/spacesForTabs=true
@@ -46,6 +47,7 @@
 /instance/org.eclipse.m2e.discovery/org.eclipse.m2e.discovery.pref.projects=
 /instance/org.eclipse.jdt.ui/cleanup.sort_members=false
 /instance/edu.umd.cs.findbugs.plugin.eclipse/run_at_full_build=false
+/instance/org.eclipse.ui.ide/org.eclipse.ui.internal.views.markers.CachedMarkerBuilderorg.eclipse.ui.views.TaskList=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<filterGroups andFilters\="false" markerLimit\="100" markerLimitEnabled\="true">\r\n<filterGroup IMemento.internal.id\="TODOs" enabled\="false" filterLimit\="-1" scope\="3" workingSet\="Aggregate for window 1352864773070">\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.completionField" completion\="3"/>\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.priorityField" selectedPriorities\="7"/>\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.descriptionField" containsModifier\="CONTAINS" containsText\="TODO"/>\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\r\n</filterGroup>\r\n</filterGroups>
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorRepeatedConditionals=RepeatedConditionals|true
 /instance/org.eclipse.jdt.ui/java_doc_link_italic=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_method_invocation_arguments=insert
@@ -58,6 +60,7 @@
 /instance/org.eclipse.help.ui/browser.w=1024
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.remove_trailing_whitespaces_all=true
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorMethodReturnCheck=MethodReturnCheck|true
+/instance/org.eclipse.compare/org.eclipse.compare.SaveAllEditors=true
 /instance/org.eclipse.help.ui/browser.h=768
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.gettersetter.use.is=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.comment.clear_blank_lines_in_block_comment=false
@@ -68,7 +71,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFinalizerNullsFields=FinalizerNullsFields|true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_opening_brace_in_type_declaration=insert
 /instance/org.springsource.ide.eclipse.commons.frameworks.core/org.springsource.ide.eclipse.commons.frameworks.ui.legacyconversion.autocheck=false
-/instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.ExpressionView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684">\r\n<PRESENTATION_CONTEXT_PROPERTIES IMemento.internal.id\="org.eclipse.debug.ui.ExpressionView"/>\r\n</VariablesViewMemento>
+/instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.ExpressionView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684">\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_NAME" SIZE\="271"/>\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_VALUE" SIZE\="461"/>\r\n<PRESENTATION_CONTEXT_PROPERTIES IMemento.internal.id\="org.eclipse.debug.ui.ExpressionView"/>\r\n</VariablesViewMemento>
 /instance/org.eclipse.jdt.debug.ui/org.eclipse.debug.ui.VariableView.org.eclipse.jdt.debug.ui.show_null_entries=true
 /instance/org.eclipse.jdt.ui/spelling_ignore_mixed=true
 /instance/org.eclipse.jdt.ui/content_assist_number_of_computers=23
@@ -137,6 +140,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_brace_in_array_initializer=insert
 /instance/org.eclipse.jdt.ui/cleanup.make_local_variable_final=true
 /instance/org.eclipse.wst.validation/stateTS=0
+/instance/de.loskutov.anyedit.AnyEditTools/org.eclipse.jdt.ui.editor.tab.width=4
 /instance/org.eclipse.jdt.ui/sp_cleanup.make_private_fields_final=true
 /instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_member_accesses_through_instances_with_declaring_class=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.brace_position_for_anonymous_type_declaration=end_of_line
@@ -147,6 +151,7 @@
 /instance/org.springsource.ide.eclipse.dashboard.ui/org.springsource.ide.eclipse.dashboard.ui.dashboard.update.collapse=2
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorAppendingToAnObjectOutputStream=AppendingToAnObjectOutputStream|true
 /instance/org.eclipse.jdt.ui/cleanup.use_blocks_only_for_return_and_throw=false
+/instance/org.eclipse.ui.workbench/ERROR_COLOR=128,0,0
 /instance/org.eclipse.help.base/remoteHelpName=
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.number_of_empty_lines_to_preserve=1
 /instance/com.atlassian.connector.eclipse.jira.ui/secure_storage.migration.done=true
@@ -164,6 +169,7 @@
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.alignment_for_assignment=0
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_opening_paren_in_method_declaration=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_angle_bracket_in_parameterized_type_reference=do not insert
+/instance/org.eclipse.ui.editors/additionIndicationColor=0,255,64
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorBadSyntaxForRegularExpression=BadSyntaxForRegularExpression|true
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorMultithreadedInstanceAccess=MultithreadedInstanceAccess|true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.indent_switchstatements_compare_to_switch=true
@@ -224,7 +230,7 @@
 /instance/org.eclipse.debug.ui/org.eclipse.debug.ui.auto_remove_old_launches=false
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorUncallableMethodOfAnonymousClass=UncallableMethodOfAnonymousClass|true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.keep_else_statement_on_same_line=false
-/instance/org.eclipse.ui.ide/platformState=1351041256395
+/instance/org.eclipse.ui.ide/platformState=1351041256744
 /instance/org.eclipse.jdt.ui/useQuickDiffPrefPage=true
 /instance/com.springsource.sts.ide.ui/com.springsource.sts.ide.ui.dashboard.update.collapse=2
 /instance/org.eclipse.egit.ui/BranchProjectTracker__C\:\\Users\\lpjharri\\Documents\\SourceControl\\sts-workspace\\esa-ui\\.git_master=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects branch\="master">\r\n<project>/</project>\r\n</projects>
@@ -242,7 +248,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.indent_switchstatements_compare_to_cases=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.alignment_for_superclass_in_type_declaration=16
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.brace_position_for_switch=end_of_line
-/instance/org.eclipse.wst.sse.core/task-tag-projects-already-scanned=esa-ui,book-tracker,Servers,RemoteSystemsTempFiles
+/instance/org.eclipse.wst.sse.core/task-tag-projects-already-scanned=RemoteSystemsTempFiles,Servers,book-tracker,esa-ui
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_comma_in_multiple_field_declarations=insert
 /instance/org.eclipse.wst.jsdt.debug.core/org.eclipse.wst.jsdt.debug.core.suspend_on_all_script_loads=false
 /instance/org.eclipse.jdt.ui/sp_cleanup.use_parentheses_in_expressions=false
@@ -301,6 +307,7 @@
 /instance/org.eclipse.ui.trace/tracingMaxFileCount=10
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.blank_lines_between_import_groups=1
 /instance/org.eclipse.jdt.groovy.core/groovy.script.filters=scripts/**/*.groovy,y,src/main/resources/**/*.groovy,y,src/test/resources/**/*.groovy,y
+/instance/org.eclipse.ui.workbench/CONFLICTING_COLOR=128,0,0
 /instance/org.eclipse.jdt.ui/content_assist_prefix_completion=true
 /instance/org.eclipse.wst.jsdt.ui/proposalOrderMigrated=true
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.remove_trailing_whitespaces_ignore_empty=false
@@ -311,6 +318,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_angle_bracket_in_type_parameters=do not insert
 @org.eclipse.team.ui=3.6.200.v20120522-1148
 @org.eclipse.jdt.junit.core=3.7.100.v20120523-1257
+/instance/org.eclipse.egit.ui/sync_view_last_selected_model=org.eclipse.egit.ui.changeSetModel
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.wrap_before_or_operator_multicatch=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_opening_paren_in_if=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_catch=do not insert
@@ -333,6 +341,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindTwoLockWait=FindTwoLockWait|true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_closing_paren_in_constructor_declaration=do not insert
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorSwitchFallthrough=SwitchFallthrough|true
+@de.loskutov.anyedit.AnyEditTools=2.4.3.201211022220
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/Users/lpjharri/Documents/Applications/SpringSource/ggts
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_at_in_annotation=do not insert
 /instance/org.eclipse.jdt.ui/java_multi_line_comment=255,128,64
@@ -362,6 +371,7 @@
 @org.eclipse.jdt.debug.ui=3.6.100.v20120530-1425
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorLoadOfKnownNullValue=LoadOfKnownNullValue|true
 /instance/org.eclipse.mylyn.monitor.ui/org.eclipse.mylyn.monitor.activity.tracking.enabled.checked=true
+/instance/org.eclipse.ui.editors/quickdiff.defaultProvider=org.eclipse.egit.ui.internal.decorators.GitQuickDiffProvider
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.alignment_for_arguments_in_explicit_constructor_call=16
 /instance/org.eclipse.wst.jsdt.ui/java_doc_tag_bold=true
 @org.eclipse.mylyn.wikitext.ui=1.7.2.v20120916-1200
@@ -416,7 +426,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorDumbMethodInvocations=DumbMethodInvocations|true
 /instance/org.eclipse.ant.ui/problem_classpath=warning
 /instance/org.eclipse.jdt.ui/tabWidthPropagated=true
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.FINDBUGS_ANNOTATIONS=C\:/Users/lpjharri/Documents/Applications/SpringSource/ggts/plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.1.20120712/lib/annotations.jar
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.FINDBUGS_ANNOTATIONS=C\:/Users/lpjharri/Documents/Applications/SpringSource/ggts/plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.2.20121103/lib/annotations.jar
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_opening_angle_bracket_in_parameterized_type_reference=do not insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_prefix_operator=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.blank_lines_between_type_declarations=1
@@ -464,12 +474,13 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.enabling_tag=@formatter\:on
 /instance/org.eclipse.jdt.ui/cleanup.always_use_blocks=true
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindUninitializedGet=FindUninitializedGet|true
+/instance/org.eclipse.ui.ide/org.eclipse.ui.internal.views.markers.CachedMarkerBuilderorg.eclipse.ui.views.AllMarkersView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<filterGroups andFilters\="false" markerLimit\="100" markerLimitEnabled\="true">\r\n<filterGroup IMemento.internal.id\="USER1347583678698" enabled\="true" filterLimit\="0" name\="Grails Config" scope\="0" workingSet\="Aggregate for window 1353004531933">\r\n<fieldFilter FILTER_ON_SEVERITY\="true" IMemento.internal.id\="org.eclipse.ui.ide.allSeverityField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="7"/>\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType" selectedTypes\="org.eclipse.ajdt.ui.sourceannotationmarker\:org.eclipse.pde.api.tools.marker.sincetags\:org.eclipse.pde.api.tools.api_usage\:org.eclipse.pde.api.tools.marker.apiusescan\:org.eclipse.pde.api.tools.compatibility\:org.eclipse.pde.api.tools.api_profile\:org.eclipse.pde.api.tools.fatal_problem\:org.eclipse.pde.api.tools.api_component_resolution\:org.eclipse.pde.api.tools.unsupported_tags\:org.eclipse.pde.api.tools.unused_filters\:org.eclipse.pde.api.tools.version_numbering\:org.eclipse.jdt.apt.core.buildproblem\:org.eclipse.jdt.apt.core.configproblem\:org.eclipse.jdt.apt.core.compile.problem\:org.eclipse.jdt.apt.pluggable.core.compileProblem\:org.eclipse.jdt.apt.core.nonreconcile.compile.problem\:org.eclipse.ajdt.ui.advicemarker\:org.eclipse.ajdt.ui.afteradvicemarker\:org.eclipse.ant.ui.antLineBreakpointMarker\:org.eclipse.ant.ui.buildFileProblem\:org.eclipse.ajdt.ui.aroundadvicemarker\:org.eclipse.ajdt.ui.problemmarker\:org.eclipse.ajdt.ui.changedadvicemarker\:org.eclipse.ajdt.ui.beforeadvicemarker\:org.eclipse.core.resources.bookmark\:org.eclipse.debug.core.breakpointMarker\:org.eclipse.debug.core.lineBreakpointMarker\:org.eclipse.wst.css.core.taskMarker\:org.eclipse.jst.j2ee.ClasspathDependencyValidatorMarker\:org.eclipse.ajdt.ui.customadvicemarker\:org.eclipse.wst.dtd.core.validationMarker\:org.eclipse.wst.dtd.core.taskMarker\:org.eclipse.ajdt.ui.declarationmarker\:org.eclipse.pde.ds.core.problem\:org.eclipse.ajdt.ui.annotationmarker\:org.eclipse.datatools.connectivity.ui.driverProblem\:org.eclipse.ajdt.ui.dynamicadvicemarker\:org.eclipse.ajdt.ui.dynamicafteradvicemarker\:org.eclipse.ajdt.ui.dynamicaroundadvicemarker\:org.eclipse.ajdt.ui.dynamicbeforeadvicemarker\:org.eclipse.ajdt.ui.dynamicsourceandtargetmarker\:org.eclipse.jst.jee.ejb3.nobeans\:org.eclipse.jst.j2ee.ejb.EJBValidatorMarker\:org.eclipse.emf.ecore.diagnostic\:org.eclipse.wst.validation.projectmarker\:org.eclipse.jst.j2ee.EARValidatorMarker\:org.eclipse.jst.jsf.facelet.ui.FaceletValidationMarker\:org.eclipse.wst.common.project.facet.core.validation.marker\:org.eclipse.jst.common.project.facet.core.javaVersionMismatch\:org.eclipse.jst.j2ee.differentRuntimesDetected\:org.eclipse.search.filteredsearchmarker\:edu.umd.cs.findbugs.plugin.eclipse.findbugsMarker\:edu.umd.cs.findbugs.plugin.eclipse.findbugsMarkerOfConcern\:edu.umd.cs.findbugs.plugin.eclipse.findbugsMarkerScariest\:edu.umd.cs.findbugs.plugin.eclipse.findbugsMarkerScary\:edu.umd.cs.findbugs.plugin.eclipse.findbugsMarkerTroubling\:org.codehaus.groovy.eclipse.core.compilerMismatch\:org.codehaus.groovy.eclipse.dsl.inferencing_problem\:org.eclipse.wst.html.core.validationMarker\:org.eclipse.wst.html.core.taskMarker\:org.eclipse.ajdt.ui.itdmarker\:org.eclipse.ajdt.ui.sourceitdmarker\:org.eclipse.jdt.groovy.core.invalidBuilder\:org.eclipse.jpt.jaxb.core.jaxbProblemMarker\:org.eclipse.jpt.jpa.core.jpaProblemMarker\:org.eclipse.jst.jsf.ui.JSPSemanticsValidatorMarker\:org.eclipse.jst.jsp.core.validationMarker\:org.eclipse.jst.jsp.core.taskMarker\:org.eclipse.jdt.debug.javaBreakpointMarker\:org.eclipse.jdt.core.buildpath_problem\:org.eclipse.jdt.launching.jreContainerMarker\:org.eclipse.jdt.debug.javaClassPrepareBreakpointMarker\:org.eclipse.jdt.debug.javaExceptionBreakpointMarker\:org.eclipse.jdt.debug.commonJavaLineBreakpointMarker\:org.eclipse.jdt.debug.javaLineBreakpointMarker\:org.eclipse.jdt.debug.javaStratumLineBreakpointMarker\:org.eclipse.jdt.debug.javaMethodBreakpointMarker\:org.eclipse.jdt.debug.javaMethodEntryBreakpointMarker\:org.eclipse.jdt.debug.javaPatternBreakpointMarker\:org.eclipse.jdt.debug.javaTargetPatternBreakpointMarker\:org.eclipse.jdt.core.task\:org.eclipse.jdt.debug.javaWatchpointMarker\:org.eclipse.wst.jsdt.debug.core.breakpoint.marker\:org.eclipse.wst.jsdt.debug.core.exception.breakpoint.marker\:org.eclipse.wst.jsdt.debug.core.function.breakpoint.marker\:org.eclipse.wst.jsdt.debug.core.line.breakpoint.marker\:org.eclipse.wst.jsdt.debug.core.scriptload.breakpoint.marker\:org.eclipse.wst.jsdt.core.buildpath_problem\:org.eclipse.wst.jsdt.web.core.problem\:org.eclipse.wst.jsdt.core.problem\:org.eclipse.wst.jsdt.core.transient_problem\:org.eclipse.wst.jsdt.core.task\:org.eclipse.core.resources.marker\:org.eclipse.pde.core.problem\:org.eclipse.core.resources.problemmarker\:org.eclipse.datatools.connectivity.ui.profileFailure\:org.eclipse.compare.rejectedPatchMarker\:org.eclipse.datatools.sqltools.debugger.core.ui.spLineBreakpointMarker\:org.eclipse.datatools.sqltools.sqleditor.portabilitytask\:org.eclipse.datatools.sqltools.sqleditor.syntaxproblem\:org.eclipse.search.searchmarker\:org.eclipse.ajdt.ui.sourcedynamicadvicemarker\:org.eclipse.ajdt.ui.sourcedynamicafteradvicemarker\:org.eclipse.ajdt.ui.sourcedynamicaroundadvicemarker\:org.eclipse.ajdt.ui.sourcedynamicbeforeadvicemarker\:org.eclipse.ajdt.ui.sourceandtargetmarker\:org.eclipse.ajdt.ui.sourceadvicemarker\:org.eclipse.ajdt.ui.sourceafteradvicemarker\:org.eclipse.ajdt.ui.sourcearoundadvicemarker\:org.eclipse.ajdt.ui.sourcebeforeadvicemarker\:org.eclipse.jdt.ui.internal.spelling\:org.eclipse.core.resources.taskmarker\:org.eclipse.core.resources.textmarker\:org.eclipse.jdt.core.transient_problem\:org.eclipse.wst.validation.problemmarker2\:org.eclipse.wst.validation.problemmarker\:org.eclipse.wst.validation.preferencemarker\:org.eclipse.wst.wsdl.validation.validationMarker\:org.eclipse.mylyn.wikitext.core.validation.problem\:org.eclipse.jst.j2ee.ejb.annotations.xdoclet.xdoclet.marker\:org.eclipse.wst.xml.core.validationMarker\:org.eclipse.xsd.diagnostic\:org.eclipse.wst.xml.core.taskMarker\:org.eclipse.wst.xsl.core.problem\:org.eclipse.datatools.connectivity.sqm.core.ui.persistentBookmark\:org.eclipse.datatools.connectivity.sqm.core.ui.transientBookmark\:org.eclipse.wst.xsl.launching.xslLineBreakpointMarker\:"/>\r\n</filterGroup>\r\n</filterGroups>
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.indent_empty_lines=false
-/instance/org.eclipse.ui.ide/org.eclipse.ui.internal.views.markers.CachedMarkerBuilderorg.eclipse.ui.views.AllMarkersView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<filterGroups andFilters\="false" markerLimit\="100" markerLimitEnabled\="true">\r\n<filterGroup IMemento.internal.id\="USER1347583678698" enabled\="true" filterLimit\="0" name\="New Configuration" scope\="3" workingSet\="Aggregate for window 1347583555075">\r\n<fieldFilter FILTER_ON_SEVERITY\="true" IMemento.internal.id\="org.eclipse.ui.ide.allSeverityField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="7"/>\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\r\n</filterGroup>\r\n</filterGroups>
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.make_private_fields_final=true
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.JSR305_ANNOTATIONS=C\:/Users/lpjharri/Documents/Applications/SpringSource/ggts/plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.1.20120712/lib/jsr305.jar
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.JSR305_ANNOTATIONS=C\:/Users/lpjharri/Documents/Applications/SpringSource/ggts/plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.2.20121103/lib/jsr305.jar
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_question_in_conditional=insert
 /instance/org.eclipse.mylyn.team.ui/org.eclipse.mylyn.team.commit.template=${task.status} - ${connector.task.prefix} ${task.key}\: ${task.description} \r\n${task.url}
+/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.remove_all_expressions_prompt=false
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.quickassist.lightbulb=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_opening_paren_in_method_invocation=do not insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_new_line_in_empty_enum_constant=insert
@@ -477,12 +488,14 @@
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.alignment_for_arguments_in_enum_constant=16
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_brace_in_switch=insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_colon_in_for=insert
+/instance/org.eclipse.ui.workbench/org.eclipse.egit.ui.DiffHunkBackgroundColor=255,255,128
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_in_empty_enum_constant=insert
 /instance/org.eclipse.wst.sse.ui/useQuickDiffPrefPage=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_comma_in_type_arguments=do not insert
 /instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_method_accesses_with_declaring_class=false
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.compiler.taskPriorities=NORMAL,HIGH,NORMAL
 /instance/org.eclipse.jdt.ui/cleanup_profile=_John Java Cleanup
+/instance/org.eclipse.ui.workbench/ACTIVE_HYPERLINK_COLOR=0,128,192
 /instance/org.eclipse.ui.workbench/editors=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<editors>\r\n<descriptor class\="org.eclipse.jdt.internal.ui.javaeditor.ClassFileEditor" id\="org.eclipse.jdt.ui.ClassFileEditorNoSource" image\="$nl$/icons/full/obj16/classf_obj.gif" internal\="true" label\="Class File Viewer" openMode\="1" open_in_place\="false" plugin\="org.eclipse.jdt.ui"/>\r\n<descriptor class\="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditor" id\="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" image\="images/qrydoc.gif" internal\="true" label\="SQL File Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.datatools.sqltools.sqlscrapbook"/>\r\n<descriptor class\="org.eclipse.datatools.sqltools.sqlbuilder.SQLBuilderEditor" id\="org.eclipse.datatools.sqltools.sqlbuilder" image\="images/qrydoc.gif" internal\="true" label\="SQL Query Builder" openMode\="1" open_in_place\="false" plugin\="org.eclipse.datatools.sqltools.sqlbuilder"/>\r\n<descriptor class\="org.eclipse.wst.xsl.ui.internal.editor.XSLEditor" id\="org.eclipse.wst.xsl.ui.XSLEditor" image\="$nl$/icons/full/xslt_file.gif" internal\="true" label\="XSL Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.wst.xsl.ui"/>\r\n<descriptor class\="org.eclipse.wst.sse.ui.StructuredTextEditor" id\="org.eclipse.jst.jsp.core.jspsource.source" image\="$nl$/icons//full/obj16/sourceEditor.gif" internal\="true" label\="JSP Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.jst.jsp.ui"/>\r\n<descriptor class\="org.eclipse.jdt.internal.debug.ui.snippeteditor.JavaSnippetEditor" id\="org.eclipse.jdt.debug.ui.SnippetEditor" image\="$nl$/icons/full/obj16/jsbook_obj.gif" internal\="true" label\="Scrapbook" openMode\="1" open_in_place\="false" plugin\="org.eclipse.jdt.debug.ui"/>\r\n<descriptor id\="org.eclipse.ui.browser.editorSupport" image\="$nl$/icons/obj16/internal_browser.gif" internal\="false" label\="Web Browser" launcher\="org.eclipse.ui.internal.browser.BrowserLauncher" openMode\="4" open_in_place\="false" plugin\="org.eclipse.ui.browser"/>\r\n<descriptor class\="org.eclipse.jst.pagedesigner.editors.HTMLEditor" id\="org.eclipse.jst.pagedesigner.PageDesignerEditor" image\="icons/PD_Plugin.gif" internal\="true" label\="Web Page Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.jst.pagedesigner"/>\r\n<descriptor class\="org.eclipse.wst.sse.ui.StructuredTextEditor" id\="org.grails.ide.eclipse.editor.gsp.editor" image\="icons/full/obj16/grails_file_obj.png" internal\="true" label\="GSP Editor" openMode\="1" open_in_place\="false" plugin\="org.grails.ide.eclipse.editor.gsp"/>\r\n<descriptor class\="org.codehaus.groovy.eclipse.editor.GroovyEditor" id\="org.codehaus.groovy.eclipse.editor.GroovyEditor" image\="icons/groovy_file.gif" internal\="true" label\="Groovy Editor" openMode\="1" open_in_place\="false" plugin\="org.codehaus.groovy.eclipse.ui"/>\r\n<descriptor class\="org.eclipse.wst.jsdt.internal.ui.javaeditor.CompilationUnitEditor" id\="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" image\="$nl$/icons/full/obj16/jcu_obj.gif" internal\="true" label\="JavaScript Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.wst.jsdt.ui"/>\r\n<descriptor class\="org.eclipse.ajdt.internal.ui.editor.AspectJEditor" id\="org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor" image\="icons/structure/ajcu_obj.gif" internal\="true" label\="AspectJ/Java Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.ajdt.ui"/>\r\n<descriptor class\="org.eclipse.pde.internal.ui.samples.SampleEditor" id\="org.eclipse.pde.ui.sampleEditor" image\="$nl$/icons/obj16/build_exec.gif" internal\="true" label\="Code Sample Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.pde.ui"/>\r\n<descriptor class\="org.eclipse.ui.editors.text.TextEditor" id\="org.eclipse.jdt.ui.DefaultTextEditor" image\="icons/jdt/file_obj.gif" internal\="true" label\="Properties File Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.ajdt.ui"/>\r\n<descriptor id\="org.eclipse.jdt.ui.JARDescEditor" image\="$nl$/icons/full/obj16/jar_desc_obj.gif" internal\="false" label\="JAR Export Wizard" launcher\="org.eclipse.jdt.internal.ui.jarpackager.OpenJarExportWizardEditorLauncher" openMode\="4" open_in_place\="false" plugin\="org.eclipse.jdt.ui"/>\r\n<descriptor class\="org.eclipse.wst.server.ui.internal.editor.ServerEditor" id\="org.eclipse.wst.server.ui.editor" image\="icons/obj16/server.gif" internal\="true" label\="Server Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.wst.server.ui"/>\r\n</editors>
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_unused_private_fields=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.alignment_for_enum_constants=0
@@ -513,6 +526,7 @@
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_closing_bracket_in_array_reference=do not insert
 /instance/org.eclipse.ui.ide/SAVE_ALL_BEFORE_BUILD=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.argumentPrefixes=
+/instance/org.eclipse.ui.editors/deletionIndicationInOverviewRuler=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_comma_in_type_parameters=insert
 /instance/org.eclipse.wst.jsdt.ui/cleanup.remove_trailing_whitespaces=true
 /instance/org.eclipse.wst.internet.monitor.core/monitors=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<monitors>\r\n<monitor auto-start\="false" local-port\="7021" remote-host\="localhost" remote-port\="8080" timeout\="0" type-id\="HTTP"/>\r\n</monitors>\r\n
@@ -570,6 +584,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindSelfComparison2=FindSelfComparison2|true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_method_declaration=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_for=insert
+/instance/org.eclipse.ui.workbench/org.eclipse.jface.textfont=1|Tahoma|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.remove_unnecessary_nls_tags=false
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.add_missing_annotations=true
 /instance/com.springsource.sts.grails.core/com.springsource.sts.grails.core.cleanOutput=true
@@ -592,13 +607,14 @@
 /instance/org.eclipse.debug.ui/org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.code_templates_migrated=true
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.qualify_static_member_accesses_through_instances_with_declaring_class=true
+/instance/org.eclipse.ui.workbench/org.eclipse.egit.ui.DiffRemoveBackgroundColor=255,128,128
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_colon_in_object_initializer=insert
 /instance/org.eclipse.wst.jsdt.ui/cleanup.always_use_this_for_non_static_field_access=false
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.comment.format_source_code=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.comment.format_html=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_new_line_before_closing_brace_in_objlit_initializer=insert
 /instance/org.eclipse.egit.core/core_autoShareProjects=true
-/instance/org.eclipse.debug.core/prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="rs"/>\r\n</watchExpressions>\r\n
+/instance/org.eclipse.debug.core/prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions/>\r\n
 /instance/org.eclipse.jdt.ui/escapeStrings=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.align_type_members_on_columns=true
 /instance/com.springsource.sts.grails.editor.gsp/org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
@@ -619,8 +635,8 @@
 /instance/org.eclipse.help.base/remoteHelpOn=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_binary_expression=16
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_method=insert
-/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.relaunch_in_debug_mode=prompt
 /instance/org.eclipse.wst.jsdt.ui/cleanup.remove_unused_private_fields=true
+@org.eclipse.compare=3.5.300.v20120522-1148
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_annotation=do not insert
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_unused_private_types=true
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorConfusionBetweenInheritedAndOuterMethod=ConfusionBetweenInheritedAndOuterMethod|true
@@ -642,6 +658,7 @@
 /instance/org.eclipse.wst.jsdt.ui/cleanup.add_missing_deprecated_annotations=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.codeComplete.localPrefixes=
 /instance/org.eclipse.jdt.ui/cleanup.never_use_blocks=false
+/instance/org.eclipse.ui.editors/additionIndicationInOverviewRuler=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_comma_in_multiple_local_declarations=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.brace_position_for_block_in_case=end_of_line
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_unused_private_members=false
@@ -664,6 +681,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorInefficientMemberAccess=InefficientMemberAccess|false
 /instance/org.eclipse.wst.jsdt.ui/cleanup.organize_imports=false
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_new_line_at_end_of_file_if_missing=do not insert
+/instance/org.eclipse.compare/org.eclipse.compare.UseOutlineView=true
 @org.eclipse.wst.server.ui=1.4.1.v20120821_1330
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.cleanupprofiles=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<profiles version\="2">\r\n<profile kind\="CleanUpProfile" name\="John Java Cleanup" version\="2">\r\n<setting id\="cleanup.remove_unused_private_fields" value\="true"/>\r\n<setting id\="cleanup.always_use_parentheses_in_expressions" value\="true"/>\r\n<setting id\="cleanup.never_use_blocks" value\="false"/>\r\n<setting id\="cleanup.remove_unused_private_methods" value\="true"/>\r\n<setting id\="cleanup.add_missing_deprecated_annotations" value\="true"/>\r\n<setting id\="cleanup.convert_to_enhanced_for_loop" value\="true"/>\r\n<setting id\="cleanup.remove_unnecessary_nls_tags" value\="true"/>\r\n<setting id\="cleanup.sort_members" value\="false"/>\r\n<setting id\="cleanup.remove_unused_local_variables" value\="false"/>\r\n<setting id\="cleanup.never_use_parentheses_in_expressions" value\="false"/>\r\n<setting id\="cleanup.remove_unused_private_members" value\="false"/>\r\n<setting id\="cleanup.remove_unnecessary_casts" value\="true"/>\r\n<setting id\="cleanup.make_parameters_final" value\="false"/>\r\n<setting id\="cleanup.use_this_for_non_static_field_access" value\="true"/>\r\n<setting id\="cleanup.remove_private_constructors" value\="true"/>\r\n<setting id\="cleanup.use_blocks" value\="true"/>\r\n<setting id\="cleanup.always_use_this_for_non_static_method_access" value\="true"/>\r\n<setting id\="cleanup.remove_trailing_whitespaces_all" value\="true"/>\r\n<setting id\="cleanup.always_use_this_for_non_static_field_access" value\="true"/>\r\n<setting id\="cleanup.use_this_for_non_static_field_access_only_if_necessary" value\="false"/>\r\n<setting id\="cleanup.add_default_serial_version_id" value\="true"/>\r\n<setting id\="cleanup.make_type_abstract_if_missing_method" value\="false"/>\r\n<setting id\="cleanup.qualify_static_member_accesses_through_subtypes_with_declaring_class" value\="true"/>\r\n<setting id\="cleanup.make_variable_declarations_final" value\="true"/>\r\n<setting id\="cleanup.add_missing_nls_tags" value\="false"/>\r\n<setting id\="cleanup.format_source_code" value\="true"/>\r\n<setting id\="cleanup.qualify_static_method_accesses_with_declaring_class" value\="false"/>\r\n<setting id\="cleanup.add_missing_override_annotations" value\="true"/>\r\n<setting id\="cleanup.remove_unused_private_types" value\="true"/>\r\n<setting id\="cleanup.add_missing_methods" value\="false"/>\r\n<setting id\="cleanup.make_local_variable_final" value\="true"/>\r\n<setting id\="cleanup.correct_indentation" value\="true"/>\r\n<setting id\="cleanup.add_missing_override_annotations_interface_methods" value\="true"/>\r\n<setting id\="cleanup.remove_unused_imports" value\="true"/>\r\n<setting id\="cleanup.remove_trailing_whitespaces_ignore_empty" value\="false"/>\r\n<setting id\="cleanup.make_private_fields_final" value\="true"/>\r\n<setting id\="cleanup.add_generated_serial_version_id" value\="false"/>\r\n<setting id\="cleanup.organize_imports" value\="true"/>\r\n<setting id\="cleanup.remove_trailing_whitespaces" value\="true"/>\r\n<setting id\="cleanup.sort_members_all" value\="false"/>\r\n<setting id\="cleanup.use_blocks_only_for_return_and_throw" value\="false"/>\r\n<setting id\="cleanup.add_missing_annotations" value\="true"/>\r\n<setting id\="cleanup.use_parentheses_in_expressions" value\="true"/>\r\n<setting id\="cleanup.qualify_static_field_accesses_with_declaring_class" value\="false"/>\r\n<setting id\="cleanup.use_this_for_non_static_method_access_only_if_necessary" value\="false"/>\r\n<setting id\="cleanup.use_this_for_non_static_method_access" value\="true"/>\r\n<setting id\="cleanup.qualify_static_member_accesses_through_instances_with_declaring_class" value\="true"/>\r\n<setting id\="cleanup.add_serial_version_id" value\="false"/>\r\n<setting id\="cleanup.format_source_code_changes_only" value\="false"/>\r\n<setting id\="cleanup.qualify_static_member_accesses_with_declaring_class" value\="true"/>\r\n<setting id\="cleanup.always_use_blocks" value\="true"/>\r\n</profile>\r\n</profiles>\r\n
 /instance/org.eclipse.wst.validation/USER_BUILD_PREFERENCE=enabledBuildValidatorListorg.eclipse.jst.j2ee.internal.validation.UIApplicationClientValidator;org.eclipse.jst.j2ee.internal.validation.UIEarValidator;org.eclipse.wst.wsi.ui.internal.WSIMessageValidator;org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator;org.eclipse.jst.j2ee.internal.ejb.workbench.validation.UIEjbValidator;org.eclipse.jst.j2ee.internal.jca.validation.UIConnectorValidator;org.eclipse.jst.j2ee.internal.classpathdep.ClasspathDependencyValidator;
@@ -730,8 +748,8 @@
 /instance/org.eclipse.egit.ui/merge_mode=0
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_closing_paren_in_switch=do not insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.brace_position_for_method_declaration=end_of_line
-/instance/org.eclipse.rse.core/org.eclipse.rse.systemtype.local.systemType.defaultUserId=lpjharri
 /instance/org.eclipse.ui.ide/IMPORT_FILES_AND_FOLDERS_MODE=prompt
+/instance/org.eclipse.rse.core/org.eclipse.rse.systemtype.local.systemType.defaultUserId=lpjharri
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_arguments_in_enum_constant=16
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_opening_brace_in_array_initializer=insert
 /instance/org.eclipse.wst.jsdt.ui/formatter_settings_version=11
@@ -742,7 +760,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.indent_breaks_compare_to_cases=true
 /instance/org.eclipse.wst.jsdt.ui/java_comment_task_tag=128,128,255
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.indent_body_declarations_compare_to_enum_declaration_header=true
-/instance/org.eclipse.wst.html.core/inlineElements=sub,img,td,sup,br,th,title,strike,basefont,b,acronym,font,select,a,abbr,label,i,cite,li,u,input,s,strong,q,em,big,small,span
+/instance/org.eclipse.wst.html.core/inlineElements=sub,img,td,sup,br,th,strike,title,basefont,acronym,b,select,font,a,abbr,label,i,cite,li,u,input,s,strong,q,em,big,small,span
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.sort_members=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_before_else_in_if_statement=do not insert
 /instance/com.springsource.sts.grails.core/com.springsource.sts.grails.core.launch.properties=
@@ -813,7 +831,7 @@
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.qualify_static_member_accesses_through_subtypes_with_declaring_class=true
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorDefaultEncodingDetector=DefaultEncodingDetector|true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_comma_in_method_declaration_parameters=do not insert
-/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.switch_to_perspective=prompt
+/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.switch_to_perspective=always
 /instance/org.eclipse.jdt.junit.core/org.eclipse.jdt.junit.enable_assertions=false
 /instance/org.eclipse.jdt.ui/cleanup.use_this_for_non_static_field_access_only_if_necessary=false
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorDoInsideDoPrivileged=DoInsideDoPrivileged|true
@@ -833,6 +851,7 @@
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_comma_in_method_invocation_arguments=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.invalidJavadoc=error
 /instance/org.eclipse.jdt.ui/spelling_locale_initialized=true
+/instance/org.eclipse.ui.editors/deletionIndicationColor=255,0,0
 /instance/org.eclipse.jdt.ui/java_comment_task_tag=0,0,255
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindJSR166LockMonitorenter=FindJSR166LockMonitorenter|true
 /instance/org.codehaus.groovy.eclipse.ui/groovy.formatter.braces.start=next
@@ -864,7 +883,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_cast=do not insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.brace_position_for_enum_constant=end_of_line
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_comma_in_parameterized_type_reference=do not insert
-/instance/org.eclipse.team.ui/org.eclipse.team.ui.sychronizing_default_participant_sec_id=1345776868223
+/instance/org.eclipse.team.ui/org.eclipse.team.ui.sychronizing_default_participant_sec_id=1353561811493
 /instance/org.eclipse.help.base/scope=
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorUselessSubclassMethod=UselessSubclassMethod|false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.comment.clear_blank_lines_in_block_comment=false
@@ -924,7 +943,7 @@
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.comment.indent_parameter_description=true
 /instance/org.eclipse.rse.core/useridperkey=D91M31M1.VMware\=lpjharri;D91M31M1.Local\=lpjharri;
 /instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.all_instances_max_count=100
-/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.wait_for_build=prompt
+/instance/org.eclipse.wst.sse.core/task-tags/taskTags=TODO,FIXME,XXX,TESTME,DEPLOY
 \!/=
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_opening_bracket_in_array_allocation_expression=do not insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_prefix_operator=do not insert
@@ -1056,6 +1075,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorBadlyOverriddenAdapter=BadlyOverriddenAdapter|true
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.exception.name=e
 /instance/org.eclipse.ui.workbench/ENABLED_DECORATORS=de.tobject.findbugs.decorators.WorkingSetBugCountDecorator\:true,de.tobject.findbugs.decorators.ProjectBugCountDecorator\:true,de.tobject.findbugs.decorators.FolderBugCountDecorator\:true,de.tobject.findbugs.decorators.FileBugCountDecorator\:true,org.codehaus.groovy.eclipse.ui.decorator\:true,org.eclipse.ajdt.ui.decorator\:true,org.eclipse.jst.ws.jaxws.dom.integration.navigator.WebServiceDecorator\:true,org.eclipse.wst.server.ui.decorator\:false,org.cloudfoundry.ide.eclipse.server.navigatorDecorator\:true,org.codehaus.groovy.eclipse.dsl.dsldClasspathContainerDecorator\:true,org.eclipse.ajdt.ui.advicedecorator\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.DependencyDecoration\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.ColumnDecoration\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.ForeignKeyDecoration\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.IndexTriggerDecoration\:true,org.eclipse.datatools.connectivity.internal.core.ui.bookmarkDecoration\:true,org.eclipse.datatools.connectivity.internal.core.ui.FilterNodeDecoration\:true,org.eclipse.datatools.connectivity.ui.decorator.contentextension\:false,org.eclipse.datatools.enablement.ingres.ui.providers.decorators.SynonymDecorationService\:true,org.eclipse.datatools.enablement.ingres.internal.ui.providers.decorators.ParameterDecorationService\:true,org.eclipse.datatools.enablement.sybase.asa.proxytabledecorator\:true,org.eclipse.datatools.enablement.sybase.ase.webservicetabledecorator\:true,org.eclipse.datatools.enablement.sybase.systemtabledecorator\:true,org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator\:true,org.eclipse.jdt.ui.override.decorator\:true,org.eclipse.jdt.ui.interface.decorator\:false,org.eclipse.jdt.ui.buildpath.decorator\:true,org.eclipse.jst.j2ee.internal.ui.util.AnnotationIconDecorator_ejb\:true,org.eclipse.jst.j2ee.navigator.internal.J2EEProjectDecorator\:true,org.eclipse.jst.jee.ui.internal.navigator.ejb.BeanDecorator\:true,org.eclipse.jst.jee.navigator.internal.JEEProjectDecorator\:true,org.eclipse.jst.j2ee.internal.ui.util.AnnotationIconDecorator_servlet\:true,org.eclipse.jst.servlet.ui.Decorator\:true,org.eclipse.mylyn.context.ui.decorator.interest\:true,org.eclipse.mylyn.tasks.ui.decorators.task\:true,org.eclipse.mylyn.team.ui.changeset.decorator\:true,org.eclipse.pde.ui.binaryProjectDecorator\:false,org.eclipse.rse.core.virtualobject.decorator\:true,org.eclipse.rse.core.binary.executable.decorator\:true,org.eclipse.rse.core.script.executable.decorator\:true,org.eclipse.rse.core.java.executable.decorator\:true,org.eclipse.rse.core.library.decorator\:true,org.eclipse.rse.core.link.decorator\:true,org.eclipse.rse.subsystems.error.decorator\:true,org.eclipse.team.cvs.ui.decorator\:true,org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.VirtualResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,org.eclipse.ui.ResourceFilterDecorator\:false,org.eclipse.wst.jsdt.ui.override.decorator\:true,org.eclipse.wst.server.ui.navigatorDecorator\:true,org.grails.ide.eclipse.ui.grailsClasspathContainerDecorator\:true,
+/instance/org.eclipse.wst.sse.core/task-tags/taskPriorities=1,2,1,1,2
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_new_line_before_closing_brace_in_array_initializer=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.keep_empty_array_initializer_on_one_line=false
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.never_indent_line_comments_on_first_column=false
@@ -1096,6 +1116,7 @@
 /configuration/org.eclipse.core.net/proxyData/SOCKS/port=8080
 /instance/org.eclipse.ui.trace/tracingEnabled=false
 /instance/org.eclipse.jdt.ui/sp_cleanup.add_generated_serial_version_id=false
+/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.egit.ui.GitTheme\tTorg.eclipse.wst.sse.ui\tTorg.eclipse.mylyn.tasks.ui.presentation\tTorg.eclipse.compare.contentmergeviewer.TextMergeViewer\tTorg.eclipse.ui.presentation.default\tTorg.eclipse.mylyn.wikitext.ui.presentation
 /instance/org.eclipse.wst.jsdt.ui/sp_cleanup.qualify_static_member_accesses_with_declaring_class=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.brace_position_for_switch=end_of_line
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_closing_paren_in_method_declaration=do not insert
@@ -1109,7 +1130,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorCallToUnsupportedMethod=CallToUnsupportedMethod|false
 @org.eclipse.jdt.junit=3.7.100.v20120523-1543
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/lpjharri/.m2/repository
-@edu.umd.cs.findbugs.plugin.eclipse=2.0.1.20120712
+@edu.umd.cs.findbugs.plugin.eclipse=2.0.2.20121103
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_method_declaration_throws=insert
 /configuration/org.eclipse.core.net/proxyData/SOCKS/hasAuth=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_between_empty_braces_in_array_initializer=do not insert
@@ -1134,6 +1155,8 @@
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_opening_brace_in_anonymous_type_declaration=insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_before_opening_paren_in_constructor_declaration=do not insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.alignment_for_binary_expression=16
+/instance/org.eclipse.ui.editors/changeIndicationInOverviewRuler=true
+/instance/org.eclipse.ui.workbench/org.eclipse.egit.ui.DiffAddBackgroundColor=128,255,128
 /instance/org.eclipse.jdt.ui/cleanup.qualify_static_method_accesses_with_declaring_class=false
 @org.eclipse.jst.j2ee.webservice.ui=1.1.500.v201105122000
 @org.eclipse.wst.sse.ui=1.3.101.v201208170345
@@ -1166,6 +1189,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorMutableLock=MutableLock|true
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindRunInvocations=FindRunInvocations|true
 @org.eclipse.core.resources=3.8.1.v20120802-154922
+/instance/org.eclipse.ui.workbench/INCOMING_COLOR=0,128,192
 /instance/org.eclipse.wst.jsdt.ui/cleanup.add_missing_nls_tags=false
 @org.eclipse.wst.css.core=1.1.601.v201208170345
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.indent_switchstatements_compare_to_switch=true
@@ -1371,7 +1395,9 @@ file_export_version=3.0
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_comma_in_method_declaration_parameters=insert
 @org.eclipse.wst.jsdt.core=1.1.202.v201208171701
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorDroppedException=DroppedException|true
+/instance/org.eclipse.compare/org.eclipse.compare.InitiallyShowAncestorPane=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_annotation_type_member_declaration=do not insert
+/instance/de.loskutov.anyedit.AnyEditTools/disallowedInPath=\ \r\n"'*?><|\=(){};&$,%@
 /instance/org.eclipse.egit.ui/resourcehistory_graph_split=500,500
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.comment.format_javadoc_comments=true
 /instance/org.eclipse.jdt.ui/formatter_settings_version=12
@@ -1407,11 +1433,12 @@ file_export_version=3.0
 /instance/org.eclipse.pde.core/platform_path=C\:\\Users\\lpjharri\\Documents\\Applications\\SpringSource\\ggts
 /instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1334780402429" defaultVMConnector\="">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1334780402429" name\="jdk1.7.0" path\="C\:\\Program Files\\Java\\jdk1.7.0"/>\r\n</vmType>\r\n</vmSettings>\r\n
 /instance/org.eclipse.wst.jsdt.ui/cleanup.remove_private_constructors=true
-/instance/org.eclipse.jdt.ui/org.eclipse.jface.textfont=1|Consolas|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
+/instance/org.eclipse.jdt.ui/org.eclipse.jface.textfont=1|Tahoma|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindUnreleasedLock=FindUnreleasedLock|true
 /instance/org.eclipse.jdt.ui/sp_cleanup.always_use_blocks=true
 /instance/org.eclipse.jst.j2ee.ejb.annotations.xdoclet/XDOCLETBUILDERACTIVE=true
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_after_colon_in_assert=insert
+/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement=Corg.eclipse.egit.ui.DiffRemoveBackgroundColor
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_space_between_empty_parens_in_enum_constant=do not insert
 /instance/org.eclipse.wst.jsdt.core/org.eclipse.wst.jsdt.core.formatter.insert_new_line_in_empty_method_body=insert
 /instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_member_accesses_with_declaring_class=false
