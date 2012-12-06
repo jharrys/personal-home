@@ -2,6 +2,7 @@ Host *
 #ControlMaster auto
 ControlPath ~/.ssh/connections/%r_%h_%p
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
+IdentityFile ~/.ssh/github_rsa
 
 Host solutions
 HostName 159.212.143.162
