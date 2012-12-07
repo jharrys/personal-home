@@ -102,6 +102,8 @@ Function Stop-LocationProcesses($processes, $services) {
 	foreach ($key in $services.Keys) {
 		Try {
 			$svc = Get-Service -ErrorAction SilentlyContinue $key
+			# Manual, Disabled, Automatic
+			Set-Service -Name $key -StartupType Disabled
 			if ($svc.Status -ne "Stopped") {
 				Stop-Service -Name $key
 #				$msg = "${script:startTime}: Stopped service $key."
@@ -126,6 +128,8 @@ Function Start-LocationProcesses($processes, $services, $defaultPrinter) {
 	foreach ($key in $services.Keys) {
 		Try {
 			$svc = Get-Service -ErrorAction SilentlyContinue $key
+			# Manual, Automatic, Disabled
+			Set-Service -Name $key -StartupType Manual
 			if ($svc.Status -eq "Stopped") {
 				Start-Service -Name $key
 #				$msg = "${script:startTime}: Started service $key."
