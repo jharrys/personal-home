@@ -1,0 +1,15 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"Git",
+		"Gitignore",
+		"HTML5",
+		"HTMLAttributes",
+		"IndentGuides",
+		"Package Control",
+		"PowerShell",
+		"PowershellUtils",
+		"Sublime-HTMLPrettify"
+	]
+}

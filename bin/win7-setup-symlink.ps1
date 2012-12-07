@@ -85,6 +85,9 @@ $myLibraries = $myWin7Configuration + '\Libraries'
 # WindowsPowerShell symlink target path (the real location)
 $myWindowsPowerShell = $myWin7Configuration + '\powershell'
 
+# Sublime Text 2 symlink target path (the real location)
+$mySublimeText2 = $myHomeConfiguration + '\Sublime Text 2'
+
 # Wallpaper symlink target (the real path)
 $myWallPaper = $myHome + '\Documents\Google Drive\Wallpaper'
 
@@ -189,6 +192,13 @@ cd 'Documents'
 $symlinkExists = Get-ReparsePoint WindowsPowerShell
 if (!$symlinkExists -and (Test-Path -Path $myWindowsPowerShell -PathType Container )) {
 	New-SymLink WindowsPowerShell $myWindowsPowerShell
+}
+
+# Sublime Text 2
+cd $Env:appdata
+$symlinkExists = Get-ReparsePoint 'Sublime Text 2'
+if (!symlinkExists -and (Test-Path -Path $mySublimeText2 -PathType Container)) {
+	New-SymLink 'Sublime Text 2' $mySublimeText2
 }
 
 # Create my other standard directories

@@ -1,0 +1,1222 @@
+{
+	"folder_history":
+	[
+	],
+	"last_window_id": 3,
+	"settings":
+	{
+		"new_window_height": 848.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"win",
+						"windows8Version"
+					],
+					[
+						"Tele",
+						"Television"
+					],
+					[
+						"DATE",
+						"DATE_CREATED"
+					],
+					[
+						"Emer",
+						"Emergency"
+					]
+				]
+			},
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 311.0,
+				"selected_items":
+				[
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					],
+					[
+						"",
+						"Tidy HTML"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 400.0
+			},
+			"console":
+			{
+				"height": 538.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/C/cygwin/home/lpjharri/bin/toggler.ps1",
+				"/C/cygwin/home/lpjharri/bin/scrapper.ps1",
+				"/E/PortableApps/WinCDEmuPortable/Portable (question_mark).txt",
+				"/C/cygwin/home/lpjharri/powershell/Microsoft.PowerShell_profile.ps1",
+				"/C/cygwin/home/lpjharri/configuration/win7/directory.win7-home.struct",
+				"/C/Users/lpjharri/AppData/Local/Temp/Temp1_ShLib_and_SLUtil_win32.zip/ShLib/Readme.txt",
+				"/C/tmp/SLUtil/Readme.txt",
+				"/C/cygwin/home/lpjharri/utilities/win7/README.txt",
+				"/C/Users/lpjharri/.gitconfig",
+				"/C/Users/lpjharri/configuration/win7/directory.win7-home.struct",
+				"/C/cygwin/home/lpjharri/.git/config",
+				"/C/Users/lpjharri/configuration/win7/win7.environment",
+				"/C/Users/lpjharri/configuration/win7/win7-john-tahoma-yellow-nsfw.theme",
+				"/C/Users/lpjharri/configuration/win7/win7-john-tahoma-yellow.theme",
+				"/C/Users/lpjharri/configuration/win7/win7-john-blue-portrait.theme",
+				"/C/Users/lpjharri/configuration/win7/win7-john-red.theme",
+				"/C/Users/lpjharri/configuration/win7/win7-john-blue.theme",
+				"/F/john/PurchasedSoftware/Windows 8 Pro/ProductKey.txt",
+				"/C/Users/lpjharri/AppData/Local/Google/Chrome/User Data/Default/databases/https_docs.google.com_0/3",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/conf/BuildConfig.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/configuration_parameter_seed_data.sql",
+				"/C/Users/lpjharri/Desktop/t.html",
+				"/C/Users/lpjharri/AppData/Local/Google/Chrome/User Data/Default/Local Storage/http_techcrunch.com_0.localstorage",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/test/unit/org/ihc/esa/StandardsControllerSpecification.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/configuration_parameter_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/book-tracker/web-app/import/books.json",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.gitignore",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/configuration_parameter_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/conf/Config.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/book-tracker/grails-app/views/layouts/main.gsp",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/target/stacktrace.log",
+				"/C/Users/lpjharri/Desktop/LDS/LEVELS/a_lvl1_idrop.txt",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/item_seed_data.sql",
+				"/C/cygwin/home/lpjharri/configuration/ggts-eclipse/all-preferences.epf",
+				"/C/Users/lpjharri/Desktop/ReachYourGoals.txt",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/target/plugins/jquery-1.8.0/web-app/js/jquery/jquery-1.8.0.js",
+				"/C/Users/lpjharri/Desktop/New Text Document.html",
+				"/C/Users/lpjharri/Desktop/New Text Document.txt",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/build_esa.sql",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/views/standards/_editCategoryModal.gsp",
+				"/G/Divorce/kate/About UUCreditUnion Accounts.txt",
+				"/C/Users/lpjharri/configuration/sublime text 2/sublime-mywindows.sublime-keymap",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+				"/C/Users/lpjharri/Downloads/groovy-grails-tool-suite-3.1.0.RELEASE-e4.2-win32-x86_64.zip.sha1",
+				"/C/Users/lpjharri/Downloads/groovy-grails-tool-suite-3.1.0.RELEASE-e4.2-win32-x86_64.zip.md5",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/views/_fields/date/_display.gsp",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/question_response_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/question_response_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/question_response_seed_data.sql",
+				"/C/cygwin/home/lpjharri/configuration/linux/alternatives_java.sh",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/item_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/item_seed_data.sql",
+				"/C/Users/lpjharri/Desktop/ehcache.xml",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/masterBuildScript.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/document_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/lookup_element_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/lookup_element_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/document_seed_data.sql",
+				"/C/tmp/question_response_seed_data.sql",
+				"/C/tmp/document_seed_data.sql",
+				"/C/tmp/docandqr.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/lookup_list_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/lookup_element_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/lookup_list_seed_data.sql",
+				"/C/tmp/lookupelement.sql",
+				"/C/tmp/lookuplist.sql",
+				"/C/tmp/lookuplistandelement.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/form_field_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/category_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/category_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/form_field_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/preliminary_category_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/preliminary_item_seed_data.sql",
+				"/C/tmp/item_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/category_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/catalog_seed_data.sql",
+				"/C/tmp/catalog_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/conf/BootStrap.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.settings/esauiConfigFile.groovy",
+				"/E/PortableApps/uTorrentPortable/App/utorrent/temp/Frankenweenie.DvDrip[Eng]-FXG/Frankenweenie.DvDrip[Eng]-FXG.txt",
+				"/C/Users/lpjharri/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/WKFZY1FE/email.txt",
+				"/C/tmp/sql.sql",
+				"/C/tmp/category_seed_data.sql",
+				"/C/tmp/esaui.log",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/.git/config",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.git/config",
+				"/C/tmp/form_seed_data.sql",
+				"/C/tmp/db.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/form_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/item_seed_data_from_eisa_excel.sql",
+				"/C/cygwin/home/lpjharri/configuration/ssh_config",
+				"/C/cygwin/home/lpjharri/configuration/sendmail/sendmail.mc",
+				"/C/cygwin/home/lpjharri/configuration/sendmail/submit.mc",
+				"/C/cygwin/home/lpjharri/configuration/sendmail/README",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/.git",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.git/modules/esa-content/config",
+				"/C/tmp/configuration_parameter_seed_data.sql",
+				"/C/tmp/form_field_seed_data.sql",
+				"/C/tmp/party_seed_data.sql",
+				"/C/tmp/lookup_list_seed_data.sql",
+				"/C/tmp/lookup_element_seed_data.sql",
+				"/C/tmp/item_seed_data_from_eisa_excel.sql",
+				"/C/Users/lpjharri/AppData/Local/Temp/toggler-task.log",
+				"/C/Users/lpjharri/Downloads/h2-2012-07-13/h2/src/test/org/h2/samples/Function.java",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/party_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/lookup_list_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/form_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/item_seed_data_from_eisa_excel.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/esa_aa.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/scripts/_Events.groovy",
+				"/C/tmp/t.sql",
+				"/C/tmp/a.sql",
+				"/Q/error.log",
+				"/C/tmp/esaui.log/esa-ui.log",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/target/6e9fe158a4ffbd036249091fb32fdd4282a5c7bbe3fd73a37228febe48c229e8.resolve",
+				"/C/Users/lpjharri/AppData/Local/Temp/Temp1_grag-1.1-distribution.zip/grag-1.1/README.txt",
+				"/C/cygwin/home/lpjharri/.gitignore",
+				"/C/cygwin/home/lpjharri/.gitignore_global",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/databasemodel/src/sqlscripts/item_seed_data_from_eisa_excel.sql",
+				"/C/Users/lpjharri/AppData/Local/GitHub/shell.ps1",
+				"/E/PortableApps/VLCPortable/App/vlc/vlc-help.txt",
+				"/C/Users/lpjharri/Desktop/todo.txt",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.0/scripts/log4j.properties",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/target/classes/log4j.properties",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.0/scripts/_GrailsWar.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/Servers/VMware vFabric tc Server Developer Edition v2.7-config/jmxremote.access"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"document\\.ready",
+					"\\$\\(document\\)",
+					"\\$\\(document\\)\\.ready",
+					"\\$\\(document\\)\\.ready\\(\\)",
+					"window\\.jQuery",
+					"standard_type",
+					"bookmark",
+					"-java-1.6.0-openjdk.1.gz",
+					"(--slave )([^.]*.1.gz):",
+					"(--slave )([^.]*.1)(.gz):",
+					"(/[^/]*/[^/]*/)([^/]*):",
+					"\\);$",
+					"(\\([0-9][0-9]*, [0-9][0-9]*, [0-9][0-9]*)\\)",
+					"(INSERT INTO ITEM_CATEGORY\\(ID, ITEM_ID, CATEGORY_ID)",
+					"(INSERT INTO ITEM_CATEGORY\\(ID, ITEM_ID, CATEGORY_ID,)",
+					"(INSERT INTO ITEM_CATEGORY(ID, ITEM_ID, CATEGORY_ID,)",
+					"(ITEM_CATEGORY\\(ID, ITEM_ID, CATEGORY_ID\\) VALUES \\()",
+					"\\(ITEM_ID",
+					"NULL",
+					"TIMESTAMP '2012-10-15 [^']*'",
+					"'manager'",
+					",$",
+					"PUBLIC.",
+					"^\\(",
+					"PUBLIC.",
+					"TIMESTAMP '2012-10-15 [^']*'",
+					",$",
+					"manager",
+					",$",
+					"TIMESTAMP '2012-10-15 [^']*'",
+					"PUBLIC.",
+					"^\\(",
+					"NULL",
+					"TIMESTAMP '2012-10-15 [^']*'",
+					"^\\(",
+					"'null'",
+					"NULL",
+					"ITEM\\(ID, AVAILABLE_DATE, COMMENTS, CONTRACT_ID, CREATED_BY, DATE_CREATED, DESCRIPTION, DEVIATION, DOCUMENT_ID, EXCEPTION, EXCEPTION_CRITERIA, EXCEPTION_REQUIRED, EXTERNAL_ID, GENERAL_LEDGER_CODE, IHC_ACTUAL_DECOMISSIONED, IHC_PROPOSED_DECOMISSIONED, IN_SERVICE, INTERMOUNTAIN_ITEM_NUMBER, LAST_UPDATED, MANUFACTURER_CATALOG_NUMBER, MANUFACTURER_PART_ID, NAME, VENDOR_PARTY_ID, PRODUCT_GROUP, PURCHASING_UNIT_OF_MEASURE, PURCHASING_UNIT_PRICE, SOURCE_SYSTEM, STANDARD, STANDARD_TYPE, TECHNOLOGY_GROUP, UNSPSC_NUMBER, UPDATED_BY, USEFUL_LIFE, VENDOR_CATALOG_NUMBER, VENDOR_DECOMISSIONED",
+					"ITEM(ID, AVAILABLE_DATE, COMMENTS, CONTRACT_ID, CREATED_BY, DATE_CREATED, DESCRIPTION, DEVIATION, DOCUMENT_ID, EXCEPTION, EXCEPTION_CRITERIA, EXCEPTION_REQUIRED, EXTERNAL_ID, GENERAL_LEDGER_CODE, IHC_ACTUAL_DECOMISSIONED, IHC_PROPOSED_DECOMISSIONED, IN_SERVICE, INTERMOUNTAIN_ITEM_NUMBER, LAST_UPDATED, MANUFACTURER_CATALOG_NUMBER, MANUFACTURER_PART_ID, NAME, VENDOR_PARTY_ID, PRODUCT_GROUP, PURCHASING_UNIT_OF_MEASURE, PURCHASING_UNIT_PRICE, SOURCE_SYSTEM, STANDARD, STANDARD_TYPE, TECHNOLOGY_GROUP, UNSPSC_NUMBER, UPDATED_BY, USEFUL_LIFE, VENDOR_CATALOG_NUMBER, VENDOR_DECOMISSIONED",
+					"\\),$",
+					"TIMESTAMP '2012-10-13 [^']*'",
+					"PUBLIC.",
+					"^INSERT .*VALUES$",
+					"^\\(",
+					"PUBLIC.",
+					"01-JAN-11",
+					"TIMESTAMP '2012-10-13 [^']*'",
+					"\\),$",
+					"^INSERT.*VALUES$",
+					"^\\(",
+					":",
+					";",
+					"Fibre",
+					"null,null",
+					",'",
+					"',",
+					",$",
+					"^'",
+					"','",
+					"&",
+					"null,null,",
+					"null,null",
+					"^('[Y|A|N]','[N|Y]',[^,]*,[^,]*,[^,]*,[^,]*,),null,null,null,null,([^,]*,[^,]*,)to_timestamp[^,]*,[^,]*,'bulkLoad',to_timestamp[^,]*,[^,]*,'bulkLoad'\\);",
+					"^('[Y|A|N]','[N|Y]',[^,]*,[^,]*,[^,]*,[^,]*,)null,to_timestamp[^,]*,[^,]*,null,null,null,null,null",
+					"^('[Y|A|N]','[N|Y]',[^,]*,[^,]*,[^,]*,)null,null,([^,]*,)",
+					"^('[Y|A|N]','[N|Y]',[^,]*,)null,null,null,",
+					"('[Y|A|N]',)'N','N','N',",
+					"^('[Y|N]',)null,",
+					"null,'EISA EXCEL DOCUMENT',",
+					"Insert into ITEM \\(EXTERNAL_ID,SOURCE_SYSTEM,STANDARD,STANDARD_TYPE,EXCEPTION,DEVIATION,IN_SERVICE,EXCEPTION_REQUIRED,EXCEPTION_CRITERIA,DOCUMENT_ID,VENDOR_PARTY_ID,INTERMOUNTAIN_ITEM_NUMBER,NAME,DESCRIPTION,GENERAL_LEDGER_CODE,PRODUCT_GROUP,TECHNOLOGY_GROUP,CONTRACT_ID,AVAILABLE_DATE,IHC_ACTUAL_DECOMISSIONED,IHC_PROPOSED_DECOMISSIONED,VENDOR_DECOMISSIONED,VENDOR_CATALOG_NUMBER,MANUFACTURER_PART_ID,MANUFACTURER_CATALOG_NUMBER,PURCHASING_UNIT_OF_MEASURE,PURCHASING_UNIT_PRICE,UNSPSC_NUMBER,USEFUL_LIFE,COMMENTS,DATE_CREATED,CREATED_BY,LAST_UPDATED,UPDATED_BY\\) values \\(",
+					"\\([0-9][0-9]*,",
+					"\\(ID,",
+					"Data Center - Data Closet/Equipment",
+					"Call Acc",
+					"Calling Cards",
+					"Fibre",
+					"CREATION_DATE",
+					"\\),$",
+					"TIMESTAMP '2012-10-10 [^']*'",
+					"PUBLIC\\.",
+					"^INSERT INTO PUBLIC.CATEGORY\\(ID, CREATED_BY, DATE_CREATED, LAST_UPDATED, NAME, PARENT_CATEGORY_ID, PARENT_CATEGORY_PATH, UPDATED_BY\\) VALUES$",
+					"^\\(",
+					"Off-Line s",
+					"Off-L",
+					"Off-lin",
+					"Off-li",
+					"Display&",
+					"^Display&",
+					"/lec",
+					";.*$",
+					":.*$",
+					"\"\"",
+					"'",
+					"','",
+					"&",
+					",null,null,.*\\)",
+					",null,null,null,null,.*;",
+					"[0-9][0-9]*,[^,]*,'[^,]*','[^,]*',[^,]*,'[^,]*','[^,]*','[^,]*','[^,]*',[^,]*,[^,]*,[^,]*,[^,]*,",
+					"Insert into ITEM (ID,EXTERNAL_ID,SOURCE_SYSTEM,STANDARD,STANDARD_TYPE,EXCEPTION,DEVIATION,IN_SERVICE,EXCEPTION_REQUIRED,EXCEPTION_CRITERIA,DOCUMENT_ID,VENDOR_PARTY_ID,INTERMOUNTAIN_ITEM_NUMBER,NAME,DESCRIPTION,GENERAL_LEDGER_CODE,PRODUCT_GROUP,TECHNOLOGY_GROUP,CONTRACT_ID,AVAILABLE_DATE,IHC_ACTUAL_DECOMISSIONED,IHC_PROPOSED_DECOMISSIONED,VENDOR_DECOMISSIONED,VENDOR_CATALOG_NUMBER,MANUFACTURER_PART_ID,MANUFACTURER_CATALOG_NUMBER,PURCHASING_UNIT_OF_MEASURE,PURCHASING_UNIT_PRICE,UNSPSC_NUMBER,USEFUL_LIFE,COMMENTS,DATE_CREATED,CREATED_BY,LAST_UPDATED,UPDATED_BY) values (",
+					"Equipment rack - Data Center",
+					"Storage and Retrieval",
+					"Storage",
+					"ESA\\.",
+					"TIMESTAMP '[^']*'",
+					"\\),$",
+					"PUBLIC\\.",
+					"(^\\([0-9][0-9]*)",
+					"lectrical",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('01-JAN-10 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,'StorageTek is still under support as a previous standard. However, no new StorageTek should be purchased.',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Fred Holston',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,'Xiotech is still under support as a previous standard. However, no new Xiotech should be purchased. Capacity unlocking can be done if cost is justified.',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'5 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'3 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Kyle Andersen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Diane Rindlisbacher',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Ron Madsen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'5 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Ron Madsen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'10 years+',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Ron Madsen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Jim Wilhelmi',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'5 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Kyle Andersen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'5 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					"null,'EISA EXCEL DOCUMENT','N',null,'N','N','N','N',null,null,null,null,",
+					",null,null,'Jim Wilhelmi',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,null,null,to_timestamp\\('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),null,null,null,null,null,null,null,null,null,null,null,to_timestamp\\('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),'bulkLoad',to_timestamp\\('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),'bulkLoad'\\);",
+					"null,'EISA EXCEL DOCUMENT','Y',null,'N','N','N','N',null,null,null,null,",
+					"Insert into ITEM \\([^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,",
+					"\\([^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,",
+					"CONFIGURATION_PARA"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": true,
+				"replace_history":
+				[
+					".1",
+					"\\1/usr/share/man/man1/\\2 \\2",
+					"\\1\\2\\3 \\2",
+					"\\1\\2 \\2",
+					", to_timestamp('13-OCT-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'), to_timestamp('13-OCT-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'));",
+					"\\1, 'bulkload', 'bulkload')",
+					"\\1, CREATED_BY, UPDATED_BY, DATE_CREATED, LAST_UPDATED",
+					"\\11, ",
+					"(ID, ITEM_ID",
+					"null",
+					"to_timestamp('15-OCT-12','DD-MON-RR HH.MI.SSXFF AM')",
+					"'bulkload'",
+					";",
+					"",
+					"INSERT INTO PUBLIC.QUESTION_RESPONSE(ID, CREATED_BY, DATE_CREATED, DATE_VALUE, DOCUMENT_ID, FLOAT_VALUE, FORM_FIELD_ID, LAST_UPDATED, STRING_VALUE, UPDATED_BY) VALUES (",
+					"",
+					"to_timestamp('15-OCT-12','DD-MON-RR HH.MI.SSXFF AM')",
+					";",
+					"bulkload",
+					";",
+					"to_timestamp('15-OCT-12','DD-MON-RR HH.MI.SSXFF AM')",
+					"",
+					"INSERT INTO PUBLIC.LOOKUP_ELEMENT(ID, CREATED_BY, DATE_CREATED, DISPLAY, LAST_UPDATED, LOOKUP_LIST_ID, UPDATED_BY, VALUE) VALUES (",
+					"null",
+					"to_timestamp('15-OCT-12','DD-MON-RR HH.MI.SSXFF AM')",
+					"INSERT INTO LOOKUP_LIST(ID, CREATED_BY, DATE_CREATED, DESCRIPTION, LAST_UPDATED, LIST_TYPE, NAME, PROMPT, SQL_STATEMENT, UPDATED_BY) VALUES (",
+					"null",
+					"ITEM_CATEGORY(ITEM_ID, CATEGORY_ID",
+					");",
+					"to_timestamp('13-OCT-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM')",
+					"",
+					"INSERT INTO PUBLIC.ITEM(ID, AVAILABLE_DATE, COMMENTS, CONTRACT_ID, CREATED_BY, DATE_CREATED, DESCRIPTION, DEVIATION, DOCUMENT_ID, EXCEPTION, EXCEPTION_CRITERIA, EXCEPTION_REQUIRED, EXTERNAL_ID, GENERAL_LEDGER_CODE, IHC_ACTUAL_DECOMISSIONED, IHC_PROPOSED_DECOMISSIONED, IN_SERVICE, INTERMOUNTAIN_ITEM_NUMBER, LAST_UPDATED, MANUFACTURER_CATALOG_NUMBER, MANUFACTURER_PART_ID, NAME, VENDOR_PARTY_ID, PRODUCT_GROUP, PURCHASING_UNIT_OF_MEASURE, PURCHASING_UNIT_PRICE, SOURCE_SYSTEM, STANDARD, STANDARD_TYPE, TECHNOLOGY_GROUP, UNSPSC_NUMBER, UPDATED_BY, USEFUL_LIFE, VENDOR_CATALOG_NUMBER, VENDOR_DECOMISSIONED) VALUES (",
+					"",
+					"13-OCT-12",
+					"to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM')",
+					");",
+					"",
+					"INSERT INTO PUBLIC.CATEGORY(ID, CREATED_BY, DATE_CREATED, LAST_UPDATED, NAME, PARENT_CATEGORY_ID, PARENT_CATEGORY_PATH, UPDATED_BY) VALUES (",
+					"null&null",
+					"&",
+					"",
+					"&",
+					"",
+					"\\1\\2",
+					"\\1",
+					"\\1\\2",
+					"\\1",
+					"",
+					"(",
+					");",
+					"to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM')",
+					"",
+					"INSERT INTO PUBLIC.CATEGORY(ID, CREATED_BY, DATE_CREATED, LAST_UPDATED, NAME, PARENT_CATEGORY_ID, PARENT_CATEGORY_PATH, UPDATED_BY) VALUES (",
+					"/Elec",
+					"",
+					" inches",
+					"inches",
+					"",
+					"&",
+					"",
+					"to_timestamp('13-AUG-12','DD-MON-RR HH.MI.SSXFF AM')",
+					");",
+					"ESA.",
+					"INSERT INTO PUBLIC.CATEGORY(ID, CREATED_BY, DATE_CREATED, LAST_UPDATED, NAME, PARENT_CATEGORY_ID, PARENT_CATEGORY_PATH, UPDATED_BY) VALUES \\1",
+					"",
+					"(ID,FORM_ID",
+					"--",
+					"null",
+					"NULL",
+					"'",
+					"\\1'Y'",
+					"\\1null,null,null,",
+					"\\1'N','N',",
+					"MULTI_SELECT,DEFAULT_VALUE_STRING,DEFAULT_VALUE_FLOAT,DEFAULT_VALUE_DATE,",
+					"ORDER_NUMBER,REQUIRED,INTERNAL_ONLY,",
+					"FLOAT_VALUE",
+					"DATE_VALUE",
+					"STRING_VALUE",
+					"sectionHeader",
+					"titleHeader",
+					"textField",
+					"textArea",
+					"01-OCT-12",
+					"--Insert",
+					"'",
+					"ues (",
+					"(",
+					"AM'),null,null,null,null,null,null,null,null,null,null,null,to_",
+					"01-JAN-11",
+					"19-SEP-12",
+					"null,\\1",
+					"USEFUL_LIFE,COMMENTS,DA",
+					"null,null,null,null,null,null,null,null,null,to",
+					"_NUMBER,USEFUL_LIFE,DATE_CREATED",
+					"T','Y','N',null,n",
+					"STANDARD,EXCEPTION_REQUIRED,EXCEPTION_CRITERIA,DOCUMENT_ID",
+					"/",
+					"/Communications",
+					"/Storage/On-Line Storage (Tier 1, 2, 3)",
+					"/Servers/Other Software - Servers",
+					"/Servers/Operating Systems - Servers",
+					"/Servers/Hardware - Servers",
+					"/Printer-Scanner-Fax-Barcode",
+					"/General Software/Database",
+					"/General Software/Clinical I.S.",
+					"/General Software/Administration and Finance IS",
+					"/Display-Projectors-TV/Hardware Monitors-Projectors",
+					"/Display-Projectors-TV/Display",
+					"/Hardware - Computers",
+					"/Desktops-Laptops-PDA-Combo Devices-Recorders",
+					"/Data Center - Data Closet",
+					"/Communications",
+					"/Electrical",
+					"/Storage",
+					"/General Software",
+					"/Display-Projectors-TV",
+					"/Servers",
+					"/Network",
+					"/Desktops-Laptops-PDA-Combo Devices-Recorders",
+					"/Data Center - Data Closet",
+					"/",
+					"(",
+					"\\1",
+					"}",
+					"",
+					"\\1null,'EISA EXCEL DOCUMENT','Y',null,null,null,'",
+					"',null,null,null,null,to_timestamp('01-MAY-11','DD-MON-RR HH.MI.SSXFF AM'),null,null,null,null,null,null,null,null,null,to_ti",
+					"DD-MON-RR HH.MI.SSXFF AM'"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": false
+			},
+			"incremental_find":
+			{
+				"height": 34.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"replace":
+			{
+				"height": 62.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 500.0,
+				"selected_items":
+				[
+				],
+				"width": 380.0
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true
+		},
+		"new_window_width": 1213.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"New",
+						"New-SymLink"
+					],
+					[
+						"Path",
+						"PathType"
+					],
+					[
+						"myS",
+						"mySublimeText2"
+					],
+					[
+						"myH",
+						"myHome"
+					],
+					[
+						"win",
+						"windows8Version"
+					],
+					[
+						"Tele",
+						"Television"
+					],
+					[
+						"DATE",
+						"DATE_CREATED"
+					],
+					[
+						"Emer",
+						"Emergency"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/C/cygwin/home/lpjharri/bin/toggler.ps1",
+					"settings":
+					{
+						"buffer_size": 13153,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/item_seed_data.sql",
+					"settings":
+					{
+						"buffer_size": 83043,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/C/Users/lpjharri/bin/win7-setup-symlink.ps1",
+					"settings":
+					{
+						"buffer_size": 8192,
+						"line_ending": "Windows"
+					}
+				}
+			],
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 311.0,
+				"selected_items":
+				[
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					],
+					[
+						"",
+						"Tidy HTML"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 400.0
+			},
+			"console":
+			{
+				"height": 538.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/C/Users/lpjharri/bin/myinstall.sh",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Settings/Session.sublime_session",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/SQL.sublime-settings",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/ggts/hs_err_pid18780.log",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/ggts/configuration/1354815350886.log",
+				"/C/cygwin/home/lpjharri/bin/toggler.ps1",
+				"/C/cygwin/home/lpjharri/.ssh/github_rsa.pub",
+				"/C/cygwin/home/lpjharri/configuration/ggts-eclipse/all-preferences.epf",
+				"/C/tmp/esaui-indexes/org.ihc.esa.Item/_0.fdt",
+				"/C/Users/lpjharri/Mounts/toshiba/john/PurchasedSoftware/Windows 8 Pro/ProductKey.txt",
+				"/C/Users/lpjharri/Documents/Google Drive/Me/Resume/References.txt",
+				"/C/Users/lpjharri/Default Outlook Profile.NK2",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsClean.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsCompile.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/Compile.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsInit.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_PluginDependencies.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsClasspath.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsSettings.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsEvents.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsCreateArtifacts.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsArgParsing.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsWar.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsBootstrap.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsPackage.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/Package.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/Init.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/src/grails/home/dsl-support/dsld/grails.dsld",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsCreateProject.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsGenerate.groovy",
+				"/C/Users/lpjharri/Documents/Applications/SpringSource/grails-2.1.1/scripts/_GrailsRun.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/updateScripts.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.gitignore",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/patch/dbPatch001.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/configuration_parameter_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/configuration_parameter_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/configuration_parameter_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/views/_git.gsp",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/item_seed_data.sql",
+				"/C/tmp/some.java",
+				"/C/cygwin/home/lpjharri/bin/scrapper.ps1",
+				"/C/cygwin/home/lpjharri/configuration/win7/directory.win7-home.struct",
+				"/E/PortableApps/WinCDEmuPortable/Portable (question_mark).txt",
+				"/C/cygwin/home/lpjharri/powershell/Microsoft.PowerShell_profile.ps1",
+				"/C/Users/lpjharri/AppData/Local/Temp/Temp1_ShLib_and_SLUtil_win32.zip/ShLib/Readme.txt",
+				"/C/tmp/SLUtil/Readme.txt",
+				"/C/cygwin/home/lpjharri/utilities/win7/README.txt",
+				"/C/Users/lpjharri/.gitconfig",
+				"/C/Users/lpjharri/configuration/win7/directory.win7-home.struct",
+				"/C/cygwin/home/lpjharri/.git/config",
+				"/C/Users/lpjharri/configuration/win7/win7.environment",
+				"/C/Users/lpjharri/configuration/win7/win7-john-tahoma-yellow-nsfw.theme",
+				"/C/Users/lpjharri/configuration/win7/win7-john-tahoma-yellow.theme",
+				"/C/Users/lpjharri/configuration/win7/win7-john-blue-portrait.theme",
+				"/C/Users/lpjharri/configuration/win7/win7-john-red.theme",
+				"/C/Users/lpjharri/configuration/win7/win7-john-blue.theme",
+				"/F/john/PurchasedSoftware/Windows 8 Pro/ProductKey.txt",
+				"/C/Users/lpjharri/AppData/Local/Google/Chrome/User Data/Default/databases/https_docs.google.com_0/3",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/conf/BuildConfig.groovy",
+				"/C/Users/lpjharri/Desktop/t.html",
+				"/C/Users/lpjharri/AppData/Local/Google/Chrome/User Data/Default/Local Storage/http_techcrunch.com_0.localstorage",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/test/unit/org/ihc/esa/StandardsControllerSpecification.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/book-tracker/web-app/import/books.json",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/conf/Config.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/book-tracker/grails-app/views/layouts/main.gsp",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/target/stacktrace.log",
+				"/C/Users/lpjharri/Desktop/LDS/LEVELS/a_lvl1_idrop.txt",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/item_seed_data.sql",
+				"/C/Users/lpjharri/Desktop/ReachYourGoals.txt",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/target/plugins/jquery-1.8.0/web-app/js/jquery/jquery-1.8.0.js",
+				"/C/Users/lpjharri/Desktop/New Text Document.html",
+				"/C/Users/lpjharri/Desktop/New Text Document.txt",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/build_esa.sql",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/views/standards/_editCategoryModal.gsp",
+				"/G/Divorce/kate/About UUCreditUnion Accounts.txt",
+				"/C/Users/lpjharri/configuration/sublime text 2/sublime-mywindows.sublime-keymap",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+				"/C/Users/lpjharri/Downloads/groovy-grails-tool-suite-3.1.0.RELEASE-e4.2-win32-x86_64.zip.sha1",
+				"/C/Users/lpjharri/Downloads/groovy-grails-tool-suite-3.1.0.RELEASE-e4.2-win32-x86_64.zip.md5",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/views/_fields/date/_display.gsp",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/question_response_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/question_response_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/question_response_seed_data.sql",
+				"/C/cygwin/home/lpjharri/configuration/linux/alternatives_java.sh",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/item_seed_data.sql",
+				"/C/Users/lpjharri/Desktop/ehcache.xml",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/masterBuildScript.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/document_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/lookup_element_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/lookup_element_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/document_seed_data.sql",
+				"/C/tmp/question_response_seed_data.sql",
+				"/C/tmp/document_seed_data.sql",
+				"/C/tmp/docandqr.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/lookup_list_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/lookup_element_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/lookup_list_seed_data.sql",
+				"/C/tmp/lookupelement.sql",
+				"/C/tmp/lookuplist.sql",
+				"/C/tmp/lookuplistandelement.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/form_field_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/category_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/category_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-db/DatabaseModel/src/sqlScripts/form_field_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/preliminary_category_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/preliminary_item_seed_data.sql",
+				"/C/tmp/item_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/category_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/catalog_seed_data.sql",
+				"/C/tmp/catalog_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/conf/BootStrap.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.settings/esauiConfigFile.groovy",
+				"/E/PortableApps/uTorrentPortable/App/utorrent/temp/Frankenweenie.DvDrip[Eng]-FXG/Frankenweenie.DvDrip[Eng]-FXG.txt",
+				"/C/Users/lpjharri/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/WKFZY1FE/email.txt",
+				"/C/tmp/sql.sql",
+				"/C/tmp/category_seed_data.sql",
+				"/C/tmp/esaui.log",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/.git/config",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.git/config",
+				"/C/tmp/form_seed_data.sql",
+				"/C/tmp/db.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/form_seed_data.sql",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/item_seed_data_from_eisa_excel.sql",
+				"/C/cygwin/home/lpjharri/configuration/ssh_config"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"Minimal",
+					"document\\.ready",
+					"\\$\\(document\\)",
+					"\\$\\(document\\)\\.ready",
+					"\\$\\(document\\)\\.ready\\(\\)",
+					"window\\.jQuery",
+					"standard_type",
+					"bookmark",
+					"-java-1.6.0-openjdk.1.gz",
+					"(--slave )([^.]*.1.gz):",
+					"(--slave )([^.]*.1)(.gz):",
+					"(/[^/]*/[^/]*/)([^/]*):",
+					"\\);$",
+					"(\\([0-9][0-9]*, [0-9][0-9]*, [0-9][0-9]*)\\)",
+					"(INSERT INTO ITEM_CATEGORY\\(ID, ITEM_ID, CATEGORY_ID)",
+					"(INSERT INTO ITEM_CATEGORY\\(ID, ITEM_ID, CATEGORY_ID,)",
+					"(INSERT INTO ITEM_CATEGORY(ID, ITEM_ID, CATEGORY_ID,)",
+					"(ITEM_CATEGORY\\(ID, ITEM_ID, CATEGORY_ID\\) VALUES \\()",
+					"\\(ITEM_ID",
+					"NULL",
+					"TIMESTAMP '2012-10-15 [^']*'",
+					"'manager'",
+					",$",
+					"PUBLIC.",
+					"^\\(",
+					"PUBLIC.",
+					"TIMESTAMP '2012-10-15 [^']*'",
+					",$",
+					"manager",
+					",$",
+					"TIMESTAMP '2012-10-15 [^']*'",
+					"PUBLIC.",
+					"^\\(",
+					"NULL",
+					"TIMESTAMP '2012-10-15 [^']*'",
+					"^\\(",
+					"'null'",
+					"NULL",
+					"ITEM\\(ID, AVAILABLE_DATE, COMMENTS, CONTRACT_ID, CREATED_BY, DATE_CREATED, DESCRIPTION, DEVIATION, DOCUMENT_ID, EXCEPTION, EXCEPTION_CRITERIA, EXCEPTION_REQUIRED, EXTERNAL_ID, GENERAL_LEDGER_CODE, IHC_ACTUAL_DECOMISSIONED, IHC_PROPOSED_DECOMISSIONED, IN_SERVICE, INTERMOUNTAIN_ITEM_NUMBER, LAST_UPDATED, MANUFACTURER_CATALOG_NUMBER, MANUFACTURER_PART_ID, NAME, VENDOR_PARTY_ID, PRODUCT_GROUP, PURCHASING_UNIT_OF_MEASURE, PURCHASING_UNIT_PRICE, SOURCE_SYSTEM, STANDARD, STANDARD_TYPE, TECHNOLOGY_GROUP, UNSPSC_NUMBER, UPDATED_BY, USEFUL_LIFE, VENDOR_CATALOG_NUMBER, VENDOR_DECOMISSIONED",
+					"ITEM(ID, AVAILABLE_DATE, COMMENTS, CONTRACT_ID, CREATED_BY, DATE_CREATED, DESCRIPTION, DEVIATION, DOCUMENT_ID, EXCEPTION, EXCEPTION_CRITERIA, EXCEPTION_REQUIRED, EXTERNAL_ID, GENERAL_LEDGER_CODE, IHC_ACTUAL_DECOMISSIONED, IHC_PROPOSED_DECOMISSIONED, IN_SERVICE, INTERMOUNTAIN_ITEM_NUMBER, LAST_UPDATED, MANUFACTURER_CATALOG_NUMBER, MANUFACTURER_PART_ID, NAME, VENDOR_PARTY_ID, PRODUCT_GROUP, PURCHASING_UNIT_OF_MEASURE, PURCHASING_UNIT_PRICE, SOURCE_SYSTEM, STANDARD, STANDARD_TYPE, TECHNOLOGY_GROUP, UNSPSC_NUMBER, UPDATED_BY, USEFUL_LIFE, VENDOR_CATALOG_NUMBER, VENDOR_DECOMISSIONED",
+					"\\),$",
+					"TIMESTAMP '2012-10-13 [^']*'",
+					"PUBLIC.",
+					"^INSERT .*VALUES$",
+					"^\\(",
+					"PUBLIC.",
+					"01-JAN-11",
+					"TIMESTAMP '2012-10-13 [^']*'",
+					"\\),$",
+					"^INSERT.*VALUES$",
+					"^\\(",
+					":",
+					";",
+					"Fibre",
+					"null,null",
+					",'",
+					"',",
+					",$",
+					"^'",
+					"','",
+					"&",
+					"null,null,",
+					"null,null",
+					"^('[Y|A|N]','[N|Y]',[^,]*,[^,]*,[^,]*,[^,]*,),null,null,null,null,([^,]*,[^,]*,)to_timestamp[^,]*,[^,]*,'bulkLoad',to_timestamp[^,]*,[^,]*,'bulkLoad'\\);",
+					"^('[Y|A|N]','[N|Y]',[^,]*,[^,]*,[^,]*,[^,]*,)null,to_timestamp[^,]*,[^,]*,null,null,null,null,null",
+					"^('[Y|A|N]','[N|Y]',[^,]*,[^,]*,[^,]*,)null,null,([^,]*,)",
+					"^('[Y|A|N]','[N|Y]',[^,]*,)null,null,null,",
+					"('[Y|A|N]',)'N','N','N',",
+					"^('[Y|N]',)null,",
+					"null,'EISA EXCEL DOCUMENT',",
+					"Insert into ITEM \\(EXTERNAL_ID,SOURCE_SYSTEM,STANDARD,STANDARD_TYPE,EXCEPTION,DEVIATION,IN_SERVICE,EXCEPTION_REQUIRED,EXCEPTION_CRITERIA,DOCUMENT_ID,VENDOR_PARTY_ID,INTERMOUNTAIN_ITEM_NUMBER,NAME,DESCRIPTION,GENERAL_LEDGER_CODE,PRODUCT_GROUP,TECHNOLOGY_GROUP,CONTRACT_ID,AVAILABLE_DATE,IHC_ACTUAL_DECOMISSIONED,IHC_PROPOSED_DECOMISSIONED,VENDOR_DECOMISSIONED,VENDOR_CATALOG_NUMBER,MANUFACTURER_PART_ID,MANUFACTURER_CATALOG_NUMBER,PURCHASING_UNIT_OF_MEASURE,PURCHASING_UNIT_PRICE,UNSPSC_NUMBER,USEFUL_LIFE,COMMENTS,DATE_CREATED,CREATED_BY,LAST_UPDATED,UPDATED_BY\\) values \\(",
+					"\\([0-9][0-9]*,",
+					"\\(ID,",
+					"Data Center - Data Closet/Equipment",
+					"Call Acc",
+					"Calling Cards",
+					"Fibre",
+					"CREATION_DATE",
+					"\\),$",
+					"TIMESTAMP '2012-10-10 [^']*'",
+					"PUBLIC\\.",
+					"^INSERT INTO PUBLIC.CATEGORY\\(ID, CREATED_BY, DATE_CREATED, LAST_UPDATED, NAME, PARENT_CATEGORY_ID, PARENT_CATEGORY_PATH, UPDATED_BY\\) VALUES$",
+					"^\\(",
+					"Off-Line s",
+					"Off-L",
+					"Off-lin",
+					"Off-li",
+					"Display&",
+					"^Display&",
+					"/lec",
+					";.*$",
+					":.*$",
+					"\"\"",
+					"'",
+					"','",
+					"&",
+					",null,null,.*\\)",
+					",null,null,null,null,.*;",
+					"[0-9][0-9]*,[^,]*,'[^,]*','[^,]*',[^,]*,'[^,]*','[^,]*','[^,]*','[^,]*',[^,]*,[^,]*,[^,]*,[^,]*,",
+					"Insert into ITEM (ID,EXTERNAL_ID,SOURCE_SYSTEM,STANDARD,STANDARD_TYPE,EXCEPTION,DEVIATION,IN_SERVICE,EXCEPTION_REQUIRED,EXCEPTION_CRITERIA,DOCUMENT_ID,VENDOR_PARTY_ID,INTERMOUNTAIN_ITEM_NUMBER,NAME,DESCRIPTION,GENERAL_LEDGER_CODE,PRODUCT_GROUP,TECHNOLOGY_GROUP,CONTRACT_ID,AVAILABLE_DATE,IHC_ACTUAL_DECOMISSIONED,IHC_PROPOSED_DECOMISSIONED,VENDOR_DECOMISSIONED,VENDOR_CATALOG_NUMBER,MANUFACTURER_PART_ID,MANUFACTURER_CATALOG_NUMBER,PURCHASING_UNIT_OF_MEASURE,PURCHASING_UNIT_PRICE,UNSPSC_NUMBER,USEFUL_LIFE,COMMENTS,DATE_CREATED,CREATED_BY,LAST_UPDATED,UPDATED_BY) values (",
+					"Equipment rack - Data Center",
+					"Storage and Retrieval",
+					"Storage",
+					"ESA\\.",
+					"TIMESTAMP '[^']*'",
+					"\\),$",
+					"PUBLIC\\.",
+					"(^\\([0-9][0-9]*)",
+					"lectrical",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('01-JAN-10 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,'StorageTek is still under support as a previous standard. However, no new StorageTek should be purchased.',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Fred Holston',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,'Xiotech is still under support as a previous standard. However, no new Xiotech should be purchased. Capacity unlocking can be done if cost is justified.',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'5 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'3 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Don Franklin',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Kyle Andersen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Diane Rindlisbacher',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Ron Madsen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'5 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Ron Madsen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'10 years+',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Ron Madsen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Jim Wilhelmi',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'5 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,'Kyle Andersen',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,'5 years',null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					"null,'EISA EXCEL DOCUMENT','N',null,'N','N','N','N',null,null,null,null,",
+					",null,null,'Jim Wilhelmi',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
+					",null,null,null,null,to_timestamp\\('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),null,null,null,null,null,null,null,null,null,null,null,to_timestamp\\('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),'bulkLoad',to_timestamp\\('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),'bulkLoad'\\);",
+					"null,'EISA EXCEL DOCUMENT','Y',null,'N','N','N','N',null,null,null,null,",
+					"Insert into ITEM \\([^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,",
+					"\\([^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": true,
+				"replace_history":
+				[
+					".1",
+					"\\1/usr/share/man/man1/\\2 \\2",
+					"\\1\\2\\3 \\2",
+					"\\1\\2 \\2",
+					", to_timestamp('13-OCT-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'), to_timestamp('13-OCT-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'));",
+					"\\1, 'bulkload', 'bulkload')",
+					"\\1, CREATED_BY, UPDATED_BY, DATE_CREATED, LAST_UPDATED",
+					"\\11, ",
+					"(ID, ITEM_ID",
+					"null",
+					"to_timestamp('15-OCT-12','DD-MON-RR HH.MI.SSXFF AM')",
+					"'bulkload'",
+					";",
+					"",
+					"INSERT INTO PUBLIC.QUESTION_RESPONSE(ID, CREATED_BY, DATE_CREATED, DATE_VALUE, DOCUMENT_ID, FLOAT_VALUE, FORM_FIELD_ID, LAST_UPDATED, STRING_VALUE, UPDATED_BY) VALUES (",
+					"",
+					"to_timestamp('15-OCT-12','DD-MON-RR HH.MI.SSXFF AM')",
+					";",
+					"bulkload",
+					";",
+					"to_timestamp('15-OCT-12','DD-MON-RR HH.MI.SSXFF AM')",
+					"",
+					"INSERT INTO PUBLIC.LOOKUP_ELEMENT(ID, CREATED_BY, DATE_CREATED, DISPLAY, LAST_UPDATED, LOOKUP_LIST_ID, UPDATED_BY, VALUE) VALUES (",
+					"null",
+					"to_timestamp('15-OCT-12','DD-MON-RR HH.MI.SSXFF AM')",
+					"INSERT INTO LOOKUP_LIST(ID, CREATED_BY, DATE_CREATED, DESCRIPTION, LAST_UPDATED, LIST_TYPE, NAME, PROMPT, SQL_STATEMENT, UPDATED_BY) VALUES (",
+					"null",
+					"ITEM_CATEGORY(ITEM_ID, CATEGORY_ID",
+					");",
+					"to_timestamp('13-OCT-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM')",
+					"",
+					"INSERT INTO PUBLIC.ITEM(ID, AVAILABLE_DATE, COMMENTS, CONTRACT_ID, CREATED_BY, DATE_CREATED, DESCRIPTION, DEVIATION, DOCUMENT_ID, EXCEPTION, EXCEPTION_CRITERIA, EXCEPTION_REQUIRED, EXTERNAL_ID, GENERAL_LEDGER_CODE, IHC_ACTUAL_DECOMISSIONED, IHC_PROPOSED_DECOMISSIONED, IN_SERVICE, INTERMOUNTAIN_ITEM_NUMBER, LAST_UPDATED, MANUFACTURER_CATALOG_NUMBER, MANUFACTURER_PART_ID, NAME, VENDOR_PARTY_ID, PRODUCT_GROUP, PURCHASING_UNIT_OF_MEASURE, PURCHASING_UNIT_PRICE, SOURCE_SYSTEM, STANDARD, STANDARD_TYPE, TECHNOLOGY_GROUP, UNSPSC_NUMBER, UPDATED_BY, USEFUL_LIFE, VENDOR_CATALOG_NUMBER, VENDOR_DECOMISSIONED) VALUES (",
+					"",
+					"13-OCT-12",
+					"to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM')",
+					");",
+					"",
+					"INSERT INTO PUBLIC.CATEGORY(ID, CREATED_BY, DATE_CREATED, LAST_UPDATED, NAME, PARENT_CATEGORY_ID, PARENT_CATEGORY_PATH, UPDATED_BY) VALUES (",
+					"null&null",
+					"&",
+					"",
+					"&",
+					"",
+					"\\1\\2",
+					"\\1",
+					"\\1\\2",
+					"\\1",
+					"",
+					"(",
+					");",
+					"to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM')",
+					"",
+					"INSERT INTO PUBLIC.CATEGORY(ID, CREATED_BY, DATE_CREATED, LAST_UPDATED, NAME, PARENT_CATEGORY_ID, PARENT_CATEGORY_PATH, UPDATED_BY) VALUES (",
+					"/Elec",
+					"",
+					" inches",
+					"inches",
+					"",
+					"&",
+					"",
+					"to_timestamp('13-AUG-12','DD-MON-RR HH.MI.SSXFF AM')",
+					");",
+					"ESA.",
+					"INSERT INTO PUBLIC.CATEGORY(ID, CREATED_BY, DATE_CREATED, LAST_UPDATED, NAME, PARENT_CATEGORY_ID, PARENT_CATEGORY_PATH, UPDATED_BY) VALUES \\1",
+					"",
+					"(ID,FORM_ID",
+					"--",
+					"null",
+					"NULL",
+					"'",
+					"\\1'Y'",
+					"\\1null,null,null,",
+					"\\1'N','N',",
+					"MULTI_SELECT,DEFAULT_VALUE_STRING,DEFAULT_VALUE_FLOAT,DEFAULT_VALUE_DATE,",
+					"ORDER_NUMBER,REQUIRED,INTERNAL_ONLY,",
+					"FLOAT_VALUE",
+					"DATE_VALUE",
+					"STRING_VALUE",
+					"sectionHeader",
+					"titleHeader",
+					"textField",
+					"textArea",
+					"01-OCT-12",
+					"--Insert",
+					"'",
+					"ues (",
+					"(",
+					"AM'),null,null,null,null,null,null,null,null,null,null,null,to_",
+					"01-JAN-11",
+					"19-SEP-12",
+					"null,\\1",
+					"USEFUL_LIFE,COMMENTS,DA",
+					"null,null,null,null,null,null,null,null,null,to",
+					"_NUMBER,USEFUL_LIFE,DATE_CREATED",
+					"T','Y','N',null,n",
+					"STANDARD,EXCEPTION_REQUIRED,EXCEPTION_CRITERIA,DOCUMENT_ID",
+					"/",
+					"/Communications",
+					"/Storage/On-Line Storage (Tier 1, 2, 3)",
+					"/Servers/Other Software - Servers",
+					"/Servers/Operating Systems - Servers",
+					"/Servers/Hardware - Servers",
+					"/Printer-Scanner-Fax-Barcode",
+					"/General Software/Database",
+					"/General Software/Clinical I.S.",
+					"/General Software/Administration and Finance IS",
+					"/Display-Projectors-TV/Hardware Monitors-Projectors",
+					"/Display-Projectors-TV/Display",
+					"/Hardware - Computers",
+					"/Desktops-Laptops-PDA-Combo Devices-Recorders",
+					"/Data Center - Data Closet",
+					"/Communications",
+					"/Electrical",
+					"/Storage",
+					"/General Software",
+					"/Display-Projectors-TV",
+					"/Servers",
+					"/Network",
+					"/Desktops-Laptops-PDA-Combo Devices-Recorders",
+					"/Data Center - Data Closet",
+					"/",
+					"(",
+					"\\1",
+					"}",
+					"",
+					"\\1null,'EISA EXCEL DOCUMENT','Y',null,null,null,'",
+					"',null,null,null,null,to_timestamp('01-MAY-11','DD-MON-RR HH.MI.SSXFF AM'),null,null,null,null,null,null,null,null,null,to_ti",
+					"DD-MON-RR HH.MI.SSXFF AM'"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": false
+			},
+			"groups":
+			[
+				{
+					"selected": 2,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/C/cygwin/home/lpjharri/bin/toggler.ps1",
+							"settings":
+							{
+								"buffer_size": 13153,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										5854,
+										5854
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 1951.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/item_seed_data.sql",
+							"settings":
+							{
+								"buffer_size": 83043,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/SQL/SQL.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/C/Users/lpjharri/bin/win7-setup-symlink.ps1",
+							"settings":
+							{
+								"buffer_size": 8192,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										6367,
+										6367
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 2633.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 34.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"position": "0,2,3,-32000,-32000,-1,-1,891,83,23,1323",
+			"replace":
+			{
+				"height": 62.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 500.0,
+				"selected_items":
+				[
+				],
+				"width": 380.0
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"window_id": 3,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}
