@@ -204,7 +204,7 @@ function _commonsetup() {
     alias trycolors='eval $( dircolors -b ~/configuration/linux/dircolors.txt ); ls'
 
 	# my functions
-	. ~/bin/john_functions
+	. ~/bin/john_functions.sh
 }
 
 function _darwinsetup() {

@@ -5,6 +5,36 @@ function setihc() {
   wget -O - --bind-address=$myip --post-data "aupaccept=true" http://docs.google.com
 }
 
+function findx() {
+    msg="Simple wrapper around \"find\" except any \"-exclude\" options are mine,"
+    msg="$msg and are mapped just as \"-path filedir -prune\" would be. You must use the logical"
+    msg="$msg -o operators as you would normally. Order of how you define options is important!"
+
+    [ $# -lt 1 ] && echo "$msg" && return 1
+
+    command="find"
+
+    for x in "$@"
+    do
+        if [ $exclude == 1 ]; then
+            if [ "${x##-*}" == "" ]; then
+                echo "-exclude needs to be followed by a file or dir name"
+                return 2
+            else
+                command="${command} -path $x -prune"
+                exclude=0
+            fi
+        elif [ "$x" == "-exclude" ]; then
+            exclude=1
+            continue
+        else
+           command="${command} $x"
+        fi
+    done
+
+    echo "$command"
+}
+
 function alternatives_java() {
 # $1 = path to the alternate
 [ $# -lt 1 ] && echo "Needs 1 param: \$1 - path to alternate java (i.e., /opt/java/current)" && return 1
