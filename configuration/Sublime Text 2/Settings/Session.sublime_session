@@ -550,6 +550,22 @@
 				"selected_items":
 				[
 					[
+						"New",
+						"New-SymLink"
+					],
+					[
+						"Path",
+						"PathType"
+					],
+					[
+						"myS",
+						"mySublimeText2"
+					],
+					[
+						"myH",
+						"myHome"
+					],
+					[
 						"win",
 						"windows8Version"
 					],
@@ -570,27 +586,11 @@
 			"buffers":
 			[
 				{
-					"file": "/C/cygwin/home/lpjharri/bin/toggler.ps1",
+					"file": "/C/Users/lpjharri/Desktop/searchnotes.txt",
 					"settings":
 					{
-						"buffer_size": 13153,
+						"buffer_size": 580,
 						"line_ending": "Windows"
-					}
-				},
-				{
-					"file": "/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/item_seed_data.sql",
-					"settings":
-					{
-						"buffer_size": 83043,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-					"settings":
-					{
-						"buffer_size": 114,
-						"line_ending": "Unix"
 					}
 				}
 			],
@@ -630,14 +630,31 @@
 			},
 			"file_history":
 			[
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/services/org/ihc/esa/SearchService.groovy",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/services/org/ihc/esa/ApplicationUpgradeService.groovy",
+				"/K/autorun.inf",
+				"/C/tmp/safestick/filesarea/autorun.inf",
+				"/H/warranty.txt",
+				"/H/autorun.inf",
+				"/C/tmp/safestick/autorun.inf",
+				"/F/SafeStick BM9930.txt",
+				"/F/warranty.txt",
+				"/C/Users/lpjharri/AppData/Local/Temp/Temp1_libmp3lame-win-3.98.2.zip/libmp3lame-3.98.2/readme.txt",
+				"/C/Users/lpjharri/Desktop/20121208 - USBank Savings Account.txt",
+				"/F/john/Documents/Information Center/UnixTips/UnixTipCHECKINGPROCESSMEMORY.txt",
+				"/F/family documents/Documents/C",
+				"/F/john/Documents/Information Center/UnixTips/UnixTipAREFRESHINGX.txt",
+				"/C/cygwin/home/lpjharri/bin/toggler.ps1",
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/item_seed_data.sql",
+				"/C/Users/lpjharri/bin/win7-setup-symlink.ps1",
+				"/C/Users/lpjharri/bin/myinstall.sh",
+				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Settings/Session.sublime_session",
 				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
 				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/SQL.sublime-settings",
-				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 				"/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 				"/C/Users/lpjharri/Documents/Applications/SpringSource/ggts/hs_err_pid18780.log",
 				"/C/Users/lpjharri/Documents/Applications/SpringSource/ggts/configuration/1354815350886.log",
-				"/C/cygwin/home/lpjharri/bin/toggler.ps1",
 				"/C/cygwin/home/lpjharri/.ssh/github_rsa.pub",
 				"/C/cygwin/home/lpjharri/configuration/ggts-eclipse/all-preferences.epf",
 				"/C/tmp/esaui-indexes/org.ihc.esa.Item/_0.fdt",
@@ -699,7 +716,6 @@
 				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/book-tracker/grails-app/views/layouts/main.gsp",
 				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/target/stacktrace.log",
 				"/C/Users/lpjharri/Desktop/LDS/LEVELS/a_lvl1_idrop.txt",
-				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/item_seed_data.sql",
 				"/C/Users/lpjharri/Desktop/ReachYourGoals.txt",
 				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/target/plugins/jquery-1.8.0/web-app/js/jquery/jquery-1.8.0.js",
 				"/C/Users/lpjharri/Desktop/New Text Document.html",
@@ -741,23 +757,7 @@
 				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/preliminary_item_seed_data.sql",
 				"/C/tmp/item_seed_data.sql",
 				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/category_seed_data.sql",
-				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/catalog_seed_data.sql",
-				"/C/tmp/catalog_seed_data.sql",
-				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/grails-app/conf/BootStrap.groovy",
-				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.settings/esauiConfigFile.groovy",
-				"/E/PortableApps/uTorrentPortable/App/utorrent/temp/Frankenweenie.DvDrip[Eng]-FXG/Frankenweenie.DvDrip[Eng]-FXG.txt",
-				"/C/Users/lpjharri/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/WKFZY1FE/email.txt",
-				"/C/tmp/sql.sql",
-				"/C/tmp/category_seed_data.sql",
-				"/C/tmp/esaui.log",
-				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/.git/config",
-				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/.git/config",
-				"/C/tmp/form_seed_data.sql",
-				"/C/tmp/db.sql",
-				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/form_seed_data.sql",
-				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/item_seed_data_from_eisa_excel.sql",
-				"/C/cygwin/home/lpjharri/configuration/ssh_config",
-				"/C/cygwin/home/lpjharri/configuration/sendmail/sendmail.mc"
+				"/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/catalog_seed_data.sql"
 			],
 			"find":
 			{
@@ -775,6 +775,8 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"(.*, )null(,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*\\);)",
+					".*, null,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*\\);",
 					"Minimal",
 					"document\\.ready",
 					"\\$\\(document\\)",
@@ -900,9 +902,7 @@
 					"null,'EISA EXCEL DOCUMENT','N',null,'N','N','N','N',null,null,null,null,",
 					",null,null,'Jim Wilhelmi',null,to_timestamp('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),null,null,null,null,null,null,null,null,null,null,null,to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad',to_timestamp('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),'bulkLoad');",
 					",null,null,null,null,to_timestamp\\('01-JAN-11 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),null,null,null,null,null,null,null,null,null,null,null,to_timestamp\\('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),'bulkLoad',to_timestamp\\('19-SEP-12 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'\\),'bulkLoad'\\);",
-					"null,'EISA EXCEL DOCUMENT','Y',null,'N','N','N','N',null,null,null,null,",
-					"Insert into ITEM \\([^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,",
-					"\\([^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,"
+					"null,'EISA EXCEL DOCUMENT','Y',null,'N','N','N','N',null,null,null,null,"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -910,6 +910,8 @@
 				"regex": true,
 				"replace_history":
 				[
+					"\\1'ENTERPRISE'\\2",
+					"\\1ENTERPRISE\\2",
 					".1",
 					"\\1/usr/share/man/man1/\\2 \\2",
 					"\\1\\2\\3 \\2",
@@ -1035,9 +1037,7 @@
 					"\\1",
 					"}",
 					"",
-					"\\1null,'EISA EXCEL DOCUMENT','Y',null,null,null,'",
-					"',null,null,null,null,to_timestamp('01-MAY-11','DD-MON-RR HH.MI.SSXFF AM'),null,null,null,null,null,null,null,null,null,to_ti",
-					"DD-MON-RR HH.MI.SSXFF AM'"
+					"\\1null,'EISA EXCEL DOCUMENT','Y',null,null,null,'"
 				],
 				"reverse": false,
 				"show_context": true,
@@ -1048,81 +1048,28 @@
 			"groups":
 			[
 				{
-					"selected": 2,
+					"selected": 0,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/C/cygwin/home/lpjharri/bin/toggler.ps1",
+							"file": "/C/Users/lpjharri/Desktop/searchnotes.txt",
 							"settings":
 							{
-								"buffer_size": 13153,
+								"buffer_size": 580,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										5854,
-										5854
+										580,
+										580
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
-									"translate_tabs_to_spaces": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 1951.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-content/item_seed_data.sql",
-							"settings":
-							{
-								"buffer_size": 83043,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										0,
-										0
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/SQL/SQL.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/C/Users/lpjharri/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-							"settings":
-							{
-								"buffer_size": 114,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										0,
-										0
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/JavaScript/JSON.tmLanguage"
+									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
@@ -1164,7 +1111,7 @@
 				]
 			},
 			"menu_visible": true,
-			"position": "0,0,1,-1,-1,-1,-1,875,661,7,1901",
+			"position": "0,0,1,-1,-1,-1,-1,939,2285,71,3086",
 			"replace":
 			{
 				"height": 62.0
