@@ -594,6 +594,14 @@
 					}
 				},
 				{
+					"file": "/C/cygwin/home/lpjharri/.gitignore",
+					"settings":
+					{
+						"buffer_size": 843,
+						"line_ending": "Unix"
+					}
+				},
+				{
 					"file": "/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/party_seed_data.sql",
 					"settings":
 					{
@@ -1056,7 +1064,7 @@
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 1,
 					"sheets":
 					[
 						{
@@ -1087,6 +1095,32 @@
 						},
 						{
 							"buffer": 1,
+							"file": "/C/cygwin/home/lpjharri/.gitignore",
+							"settings":
+							{
+								"buffer_size": 843,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										217,
+										217
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 2,
 							"file": "/C/Users/lpjharri/Documents/SourceControl/sts-workspace/esa-ui/esa-content/party_seed_data.sql",
 							"settings":
 							{
@@ -1145,7 +1179,7 @@
 				]
 			},
 			"menu_visible": true,
-			"position": "0,2,3,-32000,-32000,-1,-1,1013,1716,145,3250",
+			"position": "0,2,3,-1,-1,-1,-1,1013,1716,145,3250",
 			"replace":
 			{
 				"height": 62.0
