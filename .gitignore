@@ -23,7 +23,11 @@ rubygems
 .Trash
 .X*
 pgadmin.log
+
+# Sublime Text 2
 configuration/Sublime Text 2/Backup
+*.last-run
+*.sublime_session
 
 #
 # Dot files
