@@ -8,6 +8,7 @@ rubygems
 .*~
 *.swp
 *.bak
+*.cache
 
 #
 # Miscellaneous
@@ -22,6 +23,7 @@ rubygems
 .Trash
 .X*
 pgadmin.log
+configuration/Sublime Text 2/Backup
 
 #
 # Dot files
