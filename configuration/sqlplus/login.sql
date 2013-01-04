@@ -24,6 +24,9 @@ SET NUMFORMAT $99,999
 -- Set wrapper off
 SET WRA OFF
 
+-- Set pause
+SET PAUSE ON
+
 -- clear columns formatting
 CLEAR COL
 
