@@ -52,6 +52,7 @@
 	"onexcengine"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
 	"OUTLOOK"="C:\Program Files (x86)\Microsoft Office\Office14\OUTLOOK.EXE"
 	"SmartSettings"="C:\Program Files\Dell\Feature Enhancement Pack\SmartSettings.exe"
+	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe"
 }
 [hashtable] $atWorkServices = @{
 	# make sure key is common process name and value is full path to process
@@ -63,6 +64,7 @@
 	"iTunesHelper" = "C:\Program Files (x86)\iTunes\iTunesHelper.exe"
 	"AllShare Play" = "C:\Program Files\Samsung\AllShare Play\AllShare Play.exe"
 	"AllShare Play Launcher" = "C:\Program Files\Samsung\AllShare Play\utils\AllShare Play Launcher.exe"
+	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe"
 }
 [hashtable] $atHomeServices = @{
 	# make sure key is common process name and value is full path to process
