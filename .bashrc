@@ -295,6 +295,9 @@ function _linuxsetup() {
 	MANPATH=/usr/share/man:/usr/share/man/en:/usr/kerberos/man:/usr/local/share/man:/usr/java/jdk1.6.0_17/man
 	export MANPATH
 
+    # SQL Plus
+    SQLPATH=~/configuration/sqlplus
+
 	# ALIASES
 	alias yl='yum list installed'
 	alias yr='yum remove -y'
