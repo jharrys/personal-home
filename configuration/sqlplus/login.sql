@@ -20,3 +20,19 @@ SET LINESIZE 132
 
 -- To set the number format used in a report to $99,999.
 SET NUMFORMAT $99,999
+
+-- Set wrapper off
+SET WRA OFF
+
+-- clear columns formatting
+CLEAR COL
+
+-- set some sensible defaults
+COL ID FOR 99999
+COL NAME FOR A15
+COL USERNAME FOR A15
+COL EMAIL FOR A15
+COL EMAIL_ADDRESS FOR A15
+COL PASSWORD FOR A5
+COL PASSWD FOR A5
+
