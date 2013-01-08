@@ -47,7 +47,7 @@
 }
 [hashtable] $atWorkApps = @{
 	# make sure key is common process name and value is full path to process
-	"communicator"="C:\Program Files (x86)\Microsoft Office Communicator\communicator.exe"
+	#"communicator"="C:\Program Files (x86)\Microsoft Office Communicator\communicator.exe"
 	"onexcui"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcui.exe"
 	"onexcengine"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
 	"OUTLOOK"="C:\Program Files (x86)\Microsoft Office\Office14\OUTLOOK.EXE"
