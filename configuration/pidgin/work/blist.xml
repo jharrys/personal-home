@@ -287,6 +287,7 @@
 					<setting name='email' type='string'>Bobby.Davis@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426045</setting>
 					<setting name='phone-display' type='string'>801-442-6045</setting>
+					<setting name='site' type='string'>sip:Bobby.Davis@imail.org;opaque=app:voicemail</setting>
 					<setting name='last_seen' type='int'>1357676189</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
@@ -807,6 +808,7 @@
 					<setting name='email' type='string'>Bobby.Davis@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426045</setting>
 					<setting name='phone-display' type='string'>801-442-6045</setting>
+					<setting name='site' type='string'>sip:Bobby.Davis@imail.org;opaque=app:voicemail</setting>
 					<setting name='last_seen' type='int'>1357676189</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
