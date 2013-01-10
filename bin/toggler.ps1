@@ -33,6 +33,8 @@
 #		[string]$networkName,
 #		$eventState
 #	)
+#
+# NOTE About arguments to application or services - I use the comma as the delimiter, so in the map instead of a space between the cmd and the arg, but a ","
 
 # Declare all the variables (eventually this should live in a configuration file)
 [datetime] $myDate = Get-Date
@@ -52,7 +54,7 @@
 	"onexcengine"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
 	"OUTLOOK"="C:\Program Files (x86)\Microsoft Office\Office14\OUTLOOK.EXE"
 	"SmartSettings"="C:\Program Files\Dell\Feature Enhancement Pack\SmartSettings.exe"
-	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe"
+	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\configuration\pidgin\work"
 }
 [hashtable] $atWorkServices = @{
 	# make sure key is common process name and value is full path to process
@@ -64,7 +66,7 @@
 	"iTunesHelper" = "C:\Program Files (x86)\iTunes\iTunesHelper.exe"
 	"AllShare Play" = "C:\Program Files\Samsung\AllShare Play\AllShare Play.exe"
 	"AllShare Play Launcher" = "C:\Program Files\Samsung\AllShare Play\utils\AllShare Play Launcher.exe"
-	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe"
+	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\configuration\pidgin\home"
 }
 [hashtable] $atHomeServices = @{
 	# make sure key is common process name and value is full path to process
@@ -152,7 +154,19 @@ Function Start-LocationProcesses($processes, $services, $defaultPrinter) {
 		Try {
 			$proc = Get-Process -ErrorAction SilentlyContinue $key
 			if ($proc -eq $null) {
-				Start-Process -WindowStyle Minimized $processes.Get_Item($key)
+				$fullCommand = $processes.Get_Item($key).split(",")
+				$baseCmd = $fullCommand[0]
+
+				write-output "full: $fullCommand"
+				write-output "base: $baseCmd"
+
+				if ($fullCommand.length -gt 1 ) {
+					$argList = $fullCommand[1..($fullCommand.length-1)]
+					write-output "argList: $argList"
+					Start-Process $baseCmd -WindowStyle Minimized -ArgumentList $argList
+				} else {
+					Start-Process -WindowStyle Minimized $processes.Get_Item($key)
+				}
 #				$msg = "${script:startTime}: Started application $key."
 			} else {
 #				$msg = "${script:startTime}: $key is already running."
