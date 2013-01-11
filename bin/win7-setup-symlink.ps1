@@ -1,7 +1,13 @@
 ﻿# Copyright 2012 
 # by johnnie.a.harris@gmail.com
 # 
-# Creates all the missing symlink for a new system for Windows 7
+# Creates all the missing symlinks for a Johnnie Harris new Windows 7 system 
+
+# ************************************************************** #
+#
+#		Set the Microsoft Windows versions
+#
+# ************************************************************** #
 
 $windows8Version = new-object 'Version' 6,2
 $windowsServer2012Version = new-object 'Version' 6,2
@@ -19,9 +25,19 @@ $windowsVersion_1way = [Environment]::OSVersion
 $windowsVersion_2way = [Environment]::OSVersion.Version
 $windowsVersion_3way = (Get-WmiObject -class Win32_OperatingSystem).Caption
 
+# Make sure we are Windows 7 (because all the symlinks have been coded to specific paths in Windows 7 that may change in newer releases)
 if ($windowsVersion_2way -ne ($windows7Version)) {
 	exit
 }
+
+# ************************************************************** #
+#
+#		Define the global variables the represent where the real configuration 
+#		folders exist & test those containers to ensure they exist.
+#			I keep everything under my cygwin home directory, so cygwin
+#			is very much an integral part of this solution!
+#
+# ************************************************************** #
 
 # myCygwinHomeConfiguration is only needed by the first symlink to configuration. Once setup, the rest should use myHomeConfiguration
 $myCygwinHome = 'c:\cygwin\home\lpjharri'
@@ -30,6 +46,7 @@ $myHome = $Env:userprofile
 $myHomeConfiguration = $myHome + '\configuration'
 $myWin7Configuration = $myHome + '\configuration\win7'
 $myWinGitConfiguration = $myHome + '\configuration\win7'
+$myGtk20Configuration = $myHome + '\configuration\gtk-2.0'
 
 # verify that all containers exist and are, indeed, containers
 
@@ -63,6 +80,18 @@ if (!(Test-Path -Path $myWinGitConfiguration -PathType Container)) {
 	exit
 }
 
+if (!(Test-Path -Path $myGtk20Configuration -PathType Container)) { 
+	Write-Output "$myGtk20Configuration does not exist or is of type file"
+	exit
+}
+
+# ************************************************************** #
+#
+#		Now define the variables to the actual/real locations of each specific
+#		configuration file or directory. 
+#
+# ************************************************************** #
+
 # bin symlink target path (the real location)
 $myBin = $myCygwinHome + '\bin'
 
@@ -94,28 +123,37 @@ $myWallPaper = $myHome + '\Documents\Google Drive\Wallpaper'
 # Icons symlink target (the real path)
 $myIcons = $myHome + '\Documents\Google Drive\Icons'
 
-# my .git global configuration paths
+# Git global configuration paths
 $myGitConfig = $myWinGitConfiguration + '\.gitconfig'
 $myGitIgnore = $myWinGitConfiguration + '\.gitignore'
 $myGitIgnoreGlobal = $myWinGitConfiguration + '\.gitignore_global'
 
+# Gtk-2.0 configuration (used by things like pidgin)
+$myGtkrc20File = $myGtk20Configuration + '\gtkrc-2.0'
 
+# ************************************************************** #
+#
+#		Using the defined variables above for the real locations
+#		of each configuration file and/or directory, create the
+#		symbolic link where the system will expect the file to be.
+#
+# ************************************************************** #
 
-# SET THIS UP FIRST! - most of the configurations rely on this one
+# !!!!!! SET THIS UP FIRST! - most of the configurations rely on this one
 cd $myHome
 $symlinkExists = Get-ReparsePoint configuration
 if (!$symlinkExists -and (Test-Path -Path $myCygwinHomeConfiguration -PathType Container )) {
 	New-SymLink configuration $myCygwinHomeConfiguration
 }
 
-# bin
+# *** bin
 cd $myHome
 $symlinkExists = Get-ReparsePoint bin
 if (!$symlinkExists -and (Test-Path -Path $myBin -PathType Container )) {
 	New-SymLink bin $myBin
 }
 
-# ssh
+# *** ssh
 cd $myHome
 $symlinkExists = Get-ReparsePoint .ssh
 if (!$symlinkExists -and (Test-Path -Path $mySsh -PathType Container )) {
@@ -128,14 +166,14 @@ if (!$symlinkExists -and (Test-Path -Path $mySshConfig -PathType Leaf )) {
 	New-SymLink config $mySshConfig
 }
 
-# explorer favorites (Links)
+# *** explorer favorites (Links)
 cd $myHome
 $symlinkExists = Get-ReparsePoint Links
 if (!$symlinkExists -and (Test-Path -Path $myLinks -PathType Container )) {
 	New-SymLink Links $myLinks
 }
 
-# .git stuff
+# *** Git stuff
 cd $myHome
 $symlinkExists = Get-ReparsePoint .gitconfig
 if (!$symlinkExists -and (Test-Path -Path $myGitConfig -PathType Leaf )) {
@@ -152,7 +190,7 @@ if (!$symlinkExists -and (Test-Path -Path $myGitIgnoreGlobal -PathType Leaf )) {
 	New-Hardlink .gitignore_global $myGitIgnoreGlobal
 }
 
-# Themes
+# *** Themes
 cd $Env:localappdata
 cd 'Microsoft\Windows'
 $symlinkExists = Get-ReparsePoint Themes
@@ -161,7 +199,7 @@ if (!$symlinkExists -and (Test-Path -Path $myThemes -PathType Container )) {
 	New-SymLink Themes $myThemes
 }
 
-# Libraries
+# *** Libraries
 cd $Env:appdata
 cd 'Microsoft\Windows'
 $symlinkExists = Get-ReparsePoint Libraries
@@ -170,7 +208,7 @@ if (!$symlinkExists -and (Test-Path -Path $myLibraries -PathType Container )) {
 	New-SymLink Libraries $myLibraries
 }
 
-# Wallpaper
+# *** Wallpaper
 cd $myHome
 cd 'Pictures'
 $symlinkExists = Get-ReparsePoint Wallpaper
@@ -178,7 +216,7 @@ if (!$symlinkExists -and (Test-Path -Path $myWallPaper -PathType Container )) {
 	New-SymLink Wallpaper $myWallPaper
 }
 
-# Icons
+# *** Icons
 cd $myHome
 cd 'Documents'
 $symlinkExists = Get-ReparsePoint Icons
@@ -186,7 +224,7 @@ if (!$symlinkExists -and (Test-Path -Path $myIcons -PathType Container )) {
 	New-SymLink Icons $myIcons
 }
 
-# WindowsPowerShell
+# *** WindowsPowerShell
 cd $myHome
 cd 'Documents'
 $symlinkExists = Get-ReparsePoint WindowsPowerShell
@@ -194,14 +232,35 @@ if (!$symlinkExists -and (Test-Path -Path $myWindowsPowerShell -PathType Contain
 	New-SymLink WindowsPowerShell $myWindowsPowerShell
 }
 
-# Sublime Text 2
+# *** Sublime Text 2
 cd $Env:appdata
 $symlinkExists = Get-ReparsePoint 'Sublime Text 2'
 if (!symlinkExists -and (Test-Path -Path $mySublimeText2 -PathType Container)) {
 	New-SymLink 'Sublime Text 2' $mySublimeText2
 }
 
-# Create my other standard directories
+# *** Gtk-2.0 personal resource file
+cd $myHome
+$symlinkExists = Get-ReparsePoint '.gtkrc-2.0'
+if (!symlinkExists -and (Test-Path -Path $myGtkrc20File -PathType Leaf)) {
+	New-SymLink '.gtkrc-2.0' $myGtkrc20File
+}
+
+cd $myHome
+cd 'configuration\pidgin\home'
+$symlinkExists = Get-ReparsePoint 'gtkrc-2.0'
+if (!symlinkExists -and (Test-Path -Path $myGtkrc20File -PathType Leaf)) {
+	New-SymLink 'gtkrc-2.0' $myGtkrc20File
+}
+
+cd $myHome
+cd 'configuration\pidgin\work'
+$symlinkExists = Get-ReparsePoint 'gtkrc-2.0'
+if (!symlinkExists -and (Test-Path -Path $myGtkrc20File -PathType Leaf)) {
+	New-SymLink 'gtkrc-2.0' $myGtkrc20File
+}
+
+# *** Create my other standard directories
 cd $myHome
 if (!(Test-Path -Path Mount -PathType Container)) { 
 	Write-Output "Creating $myHome\Mount"
