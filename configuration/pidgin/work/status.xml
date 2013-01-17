@@ -1,6 +1,66 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <statuses version='1.0'>
+	<status name='Auto-Cached' transient='true' created='1358436718' lastused='1358436718' usage_count='1'>
+		<state>unavailable</state>
+		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<state>busy</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1358363085' lastused='1358363085' usage_count='1'>
+		<state>available</state>
+		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		<substatus>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<state>available</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1358357400' lastused='1358357400' usage_count='1'>
+		<state>unavailable</state>
+		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1358296133' lastused='1358296133' usage_count='1'>
+		<state>available</state>
+		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<state>available</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1358287200' lastused='1358287200' usage_count='1'>
+		<state>unavailable</state>
+		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
+	</status>
 	<status name='Normal' created='1357926702' lastused='1357927005' usage_count='4'>
 		<state>available</state>
 		<substatus>
@@ -47,11 +107,6 @@
 		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>busy</state>
 			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		</substatus>

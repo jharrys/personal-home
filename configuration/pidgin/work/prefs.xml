@@ -27,7 +27,7 @@
 			</pref>
 		</pref>
 		<pref name='savedstatus'>
-			<pref name='default' type='int' value='1357943401'/>
+			<pref name='default' type='int' value='1358436718'/>
 			<pref name='startup' type='int' value='0'/>
 			<pref name='startup_current_status' type='bool' value='1'/>
 			<pref name='idleaway' type='int' value='1357934517'/>
@@ -164,8 +164,8 @@
 					<pref name='method_urgent' type='bool' value='0'/>
 					<pref name='method_count' type='bool' value='1'/>
 					<pref name='method_count_xprop' type='bool' value='0'/>
-					<pref name='method_raise' type='bool' value='1'/>
-					<pref name='method_present' type='bool' value='0'/>
+					<pref name='method_raise' type='bool' value='0'/>
+					<pref name='method_present' type='bool' value='1'/>
 					<pref name='notify_focus' type='bool' value='1'/>
 					<pref name='notify_click' type='bool' value='1'/>
 					<pref name='notify_type' type='bool' value='1'/>
@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1357858164'/>
+				<pref name='last_check' type='int' value='1358363084'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='300000'/>
@@ -235,7 +235,7 @@
 			<pref name='win32'>
 				<pref name='wintrans'>
 					<pref name='im_enabled' type='bool' value='1'/>
-					<pref name='im_alpha' type='int' value='75'/>
+					<pref name='im_alpha' type='int' value='157'/>
 					<pref name='im_slider' type='bool' value='1'/>
 					<pref name='im_solid_onfocus' type='bool' value='1'/>
 					<pref name='im_always_on_top' type='bool' value='0'/>
@@ -404,9 +404,9 @@
 				<pref name='height' type='int' value='390'/>
 			</pref>
 			<pref name='im'>
-				<pref name='x' type='int' value='713'/>
-				<pref name='y' type='int' value='59'/>
-				<pref name='width' type='int' value='689'/>
+				<pref name='x' type='int' value='3056'/>
+				<pref name='y' type='int' value='0'/>
+				<pref name='width' type='int' value='291'/>
 				<pref name='height' type='int' value='682'/>
 				<pref name='animate_buddy_icons' type='bool' value='1'/>
 				<pref name='entry_height' type='int' value='54'/>
@@ -440,7 +440,7 @@
 			<pref name='show' type='string' value='always'/>
 		</pref>
 		<pref name='win32'>
-			<pref name='blink_im' type='bool' value='1'/>
+			<pref name='blink_im' type='bool' value='0'/>
 			<pref name='minimize_new_convs' type='bool' value='0'/>
 		</pref>
 	</pref>

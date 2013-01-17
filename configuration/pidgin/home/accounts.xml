@@ -33,7 +33,7 @@
 		<settings>
 			<setting name='check-mail' type='bool'>1</setting>
 			<setting name='buddy_icon' type='string'>604e985092473dfd9a04d2ae2812443bde4055e3.png</setting>
-			<setting name='buddy_icon_timestamp' type='int'>1357946908</setting>
+			<setting name='buddy_icon_timestamp' type='int'>1358401658</setting>
 			<setting name='connect_server' type='string'>173.194.79.125</setting>
 			<setting name='auth_plain_in_clear' type='bool'>0</setting>
 			<setting name='use-global-buddyicon' type='bool'>0</setting>
