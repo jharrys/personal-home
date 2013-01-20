@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <statuses version='1.0'>
-	<status name='Auto-Cached' transient='true' created='1358436718' lastused='1358436718' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1358542800' lastused='1358542800' usage_count='1'>
 		<state>unavailable</state>
 		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		<substatus>
@@ -15,7 +15,7 @@
 			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1358363085' lastused='1358363085' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1358532001' lastused='1358532001' usage_count='1'>
 		<state>available</state>
 		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		<substatus>
@@ -29,7 +29,7 @@
 			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1358357400' lastused='1358357400' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1358531978' lastused='1358531978' usage_count='1'>
 		<state>unavailable</state>
 		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		<substatus>
@@ -38,21 +38,21 @@
 			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1358296133' lastused='1358296133' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1358531917' lastused='1358531917' usage_count='1'>
 		<state>available</state>
 		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
 		<substatus>
 			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>available</state>
 			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		</substatus>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
+		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1358287200' lastused='1358287200' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1358528401' lastused='1358528401' usage_count='1'>
 		<state>unavailable</state>
 		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
 		<substatus>
@@ -73,88 +73,5 @@
 			<state>available</state>
 			<message>&lt;font face=&quot;Tahoma&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;He who can no longer pause to wonder and stand rapt in awe, is as good as dead...&lt;/font&gt; -Albert Einstein (Oh well I had a good run anyway)&lt;/font&gt;</message>
 		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357925036' lastused='1357925447' usage_count='2'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357918155' lastused='1357920000' usage_count='2'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357943401' lastused='1357943401' usage_count='1'>
-		<state>available</state>
-		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
-			<state>available</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357938001' lastused='1357938001' usage_count='1'>
-		<state>unavailable</state>
-		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357927775' lastused='1357927775' usage_count='1'>
-		<state>available</state>
-		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
-			<state>available</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357926969' lastused='1357926969' usage_count='1'>
-		<state>available</state>
-		<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
-			<state>available</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-			<message>He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)</message>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357926746' lastused='1357926746' usage_count='1'>
-		<state>available</state>
-		<message>Hell was full ... So I came back! &amp;gt;:o</message>
-		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
-			<state>available</state>
-			<message>Hell was full ... So I came back! &amp;gt;:o</message>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-			<message>Hell was full ... So I came back! &amp;gt;:o</message>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357934517' lastused='0' usage_count='0'>
-		<state>away</state>
-		<message>I&apos;m not here right now</message>
 	</status>
 </statuses>
