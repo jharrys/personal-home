@@ -8,9 +8,7 @@
 		<alias>johnnie</alias>
 		<statuses>
 			<status type='available' name='Available' active='true'>
-				<attributes>
-					<attribute id='message' value='He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)'/>
-				</attributes>
+				<attributes/>
 			</status>
 			<status type='mood' name='Feeling' active='false'>
 				<attributes/>
@@ -19,7 +17,9 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes/>
+				<attributes>
+					<attribute id='message' value='I&apos;m not here right now'/>
+				</attributes>
 			</status>
 			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
@@ -35,12 +35,12 @@
 		<settings>
 			<setting name='check-mail' type='bool'>1</setting>
 			<setting name='buddy_icon' type='string'>604e985092473dfd9a04d2ae2812443bde4055e3.png</setting>
-			<setting name='buddy_icon_timestamp' type='int'>1358718803</setting>
+			<setting name='buddy_icon_timestamp' type='int'>1359985095</setting>
 			<setting name='connect_server' type='string'>173.194.79.125</setting>
 			<setting name='auth_plain_in_clear' type='bool'>0</setting>
 			<setting name='use-global-buddyicon' type='bool'>0</setting>
-			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
 			<setting name='connection_security' type='string'>require_tls</setting>
+			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
 			<setting name='custom_smileys' type='bool'>1</setting>
 			<setting name='port' type='int'>5222</setting>
 		</settings>
@@ -54,13 +54,11 @@
 		<name>John.Harris@imail.org,CO\lpjharri</name>
 		<password>JJk5llNn</password>
 		<statuses>
-			<status type='available' name='Available' active='false'>
+			<status type='available' name='Available' active='true'>
 				<attributes/>
 			</status>
-			<status type='busy' name='Busy' active='true'>
-				<attributes>
-					<attribute id='message' value='He who can no longer pause to wonder and stand rapt in awe, is as good as dead... -Albert Einstein (Oh well I had a good run anyway)'/>
-				</attributes>
+			<status type='busy' name='Busy' active='false'>
+				<attributes/>
 			</status>
 			<status type='do-not-disturb' name='Do not disturb' active='false'>
 				<attributes/>
@@ -72,7 +70,9 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes/>
+				<attributes>
+					<attribute id='message' value='I&apos;m not here right now'/>
+				</attributes>
 			</status>
 			<status type='be-right-back' name='Be right back' active='false'>
 				<attributes/>
