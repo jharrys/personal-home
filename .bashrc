@@ -80,8 +80,12 @@ function _commonsetup() {
 	alias elias='vim ~/.bashrc'
 	alias ralias='. ~/.bashrc'
 	alias getw='wget -N -r -nH -nd --no-parent'
-	alias rsync='rsync -avuz --progress'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
+
+    # Rsync
+    # [a](rlptogD) [v]erbose [u]pdate [z]compress [h]umanreadable [P]partial,progress
+	alias rsync='rsync -avuzhP'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
 	alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
+    alias rsyncPicToshibaAsSource='rsync -avuzhP ${HOME}/winhome/Mounts/toshiba/pictures/'
 
     # Time savers
     alias a='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
