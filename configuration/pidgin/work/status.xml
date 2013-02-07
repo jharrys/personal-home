@@ -1,6 +1,57 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <statuses version='1.0'>
+	<status name='Auto-Cached' transient='true' created='1360170506' lastused='1360172332' usage_count='2'>
+		<state>available</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1360177200' lastused='1360177200' usage_count='1'>
+		<state>available</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<state>available</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1360172392' lastused='1360172392' usage_count='1'>
+		<state>unavailable</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<state>busy</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1360171800' lastused='1360171800' usage_count='1'>
+		<state>unavailable</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<state>busy</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1360077415' lastused='1360077415' usage_count='1'>
+		<state>away</state>
+		<substatus>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<state>away</state>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>away</state>
+		</substatus>
+	</status>
 	<status name='Auto-Cached' transient='true' created='1360015200' lastused='1360015200' usage_count='1'>
 		<state>available</state>
 		<substatus>
@@ -16,10 +67,6 @@
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>busy</state>
 		</substatus>
 	</status>

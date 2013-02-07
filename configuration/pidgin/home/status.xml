@@ -11,11 +11,11 @@
 	<status name='Auto-Cached' transient='true' created='1357682400' lastused='1357682400' usage_count='1'>
 		<state>available</state>
 		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>available</state>
 		</substatus>
 		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>available</state>
 		</substatus>
 	</status>
@@ -41,9 +41,5 @@
 			<state>busy</state>
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1357804184' lastused='0' usage_count='0'>
-		<state>away</state>
-		<message>I&apos;m not here right now</message>
 	</status>
 </statuses>
