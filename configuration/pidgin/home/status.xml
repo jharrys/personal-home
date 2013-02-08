@@ -42,4 +42,8 @@
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
 	</status>
+	<status name='Auto-Cached' transient='true' created='1360287118' lastused='0' usage_count='0'>
+		<state>away</state>
+		<message>I&apos;m not here right now</message>
+	</status>
 </statuses>

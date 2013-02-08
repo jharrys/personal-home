@@ -30,7 +30,7 @@
 			<pref name='default' type='int' value='1357682400'/>
 			<pref name='startup' type='int' value='0'/>
 			<pref name='startup_current_status' type='bool' value='1'/>
-			<pref name='idleaway' type='int' value='1357804184'/>
+			<pref name='idleaway' type='int' value='1360287118'/>
 			<pref name='isidleaway' type='bool' value='0'/>
 		</pref>
 		<pref name='conversations'>
@@ -368,12 +368,12 @@
 			<pref name='show_idle_time' type='bool' value='1'/>
 			<pref name='show_offline_buddies' type='bool' value='0'/>
 			<pref name='show_protocol_icons' type='bool' value='0'/>
-			<pref name='list_visible' type='bool' value='1'/>
+			<pref name='list_visible' type='bool' value='0'/>
 			<pref name='list_maximized' type='bool' value='0'/>
 			<pref name='sort_type' type='string' value='none'/>
-			<pref name='x' type='int' value='66'/>
-			<pref name='y' type='int' value='66'/>
-			<pref name='width' type='int' value='400'/>
+			<pref name='x' type='int' value='198'/>
+			<pref name='y' type='int' value='198'/>
+			<pref name='width' type='int' value='424'/>
 			<pref name='height' type='int' value='149'/>
 			<pref name='theme' type='string' value=''/>
 		</pref>
