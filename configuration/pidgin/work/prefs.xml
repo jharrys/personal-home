@@ -27,7 +27,7 @@
 			</pref>
 		</pref>
 		<pref name='savedstatus'>
-			<pref name='default' type='int' value='1360274400'/>
+			<pref name='default' type='int' value='1360348354'/>
 			<pref name='startup' type='int' value='0'/>
 			<pref name='startup_current_status' type='bool' value='1'/>
 			<pref name='idleaway' type='int' value='1358788551'/>
@@ -157,7 +157,7 @@
 				<pref name='notify'>
 					<pref name='type_im' type='bool' value='1'/>
 					<pref name='type_chat' type='bool' value='1'/>
-					<pref name='type_chat_nick' type='bool' value='1'/>
+					<pref name='type_chat_nick' type='bool' value='0'/>
 					<pref name='type_focused' type='bool' value='0'/>
 					<pref name='method_string' type='bool' value='1'/>
 					<pref name='title_string' type='string' value='(*)'/>
@@ -165,7 +165,7 @@
 					<pref name='method_count' type='bool' value='1'/>
 					<pref name='method_count_xprop' type='bool' value='0'/>
 					<pref name='method_raise' type='bool' value='1'/>
-					<pref name='method_present' type='bool' value='0'/>
+					<pref name='method_present' type='bool' value='1'/>
 					<pref name='notify_focus' type='bool' value='1'/>
 					<pref name='notify_click' type='bool' value='1'/>
 					<pref name='notify_type' type='bool' value='1'/>
@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1360256826'/>
+				<pref name='last_check' type='int' value='1360347752'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='300000'/>
@@ -372,8 +372,8 @@
 			<pref name='list_visible' type='bool' value='0'/>
 			<pref name='list_maximized' type='bool' value='0'/>
 			<pref name='sort_type' type='string' value='log_size'/>
-			<pref name='x' type='int' value='327'/>
-			<pref name='y' type='int' value='107'/>
+			<pref name='x' type='int' value='2034'/>
+			<pref name='y' type='int' value='131'/>
 			<pref name='width' type='int' value='322'/>
 			<pref name='height' type='int' value='415'/>
 			<pref name='theme' type='string' value=''/>
@@ -411,10 +411,10 @@
 				<pref name='height' type='int' value='390'/>
 			</pref>
 			<pref name='im'>
-				<pref name='x' type='int' value='1127'/>
-				<pref name='y' type='int' value='13'/>
-				<pref name='width' type='int' value='298'/>
-				<pref name='height' type='int' value='840'/>
+				<pref name='x' type='int' value='2698'/>
+				<pref name='y' type='int' value='30'/>
+				<pref name='width' type='int' value='382'/>
+				<pref name='height' type='int' value='861'/>
 				<pref name='animate_buddy_icons' type='bool' value='1'/>
 				<pref name='entry_height' type='int' value='54'/>
 				<pref name='show_buddy_icons' type='bool' value='1'/>
