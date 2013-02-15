@@ -120,6 +120,12 @@
 		<feature var='urn:xmpp:ping'/>
 		<feature var='urn:xmpp:time'/>
 	</client>
+	<client node='http://talk.google.com/xmpp/bot/caps' ver='1.0'>
+		<identity category='client' type='bot'/>
+		<ext identifier='pmuc-v1'>
+			<feature var='http://www.google.com/xmpp/protocol/pmuc/v1'/>
+		</ext>
+	</client>
 	<client node='http://mail.google.com/xmpp/client/caps' ver='1.1'>
 		<identity category='client' type='pc'/>
 		<feature var='http://jabber.org/protocol/disco#info'/>

@@ -7,9 +7,9 @@
 		<password>phqwhhzbqsgcrkes</password>
 		<alias>johnnie</alias>
 		<statuses>
-			<status type='available' name='Available' active='true'>
+			<status type='available' name='Available' active='false'>
 				<attributes>
-					<attribute id='message' value='WFH (Friday)'/>
+					<attribute id='message' value='at LP'/>
 				</attributes>
 			</status>
 			<status type='mood' name='Feeling' active='false'>
@@ -29,7 +29,7 @@
 			<status type='dnd' name='Do Not Disturb' active='false'>
 				<attributes/>
 			</status>
-			<status type='offline' name='Offline' active='false'>
+			<status type='offline' name='Offline' active='true'>
 				<attributes/>
 			</status>
 		</statuses>
@@ -37,12 +37,12 @@
 		<settings>
 			<setting name='check-mail' type='bool'>1</setting>
 			<setting name='buddy_icon' type='string'>604e985092473dfd9a04d2ae2812443bde4055e3.png</setting>
-			<setting name='buddy_icon_timestamp' type='int'>1360342013</setting>
+			<setting name='buddy_icon_timestamp' type='int'>1360861790</setting>
 			<setting name='connect_server' type='string'>74.125.130.125</setting>
 			<setting name='auth_plain_in_clear' type='bool'>0</setting>
 			<setting name='use-global-buddyicon' type='bool'>0</setting>
-			<setting name='connection_security' type='string'>require_tls</setting>
 			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
+			<setting name='connection_security' type='string'>require_tls</setting>
 			<setting name='custom_smileys' type='bool'>1</setting>
 			<setting name='port' type='int'>5222</setting>
 		</settings>
@@ -56,13 +56,15 @@
 		<name>John.Harris@imail.org,CO\lpjharri</name>
 		<password>JJk5llNn</password>
 		<statuses>
-			<status type='available' name='Available' active='true'>
+			<status type='available' name='Available' active='false'>
 				<attributes>
-					<attribute id='message' value='WFH (Friday)'/>
+					<attribute id='message' value='at LP'/>
 				</attributes>
 			</status>
 			<status type='busy' name='Busy' active='false'>
-				<attributes/>
+				<attributes>
+					<attribute id='message' value='at LP'/>
+				</attributes>
 			</status>
 			<status type='do-not-disturb' name='Do not disturb' active='false'>
 				<attributes/>
@@ -84,7 +86,7 @@
 			<status type='invisible' name='Invisible' active='false'>
 				<attributes/>
 			</status>
-			<status type='offline' name='Offline' active='false'>
+			<status type='offline' name='Offline' active='true'>
 				<attributes/>
 			</status>
 		</statuses>

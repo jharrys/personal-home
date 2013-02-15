@@ -9,7 +9,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>zoikks@gmail.com</name>
 					<alias>Darin Wilcox</alias>
-					<setting name='last_seen' type='int'>1360288883</setting>
+					<setting name='last_seen' type='int'>1360745115</setting>
 				</buddy>
 				<setting name='gtk-mute-sound' type='bool'>0</setting>
 			</contact>
@@ -17,14 +17,14 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>brandon.tasha.marsh@gmail.com</name>
 					<alias>Brandon Marsh</alias>
-					<setting name='last_seen' type='int'>1360297246</setting>
+					<setting name='last_seen' type='int'>1360817454</setting>
 				</buddy>
 			</contact>
 			<contact>
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>thelunchers@im.partych.at</name>
 					<alias>The Lunchers</alias>
-					<setting name='last_seen' type='int'>1360297246</setting>
+					<setting name='last_seen' type='int'>1360820072</setting>
 				</buddy>
 				<setting name='gtk-mute-sound' type='bool'>0</setting>
 			</contact>
@@ -32,7 +32,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>earl@pottercrew.us</name>
 					<alias>Earl Potter</alias>
-					<setting name='last_seen' type='int'>1360297246</setting>
+					<setting name='last_seen' type='int'>1360477890</setting>
 					<setting name='icon_checksum' type='string'>f5d633e4d0f90a70e60d43dd2950c2655d497e56</setting>
 					<setting name='buddy_icon' type='string'>f5d633e4d0f90a70e60d43dd2950c2655d497e56.jpg</setting>
 				</buddy>
@@ -41,7 +41,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>earl.potter@gmail.com</name>
 					<alias>Earl Potter</alias>
-					<setting name='last_seen' type='int'>1360297246</setting>
+					<setting name='last_seen' type='int'>1360819831</setting>
 					<setting name='icon_checksum' type='string'>fd3be998bbbeeae03caf9592e79cd4a6033aa864</setting>
 					<setting name='buddy_icon' type='string'>fd3be998bbbeeae03caf9592e79cd4a6033aa864.jpg</setting>
 				</buddy>
@@ -61,7 +61,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>timphanna@gmail.com</name>
 					<alias>Timothy Hanna</alias>
-					<setting name='last_seen' type='int'>1360297246</setting>
+					<setting name='last_seen' type='int'>1360820072</setting>
 					<setting name='icon_checksum' type='string'>844496bd5269f1c00961b3995590d145e7afd9c4</setting>
 					<setting name='buddy_icon' type='string'>844496bd5269f1c00961b3995590d145e7afd9c4.jpg</setting>
 				</buddy>
@@ -79,7 +79,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>brandon.richins@gmail.com</name>
 					<alias>Brandon Richins</alias>
-					<setting name='last_seen' type='int'>1360297246</setting>
+					<setting name='last_seen' type='int'>1360820072</setting>
 					<setting name='icon_checksum' type='string'>9319f7846822aa0e78fffe6e87c35e7d043a5154</setting>
 					<setting name='buddy_icon' type='string'>9319f7846822aa0e78fffe6e87c35e7d043a5154.jpg</setting>
 				</buddy>
@@ -1151,7 +1151,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>1isb2bs4ucwhy0ety25hy3fsgp@public.talk.google.com</name>
 					<alias>Adwen Harris</alias>
-					<setting name='last_seen' type='int'>1359606733</setting>
+					<setting name='last_seen' type='int'>1360817332</setting>
 					<setting name='icon_checksum' type='string'>3861690de3abc068491fbf6e8e6ee6b850d294f0</setting>
 					<setting name='buddy_icon' type='string'>3861690de3abc068491fbf6e8e6ee6b850d294f0.jpg</setting>
 				</buddy>
@@ -1160,9 +1160,50 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>09b3m0bu3q0vq2ravr5oj3mdkw@public.talk.google.com</name>
 					<alias>Ines Viera</alias>
-					<setting name='last_seen' type='int'>1360297246</setting>
+					<setting name='last_seen' type='int'>1360820072</setting>
 					<setting name='icon_checksum' type='string'>f7d9f157ef52652c98617710ec597c0ad1728463</setting>
 					<setting name='buddy_icon' type='string'>f7d9f157ef52652c98617710ec597c0ad1728463.jpg</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>guru@googlelabs.com</name>
+					<setting name='last_seen' type='int'>1360820072</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>exclaimbot@appspot.com</name>
+					<setting name='last_seen' type='int'>1360820072</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>ping@pingbooth.com</name>
+					<setting name='last_seen' type='int'>1360820072</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>talk@mayafile.com</name>
+					<setting name='last_seen' type='int'>1360820072</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>en2es@bot.talk.google.com</name>
+					<setting name='last_seen' type='int'>1360820072</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>en2pt@bot.talk.google.com</name>
+					<setting name='last_seen' type='int'>1360820072</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>en2sp@bot.talk.google.com</name>
 				</buddy>
 			</contact>
 		</group>
@@ -1178,7 +1219,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>kiirsinas@gmail.com</name>
 					<alias>Michael Harris</alias>
-					<setting name='last_seen' type='int'>1360297246</setting>
+					<setting name='last_seen' type='int'>1360820072</setting>
 					<setting name='icon_checksum' type='string'>d98fb70a4fb63ace6447d1d6420e47c864d52cee</setting>
 					<setting name='buddy_icon' type='string'>d98fb70a4fb63ace6447d1d6420e47c864d52cee.png</setting>
 				</buddy>
@@ -1188,7 +1229,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>harris.shelby@gmail.com</name>
 					<alias>Shelby Harris</alias>
-					<setting name='last_seen' type='int'>1360341811</setting>
+					<setting name='last_seen' type='int'>1360904518</setting>
 					<setting name='icon_checksum' type='string'>20c5b1d77d053d09ed58bcd8ba7e987e45ba5392</setting>
 					<setting name='buddy_icon' type='string'>20c5b1d77d053d09ed58bcd8ba7e987e45ba5392.jpg</setting>
 				</buddy>

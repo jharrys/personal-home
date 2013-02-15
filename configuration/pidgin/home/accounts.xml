@@ -17,9 +17,7 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes>
-					<attribute id='message' value='I&apos;m not here right now'/>
-				</attributes>
+				<attributes/>
 			</status>
 			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
@@ -35,7 +33,7 @@
 		<settings>
 			<setting name='check-mail' type='bool'>1</setting>
 			<setting name='buddy_icon' type='string'>604e985092473dfd9a04d2ae2812443bde4055e3.png</setting>
-			<setting name='buddy_icon_timestamp' type='int'>1360286261</setting>
+			<setting name='buddy_icon_timestamp' type='int'>1360904431</setting>
 			<setting name='auth_plain_in_clear' type='bool'>0</setting>
 			<setting name='use-global-buddyicon' type='bool'>0</setting>
 			<setting name='connection_security' type='string'>require_tls</setting>

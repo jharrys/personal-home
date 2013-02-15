@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1360341635'/>
+				<pref name='last_check' type='int' value='1360904432'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='300000'/>
@@ -373,7 +373,7 @@
 			<pref name='sort_type' type='string' value='none'/>
 			<pref name='x' type='int' value='198'/>
 			<pref name='y' type='int' value='198'/>
-			<pref name='width' type='int' value='424'/>
+			<pref name='width' type='int' value='432'/>
 			<pref name='height' type='int' value='149'/>
 			<pref name='theme' type='string' value=''/>
 		</pref>
