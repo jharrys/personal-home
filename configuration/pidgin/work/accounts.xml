@@ -7,7 +7,7 @@
 		<password>phqwhhzbqsgcrkes</password>
 		<alias>johnnie</alias>
 		<statuses>
-			<status type='available' name='Available' active='false'>
+			<status type='available' name='Available' active='true'>
 				<attributes>
 					<attribute id='message' value='at LP'/>
 				</attributes>
@@ -19,9 +19,7 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes>
-					<attribute id='message' value='I&apos;m not here right now'/>
-				</attributes>
+				<attributes/>
 			</status>
 			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
@@ -29,7 +27,7 @@
 			<status type='dnd' name='Do Not Disturb' active='false'>
 				<attributes/>
 			</status>
-			<status type='offline' name='Offline' active='true'>
+			<status type='offline' name='Offline' active='false'>
 				<attributes/>
 			</status>
 		</statuses>
@@ -37,12 +35,12 @@
 		<settings>
 			<setting name='check-mail' type='bool'>1</setting>
 			<setting name='buddy_icon' type='string'>604e985092473dfd9a04d2ae2812443bde4055e3.png</setting>
-			<setting name='buddy_icon_timestamp' type='int'>1360861790</setting>
+			<setting name='buddy_icon_timestamp' type='int'>1360946342</setting>
 			<setting name='connect_server' type='string'>74.125.130.125</setting>
 			<setting name='auth_plain_in_clear' type='bool'>0</setting>
 			<setting name='use-global-buddyicon' type='bool'>0</setting>
-			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
 			<setting name='connection_security' type='string'>require_tls</setting>
+			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
 			<setting name='custom_smileys' type='bool'>1</setting>
 			<setting name='port' type='int'>5222</setting>
 		</settings>
@@ -61,7 +59,7 @@
 					<attribute id='message' value='at LP'/>
 				</attributes>
 			</status>
-			<status type='busy' name='Busy' active='false'>
+			<status type='busy' name='Busy' active='true'>
 				<attributes>
 					<attribute id='message' value='at LP'/>
 				</attributes>
@@ -76,9 +74,7 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes>
-					<attribute id='message' value='I&apos;m not here right now'/>
-				</attributes>
+				<attributes/>
 			</status>
 			<status type='be-right-back' name='Be right back' active='false'>
 				<attributes/>
@@ -86,7 +82,7 @@
 			<status type='invisible' name='Invisible' active='false'>
 				<attributes/>
 			</status>
-			<status type='offline' name='Offline' active='true'>
+			<status type='offline' name='Offline' active='false'>
 				<attributes/>
 			</status>
 		</statuses>
