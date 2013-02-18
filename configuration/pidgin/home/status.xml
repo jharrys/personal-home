@@ -1,6 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <statuses version='1.0'>
+	<status name='Auto-Cached' transient='true' created='1360960090' lastused='1360960090' usage_count='1'>
+		<state>offline</state>
+		<substatus>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<state>offline</state>
+		</substatus>
+	</status>
 	<status name='Auto-Cached' transient='true' created='1355941284' lastused='1357665418' usage_count='3'>
 		<state>available</state>
 		<substatus>
@@ -11,11 +18,11 @@
 	<status name='Auto-Cached' transient='true' created='1357682400' lastused='1357682400' usage_count='1'>
 		<state>available</state>
 		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>available</state>
 		</substatus>
 		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>available</state>
 		</substatus>
 	</status>
