@@ -48,7 +48,7 @@
 [hashtable] $workMounts = @{
 }
 [hashtable] $atWorkApps = @{
-	# make sure key is common process name and value is full path to process
+	# make sure key is process name (name of the executable as listed under 'process' column in sysinternal's process explorer, withOUT the suffix (i.e., '.exe')) and value is full path to process
 	#"communicator"="C:\Program Files (x86)\Microsoft Office Communicator\communicator.exe"
 	"onexcui"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcui.exe"
 	"onexcengine"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
@@ -61,15 +61,16 @@
 	#"DFEPService" = "C:\Program Files\Dell\Feature Enhancement Pack\DFEPService.exe"
 }
 [hashtable] $atHomeApps = @{
-	# make sure key is common process name and value is full path to process
+	# make sure key is process name (name of the executable as listed under 'process' column in sysinternal's process explorer, withOUT the suffix (i.e., '.exe')) and value is full path to process
 	"googledrivesync" = "C:\Program Files (x86)\Google\Drive\googledrivesync.exe"
 	"iTunesHelper" = "C:\Program Files (x86)\iTunes\iTunesHelper.exe"
 	"AllShare Play" = "C:\Program Files\Samsung\AllShare Play\AllShare Play.exe"
 	"AllShare Play Launcher" = "C:\Program Files\Samsung\AllShare Play\utils\AllShare Play Launcher.exe"
 	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\configuration\pidgin\home"
+	"MusicManager" = "C:\Users\lpjharri\AppData\Local\Programs\Google\MusicManager\MusicManager.exe"
 }
 [hashtable] $atHomeServices = @{
-	# make sure key is common process name and value is full path to process
+	# make sure key is process name (name of the executable as listed under 'process' column in sysinternal's process explorer, withOUT the suffix (i.e., '.exe')) and value is full path to process
 	"Apple Mobile Device" = "C:\Program Files (x86)\Common Files\Apple\Mobile Device Support\AppleMobileDeviceService.exe"
 	"iPod Service" = "C:\Program Files\iPod\bin\iPodService.exe"
 	"WMPNetworkSvc" = "C:\Program Files\Windows Media Player\wmpnetwk.exe"
