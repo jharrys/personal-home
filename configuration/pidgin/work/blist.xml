@@ -31,7 +31,7 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>brandon.richins@gmail.com</name>
 					<alias>Brandon Richins</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 					<setting name='show_offline' type='bool'>1</setting>
 					<setting name='icon_checksum' type='string'>9319f7846822aa0e78fffe6e87c35e7d043a5154</setting>
 					<setting name='buddy_icon' type='string'>9319f7846822aa0e78fffe6e87c35e7d043a5154.jpg</setting>
@@ -52,7 +52,7 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>zoikks@gmail.com</name>
 					<alias>Darin Wilcox</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361220945</setting>
 				</buddy>
 				<setting name='gtk-mute-sound' type='bool'>0</setting>
 			</contact>
@@ -60,14 +60,14 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>brandon.tasha.marsh@gmail.com</name>
 					<alias>Brandon Marsh</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361223835</setting>
 				</buddy>
 			</contact>
 			<contact>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>thelunchers@im.partych.at</name>
 					<alias>The Lunchers</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 				</buddy>
 				<setting name='gtk-mute-sound' type='bool'>0</setting>
 			</contact>
@@ -75,14 +75,14 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>earl@pottercrew.us</name>
 					<alias>Earl Potter</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 					<setting name='icon_checksum' type='string'>f5d633e4d0f90a70e60d43dd2950c2655d497e56</setting>
 					<setting name='buddy_icon' type='string'>f5d633e4d0f90a70e60d43dd2950c2655d497e56.jpg</setting>
 				</buddy>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>earl.potter@gmail.com</name>
 					<alias>Earl Potter</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 					<setting name='icon_checksum' type='string'>fd3be998bbbeeae03caf9592e79cd4a6033aa864</setting>
 					<setting name='buddy_icon' type='string'>fd3be998bbbeeae03caf9592e79cd4a6033aa864.jpg</setting>
 				</buddy>
@@ -91,7 +91,7 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>randy.secrist@gmail.com</name>
 					<alias>Randy Secrist</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361224914</setting>
 					<setting name='show_offline' type='bool'>1</setting>
 					<setting name='icon_checksum' type='string'>1c25bd293d40036c97f73732bd725a386c23208b</setting>
 					<setting name='buddy_icon' type='string'>1c25bd293d40036c97f73732bd725a386c23208b.png</setting>
@@ -102,7 +102,7 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>timphanna@gmail.com</name>
 					<alias>Timothy Hanna</alias>
-					<setting name='last_seen' type='int'>1360966990</setting>
+					<setting name='last_seen' type='int'>1361210809</setting>
 					<setting name='show_offline' type='bool'>1</setting>
 					<setting name='icon_checksum' type='string'>844496bd5269f1c00961b3995590d145e7afd9c4</setting>
 					<setting name='buddy_icon' type='string'>844496bd5269f1c00961b3995590d145e7afd9c4.jpg</setting>
@@ -112,7 +112,7 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>stuart.x.simpson@gmail.com</name>
 					<alias>Stuart Simpson</alias>
-					<setting name='last_seen' type='int'>1360078025</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 					<setting name='icon_checksum' type='string'>af5c8ebb31d28a13ed5d691fefd26bb6363dde72</setting>
 					<setting name='buddy_icon' type='string'>af5c8ebb31d28a13ed5d691fefd26bb6363dde72.jpg</setting>
 				</buddy>
@@ -194,7 +194,7 @@
 					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
 					<setting name='email' type='string'>Gopal.Narra@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425506</setting>
-					<setting name='last_seen' type='int'>1360966299</setting>
+					<setting name='last_seen' type='int'>1361231329</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
 				<setting name='gtk-mute-sound' type='bool'>0</setting>
@@ -335,7 +335,7 @@
 					<setting name='title' type='string'>Compliance Conslt Corp-Assoc</setting>
 					<setting name='email' type='string'>Shaun.Morgan@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014421513</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361225843</setting>
 					<setting name='office' type='string'>Central Offices</setting>
 				</buddy>
 			</contact>
@@ -456,7 +456,7 @@
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Sonam.Nepali@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18017367527</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361230248</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
 			</contact>
@@ -581,7 +581,7 @@
 					<setting name='title' type='string'>Operations Dir-Telehealth Srvcs</setting>
 					<setting name='email' type='string'>Tara.Larkin@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015736830</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361222034</setting>
 					<setting name='office' type='string'>Central Offices</setting>
 				</buddy>
 			</contact>
@@ -614,7 +614,7 @@
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Srinivasulu.ReppaleVenkat@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079159</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361226703</setting>
 					<setting name='office' type='string'>Intermountain Medical Center</setting>
 				</buddy>
 			</contact>
@@ -636,7 +636,7 @@
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Lance.Schildknecht@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079241</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361228866</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
 			</contact>
@@ -714,7 +714,7 @@
 					<setting name='title' type='string'>Project Management-Staff</setting>
 					<setting name='email' type='string'>Jeff.Messinger@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425961</setting>
-					<setting name='last_seen' type='int'>1360809729</setting>
+					<setting name='last_seen' type='int'>1361229347</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
 			</contact>
@@ -798,7 +798,7 @@
 					<setting name='title' type='string'>Compliance Conslt Corp-Assoc</setting>
 					<setting name='email' type='string'>Shaun.Morgan@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014421513</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361225843</setting>
 					<setting name='office' type='string'>Central Offices</setting>
 				</buddy>
 			</contact>
@@ -817,7 +817,7 @@
 					<name>sip:tim.treadway@imail.org</name>
 					<alias>Tim Treadway</alias>
 					<setting name='email' type='string'>Tim.Treadway@imail.org</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361220816</setting>
 				</buddy>
 			</contact>
 			<contact>
@@ -849,7 +849,7 @@
 					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
 					<setting name='email' type='string'>Gopal.Narra@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425506</setting>
-					<setting name='last_seen' type='int'>1360966299</setting>
+					<setting name='last_seen' type='int'>1361231329</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
 			</contact>
@@ -902,7 +902,7 @@
 					<setting name='title' type='string'>Project Management-Assoc</setting>
 					<setting name='email' type='string'>Kyle.Holbrook@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425570</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361231149</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
 			</contact>
@@ -1000,7 +1000,7 @@
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Sonam.Nepali@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18017367527</setting>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361230248</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
 			</contact>
@@ -1083,7 +1083,7 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>09b3m0bu3q0vq2ravr5oj3mdkw@public.talk.google.com</name>
 					<alias>Ines Viera</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 					<setting name='icon_checksum' type='string'>f7d9f157ef52652c98617710ec597c0ad1728463</setting>
 					<setting name='buddy_icon' type='string'>f7d9f157ef52652c98617710ec597c0ad1728463.jpg</setting>
 				</buddy>
@@ -1091,37 +1091,37 @@
 			<contact>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>guru@googlelabs.com</name>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 				</buddy>
 			</contact>
 			<contact>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>exclaimbot@appspot.com</name>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 				</buddy>
 			</contact>
 			<contact>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>ping@pingbooth.com</name>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 				</buddy>
 			</contact>
 			<contact>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>talk@mayafile.com</name>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 				</buddy>
 			</contact>
 			<contact>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>en2es@bot.talk.google.com</name>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 				</buddy>
 			</contact>
 			<contact>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>en2pt@bot.talk.google.com</name>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361209413</setting>
 				</buddy>
 			</contact>
 			<contact>
@@ -1148,7 +1148,7 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>harris.shelby@gmail.com</name>
 					<alias>Shelby Harris</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361227091</setting>
 					<setting name='icon_checksum' type='string'>20c5b1d77d053d09ed58bcd8ba7e987e45ba5392</setting>
 					<setting name='buddy_icon' type='string'>20c5b1d77d053d09ed58bcd8ba7e987e45ba5392.jpg</setting>
 				</buddy>
@@ -1163,7 +1163,7 @@
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
 					<name>kiirsinas@gmail.com</name>
 					<alias>Michael Harris</alias>
-					<setting name='last_seen' type='int'>1360969167</setting>
+					<setting name='last_seen' type='int'>1361210440</setting>
 					<setting name='icon_checksum' type='string'>d98fb70a4fb63ace6447d1d6420e47c864d52cee</setting>
 					<setting name='buddy_icon' type='string'>d98fb70a4fb63ace6447d1d6420e47c864d52cee.png</setting>
 				</buddy>

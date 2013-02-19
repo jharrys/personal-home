@@ -27,7 +27,7 @@
 			</pref>
 		</pref>
 		<pref name='savedstatus'>
-			<pref name='default' type='int' value='1360960183'/>
+			<pref name='default' type='int' value='1360345496'/>
 			<pref name='startup' type='int' value='0'/>
 			<pref name='startup_current_status' type='bool' value='1'/>
 			<pref name='idleaway' type='int' value='1358788551'/>
@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1360885883'/>
+				<pref name='last_check' type='int' value='1361204112'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='120000'/>
@@ -413,9 +413,9 @@
 				<pref name='height' type='int' value='390'/>
 			</pref>
 			<pref name='im'>
-				<pref name='x' type='int' value='957'/>
-				<pref name='y' type='int' value='17'/>
-				<pref name='width' type='int' value='326'/>
+				<pref name='x' type='int' value='2492'/>
+				<pref name='y' type='int' value='41'/>
+				<pref name='width' type='int' value='541'/>
 				<pref name='height' type='int' value='864'/>
 				<pref name='animate_buddy_icons' type='bool' value='1'/>
 				<pref name='entry_height' type='int' value='54'/>
