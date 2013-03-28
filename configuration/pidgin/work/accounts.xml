@@ -8,7 +8,9 @@
 		<alias>johnnie</alias>
 		<statuses>
 			<status type='available' name='Available' active='true'>
-				<attributes/>
+				<attributes>
+					<attribute id='message' value='I&amp;apos;m not here right now'/>
+				</attributes>
 			</status>
 			<status type='mood' name='Feeling' active='false'>
 				<attributes/>
@@ -35,7 +37,7 @@
 		<settings>
 			<setting name='check-mail' type='bool'>1</setting>
 			<setting name='buddy_icon' type='string'>604e985092473dfd9a04d2ae2812443bde4055e3.png</setting>
-			<setting name='buddy_icon_timestamp' type='int'>1361204111</setting>
+			<setting name='buddy_icon_timestamp' type='int'>1363875206</setting>
 			<setting name='connect_server' type='string'>74.125.130.125</setting>
 			<setting name='auth_plain_in_clear' type='bool'>0</setting>
 			<setting name='use-global-buddyicon' type='bool'>0</setting>
@@ -53,12 +55,17 @@
 		<protocol>prpl-sipe</protocol>
 		<name>John.Harris@imail.org,CO\lpjharri</name>
 		<password>JJk5llNn</password>
+		<alias>Johnnie</alias>
 		<statuses>
-			<status type='available' name='Available' active='true'>
-				<attributes/>
+			<status type='available' name='Available' active='false'>
+				<attributes>
+					<attribute id='message' value='I&amp;apos;m not here right now'/>
+				</attributes>
 			</status>
-			<status type='busy' name='Busy' active='false'>
-				<attributes/>
+			<status type='busy' name='Busy' active='true'>
+				<attributes>
+					<attribute id='message' value='I&amp;apos;m not here right now'/>
+				</attributes>
 			</status>
 			<status type='do-not-disturb' name='Do not disturb' active='false'>
 				<attributes/>
@@ -78,9 +85,7 @@
 				<attributes/>
 			</status>
 			<status type='invisible' name='Invisible' active='false'>
-				<attributes>
-					<attribute id='message' value='wfh'/>
-				</attributes>
+				<attributes/>
 			</status>
 			<status type='offline' name='Offline' active='false'>
 				<attributes/>
