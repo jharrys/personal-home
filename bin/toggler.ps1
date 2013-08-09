@@ -50,8 +50,8 @@
 [hashtable] $atWorkApps = @{
 	# make sure key is process name (name of the executable as listed under 'process' column in sysinternal's process explorer, withOUT the suffix (i.e., '.exe')) and value is full path to process
 	#"communicator"="C:\Program Files (x86)\Microsoft Office Communicator\communicator.exe"
-	"onexcui"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcui.exe"
-	"onexcengine"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
+	#"onexcui"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcui.exe"
+	#"onexcengine"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
 	"OUTLOOK"="C:\Program Files (x86)\Microsoft Office\Office14\OUTLOOK.EXE"
 	"SmartSettings"="C:\Program Files\Dell\Feature Enhancement Pack\SmartSettings.exe"
 	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\configuration\pidgin\work"
