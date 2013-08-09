@@ -21,12 +21,12 @@
 		<state>available</state>
 		<message>I&amp;apos;m not here right now</message>
 		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>available</state>
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
 		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>available</state>
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
@@ -44,12 +44,12 @@
 		<state>available</state>
 		<message>I&amp;apos;m not here right now</message>
 		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>available</state>
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
 		<substatus>
-			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>available</state>
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
@@ -57,14 +57,18 @@
 	<status name='Normal' created='1357926702' lastused='1357927005' usage_count='4'>
 		<state>available</state>
 		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-			<message>&lt;font face=&quot;Tahoma&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;He who can no longer pause to wonder and stand rapt in awe, is as good as dead...&lt;/font&gt; -Albert Einstein (Oh well I had a good run anyway)&lt;/font&gt;</message>
-		</substatus>
-		<substatus>
 			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>available</state>
 			<message>&lt;font face=&quot;Tahoma&quot;&gt;Hell was full ... So I came back! &amp;gt;:o&lt;/font&gt;</message>
 		</substatus>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+			<message>&lt;font face=&quot;Tahoma&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;He who can no longer pause to wonder and stand rapt in awe, is as good as dead...&lt;/font&gt; -Albert Einstein (Oh well I had a good run anyway)&lt;/font&gt;</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1376080717' lastused='0' usage_count='0'>
+		<state>away</state>
+		<message>I&apos;m not here right now</message>
 	</status>
 </statuses>

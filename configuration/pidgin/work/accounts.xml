@@ -7,7 +7,7 @@
 		<password>phqwhhzbqsgcrkes</password>
 		<alias>johnnie</alias>
 		<statuses>
-			<status type='available' name='Available' active='true'>
+			<status type='available' name='Available' active='false'>
 				<attributes>
 					<attribute id='message' value='I&amp;apos;m not here right now'/>
 				</attributes>
@@ -18,7 +18,7 @@
 			<status type='freeforchat' name='Chatty' active='false'>
 				<attributes/>
 			</status>
-			<status type='away' name='Away' active='false'>
+			<status type='away' name='Away' active='true'>
 				<attributes/>
 			</status>
 			<status type='extended_away' name='Extended away' active='false'>
