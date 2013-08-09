@@ -19,9 +19,7 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes>
-					<attribute id='message' value='I&apos;m not here right now'/>
-				</attributes>
+				<attributes/>
 			</status>
 			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
@@ -37,12 +35,12 @@
 		<settings>
 			<setting name='check-mail' type='bool'>1</setting>
 			<setting name='buddy_icon' type='string'>604e985092473dfd9a04d2ae2812443bde4055e3.png</setting>
-			<setting name='buddy_icon_timestamp' type='int'>1363875206</setting>
+			<setting name='buddy_icon_timestamp' type='int'>1376079954</setting>
 			<setting name='connect_server' type='string'>74.125.130.125</setting>
 			<setting name='auth_plain_in_clear' type='bool'>0</setting>
 			<setting name='use-global-buddyicon' type='bool'>0</setting>
-			<setting name='connection_security' type='string'>require_tls</setting>
 			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
+			<setting name='connection_security' type='string'>require_tls</setting>
 			<setting name='custom_smileys' type='bool'>1</setting>
 			<setting name='port' type='int'>5222</setting>
 		</settings>
@@ -54,15 +52,13 @@
 	<account>
 		<protocol>prpl-sipe</protocol>
 		<name>John.Harris@imail.org,CO\lpjharri</name>
-		<password>JJk5llNn</password>
+		<password>JKk5llNn</password>
 		<alias>Johnnie</alias>
 		<statuses>
 			<status type='available' name='Available' active='false'>
-				<attributes>
-					<attribute id='message' value='I&amp;apos;m not here right now'/>
-				</attributes>
+				<attributes/>
 			</status>
-			<status type='busy' name='Busy' active='true'>
+			<status type='busy' name='Busy' active='false'>
 				<attributes>
 					<attribute id='message' value='I&amp;apos;m not here right now'/>
 				</attributes>
@@ -76,10 +72,8 @@
 			<status type='in-a-conference' name='In a conference' active='false'>
 				<attributes/>
 			</status>
-			<status type='away' name='Away' active='false'>
-				<attributes>
-					<attribute id='message' value='I&apos;m not here right now'/>
-				</attributes>
+			<status type='away' name='Away' active='true'>
+				<attributes/>
 			</status>
 			<status type='be-right-back' name='Be right back' active='false'>
 				<attributes/>
@@ -92,8 +86,15 @@
 			</status>
 		</statuses>
 		<settings>
+			<setting name='useragent' type='string'></setting>
+			<setting name='email_login' type='string'></setting>
+			<setting name='email' type='string'></setting>
 			<setting name='sso' type='bool'>0</setting>
 			<setting name='transport' type='string'>auto</setting>
+			<setting name='email_password' type='string'></setting>
+			<setting name='server' type='string'></setting>
+			<setting name='groupchat_user' type='string'></setting>
+			<setting name='email_url' type='string'></setting>
 			<setting name='authentication' type='string'>ntlm</setting>
 		</settings>
 		<settings ui='gtk-gaim'>
