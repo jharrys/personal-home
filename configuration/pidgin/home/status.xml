@@ -40,17 +40,4 @@
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1357594200' lastused='1357594200' usage_count='1'>
-		<state>unavailable</state>
-		<message>I&amp;apos;m not here right now</message>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-			<message>I&amp;apos;m not here right now</message>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1360287118' lastused='0' usage_count='0'>
-		<state>away</state>
-		<message>I&apos;m not here right now</message>
-	</status>
 </statuses>

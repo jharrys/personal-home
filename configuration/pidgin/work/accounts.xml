@@ -55,12 +55,12 @@
 		<statuses>
 			<status type='available' name='Available' active='true'>
 				<attributes>
-					<attribute id='message' value='WFH'/>
+					<attribute id='message' value='I&amp;apos;m not here right now'/>
 				</attributes>
 			</status>
 			<status type='busy' name='Busy' active='false'>
 				<attributes>
-					<attribute id='message' value='WFH'/>
+					<attribute id='message' value='I&amp;apos;m not here right now'/>
 				</attributes>
 			</status>
 			<status type='do-not-disturb' name='Do not disturb' active='false'>
