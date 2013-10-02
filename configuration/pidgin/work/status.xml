@@ -1,16 +1,49 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <statuses version='1.0'>
-	<status name='Auto-Cached' transient='true' created='1377816420' lastused='1377816420' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1380736800' lastused='1380736800' usage_count='1'>
 		<state>available</state>
-		<message>I&amp;apos;m not here right now</message>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>available</state>
-			<message>I&amp;apos;m not here right now</message>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1377793800' lastused='1377793800' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1380735189' lastused='1380735189' usage_count='1'>
+		<state>unavailable</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1380735128' lastused='1380735128' usage_count='1'>
+		<state>available</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1380727128' lastused='1380727128' usage_count='1'>
+		<state>unavailable</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1380659400' lastused='1380659400' usage_count='1'>
+		<state>available</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1380657600' lastused='1380657600' usage_count='1'>
+		<state>unavailable</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1380124801' lastused='1380124801' usage_count='1'>
 		<state>unavailable</state>
 		<message>I&amp;apos;m not here right now</message>
 		<substatus>
@@ -19,7 +52,7 @@
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1377792322' lastused='1377792322' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1380034739' lastused='1380034739' usage_count='1'>
 		<state>available</state>
 		<message>I&amp;apos;m not here right now</message>
 		<substatus>
@@ -28,7 +61,7 @@
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1377789863' lastused='1377789863' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1379963519' lastused='1379963519' usage_count='1'>
 		<state>unavailable</state>
 		<message>I&amp;apos;m not here right now</message>
 		<substatus>
@@ -37,12 +70,64 @@
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1377712800' lastused='1377712800' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1379963458' lastused='1379963458' usage_count='1'>
 		<state>available</state>
 		<message>I&amp;apos;m not here right now</message>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>available</state>
+			<message>I&amp;apos;m not here right now</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1378485531' lastused='1378485531' usage_count='1'>
+		<state>available</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1378391252' lastused='1378391252' usage_count='1'>
+		<state>available</state>
+		<message>I&amp;apos;m not here right now</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+			<message>I&amp;apos;m not here right now</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1378314744' lastused='1378314744' usage_count='1'>
+		<state>unavailable</state>
+		<message>I&amp;apos;m not here right now</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+			<message>I&amp;apos;m not here right now</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1378314683' lastused='1378314683' usage_count='1'>
+		<state>available</state>
+		<message>I&amp;apos;m not here right now</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+			<message>I&amp;apos;m not here right now</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1378309319' lastused='1378309319' usage_count='1'>
+		<state>unavailable</state>
+		<message>I&amp;apos;m not here right now</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+			<message>I&amp;apos;m not here right now</message>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1377878400' lastused='1377878400' usage_count='1'>
+		<state>unavailable</state>
+		<message>I&amp;apos;m not here right now</message>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
 			<message>I&amp;apos;m not here right now</message>
 		</substatus>
 	</status>
@@ -58,5 +143,9 @@
 			<state>available</state>
 			<message>&lt;font face=&quot;Tahoma&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;He who can no longer pause to wonder and stand rapt in awe, is as good as dead...&lt;/font&gt; -Albert Einstein (Oh well I had a good run anyway)&lt;/font&gt;</message>
 		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1378479642' lastused='0' usage_count='0'>
+		<state>away</state>
+		<message>I&apos;m not here right now</message>
 	</status>
 </statuses>
