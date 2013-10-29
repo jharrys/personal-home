@@ -307,6 +307,9 @@ function _linuxsetup() {
 	alias yr='yum remove -y'
 	alias yli='yum localinstall -y --nogpgcheck'
 
+    # Bash completion on Fedora is at 2.1 (cygwin is behind) - the new one split to have a git-prompt.sh that needs to be sourced
+    . ~/.git-prompt.sh
+
 }
 
 function _cygwinsetup() {
