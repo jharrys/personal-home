@@ -270,6 +270,13 @@ function _linuxsetup() {
 	#  HTTP_PROXY="http://gems.setpac.ge.com/pac.pac"
 	#  export HTTP_PROXY
 	#fi
+    http_proxy="http://username:password@proxylp.ihc.com:8080"
+    HTTP_PROXY=$http_proxy
+    https_proxy=$http_proxy
+    HTTPS_PROXY=$http_proxy
+    no_proxy=localhost,127.0.0.0/8,*.local
+    NO_PROXY=$no_proxy
+    export http_proxy HTTP_PROXY https_proxy HTTPS_PROXY no_proxy NO_PROXY
     
     CDPATH='.:~/:..:../..:~/Pictures/Wallpaper:~/Desktop:~/Documents:~/Downloads:~/Documents/Google Drive:~/Documents/Life Documents:~/Workspaces'
 	export CDPATH
