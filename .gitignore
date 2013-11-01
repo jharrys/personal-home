@@ -48,6 +48,7 @@ configuration/Sublime Text 2/Backup
 
 .h*
 # .i* - for .inputrc
+.install4j*
 .j*
 .k*
 .l*
@@ -57,6 +58,7 @@ configuration/Sublime Text 2/Backup
 .n*
 .o*
 # .p* - for .profile
+.pki*
 .pulse*
 .q*
 .r*
