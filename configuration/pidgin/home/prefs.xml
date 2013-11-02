@@ -27,7 +27,7 @@
 			</pref>
 		</pref>
 		<pref name='savedstatus'>
-			<pref name='default' type='int' value='1360960090'/>
+			<pref name='default' type='int' value='1357682400'/>
 			<pref name='startup' type='int' value='0'/>
 			<pref name='startup_current_status' type='bool' value='1'/>
 			<pref name='idleaway' type='int' value='1383006366'/>
@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1360904432'/>
+				<pref name='last_check' type='int' value='1383366705'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='300000'/>

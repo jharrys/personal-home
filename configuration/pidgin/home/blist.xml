@@ -1206,6 +1206,20 @@
 					<name>en2sp@bot.talk.google.com</name>
 				</buddy>
 			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>0zvwc8qay6gtl2hxv7wuipxk15@public.talk.google.com</name>
+					<alias>Eliana Carmigniani</alias>
+					<setting name='buddy_icon' type='string'>0548396d317c5b6e253539b1bca89ebb470d0629.jpg</setting>
+					<setting name='icon_checksum' type='string'>0548396d317c5b6e253539b1bca89ebb470d0629</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>baxterjharris@gmail.com</name>
+					<alias>Baxter Harris</alias>
+				</buddy>
+			</contact>
 		</group>
 		<group name='Family'>
 			<setting name='collapsed' type='bool'>1</setting>
@@ -1237,11 +1251,7 @@
 		</group>
 	</blist>
 	<privacy>
-		<account proto='prpl-jabber' name='harris.johnny@gmail.com/' mode='1'>
-			<block>cyndibarlow@gmail.com</block>
-			<block>harris.kassi@gmail.com</block>
-			<block>sabrielparker@gmail.com</block>
-		</account>
+		<account proto='prpl-jabber' name='harris.johnny@gmail.com/' mode='1'/>
 		<account proto='prpl-sipe' name='John.Harris@imail.org,CO\lpjharri' mode='1'/>
 	</privacy>
 </purple>
