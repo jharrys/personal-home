@@ -40,8 +40,4 @@
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1383006366' lastused='0' usage_count='0'>
-		<state>away</state>
-		<message>I&apos;m not here right now</message>
-	</status>
 </statuses>
