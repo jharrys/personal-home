@@ -64,8 +64,8 @@
 	# make sure key is process name (name of the executable as listed under 'process' column in sysinternal's process explorer, withOUT the suffix (i.e., '.exe')) and value is full path to process
 	"googledrivesync" = "C:\Program Files (x86)\Google\Drive\googledrivesync.exe"
 	"iTunesHelper" = "C:\Program Files (x86)\iTunes\iTunesHelper.exe"
-	"AllShare Play" = "C:\Program Files\Samsung\AllShare Play\AllShare Play.exe"
-	"AllShare Play Launcher" = "C:\Program Files\Samsung\AllShare Play\utils\AllShare Play Launcher.exe"
+	# (inactive) "AllShare Play" = "C:\Program Files\Samsung\AllShare Play\AllShare Play.exe"
+	# (inactive) "AllShare Play Launcher" = "C:\Program Files\Samsung\AllShare Play\utils\AllShare Play Launcher.exe"
 	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\configuration\pidgin\home"
 	"MusicManager" = "C:\Users\lpjharri\AppData\Local\Programs\Google\MusicManager\MusicManager.exe"
 }
@@ -75,8 +75,8 @@
 	"iPod Service" = "C:\Program Files\iPod\bin\iPodService.exe"
 	"WMPNetworkSvc" = "C:\Program Files\Windows Media Player\wmpnetwk.exe"
 	"NfsClnt" = "C:\Windows\system32\nfsclnt.exe"
-	"AllShare Framework DMS" = "C:\Program Files\Samsung\AllShare Framework DMS\1.3.06\AllShareFrameworkManagerDMS.exe"
-	"AllShare Play Service" = "C:\Program Files\Samsung\AllShare Play\AllShare Play Service.exe"
+	# (inactive) "AllShare Framework DMS" = "C:\Program Files\Samsung\AllShare Framework DMS\1.3.06\AllShareFrameworkManagerDMS.exe"
+	# (inactive) "AllShare Play Service" = "C:\Program Files\Samsung\AllShare Play\AllShare Play Service.exe"
 }
 [string] $atWorkPrinter = "LP-S2-COPY01 on http://lpv-ps01"
 [string] $atHomePrinter = "Dad's Canon MX710 series Printer"
