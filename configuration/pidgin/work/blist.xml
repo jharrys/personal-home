@@ -2,13 +2,553 @@
 
 <purple version='1.0'>
 	<blist>
+		<group name='ESA Team'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:billy.prows@imail.org</name>
+					<alias>Billy Prows</alias>
+					<setting name='last_seen' type='int'>1383695472</setting>
+					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
+					<setting name='email' type='string'>Billy.Prows@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18015072502</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:frederick.holston@imail.org</name>
+					<alias>Frederick Holston</alias>
+					<setting name='last_seen' type='int'>1383321792</setting>
+					<setting name='title' type='string'>CTO</setting>
+					<setting name='email' type='string'>Frederick.Holston@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18015072501</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:sara.curry@imail.org</name>
+					<alias>Sara Curry</alias>
+					<setting name='last_seen' type='int'>1383695598</setting>
+					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
+					<setting name='email' type='string'>Sara.Curry@imail.org</setting>
+					<setting name='phone-mobile' type='string'>tel:+18015184814</setting>
+					<setting name='phone' type='string'>tel:+18014426307</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:cory.smith@imail.org</name>
+					<alias>Cory Smith</alias>
+					<setting name='last_seen' type='int'>1383689495</setting>
+					<setting name='title' type='string'>Project Management-Senior</setting>
+					<setting name='email' type='string'>Cory.Smith@imail.org</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:lonnie.buchanan@selecthealth.org</name>
+					<alias>Lonnie Buchanan</alias>
+					<setting name='last_seen' type='int'>1383685144</setting>
+					<setting name='title' type='string'>Information Systems Mgr</setting>
+					<setting name='email' type='string'>Lonnie.Buchanan@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18015072505</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:tim.shipley@imail.org</name>
+					<alias>Tim Shipley</alias>
+					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
+					<setting name='email' type='string'>Tim.Shipley@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18015072530</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:gopal.narra@imail.org</name>
+					<alias>Gopal Narra</alias>
+					<setting name='last_seen' type='int'>1383692454</setting>
+					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
+					<setting name='email' type='string'>Gopal.Narra@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18015072533</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:stuart.simpson@imail.org</name>
+					<alias>Stuart Simpson</alias>
+					<setting name='last_seen' type='int'>1383694807</setting>
+					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
+					<setting name='email' type='string'>Stuart.Simpson@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18015072534</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:klaus.schulz@imail.org</name>
+					<alias>Klaus Schulz</alias>
+					<setting name='last_seen' type='int'>1383348042</setting>
+					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
+					<setting name='email' type='string'>Klaus.Schulz@imail.org</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:teejay.harrison@imail.org</name>
+					<alias>Tee Jay Harrison</alias>
+					<setting name='title' type='string'>Enterprise Solutns Archt-Sr</setting>
+					<setting name='email' type='string'>TeeJay.Harrison@imail.org</setting>
+					<setting name='office' type='string'>Intermountain Medical Center</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='SCO'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:kreg.koford@imail.org</name>
+					<alias>Kreg Koford</alias>
+					<setting name='last_seen' type='int'>1383682927</setting>
+					<setting name='title' type='string'>Supply Chain Solutions Dir</setting>
+					<setting name='email' type='string'>Kreg.Koford@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423699</setting>
+					<setting name='site' type='string'>http://epm02/personal/lpkkofor/</setting>
+					<setting name='office' type='string'>Supply Chain Center</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:sherman.curtis@imail.org</name>
+					<alias>Sherman Curtis</alias>
+					<setting name='last_seen' type='int'>1383692598</setting>
+					<setting name='title' type='string'>Strategic Relationship Mgr</setting>
+					<setting name='email' type='string'>Sherman.Curtis@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423646</setting>
+					<setting name='office' type='string'>Supply Chain Center</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:scott.palfreyman@imail.org</name>
+					<alias>Scott Palfreyman</alias>
+					<setting name='last_seen' type='int'>1383685331</setting>
+					<setting name='title' type='string'>Sourcing Manager II</setting>
+					<setting name='email' type='string'>Scott.Palfreyman@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423334</setting>
+					<setting name='office' type='string'>Supply Chain Center</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:shane.stevenson@imail.org</name>
+					<alias>Shane Stevenson</alias>
+					<setting name='last_seen' type='int'>1383692766</setting>
+					<setting name='title' type='string'>Strategic Relationship Mgr</setting>
+					<setting name='email' type='string'>Shane.Stevenson@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423771</setting>
+					<setting name='office' type='string'>Supply Chain Center</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:curtis.mcentire@imail.org</name>
+					<alias>Curtis McEntire</alias>
+					<setting name='last_seen' type='int'>1383685251</setting>
+					<setting name='title' type='string'>Strategic Relationship Mgr</setting>
+					<setting name='email' type='string'>Curtis.McEntire@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423742</setting>
+					<setting name='office' type='string'>Supply Chain Center</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:craig.webb@imail.org</name>
+					<alias>Craig Webb</alias>
+					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='email' type='string'>Craig.Webb@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423576</setting>
+					<setting name='office' type='string'>Supply Chain Center</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:lyn.bair@imail.org</name>
+					<alias>Lyn Bair</alias>
+					<setting name='title' type='string'>Strategic Relationship Mgr</setting>
+					<setting name='email' type='string'>Lyn.Bair@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423267</setting>
+					<setting name='office' type='string'>Central Offices</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:richard.bagley@imail.org</name>
+					<alias>Richard Bagley</alias>
+					<setting name='last_seen' type='int'>1383694272</setting>
+					<setting name='title' type='string'>Sourcing Manager II</setting>
+					<setting name='email' type='string'>Richard.Bagley@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423672</setting>
+					<setting name='office' type='string'>Supply Chain Center</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:heath.jones@imail.org</name>
+					<alias>Heath Jones</alias>
+					<setting name='last_seen' type='int'>1383691280</setting>
+					<setting name='title' type='string'>Program Development Dir-SCO</setting>
+					<setting name='email' type='string'>Heath.Jones@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014423539</setting>
+					<setting name='office' type='string'>Supply Chain Center</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Ops'>
+			<setting name='collapsed' type='bool'>0</setting>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:max.killinger@imail.org</name>
+					<alias>Max Killinger</alias>
+					<setting name='title' type='string'>System Administrator-Consultant</setting>
+					<setting name='email' type='string'>Max.Killinger@imail.org</setting>
+					<setting name='notes' type='string'>Virtual Machines SME</setting>
+					<setting name='phone' type='string'>tel:+18014426422</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:benjamin.berrett@imail.org</name>
+					<alias>Benjamin Berrett</alias>
+					<setting name='title' type='string'>System Administrator-Consultant</setting>
+					<setting name='email' type='string'>Benjamin.Berrett@imail.org</setting>
+					<setting name='notes' type='string'>Operational Architect to ESA&lt;br&gt;Storage SME</setting>
+					<setting name='phone' type='string'>tel:+18014426454</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:brandon.richins@imail.org</name>
+					<alias>Brandon Richins</alias>
+					<setting name='last_seen' type='int'>1383682136</setting>
+					<setting name='title' type='string'>Software Engineer-Sr</setting>
+					<setting name='email' type='string'>Brandon.Richins@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014425523</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:kyle.brokaw@imail.org</name>
+					<alias>Kyle Brokaw</alias>
+					<setting name='title' type='string'>Enterprise Database Mgr</setting>
+					<setting name='email' type='string'>Kyle.Brokaw@imail.org</setting>
+					<setting name='notes' type='string'>Manager of Database team &amp;amp; DB SME</setting>
+					<setting name='phone' type='string'>tel:+18014426909</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:steve.carrell@imail.org</name>
+					<alias>Steve Carrell</alias>
+					<setting name='last_seen' type='int'>1383695275</setting>
+					<setting name='title' type='string'>Service Mgmt Mgr</setting>
+					<setting name='email' type='string'>Steve.Carrell@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014424578</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:valerie.vivar@selecthealth.org</name>
+					<alias>Valerie Vivar</alias>
+					<setting name='title' type='string'>System Administrator-Senior</setting>
+					<setting name='email' type='string'>Valerie.Vivar@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426478</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:alexis.petersen@imail.org</name>
+					<alias>Alexis Petersen</alias>
+					<setting name='last_seen' type='int'>1383692368</setting>
+					<setting name='title' type='string'>Telecom Cellular Analyst-Sr</setting>
+					<setting name='email' type='string'>Alexis.Petersen@imail.org</setting>
+					<setting name='notes' type='string'>Telecommunications SME</setting>
+					<setting name='phone' type='string'>tel:+18014426121</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:melissa.lee@imail.org</name>
+					<alias>Melissa Lee</alias>
+					<setting name='title' type='string'>Network Engineer-Sr</setting>
+					<setting name='email' type='string'>Melissa.Lee@imail.org</setting>
+					<setting name='notes' type='string'>Exchange/Email SME</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:gordon.smith2@imail.org</name>
+					<alias>Gordon Smith</alias>
+					<setting name='last_seen' type='int'>1383684966</setting>
+					<setting name='title' type='string'>Client Sys Hardware Eng-Sr</setting>
+					<setting name='email' type='string'>Gordon.Smith2@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014424012</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:richard.mcnitt@imail.org</name>
+					<alias>Richard McNitt</alias>
+					<setting name='last_seen' type='int'>1383688880</setting>
+					<setting name='title' type='string'>Client Sys Hardware Eng-Stf</setting>
+					<setting name='email' type='string'>Richard.McNitt@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014424963</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+					<setting name='phone-display' type='string'>801-442-4963</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:darin.dickson@imail.org</name>
+					<alias>Darin Dickson</alias>
+					<setting name='last_seen' type='int'>1383687235</setting>
+					<setting name='title' type='string'>IS Infrastructure/Ops Dir</setting>
+					<setting name='email' type='string'>Darin.Dickson@imail.org</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:rob.summers@imail.org</name>
+					<alias>Rob Summers</alias>
+					<setting name='department' type='string'>Service Management</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+					<setting name='address-street' type='string'>Lake Park Administrative Offices
+4646 West Lake Park Blvd 
+IS&amp;T - S3</setting>
+					<setting name='site' type='string'>http://lp-osslab:17334/personal/lprsumme/</setting>
+					<setting name='address-zipcode' type='string'>84120</setting>
+					<setting name='address-state' type='string'>UT</setting>
+					<setting name='email' type='string'>Rob.Summers@imail.org</setting>
+					<setting name='address-city' type='string'>Salt Lake City</setting>
+					<setting name='company' type='string'>Lake Park Administrative Offices</setting>
+					<setting name='title' type='string'>Client Sys Engineering/Ops Mgr</setting>
+					<setting name='address-country-code' type='string'>US</setting>
+					<setting name='last_seen' type='int'>1383691855</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:ty.bindrup@imail.org</name>
+					<alias>Ty Bindrup</alias>
+					<setting name='last_seen' type='int'>1383687112</setting>
+					<setting name='title' type='string'>Network Architect-Cnsltnt</setting>
+					<setting name='email' type='string'>Ty.Bindrup@imail.org</setting>
+					<setting name='notes' type='string'>Network &amp;amp; Wireless SME</setting>
+					<setting name='phone' type='string'>tel:+18014426091</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:michael.noble@imail.org</name>
+					<alias>Michael Noble</alias>
+					<setting name='title' type='string'>Network Engineering Mgr</setting>
+					<setting name='email' type='string'>Michael.Noble@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426881</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:corey.thornock@imail.org</name>
+					<alias>Corey Thornock</alias>
+					<setting name='last_seen' type='int'>1383694146</setting>
+					<setting name='title' type='string'>IS Service Management Dir</setting>
+					<setting name='email' type='string'>Corey.Thornock@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014424939</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:don.franklin@imail.org</name>
+					<alias>Don Franklin</alias>
+					<setting name='title' type='string'>Informatn Syst Operations AVP</setting>
+					<setting name='email' type='string'>Don.Franklin@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426450</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='ISSA'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:carl.allen@imail.org</name>
+					<alias>Carl Allen</alias>
+					<setting name='last_seen' type='int'>1383694126</setting>
+					<setting name='title' type='string'>Information Systems Mgr</setting>
+					<setting name='email' type='string'>Carl.Allen@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014425543</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:nathan.moon@imail.org</name>
+					<alias>Nathan Moon</alias>
+					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
+					<setting name='email' type='string'>Nathan.Moon@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426169</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:bruce.james@imail.org</name>
+					<alias>Bruce James</alias>
+					<setting name='last_seen' type='int'>1383602497</setting>
+					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
+					<setting name='email' type='string'>Bruce.James@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426165</setting>
+					<setting name='phone-display' type='string'>801-442-6165</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:michael.allred2@imail.org</name>
+					<alias>Michael Allred</alias>
+					<setting name='last_seen' type='int'>1383678192</setting>
+					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
+					<setting name='email' type='string'>Michael.Allred2@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426170</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:barak.lemon@imail.org</name>
+					<alias>Barak Lemon</alias>
+					<setting name='last_seen' type='int'>1383679861</setting>
+					<setting name='title' type='string'>Information Syst Security-Senior</setting>
+					<setting name='email' type='string'>Barak.Lemon@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014424192</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:torsten.larson@imail.org</name>
+					<alias>Torsten Larson</alias>
+					<setting name='last_seen' type='int'>1383693736</setting>
+					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
+					<setting name='email' type='string'>Torsten.Larson@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014424882</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:travis.christiansen@imail.org</name>
+					<alias>Travis Christiansen</alias>
+					<setting name='last_seen' type='int'>1383343894</setting>
+					<setting name='title' type='string'>Information Syst Security-Staff</setting>
+					<setting name='email' type='string'>Travis.Christiansen@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426168</setting>
+					<setting name='phone-display' type='string'>801-442-6168</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:parish.bushnell@imail.org</name>
+					<alias>Parish Bushnell</alias>
+					<setting name='last_seen' type='int'>1383692446</setting>
+					<setting name='title' type='string'>Information Syst Security-Staff</setting>
+					<setting name='email' type='string'>Parish.Bushnell@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426165</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:kent.fox@imail.org</name>
+					<alias>Kent Fox</alias>
+					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
+					<setting name='email' type='string'>Kent.Fox@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014426809</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
+					<setting name='phone-display' type='string'>801-442-6809</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Compliance'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:jutta.williams@imail.org</name>
+					<alias>Jutta Williams</alias>
+					<setting name='last_seen' type='int'>1382462679</setting>
+					<setting name='title' type='string'>Compliance and Ethics Progs Dir</setting>
+					<setting name='email' type='string'>Jutta.Williams@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014421505</setting>
+					<setting name='office' type='string'>Central Offices</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
+					<name>sip:shaun.morgan@imail.org</name>
+					<alias>Shaun Morgan</alias>
+					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='title' type='string'>Compliance Conslt Corp-Assoc</setting>
+					<setting name='email' type='string'>Shaun.Morgan@imail.org</setting>
+					<setting name='phone' type='string'>tel:+18014421513</setting>
+					<setting name='office' type='string'>Central Offices</setting>
+				</buddy>
+			</contact>
+		</group>
 		<group name='PMO'>
 			<setting name='collapsed' type='bool'>1</setting>
 			<contact>
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:john.watkins@imail.org</name>
 					<alias>John Watkins</alias>
-					<setting name='last_seen' type='int'>1383240216</setting>
+					<setting name='last_seen' type='int'>1383671104</setting>
 					<setting name='title' type='string'>PMO Dir</setting>
 					<setting name='email' type='string'>John.Watkins@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425566</setting>
@@ -30,7 +570,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:annemarie.saintfelix@imail.org</name>
 					<alias>Anne Marie Saint Felix</alias>
-					<setting name='last_seen' type='int'>1383331297</setting>
+					<setting name='last_seen' type='int'>1383691482</setting>
 					<setting name='title' type='string'>Project Management-Consultant</setting>
 					<setting name='email' type='string'>AnneMarie.SaintFelix@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014424443</setting>
@@ -42,7 +582,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:jeff.messinger@imail.org</name>
 					<alias>Jeff Messinger</alias>
-					<setting name='last_seen' type='int'>1383340937</setting>
+					<setting name='last_seen' type='int'>1383583198</setting>
 					<setting name='title' type='string'>Project Management-Staff</setting>
 					<setting name='email' type='string'>Jeff.Messinger@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425961</setting>
@@ -53,7 +593,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:chad.west@imail.org</name>
 					<alias>Chad West</alias>
-					<setting name='last_seen' type='int'>1383342865</setting>
+					<setting name='last_seen' type='int'>1383607385</setting>
 					<setting name='email' type='string'>Chad.West@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426209</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
@@ -63,7 +603,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:annie.bigler@imail.org</name>
 					<alias>Annie Bigler</alias>
-					<setting name='last_seen' type='int'>1383170644</setting>
+					<setting name='last_seen' type='int'>1383671192</setting>
 					<setting name='title' type='string'>Project Management-Staff</setting>
 					<setting name='email' type='string'>Annie.Bigler@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425947</setting>
@@ -74,7 +614,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:darrell.martin@imail.org</name>
 					<alias>Darrell Martin</alias>
-					<setting name='last_seen' type='int'>1383341489</setting>
+					<setting name='last_seen' type='int'>1383692503</setting>
 					<setting name='title' type='string'>Project Management-Consultant</setting>
 					<setting name='email' type='string'>Darrell.Martin@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014424709</setting>
@@ -89,7 +629,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:darren.mann@imail.org</name>
 					<alias>Darren Mann</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383694941</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Darren.Mann@imail.org</setting>
 					<setting name='show_offline' type='bool'>1</setting>
@@ -102,12 +642,12 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:brandon.richins@imail.org</name>
 					<alias>Brandon Richins</alias>
-					<setting name='last_seen' type='int'>1383340813</setting>
+					<setting name='last_seen' type='int'>1383682136</setting>
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Brandon.Richins@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014425523</setting>
-					<setting name='site' type='string'>sip:Brandon.Richins@imail.org;opaque=app:voicemail</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
+					<setting name='site' type='string'>sip:Brandon.Richins@imail.org;opaque=app:voicemail</setting>
+					<setting name='phone' type='string'>tel:+18014425523</setting>
 					<setting name='phone-display' type='string'>801-442-5523</setting>
 				</buddy>
 				<buddy account='harris.johnny@gmail.com/Work Laptop' proto='prpl-jabber'>
@@ -124,7 +664,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:darin.wilcox@imail.org</name>
 					<alias>Darin Wilcox</alias>
-					<setting name='last_seen' type='int'>1383340273</setting>
+					<setting name='last_seen' type='int'>1383693822</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Darin.Wilcox@imail.org</setting>
 					<setting name='show_offline' type='bool'>1</setting>
@@ -201,359 +741,13 @@
 				</buddy>
 			</contact>
 		</group>
-		<group name='ESA Team'>
-			<setting name='collapsed' type='bool'>0</setting>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:billy.prows@imail.org</name>
-					<alias>Billy Prows</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
-					<setting name='email' type='string'>Billy.Prows@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18015072502</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:frederick.holston@imail.org</name>
-					<alias>Frederick Holston</alias>
-					<setting name='last_seen' type='int'>1383321792</setting>
-					<setting name='title' type='string'>CTO</setting>
-					<setting name='email' type='string'>Frederick.Holston@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18015072501</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:sara.curry@imail.org</name>
-					<alias>Sara Curry</alias>
-					<setting name='last_seen' type='int'>1383345828</setting>
-					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
-					<setting name='email' type='string'>Sara.Curry@imail.org</setting>
-					<setting name='phone-mobile' type='string'>tel:+18015184814</setting>
-					<setting name='phone' type='string'>tel:+18014426307</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:cory.smith@imail.org</name>
-					<alias>Cory Smith</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Project Management-Senior</setting>
-					<setting name='email' type='string'>Cory.Smith@imail.org</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:lonnie.buchanan@selecthealth.org</name>
-					<alias>Lonnie Buchanan</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Information Systems Mgr</setting>
-					<setting name='email' type='string'>Lonnie.Buchanan@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18015072505</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:tim.shipley@imail.org</name>
-					<alias>Tim Shipley</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
-					<setting name='email' type='string'>Tim.Shipley@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18015072530</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:gopal.narra@imail.org</name>
-					<alias>Gopal Narra</alias>
-					<setting name='last_seen' type='int'>1383346313</setting>
-					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
-					<setting name='email' type='string'>Gopal.Narra@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18015072533</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:stuart.simpson@imail.org</name>
-					<alias>Stuart Simpson</alias>
-					<setting name='last_seen' type='int'>1383345929</setting>
-					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
-					<setting name='email' type='string'>Stuart.Simpson@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18015072534</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:klaus.schulz@imail.org</name>
-					<alias>Klaus Schulz</alias>
-					<setting name='last_seen' type='int'>1383348042</setting>
-					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
-					<setting name='email' type='string'>Klaus.Schulz@imail.org</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:becke.wolf@imail.org</name>
-					<alias>Becke Wolf</alias>
-					<setting name='last_seen' type='int'>1382457418</setting>
-					<setting name='title' type='string'>Secretary Executive Sr</setting>
-					<setting name='email' type='string'>Becke.Wolf@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18015072515</setting>
-					<setting name='office' type='string'>Intermountain Medical Center</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:becke.wolf@imail.org</name>
-					<alias>Becke Wolf</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Secretary Executive Sr</setting>
-					<setting name='email' type='string'>Becke.Wolf@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18015072515</setting>
-					<setting name='office' type='string'>Intermountain Medical Center</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-		</group>
-		<group name='ISSA'>
-			<setting name='collapsed' type='bool'>1</setting>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:carl.allen@imail.org</name>
-					<alias>Carl Allen</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Information Systems Mgr</setting>
-					<setting name='email' type='string'>Carl.Allen@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014425543</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:nathan.moon@imail.org</name>
-					<alias>Nathan Moon</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
-					<setting name='email' type='string'>Nathan.Moon@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014426169</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:bruce.james@imail.org</name>
-					<alias>Bruce James</alias>
-					<setting name='last_seen' type='int'>1383340132</setting>
-					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
-					<setting name='email' type='string'>Bruce.James@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014426165</setting>
-					<setting name='phone-display' type='string'>801-442-6165</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:michael.allred2@imail.org</name>
-					<alias>Michael Allred</alias>
-					<setting name='last_seen' type='int'>1383334032</setting>
-					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
-					<setting name='email' type='string'>Michael.Allred2@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014426170</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:barak.lemon@imail.org</name>
-					<alias>Barak Lemon</alias>
-					<setting name='last_seen' type='int'>1383251534</setting>
-					<setting name='title' type='string'>Information Syst Security-Senior</setting>
-					<setting name='email' type='string'>Barak.Lemon@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014424192</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:torsten.larson@imail.org</name>
-					<alias>Torsten Larson</alias>
-					<setting name='last_seen' type='int'>1382738969</setting>
-					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
-					<setting name='email' type='string'>Torsten.Larson@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014424882</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:travis.christiansen@imail.org</name>
-					<alias>Travis Christiansen</alias>
-					<setting name='last_seen' type='int'>1383343894</setting>
-					<setting name='title' type='string'>Information Syst Security-Staff</setting>
-					<setting name='email' type='string'>Travis.Christiansen@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014426168</setting>
-					<setting name='phone-display' type='string'>801-442-6168</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
-				</buddy>
-			</contact>
-		</group>
-		<group name='Compliance'>
-			<setting name='collapsed' type='bool'>1</setting>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:jutta.williams@imail.org</name>
-					<alias>Jutta Williams</alias>
-					<setting name='last_seen' type='int'>1382462679</setting>
-					<setting name='title' type='string'>Compliance and Ethics Progs Dir</setting>
-					<setting name='email' type='string'>Jutta.Williams@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014421505</setting>
-					<setting name='office' type='string'>Central Offices</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:shaun.morgan@imail.org</name>
-					<alias>Shaun Morgan</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Compliance Conslt Corp-Assoc</setting>
-					<setting name='email' type='string'>Shaun.Morgan@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014421513</setting>
-					<setting name='office' type='string'>Central Offices</setting>
-				</buddy>
-			</contact>
-		</group>
-		<group name='SCO'>
-			<setting name='collapsed' type='bool'>1</setting>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:kreg.koford@imail.org</name>
-					<alias>Kreg Koford</alias>
-					<setting name='last_seen' type='int'>1383343409</setting>
-					<setting name='title' type='string'>Supply Chain Solutions Dir</setting>
-					<setting name='email' type='string'>Kreg.Koford@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423699</setting>
-					<setting name='site' type='string'>http://epm02/personal/lpkkofor/</setting>
-					<setting name='office' type='string'>Supply Chain Center</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:sherman.curtis@imail.org</name>
-					<alias>Sherman Curtis</alias>
-					<setting name='last_seen' type='int'>1383326761</setting>
-					<setting name='title' type='string'>Strategic Relationship Mgr</setting>
-					<setting name='email' type='string'>Sherman.Curtis@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423646</setting>
-					<setting name='office' type='string'>Supply Chain Center</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:scott.palfreyman@imail.org</name>
-					<alias>Scott Palfreyman</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Sourcing Manager II</setting>
-					<setting name='email' type='string'>Scott.Palfreyman@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423334</setting>
-					<setting name='office' type='string'>Supply Chain Center</setting>
-				</buddy>
-				<setting name='gtk-mute-sound' type='bool'>0</setting>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:shane.stevenson@imail.org</name>
-					<alias>Shane Stevenson</alias>
-					<setting name='last_seen' type='int'>1383339072</setting>
-					<setting name='title' type='string'>Strategic Relationship Mgr</setting>
-					<setting name='email' type='string'>Shane.Stevenson@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423771</setting>
-					<setting name='office' type='string'>Supply Chain Center</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:curtis.mcentire@imail.org</name>
-					<alias>Curtis McEntire</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='title' type='string'>Strategic Relationship Mgr</setting>
-					<setting name='email' type='string'>Curtis.McEntire@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423742</setting>
-					<setting name='office' type='string'>Supply Chain Center</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:craig.webb@imail.org</name>
-					<alias>Craig Webb</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
-					<setting name='email' type='string'>Craig.Webb@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423576</setting>
-					<setting name='office' type='string'>Supply Chain Center</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:lyn.bair@imail.org</name>
-					<alias>Lyn Bair</alias>
-					<setting name='title' type='string'>Strategic Relationship Mgr</setting>
-					<setting name='email' type='string'>Lyn.Bair@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423267</setting>
-					<setting name='office' type='string'>Central Offices</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:richard.bagley@imail.org</name>
-					<alias>Richard Bagley</alias>
-					<setting name='last_seen' type='int'>1383343974</setting>
-					<setting name='title' type='string'>Sourcing Manager II</setting>
-					<setting name='email' type='string'>Richard.Bagley@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423672</setting>
-					<setting name='office' type='string'>Supply Chain Center</setting>
-				</buddy>
-			</contact>
-			<contact>
-				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
-					<name>sip:heath.jones@imail.org</name>
-					<alias>Heath Jones</alias>
-					<setting name='last_seen' type='int'>1383340932</setting>
-					<setting name='title' type='string'>Program Development Dir-SCO</setting>
-					<setting name='email' type='string'>Heath.Jones@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014423539</setting>
-					<setting name='office' type='string'>Supply Chain Center</setting>
-				</buddy>
-			</contact>
-		</group>
 		<group name='Lab'>
 			<setting name='collapsed' type='bool'>1</setting>
 			<contact>
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:leslie.terry@imail.org</name>
 					<alias>Leslie Terry</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383691036</setting>
 					<setting name='title' type='string'>Applications Systems Mgr</setting>
 					<setting name='email' type='string'>Leslie.Terry@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426295</setting>
@@ -568,7 +762,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:kent.christensen@imail.org</name>
 					<alias>Kent Christensen</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383693877</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Kent.Christensen@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079238</setting>
@@ -579,7 +773,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:pallavi.ranade@imail.org</name>
 					<alias>Pallavi Ranade</alias>
-					<setting name='last_seen' type='int'>1383339306</setting>
+					<setting name='last_seen' type='int'>1383694249</setting>
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Pallavi.Ranade@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079226</setting>
@@ -601,7 +795,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:carl.allen@imail.org</name>
 					<alias>Carl Allen</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383694126</setting>
 					<setting name='title' type='string'>Information Systems Mgr</setting>
 					<setting name='email' type='string'>Carl.Allen@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425543</setting>
@@ -612,7 +806,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:paul.whitmer@imail.org</name>
 					<alias>Paul Whitmer</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383691189</setting>
 					<setting name='title' type='string'>Software Engineering Mgr</setting>
 					<setting name='email' type='string'>Paul.Whitmer@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425422</setting>
@@ -623,12 +817,12 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:brandon.richins@imail.org</name>
 					<alias>Brandon Richins</alias>
-					<setting name='last_seen' type='int'>1383340813</setting>
+					<setting name='last_seen' type='int'>1383682136</setting>
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Brandon.Richins@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014425523</setting>
-					<setting name='site' type='string'>sip:Brandon.Richins@imail.org;opaque=app:voicemail</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
+					<setting name='site' type='string'>sip:Brandon.Richins@imail.org;opaque=app:voicemail</setting>
+					<setting name='phone' type='string'>tel:+18014425523</setting>
 					<setting name='phone-display' type='string'>801-442-5523</setting>
 				</buddy>
 			</contact>
@@ -636,7 +830,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:sonam.nepali@imail.org</name>
 					<alias>Sonam Samdupkhangsar</alias>
-					<setting name='last_seen' type='int'>1383342201</setting>
+					<setting name='last_seen' type='int'>1383692628</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Sonam.Samdupkhangsar@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18017367527</setting>
@@ -647,7 +841,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:darcie.mueller@imail.org</name>
 					<alias>Darcie Mueller</alias>
-					<setting name='last_seen' type='int'>1383333773</setting>
+					<setting name='last_seen' type='int'>1383694733</setting>
 					<setting name='title' type='string'>Business Analyst Mgr</setting>
 					<setting name='email' type='string'>Darcie.Mueller@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079114</setting>
@@ -658,7 +852,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:jefrey.huntington@imail.org</name>
 					<alias>Jef Huntington</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383595838</setting>
 					<setting name='title' type='string'>Outcomes Analyst Clinical-Sr</setting>
 					<setting name='email' type='string'>Jef.Huntington@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014423506</setting>
@@ -669,7 +863,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:darren.mann@imail.org</name>
 					<alias>Darren Mann</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383694941</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Darren.Mann@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425537</setting>
@@ -681,13 +875,13 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:lance.gallegos@imail.org</name>
 					<alias>Lance Gallegos</alias>
-					<setting name='last_seen' type='int'>1383341564</setting>
+					<setting name='last_seen' type='int'>1383694493</setting>
 					<setting name='title' type='string'>Network Engineer-Stf</setting>
 					<setting name='email' type='string'>Lance.Gallegos@imail.org</setting>
-					<setting name='office' type='string'>Lake Park Campus</setting>
 					<setting name='site' type='string'>sip:Lance.Gallegos@imail.org;opaque=app:voicemail</setting>
 					<setting name='phone' type='string'>tel:8014426848;phone-context=DefaultProfile</setting>
 					<setting name='phone-display' type='string'>801-442-6848</setting>
+					<setting name='office' type='string'>Lake Park Campus</setting>
 				</buddy>
 			</contact>
 			<contact>
@@ -705,7 +899,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:bruce.james@imail.org</name>
 					<alias>Bruce James</alias>
-					<setting name='last_seen' type='int'>1383340132</setting>
+					<setting name='last_seen' type='int'>1383602497</setting>
 					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
 					<setting name='email' type='string'>Bruce.James@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426165</setting>
@@ -717,7 +911,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:kreg.koford@imail.org</name>
 					<alias>Kreg Koford</alias>
-					<setting name='last_seen' type='int'>1383343409</setting>
+					<setting name='last_seen' type='int'>1383682927</setting>
 					<setting name='title' type='string'>Supply Chain Solutions Dir</setting>
 					<setting name='email' type='string'>Kreg.Koford@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014423699</setting>
@@ -762,7 +956,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:sara.curry@imail.org</name>
 					<alias>Sara Curry</alias>
-					<setting name='last_seen' type='int'>1383345828</setting>
+					<setting name='last_seen' type='int'>1383695598</setting>
 					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
 					<setting name='email' type='string'>Sara.Curry@imail.org</setting>
 					<setting name='phone-mobile' type='string'>tel:+18015184814</setting>
@@ -774,7 +968,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:cory.smith@imail.org</name>
 					<alias>Cory Smith</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383689495</setting>
 					<setting name='title' type='string'>Project Management-Senior</setting>
 					<setting name='email' type='string'>Cory.Smith@imail.org</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
@@ -784,7 +978,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:srinivasulu.reppalevenkat@imail.org</name>
 					<alias>Srinivasulu Reppale Venkat</alias>
-					<setting name='last_seen' type='int'>1383346982</setting>
+					<setting name='last_seen' type='int'>1383685873</setting>
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Srinivasulu.ReppaleVenkat@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079159</setting>
@@ -795,7 +989,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:cathy.kucherak@imail.org</name>
 					<alias>Cathy Kucherak</alias>
-					<setting name='last_seen' type='int'>1383341667</setting>
+					<setting name='last_seen' type='int'>1383680518</setting>
 					<setting name='title' type='string'>Applications Systems Mgr</setting>
 					<setting name='email' type='string'>Cathy.Kucherak@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426093</setting>
@@ -806,7 +1000,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:lance.schildknecht@imail.org</name>
 					<alias>Lance Schildknecht</alias>
-					<setting name='last_seen' type='int'>1383246432</setting>
+					<setting name='last_seen' type='int'>1383693655</setting>
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Lance.Schildknecht@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079241</setting>
@@ -817,7 +1011,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:herman.post@imail.org</name>
 					<alias>Herman Post</alias>
-					<setting name='last_seen' type='int'>1383346796</setting>
+					<setting name='last_seen' type='int'>1383688394</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Herman.Post@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079225</setting>
@@ -828,7 +1022,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:craig.jacobsen@imail.org</name>
 					<alias>Craig Jacobsen</alias>
-					<setting name='last_seen' type='int'>1383322261</setting>
+					<setting name='last_seen' type='int'>1383695074</setting>
 					<setting name='title' type='string'>Information Systems AVP</setting>
 					<setting name='email' type='string'>Craig.Jacobsen@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014423348</setting>
@@ -840,7 +1034,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:alan.fetzer@imail.org</name>
 					<alias>Alan Fetzer</alias>
-					<setting name='last_seen' type='int'>1383344337</setting>
+					<setting name='last_seen' type='int'>1383694784</setting>
 					<setting name='title' type='string'>Applications Systems Mgr</setting>
 					<setting name='email' type='string'>Alan.Fetzer@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425995</setting>
@@ -851,12 +1045,12 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:bobby.davis@imail.org</name>
 					<alias>Bobby Davis</alias>
-					<setting name='last_seen' type='int'>1383342541</setting>
+					<setting name='last_seen' type='int'>1383677408</setting>
 					<setting name='title' type='string'>Network Engineer-Stf</setting>
 					<setting name='email' type='string'>Bobby.Davis@imail.org</setting>
-					<setting name='phone' type='string'>tel:+18014426045</setting>
-					<setting name='site' type='string'>sip:Bobby.Davis@imail.org;opaque=app:voicemail</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
+					<setting name='site' type='string'>sip:Bobby.Davis@imail.org;opaque=app:voicemail</setting>
+					<setting name='phone' type='string'>tel:+8014426045</setting>
 					<setting name='phone-display' type='string'>+8014426045</setting>
 				</buddy>
 			</contact>
@@ -864,7 +1058,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:crickett.cole@imail.org</name>
 					<alias>Crickett Cole</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383692098</setting>
 					<setting name='title' type='string'>Quality Analyst Engineer-Cnsltnt</setting>
 					<setting name='email' type='string'>Crickett.Cole@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425540</setting>
@@ -886,7 +1080,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:lonnie.buchanan@selecthealth.org</name>
 					<alias>Lonnie Buchanan</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383685144</setting>
 					<setting name='title' type='string'>Information Systems Mgr</setting>
 					<setting name='email' type='string'>Lonnie.Buchanan@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015072505</setting>
@@ -918,7 +1112,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:corey.crookston@imail.org</name>
 					<alias>Corey Crookston</alias>
-					<setting name='last_seen' type='int'>1383331297</setting>
+					<setting name='last_seen' type='int'>1383694488</setting>
 					<setting name='title' type='string'>Software Engineer-Sr</setting>
 					<setting name='email' type='string'>Corey.Crookston@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425514</setting>
@@ -938,7 +1132,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:arun.muthukkumaraswam@imail.org</name>
 					<alias>Arun Muthukkumaraswam</alias>
-					<setting name='last_seen' type='int'>1383347506</setting>
+					<setting name='last_seen' type='int'>1383683358</setting>
 					<setting name='email' type='string'>Arun.Muthukkumaraswam@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425532</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
@@ -970,7 +1164,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:michael.allred2@imail.org</name>
 					<alias>Michael Allred</alias>
-					<setting name='last_seen' type='int'>1383334032</setting>
+					<setting name='last_seen' type='int'>1383678192</setting>
 					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
 					<setting name='email' type='string'>Michael.Allred2@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426170</setting>
@@ -992,7 +1186,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:gopal.narra@imail.org</name>
 					<alias>Gopal Narra</alias>
-					<setting name='last_seen' type='int'>1383346313</setting>
+					<setting name='last_seen' type='int'>1383692454</setting>
 					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
 					<setting name='email' type='string'>Gopal.Narra@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015072533</setting>
@@ -1014,7 +1208,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:stuart.simpson@imail.org</name>
 					<alias>Stuart Simpson</alias>
-					<setting name='last_seen' type='int'>1383345929</setting>
+					<setting name='last_seen' type='int'>1383694807</setting>
 					<setting name='title' type='string'>Enterprise Solutns Archt-Cnsltnt</setting>
 					<setting name='email' type='string'>Stuart.Simpson@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015072534</setting>
@@ -1034,7 +1228,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:kyle.holbrook@imail.org</name>
 					<alias>Kyle Holbrook</alias>
-					<setting name='last_seen' type='int'>1383347644</setting>
+					<setting name='last_seen' type='int'>1383678691</setting>
 					<setting name='title' type='string'>Project Management-Staff</setting>
 					<setting name='email' type='string'>Kyle.Holbrook@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425570</setting>
@@ -1045,7 +1239,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:barak.lemon@imail.org</name>
 					<alias>Barak Lemon</alias>
-					<setting name='last_seen' type='int'>1383251534</setting>
+					<setting name='last_seen' type='int'>1383679861</setting>
 					<setting name='title' type='string'>Information Syst Security-Senior</setting>
 					<setting name='email' type='string'>Barak.Lemon@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014424192</setting>
@@ -1067,7 +1261,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:glen.miller@imail.org</name>
 					<alias>Glen Miller</alias>
-					<setting name='last_seen' type='int'>1383346921</setting>
+					<setting name='last_seen' type='int'>1383693716</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Glen.Miller@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425517</setting>
@@ -1089,7 +1283,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:gordon.smith3@imail.org</name>
 					<alias>Gordon Smith</alias>
-					<setting name='last_seen' type='int'>1383331297</setting>
+					<setting name='last_seen' type='int'>1383681596</setting>
 					<setting name='title' type='string'>Registrar</setting>
 					<setting name='email' type='string'>Gordon.Smith3@imail.org</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
@@ -1109,7 +1303,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:becke.wolf@imail.org</name>
 					<alias>Becke Wolf</alias>
-					<setting name='last_seen' type='int'>1383348108</setting>
+					<setting name='last_seen' type='int'>1383692595</setting>
 					<setting name='title' type='string'>Secretary Executive Sr</setting>
 					<setting name='email' type='string'>Becke.Wolf@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015072515</setting>
@@ -1123,7 +1317,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:arun.muthukkumaraswam@imail.org</name>
 					<alias>Arun Muthukkumaraswam</alias>
-					<setting name='last_seen' type='int'>1383347506</setting>
+					<setting name='last_seen' type='int'>1383683358</setting>
 					<setting name='email' type='string'>Arun.Muthukkumaraswam@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425532</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
@@ -1144,7 +1338,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:sonam.nepali@imail.org</name>
 					<alias>Sonam Samdupkhangsar</alias>
-					<setting name='last_seen' type='int'>1383342201</setting>
+					<setting name='last_seen' type='int'>1383692628</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Sonam.Samdupkhangsar@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18017367527</setting>
@@ -1155,7 +1349,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:darcie.mueller@imail.org</name>
 					<alias>Darcie Mueller</alias>
-					<setting name='last_seen' type='int'>1383333773</setting>
+					<setting name='last_seen' type='int'>1383694733</setting>
 					<setting name='title' type='string'>Business Analyst Mgr</setting>
 					<setting name='email' type='string'>Darcie.Mueller@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18015079114</setting>
@@ -1166,7 +1360,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:glen.miller@imail.org</name>
 					<alias>Glen Miller</alias>
-					<setting name='last_seen' type='int'>1383346921</setting>
+					<setting name='last_seen' type='int'>1383693716</setting>
 					<setting name='title' type='string'>Software Engineer-Cnslt</setting>
 					<setting name='email' type='string'>Glen.Miller@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425517</setting>
@@ -1280,7 +1474,7 @@
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:todd.grubbs@imail.org</name>
 					<alias>Todd Grubbs</alias>
-					<setting name='last_seen' type='int'>1383345458</setting>
+					<setting name='last_seen' type='int'>1383681162</setting>
 					<setting name='title' type='string'>IS Infrastructure/Ops Dir</setting>
 					<setting name='email' type='string'>Todd.Grubbs@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014425220</setting>
@@ -1326,5 +1520,6 @@
 			<block>sabrielparker@gmail.com</block>
 		</account>
 		<account proto='prpl-sipe' name='John.Harris@imail.org,CO\lpjharri' mode='1'/>
+		<account proto='prpl-bonjour' name='johnnie' mode='1'/>
 	</privacy>
 </purple>

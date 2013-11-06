@@ -1,6 +1,56 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <statuses version='1.0'>
+	<status name='Auto-Cached' transient='true' created='1383683400' lastused='1383683400' usage_count='1'>
+		<state>available</state>
+		<substatus>
+			<account protocol='prpl-bonjour'>johnnie</account>
+			<state>available</state>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1383678000' lastused='1383678000' usage_count='1'>
+		<state>unavailable</state>
+		<substatus>
+			<account protocol='prpl-bonjour'>johnnie</account>
+			<state>busy</state>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1383607800' lastused='1383607800' usage_count='1'>
+		<state>available</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1383606000' lastused='1383606000' usage_count='1'>
+		<state>unavailable</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1383584400' lastused='1383584400' usage_count='1'>
+		<state>available</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+		</substatus>
+	</status>
+	<status name='Auto-Cached' transient='true' created='1383581437' lastused='1383581437' usage_count='1'>
+		<state>unavailable</state>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>busy</state>
+		</substatus>
+	</status>
 	<status name='Auto-Cached' transient='true' created='1383238800' lastused='1383238800' usage_count='1'>
 		<state>available</state>
 		<substatus>
