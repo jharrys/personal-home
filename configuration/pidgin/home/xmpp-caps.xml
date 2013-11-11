@@ -50,20 +50,20 @@
 		<feature var='http://jabber.org/protocol/disco#items'/>
 		<feature var='http://jabber.org/protocol/disco#info'/>
 		<ext identifier='camera-v1'>
-			<feature var='http://jabber.org/protocol/disco#items'/>
 			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://jabber.org/protocol/disco#items'/>
 		</ext>
 		<ext identifier='voice-v1'>
-			<feature var='http://jabber.org/protocol/disco#items'/>
 			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://jabber.org/protocol/disco#items'/>
 		</ext>
 		<ext identifier='video-v1'>
-			<feature var='http://jabber.org/protocol/disco#items'/>
 			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://jabber.org/protocol/disco#items'/>
 		</ext>
 		<ext identifier='pmuc-v1'>
-			<feature var='http://jabber.org/protocol/disco#items'/>
 			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://jabber.org/protocol/disco#items'/>
 		</ext>
 	</client>
 	<client node='http://pidgin.im/' ver='71LAP/wlWGfun7j+Q4FCSSuAhQw=' hash='sha-1'>
@@ -92,6 +92,35 @@
 		<feature var='urn:xmpp:jingle:1'/>
 		<feature var='urn:xmpp:ping'/>
 		<feature var='urn:xmpp:time'/>
+	</client>
+	<client node='http://telepathy.freedesktop.org/caps' ver='s1b2fY+UJtbVgBTHL9eis2VlRt8=' hash='sha-1'>
+		<identity category='client' type='pc' name='Telepathy Gabble 0.16.7'/>
+		<feature var='http://google.com/xmpp/protocol/share/v1'/>
+		<feature var='http://jabber.org/protocol/bytestreams'/>
+		<feature var='http://jabber.org/protocol/chatstates'/>
+		<feature var='http://jabber.org/protocol/ibb'/>
+		<feature var='http://jabber.org/protocol/jingle'/>
+		<feature var='http://jabber.org/protocol/jingle/description/audio'/>
+		<feature var='http://jabber.org/protocol/jingle/description/video'/>
+		<feature var='http://jabber.org/protocol/nick'/>
+		<feature var='http://jabber.org/protocol/nick+notify'/>
+		<feature var='http://jabber.org/protocol/si'/>
+		<feature var='http://jabber.org/protocol/si/profile/file-transfer'/>
+		<feature var='http://telepathy.freedesktop.org/xmpp/file-transfer-metadata'/>
+		<feature var='http://telepathy.freedesktop.org/xmpp/tubes'/>
+		<feature var='http://www.google.com/transport/p2p'/>
+		<feature var='http://www.google.com/xmpp/protocol/camera/v1'/>
+		<feature var='http://www.google.com/xmpp/protocol/session'/>
+		<feature var='http://www.google.com/xmpp/protocol/video/v1'/>
+		<feature var='http://www.google.com/xmpp/protocol/voice/v1'/>
+		<feature var='jabber:iq:version'/>
+		<feature var='urn:xmpp:jingle:1'/>
+		<feature var='urn:xmpp:jingle:apps:rtp:1'/>
+		<feature var='urn:xmpp:jingle:apps:rtp:audio'/>
+		<feature var='urn:xmpp:jingle:apps:rtp:rtcp-fb:0'/>
+		<feature var='urn:xmpp:jingle:apps:rtp:rtp-hdrext:0'/>
+		<feature var='urn:xmpp:jingle:apps:rtp:video'/>
+		<feature var='urn:xmpp:jingle:transports:raw-udp:1'/>
 	</client>
 	<client node='http://www.igniterealtime.org/projects/smack/' ver='xYEd+1ZdePfGl3AaJ23FB7rizRg=' hash='sha-1'>
 		<identity category='client' type='handheld' name='Xabber'/>
