@@ -4,6 +4,18 @@ ControlPath ~/.ssh/connections/%r_%h_%p
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 IdentityFile ~/.ssh/github_rsa
 
+Host github.com
+User harris.johnny@gmail.com
+Port 443
+Hostname ssh.github.com
+ProxyCommand /usr/bin/corkscrew proxylp.ihc.com 8080 %h %p /home/lpjharri/.corkscrew-auth
+
+Host bitbucket.org
+User harris.johnny@gmail.com
+Port 443
+HostName altssh.bitbucket.org
+ProxyCommand /usr/bin/corkscrew proxylp.ihc.com 8080 %h %p /home/lpjharri/.corkscrew-auth
+
 Host solutions
 HostName 159.212.143.162
 Compression yes
