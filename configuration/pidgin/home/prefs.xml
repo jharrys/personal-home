@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1384068253'/>
+				<pref name='last_check' type='int' value='1384227142'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='300000'/>
