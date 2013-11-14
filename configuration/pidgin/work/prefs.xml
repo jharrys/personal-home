@@ -5,7 +5,7 @@
 		<pref name='away'>
 			<pref name='idle_reporting' type='string' value='none'/>
 			<pref name='away_when_idle' type='bool' value='0'/>
-			<pref name='mins_before_away' type='int' value='5'/>
+			<pref name='mins_before_away' type='int' value='300'/>
 			<pref name='auto_reply' type='string' value='never'/>
 		</pref>
 		<pref name='buddies'/>
@@ -27,10 +27,10 @@
 			</pref>
 		</pref>
 		<pref name='savedstatus'>
-			<pref name='default' type='int' value='1384273399'/>
+			<pref name='default' type='int' value='1384445099'/>
 			<pref name='startup' type='int' value='0'/>
 			<pref name='startup_current_status' type='bool' value='1'/>
-			<pref name='idleaway' type='int' value='1378479642'/>
+			<pref name='idleaway' type='int' value='1384282867'/>
 			<pref name='isidleaway' type='bool' value='0'/>
 		</pref>
 		<pref name='conversations'>
@@ -66,7 +66,7 @@
 			<pref name='host' type='string' value='proxylp.ihc.com'/>
 			<pref name='port' type='int' value='8080'/>
 			<pref name='username' type='string' value='lpjharri'/>
-			<pref name='password' type='string' value='JJk5llNn'/>
+			<pref name='password' type='string' value='JKk5llNn'/>
 			<pref name='socks4_remotedns' type='bool' value='0'/>
 		</pref>
 		<pref name='sound'>
@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1384271691'/>
+				<pref name='last_check' type='int' value='1384367522'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='120000'/>
@@ -246,9 +246,9 @@
 				</pref>
 				<pref name='winprefs'>
 					<pref name='dblist_dockable' type='bool' value='1'/>
-					<pref name='dblist_docked' type='bool' value='0'/>
-					<pref name='dblist_height' type='int' value='0'/>
-					<pref name='dblist_side' type='int' value='0'/>
+					<pref name='dblist_docked' type='bool' value='1'/>
+					<pref name='dblist_height' type='int' value='522'/>
+					<pref name='dblist_side' type='int' value='2'/>
 					<pref name='blist_on_top' type='int' value='0'/>
 				</pref>
 			</pref>
@@ -367,17 +367,17 @@
 		</pref>
 		<pref name='blist'>
 			<pref name='show_buddy_icons' type='bool' value='1'/>
-			<pref name='show_empty_groups' type='bool' value='0'/>
+			<pref name='show_empty_groups' type='bool' value='1'/>
 			<pref name='show_idle_time' type='bool' value='1'/>
 			<pref name='show_offline_buddies' type='bool' value='1'/>
 			<pref name='show_protocol_icons' type='bool' value='1'/>
 			<pref name='list_visible' type='bool' value='0'/>
 			<pref name='list_maximized' type='bool' value='0'/>
 			<pref name='sort_type' type='string' value='status'/>
-			<pref name='x' type='int' value='53'/>
-			<pref name='y' type='int' value='53'/>
-			<pref name='width' type='int' value='262'/>
-			<pref name='height' type='int' value='862'/>
+			<pref name='x' type='int' value='1152'/>
+			<pref name='y' type='int' value='0'/>
+			<pref name='width' type='int' value='278'/>
+			<pref name='height' type='int' value='871'/>
 			<pref name='theme' type='string' value=''/>
 		</pref>
 		<pref name='conversations'>
@@ -393,7 +393,7 @@
 			<pref name='minimum_entry_lines' type='int' value='2'/>
 			<pref name='show_timestamps' type='bool' value='1'/>
 			<pref name='show_formatting_toolbar' type='bool' value='1'/>
-			<pref name='placement' type='string' value='last'/>
+			<pref name='placement' type='string' value='new'/>
 			<pref name='placement_number' type='int' value='1'/>
 			<pref name='bgcolor' type='string' value=''/>
 			<pref name='fgcolor' type='string' value='#3B4578'/>
@@ -402,8 +402,8 @@
 			<pref name='tabs' type='bool' value='1'/>
 			<pref name='tab_side' type='int' value='2'/>
 			<pref name='scrollback_lines' type='int' value='4000'/>
-			<pref name='use_theme_font' type='bool' value='1'/>
-			<pref name='custom_font' type='string' value=''/>
+			<pref name='use_theme_font' type='bool' value='0'/>
+			<pref name='custom_font' type='string' value='Tahoma 12'/>
 			<pref name='chat'>
 				<pref name='entry_height' type='int' value='54'/>
 				<pref name='userlist_width' type='int' value='149'/>
@@ -413,8 +413,8 @@
 				<pref name='height' type='int' value='390'/>
 			</pref>
 			<pref name='im'>
-				<pref name='x' type='int' value='1070'/>
-				<pref name='y' type='int' value='12'/>
+				<pref name='x' type='int' value='1072'/>
+				<pref name='y' type='int' value='6'/>
 				<pref name='width' type='int' value='360'/>
 				<pref name='height' type='int' value='843'/>
 				<pref name='animate_buddy_icons' type='bool' value='1'/>
