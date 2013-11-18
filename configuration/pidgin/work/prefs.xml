@@ -27,7 +27,7 @@
 			</pref>
 		</pref>
 		<pref name='savedstatus'>
-			<pref name='default' type='int' value='1384449718'/>
+			<pref name='default' type='int' value='1384797601'/>
 			<pref name='startup' type='int' value='0'/>
 			<pref name='startup_current_status' type='bool' value='1'/>
 			<pref name='idleaway' type='int' value='1384282867'/>
@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1384367522'/>
+				<pref name='last_check' type='int' value='1384788426'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='120000'/>
@@ -374,10 +374,10 @@
 			<pref name='list_visible' type='bool' value='0'/>
 			<pref name='list_maximized' type='bool' value='0'/>
 			<pref name='sort_type' type='string' value='status'/>
-			<pref name='x' type='int' value='1144'/>
+			<pref name='x' type='int' value='1376'/>
 			<pref name='y' type='int' value='0'/>
-			<pref name='width' type='int' value='286'/>
-			<pref name='height' type='int' value='871'/>
+			<pref name='width' type='int' value='294'/>
+			<pref name='height' type='int' value='1021'/>
 			<pref name='theme' type='string' value=''/>
 		</pref>
 		<pref name='conversations'>
