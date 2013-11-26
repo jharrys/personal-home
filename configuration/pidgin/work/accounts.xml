@@ -82,8 +82,8 @@
 			</status>
 		</statuses>
 		<settings>
-			<setting name='sso' type='bool'>0</setting>
 			<setting name='authentication' type='string'>ntlm</setting>
+			<setting name='sso' type='bool'>0</setting>
 			<setting name='transport' type='string'>auto</setting>
 		</settings>
 		<settings ui='gtk-gaim'>
