@@ -53,10 +53,10 @@
 		<password>JKk5llNn</password>
 		<alias>Johnnie</alias>
 		<statuses>
-			<status type='available' name='Available' active='false'>
+			<status type='available' name='Available' active='true'>
 				<attributes/>
 			</status>
-			<status type='busy' name='Busy' active='true'>
+			<status type='busy' name='Busy' active='false'>
 				<attributes/>
 			</status>
 			<status type='do-not-disturb' name='Do not disturb' active='false'>
