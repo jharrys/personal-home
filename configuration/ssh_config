@@ -4,13 +4,13 @@ ControlPath ~/.ssh/connections/%r_%h_%p
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 IdentityFile ~/.ssh/github_rsa
 
-Host github.com
+Host mygithub.com
 User harris.johnny@gmail.com
 Port 443
 Hostname ssh.github.com
 ProxyCommand /usr/bin/corkscrew proxylp.ihc.com 8080 %h %p ~/.ssh/.corkscrew-auth
 
-Host bitbucket.org
+Host mybitbucket.org
 User harris.johnny@gmail.com
 Port 443
 HostName altssh.bitbucket.org
