@@ -50,20 +50,20 @@
 		<feature var='http://jabber.org/protocol/disco#items'/>
 		<feature var='http://jabber.org/protocol/disco#info'/>
 		<ext identifier='camera-v1'>
-			<feature var='http://jabber.org/protocol/disco#info'/>
 			<feature var='http://jabber.org/protocol/disco#items'/>
+			<feature var='http://jabber.org/protocol/disco#info'/>
 		</ext>
 		<ext identifier='voice-v1'>
-			<feature var='http://jabber.org/protocol/disco#info'/>
 			<feature var='http://jabber.org/protocol/disco#items'/>
+			<feature var='http://jabber.org/protocol/disco#info'/>
 		</ext>
 		<ext identifier='video-v1'>
-			<feature var='http://jabber.org/protocol/disco#info'/>
 			<feature var='http://jabber.org/protocol/disco#items'/>
+			<feature var='http://jabber.org/protocol/disco#info'/>
 		</ext>
 		<ext identifier='pmuc-v1'>
-			<feature var='http://jabber.org/protocol/disco#info'/>
 			<feature var='http://jabber.org/protocol/disco#items'/>
+			<feature var='http://jabber.org/protocol/disco#info'/>
 		</ext>
 	</client>
 	<client node='http://pidgin.im/' ver='71LAP/wlWGfun7j+Q4FCSSuAhQw=' hash='sha-1'>
@@ -92,6 +92,15 @@
 		<feature var='urn:xmpp:jingle:1'/>
 		<feature var='urn:xmpp:ping'/>
 		<feature var='urn:xmpp:time'/>
+	</client>
+	<client node='http://localhost.domain.com/xmpp/client/caps' ver='GrooVeIP-xmpp'>
+		<identity category='client' type='pc' name='GrooVeIP'/>
+		<feature var='http://jabber.org/protocol/disco#info'/>
+		<feature var='http://www.google.com/xmpp/protocol/voice/v1'/>
+		<ext identifier='voice-v1'>
+			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://www.google.com/xmpp/protocol/voice/v1'/>
+		</ext>
 	</client>
 	<client node='http://telepathy.freedesktop.org/caps' ver='s1b2fY+UJtbVgBTHL9eis2VlRt8=' hash='sha-1'>
 		<identity category='client' type='pc' name='Telepathy Gabble 0.16.7'/>
