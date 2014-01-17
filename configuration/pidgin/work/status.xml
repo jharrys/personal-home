@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <statuses version='1.0'>
-	<status name='Auto-Cached' transient='true' created='1387821600' lastused='1387821600' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389810601' lastused='1389810601' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-bonjour'>johnnie</account>
@@ -12,7 +12,7 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1387819800' lastused='1387819800' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389806821' lastused='1389806821' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-bonjour'>johnnie</account>
@@ -23,29 +23,7 @@
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1387818000' lastused='1387818000' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1387814401' lastused='1387814401' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>busy</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1387550564' lastused='1387550564' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389735001' lastused='1389735001' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
@@ -56,14 +34,14 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1387490400' lastused='1387490400' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389731402' lastused='1389731402' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1387393200' lastused='1387393200' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389724201' lastused='1389724201' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
@@ -74,32 +52,14 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1387386000' lastused='1387386000' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389722401' lastused='1389722401' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1387317600' lastused='1387317600' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1387314002' lastused='1387314003' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1387298658' lastused='1387298658' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389720601' lastused='1389720601' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
@@ -110,32 +70,14 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1387225801' lastused='1387225801' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389718801' lastused='1389718801' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1387213201' lastused='1387213201' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1387209601' lastused='1387209601' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386885600' lastused='1386885600' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389717001' lastused='1389717001' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
@@ -146,14 +88,14 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386882000' lastused='1386882000' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389716955' lastused='1389716955' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386788400' lastused='1386788400' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389634200' lastused='1389634200' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-bonjour'>johnnie</account>
@@ -164,14 +106,14 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386777930' lastused='1386777930' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389630647' lastused='1389630647' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386711000' lastused='1386711000' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389383119' lastused='1389383119' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
@@ -182,14 +124,14 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386707400' lastused='1386707400' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389376801' lastused='1389376801' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386280801' lastused='1386280801' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389130200' lastused='1389130200' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-bonjour'>johnnie</account>
@@ -200,14 +142,14 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386277201' lastused='1386277201' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389126600' lastused='1389126600' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386183911' lastused='1386183911' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389047400' lastused='1389047400' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
@@ -218,14 +160,14 @@
 			<state>available</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386180312' lastused='1386180312' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389043800' lastused='1389043800' usage_count='1'>
 		<state>unavailable</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>busy</state>
 		</substatus>
 	</status>
-	<status name='Auto-Cached' transient='true' created='1386180250' lastused='1386180250' usage_count='1'>
+	<status name='Auto-Cached' transient='true' created='1389027600' lastused='1389027600' usage_count='1'>
 		<state>available</state>
 		<substatus>
 			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
@@ -233,196 +175,20 @@
 		</substatus>
 		<substatus>
 			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386174154' lastused='1386174154' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386116100' lastused='1386116100' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386108900' lastused='1386108900' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386106200' lastused='1386106200' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386102600' lastused='1386102600' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386093600' lastused='1386093600' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386090000' lastused='1386090000' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386007201' lastused='1386007201' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386005400' lastused='1386005400' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386003600' lastused='1386003600' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1386000001' lastused='1386000001' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1385578800' lastused='1385578800' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1385568000' lastused='1385568000' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1385503200' lastused='1385503200' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1385499600' lastused='1385499600' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1385415000' lastused='1385415000' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1385411400' lastused='1385411400' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1385402400' lastused='1385402400' usage_count='1'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-bonjour'>johnnie</account>
-			<state>available</state>
-		</substatus>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1385400600' lastused='1385400600' usage_count='1'>
-		<state>unavailable</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>busy</state>
-		</substatus>
-	</status>
-	<status name='Auto-Cached' transient='true' created='1384982546' lastused='1385071200' usage_count='2'>
-		<state>available</state>
-		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
 			<state>available</state>
 		</substatus>
 	</status>
 	<status name='Normal' created='1357926702' lastused='1357927005' usage_count='4'>
 		<state>available</state>
 		<substatus>
-			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
-			<state>available</state>
-			<message>&lt;font face=&quot;Tahoma&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;He who can no longer pause to wonder and stand rapt in awe, is as good as dead...&lt;/font&gt; -Albert Einstein (Oh well I had a good run anyway)&lt;/font&gt;</message>
-		</substatus>
-		<substatus>
 			<account protocol='prpl-jabber'>harris.johnny@gmail.com</account>
 			<state>available</state>
 			<message>&lt;font face=&quot;Tahoma&quot;&gt;Hell was full ... So I came back! &amp;gt;:o&lt;/font&gt;</message>
+		</substatus>
+		<substatus>
+			<account protocol='prpl-sipe'>john.harris@imail.org,co\lpjharri</account>
+			<state>available</state>
+			<message>&lt;font face=&quot;Tahoma&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;He who can no longer pause to wonder and stand rapt in awe, is as good as dead...&lt;/font&gt; -Albert Einstein (Oh well I had a good run anyway)&lt;/font&gt;</message>
 		</substatus>
 	</status>
 </statuses>

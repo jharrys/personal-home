@@ -50,20 +50,20 @@
 		<feature var='http://jabber.org/protocol/disco#items'/>
 		<feature var='http://jabber.org/protocol/disco#info'/>
 		<ext identifier='camera-v1'>
-			<feature var='http://jabber.org/protocol/disco#items'/>
 			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://jabber.org/protocol/disco#items'/>
 		</ext>
 		<ext identifier='voice-v1'>
-			<feature var='http://jabber.org/protocol/disco#items'/>
 			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://jabber.org/protocol/disco#items'/>
 		</ext>
 		<ext identifier='video-v1'>
-			<feature var='http://jabber.org/protocol/disco#items'/>
 			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://jabber.org/protocol/disco#items'/>
 		</ext>
 		<ext identifier='pmuc-v1'>
-			<feature var='http://jabber.org/protocol/disco#items'/>
 			<feature var='http://jabber.org/protocol/disco#info'/>
+			<feature var='http://jabber.org/protocol/disco#items'/>
 		</ext>
 	</client>
 	<client node='http://pidgin.im/' ver='71LAP/wlWGfun7j+Q4FCSSuAhQw=' hash='sha-1'>
@@ -98,8 +98,52 @@
 		<feature var='http://jabber.org/protocol/disco#info'/>
 		<feature var='http://www.google.com/xmpp/protocol/voice/v1'/>
 		<ext identifier='voice-v1'>
-			<feature var='http://jabber.org/protocol/disco#info'/>
 			<feature var='http://www.google.com/xmpp/protocol/voice/v1'/>
+			<feature var='http://jabber.org/protocol/disco#info'/>
+		</ext>
+	</client>
+	<client node='http://www.apple.com/ichat/caps' ver='1000'>
+		<identity category='client' type='pc' name='imagent'/>
+		<feature var='http://www.apple.com/xmpp/message-attachments'/>
+		<feature var='apple:profile:transfer-extensions:rsrcfork'/>
+		<feature var='http://jabber.org/protocol/si/profile/file-transfer'/>
+		<feature var='apple:profile:efh-transfer'/>
+		<feature var='http://jabber.org/protocol/bytestreams'/>
+		<feature var='http://jabber.org/protocol/sipub'/>
+		<feature var='http://jabber.org/protocol/si'/>
+		<feature var='jabber:iq:version'/>
+		<feature var='http://jabber.org/protocol/disco#info'/>
+		<feature var='vcard-temp:x:update'/>
+		<feature var='http://jabber.org/protocol/xhtml-im'/>
+		<ext identifier='avavail'>
+			<feature var='apple:iq:vc:available'/>
+		</ext>
+		<ext identifier='rdserver'>
+			<feature var='apple:iq:rd:server'/>
+		</ext>
+		<ext identifier='video'>
+			<feature var='apple:iq:vc:video'/>
+		</ext>
+		<ext identifier='maudio'>
+			<feature var='apple:iq:vc:multiaudio'/>
+		</ext>
+		<ext identifier='rdmuxing'>
+			<feature var='apple:iq:rd:muxing'/>
+		</ext>
+		<ext identifier='rdclient'>
+			<feature var='apple:iq:rd:client'/>
+		</ext>
+		<ext identifier='avcap'>
+			<feature var='apple:iq:vc:capable'/>
+		</ext>
+		<ext identifier='audio'>
+			<feature var='apple:iq:vc:audio'/>
+		</ext>
+		<ext identifier='mvideo'>
+			<feature var='apple:iq:vc:multivideo'/>
+		</ext>
+		<ext identifier='ice'>
+			<feature var='apple:iq:vc:ice'/>
 		</ext>
 	</client>
 	<client node='http://telepathy.freedesktop.org/caps' ver='s1b2fY+UJtbVgBTHL9eis2VlRt8=' hash='sha-1'>
