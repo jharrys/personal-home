@@ -3,6 +3,10 @@
 # 
 # Creates all the missing symlinks for a Johnnie Harris new Windows 7 system 
 
+Write-Output "New system, you must run PowerShell as Administrator."
+Write-Output "Then 'set-executionpolicy unrestricted'"
+Write-Output "Ensure Powershell version 3.0 and Powershell Community Extensions 3.1"
+
 # ************************************************************** #
 #
 #		Set the Microsoft Windows versions
@@ -11,7 +15,7 @@
 
 $windows8Version = new-object 'Version' 6,2
 $windowsServer2012Version = new-object 'Version' 6,2
-$windows7Version = new-object 'Version' 6,1
+$windows7Version = new-object 'Version' 6,1,7601,65536
 $windowsServer2008R2Version = new-object 'Version' 6,1
 $windowsServer2008Version = new-object 'Version' 6,0
 $windowsVistaVersion = new-object 'Version' 6,0
@@ -27,6 +31,7 @@ $windowsVersion_3way = (Get-WmiObject -class Win32_OperatingSystem).Caption
 
 # Make sure we are Windows 7 (because all the symlinks have been coded to specific paths in Windows 7 that may change in newer releases)
 if ($windowsVersion_2way -ne ($windows7Version)) {
+	Write-Output "Version is reported as $windowsVersion_2way...looking for $windows7Version; not able to proceed"
 	exit
 }
 
@@ -45,7 +50,7 @@ $myCygwinHomeConfiguration = $myCygwinHome + '\configuration'
 $myHome = $Env:userprofile
 $myHomeConfiguration = $myHome + '\configuration'
 $myWin7Configuration = $myHome + '\configuration\win7'
-$myWinGitConfiguration = $myHome + '\configuration\win7'
+$myWinGitConfiguration = $myHome + '\configuration\git.windows'
 $myGtk20Configuration = $myHome + '\configuration\gtk-2.0'
 
 # verify that all containers exist and are, indeed, containers
@@ -65,25 +70,6 @@ if (!(Test-Path -Path $myHome -PathType Container)) {
 	exit
 }
 
-if (!(Test-Path -Path $myHomeConfiguration -PathType Container)) { 
-	Write-Output "$myHomeConfiguration does not exist or is of type file"
-	exit
-}
-
-if (!(Test-Path -Path $myWin7Configuration -PathType Container)) { 
-	Write-Output "$myWin7Configuration does not exist or is of type file"
-	exit
-}
-
-if (!(Test-Path -Path $myWinGitConfiguration -PathType Container)) { 
-	Write-Output "$myWinGitConfiguration does not exist or is of type file"
-	exit
-}
-
-if (!(Test-Path -Path $myGtk20Configuration -PathType Container)) { 
-	Write-Output "$myGtk20Configuration does not exist or is of type file"
-	exit
-}
 
 # ************************************************************** #
 #
@@ -103,10 +89,10 @@ $mySsh = $myCygwinHome + '\.ssh'
 $mySshConfig = $myHomeConfiguration + '\ssh_config'
 
 # Themes symlink target path (the real location)
-$myThemes = $myWin7Configuration + '\Themes')
+$myThemes = $myWin7Configuration + '\Themes'
 
 # Favorites - Explorer (actually called Links)
-$myLinks = $myWin7Configuration + '\Links')
+$myLinks = $myWin7Configuration + '\Links'
 
 # Libraries symlink target path (the real location)
 $myLibraries = $myWin7Configuration + '\Libraries'
@@ -132,6 +118,38 @@ $myGitIgnoreGlobal = $myWinGitConfiguration + '\.gitignore_global'
 $myGtkrc20File = $myGtk20Configuration + '\gtkrc-2.0'
 
 # ************************************************************** #
+#		Create link function
+#		sourcebase = full path of original directory or filename excluding sourcenode
+#		sourcenode = name of final directory or file
+#		targetpath = full path including name of directory or file
+#		targettype = String of either "Container" or "Leaf"
+# ************************************************************** #
+Function Set-Link($sourcebase, $sourcenode, $targetpath, $targettype) {
+	cd $sourcebase
+	$symlinkExists = Get-ReparsePoint $sourcenode
+	if(!$symlinkExists -and (Test-Path -Path $targetpath -PathType $targettype)) {
+		Try {
+			New-SymLink $sourcenode $targetpath
+		} Catch [System.Exception] {
+			Write-Output "Got error trying to create symbolic link $targetpath at $sourcebase\$sourcenode"
+		}
+		
+	} else {
+		Write-Output "Unable to create symbolic link for $targetpath at $sourcebase\$sourcenode"
+	}
+}
+
+Function Create-Node($base, $node, $type) {
+	cd $base
+	if(!(Test-Path -Path $node -PathType $type)) {
+		Write-Output "Creating $base\$node"
+		mkdir $node
+	} else {
+		Write-Output "$base\$node already exists."
+	}
+}
+
+# ************************************************************** #
 #
 #		Using the defined variables above for the real locations
 #		of each configuration file and/or directory, create the
@@ -139,191 +157,33 @@ $myGtkrc20File = $myGtk20Configuration + '\gtkrc-2.0'
 #
 # ************************************************************** #
 
-# !!!!!! SET THIS UP FIRST! - most of the configurations rely on this one
-cd $myHome
-$symlinkExists = Get-ReparsePoint configuration
-if (!$symlinkExists -and (Test-Path -Path $myCygwinHomeConfiguration -PathType Container )) {
-	New-SymLink configuration $myCygwinHomeConfiguration
-}
 
-# *** bin
-cd $myHome
-$symlinkExists = Get-ReparsePoint bin
-if (!$symlinkExists -and (Test-Path -Path $myBin -PathType Container )) {
-	New-SymLink bin $myBin
-}
+Set-Link $script:myHome "configuration" $script:myCygwinHomeConfiguration "Container"			# !!!!!! SET THIS UP FIRST! - most of the configurations rely on this one
+Set-Link $script:myHome "bin" $script:myBin "Container"								#  bin
+Set-Link $script:myHome ".ssh" $script:mySsh "Container"								# ssh
+Set-Link "$script:myHome\.ssh" "config" $script:mySshConfig "Leaf" 						# ssh_config
+Set-Link $script:myHome "Links" $script:myLinks "Container"								# explorer favorites (Links)
+Set-Link $script:myHome ".gitconfig" $script:myGitConfig "Leaf"							# Git Config file
+Set-Link $script:myHome ".gitignore" $script:myGitIgnore "Leaf"							# Git Ignore file
+Set-Link $script:myHome ".gitignore_global" $script:myGitIgnoreGlobal "Leaf"					# Git Ignore Global file
+Set-Link "$Env:localappdata\Microsoft\Windows" "Themes"	$script:myThemes "Container"			# Themes
+Set-Link "Env:appdata\Microsoft\Windows" "Libraries" $script:myLibraries "Container" 				# Libraries
+Set-Link "$script:myHome\Pictures" "Wallpaper" $script:myWallPaper "Container"				# Wallpaper
+Set-Link "$script:myHome\Documents" "Icons" $script:myIcons "Container"					# Icons
+Set-Link "$script:myHome\Documents" "WindowsPowerShell" $script:myWindowsPowerShell "Container"	# WindowsPowerShell
+Set-Link $Env:appdata "Sublime Text 2" $script:mySublimeText2 "Container"					# Sublime Text 2
+Set-Link $script:myHome ".gtkrc-2.0" $script:myGtkrc20File "Leaf"							# Gtk-2.0 personal resource file
+Set-Link "$script:myHome\configuration\pidgin\home" "gtkrc-2.0" $script:myGtkrc20File "Leaf"		# Gtk-2.0 personal resource file for home
+Set-Link "$script:myHome\configuration\pidgin\work" "gtkrc-2.0" $script:myGtkrc20File "Leaf"			# Gtk-2.0 personal resource file for work
+Create-Node $script:myHome "Mount" "Container"									# Create my Mount directory
+Create-Node "$script:myHome\Documents" "Applications\Cyginstall" "Container"					# Create my Cyginstall directory
+Create-Node "$script:myHome\Documents" "Applications\SpringSource" "Container"				# Create my SpringSource directory
+Create-Node "$script:myHome\Documents" "Google Drive" "Container"						# Create my Google Drive directory
+Create-Node "$script:myHome\Documents" "MailArchives" "Container"						# Create my MailArchives directory
+Create-Node "$script:myHome\Documents" "OneNote Notebooks" "Container"					# Create my OneNote Notebooks directory
+Create-Node "$script:myHome\Documents" "SourceControl" "Container"						# Create my SourceControl directory
+Create-Node "$script:myHome\Documents" "Sysinternal Tools" "Container"					# Create my Sysinternal Tools directory
+Create-Node "$script:myHome\Documents" "VirtualBox VMs" "Container"						# Create my VirtualBox VMs directory
+Create-Node "$script:myHome\Documents" "Enterprise Solutions Architecture" "Container"			# Create my Enterprise Solutions Architecture directory
 
-# *** ssh
-cd $myHome
-$symlinkExists = Get-ReparsePoint .ssh
-if (!$symlinkExists -and (Test-Path -Path $mySsh -PathType Container )) {
-	New-SymLink .ssh $mySsh
-}
-
-cd .ssh
-$symlinkExists = Get-ReparsePoint config
-if (!$symlinkExists -and (Test-Path -Path $mySshConfig -PathType Leaf )) {
-	New-SymLink config $mySshConfig
-}
-
-# *** explorer favorites (Links)
-cd $myHome
-$symlinkExists = Get-ReparsePoint Links
-if (!$symlinkExists -and (Test-Path -Path $myLinks -PathType Container )) {
-	New-SymLink Links $myLinks
-}
-
-# *** Git stuff
-cd $myHome
-$symlinkExists = Get-ReparsePoint .gitconfig
-if (!$symlinkExists -and (Test-Path -Path $myGitConfig -PathType Leaf )) {
-	New-Hardlink .gitconfig $myGitConfig
-}
-
-$symlinkExists = Get-ReparsePoint .gitignore
-if (!$symlinkExists -and (Test-Path -Path $myGitIgnore -PathType Leaf )) {
-	New-Hardlink .gitignore $myGitIgnore
-}
-
-$symlinkExists = Get-ReparsePoint .gitignore_global
-if (!$symlinkExists -and (Test-Path -Path $myGitIgnoreGlobal -PathType Leaf )) {
-	New-Hardlink .gitignore_global $myGitIgnoreGlobal
-}
-
-# *** Themes
-cd $Env:localappdata
-cd 'Microsoft\Windows'
-$symlinkExists = Get-ReparsePoint Themes
-if (!$symlinkExists -and (Test-Path -Path $myThemes -PathType Container )) {
-	mv 'Themes' 'Original-Themes'
-	New-SymLink Themes $myThemes
-}
-
-# *** Libraries
-cd $Env:appdata
-cd 'Microsoft\Windows'
-$symlinkExists = Get-ReparsePoint Libraries
-if (!$symlinkExists -and (Test-Path -Path $myLibraries -PathType Container )) {
-	mv 'Libraries' 'Original-Libraries'
-	New-SymLink Libraries $myLibraries
-}
-
-# *** Wallpaper
-cd $myHome
-cd 'Pictures'
-$symlinkExists = Get-ReparsePoint Wallpaper
-if (!$symlinkExists -and (Test-Path -Path $myWallPaper -PathType Container )) {
-	New-SymLink Wallpaper $myWallPaper
-}
-
-# *** Icons
-cd $myHome
-cd 'Documents'
-$symlinkExists = Get-ReparsePoint Icons
-if (!$symlinkExists -and (Test-Path -Path $myIcons -PathType Container )) {
-	New-SymLink Icons $myIcons
-}
-
-# *** WindowsPowerShell
-cd $myHome
-cd 'Documents'
-$symlinkExists = Get-ReparsePoint WindowsPowerShell
-if (!$symlinkExists -and (Test-Path -Path $myWindowsPowerShell -PathType Container )) {
-	New-SymLink WindowsPowerShell $myWindowsPowerShell
-}
-
-# *** Sublime Text 2
-cd $Env:appdata
-$symlinkExists = Get-ReparsePoint 'Sublime Text 2'
-if (!symlinkExists -and (Test-Path -Path $mySublimeText2 -PathType Container)) {
-	New-SymLink 'Sublime Text 2' $mySublimeText2
-}
-
-# *** Gtk-2.0 personal resource file
-cd $myHome
-$symlinkExists = Get-ReparsePoint '.gtkrc-2.0'
-if (!symlinkExists -and (Test-Path -Path $myGtkrc20File -PathType Leaf)) {
-	New-SymLink '.gtkrc-2.0' $myGtkrc20File
-}
-
-cd $myHome
-cd 'configuration\pidgin\home'
-$symlinkExists = Get-ReparsePoint 'gtkrc-2.0'
-if (!symlinkExists -and (Test-Path -Path $myGtkrc20File -PathType Leaf)) {
-	New-SymLink 'gtkrc-2.0' $myGtkrc20File
-}
-
-cd $myHome
-cd 'configuration\pidgin\work'
-$symlinkExists = Get-ReparsePoint 'gtkrc-2.0'
-if (!symlinkExists -and (Test-Path -Path $myGtkrc20File -PathType Leaf)) {
-	New-SymLink 'gtkrc-2.0' $myGtkrc20File
-}
-
-# *** Create my other standard directories
-cd $myHome
-if (!(Test-Path -Path Mount -PathType Container)) { 
-	Write-Output "Creating $myHome\Mount"
-	mkdir Mount
-}
-
-cd $myHome
-cd 'Documents'
-if (!(Test-Path -Path 'Applications\Cyginstall' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\Applications\Cyginstall"
-	mkdir 'Applications\Cyginstall'
-}
-
-if (!(Test-Path -Path 'Applications\SpringSource' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\Applications\SpringSource"
-	mkdir 'Applications\SpringSource'
-}
-
-cd $myHome
-cd 'Documents'
-if (!(Test-Path -Path 'Google Drive' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\Google Drive"
-	mkdir 'Google Drive'
-}
-
-cd $myHome
-cd 'Documents'
-if (!(Test-Path -Path 'MailArchives' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\MailArchives"
-	mkdir 'MailArchives'
-}
-
-cd $myHome
-cd 'Documents'
-if (!(Test-Path -Path 'OneNote Notebooks' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\OneNote Notebooks"
-	mkdir 'OneNote Notebooks'
-}
-
-cd $myHome
-cd 'Documents'
-if (!(Test-Path -Path 'SourceControl' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\SourceControl"
-	mkdir 'SourceControl'
-}
-
-cd $myHome
-cd 'Documents'
-if (!(Test-Path -Path 'Sysinternal Tools' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\Sysinternal Tools"
-	mkdir 'Sysinternal Tools'
-}
-
-cd $myHome
-cd 'Documents'
-if (!(Test-Path -Path 'VirtualBox VMs' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\VirtualBox VMs"
-	mkdir 'VirtualBox VMs'
-}
-
-cd $myHome
-cd 'Documents'
-if (!(Test-Path -Path 'Enterprise Solutions Architecture' -PathType Container)) { 
-	Write-Output "Creating $myHome\Documents\Enterprise Solutions Architecture"
-	mkdir 'Enterprise Solutions Architecture'
-}
+Write-Output "Finished."
