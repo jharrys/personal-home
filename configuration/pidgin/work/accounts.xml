@@ -53,13 +53,13 @@
 		<password>JKk5llNn</password>
 		<alias>Johnnie</alias>
 		<statuses>
-			<status type='available' name='Available' active='true'>
+			<status type='available' name='Available' active='false'>
 				<attributes/>
 			</status>
 			<status type='busy' name='Busy' active='false'>
 				<attributes/>
 			</status>
-			<status type='do-not-disturb' name='Do not disturb' active='false'>
+			<status type='do-not-disturb' name='Do not disturb' active='true'>
 				<attributes/>
 			</status>
 			<status type='on-the-phone' name='In a call' active='false'>
@@ -114,7 +114,7 @@
 			<setting name='buddy_icon_timestamp' type='int'>0</setting>
 		</settings>
 		<settings ui='gtk-gaim'>
-			<setting name='auto-login' type='bool'>1</setting>
+			<setting name='auto-login' type='bool'>0</setting>
 		</settings>
 		<current_error/>
 	</account>

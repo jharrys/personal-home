@@ -27,7 +27,7 @@
 			</pref>
 		</pref>
 		<pref name='savedstatus'>
-			<pref name='default' type='int' value='1389810601'/>
+			<pref name='default' type='int' value='1391197680'/>
 			<pref name='startup' type='int' value='0'/>
 			<pref name='startup_current_status' type='bool' value='1'/>
 			<pref name='idleaway' type='int' value='1388165803'/>
@@ -220,7 +220,7 @@
 				<pref name='disable-typing-notification' type='bool' value='0'/>
 			</pref>
 			<pref name='relnot'>
-				<pref name='last_check' type='int' value='1389974621'/>
+				<pref name='last_check' type='int' value='1391121343'/>
 			</pref>
 			<pref name='timestamp'>
 				<pref name='interval' type='int' value='120000'/>
@@ -246,7 +246,7 @@
 				</pref>
 				<pref name='winprefs'>
 					<pref name='dblist_dockable' type='bool' value='1'/>
-					<pref name='dblist_docked' type='bool' value='1'/>
+					<pref name='dblist_docked' type='bool' value='0'/>
 					<pref name='dblist_height' type='int' value='522'/>
 					<pref name='dblist_side' type='int' value='2'/>
 					<pref name='blist_on_top' type='int' value='0'/>
