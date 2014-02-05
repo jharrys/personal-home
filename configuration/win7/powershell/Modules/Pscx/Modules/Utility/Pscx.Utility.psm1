@@ -114,6 +114,13 @@ filter New-HashObject {
 .PARAMETER FalseBlock
     This block gets evaluated and its contents are returned from the function if the Conditon
     scriptblock evaluates to $false.
+.PARAMETER InputObject
+    Specifies the input object. Invoke-Ternary injects the InputObject into each scriptblock
+    provided via the Condition, TrueBlock and FalseBlock parameters.
+.EXAMPLE
+    C:\PS> $toolPath = ?: {[IntPtr]::Size -eq 4} {"$env:ProgramFiles(x86)\Tools"} {"$env:ProgramFiles\Tools"}}
+    Each input number is evaluated to see if it is > 5.  If it is then "Greater than 5" is
+    displayed otherwise "Less than or equal to 5" is displayed.
 .EXAMPLE
     C:\PS> 1..10 | ?: {$_ -gt 5} {"Greater than 5";$_} {"Less than or equal to 5";$_}
     Each input number is evaluated to see if it is > 5.  If it is then "Greater than 5" is
@@ -122,18 +129,42 @@ filter New-HashObject {
     Aliases:  ?:
     Author:   Karl Prosser
 #>
-filter Invoke-Ternary {
-    param([scriptblock]$Condition  = $(throw "Parameter '-condition' (position 1) is required"), 
-          [scriptblock]$TrueBlock  = $(throw "Parameter '-trueBlock' (position 2) is required"), 
-          [scriptblock]$FalseBlock = $(throw "Parameter '-falseBlock' (position 3) is required"))
+function Invoke-Ternary { 
+    param(
+        [Parameter(Mandatory, Position=0)]
+        [scriptblock]
+        $Condition,
 
-    $module = $ExecutionContext.SessionState.Module;
-    
-    if (& $module.NewBoundScriptBlock($Condition)) { 
-        & $module.NewBoundScriptBlock($TrueBlock)
-    } 
-    else { 
-        & $module.NewBoundScriptBlock($FalseBlock)
+        [Parameter(Mandatory, Position=1)]
+        [scriptblock]
+        $TrueBlock,
+
+        [Parameter(Mandatory, Position=2)]
+        [scriptblock]
+        $FalseBlock,
+
+        [Parameter(ValueFromPipeline, ParameterSetName='InputObject')]
+        [psobject]
+        $InputObject
+    ) 
+        
+    Process { 
+        if ($pscmdlet.ParameterSetName -eq 'InputObject') {
+            Foreach-Object $Condition -input $InputObject | Foreach { 
+                if ($_) { 
+                    Foreach-Object $TrueBlock -InputObject $InputObject 
+                }
+                else {
+                    Foreach-Object $FalseBlock -InputObject $InputObject 
+                }
+            }
+        }
+        elseif (&$Condition) {
+            &$TrueBlock
+        } 
+        else {
+            &$FalseBlock
+        }
     }
 }
 
@@ -155,6 +186,9 @@ filter Invoke-Ternary {
 .PARAMETER AlternateExpr
     This block gets evaluated and its contents are returned from the function if the Conditon
     scriptblock evaluates to $true.
+.PARAMETER InputObject
+    Specifies the input object. Invoke-NullCoalescing injects the InputObject into each 
+    scriptblock provided via the PrimaryExpr and AlternateExpr parameters.
 .EXAMPLE
     C:\PS> $LogDir = ?? {$env:LogDir} {"$env:windir\System32\LogFiles"}
     $LogDir is set to the value of $env:LogDir unless it doesn't exist, in which case it 
@@ -163,23 +197,51 @@ filter Invoke-Ternary {
     Aliases:  ??
     Author:   Keith Hill
 #>
-filter Invoke-NullCoalescing {
-    param([scriptblock]$PrimaryExpr   = $(throw "Parameter '-primaryExpr' (position 1) required"), 
-          [scriptblock]$AlternateExpr = $(throw "Parameter '-alternateExpr' (position 2) required"))
-          
-    $module = $ExecutionContext.SessionState.Module;
+function Invoke-NullCoalescing { 
+    param(
+        [Parameter(Mandatory, Position=0)]
+        [AllowNull()]
+        [scriptblock]
+        $PrimaryExpr,
 
-    if ($primaryExpr -ne $null) {
-        $result = & $module.NewBoundScriptBlock($primaryExpr)
-        if ($result -ne $null -and "$result" -ne '') {
-            $result
+        [Parameter(Mandatory, Position=1)]
+        [scriptblock]
+        $AlternateExpr,
+
+        [Parameter(ValueFromPipeline, ParameterSetName='InputObject')]
+        [psobject]
+        $InputObject
+    ) 
+        
+    Process { 
+        if ($pscmdlet.ParameterSetName -eq 'InputObject') {
+            if ($PrimaryExpr -eq $null) {
+                Foreach-Object $AlternateExpr -InputObject $InputObject
+            }
+            else {
+                $result = Foreach-Object $PrimaryExpr -input $InputObject
+                if ($result -eq $null) {
+                    Foreach-Object $AlternateExpr -InputObject $InputObject
+                }
+                else {
+                    $result
+                }
+            }
         }
         else {
-            & $module.NewBoundScriptBlock($alternateExpr)
+            if ($PrimaryExpr -eq $null) {
+                &$AlternateExpr
+            }
+            else {
+                $result = &$PrimaryExpr
+                if ($result -eq $null) {
+                    &$AlternateExpr
+                }
+                else {
+                    $result
+                }
+            }
         }
-    }
-    else {
-        & $module.NewBoundScriptBlock($alternateExpr)
     }
 }
 
@@ -189,7 +251,7 @@ filter Invoke-NullCoalescing {
 #>
 function help
 {
-    [CmdletBinding(DefaultParameterSetName='AllUsersView')]
+    [CmdletBinding(DefaultParameterSetName='AllUsersView', HelpUri='http://go.microsoft.com/fwlink/?LinkID=113316')]
     param(
         [Parameter(Position=0, ValueFromPipelineByPropertyName=$true)]
         [System.String]
@@ -198,6 +260,7 @@ function help
         [System.String]
         ${Path},
 
+        [ValidateSet('Alias','Cmdlet','Provider','General','FAQ','Glossary','HelpFile','ScriptCommand','Function','Filter','ExternalScript','All','DefaultHelp','Workflow')]
         [System.String[]]
         ${Category},
 
@@ -210,7 +273,7 @@ function help
         [System.String[]]
         ${Role},
 
-        [Parameter(ParameterSetName='DetailedView')]
+        [Parameter(ParameterSetName='DetailedView', Mandatory=$true)]
         [Switch]
         ${Detailed},
 
@@ -218,16 +281,21 @@ function help
         [Switch]
         ${Full},
 
-        [Parameter(ParameterSetName='Examples')]
+        [Parameter(ParameterSetName='Examples', Mandatory=$true)]
         [Switch]
         ${Examples},
 
-        [Parameter(ParameterSetName='Parameters')]
+        [Parameter(ParameterSetName='Parameters', Mandatory=$true)]
         [System.String]
         ${Parameter},
 
-        [Switch]
-        ${Online}
+       [Parameter(ParameterSetName='Online', Mandatory=$true)]
+       [switch]
+       ${Online},
+
+       [Parameter(ParameterSetName='ShowWindow', Mandatory=$true)]
+       [switch]
+       ${ShowWindow}
     )
 
     $outputEncoding=[System.Console]::OutputEncoding
@@ -510,7 +578,7 @@ function Invoke-Elevated
  
     $startProcessArgs = @{
         FilePath     = "PowerShell.exe"
-        ArgumentList = "-NoExit", "-Command", "& {Set-Location $pwd}"
+        ArgumentList = "-NoExit", "-Command", "& {Set-Location '$pwd'}"
         Verb         = "runas"
         PassThru     = $true
         WorkingDir   = $pwd
@@ -523,19 +591,31 @@ function Invoke-Elevated
     }
     elseif ($args[0] -is [Scriptblock]) 
     {
-        $script  = $args[0]
-        $cmdArgs = $args[1..$($args.Length)]
-        $startProcessArgs['ArgumentList'] = "-NoExit", "-Command", "& {Set-Location $pwd; $script}"
-        if ($cmdArgs.Count -gt 0)
+        $script = $args[0]
+        if ($script -match '(?si)\s*param\s*\(')
         {
+            $startProcessArgs['ArgumentList'] = "-NoExit", "-Command", "& {$script}"
+        }
+        else
+        {
+            $startProcessArgs['ArgumentList'] = "-NoExit", "-Command", "& {Set-Location '$pwd'; $script}"
+        }
+        [string[]]$cmdArgs = @()
+        if ($args.Count -gt 1)
+        {
+            $cmdArgs = $args[1..$($args.Length-1)]
             $startProcessArgs['ArgumentList'] += $cmdArgs
         }
         Write-Debug "  Starting PowerShell with scriptblock: {$script} and args: $cmdArgs"
     }
     else
     {
-        $app     = Get-Command $args[0] | Select -First 1 | ? {$_.CommandType -eq 'Application'}
-        $cmdArgs = $args[1..$($args.Length)]
+        $app = Get-Command $args[0] | Select -First 1 | Where {$_.CommandType -eq 'Application'}
+        [string[]]$cmdArgs = @()
+        if ($args.Count -gt 1)
+        {
+            $cmdArgs = $args[1..$($args.Length-1)]
+        }
         if ($app) {
             $startProcessArgs['FilePath'] = $app.Path
             if ($cmdArgs.Count -eq 0)
@@ -550,7 +630,7 @@ function Invoke-Elevated
         }
         else {
             $poshCmd = $args[0]
-            $startProcessArgs['ArgumentList'] = "-NoExit", "-Command", "& {Set-Location $pwd; $poshCmd $cmdArgs}"
+            $startProcessArgs['ArgumentList'] = "-NoExit", "-Command", "& {Set-Location '$pwd'; $poshCmd $cmdArgs}"
             Write-Debug "  Starting PowerShell command $poshCmd with args: $cmdArgs"
         }
     }
@@ -991,7 +1071,7 @@ function Get-ViewDefinition
             for ($i = 0 ; $i -lt $arrFormatFiles.count ; $i++)
             {
                 $formatFile = $arrFormatFiles[$i]
-                $path		= $arrFormatFilePaths[$i]
+                $path        = $arrFormatFilePaths[$i]
                 foreach ($view in $formatFile.Configuration.ViewDefinitions.View)
                 {
                     if ($typeName)
@@ -1327,7 +1407,7 @@ function Get-ScreenHtml
                                 
                         $char = [System.Web.HttpUtility]::HtmlEncode($current.Character)
                         $out.Append($char) | out-null
-                        $prev =	$current	
+                        $prev =    $current    
                     }
                 }
                 
@@ -1947,26 +2027,41 @@ function Show-Tree
                - FIXED miscalculation of shortest unique name (aliases count as unique names),
                  this caused some parameter names to be thrown out (like "Object")
                - CHANGED code style cleanup
+  Version 2.7  - November 28, 2012 - By Joel Bennett http://poshcode.org/3794
+               - Added * indicator on default parameter set.
+  Version 2.8  - August 27, 2013 - By Joel Bennett (This Version)
+               - Added SetName filter 
+               - Add * on the short name in the aliases list (to distinguish it from real aliases)
+               - FIXED PowerShell 4 Bugs:
+               - Added PipelineVariable to CommonParameters
+               - FIXED PowerShell 3 Bugs:
+               - Don't add to the built-in Aliases anymore, it changes the command!
 #>
 function Get-Parameter {
-    [CmdletBinding()]
-    param(
+    [CmdletBinding(DefaultParameterSetName="ParameterName")]
+    param ( 
+        # The name of the command to get parameters for
         [Parameter(Position = 1, Mandatory = $true, ValueFromPipelineByPropertyName = $true)]
-        [Alias("Name")]
         [string[]]$CommandName,
 
-        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
+        # The parameter name to filter by (allows Wilcards)
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName=$true, ParameterSetName="FilterNames")]
         [string[]]$ParameterName = "*",
 
+        # The ParameterSet name to filter by (allows wildcards)
+        [Parameter(ValueFromPipelineByPropertyName=$true, ParameterSetName="FilterSets")]
+        [string[]]$SetName = "*",
+
+        # The name of the module which contains the command (this is for scoping)
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         $ModuleName,
 
-        [switch]
-        $Force
+        # Forces including the CommonParameters in the output
+        [switch]$Force
     )
 
     begin {
-        $PropertySet = @( "Name",
+            $PropertySet = @( "Name",
             @{n="Position";e={if($_.Position -lt 0){"Named"}else{$_.Position}}},
             "Aliases", 
             @{n="Short";e={$_.Name}},
@@ -1977,8 +2072,8 @@ function Get-Parameter {
             @{n="Provider";e={$_.DynamicProvider}},
             @{n="ValueFromPipeline";e={$_.ValueFromPipeline}},
             @{n="ValueFromPipelineByPropertyName";e={$_.ValueFromPipelineByPropertyName}}
-        )
-        function Join-Object {
+            )
+            function Join-Object {
             Param(
                 [Parameter(Position=0)]
                 $First
@@ -2001,10 +2096,10 @@ function Get-Parameter {
 
     process {
         foreach ($cmd in $CommandName) {
-        if ($ModuleName) {$cmd = "$ModuleName\$cmd"}
-        $commands = @(Get-Command $cmd)
+            if ($ModuleName) {$cmd = "$ModuleName\$cmd"}
+            $commands = @(Get-Command $cmd)
 
-        foreach ($command in $commands) {
+            foreach ($command in $commands) {
             # resolve aliases (an alias can point to another alias)
             while ($command.CommandType -eq "Alias") {
                 $command = @(Get-Command ($command.definition))[0]
@@ -2019,57 +2114,73 @@ function Get-Parameter {
 
                 [Array]$MoreParameters = (Get-Command $command -Args $drive).Parameters.Values
                 [Array]$Dynamic = $MoreParameters | Where-Object {$_.IsDynamic}
-                foreach ($p in $MoreParameters | Where-Object{!$Parameters.ContainsKey($_.Name)}) {$Parameters.($p.Name) = $p}
+                foreach ($p in $MoreParameters | Where-Object{!$Parameters.ContainsKey($_.Name)}) {$Parameters.($p.Name) = $p | Select *}
                     # Write-Verbose "Drive: $Drive | Parameters: $($Parameters.Count)"
                     if ($dynamic) {
                         foreach ($d in $dynamic) {
-                            if (Get-Member -InputObject $Parameters.($d.Name) -Name DynamicProvider) {
-                                Write-Debug ("ADD:" + $d.Name + " " + $provider.Name)
-                                $Parameters.($d.Name).DynamicProvider += $provider.Name
-                            } else {
-                                Write-Debug ("CREATE:" + $d.Name + " " + $provider.Name)
-                                $Parameters.($d.Name) = $Parameters.($d.Name) | Add-Member NoteProperty DynamicProvider @($provider.Name) -Passthru
-                            }
+                        if (Get-Member -InputObject $Parameters.($d.Name) -Name DynamicProvider) {
+                            Write-Debug ("ADD:" + $d.Name + " " + $provider.Name)
+                            $Parameters.($d.Name).DynamicProvider += $provider.Name
+                        } else {
+                            Write-Debug ("CREATE:" + $d.Name + " " + $provider.Name)
+                            $Parameters.($d.Name) = $Parameters.($d.Name) | Select *, @{ n="DynamicProvider";e={ @($provider.Name) } }
                         }
+                        } 
                     }
                 }
 
                 ## Calculate the shortest distinct parameter name -- do this BEFORE removing the common parameters or else.
                 $Aliases = $Parameters.Values | Select-Object -ExpandProperty Aliases  ## Get defined aliases
+                $ParameterNames = $Parameters.Keys + $Aliases
                 foreach ($p in $($Parameters.Keys)) {
-                    $shortest = "^"
-                    foreach ($char in [char[]]$p) {             
-                        $shortest += $char
-                        $Matches = (($Parameters.Keys + $Aliases) -match $Shortest).Count
-                        Write-Debug "$($shortest.SubString(1)) $Matches"
-                        if ($Matches -eq 1) {
-                            $Parameters.$p = $Parameters.$p | Add-Member NoteProperty Aliases ($Parameters.$p.Aliases + @($shortest.SubString(1).ToLower($PSUICulture))) -Force -Passthru
+                    $short = "^"
+                    $aliases = @($p) + @($Parameters.$p.Aliases) | sort { $_.Length }
+                    $shortest = "^" + @($aliases)[0]
+
+                    foreach($name in $aliases) {
+                        $short = "^"
+                        foreach ($char in [char[]]$name) {         
+                        $short += $char
+                        $mCount = ($ParameterNames -match $short).Count
+                        if ($mCount -eq 1 ) {
+                            if($short.Length -lt $shortest.Length) {
+                                $shortest = $short
+                            }
                             break
                         }
+                        }
+                    }
+                    if($shortest.Length -lt @($aliases)[0].Length +1){
+                        # Overwrite the Aliases with this new value
+                        $Parameters.$p = $Parameters.$p | Add-Member NoteProperty Aliases ($Parameters.$p.Aliases + @("$($shortest.SubString(1))*")) -Force -Passthru
                     }
                 }
 
-                Write-Verbose "Parameters: $($Parameters.Count)`n $($Parameters | ft | out-string)"
-
+                # Write-Verbose "Parameters: $($Parameters.Count)`n $($Parameters | ft | out-string)"
+                $CommonParameters = "ErrorAction", "WarningAction", "Verbose", "Debug", "ErrorVariable", "WarningVariable", "OutVariable", "OutBuffer", "PipelineVariable"
+    
                 foreach ($paramset in @($command.ParameterSets | Select-Object -ExpandProperty "Name")) {
+                    $paramset = $paramset | Add-Member -Name IsDefault -MemberType NoteProperty -Value ($paramset -eq $command.DefaultParameterSet) -PassThru
                     foreach ($parameter in $Parameters.Keys | Sort-Object) {
-                        Write-Verbose "Parameter: $Parameter"
-                        if (!$Force -and ($Parameters.$Parameter.Aliases -match '^(vb|db|ea|wa|ev|wv|ov|ob|wi|cf)$')) {continue}
+                        # Write-Verbose "Parameter: $Parameter"
+                        if (!$Force -and ($CommonParameters -contains $Parameter)) {continue}
                         if ($Parameters.$Parameter.ParameterSets.ContainsKey($paramset) -or $Parameters.$Parameter.ParameterSets.ContainsKey("__AllParameterSets")) {
-                            if ($Parameters.$Parameter.ParameterSets.ContainsKey($paramset)) {
-                                $output = Join-Object $Parameters.$Parameter $Parameters.$Parameter.ParameterSets.$paramSet 
-                            } else {
-                                $output = Join-Object $Parameters.$Parameter $Parameters.$Parameter.ParameterSets.__AllParameterSets
-                            }
-
-                            Write-Output $Output | Select-Object $PropertySet | ForEach-Object {
-                                    $null = $_.PSTypeNames.Insert(0,"System.Management.Automation.ParameterMetadata")
-                                    $null = $_.PSTypeNames.Insert(0,"System.Management.Automation.ParameterMetadataEx")
-                                    Write-Verbose "$(($_.PSTypeNames.GetEnumerator()) -join ", ")"
-                                    $_
-                                } |
-                                Add-Member ScriptMethod ToString { $this.Name } -Force -Passthru |
-                                Where-Object {$(foreach($pn in $ParameterName) {$_ -like $Pn}) -contains $true}
+                        if ($Parameters.$Parameter.ParameterSets.ContainsKey($paramset)) {
+                            $output = Join-Object $Parameters.$Parameter $Parameters.$Parameter.ParameterSets.$paramSet 
+                        } else {
+                            $output = Join-Object $Parameters.$Parameter $Parameters.$Parameter.ParameterSets.__AllParameterSets
+                        }
+    
+                        Write-Output $Output | Select-Object $PropertySet | ForEach-Object {
+                                $null = $_.PSTypeNames.Insert(0,"System.Management.Automation.ParameterMetadata")
+                                $null = $_.PSTypeNames.Insert(0,"System.Management.Automation.ParameterMetadataEx")
+                                # Write-Verbose "$(($_.PSTypeNames.GetEnumerator()) -join ", ")"
+                                $_
+                            } |
+                            Add-Member ScriptMethod ToString { $this.Name } -Force -Passthru |
+                            Where-Object {$(foreach($pn in $ParameterName) {$_ -like $Pn}) -contains $true} |
+                            Where-Object {$(foreach($sn in $SetName) {$_.ParameterSet -like $sn}) -contains $true}
+    
                         }
                     }
                 }
@@ -2090,16 +2201,16 @@ function Get-Parameter {
     Pop-EnvironmentBlock.
 .PARAMETER VisualStudioVersion
     The version of Visual Studio to import environment variables for. Valid 
-    values are 2008, 2010 and 2012.
+    values are 2008, 2010, 2012 and 2013
 .PARAMETER Architecure
     Selects the desired architecture to configure the environment for. 
-	Defaults to x86 if running in 32-bit PowerShell, otherwise defaults to 
-	amd64.
+    Defaults to x86 if running in 32-bit PowerShell, otherwise defaults to 
+    amd64.  Other valid values are: arm, x86_arm, x86_amd64
 .EXAMPLE
     C:\PS> Import-VisualStudioVars 2010
 
     Sets up the environment variables to use the VS 2010 compilers. Defaults 
-	to x86 if running in 32-bit PowerShell, otherwise defaults to amd64.
+    to x86 if running in 32-bit PowerShell, otherwise defaults to amd64.
 .EXAMPLE
     C:\PS> Import-VisualStudioVars 2012 arm
 
@@ -2109,13 +2220,13 @@ function Import-VisualStudioVars
 {
     param
     (
-        [Parameter(Mandatory, Position = 0)]
-        [ValidateSet('2008', '2010', '2012')]
+        [Parameter(Mandatory = $true, Position = 0)]
+        [ValidateSet('2008', '2010', '2012', '2013')]
         [string]
         $VisualStudioVersion,
 
-	[Parameter(Position = 1)]
-	[string]
+    [Parameter(Position = 1)]
+    [string]
         $Architecture = $(if ($Pscx:Is64BitProcess) {'amd64'} else {'x86'})
     )
  
@@ -2138,6 +2249,11 @@ function Import-VisualStudioVars
                 Invoke-BatchFile "${env:VS110COMNTOOLS}..\..\VC\vcvarsall.bat" $Architecture
             }
  
+            '2013' {
+                Push-EnvironmentBlock -Description "Before importing VS 2013 $Architecture environment variables"
+                Invoke-BatchFile "${env:VS120COMNTOOLS}..\..\VC\vcvarsall.bat" $Architecture
+            }
+ 
             default {
                 Write-Error "Import-VisualStudioVars doesn't recognize VisualStudioVersion: $VisualStudioVersion"
             }
@@ -2145,4 +2261,553 @@ function Import-VisualStudioVars
     }
 }
 
+<#
+.SYNOPSIS
+    Starts a new Windows PowerShell process.
+.DESCRIPTION
+    Starts a new Windows PowerShell process using PowerShell's parameter
+    parsing engine to parse the parameters for the PowerShell executable.
+    This command exposes a few of the Start-Process commands it uses such as
+    -Wait, -Credential and -WorkingDirectory.  Note: If -NoNewWindow is
+    specified, PowerShell is invoked using the call operator (&) instead of
+    with the Start-Process cmdlet.
+.PARAMETER PSConsoleFile
+    Loads the specified Windows PowerShell console file. To create a console
+    file, use Export-Console in Windows PowerShell.
+.PARAMETER Version
+    Starts the specified version of Windows PowerShell. 
+    Enter a version number with the parameter, such as "-version 2.0".
+.PARAMETER ExecutionPolicy
+    Sets the default execution policy for the current session and saves it 
+    in the $env:PSExecutionPolicyPreference environment variable. 
+    This parameter does not change the Windows PowerShell execution policy 
+    that is set in the registry.
+.PARAMETER Architecture
+    Starts PowerShell with the desired architecture: x86, x64 or same 
+    architecture as the launching PowerShell process.
+    Valid values are: x86, x64 and Same.
+.PARAMETER NoLogo
+    Hides the copyright banner at startup.
+.PARAMETER NoExit
+    Does not exit after running startup commands.
+.PARAMETER Sta
+    Starts the shell using a single-threaded apartment.
+    Single-threaded apartment (STA) is the default.
+.PARAMETER Mta
+    Start the shell using a multithreaded apartment.
+.PARAMETER NoProfile
+    Does not load the Windows PowerShell profile.
+.PARAMETER NonInteractive
+    Does not present an interactive prompt to the user.
+.PARAMETER InputFormat
+    Describes the format of data sent to Windows PowerShell. Valid values are
+    "Text" (text strings) or "XML" (serialized CLIXML format).
+.PARAMETER OutputFormat
+    Determines how output from Windows PowerShell is formatted. Valid values
+    are "Text" (text strings) or "XML" (serialized CLIXML format).
+.PARAMETER Credential
+    Specifies a user account that has permission to perform this action. Type 
+    a user-name, such as "User01" or "Domain01\User01", or enter a 
+    PSCredential object, such as one from the Get-Credential cmdlet. By 
+    default, the cmdlet uses the credentials of the current user. 
+    This parameter can't be used in conjunction with the NoNewWindow parameter.
+.PARAMETER WindowStyle
+    Sets the window style to Normal, Minimized, Maximized or Hidden.
+    This parameter can't be used in conjunction with the NoNewWindow parameter.
+.PARAMETER NoNewWindow
+    Uses the call invocation operator to start PowerShell instead of Start-Process.
+    This parameter can't be used in conjunction with the WindowStyle parameter.
+.PARAMETER WorkingDirectory
+    Specifies the location of the executable file or document that runs in the 
+    process.  The default is the current directory.
+.PARAMETER Wait
+    Waits for the specified process to complete before accepting more input. 
+    This parameter suppresses the command prompt or retains the window until 
+    the process completes.
+.PARAMETER EncodedCommand
+    Accepts a base-64-encoded string version of a command. Use this parameter 
+    to submit commands to Windows PowerShell that require complex quotation 
+    marks or curly braces.
+.PARAMETER File
+    Runs the specified script in the local scope ("dot-sourced"), so that the 
+    functions and variables that the script creates are available in the 
+    current session. Enter the script file path and any parameters. 
+    File must be the last parameter in the command, because all characters 
+    typed after the File parameter name are interpreted 
+    as the script file path followed by the script parameters.
+.PARAMETER Command
+    Executes the specified commands (and any parameters) as though they were
+    typed at the Windows PowerShell command prompt, and then exits, unless 
+    NoExit is specified. The value of Command can be "-", a string. or a
+    script block.
+
+    If the value of Command is "-", the command text is read from standard
+    input.
+
+    If the value of Command is a script block, the script block must be enclosed
+    in braces ({}). You can specify a script block only when running PowerShell.exe
+    in Windows PowerShell. The results of the script block are returned to the
+    parent shell as deserialized XML objects, not live objects.
+
+    If the value of Command is a string, Command must be the last parameter
+    in the command , because any characters typed after the command are 
+    interpreted as the command arguments.
+
+    To write a string that runs a Windows PowerShell command, use the format:
+    "& {<command>}"
+    where the quotation marks indicate a string and the invoke operator (&)
+    causes the command to be executed.
+.EXAMPLE
+    C:\PS> Start-PowerShell -NoProfile -NoExit -File $pwd\foo.ps1
+.EXAMPLE
+    C:\PS> Start-PowerShell -NoProfile -NoLogo -Credential (Get-Credential)
+.EXAMPLE
+    C:\PS> Start-PowerShell -NoProfile -NoNewWindow -File $pwd\foo.ps1
+.EXAMPLE
+    C:\PS> Start-PowerShell -Architecture x64 -NoNewWindow -Command {[IntPtr]::Size}
+.EXAMPLE
+    C:\PS> Start-PowerShell -Architecture x86 -NoNewWindow -Command {[IntPtr]::Size}
+#>
+function Start-PowerShell
+{
+    param(
+        [Parameter(Position = 0)]
+        [ValidateSet(2.0,3.0)]
+        [double]
+        $Version,
+
+        [Parameter()]
+        [ValidateSet('x86','x64','Same')]
+        [string]
+        $Architecture,
+
+        [Parameter()]
+        $Command,
+
+        [Parameter()]
+        [PSCredential]
+        $Credential,
+
+        [Parameter()]
+        [string]
+        $WorkingDirectory,
+
+        [Parameter()]
+        [switch]
+        $Wait,
+
+        [Parameter()]
+        [string]
+        $PSConsoleFile,
+
+        [Parameter()]
+        [Microsoft.PowerShell.ExecutionPolicy]
+        $ExecutionPolicy,
+
+        [Parameter()]
+        [Alias('PSPath')]
+        [string]
+        $File,
+
+        [Parameter()]
+        [string]
+        $EncodedCommand,
+
+        [Parameter()]
+        [ValidateSet('text','xml')]
+        [string]
+        $InputFormat,
+
+        [Parameter()]
+        [ValidateSet('text','xml')]
+        [string]
+        $OutputFormat,
+
+        [Parameter()]
+        [ValidateSet('Normal','Minimized','Maximized','Hidden')]
+        [string]
+        $WindowStyle,
+
+        [Parameter()]
+        [Alias('NE')]
+        [switch]
+        $NoExit,
+
+        [Parameter()]
+        [Alias('NL')]
+        [switch]
+        $NoLogo,
+
+        [Parameter()]
+        [Alias('NP')]
+        [switch]
+        $NoProfile,
+
+        [Parameter()]
+        [switch]
+        $NoNewWindow,
+
+        [Parameter()]
+        [Alias('NI')]
+        [switch]
+        $NonInteractive,
+
+        [Parameter()]
+        [switch]
+        $Mta,
+
+        [Parameter()]
+        [switch]
+        $Sta,
+
+        [Parameter(ValueFromRemainingArguments=$true)]
+        [string[]]
+        $Arguments
+    )
+
+    Begin
+    {
+        Set-StrictMode -Version Latest
+
+        $PowerShellPath = "$env:windir\System32\WindowsPowerShell\v1.0\powershell.exe"
+        if ($pscx:IsWow64Process -and ($Architecture -eq 'x64'))
+        {
+            $PowerShellPath = "$env:windir\SysNative\WindowsPowerShell\v1.0\powershell.exe"
+        }
+        if ($pscx:Is64BitProcess -and ($Architecture -eq 'x86'))
+        {
+            $PowerShellPath = "$env:windir\SysWow64\WindowsPowerShell\v1.0\powershell.exe"
+        }
+    }
+
+    End 
+    {
+        [string[]]$arglist = @()
+
+        if ($PSConsoleFile)
+        {
+            $arglist += '-PSConsoleFile',$PSConsoleFile
+        }
+
+        if ($Version)
+        {
+            $arglist += '-Version',$Version
+        }
+
+        if ($NoLogo)
+        {
+            $arglist += '-NoLogo'
+        }
+
+        if ($NoExit)
+        {
+            $arglist += '-NoExit'
+        }
+
+        if ($Sta)
+        {
+            $arglist += '-Sta'
+        }
+
+        if ($Mta)
+        {
+            $arglist += '-Mta'
+        }
+
+        if ($NoProfile) 
+        {
+            $arglist += '-NoProfile'
+        }
+
+        if ($NonInteractive) 
+        {
+            $arglist += '-NonInteractive'
+        }
+
+        if ($WindowStyle)
+        {
+            $arglist += '-WindowStyle',$WindowStyle
+        }
+
+        if ($ExecutionPolicy)
+        {
+            $arglist += '-ExecutionPolicy',$ExecutionPolicy
+        }
+
+        if ($File)
+        {
+            $arglist += '-File',$File
+            if ($Arguments -and $Arguments.Count -gt 0)
+            {
+                $arglist += $Arguments
+            }
+        }
+        elseif ($Command)
+        {
+            $arglist += '-Command',$Command
+            if ($Arguments -and $Arguments.Count -gt 0)
+            {
+                $arglist += $Arguments
+            }
+        }
+        elseif ($EncodedCommand)
+        {
+            $arglist += '-EncodedCommand',$EncodedCommand
+        }
+
+        $pscmdlet.WriteDebug("Start-PowerShell: Path to PowerShell - $PowerShellPath")
+
+        if ($NoNewWindow)
+        {
+            $OFS = "`n"
+            $pscmdlet.WriteDebug("Start-PowerShell: Call operator arguments -`n$($arglist | Out-String)")
+
+            # Doing a start-process -NoNewWindow on PowerShell results in a shell that doesn't want to exit on V3 at least.
+            & $PowerShellPath $arglist
+        }
+        else
+        {
+            $startProcessArgs = @{}
+
+            if ($arglist.Count -gt 0)
+            {
+                $startProcessArgs['ArgumentList'] = $arglist
+            }
+
+            if ($Credential)
+            {
+                $startProcessArgs['Credential'] = $Credential
+            }
+
+            if ($WorkingDirectory)
+            {
+                $startProcessArgs['WorkingDirectory'] = $WorkingDirectory
+            }
+
+            if ($Wait)
+            {
+                $startProcessArgs['Wait'] = $true
+            }
+
+            $pscmdlet.WriteDebug("Start-PowerShell: Arguments to Start-Process - $($startProcessArgs | Out-String)")
+
+            Microsoft.PowerShell.Management\Start-Process $PowerShellPath @startProcessArgs
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+    Gets the execution time for the specified Id of a command in the current
+    session history.
+.DESCRIPTION
+    Gets the execution time for the specified Id of a command in the current
+    session history.
+.PARAMETER Id
+    Specifies the Id of the command to retrieve the execution time.  If no
+    Id is specified, then the execution time for all commands in the history
+    is displayed.
+.EXAMPLE
+    C:\PS> Get-ExecutionTime 1
+
+    Gets the execution time for id #1 in the session history.
+.EXAMPLE
+    C:\PS> Get-ExecutionTime
+
+    Gets the execution time for all commands in the session history.
+#>
+function Get-ExecutionTime
+{
+    param(
+        [Parameter(Position = 0)]
+        [ValidateScript({$_ -ge 1})]
+        [Int64]
+        $Id
+    )
+
+    End
+    {
+        Get-History @PSBoundParameters | Foreach {
+            $obj = new-object psobject -Property @{
+                    Id = $_.Id
+                    ExecutionTime = ($_.EndExecutionTime - $_.StartExecutionTime)
+                    HistoryInfo = $_
+            }
+            $obj.PSTypeNames.Insert(0, 'Pscx.Commands.Modules.Utility.ExecutionTimeInfo')
+            $obj
+        }
+    }
+}
+
 Export-ModuleMember -Alias * -Function *
+
+# SIG # Begin signature block
+# MIIfUwYJKoZIhvcNAQcCoIIfRDCCH0ACAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
+# gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUg/E+oGD8SSiXfWPW4VRnvu1P
+# l+2gghqFMIIGajCCBVKgAwIBAgIQA5/t7ct5W43tMgyJGfA2iTANBgkqhkiG9w0B
+# AQUFADBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYD
+# VQQLExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQDExhEaWdpQ2VydCBBc3N1cmVk
+# IElEIENBLTEwHhcNMTMwNTIxMDAwMDAwWhcNMTQwNjA0MDAwMDAwWjBHMQswCQYD
+# VQQGEwJVUzERMA8GA1UEChMIRGlnaUNlcnQxJTAjBgNVBAMTHERpZ2lDZXJ0IFRp
+# bWVzdGFtcCBSZXNwb25kZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+# AQC6aUqBTW+lFBaqis1nvku/xmmPWBzgeegenVgmmNpc1Hyj+dsrjBI2w/z5ZAax
+# u8KomAoXDeGV60C065ZtmL+mj3nPvIqSe22cGAZR2KUYUzIBJxlh6IRB38bw6Mr+
+# d61f2J57jGBvhVxGvWvnD4DO5wPDfDHPt2VVxvvgmQjkc1r7l9rQTL60tsYPfyaS
+# qbj8OO605DqkSNBM6qlGJ1vPkhGTnBan/tKtHyLFHqzBce+8StsBCUTfmBwtZ7qo
+# igMzyVG19wJNCaRN/oBexddFw30IqgEzzDPYTzAW5P8iMi7rfjvw+R4y65Ul0vL+
+# bVSEutXl1NHdG6+9WXuUhTABAgMBAAGjggM1MIIDMTAOBgNVHQ8BAf8EBAMCB4Aw
+# DAYDVR0TAQH/BAIwADAWBgNVHSUBAf8EDDAKBggrBgEFBQcDCDCCAb8GA1UdIASC
+# AbYwggGyMIIBoQYJYIZIAYb9bAcBMIIBkjAoBggrBgEFBQcCARYcaHR0cHM6Ly93
+# d3cuZGlnaWNlcnQuY29tL0NQUzCCAWQGCCsGAQUFBwICMIIBVh6CAVIAQQBuAHkA
+# IAB1AHMAZQAgAG8AZgAgAHQAaABpAHMAIABDAGUAcgB0AGkAZgBpAGMAYQB0AGUA
+# IABjAG8AbgBzAHQAaQB0AHUAdABlAHMAIABhAGMAYwBlAHAAdABhAG4AYwBlACAA
+# bwBmACAAdABoAGUAIABEAGkAZwBpAEMAZQByAHQAIABDAFAALwBDAFAAUwAgAGEA
+# bgBkACAAdABoAGUAIABSAGUAbAB5AGkAbgBnACAAUABhAHIAdAB5ACAAQQBnAHIA
+# ZQBlAG0AZQBuAHQAIAB3AGgAaQBjAGgAIABsAGkAbQBpAHQAIABsAGkAYQBiAGkA
+# bABpAHQAeQAgAGEAbgBkACAAYQByAGUAIABpAG4AYwBvAHIAcABvAHIAYQB0AGUA
+# ZAAgAGgAZQByAGUAaQBuACAAYgB5ACAAcgBlAGYAZQByAGUAbgBjAGUALjALBglg
+# hkgBhv1sAxUwHwYDVR0jBBgwFoAUFQASKxOYspkH7R7for5XDStnAs0wHQYDVR0O
+# BBYEFGMvyd95knu1I8q74aTuM37j4p36MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6
+# Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEuY3JsMDig
+# NqA0hjJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURD
+# QS0xLmNybDB3BggrBgEFBQcBAQRrMGkwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3Nw
+# LmRpZ2ljZXJ0LmNvbTBBBggrBgEFBQcwAoY1aHR0cDovL2NhY2VydHMuZGlnaWNl
+# cnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcnQwDQYJKoZIhvcNAQEFBQAD
+# ggEBAKt0vUAATHYVJVc90xwD/31FyEUSZucoZWDY3zuz+g3BrDOP9IG5YfGd+5hV
+# 195HQ7qAPfFIzD9nMFYfzvTQTIS9h6SexeEPqAZd0C9uXtwZ6PCH6uBOrz1sII5z
+# b37WhxjghtOa/J7qjHLpQQ+4cbU4LPgpstUcop0b7F8quNw3IOHLu/DQbGyls8uf
+# SvZU4yY0PS64wSsct/bDPf7RLR5Q9JTI+P3uc9tJtRv09f+lkME5FBvY7XEbapj7
+# +kCaRKkpDlVeeLi3pIPDcAHwZkDlrnk04StNA6Et5ttUYhjt1QmLoqrWDMhPGr6Z
+# JXhpmYnUWYne34jw02dedKWdpkQwggabMIIFg6ADAgECAhAK3lreshTkdg4UkQS9
+# ucecMA0GCSqGSIb3DQEBBQUAMG8xCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdp
+# Q2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xLjAsBgNVBAMTJURp
+# Z2lDZXJ0IEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBLTEwHhcNMTMwOTEwMDAw
+# MDAwWhcNMTYwOTE0MTIwMDAwWjBnMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ08x
+# FTATBgNVBAcTDEZvcnQgQ29sbGluczEZMBcGA1UEChMQNkw2IFNvZnR3YXJlIExM
+# QzEZMBcGA1UEAxMQNkw2IFNvZnR3YXJlIExMQzCCASIwDQYJKoZIhvcNAQEBBQAD
+# ggEPADCCAQoCggEBAI/YYNDd/Aw4AcjlGyyL+qjbxgXi1x6uw7Qmsjst/Z1yx0ES
+# BQb29HmGeka3achcbRPgmBTt3Jn6427FDhvKOXhk7dPJ2mFxfv3NACa+Knvq/sz9
+# xClrULvhpyOba8lOgXm5A9zWWBmUgYISVYz0jiS+/jl8x3yEEzplkTYrDsaiFiA0
+# 9HSpKCqvdnhBjIL6MGJeS13rFXjlY5KlfwPJAV5txn4WM8/6cjGRDa550Cg7dygd
+# SyDv7oDH7+AFqKakiE6Z+4yuBGhWQEBFnL9MZvlp3hkGK6Wlqy0Dfg3qkgqggcGx
+# MS+CpdbfXF+pdCbSpuYu4FrCuDb+ae1TbyTiTBECAwEAAaOCAzkwggM1MB8GA1Ud
+# IwQYMBaAFHtozimqwBe+SXrh5T/Wp/dFjzUyMB0GA1UdDgQWBBTpFzY/nfuGUb9f
+# L83BlRNclRNsizAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMw
+# cwYDVR0fBGwwajAzoDGgL4YtaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL2Fzc3Vy
+# ZWQtY3MtMjAxMWEuY3JsMDOgMaAvhi1odHRwOi8vY3JsNC5kaWdpY2VydC5jb20v
+# YXNzdXJlZC1jcy0yMDExYS5jcmwwggHEBgNVHSAEggG7MIIBtzCCAbMGCWCGSAGG
+# /WwDATCCAaQwOgYIKwYBBQUHAgEWLmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3Nz
+# bC1jcHMtcmVwb3NpdG9yeS5odG0wggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5
+# ACAAdQBzAGUAIABvAGYAIAB0AGgAaQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABl
+# ACAAYwBvAG4AcwB0AGkAdAB1AHQAZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAg
+# AG8AZgAgAHQAaABlACAARABpAGcAaQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABh
+# AG4AZAAgAHQAaABlACAAUgBlAGwAeQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwBy
+# AGUAZQBtAGUAbgB0ACAAdwBoAGkAYwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBp
+# AGwAaQB0AHkAIABhAG4AZAAgAGEAcgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABl
+# AGQAIABoAGUAcgBlAGkAbgAgAGIAeQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wgYIG
+# CCsGAQUFBwEBBHYwdDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQu
+# Y29tMEwGCCsGAQUFBzAChkBodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGln
+# aUNlcnRBc3N1cmVkSURDb2RlU2lnbmluZ0NBLTEuY3J0MAwGA1UdEwEB/wQCMAAw
+# DQYJKoZIhvcNAQEFBQADggEBAANu3/2PhW9plSTLJBR7SZBv4XqKxMzAJOw9GzNB
+# uj4ihsyn/cRt1HV/ey7J9vM2mKZ5dZhU6rpb/cRnnKzEHDSSYnaogUDWbnBAw43P
+# 6q6T9xKktrCpWhZRqbCRquix/VZN4dphqkdwpS//b/YnKnHi2da3MB1GqzQw6PQd
+# mCWGHm+/CZWWI6GWZxdnRrDSkpMbkPYwdupQMVFFqQWWl/vJddLSM6bim0GD/XlU
+# sz8hvYdOnOUT9g8+I3SegouqnrAOqu9Yj046iM29/6tkwyOCOKKeVl+uulpXnJRi
+# nRkpczbl0OMMmIakVF1OTG/A/g2PPd6Xp4NDAWIKnsCdh64wggajMIIFi6ADAgEC
+# AhAPqEkGFdcAoL4hdv3F7G29MA0GCSqGSIb3DQEBBQUAMGUxCzAJBgNVBAYTAlVT
+# MRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j
+# b20xJDAiBgNVBAMTG0RpZ2lDZXJ0IEFzc3VyZWQgSUQgUm9vdCBDQTAeFw0xMTAy
+# MTExMjAwMDBaFw0yNjAyMTAxMjAwMDBaMG8xCzAJBgNVBAYTAlVTMRUwEwYDVQQK
+# EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xLjAsBgNV
+# BAMTJURpZ2lDZXJ0IEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBLTEwggEiMA0G
+# CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcfPmgjwrKiUtTmjzsGSJ/DMv3SETQ
+# PyJumk/6zt/G0ySR/6hSk+dy+PFGhpTFqxf0eH/Ler6QJhx8Uy/lg+e7agUozKAX
+# EUsYIPO3vfLcy7iGQEUfT/k5mNM7629ppFwBLrFm6aa43Abero1i/kQngqkDw/7m
+# JguTSXHlOG1O/oBcZ3e11W9mZJRru4hJaNjR9H4hwebFHsnglrgJlflLnq7MMb1q
+# WkKnxAVHfWAr2aFdvftWk+8b/HL53z4y/d0qLDJG2l5jvNC4y0wQNfxQX6xDRHz+
+# hERQtIwqPXQM9HqLckvgVrUTtmPpP05JI+cGFvAlqwH4KEHmx9RkO12rAgMBAAGj
+# ggNDMIIDPzAOBgNVHQ8BAf8EBAMCAYYwEwYDVR0lBAwwCgYIKwYBBQUHAwMwggHD
+# BgNVHSAEggG6MIIBtjCCAbIGCGCGSAGG/WwDMIIBpDA6BggrBgEFBQcCARYuaHR0
+# cDovL3d3dy5kaWdpY2VydC5jb20vc3NsLWNwcy1yZXBvc2l0b3J5Lmh0bTCCAWQG
+# CCsGAQUFBwICMIIBVh6CAVIAQQBuAHkAIAB1AHMAZQAgAG8AZgAgAHQAaABpAHMA
+# IABDAGUAcgB0AGkAZgBpAGMAYQB0AGUAIABjAG8AbgBzAHQAaQB0AHUAdABlAHMA
+# IABhAGMAYwBlAHAAdABhAG4AYwBlACAAbwBmACAAdABoAGUAIABEAGkAZwBpAEMA
+# ZQByAHQAIABDAFAALwBDAFAAUwAgAGEAbgBkACAAdABoAGUAIABSAGUAbAB5AGkA
+# bgBnACAAUABhAHIAdAB5ACAAQQBnAHIAZQBlAG0AZQBuAHQAIAB3AGgAaQBjAGgA
+# IABsAGkAbQBpAHQAIABsAGkAYQBiAGkAbABpAHQAeQAgAGEAbgBkACAAYQByAGUA
+# IABpAG4AYwBvAHIAcABvAHIAYQB0AGUAZAAgAGgAZQByAGUAaQBuACAAYgB5ACAA
+# cgBlAGYAZQByAGUAbgBjAGUALjASBgNVHRMBAf8ECDAGAQH/AgEAMHkGCCsGAQUF
+# BwEBBG0wazAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEMG
+# CCsGAQUFBzAChjdodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRB
+# c3N1cmVkSURSb290Q0EuY3J0MIGBBgNVHR8EejB4MDqgOKA2hjRodHRwOi8vY3Js
+# My5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURSb290Q0EuY3JsMDqgOKA2
+# hjRodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURSb290
+# Q0EuY3JsMB0GA1UdDgQWBBR7aM4pqsAXvkl64eU/1qf3RY81MjAfBgNVHSMEGDAW
+# gBRF66Kv9JLLgjEtUYunpyGd823IDzANBgkqhkiG9w0BAQUFAAOCAQEAe3IdZP+I
+# yDrBt+nnqcSHu9uUkteQWTP6K4feqFuAJT8Tj5uDG3xDxOaM3zk+wxXssNo7ISV7
+# JMFyXbhHkYETRvqcP2pRON60Jcvwq9/FKAFUeRBGJNE4DyahYZBNur0o5j/xxKqb
+# 9to1U0/J8j3TbNwj7aqgTWcJ8zqAPTz7NkyQ53ak3fI6v1Y1L6JMZejg1NrRx8iR
+# ai0jTzc7GZQY1NWcEDzVsRwZ/4/Ia5ue+K6cmZZ40c2cURVbQiZyWo0KSiOSQOiG
+# 3iLCkzrUm2im3yl/Brk8Dr2fxIacgkdCcTKGCZlyCXlLnXFp9UH/fzl3ZPGEjb6L
+# HrJ9aKOlkLEM/zCCBs0wggW1oAMCAQICEAb9+QOWA63qAArrPye7uhswDQYJKoZI
+# hvcNAQEFBQAwZTELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZ
+# MBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEkMCIGA1UEAxMbRGlnaUNlcnQgQXNz
+# dXJlZCBJRCBSb290IENBMB4XDTA2MTExMDAwMDAwMFoXDTIxMTExMDAwMDAwMFow
+# YjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQ
+# d3d3LmRpZ2ljZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgQXNzdXJlZCBJRCBD
+# QS0xMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6IItmfnKwkKVpYBz
+# QHDSnlZUXKnE0kEGj8kz/E1FkVyBn+0snPgWWd+etSQVwpi5tHdJ3InECtqvy15r
+# 7a2wcTHrzzpADEZNk+yLejYIA6sMNP4YSYL+x8cxSIB8HqIPkg5QycaH6zY/2DDD
+# /6b3+6LNb3Mj/qxWBZDwMiEWicZwiPkFl32jx0PdAug7Pe2xQaPtP77blUjE7h6z
+# 8rwMK5nQxl0SQoHhg26Ccz8mSxSQrllmCsSNvtLOBq6thG9IhJtPQLnxTPKvmPv2
+# zkBdXPao8S+v7Iki8msYZbHBc63X8djPHgp0XEK4aH631XcKJ1Z8D2KkPzIUYJX9
+# BwSiCQIDAQABo4IDejCCA3YwDgYDVR0PAQH/BAQDAgGGMDsGA1UdJQQ0MDIGCCsG
+# AQUFBwMBBggrBgEFBQcDAgYIKwYBBQUHAwMGCCsGAQUFBwMEBggrBgEFBQcDCDCC
+# AdIGA1UdIASCAckwggHFMIIBtAYKYIZIAYb9bAABBDCCAaQwOgYIKwYBBQUHAgEW
+# Lmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3NzbC1jcHMtcmVwb3NpdG9yeS5odG0w
+# ggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5ACAAdQBzAGUAIABvAGYAIAB0AGgA
+# aQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABlACAAYwBvAG4AcwB0AGkAdAB1AHQA
+# ZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAgAG8AZgAgAHQAaABlACAARABpAGcA
+# aQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABhAG4AZAAgAHQAaABlACAAUgBlAGwA
+# eQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwByAGUAZQBtAGUAbgB0ACAAdwBoAGkA
+# YwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBpAGwAaQB0AHkAIABhAG4AZAAgAGEA
+# cgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABlAGQAIABoAGUAcgBlAGkAbgAgAGIA
+# eQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wCwYJYIZIAYb9bAMVMBIGA1UdEwEB/wQI
+# MAYBAf8CAQAweQYIKwYBBQUHAQEEbTBrMCQGCCsGAQUFBzABhhhodHRwOi8vb2Nz
+# cC5kaWdpY2VydC5jb20wQwYIKwYBBQUHMAKGN2h0dHA6Ly9jYWNlcnRzLmRpZ2lj
+# ZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcnQwgYEGA1UdHwR6MHgw
+# OqA4oDaGNGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJ
+# RFJvb3RDQS5jcmwwOqA4oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9EaWdp
+# Q2VydEFzc3VyZWRJRFJvb3RDQS5jcmwwHQYDVR0OBBYEFBUAEisTmLKZB+0e36K+
+# Vw0rZwLNMB8GA1UdIwQYMBaAFEXroq/0ksuCMS1Ri6enIZ3zbcgPMA0GCSqGSIb3
+# DQEBBQUAA4IBAQBGUD7Jtygkpzgdtlspr1LPUukxR6tWXHvVDQtBs+/sdR90OPKy
+# XGGinJXDUOSCuSPRujqGcq04eKx1XRcXNHJHhZRW0eu7NoR3zCSl8wQZVann4+er
+# Ys37iy2QwsDStZS9Xk+xBdIOPRqpFFumhjFiqKgz5Js5p8T1zh14dpQlc+Qqq8+c
+# dkvtX8JLFuRLcEwAiR78xXm8TBJX/l/hHrwCXaj++wc4Tw3GXZG5D2dFzdaD7eeS
+# DY2xaYxP+1ngIw/Sqq4AfO6cQg7PkdcntxbuD8O9fAqg7iwIVYUiuOsYGk38KiGt
+# STGDR5V3cdyxG0tLHBCcdxTBnU8vWpUIKRAmMYIEODCCBDQCAQEwgYMwbzELMAkG
+# A1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3LmRp
+# Z2ljZXJ0LmNvbTEuMCwGA1UEAxMlRGlnaUNlcnQgQXNzdXJlZCBJRCBDb2RlIFNp
+# Z25pbmcgQ0EtMQIQCt5a3rIU5HYOFJEEvbnHnDAJBgUrDgMCGgUAoHgwGAYKKwYB
+# BAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAc
+# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU0DP/
+# aEG28GUqOc560rZ4p1BQjb4wDQYJKoZIhvcNAQEBBQAEggEAWU72y3SqI3t30Qat
+# EIaY+Vtudh3NJKiC5SDncCPH41q4T3V+ILK+pfDuyuB3R+UpqBwfz2/BrQq3IHKr
+# ExN7EtPxpmFARc1Z4LubRJpFb8VtB59vWo2UT2dvduNL8xWJ15jATcrsSpWeiVt/
+# xTdNb3wwU4I4TUqw9BwISOI+3I6k48FMCjgML4TFGKe+vfhP1MALwAsOF0GmWuSK
+# 4+hsxieiIIgfRNuUgyRE+ewLZs2pkPZSAMSW7ogLDy+iVH/hqTbEBuj92AMtSdLO
+# qhRC+58DaPd76CBjNlWOL8EStj4gZZA0FZNdA3RcaKqQGCr7nivffgnyjnIvshyX
+# oGTfFKGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYT
+# AlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2Vy
+# dC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQA5/t7ct5
+# W43tMgyJGfA2iTAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
+# ATAcBgkqhkiG9w0BCQUxDxcNMTMxMDE3MTQyNzQwWjAjBgkqhkiG9w0BCQQxFgQU
+# 6rsyWv07wtVgfh8yayIfSQ2K65IwDQYJKoZIhvcNAQEBBQAEggEAOLcwrK5cfiHj
+# O21o7u4J/5CplYXVbE21TIdP4EehapNr5iBFAORQQbs1vySOwVhHf041uzBULlkx
+# NnLPWRectfR4eK+duHKzgLfPPnBJjM7FPNOExU4Gd+YwyXf2GmuT8AU3ExRIE1aX
+# qHMA47iJ8bT70D567XA7s0i1PVAWMw2SF/KS+izOqJJKfJvacHS+C3d265gUDNU1
+# 8u6Z3c3yNAMRci5u+nqXagu0fqYUTO4BZDXdidIzjmruYxHV2uIygJfZQy95W+DU
+# NpQGtw28qDpxqmlfaZz73I6K8skMag+81sRtFYe70kOwunMBfwkxC5uDKQcvtLYC
+# WbX7j/6mXg==
+# SIG # End signature block

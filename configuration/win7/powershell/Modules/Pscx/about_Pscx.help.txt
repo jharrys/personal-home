@@ -1,5 +1,5 @@
 ﻿TOPIC
-    PowerShell Community Extensions (version 3.0.0.0)
+    PowerShell Community Extensions (version 3.1.0.0)
 
 SHORT DESCRIPTION
     Describes the Windows PowerShell Community Extensions (PSCX) module and 
@@ -14,37 +14,10 @@ LONG DESCRIPTION
     create some of those cmdlets and make them available to the community.
         
 POWERSHELL COMPATIBILITY
-    Since PSCX 3.0 is compiled against .NET 4.0, it only works on Windows 
-    PowerShell 3.0.  There are three PSCX cmdlets that override PowerShell 3.0
-    built-in cmdlets with the same names. Those cmdlets are:
-    
-    Get-Random
-    Start-Process
-    Select-Xml
-    
-    These cmdlets are provided via the Pscx.Deprecated module.  If you have
-    scripts that require the PSCX version of these cmdlets then import
-    the Pscx.Deprecated module.  If you import this module, these three 
-    PSCX cmdlets will hide the built-in ones.  If you would prefer to use the 
-    built-in versions in certain places, you can access them as shown below:
-    
-    Microsoft.PowerShell.Utility\Get-Random
-    Microsoft.PowerShell.Management\Start-Process
-    Microsoft.PowerShell.Utility\Select-Xml
-    
-    In order to get the help topic for these built-in cmdlets, use the 
-    qualified name when accessing help e.g.:
-    
-    PS> Get-Help Microsoft.PowerShell.Utility\Select-Xml -Full
-    
-    Finally, there is an alias defined for the Start-Process by PowerShell.
-    Since the Pscx.Deprecated\Start-Process overrides the built-in 
-    Start-Process, the alias will now resolve to the 
-    Pscx.Deprecated\Start-Process. If you want to redirect the start alias
-    back to the built-in Start-Process cmdlet, execute the following:
-    
-    PS> Set-Alias start Microsoft.PowerShell.Management\Start-Process 
-        -Option AllScope
+    PSCX 3.1 is compiled against .NET 4.0 and consequently works only in 
+    Windows PowerShell 3.0 and above. If you need Windows PowerShell 2.0 
+    support, download PSCX 2.1.  If you need Windows PowerShell 1.0 support, 
+    download PSCX 1.2.
     
 PREFERENCE VARIABLES
     Previous versions of PSCX used global variables to store preference 
@@ -507,6 +480,10 @@ FUNCTIONS
         Creates the registry entries required to create Windows Explorer context 
         menu "Open PowerShell Here" for both Directories and Drives 
         
+    Get-ExecutionTime
+        Gets the execution time for the specified Id of a command in the current 
+        session history. 
+        
     Get-Help
         Displays information about Windows PowerShell commands and concepts. 
         
@@ -543,6 +520,13 @@ FUNCTIONS
         
     Invoke-Method (call)
         Function to call a single method on an incoming stream of piped objects. 
+        
+    Invoke-NullCoalescing (??)
+        Similar to the C# ?? operator e.g. name = value ?? String.Empty 
+        
+    Invoke-Ternary (?:)
+        Similar to the C# ? : operator e.g. name = (value != null) ? String.Empty 
+        : value 
         
     less
         Less provides better paging of output from cmdlets. 
@@ -583,6 +567,9 @@ FUNCTIONS
     Show-Tree
         Shows the specified path as a tree. 
         
+    Start-PowerShell
+        Starts a new Windows PowerShell process. 
+        
     Stop-RemoteProcess
         Stops a process on a remote machine. 
         
@@ -591,8 +578,8 @@ PSCX ALIASES
     Get-Command -Module Pscx* -CommandType Alias
     The current PSCX defined aliases are listed below:
 
-    ?:            : alias for Invoke-Ternary filter
-    ??            : alias for Invoke-NullCoalescing filter
+    ?:            : alias for Invoke-Ternary function
+    ??            : alias for Invoke-NullCoalescing function
     call          : alias for Invoke-Method function
     cvxml         : alias for Convert-Xml cmdlet
     e             : alias for Edit-File function
@@ -670,8 +657,12 @@ UTILITY APPLICATIONS
         Arg 3 is <-d:user>
         Arg 4 is </e:foo.cs>
 
+        Command line:
+        "C:\Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx\
+        Apps\EchoArgs.exe"  a /b -c -d:user /e:foo.cs
+
         405
-        
+
         Notice that ';' is the statement separator in PowerShell so the '405' 
         part of the parameter '/e:foo.cs;405' is not even considered a 
         parameter to the legacy application.  These sort of problems are 
@@ -683,6 +674,10 @@ UTILITY APPLICATIONS
         Arg 2 is <-c>
         Arg 3 is <-d:user>
         Arg 4 is </e:foo.cs;405>
+
+        Command line:
+        "C:\Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx\
+        Apps\EchoArgs.exe"  a /b -c -d:user /e:foo.cs;405
 
 MISCELLANOUS FEATURES
     If you want to add an "Open PowerShell Prompt" context menu item to 
@@ -716,26 +711,33 @@ CONTRIBUTING TO PSCX
 
 CREDITS
     This is a list of people and/or groups who have directly or indirectly
-    helped by offering significant suggestions, code or linkable binaries
-    without which PSCX would be a lesser product. In no particular order:
+    helped by offering significant suggestions, code, certs or linkable 
+    binaries without which PSCX would be a lesser product. In alphabetical 
+    order:
     
-    Wintellect 
-    http://www.wintellect.com/
-    
-    Mike Krueger/John Reilly #ZipLib
-    http://www.icsharpcode.net/OpenSource/SharpZipLib/
+    DigiCert for donating code signing certificates.
+    http://www.digicert.com
+
+    Eugene Sichkar / 7z Wrapper
+    http://www.nomad-net.info/
     
     Igor Pavlov / 7-Zip
     http://www.7-zip.org/ 
     
-    The nUnit Team
-    http://www.nunit.org/
-    
-    Eugene Sichkar
-    http://www.nomad-net.info/
+    Mike Krueger/John Reilly #ZipLib
+    http://www.icsharpcode.net/OpenSource/SharpZipLib/
     
     Richard Deeming / Trinet.Core.IO.Ntfs
     http://www.codeproject.com/KB/cs/ntfsstreams.aspx
+    
+    SevenZipSharp Team
+    http://SevenZipSharp.codeplex.com
+
+    The nUnit Team
+    http://www.nunit.org/
+    
+    Wintellect for PowerCollections.dll
+    http://www.wintellect.com/
     
 SEE ALSO
     For more information, most of the cmdlets have help associated with 

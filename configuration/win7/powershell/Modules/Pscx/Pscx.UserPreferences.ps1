@@ -22,7 +22,7 @@
     CD_EchoNewLocation = $true        # Display new provider location after using cd (Set-LocationEx).
                                       # Mutually exclusive with CD_GetChildItem.
     
-    TextEditor = 'sublime_text.exe'   # Default text editor used by the Edit-File function
+    TextEditor = 'Notepad.exe'        # Default text editor used by the Edit-File function
     
     PromptTheme = 'Modern'            # Prompt string and window title updates.  To enable, first
                                       # set the ModulesToImport setting for Prompt below to $true.
@@ -35,24 +35,24 @@
                                       # access help inside less.exe and 'q' to exit less.exe.
                                       # Set this setting to $false to use more.com for paging.
                                       
-    SmtpFrom = 'john.harris@imail.org'  # These settings are used by the PSCX Send-SmtpMail cmdlet.
-    SmtpHost = 'smtp.co.ihc.com'        # Specify a default SMTP server.
-    SmtpPort = 25                     # Specify a default port number if not specified port 25 is used.
+    SmtpFrom = $null                  # These settings are used by the PSCX Send-SmtpMail cmdlet.
+    SmtpHost = $null                  # Specify a default SMTP server.
+    SmtpPort = $null                  # Specify a default port number if not specified port 25 is used.
                                       
     FileSizeInUnits = $false          # Pscx prepends format data for display of file information.
                                       # If this value is set to $true, file sizes are displayed in
                                       # using KB,MG,GB and TB units.
                                       
-    ModulesToImport = @{
-        CD                = $true
-        DirectoryServices = $true
-        FileSystem        = $true
-        GetHelp           = $true
-        Net               = $true
-        Prompt            = $false    # Disabled by default because a lot of users have already established prompt functions.
-        TranscribeSession = $false    # Disabled by default for security and privacy reasons.
-        Utility           = $true
-        Vhd               = $true
-        Wmi               = $true
-    }    
+	ModulesToImport = @{
+		CD                = $true
+		DirectoryServices = $true
+		FileSystem        = $true
+		GetHelp           = $true
+		Net               = $true
+		Prompt            = $false    # Disabled by default because a lot of users have already established prompt functions.
+		TranscribeSession = $false    # Disabled by default for security and privacy reasons.
+		Utility           = $true
+		Vhd               = $true
+		Wmi               = $true
+	}    
 }
