@@ -1464,6 +1464,12 @@
 					<alias>Sebastian Carmigniani</alias>
 				</buddy>
 			</contact>
+			<contact>
+				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
+					<name>18p8d7oi3x1t43azb7dwxytuh4@public.talk.google.com</name>
+					<alias>Isabella Sauceda</alias>
+				</buddy>
+			</contact>
 		</group>
 		<group name='Family'>
 			<setting name='collapsed' type='bool'>1</setting>
