@@ -732,7 +732,7 @@ IS&amp;T - S3</setting>
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:michael.allred2@imail.org</name>
 					<alias>Michael Allred</alias>
-					<setting name='last_seen' type='int'>1392138553</setting>
+					<setting name='last_seen' type='int'>1392145650</setting>
 					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
 					<setting name='email' type='string'>Michael.Allred2@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426170</setting>
@@ -1330,7 +1330,7 @@ IS&amp;T - S3</setting>
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:lance.gallegos@imail.org</name>
 					<alias>Lance Gallegos</alias>
-					<setting name='last_seen' type='int'>1392144125</setting>
+					<setting name='last_seen' type='int'>1392145650</setting>
 					<setting name='title' type='string'>Application Syst Tech Anlst-Stf</setting>
 					<setting name='email' type='string'>Lance.Gallegos@imail.org</setting>
 					<setting name='office' type='string'>Lake Park Campus</setting>
@@ -1621,7 +1621,7 @@ IS&amp;T - S3</setting>
 				<buddy account='John.Harris@imail.org,CO\lpjharri' proto='prpl-sipe'>
 					<name>sip:michael.allred2@imail.org</name>
 					<alias>Michael Allred</alias>
-					<setting name='last_seen' type='int'>1392138553</setting>
+					<setting name='last_seen' type='int'>1392145650</setting>
 					<setting name='title' type='string'>Information Syst Security-Cnslt</setting>
 					<setting name='email' type='string'>Michael.Allred2@imail.org</setting>
 					<setting name='phone' type='string'>tel:+18014426170</setting>
