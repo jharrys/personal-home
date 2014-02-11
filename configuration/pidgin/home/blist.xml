@@ -61,7 +61,7 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>randy.secrist@gmail.com</name>
 					<alias>Randy Secrist</alias>
-					<setting name='last_seen' type='int'>1391654610</setting>
+					<setting name='last_seen' type='int'>1392086670</setting>
 					<setting name='buddy_icon' type='string'>22ea49818c67402e0280ef5d742fcb3a01ce5d84.jpg</setting>
 					<setting name='icon_checksum' type='string'>22ea49818c67402e0280ef5d742fcb3a01ce5d84</setting>
 				</buddy>
@@ -1432,6 +1432,8 @@
 				<buddy account='harris.johnny@gmail.com/' proto='prpl-jabber'>
 					<name>0zvwc8qay6gtl2hxv7wuipxk15@public.talk.google.com</name>
 					<alias>Eliana Sofia Carmigniani</alias>
+					<setting name='buddy_icon' type='string'>018070f3a83a168c7bd57bd4f3dd14bf9a90160a.jpg</setting>
+					<setting name='icon_checksum' type='string'>018070f3a83a168c7bd57bd4f3dd14bf9a90160a</setting>
 				</buddy>
 			</contact>
 			<contact>
@@ -1505,7 +1507,6 @@
 	</blist>
 	<privacy>
 		<account proto='prpl-jabber' name='harris.johnny@gmail.com/' mode='1'>
-			<block>0zvwc8qay6gtl2hxv7wuipxk15@public.talk.google.com</block>
 			<block>15kj148smw1sj1bmi5x4snhf7r@public.talk.google.com</block>
 		</account>
 		<account proto='prpl-sipe' name='John.Harris@imail.org,CO\lpjharri' mode='1'/>

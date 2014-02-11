@@ -33,7 +33,7 @@
 		</statuses>
 		<userinfo>&lt;vCard xmlns=&apos;vcard-temp&apos;&gt;&lt;FN&gt;Johnnie Harris&lt;/FN&gt;&lt;URL&gt;https://plus.google.com/+JohnnieHarris5&lt;/URL&gt;&lt;/vCard&gt;</userinfo>
 		<settings>
-			<setting name='buddy_icon_timestamp' type='int'>1391894100</setting>
+			<setting name='buddy_icon_timestamp' type='int'>1392084300</setting>
 			<setting name='auth_plain_in_clear' type='bool'>0</setting>
 			<setting name='custom_smileys' type='bool'>1</setting>
 			<setting name='port' type='int'>5222</setting>
