@@ -119,23 +119,27 @@ $myGtkrc20File = $myGtk20Configuration + '\gtkrc-2.0'
 
 # ************************************************************** #
 #		Create link function
-#		sourcebase = full path of original directory or filename excluding sourcenode
-#		sourcenode = name of final directory or file
+#		linkbase = full path of new link directory or filename excluding linknode
+#		linknode = name of final directory or file
 #		targetpath = full path including name of directory or file
 #		targettype = String of either "Container" or "Leaf"
 # ************************************************************** #
-Function Set-Link($sourcebase, $sourcenode, $targetpath, $targettype) {
-	cd $sourcebase
-	$symlinkExists = Get-ReparsePoint $sourcenode
-	if(!$symlinkExists -and (Test-Path -Path $targetpath -PathType $targettype)) {
-		Try {
-			New-SymLink $sourcenode $targetpath
-		} Catch [System.Exception] {
-			Write-Output "Got error trying to create symbolic link $targetpath at $sourcebase\$sourcenode"
+Function Set-Link($linkbase, $linknode, $targetpath, $targettype) {
+	cd $linkbase
+	$symlinkExists = Get-ReparsePoint $linknode
+	if(!$symlinkExists) {
+		if (Test-Path -Path $targetpath -PathType $targettype) {
+			Try {
+				New-SymLink $linknode $targetpath
+			} Catch [System.Exception] {
+				Write-Output "Got error trying to create symbolic link $targetpath at $linkbase\$linknode"
+			}
+		} else {
+			Write-Output "$targetpath does not exist, unable to create the symbolic link."
 		}
 		
 	} else {
-		Write-Output "Unable to create symbolic link for $targetpath at $sourcebase\$sourcenode"
+		Write-Output "Symbolic link for $targetpath at $linkbase\$linknode already exists, not re-creating it."
 	}
 }
 
