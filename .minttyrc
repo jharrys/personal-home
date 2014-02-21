@@ -1,5 +1,5 @@
 BoldAsFont=yes
-Transparency=glass
+Transparency=medium
 FontHeight=9
 FontIsBold=no
 Font=Lucida Console
@@ -18,3 +18,4 @@ Locale=en_US
 Charset=UTF-8
 AllowBlinking=yes
 BellFlash=yes
+CursorType=underscore
