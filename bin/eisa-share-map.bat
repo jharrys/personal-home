@@ -1,0 +1,1 @@
+net use * \\co-lp-vmpfile1\eisa-share /persistent:yes
