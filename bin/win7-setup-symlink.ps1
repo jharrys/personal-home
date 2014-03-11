@@ -104,10 +104,10 @@ $myWindowsPowerShell = $myWin7Configuration + '\powershell'
 $mySublimeText2 = $myHomeConfiguration + '\Sublime Text 2'
 
 # Wallpaper symlink target (the real path)
-$myWallPaper = $myHome + '\Documents\Google Drive\Wallpaper'
+$myWallPaper = $myHome + '\Google Drive\Wallpaper'
 
 # Icons symlink target (the real path)
-$myIcons = $myHome + '\Documents\Google Drive\Icons'
+$myIcons = $myHome + '\Google Drive\Icons'
 
 # Git global configuration paths
 $myGitConfig = $myWinGitConfiguration + '\.gitconfig'
@@ -182,7 +182,7 @@ Set-Link "$script:myHome\configuration\pidgin\work" "gtkrc-2.0" $script:myGtkrc2
 Create-Node $script:myHome "Mount" "Container"									# Create my Mount directory
 Create-Node "$script:myHome\Documents" "Applications\Cyginstall" "Container"					# Create my Cyginstall directory
 Create-Node "$script:myHome\Documents" "Applications\SpringSource" "Container"				# Create my SpringSource directory
-Create-Node "$script:myHome\Documents" "Google Drive" "Container"						# Create my Google Drive directory
+Create-Node "$script:myHome" "Google Drive" "Container"								# Create my Google Drive directory
 Create-Node "$script:myHome\Documents" "MailArchives" "Container"						# Create my MailArchives directory
 Create-Node "$script:myHome\Documents" "OneNote Notebooks" "Container"					# Create my OneNote Notebooks directory
 Create-Node "$script:myHome\Documents" "SourceControl" "Container"						# Create my SourceControl directory
