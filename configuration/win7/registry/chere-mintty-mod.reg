@@ -1,5 +1,8 @@
 Windows Registry Editor Version 5.00
 
+; Adds the 'Bashing Here' to the Windows Explorer context menu
+; and uses mintty instead of xterm.
+
 [HKEY_CLASSES_ROOT\Directory\shell\cygwin64_bash]
 @="&Bashing Here"
 
