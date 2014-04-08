@@ -56,12 +56,14 @@ configuration/Sublime Text 2/Backup
 # .m* - for .mintty
 .mcop
 .mozilla
+.mplayer
 .n*
 .o*
 # .p* - for .profile
 .pki*
 .pulse*
 .q*
+.Real*
 .r*
 !.rtbashrc
 .s*
