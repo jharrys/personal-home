@@ -3,6 +3,7 @@ Host *
 ControlPath ~/.ssh/connections/%r_%h_%p
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 IdentityFile ~/.ssh/github_rsa
+#LogLevel DEBUG3
 
 Host mygithub.com
 User harris.johnny@gmail.com
