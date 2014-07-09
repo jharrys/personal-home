@@ -23,6 +23,7 @@ rubygems
 .Trash
 .X*
 pgadmin.log
+Custom.theme
 
 # Sublime Text 2
 configuration/Sublime Text 2/Backup
@@ -36,7 +37,6 @@ configuration/Sublime Text 2/Backup
 .bash_history
 .boswars
 .c*
-!.corkscrew-auth
 .d*
 .e*
 .f*
@@ -107,4 +107,3 @@ Wallpaper
 winhome
 WorkCenter
 Workspaces
-/.ssh/.corkscrew-auth
