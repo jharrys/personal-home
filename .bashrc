@@ -62,8 +62,13 @@ function _commonsetup() {
     GIT_PS1_SHOWDIRTYSTATE=true         # * unstaged, + staged
     GIT_PS1_SHOWSTASHSTATE=true         # $ stashed
     GIT_PS1_SHOWUNTRACKEDFILES=true     # % untracked
+    GIT_PS1_SHOWCOLORHINTS=true         # colored output based on 'git status -sb'
+    GIT_PS1_DESCRIBE_STYLE=describe
     GIT_PS1_SHOWUPSTREAM="auto verbose"         # < behind, > ahead, <> diverged
 	PS1='[\W$(__git_ps1 " (%s)")]\n\u@\h: <\!>]\$ '
+
+    # Source the git prompt script
+    . ~/.git-prompt.sh
 
 	#
 	## ALIASES
