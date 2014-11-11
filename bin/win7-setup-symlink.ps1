@@ -2,6 +2,10 @@
 # by johnnie.a.harris@gmail.com
 # 
 # Creates all the missing symlinks for a Johnnie Harris new Windows 7 system 
+#
+# TODO: 2014-11-11 Add a verification method.
+# TODO: 2014-11-11 Break into a steps, 1) verify, 2) set-link or create-node, 3) remove (if needed)
+# TODO: 2014-11-11 Add script option to run only verification, run verification and create, etc
 
 Write-Output "New system, you must run PowerShell as Administrator."
 Write-Output "Then 'set-executionpolicy unrestricted'"
@@ -100,8 +104,8 @@ $myLibraries = $myWin7Configuration + '\Libraries'
 # WindowsPowerShell symlink target path (the real location)
 $myWindowsPowerShell = $myWin7Configuration + '\powershell'
 
-# Sublime Text 2 symlink target path (the real location)
-$mySublimeText2 = $myHomeConfiguration + '\Sublime Text 2'
+# Sublime Text symlink target path (the real location)
+$mySublimeText = $myHomeConfiguration + '\Sublime Text'
 
 # Wallpaper symlink target (the real path)
 $myWallPaper = $myHome + '\Google Drive\Wallpaper'
@@ -168,26 +172,26 @@ Set-Link $script:myHome ".ssh" $script:mySsh "Container"								# ssh
 Set-Link "$script:myHome\.ssh" "config" $script:mySshConfig "Leaf" 						# ssh_config
 Set-Link $script:myHome "Links" $script:myLinks "Container"								# explorer favorites (Links)
 Set-Link $script:myHome ".gitconfig" $script:myGitConfig "Leaf"							# Git Config file
-Set-Link $script:myHome ".gitignore" $script:myGitIgnore "Leaf"							# Git Ignore file
+Set-Link $script:myHome ".gitignore" $script:myGitIgnore "Leaf"									# Git Ignore file
 Set-Link $script:myHome ".gitignore_global" $script:myGitIgnoreGlobal "Leaf"					# Git Ignore Global file
 Set-Link "$Env:localappdata\Microsoft\Windows" "Themes"	$script:myThemes "Container"			# Themes
-Set-Link "Env:appdata\Microsoft\Windows" "Libraries" $script:myLibraries "Container" 				# Libraries
-Set-Link "$script:myHome\Pictures" "Wallpaper" $script:myWallPaper "Container"				# Wallpaper
-Set-Link "$script:myHome\Documents" "Icons" $script:myIcons "Container"					# Icons
+Set-Link "Env:appdata\Microsoft\Windows" "Libraries" $script:myLibraries "Container" 			# Libraries
+Set-Link "$script:myHome\Pictures" "Wallpaper" $script:myWallPaper "Container"					# Wallpaper
+Set-Link "$script:myHome\Documents" "Icons" $script:myIcons "Container"							# Icons
 Set-Link "$script:myHome\Documents" "WindowsPowerShell" $script:myWindowsPowerShell "Container"	# WindowsPowerShell
-Set-Link $Env:appdata "Sublime Text 2" $script:mySublimeText2 "Container"					# Sublime Text 2
-Set-Link $script:myHome ".gtkrc-2.0" $script:myGtkrc20File "Leaf"							# Gtk-2.0 personal resource file
-Set-Link "$script:myHome\configuration\pidgin\home" "gtkrc-2.0" $script:myGtkrc20File "Leaf"		# Gtk-2.0 personal resource file for home
-Set-Link "$script:myHome\configuration\pidgin\work" "gtkrc-2.0" $script:myGtkrc20File "Leaf"			# Gtk-2.0 personal resource file for work
-Create-Node $script:myHome "Mount" "Container"									# Create my Mount directory
+Set-Link $Env:appdata "Sublime Text 3" $script:mySublimeText "Container"						# Sublime Text
+Set-Link $script:myHome ".gtkrc-2.0" $script:myGtkrc20File "Leaf"								# Gtk-2.0 personal resource file
+Set-Link "$script:myHome\configuration\pidgin\home" "gtkrc-2.0" $script:myGtkrc20File "Leaf"	# Gtk-2.0 personal resource file for home
+Set-Link "$script:myHome\configuration\pidgin\work" "gtkrc-2.0" $script:myGtkrc20File "Leaf"	# Gtk-2.0 personal resource file for work
+Create-Node $script:myHome "Mount" "Container"													# Create my Mount directory
 Create-Node "$script:myHome\Documents" "Applications\Cyginstall" "Container"					# Create my Cyginstall directory
-Create-Node "$script:myHome\Documents" "Applications\SpringSource" "Container"				# Create my SpringSource directory
-Create-Node "$script:myHome" "Google Drive" "Container"								# Create my Google Drive directory
-Create-Node "$script:myHome\Documents" "MailArchives" "Container"						# Create my MailArchives directory
-Create-Node "$script:myHome\Documents" "OneNote Notebooks" "Container"					# Create my OneNote Notebooks directory
-Create-Node "$script:myHome\Documents" "SourceControl" "Container"						# Create my SourceControl directory
-Create-Node "$script:myHome\Documents" "Sysinternal Tools" "Container"					# Create my Sysinternal Tools directory
-Create-Node "$script:myHome\Documents" "VirtualBox VMs" "Container"						# Create my VirtualBox VMs directory
+Create-Node "$script:myHome\Documents" "Applications\SpringSource" "Container"					# Create my SpringSource directory
+Create-Node "$script:myHome" "Google Drive" "Container"											# Create my Google Drive directory
+Create-Node "$script:myHome\Documents" "MailArchives" "Container"								# Create my MailArchives directory
+Create-Node "$script:myHome\Documents" "OneNote Notebooks" "Container"							# Create my OneNote Notebooks directory
+Create-Node "$script:myHome\Documents" "SourceControl" "Container"								# Create my SourceControl directory
+Create-Node "$script:myHome\Documents" "Sysinternal Tools" "Container"							# Create my Sysinternal Tools directory
+Create-Node "$script:myHome\Documents" "VirtualBox VMs" "Container"								# Create my VirtualBox VMs directory
 Create-Node "$script:myHome\Documents" "Enterprise Solutions Architecture" "Container"			# Create my Enterprise Solutions Architecture directory
 
 Write-Output "Finished."
