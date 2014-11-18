@@ -212,6 +212,15 @@ function _commonsetup() {
 
     alias trycolors='eval $( dircolors -b ~/configuration/linux/dircolors.txt ); ls'
 
+    # am I an ssh session
+    if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+        SESSION_TYPE=remote/ssh
+    else
+        case $(ps -o comm= -p $PPID) in
+            sshd|*/sshd) SESSION_TYPE=remote/ssh;;
+        esac
+    fi
+
 	# my functions
 	. ~/bin/john_functions.sh
 }
