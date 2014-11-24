@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libraryDescription xmlns="http://schemas.microsoft.com/windows/2009/library">
+  <ownerSID>S-1-5-21-1409082233-492894223-682003330-36548</ownerSID>
+  <version>22</version>
+  <isLibraryPinned>true</isLibraryPinned>
+  <iconReference>C:\Program Files\TortoiseGit\bin\TortoiseGitProc.exe,-339</iconReference>
+  <templateInfo>
+    <folderType>{DC9E616B-7611-461C-9D37-730FDD4CE278}</folderType>
+  </templateInfo>
+</libraryDescription>
