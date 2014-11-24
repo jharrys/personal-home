@@ -212,15 +212,6 @@ function _commonsetup() {
 
     alias trycolors='eval $( dircolors -b ~/configuration/linux/dircolors.txt ); ls'
 
-    # am I an ssh session
-    if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-        SESSION_TYPE=remote/ssh
-    else
-        case $(ps -o comm= -p $PPID) in
-            sshd|*/sshd) SESSION_TYPE=remote/ssh;;
-        esac
-    fi
-
 	# my functions
 	. ~/bin/john_functions.sh
 }
@@ -269,6 +260,15 @@ function _darwinsetup() {
 
 	# Query AddressBook
 	alias qadd="sqlite3 -separator ',' ~/Library/Application\ Support/AddressBook/AddressBook-v22.abcddb \"select e.ZADDRESSNORMALIZED,p.ZFIRSTNAME,p.ZLASTNAME,p.ZORGANIZATION from ZABCDRECORD as p, ZABCDEMAILADDRESS as e WHERE e.ZOWNER=p.Z_PK;\""
+
+    # am I an ssh session
+    if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+        SESSION_TYPE=remote/ssh
+    else
+        case $(ps -o comm= -p $PPID) in
+           sshd|*/sshd) SESSION_TYPE=remote/ssh;;
+        esac
+    fi
 
 	. /sw/bin/init.sh
 
@@ -328,8 +328,14 @@ function _linuxsetup() {
 	alias yr='yum remove -y'
 	alias yli='yum localinstall -y --nogpgcheck'
 
-    # Bash completion on Fedora is at 2.1 (cygwin is behind) - the new one split to have a git-prompt.sh that needs to be sourced
-    . ~/.git-prompt.sh
+    # am I an ssh session
+    if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+        SESSION_TYPE=remote/ssh
+    else
+        case $(ps -o comm= -p $PPID) in
+             sshd|*/sshd) SESSION_TYPE=remote/ssh;;
+        esac
+    fi
 
 }
 
@@ -343,6 +349,16 @@ function _cygwinsetup() {
 	# ALIASES
     alias w7='cd ${HOME}/winhome/AppData/Roaming/Microsoft/Windows'
     alias w7libs='cd ${HOME}/winhome/AppData/Roaming/Microsoft/Windows/Libraries'
+
+    # am I an ssh session
+    # not working under cygwin (command ps -o) does not exist
+    # if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    #    SESSION_TYPE=remote/ssh
+    # else
+    #    case $(ps -o comm= -p $PPID) in
+    #         sshd|*/sshd) SESSION_TYPE=remote/ssh;;
+    #    esac
+    # fi
 
 }
 
