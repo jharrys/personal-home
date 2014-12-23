@@ -2,7 +2,7 @@
 <libraryDescription xmlns="http://schemas.microsoft.com/windows/2009/library">
   <name>@shell32.dll,-34584</name>
   <ownerSID>S-1-5-21-1409082233-492894223-682003330-36548</ownerSID>
-  <version>89</version>
+  <version>104</version>
   <isLibraryPinned>true</isLibraryPinned>
   <iconReference>imageres.dll,-1004</iconReference>
   <templateInfo>
