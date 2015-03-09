@@ -7,6 +7,7 @@ regedit /i /s %reg_dir%\disable-windows-store.reg
 regedit /i /s %reg_dir%\ui-modifications.reg
 
 set t=%time:~0,8%
+set t=%t: =%
 set t=%t::=-%
 
-regedit /e c:\tmp\regky-%t%.reg "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
+regedit /e c:\tmp\regfix-%t%.reg "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
