@@ -1,4 +1,4 @@
-SET reg_dir=%USERPROFILE%\configuration\win7\registry
+SET reg_dir=%USERPROFILE%\configuration\windows\registry
 cd %reg_dir%
 
 regedit /i /s %reg_dir%\sign-in-options-systemdefault.reg

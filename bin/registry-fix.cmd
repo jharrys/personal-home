@@ -1,8 +1,8 @@
-set reg_dir=%USERPROFILE%\configuration\win7\registry
+set reg_dir=%USERPROFILE%\configuration\windows\registry
 cd %reg_dir%
 
 regedit /i /s %reg_dir%\delete-userscreensaverpolicy.reg
-regedit /i /s %reg_dir%\sign-in-options-systemdefault.reg
+regedit /i %reg_dir%\sign-in-options-systemdefault.reg
 regedit /i /s %reg_dir%\disable-windows-store.reg
 regedit /i /s %reg_dir%\ui-modifications.reg
 
