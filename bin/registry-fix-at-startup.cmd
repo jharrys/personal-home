@@ -2,6 +2,7 @@ SET reg_dir=%USERPROFILE%\configuration\windows\registry
 cd %reg_dir%
 
 regedit /i /s %reg_dir%\sign-in-options-systemdefault.reg
+regedit /i /s %reg_dir%\enabled_explorer_policies.reg
 
 set t=%time:~0,8%
 set t=%t: =%
