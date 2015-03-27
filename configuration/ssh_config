@@ -8,7 +8,7 @@ IdentityFile ~/.ssh/github_rsa
 # The Centrak virtual machine in the Transformation Lab
 Host centrak
 User lpjharri
-HostName tlv-centrak01.co.ihc.com
+HostName tlv-centrak01
 
 # The next two are my own external to IH repositories
 Host mygithub.com
