@@ -46,6 +46,20 @@ Set-Alias swr   Set-Writable           -Description "PSCX alias"
     $Pscx:RegexLib = $RegexLib
 }
 
+ $acceleratorsType = [psobject].Assembly.GetType('System.Management.Automation.TypeAccelerators')
+
+# If these accelerators have already been defined, don't override (and don't error)
+function AddAccelerator($name, $type)
+{
+    if (!$acceleratorsType::Get.ContainsKey($name))
+    {
+        $acceleratorsType::Add($name, $type)
+    }
+}
+
+AddAccelerator "accelerators" $acceleratorsType
+AddAccelerator "hex"  ([Pscx.TypeAccelerators.Hex])
+
 <#
 .SYNOPSIS
     Creates the registry entries required to create Windows Explorer context 
@@ -396,129 +410,6 @@ function less
 
 <#
 .SYNOPSIS
-    Opens up the specified text file in a text editor.
-.DESCRIPTION
-    Opens up the specified text file in the text editor specified by 
-    $Pscx:Preferences['TextEditor'] variable.  If not specified or the 
-    specified editor isn't found then notepad is used.
-.PARAMETER LiteralPath
-    Specifies the path to a file to edit. Unlike Path, the value of LiteralPath is used exactly as it is typed. 
-    No characters are interpreted as wildcards. If the path includes escape characters, enclose it in 
-    single quotation marks. Single quotation marks tell Windows PowerShell not to interpret any characters 
-    as escape sequences.
-.PARAMETER Path
-    The path to the file to edit.  Wildcards are accepted.
-.EXAMPLE
-    C:\PS> Edit-File foo.txt
-    Opens foo.txt in a text editor.
-.EXAMPLE
-    C:\PS> Edit-File *.txt
-    Opens all .txt files in a text editor.
-.EXAMPLE
-    C:\PS> Get-ChildItem . -r *.cs | Edit-File
-    Opens all .cs files in the current dir and all subdirs in a text editor.
-.NOTES
-    Aliases:  e
-    Author:   Keith Hill
-#>
-function Edit-File 
-{
-    [CmdletBinding(DefaultParameterSetName="Path", SupportsShouldProcess=$true)]
-    param(
-        [Parameter(Position=0, 
-                   ParameterSetName="Path", 
-                   ValueFromPipeline=$true, 
-                   ValueFromPipelineByPropertyName=$true)]
-        [ValidateNotNullOrEmpty()]
-        [string[]]
-        $Path,
-        
-        [Alias("PSPath")]
-        [Parameter(Position=0, 
-                   ParameterSetName="LiteralPath", 
-                   ValueFromPipelineByPropertyName=$true)]
-        [ValidateNotNullOrEmpty()]
-        [string[]]
-        $LiteralPath
-    )
-    
-    Begin {
-        $editor = 'Notepad.exe'
-        $preferredEditor = $Pscx:Preferences['TextEditor']
-        if ($preferredEditor) {
-            Get-Command $preferredEditor 2>&1 | out-null
-            if ($?) {
-                $editor = $Pscx:Preferences['TextEditor']
-            }
-            else {
-                $pscmdlet.WriteDebug("Edit-File editor preference '$preferredEditor' not found, defaulting to $editor")	
-            }
-        }
-        
-        $pscmdlet.WriteDebug("Edit-File editor is $editor")
-        function EditFileImpl($path) {
-            & $editor $path
-        }
-    }
-    
-    Process 
-    {
-        if ($psCmdlet.ParameterSetName -eq "Path")
-        {
-            $resolvedPaths = $null
-            if ($Path)
-            {
-                $resolvedPaths = @()
-                # In the non-literal case we may need to resolve a wildcarded path
-                foreach ($apath in $Path) 
-                {
-                    if (Test-Path $apath) 
-                    {
-                        $resolvedPaths += @(Resolve-Path $apath | Foreach { $_.Path })
-                    }
-                    else
-                    {
-                        $resolvedPaths += $apath
-                    }
-                }
-            }
-        }
-        else 
-        {
-            $resolvedPaths = $LiteralPath
-        }
-
-        if ($resolvedPaths -eq $null)
-        {
-            $pscmdlet.WriteVerbose("Edit-File opening <no path specified>")
-            if ($pscmdlet.ShouldProcess("<no path specified>"))
-            {
-                EditFileImpl
-            }
-        }
-        else
-        {               
-            foreach ($rpath in $resolvedPaths) 
-            {
-                $PathIntrinsics = $ExecutionContext.SessionState.Path
-            
-                if ($PathIntrinsics.IsProviderQualified($rpath))
-                {
-                    $rpath = $PathIntrinsics.GetUnresolvedProviderPathFromPSPath($rpath)
-                }
-            
-                $pscmdlet.WriteVerbose("Edit-File opening $rpath")
-                if ($pscmdlet.ShouldProcess("$rpath"))
-                {
-                    EditFileImpl $rpath
-                }
-            }
-        }
-    }
-}
-
-<#
-.SYNOPSIS
     Opens the current user's "all hosts" profile in a text editor.
 .DESCRIPTION
     Opens the current user's "all hosts" profile ($Profile.CurrentUserAllHosts) in a text editor.
@@ -859,7 +750,7 @@ function Invoke-BatchFile
 
     ## Store the output of cmd.exe.  We also ask cmd.exe to output   
     ## the environment table after the batch file completes  
-    cmd.exe /c " `"$Path`" $Parameters && set > `"$tempFile`" " 
+    cmd.exe /c " `"$Path`" $Parameters && set " > $tempFile
 
     ## Go through the environment variables in the temp file.  
     ## For each of them, set the variable in our local environment.  
@@ -2221,41 +2112,43 @@ function Import-VisualStudioVars
     param
     (
         [Parameter(Mandatory = $true, Position = 0)]
-        [ValidateSet('2008', '2010', '2012', '2013')]
+        [ValidateSet('90', '2008', '100', '2010', '110', '2012', '120', '2013', '140')]
         [string]
         $VisualStudioVersion,
 
-    [Parameter(Position = 1)]
-    [string]
+        [Parameter(Position = 1)]
+        [string]
         $Architecture = $(if ($Pscx:Is64BitProcess) {'amd64'} else {'x86'})
     )
  
     End
     {
-        switch ($VisualStudioVersion)
+        switch -regex ($VisualStudioVersion)
         {
-            '2008' {
+            '90|2008' {
                 Push-EnvironmentBlock -Description "Before importing VS 2008 $Architecture environment variables"
                 Invoke-BatchFile "${env:VS90COMNTOOLS}..\..\VC\vcvarsall.bat" $Architecture
             }
       
-            '2010' {
+            '100|2010' {
                 Push-EnvironmentBlock -Description "Before importing VS 2010 $Architecture environment variables"
                 Invoke-BatchFile "${env:VS100COMNTOOLS}..\..\VC\vcvarsall.bat" $Architecture
             }
  
-            '2012' {
+            '110|2012' {
                 Push-EnvironmentBlock -Description "Before importing VS 2012 $Architecture environment variables"
                 Invoke-BatchFile "${env:VS110COMNTOOLS}..\..\VC\vcvarsall.bat" $Architecture
             }
  
-            '2013' {
+            '120|2013' {
                 Push-EnvironmentBlock -Description "Before importing VS 2013 $Architecture environment variables"
                 Invoke-BatchFile "${env:VS120COMNTOOLS}..\..\VC\vcvarsall.bat" $Architecture
             }
- 
+
             default {
-                Write-Error "Import-VisualStudioVars doesn't recognize VisualStudioVersion: $VisualStudioVersion"
+                Push-EnvironmentBlock -Description "Before importing $VisualStudioVersion $Architecture environment variables"
+                $envVarName = "VS${VisualStudioVersion}COMNTOOLS"
+                Invoke-BatchFile (Join-Path (Get-Item env:\$envVarName).Value "..\..\VC\vcvarsall.bat") $Architecture
             }
         }
     }
@@ -2644,19 +2537,19 @@ Export-ModuleMember -Alias * -Function *
 # SIG # Begin signature block
 # MIIfUwYJKoZIhvcNAQcCoIIfRDCCH0ACAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUg/E+oGD8SSiXfWPW4VRnvu1P
-# l+2gghqFMIIGajCCBVKgAwIBAgIQA5/t7ct5W43tMgyJGfA2iTANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQU6ALXffFFOqiQoo3mc4gBofT3
+# EK2gghqFMIIGajCCBVKgAwIBAgIQBmQBRumA4A5goU2PREpZWDANBgkqhkiG9w0B
 # AQUFADBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYD
 # VQQLExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQDExhEaWdpQ2VydCBBc3N1cmVk
-# IElEIENBLTEwHhcNMTMwNTIxMDAwMDAwWhcNMTQwNjA0MDAwMDAwWjBHMQswCQYD
+# IElEIENBLTEwHhcNMTQwNTIwMDAwMDAwWhcNMTUwNjAzMDAwMDAwWjBHMQswCQYD
 # VQQGEwJVUzERMA8GA1UEChMIRGlnaUNlcnQxJTAjBgNVBAMTHERpZ2lDZXJ0IFRp
 # bWVzdGFtcCBSZXNwb25kZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
-# AQC6aUqBTW+lFBaqis1nvku/xmmPWBzgeegenVgmmNpc1Hyj+dsrjBI2w/z5ZAax
-# u8KomAoXDeGV60C065ZtmL+mj3nPvIqSe22cGAZR2KUYUzIBJxlh6IRB38bw6Mr+
-# d61f2J57jGBvhVxGvWvnD4DO5wPDfDHPt2VVxvvgmQjkc1r7l9rQTL60tsYPfyaS
-# qbj8OO605DqkSNBM6qlGJ1vPkhGTnBan/tKtHyLFHqzBce+8StsBCUTfmBwtZ7qo
-# igMzyVG19wJNCaRN/oBexddFw30IqgEzzDPYTzAW5P8iMi7rfjvw+R4y65Ul0vL+
-# bVSEutXl1NHdG6+9WXuUhTABAgMBAAGjggM1MIIDMTAOBgNVHQ8BAf8EBAMCB4Aw
+# AQCpiRj2PPRxOH/sRrYt+MkDJSUJPTbcGk2M2As/ngcmXBWQ5G8amisbEZ6DdtNU
+# Byvkg0KmO23s8/OdbI9WmoGp2cCvETiimoDikBT8EZdCplCdLqmz4EhXLwRJGvXX
+# XSOboHcQ7HPFbxrtzdYTFFtV0PBBMEZIwC56AqrgDo4R/eMkyjA7+Zinu+AnqWkT
+# yNrOfjX84UX3fPJkFEhBmAMfzojKaB4Qj/GUodhsK/C9a5GFldk7hUyWkC/xLedY
+# AyOA1MzR6FqmUhoRrmNHWqqzPyJgUfb+0rmNBC0/tas1depk00z60EB1kgQmpcIv
+# LOHb68Fr75j00CQ1jx7AFBZBAgMBAAGjggM1MIIDMTAOBgNVHQ8BAf8EBAMCB4Aw
 # DAYDVR0TAQH/BAIwADAWBgNVHSUBAf8EDDAKBggrBgEFBQcDCDCCAb8GA1UdIASC
 # AbYwggGyMIIBoQYJYIZIAYb9bAcBMIIBkjAoBggrBgEFBQcCARYcaHR0cHM6Ly93
 # d3cuZGlnaWNlcnQuY29tL0NQUzCCAWQGCCsGAQUFBwICMIIBVh6CAVIAQQBuAHkA
@@ -2668,18 +2561,18 @@ Export-ModuleMember -Alias * -Function *
 # bABpAHQAeQAgAGEAbgBkACAAYQByAGUAIABpAG4AYwBvAHIAcABvAHIAYQB0AGUA
 # ZAAgAGgAZQByAGUAaQBuACAAYgB5ACAAcgBlAGYAZQByAGUAbgBjAGUALjALBglg
 # hkgBhv1sAxUwHwYDVR0jBBgwFoAUFQASKxOYspkH7R7for5XDStnAs0wHQYDVR0O
-# BBYEFGMvyd95knu1I8q74aTuM37j4p36MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6
+# BBYEFDT8D0Z+q7fZa134U3JF5gSR08L7MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6
 # Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEuY3JsMDig
 # NqA0hjJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURD
 # QS0xLmNybDB3BggrBgEFBQcBAQRrMGkwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3Nw
 # LmRpZ2ljZXJ0LmNvbTBBBggrBgEFBQcwAoY1aHR0cDovL2NhY2VydHMuZGlnaWNl
 # cnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcnQwDQYJKoZIhvcNAQEFBQAD
-# ggEBAKt0vUAATHYVJVc90xwD/31FyEUSZucoZWDY3zuz+g3BrDOP9IG5YfGd+5hV
-# 195HQ7qAPfFIzD9nMFYfzvTQTIS9h6SexeEPqAZd0C9uXtwZ6PCH6uBOrz1sII5z
-# b37WhxjghtOa/J7qjHLpQQ+4cbU4LPgpstUcop0b7F8quNw3IOHLu/DQbGyls8uf
-# SvZU4yY0PS64wSsct/bDPf7RLR5Q9JTI+P3uc9tJtRv09f+lkME5FBvY7XEbapj7
-# +kCaRKkpDlVeeLi3pIPDcAHwZkDlrnk04StNA6Et5ttUYhjt1QmLoqrWDMhPGr6Z
-# JXhpmYnUWYne34jw02dedKWdpkQwggabMIIFg6ADAgECAhAK3lreshTkdg4UkQS9
+# ggEBABBAkLNxn/AeOwLcP7xMFecOORLAhkAWGqBlyJNbwwewpIhED5CUR141wwWy
+# /tidHtT0t37GByFeZg/lNbKkHwQqQjDmJ08nYjTAZpTCAi9HeSZKnUpcBLUESPMr
+# eUkaRxS8FuXHuGdQIL2sxLT9qyGALGCmG6t87wc8QO5pGE3WJ+I0WeEpQiOzPUOd
+# bh6XxN2C+PKhFPiN/GZ9ZOxANwEE3kxVTj/TIvhGzy5YwMuwpb7g5RuLSFyyEZEC
+# zLlc7P0edSX+fiUWuiwShB/b8Q75BFOy+E2cBkYzcXWGhuNUD9frs9VYrytah8Sg
+# MA0zxqbxML7V+381vsbij9kZ75QwggabMIIFg6ADAgECAhAK3lreshTkdg4UkQS9
 # ucecMA0GCSqGSIb3DQEBBQUAMG8xCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdp
 # Q2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xLjAsBgNVBAMTJURp
 # Z2lDZXJ0IEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBLTEwHhcNMTMwOTEwMDAw
@@ -2791,23 +2684,23 @@ Export-ModuleMember -Alias * -Function *
 # Z2ljZXJ0LmNvbTEuMCwGA1UEAxMlRGlnaUNlcnQgQXNzdXJlZCBJRCBDb2RlIFNp
 # Z25pbmcgQ0EtMQIQCt5a3rIU5HYOFJEEvbnHnDAJBgUrDgMCGgUAoHgwGAYKKwYB
 # BAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAc
-# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU0DP/
-# aEG28GUqOc560rZ4p1BQjb4wDQYJKoZIhvcNAQEBBQAEggEAWU72y3SqI3t30Qat
-# EIaY+Vtudh3NJKiC5SDncCPH41q4T3V+ILK+pfDuyuB3R+UpqBwfz2/BrQq3IHKr
-# ExN7EtPxpmFARc1Z4LubRJpFb8VtB59vWo2UT2dvduNL8xWJ15jATcrsSpWeiVt/
-# xTdNb3wwU4I4TUqw9BwISOI+3I6k48FMCjgML4TFGKe+vfhP1MALwAsOF0GmWuSK
-# 4+hsxieiIIgfRNuUgyRE+ewLZs2pkPZSAMSW7ogLDy+iVH/hqTbEBuj92AMtSdLO
-# qhRC+58DaPd76CBjNlWOL8EStj4gZZA0FZNdA3RcaKqQGCr7nivffgnyjnIvshyX
-# oGTfFKGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYT
+# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQUeCZV
+# Ye0j0zV8dyb31onIBt84mHkwDQYJKoZIhvcNAQEBBQAEggEAJE3jfkUAlrSya3Se
+# mxyAFXS4GaiXo/hfalUAir1g6/Tojey1Dw917rW8k5Bb1pS1M0AP4o+QHLnH/M8k
+# sd9+Uy1BNln5fDWjR/VY/77PgTUGEAtN4wq+0P9L+DxNHTfDRVWrcJ2zt9IUcEwb
+# VByWoCk3+ba8YfxtMgPTM1ec0V5e9JNNO91dV1wuP1596Ki1Na4DK0WuwRGBpSJ6
+# 62LbxzlajrFl9WKsXld3iaxpgAjfdZZxupoXRfsuA8PDtzfO0XiYX3SfKLMrHaHN
+# SsxWa8OFJeOGDQTiKalfIsbopu7Sr+Wv0doi5PyzOIIdfXZGIYL+1LhW5GYM0mgs
+# glTNwqGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYT
 # AlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2Vy
-# dC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQA5/t7ct5
-# W43tMgyJGfA2iTAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
-# ATAcBgkqhkiG9w0BCQUxDxcNMTMxMDE3MTQyNzQwWjAjBgkqhkiG9w0BCQQxFgQU
-# 6rsyWv07wtVgfh8yayIfSQ2K65IwDQYJKoZIhvcNAQEBBQAEggEAOLcwrK5cfiHj
-# O21o7u4J/5CplYXVbE21TIdP4EehapNr5iBFAORQQbs1vySOwVhHf041uzBULlkx
-# NnLPWRectfR4eK+duHKzgLfPPnBJjM7FPNOExU4Gd+YwyXf2GmuT8AU3ExRIE1aX
-# qHMA47iJ8bT70D567XA7s0i1PVAWMw2SF/KS+izOqJJKfJvacHS+C3d265gUDNU1
-# 8u6Z3c3yNAMRci5u+nqXagu0fqYUTO4BZDXdidIzjmruYxHV2uIygJfZQy95W+DU
-# NpQGtw28qDpxqmlfaZz73I6K8skMag+81sRtFYe70kOwunMBfwkxC5uDKQcvtLYC
-# WbX7j/6mXg==
+# dC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQBmQBRumA
+# 4A5goU2PREpZWDAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
+# ATAcBgkqhkiG9w0BCQUxDxcNMTQxMDI0MDEzMjU5WjAjBgkqhkiG9w0BCQQxFgQU
+# uvP53Z+SisotZf//pCpAuwMgIAAwDQYJKoZIhvcNAQEBBQAEggEAMeg7+jQ4tBNF
+# 2GYK6QTPn7kQOhMoqGb+lhoYCV3b6Y9hjqz4X44s2Lp9DxMcjMFG99l1kJa6baDp
+# AKKdwu1fhnwQeYjXP1uRqDUygIg681Qhf8wFiBAFC8bmozIn7a6IreCSSxuXRB6u
+# 3ZK5tHkLFROOBdzpYsX4LCbjzbkmHgB+Elfl28D0Nc8W5rPLQ+jpZlNPooEcbZw7
+# S3rp1OuffKa3N2Dem0dnUBWvUkBrAD+DRV7A3JH8nSHdTzfVcBAbCelyyp7lPvfY
+# dACkH2R8/IWVo0D04EDol0dpoLwfh4wstmpcIeRfQEEiT60Io3qcLuR7r197p1lM
+# Cs9bkk8yDA==
 # SIG # End signature block

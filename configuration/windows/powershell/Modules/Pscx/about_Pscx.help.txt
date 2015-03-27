@@ -1,5 +1,5 @@
 ﻿TOPIC
-    PowerShell Community Extensions (version 3.1.0.0)
+    PowerShell Community Extensions (version 3.2.0.0)
 
 SHORT DESCRIPTION
     Describes the Windows PowerShell Community Extensions (PSCX) module and 
@@ -14,7 +14,7 @@ LONG DESCRIPTION
     create some of those cmdlets and make them available to the community.
         
 POWERSHELL COMPATIBILITY
-    PSCX 3.1 is compiled against .NET 4.0 and consequently works only in 
+    PSCX 3.2 is compiled against .NET 4.0 and consequently works only in 
     Windows PowerShell 3.0 and above. If you need Windows PowerShell 2.0 
     support, download PSCX 2.1.  If you need Windows PowerShell 1.0 support, 
     download PSCX 1.2.
@@ -77,6 +77,13 @@ PREFERENCE VARIABLES
                                    # display of file information. If this 
                                    # value is set to $true, file sizes are 
                                    # displayed in using KB,MG,GB and TB units.
+
+    EditFileBackingFileThreshold = 84000
+                                   # Edit-File will switch from an in-memory
+                                   # buffer to a temp file when editing a file
+                                   # that is larger than this value.  This
+                                   # setting does not apply when the 
+                                   # SingleString parameter is used.  
                                       
 
 CMDLETS
@@ -184,6 +191,31 @@ CMDLETS
     Push-EnvironmentBlock
         Stores the state of all environment variables into an environment block 
         and pushes that onto the environment block stack. 
+        
+    Edit-File
+        The Edit-File cmdlet modifies the specified files using a search pattern 
+        and replacement text. The search pattern is specified by the Pattern 
+        parameter and can be either "simple match" text or a regular expression. 
+        The replacement text is specified by the Replacement parameter. The 
+        Edit-File cmdlet can also be used to edit files interactively. By 
+        default, notepad.exe is used to interactively edit the specified file. 
+        You can specify an alternate interactive text editor using 
+        $Pscx:Preferences['TextEditor] = 'notepad2.exe'. By default the regex is 
+        applied to the file line by line. You can use the SingleString parameter 
+        to load the entire file into memory as a single string. With 
+        SingleString, the regex is applied to the entire file at once. This 
+        enables you to specify a regular expression such as 
+        '(?s)(<PostBuildEvent>).*?(</PostBuildEvent>)' that spans multiple lines. 
+        The regular expression mode modifier '(?s)' enables Singleline mode which 
+        causes the '.' metacharacter to match every character including newline 
+        characters. One consequence of processing the file using the SingleString 
+        parameter is that your regex may have to handle carriage return (\r) 
+        characters. The regex metacharacter $ matches only newline (\n) and NOT 
+        carriage return (\r) characters. You need to be aware of this when using 
+        the metacharacter $ in Multiline mode to replace the entire contents of a 
+        line. If you're not careful you can eliminate \r from the newline 
+        sequence. To avoid this, use an end of line regex positve look-ahead 
+        pattern like '(?=\r$)'. 
         
     Get-FileTail
         This implentation efficiently tails the cotents of a file by reading 
@@ -467,9 +499,6 @@ FUNCTIONS
     Dismount-VHD
         Dismounts a Virtual Hard Drive (VHD) file. 
         
-    Edit-File (e)
-        Opens up the specified text file in a text editor. 
-        
     Edit-HostProfile (ehp)
         Opens the current user's profile for the current host in a text editor. 
         
@@ -483,12 +512,6 @@ FUNCTIONS
     Get-ExecutionTime
         Gets the execution time for the specified Id of a command in the current 
         session history. 
-        
-    Get-Help
-        Displays information about Windows PowerShell commands and concepts. 
-        
-    Get-Help
-        Displays information about Windows PowerShell commands and concepts. 
         
     Get-Help
         Displays information about Windows PowerShell commands and concepts. 
@@ -582,7 +605,7 @@ PSCX ALIASES
     ??            : alias for Invoke-NullCoalescing function
     call          : alias for Invoke-Method function
     cvxml         : alias for Convert-Xml cmdlet
-    e             : alias for Edit-File function
+    e             : alias for Edit-File cmdlet
     ehp           : alias for Edit-HostProfile function
     ep            : alias for Edit-Profile function
     fhex          : alias for Format-Hex cmdlet

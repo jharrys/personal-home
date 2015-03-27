@@ -1,13 +1,32 @@
 #
 #	JJ-08-27-2012
 #	John Harris, ESA, 05/01/2011
-#	Version 1.0
+#	Version 2.0 - Updated 3/24/2014
+# Version 1.0 - Created 05/01/2011
 #
+
+#
+# How PowerShell loads modules
+# 1. \Windows\System32\WindowsPowerShell\v1.0\Modules - only the 64-bit Powershell will load modules from here
+# 2. \Windows\SysWOW64\WindowsPowerShell\v1.0\Modules - only the 32-bit Powershell will load modules from here
+# 3. ~\Documents\WindowsPowerShell\v1.0\Modules - either Powershell will load from here
+# Copy the Pscx directory [as of 3.2.0 the msi installs it in \Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx] to one of the 3 above.
+#
+# How PowerShell loads profiles
+# You can have four different profiles in Windows PowerShell. The profiles are listed in load order. The most specific profiles have precedence over less specific profiles where they apply.
+# 1. %windir%\system32\WindowsPowerShell\v1.0\profile.ps1
+#     This profile applies to all users and all shells.
+# 2. %windir%\system32\WindowsPowerShell\v1.0\ Microsoft.PowerShell_profile.ps1
+#     This profile applies to all users, but only to the Microsoft.PowerShell shell.
+# 3. %UserProfile%\My Documents\WindowsPowerShell\profile.ps1
+#     This profile applies only to the current user, but affects all shells.
+# 4. %UserProfile%\My Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+#     This profile applies only to the current user and the Microsoft.PowerShell shell.
 
 # *** Imports / Modules ***
 
-# pscx version 3.0 Beta 1 (http://pscx.codeplex.com/)
-Import-Module pscx -arg ~\Documents\WindowsPowerShell\Modules\Pscx\Pscx.UserPreferences.ps1
+# Pscx version 3.2.0 (http://pscx.codeplex.com/) - Installed by JJ on 03/24/2015
+Import-Module Pscx -arg ~\Documents\WindowsPowerShell\Pscx.UserPreferences.ps1
 
 # *** Variables ***
 New-Variable -name ProfileFolder -Value (Split-Path $PROFILE -Parent)
@@ -17,8 +36,8 @@ New-Variable -name vboxdevmachine -value "ESA Application Design" -Description "
 # *** Aliases ***
 
 # cmdlet's are named Verb-Noun, this sets an alias for each cmdlet to VerbNoun (without the dash)
-Get-Command -CommandType cmdlet | 
-Foreach-Object { 
+Get-Command -CommandType cmdlet |
+Foreach-Object {
  Set-Alias -name ( $_.name -replace "-","") -value $_.name -description MrEd_Alias
 } #end Get-Command
 
