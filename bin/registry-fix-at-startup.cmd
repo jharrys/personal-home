@@ -9,4 +9,4 @@ set t=%time:~0,8%
 set t=%t: =%
 set t=%t::=-%
 
-regedit /e c:\tmp\regfixstartup-%t%.reg "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
+REM regedit /e c:\tmp\regfixstartup-%t%.reg "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
