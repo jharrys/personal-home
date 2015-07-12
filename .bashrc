@@ -291,7 +291,7 @@ function _linuxsetup() {
     HTTPS_PROXY=$http_proxy
     no_proxy=localhost,127.0.0.0/8,*.local
     NO_PROXY=$no_proxy
-    export http_proxy HTTP_PROXY https_proxy HTTPS_PROXY no_proxy NO_PROXY
+    #export http_proxy HTTP_PROXY https_proxy HTTPS_PROXY no_proxy NO_PROXY
     
     CDPATH='.:~/:..:../..:~/Pictures/Wallpaper:~/Desktop:~/Documents:~/Downloads:~/Documents/Google Drive:~/Documents/Life Documents:~/Workspaces'
 	export CDPATH
