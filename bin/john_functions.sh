@@ -236,3 +236,8 @@ function gitFixDeletedRemoteBranch {
 	[ $# -lt 1 ] && echo "To clean up a remote branch that still appears in git branch -a when you know it's been removed. \$1 = remote name" & return 1
 	git remote prune $1
 }
+
+function myffmpeg {
+    [ $# -lt 6 ] && echo "myffmpeg input.avi title artist genre copyright"
+    ffmpeg -i "$1" -metadata title="$2" -metadata artist="$3" -metadata genre="$4" -metadata copyright="$5" -acodec copy -vcodec copy new${1}
+}
