@@ -15,3 +15,12 @@ $userprofile/AppData/Local/Microsoft/Windows/Themes
 5. To generate windows home structure:
 tree /A > windows.homedirectory.txt
 
+6. To generate windows.filetypes.txt
+METHOD 1 GUI
+Open from SysInternals FileTypesMan.exe > View > HTML Reports (All)
+
+METHOD 2 Command Line
+C:\Users\lpjharri\Documents\Sysinternal Tools\filetypesman-x64\FileTypesMan.exe /scomma windows.filetypes.txt
+
+METHOD 3 Command Line
+C:\Users\lpjharri\Documents\Sysinternal Tools\filetypesman-x64\FileTypesMan.exe /shtml windows.filetypes.txt
