@@ -83,11 +83,6 @@
 05/21/2014  01:52 PM    <SYMLINKD>     grails-current [grails-2.4.0]
                0 File(s)              0 bytes
 
- Directory of C:\Users\lpjharri\Mount
-
-06/14/2014  02:21 AM    <SYMLINKD>     toshiba [E:\]
-               0 File(s)              0 bytes
-
  Directory of C:\Users\lpjharri\Pictures
 
 10/21/2014  08:27 PM    <SYMLINKD>     General [\Users\lpjharri\Documents\Google Drive\Shared\Photos]
@@ -98,4 +93,4 @@
 
      Total Files Listed:
                3 File(s)              0 bytes
-              36 Dir(s)  101,610,242,048 bytes free
+              35 Dir(s)  70,778,986,496 bytes free
