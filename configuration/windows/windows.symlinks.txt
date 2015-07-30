@@ -1,0 +1,96 @@
+ Volume in drive C is OS
+ Volume Serial Number is 6EF9-C0FC
+
+ Directory of C:\Users\lpjharri
+
+02/20/2014  03:21 PM    <SYMLINK>      .gitignore [c:\cygwin\home\lpjharri\configuration\git.windows\.gitignore]
+02/20/2014  03:22 PM    <SYMLINK>      .gitignore_global [c:\cygwin\home\lpjharri\configuration\git.windows\.gitignore_global]
+02/20/2014  03:20 PM    <SYMLINKD>     .ssh [c:\cygwin\home\lpjharri\.ssh]
+02/20/2014  10:17 AM    <JUNCTION>     Application Data [C:\Users\lpjharri\AppData\Roaming]
+02/20/2014  03:20 PM    <SYMLINKD>     bin [c:\cygwin\home\lpjharri\bin]
+02/20/2014  03:20 PM    <SYMLINKD>     configuration [c:\cygwin\home\lpjharri\configuration]
+02/20/2014  10:17 AM    <JUNCTION>     Cookies [C:\Users\lpjharri\AppData\Local\Microsoft\Windows\INetCookies]
+03/09/2015  01:35 PM    <SYMLINKD>     Links [\cygwin\home\lpjharri\configuration\windows\Links]
+02/20/2014  10:17 AM    <JUNCTION>     Local Settings [C:\Users\lpjharri\AppData\Local]
+02/20/2014  10:17 AM    <JUNCTION>     My Documents [C:\Users\lpjharri\Documents]
+02/20/2014  10:17 AM    <JUNCTION>     NetHood [C:\Users\lpjharri\AppData\Roaming\Microsoft\Windows\Network Shortcuts]
+02/20/2014  10:17 AM    <JUNCTION>     PrintHood [C:\Users\lpjharri\AppData\Roaming\Microsoft\Windows\Printer Shortcuts]
+02/20/2014  10:17 AM    <JUNCTION>     Recent [C:\Users\lpjharri\AppData\Roaming\Microsoft\Windows\Recent]
+02/20/2014  10:17 AM    <JUNCTION>     SendTo [C:\Users\lpjharri\AppData\Roaming\Microsoft\Windows\SendTo]
+02/20/2014  10:17 AM    <JUNCTION>     Start Menu [C:\Users\lpjharri\AppData\Roaming\Microsoft\Windows\Start Menu]
+02/20/2014  10:17 AM    <JUNCTION>     Templates [C:\Users\lpjharri\AppData\Roaming\Microsoft\Windows\Templates]
+               2 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\.ssh
+
+02/20/2014  02:45 PM    <SYMLINK>      config [..\configuration\ssh_config]
+               1 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\AppData\Local
+
+02/20/2014  10:17 AM    <JUNCTION>     Application Data [C:\Users\lpjharri\AppData\Local]
+02/20/2014  10:17 AM    <JUNCTION>     History [C:\Users\lpjharri\AppData\Local\Microsoft\Windows\History]
+02/20/2014  10:17 AM    <JUNCTION>     Temporary Internet Files [C:\Users\lpjharri\AppData\Local\Microsoft\Windows\INetCache]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\AppData\Local\Microsoft\Windows
+
+02/20/2014  10:17 AM    <JUNCTION>     Temporary Internet Files [C:\Users\lpjharri\AppData\Local\Microsoft\Windows\INetCache]
+03/09/2015  01:27 PM    <SYMLINKD>     Themes [\cygwin\home\lpjharri\configuration\windows\Themes]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\AppData\Local\Microsoft\Windows\INetCache
+
+02/20/2014  10:18 AM    <JUNCTION>     Content.IE5 [C:\Users\lpjharri\AppData\Local\Microsoft\Windows\INetCache\IE\]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\AppData\Local\Microsoft\Windows\INetCache\Low
+
+02/20/2014  10:32 AM    <JUNCTION>     Content.IE5 [C:\Users\lpjharri\AppData\Local\Microsoft\Windows\INetCache\Low\IE\]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\AppData\Roaming
+
+11/11/2014  10:40 AM    <SYMLINKD>     Sublime Text 3 [\Users\lpjharri\configuration\Sublime Text]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\AppData\Roaming\Microsoft\Windows
+
+03/09/2015  01:15 PM    <SYMLINKD>     Libraries [\cygwin\home\lpjharri\configuration\windows\Libraries]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\Documents
+
+10/21/2014  08:30 PM    <SYMLINKD>     Icons [\Users\lpjharri\Documents\Google Drive\Icons]
+02/20/2014  10:17 AM    <JUNCTION>     My Music [C:\Users\lpjharri\Music]
+02/20/2014  10:17 AM    <JUNCTION>     My Pictures [C:\Users\lpjharri\Pictures]
+02/20/2014  10:17 AM    <JUNCTION>     My Videos [C:\Users\lpjharri\Videos]
+03/09/2015  01:29 PM    <SYMLINKD>     WindowsPowerShell [\cygwin\home\lpjharri\configuration\windows\powershell]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\Documents\Applications\Apache\maven
+
+09/04/2014  01:54 PM    <SYMLINKD>     apache-maven-latest [apache-maven-3.2.3]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\Documents\Applications\SpringSource\ggts
+
+02/25/2014  05:08 PM    <SYMLINKD>     ggts-current [.\ggts-3.4.0.RELEASE]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\Documents\Applications\SpringSource\grails
+
+05/21/2014  01:52 PM    <SYMLINKD>     grails-current [grails-2.4.0]
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\lpjharri\Pictures
+
+10/21/2014  08:27 PM    <SYMLINKD>     General [\Users\lpjharri\Documents\Google Drive\Shared\Photos]
+10/21/2014  08:27 PM    <SYMLINKD>     Photos [\Users\lpjharri\Documents\Google Drive\Shared\CPhotos]
+10/21/2014  08:28 PM    <SYMLINKD>     Shelby Mission 2013 [\Users\lpjharri\Documents\Google Drive\Shared\Shelby Mission 2013]
+10/21/2014  08:29 PM    <SYMLINKD>     Wallpaper [\Users\lpjharri\Documents\Google Drive\Wallpaper]
+               0 File(s)              0 bytes
+
+     Total Files Listed:
+               3 File(s)              0 bytes
+              35 Dir(s)  70,778,986,496 bytes free
