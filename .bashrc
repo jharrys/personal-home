@@ -91,7 +91,7 @@ function _commonsetup() {
 	alias rsync='rsync -avuzhP'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
 	alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
     alias rsyncPicToshibaAsSource='rsync -avuzhP ${HOME}/winhome/Mounts/toshiba/pictures/'
-    alias rsyncX2JJ='rsync -avuzhP --delete /media/sf_X_DRIVE/AppsInstalledOnWorkLaptop/ /run/media/john/JJ/AppsInstalledOnWorkLaptop/'
+    alias rsyncX2JJ='rsync -avuzhP --delete /media/sf_X_DRIVE/AppsInstalledOnWorkLaptop/ /run/media/$(whoami)/JJ/AppsInstalledOnWorkLaptop/'
 
     # Time savers
     alias a='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
