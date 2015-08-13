@@ -3,4 +3,6 @@ cd %office_dir%
 
 start OUTLOOK.EXE
 start lync.exe
-start %userprofile%\Documents\Applications\OWAtray\DrunkenBakery.OWAtray.GUI.exe
+
+cd %userprofile%\Documents\Applications\OWAtray\
+start .\DrunkenBakery.OWAtray.GUI.exe
