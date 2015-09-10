@@ -78,7 +78,9 @@ configuration/Sublime Text 2/Backup
 .w*
 .x*
 .y*
-.z*
+.zcompdump*
+.zsh_history
+.zsh-update
 
 #
 # Directories to ignore
