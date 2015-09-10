@@ -43,6 +43,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=/home/lpjharri/.local/lib/python2.7/site-packages/powerline/bindings/vim
+
 " Sets how many lines of history VIM has to remember
 set history=700
 
@@ -137,6 +139,8 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
+    set guifont=Consolas\ for\ Powerline
+    let g:Powerline_symbols="fancy"
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language

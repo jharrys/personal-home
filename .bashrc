@@ -345,6 +345,12 @@ function _cygwinsetup() {
     CDPATH='.:~/:..:../..:~/winhome/Pictures/Wallpaper:~/winhome/Desktop:~/winhome/Documents:~/winhome/Downloads:~/winhome/Documents/Google Drive:~/winhome/Documents/SourceControl:~/winhome/Documents/SourceControl/sts-workspace'
 	export CDPATH
 
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+
+    . /home/lpjharri/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+
 	# Variables
 
 	# ALIASES
