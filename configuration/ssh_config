@@ -5,6 +5,11 @@ IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 IdentityFile ~/.ssh/github_rsa
 #LogLevel DEBUG3
 
+# My own virtualbox guest fedora machine
+Host jjjj
+HostName 192.168.56.101
+User lpjharri
+
 # The Centrak virtual machine in the Transformation Lab
 Host centrak
 User lpjharri
@@ -32,6 +37,7 @@ PermitLocalCommand yes
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 
 # The virtual backend server for EA for JIRA, etc.
+# No longer used - 9/18/2015
 Host esaui solutions-db
 HostName lpv-ideadev07
 Compression yes
@@ -39,75 +45,3 @@ PermitLocalCommand yes
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
 ForwardX11Trusted yes
 User lpjharri
-
-Host esa
-HostName esaserver01
-Compression yes
-PermitLocalCommand yes
-IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
-User oracle
-
-Host plthruproxy
-ProxyCommand connect -4 -p 22 -a userpass -d -S lpjharri@proxylp.ihc.com:8080 pl3.projectlocker.com 22
-Compression yes
-PermitLocalCommand yes
-IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
-
-Host pl3.projectlocker.com
-HostName pl3.projectlocker.com
-Compression yes
-PermitLocalCommand yes
-IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
-
-Host mpivm2
-HostName mpivm2.chpc.utah.edu
-Compression yes
-PermitLocalCommand yes
-ForwardX11Trusted yes
-
-Host cibuild1
-HostName mpivm2.chpc.utah.edu
-User mpici
-IdentityFile ~/.ssh/mpici.rsa_id
-Compression yes
-PermitLocalCommand yes
-ForwardX11Trusted yes
-
-Host cibuild2
-HostName mpivm3.chpc.utah.edu
-IdentityFile ~/.ssh/mpici.rsa_id
-User mpici
-Compression yes
-PermitLocalCommand yes
-ForwardX11Trusted yes
-
-Host mpivm3
-HostName mpivm3.chpc.utah.edu
-Compression yes
-PermitLocalCommand yes
-ForwardX11Trusted yes
-
-Host mpigrant
-HostName mpigrant
-User john
-PermitLocalCommand yes
-ForwardX11Trusted yes
-
-Host Xmpigrant
-HostName mpigrant
-PermitLocalCommand yes
-ForwardX11Trusted yes
-ForwardX11 yes
-
-Host mirthmatch
-HostName mirthmatch
-Compression yes
-PermitLocalCommand yes
-ForwardX11Trusted yes
-
-Host mirthconn
-HostName mpimconn
-Compression yes
-PermitLocalCommand yes
-ForwardX11Trusted yes
-ForwardX11 yes
