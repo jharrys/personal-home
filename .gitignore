@@ -59,7 +59,7 @@ configuration/Sublime Text 2/Backup
 .mozilla
 .mplayer
 .n*
-.o*
+# .o*
 # .p* - for .profile
 .pki*
 .pulse*
