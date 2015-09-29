@@ -67,6 +67,14 @@ function _commonsetup() {
 	GIT_PS1_SHOWUPSTREAM="auto verbose"         # < behind, > ahead, <> diverged
 	PS1='[\W$(__git_ps1 " (%s)")]\n\u@\h: <\!>]\$ '
 
+	# Setup python environment
+	if [ -d ~/.pyenv ]; then
+		export PYENV_ROOT="$HOME/.pyenv"
+		export PYENV_VERSION=2.7.9
+		export PATH="$PYENV_ROOT/bin:$PATH"
+		eval "$(pyenv init -)"
+	fi
+
 	# Setup aliases
 	. ~/.aliases
 
@@ -166,7 +174,15 @@ function _linuxsetup() {
 			sshd|*/sshd) SESSION_TYPE=remote/ssh;;
 		esac
 	fi
-
+	# Powerline Environment - nice prompt for commandline and VIM
+	# Below doesn't work if executed from within a function
+	if [ -n "$PYENV_ROOT" ]; then
+		powerline-daemon -q
+		POWERLINE_BASH_CONTINUATION=1
+		POWERLINE_BASH_SELECT=1
+	  sitepackagespath=$(python -c "import site; print(site.getsitepackages()[0])")
+	  . ${sitepackagespath}/powerline/bindings/bash/powerline.sh
+	fi
 }
 
 function _cygwinsetup() {

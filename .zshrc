@@ -88,6 +88,14 @@ function _commonsetup() {
   # SET options
   unsetopt INC_APPEND_HISTORY
 
+  # Setup python environment, if there is a virtual one installed inside home directory
+	if [ -d ~/.pyenv ]; then
+		export PYENV_ROOT="$HOME/.pyenv"
+		export PYENV_VERSION=2.7.9
+		export PATH="$PYENV_ROOT/bin:$PATH"
+		eval "$(pyenv init -)"
+	fi
+
   # Setup aliases
   . ~/.aliases
 
@@ -144,6 +152,7 @@ function _linuxsetup() {
 			sshd|*/sshd) SESSION_TYPE=remote/ssh;;
 		esac
 	fi
+
 }
 
 function _darwinsetup() {
@@ -186,4 +195,11 @@ elif $cygwin; then
 	_cygwinsetup
 else
 	_linuxsetup
+fi
+
+# Powerline Environment - nice prompt for commandline and VIM
+# Below doesn't work if executed from within a function
+if [ -n "$PYENV_ROOT" ]; then
+  sitepackagespath=$(python -c "import site; print(site.getsitepackages()[0])")
+  . ${sitepackagespath}/powerline/bindings/zsh/powerline.zsh
 fi
