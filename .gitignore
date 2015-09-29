@@ -61,8 +61,10 @@ configuration/Sublime Text 2/Backup
 .n*
 # .o*
 # .p* - for .profile
+.pip
 .pki*
 .pulse*
+.pyenv
 .q*
 .Real*
 .r*
