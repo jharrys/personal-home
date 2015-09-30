@@ -119,3 +119,4 @@ Workspaces
 #
 !Templates
 !.config/powerline
+!.aliases
