@@ -199,7 +199,7 @@ fi
 
 # Powerline Environment - nice prompt for commandline and VIM
 # Below doesn't work if executed from within a function
-if [ -n "$PYENV_ROOT" ]; then
-  sitepackagespath=$(python -c "import site; print(site.getsitepackages()[0])")
+sitepackagespath=$(python -c "import site; print(site.getsitepackages()[0])")
+if [ -n "$sitepackagespath" ]; then
   . ${sitepackagespath}/powerline/bindings/zsh/powerline.zsh
 fi
