@@ -176,13 +176,13 @@ function _linuxsetup() {
 	fi
 	# Powerline Environment - nice prompt for commandline and VIM
 	# Below doesn't work if executed from within a function
-	if [ -n "$PYENV_ROOT" ]; then
+    sitepackagespath=$(python -c "import site; print(site.getsitepackages()[0])")
+    if [ -n "$sitepackagespath" -a -d "$sitepackagespath/powerline" ]; then
 		powerline-daemon -q
 		POWERLINE_BASH_CONTINUATION=1
 		POWERLINE_BASH_SELECT=1
-	  sitepackagespath=$(python -c "import site; print(site.getsitepackages()[0])")
-	  . ${sitepackagespath}/powerline/bindings/bash/powerline.sh
-	fi
+        . ${sitepackagespath}/powerline/bindings/bash/powerline.sh
+    fi
 }
 
 function _cygwinsetup() {

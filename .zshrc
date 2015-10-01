@@ -203,3 +203,6 @@ sitepackagespath=$(python -c "import site; print(site.getsitepackages()[0])")
 if [ -n "$sitepackagespath" -a -d "$sitepackagespath/powerline" ]; then
   . ${sitepackagespath}/powerline/bindings/zsh/powerline.zsh
 fi
+
+# oh-my-zsh adds a deprecated environment variable. this disables it.
+unset GREP_OPTIONS
