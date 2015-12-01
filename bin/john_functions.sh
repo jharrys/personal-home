@@ -87,7 +87,7 @@ function fixhosts() {
 
 function grepinjar() {
 	for x in `find . -name "*.jar"`
-	do 
+	do
 		jar tf $x |grep -iq "$1"
 		[ "$?" = "0" ] && echo "FOUND IN: $x"
 	done
@@ -189,18 +189,49 @@ function gitDeleteRemoteBranch {
 	git push $1 :$2
 }
 
-function putOnSharepoint {
-	# $1 = user, $2 = file to upload, $3 = sharepoint site
-	# sample url =  https://projects.intermountainhealthcare.org/sites/ea/esa/Shared%20Documents/
-	# make sure spaces are converted to %20
-	curl --ntlm --user $1 --upload-file $2 ${3}/${2}
-}
-
 function gitFixDeletedRemoteBranch {
 	# $1 = remote name
-	[ $# -lt 1 ] && echo "To clean up a remote branch that still appears in git branch -a when you know it's been removed. \$1 = remote name" & return 1
+	[ $# -lt 1 ] && echo "To clean up a remote branch that still appears in git branch -a when you know it's been removed. \$1 = remote name" && return 1
 	git remote prune $1
 }
+
+function gitFixDetachedMasterHEAD {
+  # When you make a commit and have NOT pushed it yet and want to back out to a previous commit for the master branch
+  # $1 = new temporary branch name; forcing the user to enter a name and not default to something as this is a destructive function
+  [ $# -lt 1 ] && echo "WARNING: Destructive;When you make a commit and have NOT pushed it. You MUST BE ON THE COMMIT (detached HEAD)  that you want to make the new MASTER. \$1 = temp branch" && return 1
+
+  local tmpname
+
+  # Verify that branch name given does not exist, otherwise rename
+  git rev-parse --quiet --verify "$1"
+  if [ "$?" = "0" ]; then
+    tmpname="${1}OLD"
+    git branch -m "$1" "$tmpname" > /dev/null
+  fi
+
+  # Create a temporary git branch referencing the current detached head and checkout the temporary branch
+  git checkout --quiet -b $1
+  [ "$?" -gt "0" ] && "Error on step 1 trying to create and checkout $1" && return 1
+
+  # Set master to point to the newly created temporary branch and checkout master
+  git checkout --quiet -B master $1
+[ "$?" -gt "0" ] && "Error on step 2 trying to set master to $1" && return 1
+
+  # Delete the temporary branch
+  git branch -D $1 > /dev/null
+  [ "$?" -gt "0" ] && "Error on step 3 trying to delete $1" && return 1
+
+  # If temporary branch name already existed and we renamed it, rename it back
+  [ -n "$tmpname" ] && (git branch -m "$tmpname" "$1")
+  # note error looks for greater than 1 (the git branch error will return 128)
+  [ "$?" -gt "1" ] && "Error on step 4 trying to rename $tmpname to $1" && return 1
+
+  unset tmpname
+}
+
+########################################
+#	Miscellaneous Functions
+########################################
 
 function myffmpeg {
     [ $# -lt 6 ] && echo "myffmpeg input.avi title artist genre copyright"
@@ -210,4 +241,11 @@ function myffmpeg {
 function ffmpeg2mp3 {
     [$# -lt 2 ] && echo "ffmpeg2mp3 input.xxx output.mp3"
     ffmpeg -i "$1" -c:a libmp3lame -ac 2 -q:a 2 "$2"
+}
+
+function putOnSharepoint {
+	# $1 = user, $2 = file to upload, $3 = sharepoint site
+	# sample url =  https://projects.intermountainhealthcare.org/sites/ea/esa/Shared%20Documents/
+	# make sure spaces are converted to %20
+	curl --ntlm --user $1 --upload-file $2 ${3}/${2}
 }
