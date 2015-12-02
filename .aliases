@@ -144,8 +144,8 @@ function _base_aliases() {
 ##
 
 function _darwin_aliases() {
-  # Unalias ls --color (doesn't work on bsd)
-  unalias ls
+  # re alias ls --color (doesn't work on bsd)
+  alias ls='ls -G'
 
   # General system aliases
   alias showall='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
