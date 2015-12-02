@@ -144,15 +144,19 @@ function _base_aliases() {
 ##
 
 function _darwin_aliases() {
+  # Unalias ls --color (doesn't work on bsd)
+  unalias ls
+
+  # General system aliases
+  alias showall='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
+  alias hideall='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
+
   # Text editor
-  alias text='open /Applications/TextEdit.app'
+  alias text='open /Applications/Atom.app'
 
   # MacVim Editor
   alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'				# MacVim
   alias gvim-diff='/Applications/MacVim.app/Contents/MacOS/Vim -g -d'		# MacVim in diff mode like vimdiff
-
-  # Emacs Editor
-  alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'				# Emacs
 
   # Virtual Box applications
   export DEFAULTVM="Fedora 13"		# Set the default VM to work against
