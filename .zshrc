@@ -156,7 +156,14 @@ function _linuxsetup() {
 }
 
 function _darwinsetup() {
-  # nothing to do here yet
+  PATH=~/bin:~/Library/Python/2.7/bin:$PATH
+  export PATH
+
+  CDPATH='~/Documents:~/Documents/source_control'
+  export CDPATH
+
+  # Run powerline for zsh
+  . /Users/lpjharri/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 }
 
 function _cygwinsetup() {
