@@ -159,7 +159,7 @@ function _darwinsetup() {
   PATH=~/bin:~/Library/Python/2.7/bin:$PATH
   export PATH
 
-  CDPATH='~/Documents:~/Documents/source_control'
+  CDPATH='~/development:~/development/buildarea:~/development/source_control'
   export CDPATH
 
   # Run powerline for zsh
