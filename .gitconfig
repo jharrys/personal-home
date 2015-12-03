@@ -21,7 +21,7 @@
 
     ; set an ignore file outside of the working directory. it's used in addition to .gitignore and .git/info/exclude
     ; "~/" expands to home, "~user/" expands to user's home dir
-    excludesfile = /cygdrive/c/Users/lpjharri/.gitignore_global
+    excludesfile = ~/.gitignore_global
 
     ; editor to launch for some commands that need the editor like commit and tag. overridden by GIT_EDITOR
     ; editor = "/path/to/editor"
