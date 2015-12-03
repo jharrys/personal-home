@@ -1,0 +1,56 @@
+
+- Power -
+ctl-eject               show shutdown dialog
+s-ctl-eject             display sleep
+cmd-alt-eject           computer sleep
+cmd-ctl-eject           save/quit apps & sleep
+cmd-alt-esc             force quit
+cmd-sft-alt-esc(3 secs)   force quit the frontmost application
+
+- Desktop (Mission Control) -
+ctl-F3                  App expose
+cmd-F3                  show desktop
+
+- Cool -
+fn-del                  forward delete
+alt-Delete              delete whole word left of cursor
+cmd-sft-?               open help
+cmd-sft-del             empty trash
+ctl-space               open spotlight & run commands
+cmd-opt-D               open/close dock
+cmd-up                  move up a directory
+cmd-down                move down a directory
+ctl-up                  move up a page
+ctl-down                move down a page
+opt-drag                copy to new location
+cmd-opt-drag            alias to new location
+cmd-drag                move to new location (no copy)
+
+- Capture -
+cmd-sft-3                 capture screen to file
+cmd-sft-4                 capture selection to file
+
+- Windowing -
+cmd-m                   minimize current app window
+cmd-opt-m               minimize all windows of current app
+cmd-w                   close window
+cmd-opt-w               close all windows
+cmd-`                   cycle through windows in app or finder
+cmd-tab                 cycle through open applications
+cmd-tab, up/dn, enter   cycle through open apps, then cycle through wins & choose
+
+- Finder -
+cmd-right               expand folder (list view)
+cmd-opt-right           expand folder and nested folders
+cmd-left                collapse folder
+cmd-opt-up              open parent folder & close current
+
+- Startup -
+x during startup        Force Mac OS X startup
+opt-cmd-sft-del startup   bypass primary startup vol use a different (CD or external)
+c during startup        startup from cd with system folder
+n during startup        netboot
+t during startup        firewire target disk
+shift during startup    safe boot, temporarily disable login and non-essential kernel
+cmd-v during startup    startup in verbose mode
+cmd-s during startup    startup in single mode
