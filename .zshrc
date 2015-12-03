@@ -160,12 +160,16 @@ function _darwinsetup() {
   export CDPATH
 
   # for weblogic
-  MW_HOME=/Users/lpjharri/local/appservers/wls-12.1.3
+  MW_HOME=~/local/appservers/wls-12.1.3
   export MW_HOME
 
   # for weblogic
   USER_MEM_ARGS="-Xmx1024m -XX:MaxPermSize=256m"
   export USER_MEM_ARGS
+
+  # my weblogic instance
+  DOMAIN_HOME=~/local/wldomains/hwapp
+  export DOMAIN_HOME
 
   JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
   export JAVA_HOME
