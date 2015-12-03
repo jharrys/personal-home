@@ -156,11 +156,25 @@ function _linuxsetup() {
 }
 
 function _darwinsetup() {
-  PATH=~/bin:~/Library/Python/2.7/bin:$PATH
-  export PATH
-
   CDPATH='~/development:~/development/buildarea:~/development/source_control'
   export CDPATH
+
+  # for weblogic
+  MW_HOME=/Users/lpjharri/local/appservers/wls-12.1.3
+  export MW_HOME
+
+  # for weblogic
+  USER_MEM_ARGS="-Xmx1024m -XX:MaxPermSize=256m"
+  export USER_MEM_ARGS
+
+  JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
+  export JAVA_HOME
+
+  MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
+  export MAVEN_HOME
+  
+  PATH=~/bin:~/Library/Python/2.7/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
+  export PATH
 
   # Run powerline for zsh
   . /Users/lpjharri/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
