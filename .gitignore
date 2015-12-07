@@ -57,6 +57,7 @@ configuration/Sublime Text 2/Backup
 .k*
 .l*
 # .m* - for .mintty
+.m2
 .mcop
 .mozilla
 .mplayer
