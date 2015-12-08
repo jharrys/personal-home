@@ -177,7 +177,7 @@ function _darwinsetup() {
   MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
   export MAVEN_HOME
   
-  PATH=~/bin:~/Library/Python/2.7/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
+  PATH=~/bin:~/Library/Python/2.7/bin:~/Applications/subit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
   export PATH
 
   # Run powerline for zsh
