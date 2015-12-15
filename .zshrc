@@ -167,6 +167,9 @@ function _darwinsetup() {
   USER_MEM_ARGS="-Xmx1024m -XX:MaxPermSize=256m"
   export USER_MEM_ARGS
 
+  # Where to default store the screen shots (make sure the directory exists)
+  # defaults write com.apple.screencapture location ~/Dekstop/Screenshots
+
   # my weblogic instance
   DOMAIN_HOME=~/local/wldomains/hwapp
   export DOMAIN_HOME

@@ -10,7 +10,7 @@ function _base_aliases() {
   alias ls='ls --color'
   alias mv='mv -i'
   alias cp='cp -i'
-  alias ll='ls -l'
+  alias ll='ls -lh'
   alias vi='vim'
   alias la='ls -Al'
   alias lld='ls -Al |grep ^d'
@@ -146,6 +146,10 @@ function _base_aliases() {
 function _darwin_aliases() {
   # re alias ls --color (doesn't work on bsd)
   alias ls='ls -G'
+
+  # chflags - changes file flags - using it here to unhide hidden directories
+  alias unhide='chflags nohidden'
+  alias hide='chflags hidden'
 
   # General system aliases
   alias showall='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
