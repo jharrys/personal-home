@@ -47,9 +47,9 @@ function _commonsetup() {
   export HISTSIZE=10000
   export HISTCONTROL=ignoredups
   export SAVEHIST=10000
-  setopt HIST_IGNORE_DUPS
-  setopt HIST_IGNORE_SPACE
-  setopt SHARE_HISTORY
+  setopt hist_ignore_dups
+  setopt hist_ignore_space
+  setopt share_history
 
   # Would you like to use another custom folder than $ZSH/custom?
   # ZSH_CUSTOM=/path/to/new-custom-folder
