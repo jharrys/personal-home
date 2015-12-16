@@ -234,12 +234,12 @@ function gitFixDetachedMasterHEAD {
 ########################################
 
 function myffmpeg {
-    [ $# -lt 6 ] && echo "myffmpeg input.avi title artist genre copyright"
+    [ $# -lt 6 ] && echo "myffmpeg input.avi title artist genre copyright" && return 1
     ffmpeg -i "$1" -metadata title="$2" -metadata artist="$3" -metadata genre="$4" -metadata copyright="$5" -acodec copy -vcodec copy new${1}
 }
 
 function ffmpeg2mp3 {
-    [$# -lt 2 ] && echo "ffmpeg2mp3 input.xxx output.mp3"
+    [ $# -lt 2 ] && echo "ffmpeg2mp3 input.xxx output.mp3" && return 1
     ffmpeg -i "$1" -c:a libmp3lame -ac 2 -q:a 2 "$2"
 }
 
