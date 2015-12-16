@@ -65,6 +65,7 @@ configuration/Sublime Text 2/Backup
 # .o*
 .oracle*
 # .p* - for .profile
+.p2
 .pip
 .pki*
 .pulse*
