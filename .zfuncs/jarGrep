@@ -1,5 +1,15 @@
-for x in `find . -name "*.jar"`
+result=()
+for x in `find . -type f -name "*.jar"`
 do
   jar tf $x |grep -iq "$1"
-  [ "$?" = "0" ] && echo "FOUND IN: $x"
+  if [ "$?" = "0" ]; then
+      result+=($x)
+  fi
 done
+if [ -n "${result[*]}" ]; then
+    for i in ${result[@]}; do
+        echo "FOUND IN: $i"
+    done
+else
+    echo "Not found in any subdirectories."
+fi
