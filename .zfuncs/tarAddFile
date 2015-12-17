@@ -1,5 +1,2 @@
-unfunction tarAddFile
-autoload tarAddFile
-
 # Add file or directory to tar archive - $1 is tar, $2 is file or dir
 tar rvf "${1}" "${2}"

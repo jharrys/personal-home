@@ -1,6 +1,3 @@
-unfunction gitPush
-autoload gitPush
-
 # $1 = remotename, $2 = local branch name, $3 = remote branch name
 [ $# -lt 3 ] && echo "Needs 3 params: \$1 - remote name, \$2 - local branch name, \$3 - remote branch name" && return 1
 git push $1 $2:$3

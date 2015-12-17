@@ -1,5 +1,2 @@
-unfunction ffmpegMine
-autoload ffmpegMine
-
 [ $# -lt 6 ] && echo "myffmpeg input.avi title artist genre copyright" && return 1
 ffmpeg -i "$1" -metadata title="$2" -metadata artist="$3" -metadata genre="$4" -metadata copyright="$5" -acodec copy -vcodec copy new${1}

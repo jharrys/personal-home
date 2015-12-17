@@ -1,6 +1,3 @@
-unfunction cupsListRemote
-autoload cupsListRemote
-
 # $1 = remote print server with port (631)
 [ $# -lt 1 ] && echo "Needs 1 param: \$1 - remote print server & port (631 default)" && return 1
 lpstat -h $1 -a

@@ -1,5 +1,2 @@
-unfunction tarVerify
-autoload tarVerify
-
 # Verify tar with file system - if relative paths, you must be in relative path
 tar tvfW "${1}"

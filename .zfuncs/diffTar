@@ -1,5 +1,2 @@
-unfunction diffTar
-autoload diffTar
-
 # Diff between tar and file system - if relative paths, you must be in relative path
 tar dfz "${1}"

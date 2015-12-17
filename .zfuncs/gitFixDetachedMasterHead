@@ -1,6 +1,3 @@
-unfunction gitFixDetachedMasterHead
-autoload gitFixDetachedMasterHead
-
 # When you make a commit and have NOT pushed it yet and want to back out to a previous commit for the master branch
 # $1 = new temporary branch name; forcing the user to enter a name and not default to something as this is a destructive function
 [ $# -lt 1 ] && echo "WARNING: Destructive;When you make a commit and have NOT pushed it. You MUST BE ON THE COMMIT (detached HEAD)  that you want to make the new MASTER. \$1 = temp branch" && return 1

@@ -1,6 +1,3 @@
-unfunction jarExplodeEar
-autoload jarExplodeEar
-
 mkdir tmp_$1
 cd tmp_$1
 jar xf ../$1

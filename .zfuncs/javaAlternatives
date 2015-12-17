@@ -1,6 +1,3 @@
-unfunction javaAlternatives
-autoload javaAlternatives
-
 # $1 = path to the alternate
 [ $# -lt 1 ] && echo "Needs 1 param: \$1 - path to alternate java (i.e., /opt/java/current)" && return 1
 local PATH=${1%%/}

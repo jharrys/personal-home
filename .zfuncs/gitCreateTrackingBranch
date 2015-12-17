@@ -1,6 +1,3 @@
-unfunction gitCreateTrackingBranch
-autoload gitCreateTrackingBranch
-
 # $1 = new branch, $2 = remote name, $3 = remote branch name to track
 
 [ $# -lt 3 ] && echo "Needs 3 params: \$1 - new branch, \$2 - remote repo, \$3 - remote branch name" && return 1
