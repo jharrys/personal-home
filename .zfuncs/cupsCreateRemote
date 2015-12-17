@@ -1,0 +1,8 @@
+unfunction cupsCreateRemote
+autoload cupsCreateRemote
+
+# $1 = name of printer on this host, $2 = remote host with port (631), $3 = name of printer on remote (use lpstat)
+[ $# -lt 3 ] && echo "Needs 3 param: \$1 - name of printer on this host, \$2 - remote print server & port (631 default), \$3 - name of remote printer (use lpstat to find out)" && return 1
+lpadmin -p $1 -v ipp://${2}/printers/${3}
+cupsenable $1
+cupsaccept $1

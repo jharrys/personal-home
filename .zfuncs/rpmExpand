@@ -1,0 +1,4 @@
+unfunction rpmExpand
+autoload rpmExpand
+
+rpm2cpio $1 | cpio -ivd

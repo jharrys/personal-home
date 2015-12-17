@@ -1,0 +1,30 @@
+unfunction javaAlternatives
+autoload javaAlternatives
+
+# $1 = path to the alternate
+[ $# -lt 1 ] && echo "Needs 1 param: \$1 - path to alternate java (i.e., /opt/java/current)" && return 1
+local PATH=${1%%/}
+alternatives --install /usr/bin/java java $PATH/bin/java 30000 \
+  --slave /usr/bin/keytool keytool $PATH/bin/keytool \
+  --slave /usr/bin/orbd orbd $PATH/bin/orbd \
+  --slave /usr/bin/pack200 pack200 $PATH/bin/pack200 \
+  --slave /usr/bin/rmid rmid $PATH/bin/rmid \
+  --slave /usr/bin/rmiregistry rmiregistry $PATH/bin/rmiregistry \
+  --slave /usr/bin/servertool servertool $PATH/bin/servertool \
+  --slave /usr/bin/tnameserv tnameserv $PATH/bin/tnameserv \
+  --slave /usr/bin/unpack200 unpack200 $PATH/bin/unpack200 \
+  --slave /usr/bin/jvisualvm jvisualvm $PATH/bin/jvisualvm \
+  --slave /usr/bin/jconsole jconsole $PATH/bin/jconsole \
+  --slave /usr/bin/javaws javaws $PATH/bin/javaws \
+  --slave /usr/share/man/man1/java.1 java.1 $PATH/man/man1/java.1 \
+  --slave /usr/share/man/man1/keytool.1 keytool.1 $PATH/man/man1/keytool.1 \
+  --slave /usr/share/man/man1/orbd.1 orbd.1 $PATH/man/man1/orbd.1 \
+  --slave /usr/share/man/man1/pack200.1 pack200.1 $PATH/man/man1/pack200.1 \
+  --slave /usr/share/man/man1/rmid.1 rmid.1 $PATH/man/man1/rmid.1 \
+  --slave /usr/share/man/man1/rmiregistry.1 rmiregistry.1 $PATH/man/man1/rmiregistry.1 \
+  --slave /usr/share/man/man1/servertool.1 servertool.1 $PATH/man/man1/servertool.1 \
+  --slave /usr/share/man/man1/tnameserv.1 tnameserv.1 $PATH/man/man1/tnameserv.1 \
+  --slave /usr/share/man/man1/unpack200.1 unpack200.1 $PATH/man/man1/unpack200.1 \
+  --slave /usr/share/man/man1/javaws.1 javaws.1 $PATH/man/man1/javaws.1 \
+  --slave /usr/share/man/man1/jconsole.1 jconsole.1 $PATH/man/man1/jconsole.1 \
+  --slave /usr/share/man/man1/jvisualvm.1 jvisualvm.1 $PATH/man/man1/jvisualvm.1

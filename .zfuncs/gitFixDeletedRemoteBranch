@@ -1,0 +1,6 @@
+unfunction gitFixDeletedRemoteBranch
+autoload gitFixDeletedRemoteBranch
+
+# $1 = remote name
+[ $# -lt 1 ] && echo "To clean up a remote branch that still appears in git branch -a when you know it's been removed. \$1 = remote name" && return 1
+git remote prune $1

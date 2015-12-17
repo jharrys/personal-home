@@ -1,0 +1,5 @@
+unfunction gitMakeRemoteBranchDeletable
+autoload gitMakeRemoteBranchDeletable
+
+# $1 is the actual git dir -- .git or project.git
+git --git-dir $1 config --bool hooks.allowdeletebranch true

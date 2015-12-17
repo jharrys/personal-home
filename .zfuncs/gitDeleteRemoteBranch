@@ -1,0 +1,6 @@
+unfunction gitDeleteRemoteBranch
+autoload gitDeleteRemoteBranch
+
+# $1 = remote name, $2 = remote branch name
+[ $# -lt 2 ] && echo "Needs 2 params: \$1 - remote name, \$2 - remote branch name" && return 1
+git push $1 :$2

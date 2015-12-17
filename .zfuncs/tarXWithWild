@@ -1,0 +1,5 @@
+unfunction tarXWithWild
+autoload tarXWithWild
+
+# Extract group of files using wild cards
+tar -xvf "${1}" --wildcards ${2}

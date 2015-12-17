@@ -1,0 +1,12 @@
+unfunction jarExplodeEar
+autoload jarExplodeEar
+
+mkdir tmp_$1
+cd tmp_$1
+jar xf ../$1
+mkdir WAR
+cd WAR
+jar xf ../*.war
+mkdir -p WEB-INF/lib/JAR
+cd WEB-INF/lib/JAR
+echo "ready for you..."

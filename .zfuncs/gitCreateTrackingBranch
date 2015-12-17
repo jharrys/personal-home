@@ -1,0 +1,16 @@
+unfunction gitCreateTrackingBranch
+autoload gitCreateTrackingBranch
+
+# $1 = new branch, $2 = remote name, $3 = remote branch name to track
+
+[ $# -lt 3 ] && echo "Needs 3 params: \$1 - new branch, \$2 - remote repo, \$3 - remote branch name" && return 1
+
+git branch -r |grep $3 > /dev/null
+if [ $? -lt 1 ]; then
+  echo "$3 already exists, not creating it again"
+else
+  git push $2 master:$3
+fi
+
+# when starting point ($2/$3) is a remote default is to --track
+git checkout -tb $1 ${2}/${3}

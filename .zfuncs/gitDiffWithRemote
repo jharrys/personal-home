@@ -1,0 +1,5 @@
+unfunction gitDiffWithRemote
+autoload gitDiffWithRemote
+
+# $1 = local, $2 = server/branch; could be just $1 in which case $1 is server/branch and diff assumes . is branch
+git diff $1 $2

@@ -1,0 +1,4 @@
+unfunction sshFixKnownHosts
+autoload sshFixKnownHosts
+
+sed --in-place=.bk "/$1/d" ~/.ssh/known_hosts

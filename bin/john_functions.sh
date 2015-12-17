@@ -1,11 +1,32 @@
-function setihc() {
-  sudo route add -net 74.125.0.0 netmask 255.255.0.0 dev wlan0
-  sudo route add -net 209.85.0.0 netmask 255.255.0.0 dev wlan0
-  local myip=`ip -o -f inet addr |grep wlan0 |awk '{ print $4 }' |cut -d / -f 1`
-  wget -O - --bind-address=$myip --post-data "aupaccept=true" http://docs.google.com
+function cupsListRemote {
+	# $1 = remote print server with port (631)
+	[ $# -lt 1 ] && echo "Needs 1 param: \$1 - remote print server & port (631 default)" && return 1
+	lpstat -h $1 -a
+}
+function cupsCreateRemote {
+	# $1 = name of printer on this host, $2 = remote host with port (631), $3 = name of printer on remote (use lpstat)
+	[ $# -lt 3 ] && echo "Needs 3 param: \$1 - name of printer on this host, \$2 - remote print server & port (631 default), \$3 - name of remote printer (use lpstat to find out)" && return 1
+	lpadmin -p $1 -v ipp://${2}/printers/${3}
+	cupsenable $1
+	cupsaccept $1
 }
 
-function findx() {
+function diffTar {
+	# Diff between tar and file system - if relative paths, you must be in relative path
+	tar dfz "${1}"
+}
+
+function ffmpegMine {
+    [ $# -lt 6 ] && echo "myffmpeg input.avi title artist genre copyright" && return 1
+    ffmpeg -i "$1" -metadata title="$2" -metadata artist="$3" -metadata genre="$4" -metadata copyright="$5" -acodec copy -vcodec copy new${1}
+}
+
+function ffmpegToMp3 {
+    [ $# -lt 2 ] && echo "ffmpeg2mp3 input.xxx output.mp3" && return 1
+    ffmpeg -i "$1" -c:a libmp3lame -ac 2 -q:a 2 "$2"
+}
+
+function findX() {
     msg="Simple wrapper around \"find\" except any \"-exclude\" options are mine,"
     msg="$msg and are mapped just as \"-path filedir -prune\" would be. You must use the logical"
     msg="$msg -o operators as you would normally. Order of how you define options is important!"
@@ -35,127 +56,6 @@ function findx() {
     echo "$command"
 }
 
-function alternatives_java() {
-# $1 = path to the alternate
-[ $# -lt 1 ] && echo "Needs 1 param: \$1 - path to alternate java (i.e., /opt/java/current)" && return 1
-local PATH=${1%%/}
-alternatives --install /usr/bin/java java $PATH/bin/java 30000 \
-  --slave /usr/bin/keytool keytool $PATH/bin/keytool \
-  --slave /usr/bin/orbd orbd $PATH/bin/orbd \
-  --slave /usr/bin/pack200 pack200 $PATH/bin/pack200 \
-  --slave /usr/bin/rmid rmid $PATH/bin/rmid \
-  --slave /usr/bin/rmiregistry rmiregistry $PATH/bin/rmiregistry \
-  --slave /usr/bin/servertool servertool $PATH/bin/servertool \
-  --slave /usr/bin/tnameserv tnameserv $PATH/bin/tnameserv \
-  --slave /usr/bin/unpack200 unpack200 $PATH/bin/unpack200 \
-  --slave /usr/bin/jvisualvm jvisualvm $PATH/bin/jvisualvm \
-  --slave /usr/bin/jconsole jconsole $PATH/bin/jconsole \
-  --slave /usr/bin/javaws javaws $PATH/bin/javaws \
-  --slave /usr/share/man/man1/java.1 java.1 $PATH/man/man1/java.1 \
-  --slave /usr/share/man/man1/keytool.1 keytool.1 $PATH/man/man1/keytool.1 \
-  --slave /usr/share/man/man1/orbd.1 orbd.1 $PATH/man/man1/orbd.1 \
-  --slave /usr/share/man/man1/pack200.1 pack200.1 $PATH/man/man1/pack200.1 \
-  --slave /usr/share/man/man1/rmid.1 rmid.1 $PATH/man/man1/rmid.1 \
-  --slave /usr/share/man/man1/rmiregistry.1 rmiregistry.1 $PATH/man/man1/rmiregistry.1 \
-  --slave /usr/share/man/man1/servertool.1 servertool.1 $PATH/man/man1/servertool.1 \
-  --slave /usr/share/man/man1/tnameserv.1 tnameserv.1 $PATH/man/man1/tnameserv.1 \
-  --slave /usr/share/man/man1/unpack200.1 unpack200.1 $PATH/man/man1/unpack200.1 \
-  --slave /usr/share/man/man1/javaws.1 javaws.1 $PATH/man/man1/javaws.1 \
-  --slave /usr/share/man/man1/jconsole.1 jconsole.1 $PATH/man/man1/jconsole.1 \
-  --slave /usr/share/man/man1/jvisualvm.1 jvisualvm.1 $PATH/man/man1/jvisualvm.1
-}
-
-function explode_ear() {
-  mkdir tmp_$1
-  cd tmp_$1
-  jar xf ../$1
-  mkdir WAR
-  cd WAR
-  jar xf ../*.war
-  mkdir -p WEB-INF/lib/JAR
-  cd WEB-INF/lib/JAR
-  echo "ready for you..."
-}
-
-function expand_rpm() {
-	rpm2cpio $1 | cpio -ivd
-}
-
-function fixhosts() {
-	sed --in-place=.bk "/$1/d" ~/.ssh/known_hosts
-}
-
-function grepinjar() {
-	for x in `find . -name "*.jar"`
-	do
-		jar tf $x |grep -iq "$1"
-		[ "$?" = "0" ] && echo "FOUND IN: $x"
-	done
-}
-
-function tarsize {
-	# Estimate the tar archive size
-	tar -cf - "${1}" |wc -c
-}
-
-function tarverify {
-	# Verify tar with file system - if relative paths, you must be in relative path
-	tar tvfW "${1}"
-}
-
-function tardiff {
-	# Diff between tar and file system - if relative paths, you must be in relative path
-	tar dfz "${1}"
-}
-
-function taraddfile {
-	# Add file or directory to tar archive - $1 is tar, $2 is file or dir
-	tar rvf "${1}" "${2}"
-}
-
-function tarxwithwild {
-	# Extract group of files using wild cards
-	tar -xvf "${1}" --wildcards ${2}
-}
-
-########################################
-#	Yum/rpm Functions
-########################################
-function yumUtils {
-	# installs yum-utils which contains a few things includer yumdownloader
-	yum install -y yum-utils
-}
-
-function rpmListPackage {
-	# $1 is full filename of package
-	[ $# -lt 1 ] && echo "Lists files in uninstalled package: \$1 is package file name" && return 1
-	rpm -q -p $1 -l
-}
-
-########################################
-# CUPS Printer Functions
-########################################
-function listRemotePrinters {
-	# $1 = remote print server with port (631)
-	[ $# -lt 1 ] && echo "Needs 1 param: \$1 - remote print server & port (631 default)" && return 1
-	lpstat -h $1 -a
-}
-function createRemotePrinter {
-	# $1 = name of printer on this host, $2 = remote host with port (631), $3 = name of printer on remote (use lpstat)
-	[ $# -lt 3 ] && echo "Needs 3 param: \$1 - name of printer on this host, \$2 - remote print server & port (631 default), \$3 - name of remote printer (use lpstat to find out)" && return 1
-	lpadmin -p $1 -v ipp://${2}/printers/${3}
-	cupsenable $1
-	cupsaccept $1
-}
-
-########################################
-#	Git Functions
-########################################
-function gitMakeRemoteBranchDeletable {
-	# $1 is the actual git dir -- .git or project.git
-	git --git-dir $1 config --bool hooks.allowdeletebranch true
-}
-
 function gitCreateTrackingBranch {
 	# $1 = new branch, $2 = remote name, $3 = remote branch name to track
 
@@ -172,21 +72,15 @@ function gitCreateTrackingBranch {
 	git checkout -tb $1 ${2}/${3}
 }
 
-function gitDiffWithRemote {
-	# $1 = local, $2 = server/branch; could be just $1 in which case $1 is server/branch and diff assumes . is branch
-	git diff $1 $2
-}
-
-function gitPush {
-	# $1 = remotename, $2 = local branch name, $3 = remote branch name
-	[ $# -lt 3 ] && echo "Needs 3 params: \$1 - remote name, \$2 - local branch name, \$3 - remote branch name" && return 1
-	git push $1 $2:$3
-}
-
 function gitDeleteRemoteBranch {
 	# $1 = remote name, $2 = remote branch name
 	[ $# -lt 2 ] && echo "Needs 2 params: \$1 - remote name, \$2 - remote branch name" && return 1
 	git push $1 :$2
+}
+
+function gitDiffWithRemote {
+	# $1 = local, $2 = server/branch; could be just $1 in which case $1 is server/branch and diff assumes . is branch
+	git diff $1 $2
 }
 
 function gitFixDeletedRemoteBranch {
@@ -229,23 +123,109 @@ function gitFixDetachedMasterHEAD {
   unset tmpname
 }
 
-########################################
-#	Miscellaneous Functions
-########################################
-
-function myffmpeg {
-    [ $# -lt 6 ] && echo "myffmpeg input.avi title artist genre copyright" && return 1
-    ffmpeg -i "$1" -metadata title="$2" -metadata artist="$3" -metadata genre="$4" -metadata copyright="$5" -acodec copy -vcodec copy new${1}
+function gitMakeRemoteBranchDeletable {
+	# $1 is the actual git dir -- .git or project.git
+	git --git-dir $1 config --bool hooks.allowdeletebranch true
 }
 
-function ffmpeg2mp3 {
-    [ $# -lt 2 ] && echo "ffmpeg2mp3 input.xxx output.mp3" && return 1
-    ffmpeg -i "$1" -c:a libmp3lame -ac 2 -q:a 2 "$2"
+function gitPush {
+	# $1 = remotename, $2 = local branch name, $3 = remote branch name
+	[ $# -lt 3 ] && echo "Needs 3 params: \$1 - remote name, \$2 - local branch name, \$3 - remote branch name" && return 1
+	git push $1 $2:$3
 }
 
-function putOnSharepoint {
-	# $1 = user, $2 = file to upload, $3 = sharepoint site
-	# sample url =  https://projects.intermountainhealthcare.org/sites/ea/esa/Shared%20Documents/
-	# make sure spaces are converted to %20
-	curl --ntlm --user $1 --upload-file $2 ${3}/${2}
+function javaAlternatives() {
+# $1 = path to the alternate
+[ $# -lt 1 ] && echo "Needs 1 param: \$1 - path to alternate java (i.e., /opt/java/current)" && return 1
+local PATH=${1%%/}
+alternatives --install /usr/bin/java java $PATH/bin/java 30000 \
+  --slave /usr/bin/keytool keytool $PATH/bin/keytool \
+  --slave /usr/bin/orbd orbd $PATH/bin/orbd \
+  --slave /usr/bin/pack200 pack200 $PATH/bin/pack200 \
+  --slave /usr/bin/rmid rmid $PATH/bin/rmid \
+  --slave /usr/bin/rmiregistry rmiregistry $PATH/bin/rmiregistry \
+  --slave /usr/bin/servertool servertool $PATH/bin/servertool \
+  --slave /usr/bin/tnameserv tnameserv $PATH/bin/tnameserv \
+  --slave /usr/bin/unpack200 unpack200 $PATH/bin/unpack200 \
+  --slave /usr/bin/jvisualvm jvisualvm $PATH/bin/jvisualvm \
+  --slave /usr/bin/jconsole jconsole $PATH/bin/jconsole \
+  --slave /usr/bin/javaws javaws $PATH/bin/javaws \
+  --slave /usr/share/man/man1/java.1 java.1 $PATH/man/man1/java.1 \
+  --slave /usr/share/man/man1/keytool.1 keytool.1 $PATH/man/man1/keytool.1 \
+  --slave /usr/share/man/man1/orbd.1 orbd.1 $PATH/man/man1/orbd.1 \
+  --slave /usr/share/man/man1/pack200.1 pack200.1 $PATH/man/man1/pack200.1 \
+  --slave /usr/share/man/man1/rmid.1 rmid.1 $PATH/man/man1/rmid.1 \
+  --slave /usr/share/man/man1/rmiregistry.1 rmiregistry.1 $PATH/man/man1/rmiregistry.1 \
+  --slave /usr/share/man/man1/servertool.1 servertool.1 $PATH/man/man1/servertool.1 \
+  --slave /usr/share/man/man1/tnameserv.1 tnameserv.1 $PATH/man/man1/tnameserv.1 \
+  --slave /usr/share/man/man1/unpack200.1 unpack200.1 $PATH/man/man1/unpack200.1 \
+  --slave /usr/share/man/man1/javaws.1 javaws.1 $PATH/man/man1/javaws.1 \
+  --slave /usr/share/man/man1/jconsole.1 jconsole.1 $PATH/man/man1/jconsole.1 \
+  --slave /usr/share/man/man1/jvisualvm.1 jvisualvm.1 $PATH/man/man1/jvisualvm.1
+}
+
+function jarExplodeEar() {
+  mkdir tmp_$1
+  cd tmp_$1
+  jar xf ../$1
+  mkdir WAR
+  cd WAR
+  jar xf ../*.war
+  mkdir -p WEB-INF/lib/JAR
+  cd WEB-INF/lib/JAR
+  echo "ready for you..."
+}
+
+function jarGrep() {
+	for x in `find . -name "*.jar"`
+	do
+		jar tf $x |grep -iq "$1"
+		[ "$?" = "0" ] && echo "FOUND IN: $x"
+	done
+}
+
+function rpmExpand() {
+	rpm2cpio $1 | cpio -ivd
+}
+
+function rpmListPackage {
+	# $1 is full filename of package
+	[ $# -lt 1 ] && echo "Lists files in uninstalled package: \$1 is package file name" && return 1
+	rpm -q -p $1 -l
+}
+
+function setIhc() {
+  sudo route add -net 74.125.0.0 netmask 255.255.0.0 dev wlan0
+  sudo route add -net 209.85.0.0 netmask 255.255.0.0 dev wlan0
+  local myip=`ip -o -f inet addr |grep wlan0 |awk '{ print $4 }' |cut -d / -f 1`
+  wget -O - --bind-address=$myip --post-data "aupaccept=true" http://docs.google.com
+}
+
+function sshFixKnownHosts() {
+	sed --in-place=.bk "/$1/d" ~/.ssh/known_hosts
+}
+
+function tarSize {
+	# Estimate the tar archive size
+	tar -cf - "${1}" |wc -c
+}
+
+function tarVerify {
+	# Verify tar with file system - if relative paths, you must be in relative path
+	tar tvfW "${1}"
+}
+
+function tarAddFile {
+	# Add file or directory to tar archive - $1 is tar, $2 is file or dir
+	tar rvf "${1}" "${2}"
+}
+
+function tarXWithWild {
+	# Extract group of files using wild cards
+	tar -xvf "${1}" --wildcards ${2}
+}
+
+function yumUtils {
+	# installs yum-utils which contains a few things includer yumdownloader
+	yum install -y yum-utils
 }

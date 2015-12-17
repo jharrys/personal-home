@@ -1,0 +1,5 @@
+unfunction tarSize
+autoload tarSize
+
+# Estimate the tar archive size
+tar -cf - "${1}" |wc -c
