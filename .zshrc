@@ -102,7 +102,7 @@ function _commonsetup() {
   # My Functions
   fpath=(~/.zfuncs $fpath)
   for d in ~/.zfuncs
-    do autoload `ls $d`
+    do autoload `\ls $d`
   done
 }
 
