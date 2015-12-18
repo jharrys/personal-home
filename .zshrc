@@ -159,7 +159,7 @@ function _linuxsetup() {
 }
 
 function _darwinsetup() {
-  CDPATH='~/development:~/development/buildarea:~/development/source_control:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn'
+  CDPATH='/Volumes:~/development:~/development/buildarea:~/development/source_control:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn'
   export CDPATH
 
   # for weblogic
