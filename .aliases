@@ -137,6 +137,7 @@ function _base_aliases() {
   alias mvntest='mvn test'										# mntest -Dtest=fqclassname - run a single test, give the fqcn
   alias mvninstfile='mvn install:install-file'					# mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy           # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
   alias mvnreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'
+  alias mvndelprojrepo='mvn build-helper:remove-project-artifact'   # removes the full project from the .m2 local repository
 }
 
 ##
