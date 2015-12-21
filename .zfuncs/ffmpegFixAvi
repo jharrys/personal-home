@@ -1,0 +1,3 @@
+# Fix a broken index avi ("Broken or missing AVI index")
+[ $# -lt 2 ] && echo "ffmpegFixAvi input.xxx output.xxx" && return 1
+ffmpeg -i "$1" -c:v copy -c:a copy "$2"
