@@ -1,0 +1,8 @@
+cp Screening-Alerting/screening-alerting-ear/target/screening-alerting-ear.ear $1
+cp Screening-Core/screening-core-ear/target/screening-core-ear.ear $1
+cp Screening-Data-Access/screening-data-access-ear/target/screening-data-access-ear.ear $1
+cp Screening-Data-Drive/screening-datadrive-ear/target/screening-datadrive-ear.ear $1
+cp Screening-Data-Retrieve/screening-dataretrieve-ear/target/screening-dataretrieve-ear.ear $1
+cp Screening-Evaluation/screening-evaluation-ear/target/screening-evaluation-ear.ear $1
+cp Screening-Time-Drive/screening-timedrive-ear/target/screening-timedrive-ear.ear $1
+cp Screening-Web-Flex/target/screening-web-flex.war $1
