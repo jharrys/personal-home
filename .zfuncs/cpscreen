@@ -1,3 +1,4 @@
+[ $# -lt 1 ] && echo "usage: $0 /path/to/directory" && return 1
 cp Screening-Alerting/screening-alerting-ear/target/screening-alerting-ear.ear $1
 cp Screening-Core/screening-core-ear/target/screening-core-ear.ear $1
 cp Screening-Data-Access/screening-data-access-ear/target/screening-data-access-ear.ear $1
