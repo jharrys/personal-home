@@ -111,3 +111,5 @@ INTO
 delete from HWCIR_SCREENING.EVAL_MDL_ALRT_RECI where EVAL_MDL_ALRT_RECI.ALERT_RECIPIENT_ID=${userid||(null)||BigDecimal}$;
 delete from HWCIR_SCREENING.SURVEY_REVIEW_USER_LOC_GROUP where SURVEY_REVIEW_USER_LOC_GROUP.REVIEW_USER_ID=${userid||(null)||BigDecimal}$;
 delete from HWCIR_SCREENING.SCR_USER where SCR_USER.ID=${userid||(null)||BigDecimal}$;
+/* remove specific user from receiving any alerts */
+delete from HWCIR_SCREENING.EVAL_MDL_ALRT_RECI where alert_recipient_id=(select id from scr_user where scr_user.LAST_NAME='${userlastname}$');
