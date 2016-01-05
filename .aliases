@@ -90,6 +90,9 @@ function _base_aliases() {
   ###### RPM ########
   alias alien='alien -r'			# To convert deb to rpm
 
+  ##### Sysadmin ######
+  alias topOpenFiles='lsof / |awk ''{ if($7 > 1048576) print $7/1048576 "MB" "" $9 "" $1 }'' |sort -n -u |tail'    # top 10 largest open files
+
   ###### Development ########
 
   # Patching
