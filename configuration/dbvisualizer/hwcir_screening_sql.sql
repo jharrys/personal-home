@@ -113,3 +113,20 @@ delete from HWCIR_SCREENING.SURVEY_REVIEW_USER_LOC_GROUP where SURVEY_REVIEW_USE
 delete from HWCIR_SCREENING.SCR_USER where SCR_USER.ID=${userid||(null)||BigDecimal}$;
 /* remove specific user from receiving any alerts */
 delete from HWCIR_SCREENING.EVAL_MDL_ALRT_RECI where alert_recipient_id=(select id from scr_user where scr_user.LAST_NAME='${userlastname}$');
+
+/* Join query for data_drive_event */
+SELECT
+    p.mmi,
+    e.encounter
+FROM
+    data_drive_event d
+INNER JOIN
+    encounter e
+ON
+    d.encounter_id = e.id
+INNER JOIN
+    patient p
+ON
+    d.patient_id = p.id
+ORDER BY
+    p.mmi;
