@@ -62,6 +62,9 @@ function _commonsetup() {
 
   # User configuration
 
+  # fix for atom not being able to download (redirect is not being followed)
+  export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
+
   export PATH=$HOME/bin:/usr/local/bin:$PATH
   # export MANPATH="/usr/local/man:$MANPATH"
 
