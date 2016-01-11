@@ -114,7 +114,7 @@ delete from HWCIR_SCREENING.SCR_USER where SCR_USER.ID=${userid||(null)||BigDeci
 /* remove specific user from receiving any alerts */
 delete from HWCIR_SCREENING.EVAL_MDL_ALRT_RECI where alert_recipient_id=(select id from scr_user where scr_user.LAST_NAME='${userlastname}$');
 
-/* Join query for data_drive_event */
+/* Join query to identify data_drive_event data - use to smoke test and compare with production */
 SELECT
     p.mmi,
     e.encounter
@@ -130,3 +130,14 @@ ON
     d.patient_id = p.id
 ORDER BY
     p.mmi;
+
+/* Query to identify xml data from the scr_intervention_evt_adt table and extract columns to test */    
+SELECT
+    extractvalue(xmltype(xml_event_data), '/EDAdmitEvent/Encounter/EncounterNumber'),
+    xmltype(xml_event_data).extract('/EDAdmitEvent/Encounter').getStringVal()
+FROM
+    SCR_INTERVENTION_EVT_ADT
+WHERE
+    audit_date_time > to_date('2016-01-07 09:30:00', 'yyyy-mm-dd HH:MI:SS')
+ORDER BY
+    audit_date_time;
