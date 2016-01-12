@@ -83,7 +83,7 @@ function _commonsetup() {
   export EDITOR='vim'
 
   # Less options
-  export LESS="-S -N"
+  export LESS="-S -n -r"
 
   # Compilation flags
   # export ARCHFLAGS="-arch x86_64"
