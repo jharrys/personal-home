@@ -61,6 +61,7 @@ configuration/Sublime Text 2/Backup
 .mcop
 .mozilla
 .mplayer
+.multitail*
 .n*
 # .o*
 .oracle*
