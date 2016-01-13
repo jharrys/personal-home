@@ -165,6 +165,16 @@ function _linuxsetup() {
 }
 
 function _darwinsetup() {
+
+  # Proxy setup
+  http_proxy="http://username:password@proxylp.ihc.com:8080"
+  HTTP_PROXY=$http_proxy
+  https_proxy=$http_proxy
+  HTTPS_PROXY=$http_proxy
+  no_proxy=localhost,127.0.0.0/8,*.local
+  NO_PROXY=$no_proxy
+  export http_proxy HTTP_PROXY https_proxy HTTPS_PROXY no_proxy NO_PROXY
+
   CDPATH='/Volumes:~/development:~/development/buildarea:~/development/source_control:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn'
   export CDPATH
 
@@ -189,7 +199,7 @@ function _darwinsetup() {
   MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
   export MAVEN_HOME
 
-  PATH=~/bin:~/Library/Python/2.7/bin:/usr/local/bin:~/Applications/subit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
+  PATH=~/bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/Applications/subit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
   export PATH
 
   # Run powerline for zsh
