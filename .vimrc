@@ -44,11 +44,13 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Add powerline status bar
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set laststatus=2
-set t_Co=256
+if filereadable("~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim")
+    python from powerline.vim import setup as powerline_setup
+    python powerline_setup()
+    python del powerline_setup
+    set laststatus=2
+    set t_Co=256
+endif
 
 " Sets how many lines of history VIM has to remember
 set history=700
