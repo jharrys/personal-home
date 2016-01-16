@@ -8,6 +8,7 @@
 function _base_aliases() {
   ###### Base ########
   alias ls='ls --color'
+  alias lt='ls -ltr'
   alias mv='mv -i'
   alias cp='cp -i'
   alias ll='ls -lh'
