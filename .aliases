@@ -8,13 +8,14 @@
 function _base_aliases() {
   ###### Base ########
   alias ls='ls --color'
-  alias lt='ls -ltrh'
+  alias lt='ls -ltrh'                   # list detail sort by time reversed
+  alias ll='ls -lh'                     # list detail
+  alias la='ls -Alh'                    # list detail showing hidden, hiding . and ..
+  alias lld='ls -Alh |grep ^d'          # list detail just directories
+  alias lls='ls -lhSr'                  # list detail by size reverse order
   alias mv='mv -i'
   alias cp='cp -i'
-  alias ll='ls -lh'
   alias vi='vim'
-  alias la='ls -Alh'
-  alias lld='ls -Alh |grep ^d'
   alias getw='wget -N -r -nH -nd --no-parent'
   alias locupd='cd /; sudo /usr/libexec/locate.updatedb'      #Update locate database
 
