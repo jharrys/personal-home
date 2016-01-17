@@ -8,15 +8,13 @@
 function _base_aliases() {
   ###### Base ########
   alias ls='ls --color'
-  alias lt='ls -ltr'
+  alias lt='ls -ltrh'
   alias mv='mv -i'
   alias cp='cp -i'
   alias ll='ls -lh'
   alias vi='vim'
-  alias la='ls -Al'
-  alias lld='ls -Al |grep ^d'
-  alias elias='vim ~/.bashrc'
-  alias ralias='. ~/.bashrc'
+  alias la='ls -Alh'
+  alias lld='ls -Alh |grep ^d'
   alias getw='wget -N -r -nH -nd --no-parent'
   alias locupd='cd /; sudo /usr/libexec/locate.updatedb'      #Update locate database
 
@@ -38,7 +36,7 @@ function _base_aliases() {
   alias rsyncX2JJ='rsync -avuzhP --delete /media/sf_X_DRIVE/AppsInstalledOnWorkLaptop/ /run/media/$(whoami)/JJ/AppsInstalledOnWorkLaptop/'
 
   ###### Time savers ########
-  alias a='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
+  alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
   alias _tsLargestDirs='find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn'
   alias _tsLargeFiles='find . -size +1000000 -ls'
   alias _tsWhoHasFileOpen='fuser'
