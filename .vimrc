@@ -52,6 +52,9 @@ if filereadable("~/Library/Python/2.7/lib/python/site-packages/powerline/binding
     set t_Co=256
 endif
 
+" Autocomplete markup tags (remapping C-X, C-O)
+iabbrev </ </<C-X><C-O>
+
 " Sets how many lines of history VIM has to remember
 set history=700
 
