@@ -43,6 +43,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Manage my 'runtimepath', making it easy to install plugins and runtime files
+" See https://github.com/tpope/vim-pathogen
+"if filereadable("~/.vim/autoload/pathogen.vim")
+    execute pathogen#infect()
+"endif
+
 " Add powerline status bar
 if filereadable("~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim")
     python from powerline.vim import setup as powerline_setup
