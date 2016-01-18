@@ -1,0 +1,1 @@
+/Applications/Microsoft Outlook.app
