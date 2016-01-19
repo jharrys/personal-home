@@ -150,6 +150,7 @@ function _base_aliases() {
 function _darwin_aliases() {
   # re alias ls --color (doesn't work on bsd)
   alias ls='ls -G'
+  alias l@='ls -alh@'
 
   # chflags - changes file flags - using it here to unhide hidden directories
   alias unhide='chflags nohidden'
