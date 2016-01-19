@@ -1,0 +1,1 @@
+/Users/lpjharri/Applications/eclipse/jee-mars/Eclipse.app

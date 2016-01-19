@@ -1,0 +1,1 @@
+/Applications/BetterZip.app

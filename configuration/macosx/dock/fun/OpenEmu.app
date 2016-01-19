@@ -1,0 +1,1 @@
+/Applications/OpenEmu.app
