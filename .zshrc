@@ -193,7 +193,8 @@ function _darwinsetup() {
   DOMAIN_HOME=~/local/wldomains/hwapp
   export DOMAIN_HOME
 
-  JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
+  # JAVA environment setup use /usr/libexec/java_home executable - default to jdk 8
+  JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
   export JAVA_HOME
 
   MAVEN_HOME=/usr/local/Cellar/maven/3.3.9

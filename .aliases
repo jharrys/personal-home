@@ -152,6 +152,10 @@ function _darwin_aliases() {
   alias ls='ls -G'
   alias l@='ls -alh@'
 
+  # for setting JAVA environment
+  alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+  alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+
   # chflags - changes file flags - using it here to unhide hidden directories
   alias unhide='chflags nohidden'
   alias hide='chflags hidden'
