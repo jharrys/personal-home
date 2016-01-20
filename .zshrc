@@ -166,6 +166,10 @@ function _linuxsetup() {
 
 function _darwinsetup() {
 
+  # ls color
+  export CLICOLOR=1
+  export LSCOLORS=exfxcxdxbxegedabagacad
+
   # Proxy setup
   http_proxy="http://username:password@proxylp.ihc.com:8080"
   HTTP_PROXY=$http_proxy

@@ -149,7 +149,7 @@ function _base_aliases() {
 
 function _darwin_aliases() {
   # re alias ls --color (doesn't work on bsd)
-  alias ls='ls -G'
+  unalias ls
   alias l@='ls -alh@'
 
   # for setting JAVA environment
