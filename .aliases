@@ -141,6 +141,10 @@ function _base_aliases() {
   alias mvninstfile='mvn install:install-file'					# mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy           # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
   alias mvnreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'
   alias mvndelprojrepo='mvn build-helper:remove-project-artifact'   # removes the full project from the .m2 local repository
+
+  # CIFS/SMB Mounts
+  alias mtnexus='mkdir -p ~/mounts/nexus;sudo mount -t cifs //sasamba.co.ihc.com/lpjharri ~/mounts/nexus -o user=CO\\lpjharri;cd ~/mounts/nexus'
+  alias umtnexus='cd ~/mounts;sudo umount ~/mounts/nexus'
 }
 
 ##
@@ -187,6 +191,10 @@ function _darwin_aliases() {
   alias mysqladmin='/usr/local/mysql/bin/mysqladmin'
   alias mysqlstart='launchctl load -w /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
   alias mysqlstop='launchctl unload -w /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
+
+  # CIFS/SMB Mounts
+  alias mtnexus='mkdir -p ~/mounts/nexus;mount -t smbfs //lpjharri@sasamba.co.ihc.com/lpjharri ~/mounts/nexus;cd ~/mounts/nexus'
+  alias umtnexus='cd ~/mounts;umount ~/mounts/nexus'
 }
 
 ##
