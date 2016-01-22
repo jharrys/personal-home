@@ -97,7 +97,8 @@
 # Configure merge attributes
 # ** define tools based on cygwin, windows or linux
 [merge]
-    tool = extMerge
+	tool = diffmerge
+	conflictstyle = diff3
 
 # Defined myself as the tool to use for external merges
 [mergetool "extMerge"]
