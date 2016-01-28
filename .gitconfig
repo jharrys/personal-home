@@ -100,35 +100,11 @@
 	tool = diffmerge
 	conflictstyle = diff3
 
-# Defined myself as the tool to use for external merges
-[mergetool "extMerge"]
-    cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-
-# Defined because the tool does not correctly set exit code
-[mergetool]
-    trustExitCode = false
-
-	; keepBackup defaults to true and the original file with conflict markers is saved with .orig extension
-	; keepBackup = false
-# My unique diff requirements under cygwin
 [diff]
-	guitool = opendiff
-
     ; follow & diff renames
     ; options are true/false which does basic rename detection, or copies (copy) which will also detect copies
     renames = copies
-
-# Different diff apps and options under cygwin
-[diff "docx"]
-	textconv = git.docx.textconv
-[diff "doc"]
-	textconv = antiword
-[diff "ghost"]
-	textconv = ps2ascii
-[diff "strings"]
-	textconv = strings
-[diff "pdf"]
-	textconv = pdf2txt
+	tool = diffmerge
 
 # Configure http proxy settings
 [http]
@@ -166,6 +142,11 @@
     ; cmd = /cygdrive/c/Users/lpjharri/AppData/Local/Google/Chrome/Application/chrome.exe
 [push]
 	default = simple
+[difftool "diffmerge"]
+	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
+	trustExitCode = true
+    cmd = /usr/local/bin/diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
