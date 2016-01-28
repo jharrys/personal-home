@@ -91,6 +91,12 @@ let &t_te.="\e[0 q"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Highlight current cursor line
+set cursorline
+
+" Highlight current cursor column
+set cursorcolumn
+
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
@@ -197,6 +203,7 @@ set lbr
 set tw=500
 
 set ai "Auto indent
+set si "Smart indent
 set nowrap "No Wrap lines
 
 
