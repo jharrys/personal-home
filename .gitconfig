@@ -2,8 +2,8 @@
 # ATTENTION: Search for ** for OS specific settings
 [user]
 	; ** define a name with the OS in mind
-        name = Johnnie Harris
-        email = johnnie.harris@imail.org
+	name = Johnnie Harris
+	email = johnnie.harris@imail.org
 
 # Configure core options
 [core]
@@ -21,7 +21,7 @@
 
     ; set an ignore file outside of the working directory. it's used in addition to .gitignore and .git/info/exclude
     ; "~/" expands to home, "~user/" expands to user's home dir
-    excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
     ; editor to launch for some commands that need the editor like commit and tag. overridden by GIT_EDITOR
     ; editor = "/path/to/editor"
@@ -148,8 +148,8 @@
 	trustExitCode = true
     cmd = /usr/local/bin/diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
