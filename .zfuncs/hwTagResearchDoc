@@ -1,0 +1,55 @@
+CURRDIR=$(pwd)
+NOW=$(date "+%y.%m%d")
+DIR=/tmp/researchdoc-$NOW
+TASK=$1 
+
+[ $# -lt 1 ] && echo "specify \"daily\" or \"retag\"" && return 1
+
+# Setup the directory to work in and clone the project
+if [ -d $DIR ]; then
+    cd $DIR
+    cd idiscover-server
+    echo "$DIR already exists, doing a git pull ..."
+    git pull 1>/dev/null 2>&1
+else
+    mkdir -p $DIR
+    cd $DIR
+    echo "Cloning directory to $DIR ..."
+    git clone git@gitlab.co.ihc.com:researchdoc/idiscover-server.git 1>/dev/null 2>&1
+    cd idiscover-server
+fi
+
+# Execute the task
+if [ "$1" = "daily" ]; then
+   TAG=$(git tag -l $NOW)
+   if [ -n "$TAG" ]; then
+       echo "Tag $NOW has already been set. You must specify \"retag\"."
+       return 2
+   fi
+   echo "Setting the POM maven version to $NOW."
+   mvn versions:set -DnewVersion=$NOW -DgenerateBackupPoms=false 1>/dev/null 2>&1
+   git add . 1>/dev/null 2>&1
+   git commit -m "Daily version synchronization" 1>/dev/null 2>&1
+   echo "Pushing the new POMs to the repository."
+   #git push origin master
+   git tag -a $NOW -m "Daily tag initialization"
+   echo "Added tag $NOW and pushing to repository."
+   #git push --tags origin master
+elif [ "$1" = "retag" ]; then
+   TAG=$(git tag -l $NOW)
+   if [ -z "$TAG" ]; then
+       echo "Tag $NOW has not been set. You must run \"daily\" before doing a retag."
+       return 2
+   fi
+   git tag -fa $NOW -m "Re-tagging master"
+   echo "Re-added tag $NOW and pushing to repository."
+   git push -f --tags origin master
+fi
+
+# Cleanup
+cd $DIR
+rm -rf idiscover-server
+cd $CURRDIR
+rmdir $DIR
+
+echo "The $TASK tagging task has completed."
