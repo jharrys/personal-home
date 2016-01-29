@@ -153,6 +153,9 @@ function _linuxsetup() {
 	# SQL Plus Environment
 	SQLPATH=~/configuration/sqlplus
 
+    PYTHONSITE=$(python -m site --user-site)
+    . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
+
 	# SSH Environment
 	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 		SESSION_TYPE=remote/ssh
@@ -208,7 +211,10 @@ function _darwinsetup() {
   export PATH
 
   # Run powerline for zsh
-  . /Users/lpjharri/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+  # Identify Python site-packages site
+  PYTHONSITE=$(python -m site --user-site)
+  . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
+  #. /Users/lpjharri/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 }
 
 function _cygwinsetup() {
@@ -217,7 +223,10 @@ function _cygwinsetup() {
   export CDPATH
 
   # Powerline Environment - nice prompt for commandline and VIM
-  . /home/lpjharri/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+  # Identify Python site-packages site
+  PYTHONSITE=$(python -m site --user-site)
+  . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
+  #. /home/lpjharri/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 }
 
 #
