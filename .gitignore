@@ -37,7 +37,7 @@ configuration/Sublime Text 2/Backup
 .bash_history
 .boswars
 .cache
-.config
+.config/*
 .cups
 .d*
 .e*
@@ -94,6 +94,7 @@ configuration/Sublime Text 2/Backup
 # Directories to ignore
 #
 Applications
+Applications (Parallels)
 Archives
 Code Splices
 Conferences
