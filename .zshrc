@@ -171,6 +171,7 @@ function _darwinsetup() {
 
   # ls color
   export CLICOLOR=1
+  export CLICOLOR_FORCE=1       # Force colors through non-tty streams such as less
   export LSCOLORS=exfxcxdxbxegedabagacad
 
   # Proxy setup
