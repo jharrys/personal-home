@@ -173,3 +173,34 @@ INSERT INTO EVAL_MDL_ALRT_RECI (ID, ALERT_METHOD_ID, ALERT_RECIPIENT_ID, EVALUAT
 INSERT INTO EVAL_MDL_ALRT_RECI (ID, ALERT_METHOD_ID, ALERT_RECIPIENT_ID, EVALUATION_MODEL_ID, LOCATION_GROUP_ID) VALUES (hibernate_sequence.nextval, 1, ${userid}$, 7, 35);
 INSERT INTO EVAL_MDL_ALRT_RECI (ID, ALERT_METHOD_ID, ALERT_RECIPIENT_ID, EVALUATION_MODEL_ID, LOCATION_GROUP_ID) VALUES (hibernate_sequence.nextval, 1, ${userid}$, 7, 36);
 INSERT INTO EVAL_MDL_ALRT_RECI (ID, ALERT_METHOD_ID, ALERT_RECIPIENT_ID, EVALUATION_MODEL_ID, LOCATION_GROUP_ID) VALUES (hibernate_sequence.nextval, 1, ${userid}$, 7, 37);
+/*
+** Adding myself to all reviews
+*/
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 2,${userid}$,1);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 4,${userid}$,1);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 6,${userid}$,1);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 8,${userid}$,1);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 9,${userid}$,2);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 10,${userid}$,2);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 11,${userid}$,2);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 12,${userid}$,2);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 13,${userid}$,2);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 14,${userid}$,2);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 25,${userid}$,2);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 16,${userid}$,3);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 18,${userid}$,3);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 20,${userid}$,3);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 22,${userid}$,3);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 24,${userid}$,4);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 26,${userid}$,5);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 27,${userid}$,5);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 28,${userid}$,5);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 29,${userid}$,5);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 30,${userid}$,6);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 31,${userid}$,6);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 32,${userid}$,6);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 33,${userid}$,6);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 34,${userid}$,7);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 35,${userid}$,7);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 36,${userid}$,7);
+insert into SURVEY_REVIEW_USER_LOC_GROUP(ID,LOCATION_GROUP_ID,REVIEW_USER_ID,SCR_SURVEY_ID) values (hibernate_sequence.nextval, 37,${userid}$,7);
