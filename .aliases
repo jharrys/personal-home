@@ -17,7 +17,6 @@ function _base_aliases() {
   alias cp='cp -i'
   alias vi='vim'
   alias getw='wget -N -r -nH -nd --no-parent'
-  alias locupd='cd /; sudo /usr/libexec/locate.updatedb'      #Update locate database
 
   ###### Screen or tmux ########
   alias screen='screen ${SHELL} -l'
@@ -34,7 +33,8 @@ function _base_aliases() {
   alias rsync='rsync -avuzhP'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
   alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
   alias rsyncPicToshibaAsSource='rsync -avuzhP ${HOME}/winhome/Mounts/toshiba/pictures/'
-  alias rsyncX2JJ='rsync -avuzhP --delete /media/sf_X_DRIVE/AppsInstalledOnWorkLaptop/ /run/media/$(whoami)/JJ/AppsInstalledOnWorkLaptop/'
+  # alias rsyncX2JJ='rsync -avuzhP --delete /media/sf_X_DRIVE/AppsInstalledOnWorkLaptop/ /run/media/$(whoami)/JJ/AppsInstalledOnWorkLaptop/'
+  alias rsyncX2JJ='rsync -avuzhP --delete /Volumes/root/lpjharri/AppsInstalledOnWorkLaptop/ /Volumes/JJ/AppsInstalledOnWorkLaptop/'
 
   ###### Time savers ########
   alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
@@ -156,6 +156,9 @@ function _darwin_aliases() {
   unalias ls
   alias l@='ls -alh@'
 
+  # Update locate database
+  alias updatelocate='sudo /usr/libexec/locate.updatedb'
+
   # for setting JAVA environment
   alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
   alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
@@ -217,6 +220,9 @@ function _linux_aliases() {
   alias dl='dnf list installed'
   alias dr='dnf remove -y'
   alias dli='dnf localinstall -y --nogpgcheck'
+
+  # Locate database
+  alias updatelocate='sudo updatedb'
 
   # CIFS/SMB Mounts
   alias mtnexus='mkdir -p /mnt/nexus;sudo mount -t cifs //sasamba.co.ihc.com/lpjharri /mnt/nexus -o user=CO\\lpjharri,uid=lpjharri,gid=webdev,file_mode=0770,dir_mode=0770;cd /mnt/nexus'
