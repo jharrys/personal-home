@@ -65,8 +65,7 @@ iabbrev </ </<C-X><C-O>
 set history=700
 
 " Enable filetype plugins
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " Omnifunctionality
 set omnifunc=syntaxcomplete#Complete
