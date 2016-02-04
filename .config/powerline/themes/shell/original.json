@@ -1,71 +1,71 @@
 {
-    "segment_data": {
-        "hostname": {
-            "args": {
-                "only_if_ssh": false,
-                "exclude_domain": true
-            }
-        },
-        "branch": {
-            "args": {
-                "status_colors": true
-            }
-        }
+  "segment_data": {
+    "hostname": {
+      "args": {
+        "only_if_ssh": false,
+          "exclude_domain": true
+      }
     },
-	"segments": {
-		"left": [
-            {
-                "function": "powerline.segments.common.time.date",
-                "args": {
-                    "format": "%H:%M"
-                }
-            },
-			{
-				"function": "powerline.segments.shell.mode"
-			},
-			{
-				"function": "powerline.segments.common.net.hostname",
-				"priority": 10
-			},
-			{
-				"function": "powerline.segments.common.env.user",
-				"priority": 30
-			},
-			{
-				"function": "powerline.segments.common.env.virtualenv",
-				"priority": 50
-			},
-			{
-				"function": "powerline.segments.shell.cwd",
-				"priority": 10
-			},
-			{
-				"function": "powerline.segments.shell.jobnum",
-				"priority": 20
-			}
-		],
-		"right": [
-			{
-				"function": "powerline.segments.shell.last_pipe_status",
-				"priority": 10
-			},
-			{
-				"function": "powerline.segments.common.vcs.branch",
-				"priority": 40
-			},
-            {
-                "function": "powerline.segments.common.bat.battery",
-                "priority": 10
-            },
-            {
-                "function": "powerline.segments.common.wthr.weather",
-                "args": {
-                    "unit": "C",
-                    "interval": 1800,
-                    "location_query": "utah, usa"
-                },
-                "priority": 60
-            }
-		]
-	}
+      "branch": {
+        "args": {
+          "status_colors": true
+        }
+      }
+  },
+    "segments": {
+      "left": [
+      {
+        "function": "powerline.segments.common.time.date",
+        "args": {
+          "format": "%H:%M"
+        }
+      },
+      {
+        "function": "powerline.segments.shell.mode"
+      },
+      {
+        "function": "powerline.segments.common.net.hostname",
+        "priority": 10
+      },
+      {
+        "function": "powerline.segments.common.env.user",
+        "priority": 30
+      },
+      {
+        "function": "powerline.segments.common.env.virtualenv",
+        "priority": 50
+      },
+      {
+        "function": "powerline.segments.shell.cwd",
+        "priority": 10
+      },
+      {
+        "function": "powerline.segments.shell.jobnum",
+        "priority": 20
+      }
+      ],
+        "right": [
+        {
+          "function": "powerline.segments.shell.last_pipe_status",
+          "priority": 10
+        },
+        {
+          "function": "powerline.segments.common.vcs.branch",
+          "priority": 40
+        },
+        {
+          "function": "powerline.segments.common.bat.battery",
+          "priority": 10
+        },
+        {
+          "function": "powerline.segments.common.wthr.weather",
+          "args": {
+            "unit": "C",
+            "interval": 1800,
+            "location_query": "utah, usa"
+          },
+          "priority": 60
+        }
+      ]
+    }
 }
