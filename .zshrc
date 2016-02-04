@@ -110,6 +110,11 @@ function _commonsetup() {
   for d in ~/.zfuncs
     do autoload `\ls $d`
   done
+
+  # Setup my zsh help files - as described in http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Accessing-On_002dLine-Help
+  export HELPDIR=~/.zsh_help
+  unalias run-help
+  autoload run-help
 }
 
 function _linuxsetup() {
