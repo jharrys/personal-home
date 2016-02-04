@@ -59,7 +59,7 @@ if filereadable("~/Library/Python/2.7/lib/python/site-packages/powerline/binding
 endif
 
 " Autocomplete markup tags (remapping C-X, C-O)
-iabbrev </ </<C-X><C-O>
+iabbrev <// </<C-X><C-O>
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -188,23 +188,26 @@ set directory=~/.vimbackup,~/tmp
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" This adds file type indentation (make sure smart indentation, si, is turned off).
+" Now add to your directory ~/.vim/after/ftplugin/*.vim files (i.e., ~/.vim/after/ftplugin/html.vim)
 filetype plugin indent on
 
-" show existing tab with 4 spaces width
-set tabstop=4
-
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-
-" Use spaces instead of tabs
+" For indentation without hard tabs the idea is to set expandtab, set shiftwidth and softtabstop to same value and leave tabstop at it's default value
 set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+" For indentation with hard tabs set tabstop and shiftwidth to the same value and leave expandtab to it's default value of 'noexpandtab' and leave 'softtabstop' unset
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
 
-set ai "Auto indent
-set si "Smart indent
+" Auto indent: does not interfere with any other indentation settings, so it's good to have it on. Simply copies the indentation from the previous line.
+set ai
+
+" Smart indent: can interfere with file type indentation, and should not be used in conjunction with it (same with cindent). So turn it off if you have 'filetype plugin indent on'
+" set si
 set nowrap "No Wrap lines
 
 
