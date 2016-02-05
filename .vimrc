@@ -179,6 +179,11 @@ set ffs=unix,dos,mac
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set backupdir=~/.vimbackup,~/tmp
 set directory=~/.vimbackup,~/tmp
+
+" Persistent undo per file
+set undofile
+set undodir=~/.vimbackup,~/tmp
+
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 " set nobackup
 " set nowb

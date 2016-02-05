@@ -81,6 +81,7 @@ configuration/Sublime Text 2/Backup
 # .v* - for .vimrc
 .vboxclient*
 .vmc_*
+.vimbackup
 .viminfo
 .vnc
 .w*
