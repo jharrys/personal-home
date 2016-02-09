@@ -8,6 +8,7 @@
 function _base_aliases() {
   ###### Base ########
   alias ls='ls --color'
+  alias lr='ls -AlhR'                   # list recursively
   alias lt='ls -ltrh'                   # list detail sort by time reversed
   alias ll='ls -lh'                     # list detail
   alias la='ls -Alh'                    # list detail showing hidden, hiding . and ..
@@ -34,7 +35,8 @@ function _base_aliases() {
   alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
   alias rsyncPicToshibaAsSource='rsync -avuzhP ${HOME}/winhome/Mounts/toshiba/pictures/'
   # alias rsyncX2JJ='rsync -avuzhP --delete /media/sf_X_DRIVE/AppsInstalledOnWorkLaptop/ /run/media/$(whoami)/JJ/AppsInstalledOnWorkLaptop/'
-  alias rsyncX2JJ='rsync -avuzhP --delete /Volumes/root/lpjharri/AppsInstalledOnWorkLaptop/ /Volumes/JJ/AppsInstalledOnWorkLaptop/'
+  alias rsyncnet2JJ='rsync -avuzhP --delete ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/ /Volumes/JJ/AppsInstalledOnWorkLaptop/'
+  alias rsyncJJ2net='rsync -avuzhP --delete /Volumes/JJ/AppsInstalledOnWorkLaptop/ ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/'
 
   ###### Time savers ########
   alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
