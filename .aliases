@@ -19,6 +19,10 @@ function _base_aliases() {
   alias vi='vim'
   alias getw='wget -N -r -nH -nd --no-parent'
 
+  ###### Less ######
+  alias less='less -F'
+  alias lessf='less +F'
+
   ###### Screen or tmux ########
   alias screen='screen ${SHELL} -l'
 
