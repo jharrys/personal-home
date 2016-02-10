@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,7 +58,7 @@ setopt share_history
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn history brew extract python tmux)
+plugins=(git mvn history brew extract python tmux osx zsh-syntax-highlighting)
 
 # User configuration
 
@@ -209,7 +209,6 @@ export PATH
 # Identify Python site-packages site
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
-#. /Users/lpjharri/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 }
 
 function _cygwinsetup() {
@@ -251,13 +250,6 @@ elif $cygwin; then
   _cygwinsetup
 else
   _linuxsetup
-fi
-
-# Powerline Environment - nice prompt for commandline and VIM
-# Below doesn't work if executed from within a function
-sitepackagespath=$(python -c "import site; print(site.getsitepackages()[0])")
-if [ -n "$sitepackagespath" -a -d "$sitepackagespath/powerline" ]; then
-  . ${sitepackagespath}/powerline/bindings/zsh/powerline.zsh
 fi
 
 # oh-my-zsh adds a deprecated environment variable. this disables it.
