@@ -88,13 +88,13 @@ function _base_aliases() {
   alias tidyxml='tidy -i -q -w 0 -xml'
 
   ###### Strings and Binary files ########
-  alias binstr='strings -a'		# binstr binfile (searches full file and certain sections from TK_STRINGS_DEFAULT_SECTIONS)
-  alias binstrn='strings -n'		# binstrn 2 binfile (returns strings >=2)
-  alias binstrm='strings -f'		# binstrf /bin/* (searches all bin files)
-  alias binstro='strings -o'		# binstro binfile (returns strings with their octal offset)
+  alias binstr='strings -a'                                                                     # binstr binfile (searches full file and certain sections from TK_STRINGS_DEFAULT_SECTIONS)
+  alias binstrn='strings -n'                                                                    # binstrn 2 binfile (returns strings >=2)
+  alias binstrm='strings -f'                                                                    # binstrf /bin/* (searches all bin files)
+  alias binstro='strings -o'                                                                    # binstro binfile (returns strings with their octal offset)
 
   ###### RPM ########
-  alias alien='alien -r'			# To convert deb to rpm
+  alias alien='alien -r'                                                                        # To convert deb to rpm
 
   ##### Sysadmin ######
   alias topOpenFiles='lsof / |awk ''{ if($7 > 1048576) print $7/1048576 "MB" "" $9 "" $1 }'' |sort -n -u |tail'    # top 10 largest open files
@@ -102,51 +102,52 @@ function _base_aliases() {
   ###### Development ########
 
   # Patching
-  alias dry='patch -Np1 --dry-run'							# Do a dry run of the patch - add the "< file.patch"
-  alias dp='LC_ALL=C TZ=UTC diff -aNru'						# Create a unified patch from diff - add the "original target > file.patch"
+  alias dry='patch -Np1 --dry-run'                                                              # Do a dry run of the patch - add the "< file.patch"
+  alias dp='LC_ALL=C TZ=UTC diff -aNru'                                                         # Create a unified patch from diff - add the "original target > file.patch"
 
   # GIT stuff
   alias gitinit='git init'									# gitinit - creates bare git (use "git add .")
-  alias gitinitbare='git init --bare'							# gitinitbare /some/dirproject.git - creates git repo without work local files
+  alias gitinitbare='git init --bare'                                                           # gitinitbare /some/dirproject.git - creates git repo without work local files
   alias gitrepo='git clone'									# gitrepo ~/existing/repo ~/new/repo -OR- gitrepo ssh://john@host/srv/git/some.git
   alias gitrh='git reset --hard'								# Reset working local (wl), index and HEAD ref to all be the same - to HEAD if no arg
   alias gitrs='git reset --soft'								# Reset HEAD ref to arg you give - leaves wl and index as is (wl and index may not match)
   alias gitcln='git clean -d -n'								# Clean wl (dry-run), deleting unstage files also (reset --hard doesn't anymore)
   alias gitcl='git clean -d'									# Clean wl (real), deleting unstage files also (reset --hard doesn't anymore)
-  alias gitdf='git diff --name-only'							# Diff, producing only names that changed (provide branch name for diff between current and other branch - remote/branch also)
-  alias gitdfstat='git diff --numstat'						# Diff, producing number stats
-  alias gitdfstaged='git diff --cached'						# Diff what you've staged
-  alias gitcleancheckout='git checkout -f'					# Throws away ALL UN-committed work, leaving new files untouched (never committed before) - and checks out CLEAN.
-  alias gitconfig='git config --global'						# Apply aliases or other configs globally: gitconfig alias.co checkout - sets up co for checkout
+  alias gitdf='git diff --name-only'                                                            # Diff, producing only names that changed (provide branch name for diff between current and other branch - remote/branch also)
+  alias gitdfstat='git diff --numstat'                                                          # Diff, producing number stats
+  alias gitdfstaged='git diff --cached'                                                         # Diff what you've staged
+  alias gitcleancheckout='git checkout -f'                                                      # Throws away ALL UN-committed work, leaving new files untouched (never committed before) - and checks out CLEAN.
+  alias gitconfig='git config --global'                                                         # Apply aliases or other configs globally: gitconfig alias.co checkout - sets up co for checkout
   alias gitlistcommittedfiles='git ls-files'
   alias gitstashlist='git stash list'
-  alias gitstashsave='git stash save'							# gitsavestash "Put message here to remind you of what you stashed"
-  alias gitstashclear='git stash clear'						# delete stash
-  alias gitstash='git stash apply'							# Load back the stash
-  alias gitbrlist='git branch -a'								# List both remote & local branches
-  alias gitchp='git cherry-pick'								# gitchp SHA1-COMMIT - merges SHA1-COMMIT into current branch
-  alias gitaddp='git add -p'									# gitaddp - let's you pick the changes interactively as your shown diffs
-  alias gitrebasei='git rebase -i'							# gitrebasei HEAD~3 - interactively rewrite history; delete pick to remove commit, 'edit' & 'squash'
-  alias gitrmbr='read -p "branch: " BR;git push origin :$BR'  # delete remote branch on origin - git push origin :remotebranch
-  alias gitrmtag='read -p "tag: " BR;git push origin :refs/tags/$BR'  # delete remote tag on origin - git push origin :remotetag
-  alias gru='read -p "remote: " RM;git remote update ${RM:-origin}'        # remote update without pulling, then git status will show appropriate info
+  alias gitstashsave='git stash save'                                                           # gitsavestash "Put message here to remind you of what you stashed"
+  alias gitstashclear='git stash clear'                                                         # delete stash
+  alias gitstash='git stash apply'                                                              # Load back the stash
+  alias gitbrlist='git branch -a'                                                               # List both remote & local branches
+  alias gitchp='git cherry-pick'                                                                # gitchp SHA1-COMMIT - merges SHA1-COMMIT into current branch
+  alias gitaddp='git add -p'                                                                    # gitaddp - let's you pick the changes interactively as your shown diffs
+  alias gitrebasei='git rebase -i'                                                              # gitrebasei HEAD~3 - interactively rewrite history; delete pick to remove commit, 'edit' & 'squash'
+  alias gitrmbr='read -p "branch: " BR;git push origin :$BR'                                    # delete remote branch on origin - git push origin :remotebranch
+  alias gitrmtag='read -p "tag: " BR;git push origin :refs/tags/$BR'                            # delete remote tag on origin - git push origin :remotetag
+  alias gru='read -p "remote: " RM;git remote update ${RM:-origin}'                             # remote update without pulling, then git status will show appropriate info
+  alias gsync='git pull --rebase origin master'                                                 # Sync with master if you have unpublished commits
 
   # Maven stuff
-  alias mvnhelp='mvn help:help -Ddetail=true' 					# helpmemaven
-  alias mvnc='mvn clean'											# mvn clean
-  alias mvncp='mvn clean package'									# mvn clean package
-  alias mvncpskip='mvn clean package -Dmaven.test.skip=true'		# mvn clean package and skip all the tests
-  alias mvnci='mvn clean install'									# mvn clean install
-  alias mvnciskip='mvn clean install -Dmaven.test.skip=true'		# mvn clean package and skip all the tests
-  alias mvnp='mvn package'										# mvn package without the clean
-  alias mvnpskip='mvn package -Dmaven.test.skip=true'				# mvn package and skip all the tests
-  alias mvni='mvn install'										# mvn install without the clean
-  alias mvniskip='mvn install -Dmaven.test.skip=true'				# mvn install and skip all the tests
-  alias mvnfurther='mvn --settings ~/.m2/further-settings.xml'	# Run further's mvn
-  alias mvntest='mvn test'										# mntest -Dtest=fqclassname - run a single test, give the fqcn
-  alias mvninstfile='mvn install:install-file'					# mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy           # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
-  alias mvnreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'
-  alias mvndelprojrepo='mvn build-helper:remove-project-artifact'   # removes the full project from the .m2 local repository
+  alias mvnhelp='mvn help:help -Ddetail=true'                                                   # helpmemaven
+  alias mvnc='mvn clean'                                                                        # mvn clean
+  alias mvncp='mvn clean package'                                                               # mvn clean package
+  alias mvncpskip='mvn clean package -Dmaven.test.skip=true'                                    # mvn clean package and skip all the tests
+  alias mvnci='mvn clean install'                                                               # mvn clean install
+  alias mvnciskip='mvn clean install -Dmaven.test.skip=true'                                    # mvn clean package and skip all the tests
+  alias mvnp='mvn package'                                                                      # mvn package without the clean
+  alias mvnpskip='mvn package -Dmaven.test.skip=true'                                           # mvn package and skip all the tests
+  alias mvni='mvn install'                                                                      # mvn install without the clean
+  alias mvniskip='mvn install -Dmaven.test.skip=true'                                           # mvn install and skip all the tests
+  alias mvntest='mvn test'                                                                      # mntest -Dtest=fqclassname - run a single test, give the fqcn
+  alias mvninstfile='mvn install:install-file'                                                  # mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy
+  alias mvnreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'                 # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
+  alias mvndelprojrepo='mvn build-helper:remove-project-artifact'                               # removes the full project from the .m2 local repository
+  alias mversion='mvn versions:set -DgenerateBackupPoms=false'                                  # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
 
   # CIFS/SMB Mounts
   alias mtnexus='mkdir -p ~/mounts/nexus;sudo mount -t cifs //sasamba.co.ihc.com/lpjharri ~/mounts/nexus -o user=CO\\lpjharri;cd ~/mounts/nexus'
