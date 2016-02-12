@@ -39,7 +39,7 @@ configuration/Sublime Text 2/Backup
 .cache
 .config/*
 .cups
-.d*
+.dbvis/*
 .e*
 .f*
 # .g* - .gitignore and others should not be ignored
@@ -134,3 +134,5 @@ Workspaces
 !.config/powerline
 !.aliases
 !configuration/dbvisualizer/settings.jar
+!.dbvis/Bookmarks/
+!.dbvis/Monitors/
