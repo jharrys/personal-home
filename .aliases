@@ -148,10 +148,6 @@ function _base_aliases() {
   alias mvnreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'                 # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
   alias mvndelprojrepo='mvn build-helper:remove-project-artifact'                               # removes the full project from the .m2 local repository
   alias mversion='mvn versions:set -DgenerateBackupPoms=false'                                  # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
-
-  # CIFS/SMB Mounts
-  alias mtnexus='mkdir -p ~/mounts/nexus;sudo mount -t cifs //sasamba.co.ihc.com/lpjharri ~/mounts/nexus -o user=CO\\lpjharri;cd ~/mounts/nexus'
-  alias umtnexus='cd ~/mounts;sudo umount ~/mounts/nexus'
 }
 
 ##
@@ -202,10 +198,6 @@ function _darwin_aliases() {
   alias mysqlstart='launchctl load -w /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
   alias mysqlstop='launchctl unload -w /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
 
-  # CIFS/SMB Mounts
-  alias mtnexus='mkdir -p ~/mounts/nexus;mount -t smbfs //lpjharri@sasamba.co.ihc.com/lpjharri ~/mounts/nexus;cd ~/mounts/nexus'
-  alias umtnexus='cd ~/mounts;umount ~/mounts/nexus'
-
   # Work related aliases
   alias openKeys='open ~/Documents/Work/HWCIR.kdbx'
 }
@@ -232,8 +224,8 @@ function _linux_aliases() {
   alias updatelocate='sudo updatedb'
 
   # CIFS/SMB Mounts
-  alias mtnexus='mkdir -p /mnt/nexus;sudo mount -t cifs //sasamba.co.ihc.com/lpjharri /mnt/nexus -o user=CO\\lpjharri,uid=lpjharri,gid=webdev,file_mode=0770,dir_mode=0770;cd /mnt/nexus'
-  alias umtnexus='cd /mnt;sudo umount /mnt/nexus'
+  alias mtnexus='sudo mkdir -p /mnt/nexus;sudo mount -t cifs //sasamba.co.ihc.com/lpjharri /mnt/nexus -o user=CO\\lpjharri,uid=lpjharri,gid=webdev,file_mode=0770,dir_mode=0770;cd /mnt/nexus'
+  alias umtnexus='sudo umount /mnt/nexus'
 }
 
 #
