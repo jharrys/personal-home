@@ -58,7 +58,7 @@ setopt share_history
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn history brew extract python tmux osx zsh-syntax-highlighting)
+plugins=(common-aliases git sudo mvn history brew extract python tmux osx zsh-syntax-highlighting web-search)
 
 # User configuration
 
