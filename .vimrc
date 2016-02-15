@@ -154,8 +154,11 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme desert
-set background=dark
+" colorscheme desert
+" set background=dark
+
+let g:sierra_Pitch = 1
+colorscheme sierra
 
 " Set extra options when running in GUI mode
 if has("gui_running")
