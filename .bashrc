@@ -108,8 +108,8 @@ function _darwinsetup() {
 	export MANPATH
 
 	# MAVEN ENVIRONMENT
-	M2_HOME="/usr/share/maven"
-	MAVEN_OPTS="-Xmx256m"
+	MAVEN_HOME="/usr/local/Cellar/maven/3.3.9"
+	MAVEN_OPTS="-Xmx1024m"
 	export MAVEN_OPTS M2_HOME
 
 	# SSH Environment
