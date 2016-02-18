@@ -65,7 +65,7 @@ plugins=(common-aliases git sudo mvn history brew extract python tmux osx zsh-sy
 # fix for atom not being able to download (redirect is not being followed)
 export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -116,7 +116,7 @@ export HELPDIR=~/.zsh_help
 unalias run-help
 autoload run-help
 
-# Am I at Intermountain/work?; works with ~/bin/atwork.sh script and some trigger (on mac os x I used ControlPlane to trigger atwork.sh when connected to IHC)
+# Am I at Intermountain/work?; works with ~/.bin/atwork.sh script and some trigger (on mac os x I used ControlPlane to trigger atwork.sh when connected to IHC)
 if [ -f ~/.ssh/at-ihc-work ]; then
   setProxy set
 else
@@ -203,7 +203,7 @@ MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
 MAVEN_OPTS="-Xmx1024m"
 export MAVEN_HOME MAVEN_OPTS
 
-PATH=~/bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/Applications/subit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
+PATH=~/.bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/Applications/subit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
 export PATH
 
 # Run powerline for zsh

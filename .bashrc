@@ -82,7 +82,7 @@ function _commonsetup() {
 	. ~/.git-prompt.sh
 
 	# my functions
-	. ~/bin/john_functions.sh
+	. ~/.bin/john_functions.sh
 }
 
 function _darwinsetup() {
