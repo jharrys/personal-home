@@ -154,7 +154,7 @@ MANPATH=/usr/share/man:/usr/share/man/en:/usr/kerberos/man:/usr/local/share/man:
 export MANPATH
 
 # SQL Plus Environment
-SQLPATH=~/configuration/sqlplus
+SQLPATH=~/.configuration/sqlplus
 
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh

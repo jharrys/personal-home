@@ -50,12 +50,12 @@ if ($windowsVersion_2way -ne ($windows7Version)) {
 
 # myCygwinHomeConfiguration is only needed by the first symlink to configuration. Once setup, the rest should use myHomeConfiguration
 $myCygwinHome = 'c:\cygwin\home\lpjharri'
-$myCygwinHomeConfiguration = $myCygwinHome + '\configuration'
+$myCygwinHomeConfiguration = $myCygwinHome + '\.configuration'
 $myHome = $Env:userprofile
-$myHomeConfiguration = $myHome + '\configuration'
-$myWin7Configuration = $myHome + '\configuration\win7'
-$myWinGitConfiguration = $myHome + '\configuration\git.windows'
-$myGtk20Configuration = $myHome + '\configuration\gtk-2.0'
+$myHomeConfiguration = $myHome + '\.configuration'
+$myWin7Configuration = $myHome + '\.configuration\win7'
+$myWinGitConfiguration = $myHome + '\.configuration\git.windows'
+$myGtk20Configuration = $myHome + '\.configuration\gtk-2.0'
 
 # verify that all containers exist and are, indeed, containers
 
@@ -166,7 +166,7 @@ Function Create-Node($base, $node, $type) {
 # ************************************************************** #
 
 
-Set-Link $script:myHome "configuration" $script:myCygwinHomeConfiguration "Container"			# !!!!!! SET THIS UP FIRST! - most of the configurations rely on this one
+Set-Link $script:myHome ".configuration" $script:myCygwinHomeConfiguration "Container"			# !!!!!! SET THIS UP FIRST! - most of the configurations rely on this one
 Set-Link $script:myHome "bin" $script:myBin "Container"								#  bin
 Set-Link $script:myHome ".ssh" $script:mySsh "Container"								# ssh
 Set-Link "$script:myHome\.ssh" "config" $script:mySshConfig "Leaf" 						# ssh_config
@@ -181,8 +181,8 @@ Set-Link "$script:myHome\Documents" "Icons" $script:myIcons "Container"							# 
 Set-Link "$script:myHome\Documents" "WindowsPowerShell" $script:myWindowsPowerShell "Container"	# WindowsPowerShell
 Set-Link $Env:appdata "Sublime Text 3" $script:mySublimeText "Container"						# Sublime Text
 Set-Link $script:myHome ".gtkrc-2.0" $script:myGtkrc20File "Leaf"								# Gtk-2.0 personal resource file
-Set-Link "$script:myHome\configuration\pidgin\home" "gtkrc-2.0" $script:myGtkrc20File "Leaf"	# Gtk-2.0 personal resource file for home
-Set-Link "$script:myHome\configuration\pidgin\work" "gtkrc-2.0" $script:myGtkrc20File "Leaf"	# Gtk-2.0 personal resource file for work
+Set-Link "$script:myHome\.configuration\pidgin\home" "gtkrc-2.0" $script:myGtkrc20File "Leaf"	# Gtk-2.0 personal resource file for home
+Set-Link "$script:myHome\.configuration\pidgin\work" "gtkrc-2.0" $script:myGtkrc20File "Leaf"	# Gtk-2.0 personal resource file for work
 Create-Node $script:myHome "Mount" "Container"													# Create my Mount directory
 Create-Node "$script:myHome\Documents" "Applications\Cyginstall" "Container"					# Create my Cyginstall directory
 Create-Node "$script:myHome\Documents" "Applications\SpringSource" "Container"					# Create my SpringSource directory

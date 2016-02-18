@@ -55,7 +55,7 @@
 	#"onexcengine"="C:\Program Files (x86)\Avaya\Avaya one-X Communicator\onexcengine.exe"
 	"OUTLOOK"="C:\Program Files (x86)\Microsoft Office\Office14\OUTLOOK.EXE"
 	"SmartSettings"="C:\Program Files\Dell\Feature Enhancement Pack\SmartSettings.exe"
-	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\configuration\pidgin\work"
+	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\.configuration\pidgin\work"
 }
 [hashtable] $atWorkServices = @{
 	# make sure key is common process name and value is full path to process
@@ -67,7 +67,7 @@
 	"iTunesHelper" = "C:\Program Files (x86)\iTunes\iTunesHelper.exe"
 	# (inactive) "AllShare Play" = "C:\Program Files\Samsung\AllShare Play\AllShare Play.exe"
 	# (inactive) "AllShare Play Launcher" = "C:\Program Files\Samsung\AllShare Play\utils\AllShare Play Launcher.exe"
-	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\configuration\pidgin\home"
+	"pidgin" = "C:\Program Files (x86)\Pidgin\pidgin.exe,--config=$Env:userprofile\.configuration\pidgin\home"
 	"MusicManager" = "C:\Users\lpjharri\AppData\Local\Programs\Google\MusicManager\MusicManager.exe"
 }
 [hashtable] $atHomeServices = @{

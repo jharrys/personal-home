@@ -1,4 +1,4 @@
-set reg_dir=%USERPROFILE%\configuration\windows\registry
+set reg_dir=%USERPROFILE%\.configuration\windows\registry
 cd %reg_dir%
 
 regedit /i /s %reg_dir%\delete-userscreensaverpolicy.reg

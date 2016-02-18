@@ -31,7 +31,7 @@ function _base_aliases() {
   alias testperfasclient='iperf -c'                               # needs host name to test against
 
   ###### Colors ########
-  alias trycolors='eval $( dircolors -b ~/configuration/linux/dircolors.txt ); ls'
+  alias trycolors='eval $( dircolors -b ~/.configuration/linux/dircolors.txt ); ls'
 
   ###### Rsync ########
   # [a](rlptogD) [v]erbose [u]pdate [z]compress [h]umanreadable [P]partial,progress
