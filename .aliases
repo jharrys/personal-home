@@ -111,6 +111,7 @@ function _base_aliases() {
   alias gitrepo='git clone'									# gitrepo ~/existing/repo ~/new/repo -OR- gitrepo ssh://john@host/srv/git/some.git
   alias gitrh='git reset --hard'								# Reset working local (wl), index and HEAD ref to all be the same - to HEAD if no arg
   alias gitrs='git reset --soft'								# Reset HEAD ref to arg you give - leaves wl and index as is (wl and index may not match)
+  alias gitcoindex='git checkout-index -a'                                                      # Refresh wl from index
   alias gitcln='git clean -d -n'								# Clean wl (dry-run), deleting unstage files also (reset --hard doesn't anymore)
   alias gitcl='git clean -d'									# Clean wl (real), deleting unstage files also (reset --hard doesn't anymore)
   alias gitdf='git diff --name-only'                                                            # Diff, producing only names that changed (provide branch name for diff between current and other branch - remote/branch also)
