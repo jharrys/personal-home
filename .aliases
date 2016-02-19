@@ -152,6 +152,9 @@ function _base_aliases() {
   alias mversion='mvn versions:set -DgenerateBackupPoms=false'                                  # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
   alias -g mdebug='-Dmaven.surefire.debug'                                                      # allows debugger to be attached; use mdebug anywhere inside the command line; so "mvn clean install mdebug" mdebug is replaced with debug
   alias -g mdg='-X'                                                                             # supplied anywhere on the command line for mvn starts mvn in with debug level logging
+
+  # Help
+  alias help-sshfs='echo sshfs user@host:path /mount/point -o volname=VOL -o moreoptions'       # how to execute sshfs; volname is a OSX Fuse option
 }
 
 ##
