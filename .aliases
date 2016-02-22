@@ -38,9 +38,8 @@ function _base_aliases() {
   alias rsync='rsync -avuzhP'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
   alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
   alias rsyncPicToshibaAsSource='rsync -avuzhP ${HOME}/winhome/Mounts/toshiba/pictures/'
-  # alias rsyncX2JJ='rsync -avuzhP --delete /media/sf_X_DRIVE/AppsInstalledOnWorkLaptop/ /run/media/$(whoami)/JJ/AppsInstalledOnWorkLaptop/'
-  alias rsyncnet2JJ='rsync -avuzhP --delete ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/ /Volumes/JJ/AppsInstalledOnWorkLaptop/'
-  alias rsyncJJ2net='rsync -avuzhP --delete /Volumes/JJ/AppsInstalledOnWorkLaptop/ ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/'
+  alias rsyncnet2JJ='rsync -avuzhP --delete ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/ ~/my_apps/'
+  alias rsyncJJ2net='rsync -avuzhP --delete ~/my_apps/ ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/'
 
   ###### Time savers ########
   alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
@@ -155,6 +154,7 @@ function _base_aliases() {
 
   # Help
   alias help-sshfs='echo sshfs user@host:path /mount/point -o volname=VOL -o moreoptions'       # how to execute sshfs; volname is a OSX Fuse option
+  alias help-packager='echo pkgutil --pkgs'                                                     # mac os x's Apple installer
 }
 
 ##
