@@ -155,6 +155,9 @@ function _base_aliases() {
   # Help
   alias help-sshfs='echo sshfs user@host:path /mount/point -o volname=VOL -o moreoptions'       # how to execute sshfs; volname is a OSX Fuse option
   alias help-packager='echo pkgutil --pkgs'                                                     # mac os x's Apple installer
+  alias help-gitconvert='echo utilities used are svn2git or subgit or both.'                    # svn to git utilities
+  alias help-svn2git='echo svn2git URL-TOP-NOT-TRUNK --authors file --metadata'                 # svn2git conversion utility - adds svn revisions in git commit comments
+  alias help-subgit='echo subgit import --svn-url URL-TOP-NOT-TRUNK --authors-file file'        # subgit conversion utility - produces good .gitignore and .gitattributes
 }
 
 ##
