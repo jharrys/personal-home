@@ -4,3 +4,6 @@
 [submodule "/Users/lpjharri/.tmux/plugins/tpm"]
 	path = /Users/lpjharri/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule ".tmux/plugins/tmux-resurrect"]
+	path = .tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
