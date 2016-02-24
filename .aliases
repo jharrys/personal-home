@@ -35,7 +35,7 @@ function _base_aliases() {
 
   ###### Rsync ########
   # [a](rlptogD) [v]erbose [u]pdate [z]compress [h]umanreadable [P]partial,progress
-  alias rsync='rsync -avuzhP'						# rsync SOURCE DEST; for excluding to --exclude=PATTERN
+  alias rsync='rsync -avuzhP --partial'                           # rsync SOURCE DEST; for excluding to --exclude=PATTERN
   alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
   alias rsyncPicToshibaAsSource='rsync -avuzhP ${HOME}/winhome/Mounts/toshiba/pictures/'
   alias rsyncnet2JJ='rsync -avuzhP --delete ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/ ~/my_apps/'
