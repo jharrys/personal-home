@@ -127,6 +127,10 @@ winhome
 WorkCenter
 Workspaces
 
+# Part of the tmux-resurrect plugin
+tmux_resurrect*
+.tmux/resurrect/last
+
 #
 # Re-inclusions
 #
