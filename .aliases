@@ -149,6 +149,7 @@ function _base_aliases() {
   alias mreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'                   # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
   alias mdelprojrepo='mvn build-helper:remove-project-artifact'                                 # removes the full project from the .m2 local repository
   alias mversion='mvn versions:set -DgenerateBackupPoms=false'                                  # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
+  alias marchlocal='mvn archetype:generate -DarchetypeCatalog=local'                            # generate using archetype but get it from the local catalog
   alias -g mdebug='-Dmaven.surefire.debug'                                                      # allows debugger to be attached; use mdebug anywhere inside the command line; so "mvn clean install mdebug" mdebug is replaced with debug
   alias -g mdg='-X'                                                                             # supplied anywhere on the command line for mvn starts mvn in with debug level logging
 
