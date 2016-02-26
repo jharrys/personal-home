@@ -1,3 +1,6 @@
+#######################################################################################
+#                 common setup
+#######################################################################################
 function _commonsetup() {
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -124,6 +127,9 @@ else
 fi
 }
 
+#######################################################################################
+#       linux setup
+#######################################################################################
 function _linuxsetup() {
 # Path setup
 CDPATH='.:~/:..:../..:~/Pictures/Wallpaper:~/Desktop:~/Documents:~/Downloads:~/Documents/Google Drive:~/Documents/Life Documents:~/Workspaces'
@@ -156,6 +162,8 @@ export MANPATH
 # SQL Plus Environment
 SQLPATH=~/.configuration/sqlplus
 
+# Add powerline environment
+powerline-daemon
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 
@@ -170,6 +178,9 @@ fi
 
 }
 
+#######################################################################################
+#       darwin setup
+#######################################################################################
 function _darwinsetup() {
 
 # ls color
@@ -177,7 +188,7 @@ export CLICOLOR=1
 export CLICOLOR_FORCE=1       # Force colors through non-tty streams such as less
 export LSCOLORS=exfxcxdxbxegedabagacad
 
-CDPATH='/Volumes:~/development:~/development/buildarea:~/development/source_control:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn'
+CDPATH='~/mounts:/Volumes:~/development:~/development/buildarea:~/development/source_control:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn'
 export CDPATH
 
 # for weblogic
@@ -208,10 +219,14 @@ export PATH
 
 # Run powerline for zsh
 # Identify Python site-packages site
+powerline-daemon
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 }
 
+#######################################################################################
+#         cygwin setup
+#######################################################################################
 function _cygwinsetup() {
 # Path Setup
 CDPATH='~:~/winhome/Documents:~/winhome/Documents/SourceControl'
@@ -219,6 +234,7 @@ export CDPATH
 
 # Powerline Environment - nice prompt for commandline and VIM
 # Identify Python site-packages site
+powerline-daemon
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 #. /home/lpjharri/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
