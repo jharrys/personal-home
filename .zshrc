@@ -203,7 +203,7 @@ export USER_MEM_ARGS
 # defaults write com.apple.screencapture location ~/Dekstop/Screenshots
 
 # my weblogic instance
-DOMAIN_HOME=~/local/wldomains/hwapp
+DOMAIN_HOME=~/local/wldomains/jland
 export DOMAIN_HOME
 
 # JAVA environment setup use /usr/libexec/java_home executable - default to jdk 8
