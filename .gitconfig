@@ -40,9 +40,9 @@
     ;   tabwidth=<n> : tells how many char positions a tab occupies. relevant for indent-with-non-tab and when git fixes tab-in-indent errors. default to 8. allowed vals 1 to 63.
     ;   whitespace = blank-at-eol, space-before-tab
 
-    ; autocrlf = default is false; true changes LF to CRLF on Windows; input only changes files with CRLF to LF on commit
+    ; autocrlf = default is false; true changes LF to CRLF on Windows; input only changes files with CRLF to LF on commit (input is preferred if you work with Mac/Linux)
     ;   also see core.eol which defaults to value native which means Windows EOLs are CRLF and Unix-based is LF in working trees
-	autocrlf = false
+	autocrlf = input
 
     ; safecrlf = default is false; true makes sure that changes to line endings don't cause problems on binary files
     ;   **windows set to true
