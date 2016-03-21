@@ -150,6 +150,8 @@ function _base_aliases() {
   alias mdelprojrepo='mvn build-helper:remove-project-artifact'                                 # removes the full project from the .m2 local repository
   alias mversion='mvn versions:set -DgenerateBackupPoms=false'                                  # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
   alias marchlocal='mvn archetype:generate -DarchetypeCatalog=local'                            # generate using archetype but get it from the local catalog
+  alias mtestreport='mvn surefire-report:report; mvn site -DgenerateReports=false; open target/site/surefire-report.html'
+  alias mgencss='mvn site -DgenerateReports=false'                                              # generate images and css for reports, not full site
   alias -g mdebug='-Dmaven.surefire.debug'                                                      # allows debugger to be attached; use mdebug anywhere inside the command line; so "mvn clean install mdebug" mdebug is replaced with debug
   alias -g mdg='-X'                                                                             # supplied anywhere on the command line for mvn starts mvn in with debug level logging
 
