@@ -9,17 +9,18 @@ syntax enable " Enable syntax highlights
 set ttyfast " Faster refraw
 set mouse=nv " Mouse activated in Normal and Visual Mode
 set shortmess+=I " No intro when starting Vim
-set smartindent " Smart... indent
+"set smartindent " Smart... indent; will interfere with filetype plugin indent on so turn it off
+set ai " set auto indent; does not interfere with other indent settings, simply copies the indentation from the previous line
 set expandtab " Insert spaces instead of tabs
-set softtabstop=2 " ... and insert two spaces
-set shiftwidth=2 " Indent with two spaces
+set softtabstop=4 " ... and insert two spaces
+set shiftwidth=4 " Indent with two spaces
 set incsearch " Search as typing
 set hlsearch " Highlight search results
 set cursorline " Highligt the cursor line
 set showmatch " When a bracket is inserted, briefly jump to the matching one
 set matchtime=3 " ... during this time
 set virtualedit=onemore " Allow the cursor to move just past the end of the line
-set history=100 " Keep 100 undo
+set history=1000 " Keep 1000 undo
 set wildmenu " Better command-line completion
 set scrolloff=10 " Always keep 10 lines after or before when scrolling
 set sidescrolloff=5 " Always keep 5 lines after or before when side scrolling
@@ -38,6 +39,21 @@ set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
 set synmaxcol=300 " Don't try to highlight long lines
 set guioptions-=T " Don't show toolbar in Gvim
+
+"**************************************************************************************************************************************** 
+" Johnnie settings
+set nowrap " No wrap lines
+set autoread " Reloads file when file is changed externally
+set magic " For regular expressions
+set ffs=unix,dos,mac " Set unix as default file system type
+set undofile " A persistent undo per file
+filetype plugin indent on " Enable filetype plugins; smartindent will interfere so either turn smartindent off and this on, or vice-versa
+
+" Johnnie specific mappings
+nnoremap <leader>hl :set hlsearch!<CR>
+map <leader>ss :setlocal spell!<CR>
+"**************************************************************************************************************************************** 
+
 " Open all cmd args in new tabs
 execute ":silent :tab all" 
 
