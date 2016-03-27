@@ -1,0 +1,17 @@
+# 3/27/2016 by Johnnie; strictly mac osx usage
+[ $# -lt 1 ] && echo "[mac osx command] usage: $0 tag1[, tag2, tag3]" && return 1
+
+# mdfind is a built-in mac osx command for searching through meta-data attributes
+# use in conjunction with mdls, mdutil and xattr
+
+local query=""
+
+for tag in "$@"; do
+  if [ -z "$query" ]; then
+    query="kMDItemUserTags == '$tag'"
+  else
+    query="$query || kMDItemUserTags == '$tag'"
+  fi
+done
+
+mdfind $query
