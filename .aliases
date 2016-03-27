@@ -173,6 +173,9 @@ function _darwin_aliases() {
   unalias ls
   alias l@='ls -alh@'
 
+  # Dock
+  alias insertSpacer='defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'
+
   # Update locate database
   alias updatelocate='sudo /usr/libexec/locate.updatedb'
 
