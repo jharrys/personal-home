@@ -38,6 +38,13 @@ function _base_aliases() {
   alias digmx='dig MX +noall +answer'                             # lookup MX records
   alias digany='dig ANY +noall +answer'                           # lookup ANY records
 
+  ###### Printer ########
+  alias prls='lpstat -p'                                          # list all printers
+  alias prd='lpadmin -d'                                          # set default printer to "printername"
+  alias prjobs='lpq -a'                                           # list print jobs across all queues
+  alias prjob='lpq -P'                                            # list print job for specific printer
+
+
   ###### Colors ########
   alias trycolors='eval $( dircolors -b ~/.configuration/linux/dircolors.txt ); ls'
 
