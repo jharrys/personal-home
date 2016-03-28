@@ -31,6 +31,13 @@ function _base_aliases() {
   alias testperfasserver='iperf -s'                               # runs as a server
   alias testperfasclient='iperf -c'                               # needs host name to test against
 
+  ###### Dig command (nslookup replacement) ########
+  alias digr='dig +short -x'                                      # reverse dns lookup with short display
+  alias digs='dig +short'                                         # normal lookup with short display
+  alias digns='dig NS +noall +answer'                             # lookup NS with only answer section
+  alias digmx='dig MX +noall +answer'                             # lookup MX records
+  alias digany='dig ANY +noall +answer'                           # lookup ANY records
+
   ###### Colors ########
   alias trycolors='eval $( dircolors -b ~/.configuration/linux/dircolors.txt ); ls'
 
