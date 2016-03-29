@@ -43,7 +43,8 @@ function _base_aliases() {
   alias prd='lpadmin -d'                                          # set default printer to "printername"
   alias prjobs='lpq -a'                                           # list print jobs across all queues
   alias prjob='lpq -P'                                            # list print job for specific printer
-
+  alias prdisableall='ls /etc/cups/ppd |cut -d "." -f1 |xargs -I{} cupsdisable {}'
+  alias prenableall='ls /etc/cups/ppd |cut -d "." -f1 |xargs -I{} cupsenable {}'
 
   ###### Colors ########
   alias trycolors='eval $( dircolors -b ~/.configuration/linux/dircolors.txt ); ls'
