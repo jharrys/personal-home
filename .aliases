@@ -169,6 +169,7 @@ function _base_aliases() {
   alias mtestreport='mvn surefire-report:report; mvn site -DgenerateReports=false; open target/site/surefire-report.html'
   alias mgencss='mvn site -DgenerateReports=false'                                              # generate images and css for reports, not full site
   alias mgrep='grep -RIl --exclude-dir target'                                                  # a maven grep for code (I skip binary files, l print file names) & exclude target dir
+  alias mexec='echo mvn exec:java -Dexec.cleanupDaemonThreads=false -Dexec.mainClass='          # echoes the maven command for executing a java program
   alias -g mdebug='-Dmaven.surefire.debug'                                                      # allows debugger to be attached; use mdebug anywhere inside the command line; so "mvn clean install mdebug" mdebug is replaced with debug
   alias -g mdg='-X'                                                                             # supplied anywhere on the command line for mvn starts mvn in with debug level logging
 
