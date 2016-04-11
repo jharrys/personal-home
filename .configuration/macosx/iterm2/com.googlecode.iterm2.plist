@@ -1503,9 +1503,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>681 21 445 263 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>34 390 924 485 0 0 1440 900 </string>
+	<string>281 242 924 485 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>75 121 970 713 0 0 1440 900 </string>
+	<string>540 53 889 713 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -4222,7 +4222,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477519091.92914099</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>481747250.92159098</real>
+	<real>481844563.60276902</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -4280,7 +4280,7 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
-	<true/>
+	<false/>
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>RightOption</key>
@@ -4292,7 +4292,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-07T18:38:04Z</date>
+	<date>2016-04-08T21:42:39Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
