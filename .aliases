@@ -179,6 +179,7 @@ function _base_aliases() {
   alias help-gitconvert='echo utilities used are svn2git or subgit or both.'                    # svn to git utilities
   alias help-svn2git='echo svn2git URL-TOP-NOT-TRUNK --authors file --metadata'                 # svn2git conversion utility - adds svn revisions in git commit comments
   alias help-subgit='echo subgit import --svn-url URL-TOP-NOT-TRUNK --authors-file file'        # subgit conversion utility - produces good .gitignore and .gitattributes
+  alias help-macnet='echo networksetup -listallhardwareports'                                   # lists all networking hardware ports on the mac os x
 }
 
 ##
