@@ -210,6 +210,9 @@ export DOMAIN_HOME
 JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export JAVA_HOME
 
+# Groovy home
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
 MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
 MAVEN_OPTS="-Xmx1024m"
 export MAVEN_HOME MAVEN_OPTS
