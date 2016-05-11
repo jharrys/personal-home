@@ -9,6 +9,10 @@ IdentityFile ~/.ssh/github_rsa
 # Work Systems
 ######################################################################
 
+Host maven
+HostName lpv-hwmaven01.co.ihc.com
+User lpjharri
+
 Host dev1
 HostName lpv-hwdevapp01.co.ihc.com
 User lpjharri
