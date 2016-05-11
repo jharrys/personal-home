@@ -239,6 +239,24 @@ function _darwin_aliases() {
   # Spotlight
   alias stopSpotlight='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'
   alias startSpotlight='sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'
+
+  # Tagging files - uses the 'tag' application installed via brew
+  alias tagmedia='tag -a "media & photos"'
+  alias untagmedia='tag -r "media & photos"'
+  alias tagco='tag -a "check out"'
+  alias untagco='tag -r "check out"'
+  alias tagbook='tag -a "books & references"'
+  alias untagbook='tag -r "books & references"'
+  alias taghow='tag -a "how-to"'
+  alias untaghow='tag -r "how-to"'
+  alias tagr='tag -a "r rated"'
+  alias untagr='tag -r "r rated"'
+  alias tagsource='tag -a "source code"'
+  alias untagsource='tag -r "source code"'
+  alias taghistory='tag -a "historical"'
+  alias untaghistory='tag -r "historical"'
+  alias tagbins='tag -a "bin & libs"'
+  alias untagbins='tag -r "bin & libs"'
 }
 
 ##
