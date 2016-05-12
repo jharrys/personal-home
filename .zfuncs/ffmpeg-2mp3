@@ -1,0 +1,2 @@
+[ $# -lt 2 ] && echo "Convert to an mp3 stream.\n\n$0 input.xxx output.mp3" && return 1
+ffmpeg -i "$1" -c:a libmp3lame -ac 2 -q:a 2 "$2"

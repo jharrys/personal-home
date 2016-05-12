@@ -1,0 +1,86 @@
+def me = new Date()
+println me.time()
+println me.getTime()
+println me
+def some = new String("Hello")
+println some
+help
+display
+show
+\S
+\=
+h
+help
+me
+me = "hello"
+println me
+me = new Date()
+me
+me.getTime()
+me.time
+me = null
+me
+\S
+help
+show me
+clear
+\c
+\d
+\n
+me = "hello"
+\n
+\n me
+\e
+def hello(name) {
+println("Hello $name")
+}
+hello("Jason")
+\n
+?
+\=
+\H
+?
+\d
+\S
+\e
+:show variables
+show variables
+foo = "me"
+show variables
+show classes
+show imports
+show preferences
+show all
+help show
+q
+\q
+\e
+def foo() {
+println "hello"
+\e
+doc java.util.List
+help doc
+help set
+set editor vim
+def foo() {
+println "Hle"
+\e
+set editor vim
+set
+set verbosity DEBUG
+println "hello"
+set verbosity INFO
+println "hello"
+set editor /usr/local/bin/atom
+\e
+def foo() {
+println "foo"
+\e
+\d
+purge all
+\d
+?
+\c
+\d
+set
+\q
