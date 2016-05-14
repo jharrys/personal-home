@@ -84,3 +84,41 @@ purge all
 \d
 set
 \q
+:doc java.util.List
+exit
+\q
+:q
+:doc java.util.List
+:q
+String[] s = { "john", "bill", "bob" }
+String[] s = new String[3]
+s[0] = 
+s[0] = "john"
+def s = { "john", "bill" }
+s = { "john", "bill" }
+s = ["john", "bill", "bob"]
+s.forEach(System.out::println)
+s.forEach(System::println)
+s.forEach((x) -> System.out.println(x))
+s.forEach {(x) -> System.out.println(x)}
+s.forEach {x -> System.out.println(x)}
+s.forEach {x -> System.out.print(x)}
+(10..1).each { println "Number ${it}}
+(3..1).each { println "Number ${it}}
+(3..1).each { println "Number ${it}"}
+(3..1).each { println "Number ${it}" }
+(3..1).each { 
+:r
+:c
+(3..1).each {
+println "Number ${it}"
+}
+(3..1).each { println "Number ${it}" }
+def names = ["john magoo", "peter murphy"]
+def namesAsArrays = names*.split(" ")
+names = ["john magoo", "peter murphy"]
+namesAsArrays = names*.split(" ")
+namesAsArrays.each(){printit[0]}
+namesAsArrays.each(){print it[0]}
+namesAsArrays.each(){print it[1]}
+:q
