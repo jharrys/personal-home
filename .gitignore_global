@@ -45,3 +45,6 @@ build/
 *.perspective
 *.perpectivev3
 
+# IntelliJ IDEA gen     #
+#########################
+.idea/
