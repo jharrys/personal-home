@@ -234,7 +234,8 @@ function _darwin_aliases() {
   alias mysqlstop='launchctl unload -w /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
 
   # Work related aliases
-  alias openKeys='open ~/Documents/Work/HWCIR.kdbx'
+  alias worksecrets='open ~/Documents/Work/HWCIR.kdbx'
+  alias mysecrets='open ~/Google\ Drive/Me/tumbler/john.kdbx'
 
   # Spotlight
   alias stopSpotlight='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'

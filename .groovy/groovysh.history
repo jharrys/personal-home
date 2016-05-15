@@ -122,3 +122,5 @@ namesAsArrays.each(){printit[0]}
 namesAsArrays.each(){print it[0]}
 namesAsArrays.each(){print it[1]}
 :q
+:doc java.util.List
+:q
