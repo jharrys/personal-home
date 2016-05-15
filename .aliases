@@ -258,6 +258,7 @@ function _darwin_aliases() {
   alias untaghistory='tag -r "historical"'
   alias tagbins='tag -a "bin & libs"'
   alias untagbins='tag -r "bin & libs"'
+
 }
 
 ##
