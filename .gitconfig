@@ -4,6 +4,7 @@
 	; ** define a name with the OS in mind
 	name = Johnnie Harris
 	email = johnnie.harris@imail.org
+	signingkey = BEE6BE35
 
 # Configure core options
 [core]
