@@ -1395,7 +1395,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>681 21 445 263 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1344 870 924 485 0 0 2560 1440 </string>
+	<string>3904 870 924 485 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>555 369 970 713 0 0 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
@@ -4502,7 +4502,7 @@
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
-			<integer>-1</integer>
+			<integer>1</integer>
 			<key>Scrollback Lines</key>
 			<integer>0</integer>
 			<key>Scrollback With Status Bar</key>
@@ -4676,7 +4676,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477519091.92914099</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>485287365.39411598</real>
+	<real>485373775.17245901</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -4746,11 +4746,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-18T18:01:15Z</date>
+	<date>2016-05-19T18:01:14Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
-	<true/>
+	<false/>
 	<key>ShowBookmarkName</key>
 	<true/>
 	<key>ShowPaneTitles</key>
