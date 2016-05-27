@@ -163,7 +163,7 @@ export MANPATH
 SQLPATH=~/.configuration/sqlplus
 
 # Add powerline environment
-powerline-daemon
+#powerline-daemon
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 
@@ -191,38 +191,36 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 CDPATH='~/mounts:/Volumes:~/development:~/development/buildarea:~/development/source_control:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn'
 export CDPATH
 
-# for weblogic
+# Weblogic
 MW_HOME=~/local/appservers/wls-12.1.3
-export MW_HOME
-
-# for weblogic
 USER_MEM_ARGS="-Xmx1024m -XX:MaxPermSize=256m"
-export USER_MEM_ARGS
+DOMAIN_HOME=~/local/wldomains/jland
+
+export MW_HOME DOMAIN_HOME USER_MEM_ARGS
 
 # Where to default store the screen shots (make sure the directory exists)
 # defaults write com.apple.screencapture location ~/Dekstop/Screenshots
 
-# my weblogic instance
-DOMAIN_HOME=~/local/wldomains/jland
-export DOMAIN_HOME
-
-# JAVA environment setup use /usr/libexec/java_home executable - default to jdk 8
+# Java - installed via Oracle dmg
+# Java environment setup use /usr/libexec/java_home executable - default to jdk 8
 JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export JAVA_HOME
 
-# Groovy home
+# Groovy - installed via brew
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
+# Maven - installed via brew
 MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
 MAVEN_OPTS="-Xmx1024m"
 export MAVEN_HOME MAVEN_OPTS
 
+# My Path statement
 PATH=~/.bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/Applications/subit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
 export PATH
 
-# Run powerline for zsh
+# Run powerline for zsh - powerline is installed as 'pip install --user powerline-status'
 # Identify Python site-packages site
-powerline-daemon
+#powerline-daemon
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 }
@@ -237,7 +235,7 @@ export CDPATH
 
 # Powerline Environment - nice prompt for commandline and VIM
 # Identify Python site-packages site
-powerline-daemon
+#powerline-daemon
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 #. /home/lpjharri/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
