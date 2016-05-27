@@ -60,15 +60,6 @@
         {
           "function": "powerline.segments.common.bat.battery",
           "priority": 10
-        },
-        {
-          "function": "powerline.segments.common.wthr.weather",
-          "args": {
-            "unit": "C",
-            "interval": 1800,
-            "location_query": "utah, usa"
-          },
-          "priority": 60
         }
       ]
     }
