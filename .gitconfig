@@ -107,6 +107,9 @@
     renames = copies
 	tool = diffmerge
 
+[diff "excel"]
+    command = excel_cmp
+
 # Configure http proxy settings
 [http]
     ;proxy = http://lpjharri:JJk5llNn@proxylp.ihc.com:8080

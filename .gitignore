@@ -141,3 +141,4 @@ tmux_resurrect*
 !configuration/dbvisualizer/settings.jar
 !.dbvis/Bookmarks/
 !.dbvis/Monitors/
+!.config/git
