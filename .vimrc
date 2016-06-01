@@ -39,8 +39,9 @@ set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
 set synmaxcol=300 " Don't try to highlight long lines
 set guioptions-=T " Don't show toolbar in Gvim
+set clipboard=unnamed " Allow access to the mac os x system clipboard; if using iterm2 uncheck 'Allow clipboard access to terminal apps'
 
-"**************************************************************************************************************************************** 
+"****************************************************************************************************************************************
 " Johnnie settings
 set nowrap " No wrap lines
 set autoread " Reloads file when file is changed externally
@@ -52,10 +53,10 @@ filetype plugin indent on " Enable filetype plugins; smartindent will interfere 
 " Johnnie specific mappings
 nnoremap <leader>hl :set hlsearch!<CR>
 map <leader>ss :setlocal spell!<CR>
-"**************************************************************************************************************************************** 
+"****************************************************************************************************************************************
 
 " Open all cmd args in new tabs
-execute ":silent :tab all" 
+execute ":silent :tab all"
 
 """ Colors and Statusline
 let defaultAccentColor=161
@@ -120,7 +121,7 @@ au CursorHold * let &ro = &ro
 
 """ Prevent lag when hitting escape
 set ttimeoutlen=0
-set timeoutlen=1000 
+set timeoutlen=1000
 au InsertEnter * set timeout
 au InsertLeave * set notimeout
 
@@ -156,7 +157,7 @@ function! CreateShortcut(keys, cmd, where, ...)
   endif
   if a:where =~ "n"
     execute "nmap " . keys . " " . a:cmd
-  endif    
+  endif
   if a:where =~ "v"
     let k = (index(a:000,"restoreSelectionAfter") > -1) ? "gv" : ""
     let c = a:cmd
@@ -190,10 +191,10 @@ function! OpenLastBufferInNewTab()
     for line in ListBuffers
       let title = split(line, "\"")[1]
       if title !~  "\[No Name"
-        execute "tabnew +" . split(line, " ")[0] . "buf" 
+        execute "tabnew +" . split(line, " ")[0] . "buf"
         break
-      endif       
-    endfor  
+      endif
+    endfor
 endfunction
 
 """ Key mappings
