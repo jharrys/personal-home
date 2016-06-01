@@ -272,3 +272,5 @@ fi
 
 # oh-my-zsh adds a deprecated environment variable. this disables it.
 unset GREP_OPTIONS
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
