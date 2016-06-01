@@ -14,6 +14,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AutoCommandHistory</key>
+	<true/>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -1397,9 +1399,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>681 21 445 263 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>4 396 606 456 0 0 1440 900 </string>
+	<string>4 425 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>227 93 993 695 0 0 1440 900 </string>
+	<string>4 338 1313 562 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1570,10 +1572,8 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
-			<key>Background Image Location</key>
-			<string>/Users/lpjharri/Google Drive/Wallpaper/regular/abstract-multicolor_00422164 - 1920x1080.jpg</string>
 			<key>Blend</key>
-			<real>0.30000001192092896</real>
+			<real>0.15475011208118541</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -4671,12 +4671,14 @@
 			<string>/Users/lpjharri</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>C7CBD61B-B566-4E80-89F2-002586B0DE65</string>
 	<key>NoSyncLastTipTime</key>
-	<real>486435659.15766901</real>
+	<real>486437442.77236497</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -4692,6 +4694,7 @@
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
+		<string>0000</string>
 		<string>0000</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
