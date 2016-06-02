@@ -1401,7 +1401,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 399 1440 501 0 0 1440 900 </string>
+	<string>434 67 970 714 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -2387,7 +2387,7 @@
 			<key>Background Image Is Tiled</key>
 			<false/>
 			<key>Background Image Location</key>
-			<string>/Users/lpjharri/Google Drive/Wallpaper/regular/56860-1920x1080.jpg</string>
+			<string>/Users/lpjharri/Google Drive/Wallpaper/regular/blue_fire-wallpaper-1920x1080.jpg</string>
 			<key>Blend</key>
 			<real>0.17650490785256412</real>
 			<key>Blink Allowed</key>
@@ -2409,7 +2409,7 @@
 			</dict>
 			<key>Bound Hosts</key>
 			<array>
-				<string>lpv-hwmaven01.co.ihc.com</string>
+				<string>*.co.ihc.com</string>
 			</array>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -3038,7 +3038,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>Working Directory</key>
 			<string>/Users/lpjharri</string>
 		</dict>
@@ -4776,7 +4776,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-01T00:59:51Z</date>
+	<date>2016-06-02T01:00:36Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
