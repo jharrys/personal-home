@@ -1401,7 +1401,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>434 67 970 714 0 0 1440 900 </string>
+	<string>52 4 1322 469 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1591,6 +1591,10 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Bound Hosts</key>
+			<array>
+				<string>ac02qq0ecg8wm.co.ihc.com</string>
+			</array>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -4684,13 +4688,15 @@
 	<key>NoSyncInstallationId</key>
 	<string>C7CBD61B-B566-4E80-89F2-002586B0DE65</string>
 	<key>NoSyncLastTipTime</key>
-	<real>486437442.77236497</real>
+	<real>486664781.55553502</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>486435614.47510397</real>
 	<key>NoSyncTimeOfLastPromo</key>
@@ -4702,6 +4708,7 @@
 		<string>000</string>
 		<string>0000</string>
 		<string>0000</string>
+		<string>0001</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -4776,7 +4783,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-02T01:00:36Z</date>
+	<date>2016-06-04T01:24:14Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
