@@ -164,8 +164,8 @@ SQLPATH=~/.configuration/sqlplus
 
 # Add powerline environment
 #powerline-daemon
-PYTHONSITE=$(python -m site --user-site)
-. $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
+#PYTHONSITE=$(python -m site --user-site)
+#. $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 
 # SSH Environment
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
@@ -223,6 +223,7 @@ export PATH
 #powerline-daemon
 PYTHONSITE=$(python -m site --user-site)
 . $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
+
 }
 
 #######################################################################################
@@ -274,3 +275,13 @@ fi
 unset GREP_OPTIONS
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Setup my ZSH syntax highlighting options
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern) # by default only main is turned on
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=blue'
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('sudo *' 'fg=white,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('ssh *' 'fg=white,bg=blue')
