@@ -65,6 +65,7 @@ configuration/Sublime Text 2/Backup
 .n*
 # .o*
 .oracle*
+.openshift
 # .p* - for .profile
 .p2
 .pip
