@@ -147,6 +147,8 @@ function _base_aliases() {
   alias gitrmtag='read -p "tag: " BR;git push origin :refs/tags/$BR'                            # delete remote tag on origin - git push origin :remotetag
   alias gru='read -p "remote: " RM;git remote update ${RM:-origin}'                             # remote update without pulling, then git status will show appropriate info
   alias gsync='git pull --rebase origin master'                                                 # Sync with master if you have unpublished commits
+  alias gck='git fetch && git log ..origin/master'                                              # Check upstream master to see if there are any changes to bring down
+  alias gpr='git-stash-pull-request'                                                            # Checkout a git bitbucket server pull request; this maps to a personal .zfuncs
 
   # Maven stuff
   alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                # clean my local repository
