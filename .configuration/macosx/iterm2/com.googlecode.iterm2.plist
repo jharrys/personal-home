@@ -1399,9 +1399,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>681 21 445 263 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>4 437 606 456 0 0 1440 900 </string>
+	<string>13 968 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>49 42 1337 771 0 0 1440 900 </string>
+	<string>3001 351 970 714 2560 0 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -2393,7 +2393,7 @@
 			<key>Background Image Location</key>
 			<string>/Users/lpjharri/Google Drive/Wallpaper/regular/blue_fire-wallpaper-1920x1080.jpg</string>
 			<key>Blend</key>
-			<real>0.17650490785256412</real>
+			<real>0.10973182091346155</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -4688,7 +4688,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>C7CBD61B-B566-4E80-89F2-002586B0DE65</string>
 	<key>NoSyncLastTipTime</key>
-	<real>486773087.68679202</real>
+	<real>487192996.57772201</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -4710,6 +4710,10 @@
 		<string>0000</string>
 		<string>0001</string>
 		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -4784,7 +4788,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-04T01:24:14Z</date>
+	<date>2016-06-09T18:42:12Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
