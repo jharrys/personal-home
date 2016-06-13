@@ -2,5 +2,5 @@
 [ $# -lt 2 ] && echo "Needs 2 params: \$1 - pull request #, \$2 - local branch to create" && return 1
 PRNO=$1
 LOCAL_BRANCH=$2
-git pull origin refs/pull-requests/$PRNO/from:$LOCAL_BRANCH
+git fetch origin refs/pull-requests/$PRNO/from:$LOCAL_BRANCH
 git checkout $LOCAL_BRANCH
