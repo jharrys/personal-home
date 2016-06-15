@@ -1372,7 +1372,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1399,9 +1399,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>681 21 445 263 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>13 968 606 456 0 0 2560 1440 </string>
+	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3001 351 970 714 2560 0 2560 1440 </string>
+	<string>85 157 993 714 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1572,6 +1572,8 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
+			<key>Badge Text</key>
+			<string>\(session.username)@\(session.hostname)</string>
 			<key>Blend</key>
 			<real>0.15475011208118541</real>
 			<key>Blink Allowed</key>
@@ -2392,6 +2394,8 @@
 			<false/>
 			<key>Background Image Location</key>
 			<string>/Users/lpjharri/Google Drive/Wallpaper/regular/blue_fire-wallpaper-1920x1080.jpg</string>
+			<key>Badge Text</key>
+			<string>\(session.username)@\(session.hostname)</string>
 			<key>Blend</key>
 			<real>0.10973182091346155</real>
 			<key>Blink Allowed</key>
@@ -4683,12 +4687,16 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>C7CBD61B-B566-4E80-89F2-002586B0DE65</string>
 	<key>NoSyncLastTipTime</key>
-	<real>487192996.57772201</real>
+	<real>487649895.87395799</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -4714,6 +4722,10 @@
 		<string>0004</string>
 		<string>0005</string>
 		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -4788,7 +4800,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-09T18:42:12Z</date>
+	<date>2016-06-15T02:18:15Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
