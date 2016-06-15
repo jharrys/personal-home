@@ -1401,7 +1401,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>85 157 993 714 0 0 1440 900 </string>
+	<string>26 55 1385 714 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1573,7 +1573,7 @@
 			<key>Background Image Is Tiled</key>
 			<false/>
 			<key>Badge Text</key>
-			<string>\(session.username)@\(session.hostname)</string>
+			<string></string>
 			<key>Blend</key>
 			<real>0.15475011208118541</real>
 			<key>Blink Allowed</key>
