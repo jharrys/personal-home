@@ -21,8 +21,8 @@ function _base_aliases() {
   alias pdr='powerline-daemon --replace'
 
   ###### Less ######
-  alias less='less -F'
-  alias lessf='less +F'
+  alias lessq='less -F'                                           # less, but quit if all fits in one page
+  alias lesst='less +F'                                           # less and tail -f
 
   ###### Screen or tmux ########
   alias screen='screen ${SHELL} -l'
