@@ -76,13 +76,13 @@ function _commonsetup() {
 	fi
 
 	# Setup aliases
-	. ~/.aliases
+	. ~/.bash-aliases
 
 	# Source the git prompt script
-	. ~/.git-prompt.sh
+	. ~/.bash-git-prompt.sh
 
 	# my functions
-	. ~/.bin/john_functions.sh
+	. ~/.bin/bash_john_functions.sh
 }
 
 function _darwinsetup() {
@@ -120,9 +120,6 @@ function _darwinsetup() {
 			sshd|*/sshd) SESSION_TYPE=remote/ssh;;
 		esac
 	fi
-
-	# Darwin initialization
-	. /sw/bin/init.sh
 }
 
 function _linuxsetup() {
