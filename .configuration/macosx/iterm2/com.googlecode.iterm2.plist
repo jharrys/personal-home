@@ -1401,7 +1401,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>13 968 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>141 97 2002 714 0 0 2560 1440 </string>
+	<string>2560 939 2560 501 2560 0 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -4698,7 +4698,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>C7CBD61B-B566-4E80-89F2-002586B0DE65</string>
 	<key>NoSyncLastTipTime</key>
-	<real>488095009.91547698</real>
+	<real>489413846.20946097</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -4732,6 +4732,19 @@
 		<string>0012</string>
 		<string>0013</string>
 		<string>0014</string>
+		<string>0015</string>
+		<string>0016</string>
+		<string>0017</string>
+		<string>0017</string>
+		<string>0018</string>
+		<string>0019</string>
+		<string>0020</string>
+		<string>0021</string>
+		<string>0022</string>
+		<string>0023</string>
+		<string>0024</string>
+		<string>0024</string>
+		<string>0025</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -4790,7 +4803,7 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
-	<false/>
+	<true/>
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>RightOption</key>
@@ -4806,7 +4819,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-20T05:56:49Z</date>
+	<date>2016-07-05T12:17:25Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -4836,6 +4849,7 @@
 		<string>Notes</string>
 		<string>Jobs</string>
 		<string>Paste History</string>
+		<string>Command History</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
@@ -4862,6 +4876,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.2</string>
+	<string>3.0.4</string>
 </dict>
 </plist>
