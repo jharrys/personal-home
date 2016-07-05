@@ -16,7 +16,7 @@ function _base_aliases() {
   alias lls='ls -lhSr'                  # list detail by size reverse order
   alias mv='mv -i'
   alias cp='cp -i'
-  alias vi='vim'
+  alias vi='gvim'
   alias getw='wget -N -r -nH -nd --no-parent'
   alias pdr='powerline-daemon --replace'
 
