@@ -83,7 +83,8 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR='vim'
+export EDITOR='gvim'
+export GIT_EDITOR='gvim -f'
 
 # Less options
 export LESS="-S -n -r"
