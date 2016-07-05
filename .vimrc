@@ -1,449 +1,334 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Details on : https://github.com/sd65/MiniVim
-let MiniVimVersion = 1.0
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.config/nvim/plugged')
 
-""" General options
-"start " Start in Insertion mode
-syntax enable " Enable syntax highlights
-set ttyfast " Faster refraw
-set mouse=nv " Mouse activated in Normal and Visual Mode
-set shortmess+=I " No intro when starting Vim
-"set smartindent " Smart... indent; will interfere with filetype plugin indent on so turn it off
-set ai " set auto indent; does not interfere with other indent settings, simply copies the indentation from the previous line
-set expandtab " Insert spaces instead of tabs
-set softtabstop=4 " ... and insert two spaces
-set shiftwidth=4 " Indent with two spaces
-set incsearch " Search as typing
-set hlsearch " Highlight search results
-set cursorline " Highligt the cursor line
-set showmatch " When a bracket is inserted, briefly jump to the matching one
-set matchtime=3 " ... during this time
-set virtualedit=onemore " Allow the cursor to move just past the end of the line
-set history=1000 " Keep 1000 undo
-set wildmenu " Better command-line completion
-set scrolloff=10 " Always keep 10 lines after or before when scrolling
-set sidescrolloff=5 " Always keep 5 lines after or before when side scrolling
-set noshowmode " Don't display the current mode
-set gdefault " The substitute flag g is on
-set hidden " Hide the buffer instead of closing when switching
-set backspace=indent,eol,start " The normal behaviour of backspace
-set showtabline=2 " Always show tabs
-set laststatus=2 " Always show status bar
-set number " Show the line number
-set updatetime=1000
-set ignorecase " Search insensitive
-set smartcase " ... but smart
-set showbreak=↪ " See this char when wrapping text
-set encoding=utf-8  " The encoding displayed.
-set fileencoding=utf-8  " The encoding written to file.
-set synmaxcol=300 " Don't try to highlight long lines
-set guioptions-=T " Don't show toolbar in Gvim
-set clipboard=unnamed " Allow access to the mac os x system clipboard; if using iterm2 uncheck 'Allow clipboard access to terminal apps'
+" Plugs {
+  " ctrl-p is a fuzzy file finder.
+  Plug 'kien/ctrlp.vim'
+  " airline is a better status line and a tab-bar for nvim.
+  Plug 'bling/vim-airline'
+  Plug 'sjl/badwolf'
+  Plug 'fatih/vim-go'
+  Plug 'mileszs/ack.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'rizzatti/dash.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'mitsuhiko/fruity-vim-colorscheme'
+  Plug 'tpope/vim-git'
+  Plug 'tpope/vim-fugitive'
+  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'Raimondi/delimitMate'
+  Plug 'davidosomething/vim-jsdoc'
 
-"****************************************************************************************************************************************
-" Johnnie settings
-set nowrap " No wrap lines
-set autoread " Reloads file when file is changed externally
-set magic " For regular expressions
-set ffs=unix,dos,mac " Set unix as default file system type
-set undofile " A persistent undo per file
-filetype plugin indent on " Enable filetype plugins; smartindent will interfere so either turn smartindent off and this on, or vice-versa
+call plug#end()
 
-" Johnnie specific mappings
-nnoremap <leader>hl :set hlsearch!<CR>
-map <leader>ss :setlocal spell!<CR>
-"****************************************************************************************************************************************
+if has('autocmd')
+  filetype plugin indent on
+endif
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
 
-" Open all cmd args in new tabs
-execute ":silent :tab all"
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-""" Colors and Statusline
-let defaultAccentColor=161
-let colorsAndModes= {
-  \ 'i' : 39,
-  \ 'v' : 82,
-\}
-let defaultAccentColorGui='#d7005f'
-let colorsAndModesGui= {
-  \ 'i' : '#00afff',
-  \ 'v' : '#5fff00',
-\}
-function! ChangeAccentColor()
-  let accentColor=get(g:colorsAndModes, mode(), g:defaultAccentColor)
-  let accentColorGui=get(g:colorsAndModesGui, mode(), g:defaultAccentColorGui)
-  execute 'hi User1 ctermfg=0 guifg=#000000 ctermbg=' . accentColor . ' guibg=' . accentColorGui
-  execute 'hi User2 ctermbg=0 guibg=#2e3436 ctermfg=' . accentColor . ' guifg=' . accentColorGui
-  execute 'hi User3 ctermfg=0 guifg=#000000 cterm=bold gui=bold ctermbg=' . accentColor . ' guibg=' . accentColorGui
-  execute 'hi TabLineSel ctermfg=0 cterm=bold ctermbg=' . accentColor
-  execute 'hi TabLine ctermbg=0 ctermfg=' . accentColor
-  execute 'hi CursorLineNr ctermfg=' . accentColor . ' guifg=' . accentColorGui
-  return ''
-endfunction
-function! ReadOnly()
-  return (&readonly || !&modifiable) ? 'Read Only ' : ''
-endfunction
-function! Modified()
-  return (&modified) ? 'Modified' : 'Not modified'
-endfunction
-let g:currentmode={
-    \ 'n'  : 'Normal',
-    \ 'no' : 'N·Operator Pending',
-    \ 'v'  : 'Visual',
-    \ 'V'  : 'V·Line',
-    \ '^V' : 'V·Block',
-    \ 's'  : 'Select',
-    \ 'S'  : 'S·Line',
-    \ '^S' : 'S·Block',
-    \ 'i'  : 'Insert',
-    \ 'R'  : 'Replace',
-    \ 'Rv' : 'VReplace',
-    \ 'c'  : 'Command',
-    \ 'cv' : 'Vim Ex',
-    \ 'ce' : 'Ex',
-    \ 'r'  : 'Prompt',
-    \ 'rm' : 'More',
-    \ 'r?' : 'Confirm',
-    \ '!'  : 'Shell',
-    \ 't'  : 'Terminal',
-\}
-set statusline=
-set statusline+=%{ChangeAccentColor()}
-set statusline+=%1*\ ***%{toupper(g:currentmode[mode()])}***\  " Current mode
-set statusline+=%2*\ %<%F\  " Filepath
-set statusline+=%2*\ %= " To the right
-set statusline+=%2*\ %{toupper((&fenc!=''?&fenc:&enc))}\[%{&ff}] " Encoding & Fileformat
-set statusline+=%2*\ %{Modified()}\ %{ReadOnly()} " Flags
-set statusline+=%1*\ \%l/%L-%c\  " Position
-" Speed up the redraw
-au InsertLeave * call ChangeAccentColor()
-au CursorHold * let &ro = &ro
+" Map the leader key to ,
+let mapleader="\<SPACE>"
+let g:syntastic_python_checkers=['python', 'pylint']
 
-""" Prevent lag when hitting escape
-set ttimeoutlen=0
-set timeoutlen=1000
-au InsertEnter * set timeout
-au InsertLeave * set notimeout
+" General {
+  set backspace=indent,eol,start      " Allow backspace over everything in insert mode.
+  set guifont=Monaco:h11
+  set noswapfile
+  set complete-=i
+  set smarttab
+  set ttyfast
+  set noautoindent        " I indent my code myself.
+  set nocindent           " I indent my code myself.
+  "set smartindent        " Or I let the smartindent take care of it.
 
-""" Reopen at last position
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  set nrformats-=octal
 
-""" Custom backup and swap files
-let myVimDir = expand("$HOME/.vim")
-let myBackupDir = myVimDir . '/backup'
-let mySwapDir = myVimDir . '/swap'
-function! EnsureDirExists (dir)
-  if !isdirectory(a:dir)
-    call mkdir(a:dir,'p')
+  set ttimeout
+  set ttimeoutlen=100
+" }
+
+" Search {
+  set hlsearch            " Highlight search results.
+  set ignorecase          " Make searching case insensitive
+  set smartcase           " ... unless the query has capital letters.
+  set incsearch           " Incremental search.
+  set gdefault            " Use 'g' flag by default with :s/foo/bar/.
+  set magic               " Use 'magic' patterns (extended regular expressions).
+
+  " Use <C-L> to clear the highlighting of :set hlsearch.
+  if maparg('<C-L>', 'n') ==# ''
+    nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
   endif
-endfunction
-call EnsureDirExists(myVimDir)
-call EnsureDirExists(myBackupDir)
-call EnsureDirExists(mySwapDir)
-set backup
-set backupskip=/tmp/*
-set backupext=.bak
-let &directory = mySwapDir
-let &backupdir = myBackupDir
-set writebackup
+" }
 
-""" Helper functions
-function! CreateShortcut(keys, cmd, where, ...)
-  let keys = "<" . a:keys . ">"
-  if a:where =~ "i"
-    let i = (index(a:000,"noTrailingIInInsert") > -1) ? "" : "i"
-    let e = (index(a:000,"noLeadingEscInInsert") > -1) ? "" : "<esc>"
-    execute "imap " . keys . " " . e .  a:cmd . i
+" Formatting {
+  set showcmd             " Show (partial) command in status line.
+  set showmatch           " Show matching brackets.
+  set showmode            " Show current mode.
+  set ruler               " Show the line and column numbers of the cursor.
+  set number              " Show the line numbers on the left side.
+  set formatoptions+=o    " Continue comment marker in new lines.
+  set textwidth=0         " Hard-wrap long lines as you type them.
+  set expandtab           " Insert spaces when TAB is pressed.
+  set tabstop=2           " Render TABs using this many spaces.
+  set shiftwidth=2        " Indentation amount for < and > commands.
+  "duplicate line cmd-d
+  map <D-d> yyp
+  set noerrorbells        " No beeps.
+  set modeline            " Enable modeline.
+  set esckeys             " Cursor keys in insert mode.
+  set linespace=0         " Set line-spacing to minimum.
+  set nojoinspaces        " Prevents inserting two spaces after punctuation on a join (J)
+  au! BufWritePost .vimrc so %
+  au! BufWritePost .gvimrc so %
+  set list
+  set listchars=tab:›\ ,eol:¬,trail:⋅ "Set the characters for the invisibles
+  " More natural splits
+  set splitbelow          " Horizontal split below current.
+  set splitright          " Vertical split to right of current.
+
+  if !&scrolloff
+    set scrolloff=3       " Show next 3 lines while scrolling.
   endif
-  if a:where =~ "n"
-    execute "nmap " . keys . " " . a:cmd
+  if !&sidescrolloff
+    set sidescrolloff=5   " Show next 5 columns while side-scrolling.
   endif
-  if a:where =~ "v"
-    let k = (index(a:000,"restoreSelectionAfter") > -1) ? "gv" : ""
-    let c = a:cmd
-    if index(a:000,"cmdInVisual") > -1
-      let c = ":<C-u>" . strpart(a:cmd,1)
-    endif
-    execute "vmap " . keys . " " . c . k
+  set display+=lastline
+  set nostartofline       " Do not jump to first character with page commands.
+
+  if &encoding ==# 'latin1' && has('gui_running')
+    set encoding=utf-8
   endif
-endfunction
-function! TabIsEmpty()
-    return winnr('$') == 1 && len(expand('%')) == 0 && line2byte(line('$') + 1) <= 2
-endfunction
-function! MyQuit()
-  if TabIsEmpty() == 1
-    q!
-  else
-    if &modified
-      if (confirm("YOU HAVE UNSAVED CHANGES! Wanna quit anyway?", "&Yes\n&No", 2)==1)
-        q!
+
+  " Tell Vim which characters to show for expanded TABs,
+  " trailing whitespace, and end-of-lines. VERY useful!
+  if &listchars ==# 'eol:$'
+    set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+  endif
+  set list                " Show problematic characters.
+
+  " Also highlight all tabs and trailing whitespace characters.
+  highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+  match ExtraWhitespace /\s\+$\|\t/
+
+" }
+
+" Configuration {
+  if has('path_extra')
+    setglobal tags-=./tags tags^=./tags;
+  endif
+
+  set autoread            " If file updates, load automatically.
+  set autochdir           " Switch to current file's parent directory.
+
+  " Remove special characters for filename
+  set isfname-=:
+  set isfname-==
+  set isfname-=+
+
+  " Map ; to :
+  nnoremap ; :
+
+  if &history < 1000
+    set history=1000      " Number of lines in command history.
+  endif
+  if &tabpagemax < 50
+    set tabpagemax=50     " Maximum tab pages.
+  endif
+
+  if &undolevels < 200
+    set undolevels=200    " Number of undo levels.
+  endif
+
+  " Path/file expansion in colon-mode.
+  set wildmenu
+  set wildmode=list:longest
+  set wildchar=<TAB>
+
+  if !empty(&viminfo)
+    set viminfo^=!        " Write a viminfo file with registers.
+  endif
+  set sessionoptions-=options
+
+  " Allow color schemes to do bright colors without forcing bold.
+  if &t_Co == 8 && $TERM !~# '^linux'
+    set t_Co=16
+  endif
+
+  autocmd BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+
+
+  " Remove trailing spaces before saving text files
+  " http://vim.wikia.com/wiki/Remove_trailing_spaces
+  autocmd BufWritePre * :call StripTrailingWhitespace()
+  function! StripTrailingWhitespace()
+    if !&binary && &filetype != 'diff'
+      normal mz
+      normal Hmy
+      if &filetype == 'mail'
+  " Preserve space after e-mail signature separator
+        %s/\(^--\)\@<!\s\+$//e
+      else
+        %s/\s\+$//e
       endif
+      normal 'yz<Enter>
+      normal `z
+    endif
+  endfunction
+
+  " Diff options
+  set diffopt+=iwhite
+
+  "Enter to go to EOF and backspace to go to start
+  nnoremap <CR> G
+  nnoremap <BS> gg
+  " Stop cursor from jumping over wrapped lines
+  nnoremap j gj
+  nnoremap k gk
+  " Make HOME and END behave like shell
+  inoremap <C-E> <End>
+  inoremap <C-A> <Home>
+" }
+
+" GUI Options {
+  set guioptions-=m " Removes top menubar
+  set guioptions-=T " Removes top toolbar
+  set guioptions-=r " Removes right hand scroll bar
+  set go-=L " Removes left hand scroll bar
+
+  "Toggle menubar
+  nnoremap <leader>m :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+
+  " Relative numbering
+  function! NumberToggle()
+    if(&relativenumber == 1)
+      set nornu
+      set number
     else
-      q
+      set rnu
     endif
+  endfunc
+
+  " Toggle between normal and relative numbering.
+  nnoremap <leader>r :call NumberToggle()<cr>
+
+  " Sets a status line. If in a Git repository, shows the current branch.
+  " Also shows the current file name, line and column number.
+  if has('statusline')
+      set laststatus=2
+
+      " Broken down into easily includeable segments
+      set statusline=%<%f\                     " Filename
+      set statusline+=%w%h%m%r                 " Options
+      "set statusline+=%{fugitive#statusline()} " Git Hotness
+      set statusline+=\ [%{&ff}/%Y]            " Filetype
+      set statusline+=\ [%{getcwd()}]          " Current dir
+      set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
   endif
-endfunction
-function! OpenLastBufferInNewTab()
-    redir => ls_output
-    silent exec 'ls'
-    redir END
-    let ListBuffers = reverse(split(ls_output, "\n"))
-    for line in ListBuffers
-      let title = split(line, "\"")[1]
-      if title !~  "\[No Name"
-        execute "tabnew +" . split(line, " ")[0] . "buf"
-        break
-      endif
-    endfor
-endfunction
+" }
 
-""" Key mappings
+" Keybindings {
+  " Save file
+  nnoremap <Leader>w :w<CR>
+  "Copy and paste from system clipboard
+  vmap <Leader>y "+y
+  vmap <Leader>d "+d
+  nmap <Leader>p "+p
+  nmap <Leader>P "+P
+  vmap <Leader>p "+p
+  vmap <Leader>P "+P
+" }
 
-" Usefull shortcuts to inter insert mode
-nnoremap <Enter> i<Enter>
-nnoremap <Backspace> i<Backspace>
-nnoremap <Space> i<Space>
-
-" Ctrl A - Begin Line
-call CreateShortcut("C-a", "0", "inv")
-
-" Ctrl E - End Line
-call CreateShortcut("C-e", "$<right>", "inv")
-
-" Ctrl S - Save
-call CreateShortcut("C-s", ":w<enter>", "nv", "cmdInVisual", "restoreSelectionAfter")
-call CreateShortcut("C-s", ":w<enter>i<right>", "i", "noTrailingIInInsert")
-
-" Home - Go To Begin
-call CreateShortcut("Home", "gg", "inv")
-
-" End - Go To End
-call CreateShortcut("End", "G", "inv")
-
-" Ctrl K - Delete Line
-call CreateShortcut("C-k", "dd", "in")
-call CreateShortcut("C-k", "d", "v")
-
-" Ctrl Q - Duplicate Line
-call CreateShortcut("C-q", "mjyyp`jjl", "i")
-call CreateShortcut("C-q", "mjyyp`jj", "n")
-call CreateShortcut("C-q", "yP", "v")
-
-" Ctrl Down - Pagedown
-call CreateShortcut("C-Down", "20j", "inv")
-
-" Ctrl Up - Pageup
-call CreateShortcut("C-Up", "20k", "inv")
-
-" Ctrl Right - Next Word
-call CreateShortcut("C-Right", "w", "nv")
-
-" Ctrl Left - Previous Word
-call CreateShortcut("C-Left", "b", "nv")
-
-" Ctrl F - Find
-call CreateShortcut("C-f", ":/", "in", "noTrailingIInInsert")
-
-" Ctrl H - Search and Replace
-call CreateShortcut("C-h", ":%s/", "in", "noTrailingIInInsert")
-
-" Ctrl L - Delete all lines
-call CreateShortcut("C-l", "ggdG", "in")
-
-" Pageup - Move up Line
-call CreateShortcut("PageUp", ":m-2<enter>", "in")
-call CreateShortcut("PageUp", "dkP", "v")
-
-" Pagedown - Move down Line
-call CreateShortcut("PageDown", ":m+<enter>", "in")
-call CreateShortcut("PageDown", "dp", "v")
-
-" Ctrl C - Quit
-call CreateShortcut("C-c", ":call MyQuit()<enter>", "inv", "cmdInVisual")
-
-" Tab - Indent
-call CreateShortcut("Tab", ">>", "n")
-call CreateShortcut("Tab", ">", "v", "restoreSelectionAfter")
-
-" Shift Tab - UnIndent
-call CreateShortcut("S-Tab", "<<", "in")
-call CreateShortcut("S-Tab", "<", "v", "restoreSelectionAfter")
-
-" Ctrl Z - Undo
-call CreateShortcut("C-z", "u", "in")
-
-" Ctrl R - Redo
-call CreateShortcut("C-r", "<C-r>", "in")
-
-" Ctrl D - Suppr (the key)
-call CreateShortcut("C-d", "<del>", "iv", "noLeadingEscInInsert", "noTrailingIInInsert")
-call CreateShortcut("C-d", "x", "n")
-
-" Ctrl T - New tab
-call CreateShortcut("C-t", ":tabnew<enter>i", "inv", "noTrailingIInInsert", "cmdInVisual")
+" Plug Settings {
+  " Airline {
+    let g:airline#extensions#tabline#enabled = 2
+    let g:airline#extensions#tabline#fnamemod = ':t'
+    let g:airline#extensions#tabline#left_sep = ' '
+    let g:airline#extensions#tabline#left_alt_sep = '|'
+    let g:airline#extensions#tabline#right_sep = ' '
+    let g:airline#extensions#tabline#right_alt_sep = '|'
+    let g:airline_left_sep = ' '
+    let g:airline_left_alt_sep = '|'
+    let g:airline_right_sep = ' '
+    let g:airline_right_alt_sep = '|'
+  " }
+  " CtrlP {
+    " Open file menu
+    nnoremap <Leader>o :CtrlP<CR>
+    " Open buffer menu
+    nnoremap <Leader>b :CtrlPBuffer<CR>
+    " Open most recently used files
+    nnoremap <Leader>f :CtrlPMRUFiles<CR>
+  " }
+" }
 
 
-" Alt Right - Next tab
-call CreateShortcut("A-Right", "gt", "inv")
-
-" Alt Left - Previous tab
-call CreateShortcut("A-Left", "gT", "inv")
-
-" F2 - Paste toggle
-function! MyPasteToggle()
-  set invpaste
-  echo "Paste" (&paste) ? "On" : "Off"
-endfunction
-call CreateShortcut("f2",":call MyPasteToggle()<Enter>", "n")
-
-" F3 - Line numbers toggle
-call CreateShortcut("f3",":set nonumber!<Enter>", "in")
-
-" F4 - Panic Button
-call CreateShortcut("f4","mzggg?G`z", "inv")
-
-" Ctrl O - Netrw (:Explore)
-call CreateShortcut("C-o",":Texplore<Enter>", "inv", "noTrailingIInInsert")
-let g:netrw_banner=0 " Hide banner
-let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+' " Hide hidden files
-autocmd filetype netrw call KeysInNetrw()
-function! KeysInNetrw()
-  " Right to enter
-  nmap <buffer> <Right> <Enter>
-  " Left to go up
-  nmap <buffer> <Left> -
-  " l - Display info
-  nmap <buffer> l qf
-  " N - Menu
-  nmap <buffer> n :call MenuNetrw()<Enter>
-endfunction
-function! MenuNetrw()
-  let c = input("What to you want to do? (M)ake a dir, Make a (F)ile, (R)ename, (D)elete : ")
-  if (c == "m" || c == "M")
-    normal d
-  elseif (c == "f" || c == "F")
-    normal %
-  elseif (c == "r" || c == "R")
-    normal R
-  elseif (c == "d" || c == "D")
-    normal D
-  endif
-endfunction
 
 
-""" Custom commands
+autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd FileType go set sw=4
+autocmd FileType go set tabstop=4
+autocmd FileType go set sts=0
+autocmd FileType go set expandtab
+autocmd FileType go set smarttab
+autocmd FileType javascript setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType json setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType python setlocal expandtab sw=4 ts=4 sts=4
+autocmd FileType c setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType php setlocal expandtab sw=2 ts=2 sts=2
+autocmd BufNewFile,BufReadPost *.jade set filetype=pug
+autocmd FileType jade setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType html setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType jade setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType less setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType htmldjango setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType css setlocal expandtab sw=2 ts=2 sts=2
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>r <Plug>(go-run)
+au FileType go nmap <Leader>b <Plug>(go-build)
+au FileType go nmap <Leader>t <Plug>(go-test)
+au FileType go nmap gd <Plug>(go-def-tab)
 
-" :W - To write with root rights
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+" Ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
-" :UndoCloseTab - To undo close tab
-command UndoCloseTab call OpenLastBufferInNewTab()
 
-"""" Color Scheme
+" Vim-Go related Settings
+let g:go_errcheck_bin="/Users/vinitkumar/go/bin/errcheck"
+let g:go_golint_bin="/Users/vinitkumar/go/bin/golint"
+let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
+let g:github_upstream_issues = 1
+let g:go_disable_autoinstall = 0
 
-"" Placed here for convenience.
-"" Copied from sickill Monokai on Github,
-"" and slightly modified.
 
-set background=dark
-highlight clear
-syntax reset
-set t_Co=256
-hi Cursor ctermfg=235 ctermbg=231 cterm=NONE guifg=#272822 guibg=#f8f8f0 gui=NONE
-hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
-hi CursorColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
-hi ColorColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
-hi LineNr ctermfg=102 ctermbg=237 cterm=NONE guifg=#90908a guibg=#3c3d37 gui=NONE
-hi VertSplit ctermfg=241 ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
-hi MatchParen ctermfg=197 ctermbg=NONE cterm=underline guifg=#f92672 guibg=NONE gui=underline
-hi StatusLine ctermfg=231 ctermbg=241 cterm=bold guifg=#f8f8f2 guibg=#64645e gui=bold
-hi StatusLineNC ctermfg=231 ctermbg=241 cterm=NONE guifg=#f8f8f2 guibg=#64645e gui=NONE
-hi Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
-hi IncSearch ctermfg=235 ctermbg=186 cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
-hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
-hi Directory ctermfg=161 ctermbg=NONE cterm=NONE guifg=#d7005f guibg=NONE gui=NONE
-hi Folded ctermfg=242 ctermbg=235 cterm=NONE guifg=#75715e guibg=#272822 gui=NONE
-hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
-hi Normal ctermfg=231 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
-hi Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Comment ctermfg=242 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
-hi Conditional ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
-hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
-hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
-hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
-hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Function ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
-hi Identifier ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi Keyword ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Label ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
-hi NonText ctermfg=59 ctermbg=236 cterm=NONE guifg=#49483e guibg=#31322c gui=NONE
-hi Number ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Operator ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi PreProc ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Special ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
-hi SpecialKey ctermfg=59 ctermbg=237 cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
-hi Statement ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi StorageClass ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi String ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
-hi Tag ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
-hi Todo ctermfg=95 ctermbg=NONE cterm=inverse,bold guifg=#75715e guibg=NONE gui=inverse,bold
-hi Type ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
-hi rubyClass ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyFunction ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
-hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi rubySymbol ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi rubyConstant ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi rubyStringDelimiter ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
-hi rubyBlockParameter ctermfg=208 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=italic
-hi rubyInstanceVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi rubyInclude ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyGlobalVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi rubyRegexp ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
-hi rubyRegexpDelimiter ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
-hi rubyEscape ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi rubyControl ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyClassVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi rubyOperator ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyException ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyPseudoVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi rubyRailsUserClass ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi rubyRailsARAssociationMethod ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi rubyRailsARMethod ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi rubyRailsRenderMethod ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi rubyRailsMethod ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi erubyDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi erubyComment ctermfg=95 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
-hi erubyRailsMethod ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi htmlTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi htmlEndTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi htmlTagName ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi htmlArg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi htmlSpecialChar ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi javaScriptFunction ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi javaScriptRailsFunction ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi yamlKey ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi yamlAnchor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi yamlAlias ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi yamlDocumentHeader ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
-hi cssURL ctermfg=208 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=italic
-hi cssFunctionName ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi cssColor ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi cssPseudoClassId ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
-hi cssClassName ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
-hi cssValueLength ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi cssCommonAttr ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi TabLineFill cterm=bold ctermbg=0
-" Abbreviations
-iab <expr> now strftime("%x")
+"Nerdtree
+let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
+let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
+let g:NERDTreeShowBookmarks=1
+let g:nerdtree_tabs_focus_on_files=1
+let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
+let g:NERDTreeWinSize = 50
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
+map <C-u> :NERDTreeToggle<CR>
+nmap <C-c> :NERDTreeCWD<CR>
+" vim:set ft=vim sw=2 ts=2:
+
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
+
+
+"Indent
+" Indent lines with cmd+[ and cmd+]
+nmap <D-]> >>
+nmap <D-[> <<
+vmap <D-[> <gv
+vmap <D-]> >gv
+
+
