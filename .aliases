@@ -246,6 +246,8 @@ function _darwin_aliases() {
   alias mysqlstart='sudo /usr/local/mysql/support-files/mysql.server start'
   alias mysqlstop='sudo /usr/local/mysql/support-files/mysql.server stop'
   alias mysqlrestart='sudo /usr/local/mysql/support-files/mysql.server restart'
+  alias mysqlstat='sudo /usr/local/mysql/support-files/mysql.server status'
+  alias mysql='sudo /usr/local/mysql/support-files/mysql.server'
 
   # Work related aliases
   alias worksecrets='open ~/Documents/Work/HWCIR.kdbx'
