@@ -1,4 +1,14 @@
 Host *
+# Make connections resilient (short outages will be reconnected)
+# this configuration will reconnect if outage is 10 minutes or less
+TCPKeepAlive no
+ServerAliveInterval 60
+ServerAliveCountMax 10
+
+# This enables persistent connections; this will cause connections to
+# hang around for 2 hours after logging out.
+ControlPersist 2h
+
 #ControlMaster auto
 ControlPath ~/.ssh/connections/%r_%h_%p
 IdentityFile ~/.ssh/lpjharri-esa_id_rsa_2011
@@ -10,34 +20,42 @@ IdentityFile ~/.ssh/github_rsa
 ######################################################################
 
 Host maven
+ForwardAgent yes
 HostName lpv-hwmaven01.co.ihc.com
 User lpjharri
 
 Host dev1
+ForwardAgent yes
 HostName lpv-hwdevapp01.co.ihc.com
 User lpjharri
 
 Host dev2
+ForwardAgent yes
 HostName lpv-hwdevapp02.co.ihc.com
 User lpjharri
 
 Host ver1
+ForwardAgent yes
 HostName lpv-hwverapp01.co.ihc.com
 User lpjharri
 
 Host ver2
+ForwardAgent yes
 HostName lpv-hwverapp02.co.ihc.com
 User lpjharri
 
 Host ver3
+ForwardAgent yes
 HostName lpv-hwverapp03.co.ihc.com
 User lpjharri
 
 Host devdb1
+ForwardAgent yes
 HostName lpv-hwdevdb01.co.ihc.com
 User lpjharri
 
 Host prddb1
+ForwardAgent yes
 HostName lpv-hwprddb01.co.ihc.com
 User lpjharri
 
@@ -47,6 +65,7 @@ User lpjharri
 
 # My own virtualbox guest fedora machine
 Host jjjj
+ForwardAgent yes
 HostName 192.168.56.101
 User lpjharri
 
