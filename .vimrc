@@ -21,7 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 if has('autocmd')
-  filetype plugin indent on
+  filetype plugin indent on     " Enable filetype plugins; smartindent will interfere so either turn this off or the other one
 endif
 if has('syntax') && !exists('g:syntax_on')
   syntax enable
@@ -34,20 +34,37 @@ let mapleader="\<SPACE>"
 let g:syntastic_python_checkers=['python', 'pylint']
 
 " General {
+  set dir=~/.vimbackup,~/tmp,/var/tmp,/tmp
+  set undodir=~/.vimbackup,~/tmp,/var/tmp,/tmp
   set backspace=indent,eol,start      " Allow backspace over everything in insert mode.
   set guifont=Monaco:h11
   set noswapfile
   set complete-=i
   set smarttab
   set ttyfast
-  set noautoindent        " I indent my code myself.
-  set nocindent           " I indent my code myself.
-  "set smartindent        " Or I let the smartindent take care of it.
+  set nowrap
+  set ffs=unix,dos,mac      " Set unix as default file system type
+  set undofile              " A persistent undo per file
+  set clipboard=unnamed     " Allow access to the mac os x system clipboard; if using iterm2 uncheck 'Allow clipboard access to terminal apps'
+  set omnifunc=syntaxcomplete#Complete      " Turns on omni completion, not usually enabled by default
+  set cursorline
+  set cursorcolumn
+  
+  " Indentation settings
+  "set noautoindent        " I indent my code myself.
+  set ai                  " auto indentation; does not interfere with other indent settings; simply copies previous line
+  "set nocindent           " I indent my code myself.
+  "set smartindent        " Will interfere with filetype plugin indent on so turn it off
 
   set nrformats-=octal
 
   set ttimeout
   set ttimeoutlen=100
+" }
+
+" Abbreviations {
+iab <expr> now strftime("%x")
+iab <// </C-X><C-O>     " Autocomplete markup tags (remapping C-X, C-O)
 " }
 
 " Search {
@@ -240,6 +257,9 @@ let g:syntastic_python_checkers=['python', 'pylint']
   nmap <Leader>P "+P
   vmap <Leader>p "+p
   vmap <Leader>P "+P
+  nnoremap <leader>hl :set hlsearch!<CR>        " toggle search hilight on/off
+  nnoremap <F3> :set hlsearch!<CR>              " use F3 to toggle search hilight on/off
+  map <leader>ss :setlocal spell!<CR>
 " }
 
 " Plug Settings {
@@ -330,5 +350,3 @@ nmap <D-]> >>
 nmap <D-[> <<
 vmap <D-[> <gv
 vmap <D-]> >gv
-
-
