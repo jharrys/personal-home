@@ -20,6 +20,9 @@ function _base_aliases() {
   alias getw='wget -N -r -nH -nd --no-parent'
   alias pdr='powerline-daemon --replace'
 
+  ###### Find ######
+  alias findnewer='find . -newerct'     # findnewerthan '5 minutes ago'
+
   ###### Less ######
   alias lessq='less -F'                                           # less, but quit if all fits in one page
   alias lesst='less +F'                                           # less and tail -f
