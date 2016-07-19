@@ -6,5 +6,8 @@ readAccount
 
 do diff ... they are not really testing
 ====
-AlertUtil convertDtoToEntity - tries to set id on an entity that does not yet exist</note>
+AlertUtil convertDtoToEntity - tries to set id on an entity that does not yet exist
+
+All converters need to check for null and then decide what the right thing to do ...
+if we're converting to entity, maybe it's a brand new entity and so id should be null</note>
 </notes>
