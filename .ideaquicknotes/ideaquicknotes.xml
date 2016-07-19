@@ -1,0 +1,10 @@
+<notes createdt="Mon, 18 Jul 2016 7:40 PM" selectednoteindex="0" showlinenumbers="Y" toolbarlocation="0" fontname="Tahoma" fontsize="12" wordwrap="N" fontColorDefault="Y" fontColorRed="0" fontColorGreen="0" fontColorBlue="0" bgColorDefault="Y" bgColorRed="254" bgColorGreen="252" bgColorBlue="178" bgLineColorShow="Y" bgLineColorDefault="Y" bgLineColorRed="234" bgLineColorGreen="233" bgLineColorBlue="164">
+  <note title="Notes for Rashmi/Rajitha" createdt="Mon, 18 Jul 2016 7:40 PM">AccountDaoImplInteg
+
+createAccount
+readAccount
+
+do diff ... they are not really testing
+====
+AlertUtil convertDtoToEntity - tries to set id on an entity that does not yet exist</note>
+</notes>
