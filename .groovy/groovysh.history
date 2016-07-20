@@ -124,3 +124,26 @@ namesAsArrays.each(){print it[1]}
 :q
 :doc java.util.List
 :q
+:load jj.groovy
+exit
+quit
+:load jj.groovy
+h
+?
+:show
+:load jj.groovy
+:display
+:x
+:load jj.groovy
+:x
+:load jj.groovy
+:x
+:load jj.groovy
+:x
+:load jj.groovy
+:x
+:load jj.groovy
+:x
+:load jj.groovy
+:x
+:load jj.groovy
