@@ -147,3 +147,6 @@ h
 :load jj.groovy
 :x
 :load jj.groovy
+:load ./migrateToNewAlertEvent.groovy
+:load migrateToNewAlertEvent.groovy
+String.methods.each{println it}
