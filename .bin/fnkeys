@@ -1,0 +1,11 @@
+#!/bin/bash
+
+osascript ~/.bin/fnkey-toggler.scpt
+
+FNSTATE=$(defaults read -g com.apple.keyboard.fnState)
+if [ $FNSTATE -eq 1 ];
+then
+  osascript -e 'display notification "Fn keys are special." with title "SPECIAL"'
+else
+  osascript -e 'display notification "Fn keys are standard." with title "STANDARD"'
+fi
