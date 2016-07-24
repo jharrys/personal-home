@@ -165,8 +165,8 @@ SQLPATH=~/.configuration/sqlplus
 
 # Add powerline environment
 #powerline-daemon
-#PYTHONSITE=$(python -m site --user-site)
-#. $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
+PYTHONSITE=$(python -m site --user-site)
+. $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 
 # SSH Environment
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
