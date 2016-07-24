@@ -46,6 +46,7 @@ configuration/Sublime Text 2/Backup
 .gem
 .gc*
 .gimp*
+.gitkraken/
 .gn*
 .gs*
 .gt*
