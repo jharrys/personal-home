@@ -152,6 +152,7 @@ function _base_aliases() {
   alias gsync='git pull --rebase origin master'                                                 # Sync with master if you have unpublished commits
   alias gck='git fetch && git log ..origin/master'                                              # Check upstream master to see if there are any changes to bring down
   alias gpr='git-stash-pull-request'                                                            # Checkout a git bitbucket server pull request; this maps to a personal .zfuncs
+  alias gph='git push fromhome master'                                                          # Git push to bitbucket.org but from home
 
   # Maven stuff
   alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                # clean my local repository
