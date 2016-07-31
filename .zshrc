@@ -120,6 +120,13 @@ export HELPDIR=~/.zsh_help
 unalias run-help
 autoload run-help
 
+# Setup H2
+H2HOME="/Users/lpjharri/Applications/h2"
+export H2HOME
+
+PATH=$PATH:$H2HOME/bin
+export PATH
+
 # Am I at Intermountain/work?; works with ~/.bin/atwork.sh script and some trigger (on mac os x I used ControlPlane to trigger atwork.sh when connected to IHC)
 if [ -f ~/.ssh/at-ihc-work ]; then
   setProxy set
