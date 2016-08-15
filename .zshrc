@@ -127,6 +127,8 @@ export H2HOME
 PATH=$PATH:$H2HOME/bin
 export PATH
 
+export HOMEBREW_GITHUB_API_TOKEN=363214089b27eb70e2ac015ddf93cf9b5738864a
+
 # Am I at Intermountain/work?; works with ~/.bin/atwork.sh script and some trigger (on mac os x I used ControlPlane to trigger atwork.sh when connected to IHC)
 if [ -f ~/.ssh/at-ihc-work ]; then
   setProxy set
