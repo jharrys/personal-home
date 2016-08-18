@@ -1,13 +1,3 @@
 <notes createdt="Mon, 18 Jul 2016 7:40 PM" selectednoteindex="0" showlinenumbers="N" toolbarlocation="0" fontname="Tahoma" fontsize="12" wordwrap="Y" fontColorDefault="Y" fontColorRed="0" fontColorGreen="0" fontColorBlue="0" bgColorDefault="Y" bgColorRed="254" bgColorGreen="252" bgColorBlue="178" bgLineColorShow="Y" bgLineColorDefault="Y" bgLineColorRed="234" bgLineColorGreen="233" bgLineColorBlue="164">
-  <note title="Notes for Rashmi/Rajitha" createdt="Mon, 18 Jul 2016 7:40 PM">AccountDaoImplInteg
-
-createAccount
-readAccount
-
-do diff ... they are not really testing
-====
-AlertUtil convertDtoToEntity - tries to set id on an entity that does not yet exist
-
-All converters need to check for null and then decide what the right thing to do ...
-if we're converting to entity, maybe it's a brand new entity and so id should be null</note>
+  <note title="Notes for Rashmi/Rajitha" createdt="Mon, 18 Jul 2016 7:40 PM" />
 </notes>
