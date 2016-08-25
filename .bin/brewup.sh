@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# used to upgrade homebrew and clean it up
+# note that this will not upgrade cask
+
+# this is used in the following places:
+# 1) some aliases
+# 2) ControlPlane (to automatically run upgrades on a daily basis)
+
 brew=/usr/local/bin/brew
 logger=/usr/bin/logger
 
