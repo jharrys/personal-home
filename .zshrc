@@ -97,6 +97,7 @@ export LESS="-S -n -r"
 
 # SET options
 unsetopt INC_APPEND_HISTORY
+setopt EXTENDED_GLOB
 
 # Setup python environment, if there is a virtual one installed inside home directory
 if [ -d ~/.pyenv ]; then
