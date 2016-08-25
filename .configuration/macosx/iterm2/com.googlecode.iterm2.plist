@@ -1586,9 +1586,9 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>17 324 918 381 0 0 2560 1440 </string>
+	<string>217 427 918 381 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3519 665 1445 721 2560 0 2560 1440 </string>
+	<string>54 185 1256 561 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -2636,23 +2636,21 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
-			<key>Background Image Location</key>
-			<string>/Users/lpjharri/Google Drive/Wallpaper/regular/117484-lwbtc.jpg</string>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.5</real>
+				<real>0.4115142822265625</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.040931008756160736</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.69832825660705566</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.76774132251739502</real>
 			</dict>
 			<key>Badge Text</key>
-			<string>\(session.username)@\(session.hostname)</string>
+			<string>\(session.username)</string>
 			<key>Blend</key>
 			<real>0.43470052083333333</real>
 			<key>Blink Allowed</key>
@@ -2660,9 +2658,9 @@
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
-			<false/>
+			<true/>
 			<key>Blur Radius</key>
-			<real>2.4621995192307691</real>
+			<real>1.7344651442307693</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -3324,12 +3322,25 @@
 			</array>
 			<key>Sync Title</key>
 			<false/>
+			<key>Tab Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.068149134516716003</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.0</real>
+				<key>Red Component</key>
+				<real>0.62635523080825806</real>
+			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.13581961908284024</real>
+			<real>0.35817769970414198</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -3341,6 +3352,8 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use Italic Font</key>
+			<true/>
+			<key>Use Tab Color</key>
 			<true/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
@@ -4185,7 +4198,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>C7CBD61B-B566-4E80-89F2-002586B0DE65</string>
 	<key>NoSyncLastTipTime</key>
-	<real>493153082.10087198</real>
+	<real>493770361.44952703</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -4262,6 +4275,16 @@
 		<string>0049</string>
 		<string>0050</string>
 		<string>0050</string>
+		<string>0051</string>
+		<string>0052</string>
+		<string>0053</string>
+		<string>0054</string>
+		<string>0054</string>
+		<string>0054</string>
+		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
+		<string>0058</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -4338,7 +4361,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-17T15:26:04Z</date>
+	<date>2016-08-23T23:40:00Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -4402,5 +4425,9 @@
 	<false/>
 	<key>iTerm Version</key>
 	<string>3.0.8</string>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>2</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
 </dict>
 </plist>
