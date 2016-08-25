@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Changes the name of multiple files at the same time
+# zsh can do this naturally, so this may not be needed
+
 function usage() {
 	echo
 	echo -e "`basename $0` [-n] -s \"search_param\" [-r \"replace_param\"]"
@@ -30,7 +33,7 @@ done
 
 [ "${SEARCH}isblank" = "isblank" ] && usage
 
-## Main 
+## Main
 if [ $DRYRUN ]; then
 	echo
 	echo "-- Dry run, no changes will be made"
