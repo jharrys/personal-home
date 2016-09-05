@@ -100,7 +100,7 @@ function _darwinsetup() {
 	fi
 
 	# Path setup
-	PATH=/usr/local/git/bin:$PATH
+	PATH=/usr/local/bin:$PATH
 	export PATH
 
 	# Help/MAN Pages
