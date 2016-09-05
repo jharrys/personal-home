@@ -159,3 +159,7 @@
 	trustExitCode = true
 [commit]
 	template = ~/.stCommitMsg
+[log]
+	showSignature = true
+[color "diff"]
+	old = red strike
