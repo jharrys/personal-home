@@ -1,0 +1,23 @@
+usage="usage:\t$0 list\n\t$0 set DOMAIN"
+[ $# -lt 1 ] && echo $usage && return 1
+
+DOMAIN_ROOT=/Users/lpjharri/local/wldomains
+
+red=`tput setaf 1`
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+blue=`tput setaf 4`
+magenta=`tput setaf 5`
+cyan=`tput setaf 6`
+white=`tput setaf 7`
+reset=`tput sgr0`
+
+if [ "$1" = "list" -o "$1" = "ls" ]; then
+  ls -1 $DOMAIN_ROOT
+  echo "${red}currently set to:${reset} ${yellow}${DOMAIN_HOME}${reset}"
+
+elif [ "$1" = "set" ]; then
+  [ $# -lt 2 ] && echo "${red}currently set to:${reset} ${yellow}${DOMAIN_HOME}${reset}"  && return 1
+  export DOMAIN_HOME=${DOMAIN_ROOT}/$2
+  echo "${red}reset to:${reset} ${yellow}${DOMAIN_HOME}${reset}"
+fi
