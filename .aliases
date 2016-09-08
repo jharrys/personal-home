@@ -280,6 +280,10 @@ function _darwin_aliases() {
   alias tagbins='tag -a "bin & libs"'
   alias untagbins='tag -r "bin & libs"'
 
+  # Sysadmin
+  alias diagnosisreport='sudo sysdiagnose -f ~lpjharri/Desktop'
+  alias infoaboutanymac='mactracker'
+
 }
 
 ##
