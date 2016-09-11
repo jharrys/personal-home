@@ -1,5 +1,6 @@
 #
 ## ALIASES
+## comments are all indented to column 97
 #
 
 ##
@@ -8,12 +9,12 @@
 function _base_aliases() {
   ###### Base ########
   alias ls='ls --color'
-  alias lr='ls -AlhR'                   # list recursively
-  alias lt='ls -ltrh'                   # list detail sort by time reversed
-  alias ll='ls -lh'                     # list detail
-  alias la='ls -Alh'                    # list detail showing hidden, hiding . and ..
-  alias lld='ls -Alh |grep ^d'          # list detail just directories
-  alias lls='ls -lhSr'                  # list detail by size reverse order
+  alias lr='ls -AlhR'                                                                           # list recursively
+  alias lt='ls -ltrh'                                                                           # list detail sort by time reversed
+  alias ll='ls -lh'                                                                             # list detail
+  alias la='ls -Alh'                                                                            # list detail showing hidden, hiding . and ..
+  alias lld='ls -Alh |grep ^d'                                                                  # list detail just directories
+  alias lls='ls -lhSr'                                                                          # list detail by size reverse order
   alias mv='mv -i'
   alias cp='cp -i'
   alias vi='gvimt'
@@ -21,31 +22,31 @@ function _base_aliases() {
   alias pdr='powerline-daemon --replace'
 
   ###### Find ######
-  alias findnewer='find . -newerct'     # findnewerthan '5 minutes ago'
+  alias findnewer='find . -newerct'                                                             # findnewerthan '5 minutes ago'
 
   ###### Less ######
-  alias lessq='less -F'                                           # less, but quit if all fits in one page
-  alias lesst='less +F'                                           # less and tail -f
+  alias lessq='less -F'                                                                         # less, but quit if all fits in one page
+  alias lesst='less +F'                                                                         # less and tail -f
 
   ###### Screen or tmux ########
   alias screen='screen ${SHELL} -l'
 
   ###### IP Performance ########
-  alias testperfasserver='iperf -s'                               # runs as a server
-  alias testperfasclient='iperf -c'                               # needs host name to test against
+  alias testperfasserver='iperf -s'                                                             # runs as a server
+  alias testperfasclient='iperf -c'                                                             # needs host name to test against
 
   ###### Dig command (nslookup replacement) ########
-  alias digr='dig +short -x'                                      # reverse dns lookup with short display
-  alias digs='dig +short'                                         # normal lookup with short display
-  alias digns='dig NS +noall +answer'                             # lookup NS with only answer section
-  alias digmx='dig MX +noall +answer'                             # lookup MX records
-  alias digany='dig ANY +noall +answer'                           # lookup ANY records
+  alias digr='dig +short -x'                                                                    # reverse dns lookup with short display
+  alias digs='dig +short'                                                                       # normal lookup with short display
+  alias digns='dig NS +noall +answer'                                                           # lookup NS with only answer section
+  alias digmx='dig MX +noall +answer'                                                           # lookup MX records
+  alias digany='dig ANY +noall +answer'                                                         # lookup ANY records
 
   ###### Printer ########
-  alias prls='lpstat -p'                                          # list all printers
-  alias prd='lpadmin -d'                                          # set default printer to "printername"
-  alias prjobs='lpq -a'                                           # list print jobs across all queues
-  alias prjob='lpq -P'                                            # list print job for specific printer
+  alias prls='lpstat -p'                                                                        # list all printers
+  alias prd='lpadmin -d'                                                                        # set default printer to "printername"
+  alias prjobs='lpq -a'                                                                         # list print jobs across all queues
+  alias prjob='lpq -P'                                                                          # list print job for specific printer
   alias prdisableall='ls /etc/cups/ppd |cut -d "." -f1 |xargs -I{} cupsdisable {}'
   alias prenableall='ls /etc/cups/ppd |cut -d "." -f1 |xargs -I{} cupsenable {}'
 
@@ -54,14 +55,21 @@ function _base_aliases() {
 
   ###### Rsync ########
   # [a](rlptogD) [v]erbose [u]pdate [z]compress [h]umanreadable [P]partial,progress
-  alias rsync='rsync -avuzhP --partial'                           # rsync SOURCE DEST; for excluding to --exclude=PATTERN
-  alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi --exclude=Work\ Center/BioInformatics\ Center/UDOH* --exclude=Work\ Center/BioInformatics\ Center/smpi* --exclude=Workspaces/* --exclude=.Trash/* /Users/john john@zax:/mnt/nethome'
+  alias rsync='rsync -avuzhP --partial'                                                         # rsync SOURCE DEST; for excluding to --exclude=PATTERN
+  alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi \
+                    --exclude=Work\ Center/BioInformatics\ Center/UDOH* \
+                    --exclude=Work\ Center/BioInformatics\ Center/smpi* \
+                    --exclude=Workspaces/* --exclude=.Trash/* /Users/john \
+                    john@zax:/mnt/nethome'
   alias rsyncPicToshibaAsSource='rsync -avuzhP ${HOME}/winhome/Mounts/toshiba/pictures/'
-  alias rsyncnet2JJ='rsync -avuzhP --delete ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/ ~/my_apps/'
-  alias rsyncJJ2net='rsync -avuzhP --delete ~/my_apps/ ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/'
+  alias rsyncnet2JJ='rsync -avuzhP --delete ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/ \
+                    ~/my_apps/'
+  alias rsyncJJ2net='rsync -avuzhP --delete ~/my_apps/ \
+                    ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/'
 
   ###### Time savers ########
-  alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; alias | cut -d " " -f 2- | egrep "^_ts"'
+  alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; \
+                alias | cut -d " " -f 2- | egrep "^_ts"'
   alias _tsLargestDirs='find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn'
   alias _tsLargeFiles='find . -size +1000000 -ls'
   alias _tsWhoHasFileOpen='fuser'
@@ -75,32 +83,35 @@ function _base_aliases() {
       alias deluser='sudo /usr/sbin/userdel -f'
       alias newgroupnogid='sudo /usr/sbin/groupadd'
       alias newgroupgid='read -p "gid? " GID;sudo /usr/sbin/groupadd --gid ${GID}'
-      alias adduser2group='read -p "groups(separate by ,)? " GR;sudo /usr/sbin/usermod --append --groups ${GR}'
-      alias mntesa='sudo mkdir -p /mnt/eisa-share; sudo mount //co-lp-vmpfile1/eisa-share /mnt/eisa-share/ -o user=lpjharri'
+      alias adduser2group='read -p "groups(separate by ,)? " \
+                          GR;sudo /usr/sbin/usermod --append --groups ${GR}'
+      alias mntesa='sudo mkdir -p /mnt/eisa-share; sudo mount \
+                    //co-lp-vmpfile1/eisa-share /mnt/eisa-share/ -o user=lpjharri'
       alias umntesa='cd /tmp;sudo umount /mnt/eisa-share/;cd -'
   fi
 
   ###### History ########
-  alias r='fc'				# "r 10" or "r 10 20"; rerun 10 or rerun 10 through 20 (can also be given as string)
-  alias rl='fc -l'			# "rl 10 20" - lists history 10 to 20
-  alias rr='fc -s'			# "rr old=new 10" - rerun command 10 sub old with new (instead of 10, can use string)
-  alias hsync='history -a ; history -n'
+  alias r='fc'                                                                                  # "r 10" or "r 10 20"; rerun 10 or rerun 10 through 20 (can also be given as string)
+  alias rl='fc -l'                                                                              # "rl 10 20" - lists history 10 to 20
+  alias rr='fc -s'                                                                              # "rr old=new 10" - rerun command 10 sub old with new (instead of 10, can use string)
+  alias hsync='history -a ; history -n'                                                         # sync history
 
-  alias web='python -m SimpleHTTPServer'						# with no arg, the server is listening on 8000
-  alias fnung='find / \( -nouser -o -nogroup \) -print'		# find files/dirs with no user or no group
-  alias uneven='findUnevenPermissions.py'						# find uneven permissions
+  alias web='python -m SimpleHTTPServer'                                                        # with no arg, the server is listening on 8000
+  alias fnung='find / \( -nouser -o -nogroup \) -print'                                         # find files/dirs with no user or no group
+  alias uneven='findUnevenPermissions.py'                                                       # find uneven permissions
 
   ###### Wget ########
-  alias wget-asfirefox='wget --user-agent="Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.3) Gecko/2008092416 Firefox/3.0.3"'
-  alias wget-back='wget -b'									# Backgrounds wget download: "get-back http://my.favorite.com/file.zip"
-  alias wget-verify='wget --spider'							# Verifies that url works: "get-verify http://my.favorite.com/file.zip"
-  alias wget-resume='wget -c'									# Resume partially downloaded file: "wget-resume http://my.favorite.com/file.zip"
-  alias wget-retry='wget --tries=30'							# Default retries is 20, this ups it to 30: "wget-retry http://my.favorite.com/file.zip"
-  alias wget-mirror='wget --mirror -p --convert-links -P'		# Download full website; -p download all to properly display html; --convert-links for local viewing; -P tell it where to save
+  alias wget-asfirefox='wget --user-agent="Mozilla/5.0 (X11; U; \
+                        Linux i686; en-US; rv:1.9.0.3) Gecko/2008092416 Firefox/3.0.3"'
+  alias wget-back='wget -b'                                                                     # Backgrounds wget download: "get-back http://my.favorite.com/file.zip"
+  alias wget-verify='wget --spider'                                                             # Verifies that url works: "get-verify http://my.favorite.com/file.zip"
+  alias wget-resume='wget -c'                                                                   # Resume partially downloaded file: "wget-resume http://my.favorite.com/file.zip"
+  alias wget-retry='wget --tries=30'                                                            # Default retries is 20, this ups it to 30: "wget-retry http://my.favorite.com/file.zip"
+  alias wget-mirror='wget --mirror -p --convert-links -P'                                       # Download full website; -p download all to properly display html; --convert-links for local viewing; -P tell it where to save
   # "wget-mirror ./DIR-OF-MY-FAV-SITE-MIRRORED http://my.favorite.com"
-  alias wget-reject='wget --reject='							# Specify types to Reject such as gif: "wget-reject gif http://my.favorite.com"
-  alias wget-log-err='wget -o'							# Log stderr to specified file: "wget-log-err ./err.log http://my.favorite.com"
-  alias wget-accept='wget -r -A'								# Download recursively, Accept types specified: "wget-accept pdf http://pdf.favorites.com"
+  alias wget-reject='wget --reject='                                                            # Specify types to Reject such as gif: "wget-reject gif http://my.favorite.com"
+  alias wget-log-err='wget -o'                                                                  # Log stderr to specified file: "wget-log-err ./err.log http://my.favorite.com"
+  alias wget-accept='wget -r -A'                                                                # Download recursively, Accept types specified: "wget-accept pdf http://pdf.favorites.com"
 
   ###### XML ########
   alias tidyxml='tidy -i -q -w 0 -xml'
@@ -115,7 +126,9 @@ function _base_aliases() {
   alias alien='alien -r'                                                                        # To convert deb to rpm
 
   ##### Sysadmin ######
-  alias topOpenFiles='lsof / |awk ''{ if($7 > 1048576) print $7/1048576 "MB" "" $9 "" $1 }'' |sort -n -u |tail'    # top 10 largest open files
+  alias topOpenFiles='lsof / |awk '"'"'{ if($7 > 1048576) \
+                      print $7/1048576 "MB" "" $9 "" $1 }'"'"' \
+                      |sort -n -u |tail'                                                        # top 10 largest open files
 
   ###### Development ########
 
@@ -124,14 +137,14 @@ function _base_aliases() {
   alias dp='LC_ALL=C TZ=UTC diff -aNru'                                                         # Create a unified patch from diff - add the "original target > file.patch"
 
   # GIT stuff
-  alias gitinit='git init'									# gitinit - creates bare git (use "git add .")
+  alias gitinit='git init'                                                                      # gitinit - creates bare git (use "git add .")
   alias gitinitbare='git init --bare'                                                           # gitinitbare /some/dirproject.git - creates git repo without work local files
-  alias gitrepo='git clone'									# gitrepo ~/existing/repo ~/new/repo -OR- gitrepo ssh://john@host/srv/git/some.git
-  alias gitrh='git reset --hard'								# Reset working local (wl), index and HEAD ref to all be the same - to HEAD if no arg
-  alias gitrs='git reset --soft'								# Reset HEAD ref to arg you give - leaves wl and index as is (wl and index may not match)
+  alias gitrepo='git clone'                                                                     # gitrepo ~/existing/repo ~/new/repo -OR- gitrepo ssh://john@host/srv/git/some.git
+  alias gitrh='git reset --hard'                                                                # Reset working local (wl), index and HEAD ref to all be the same - to HEAD if no arg
+  alias gitrs='git reset --soft'                                                                # Reset HEAD ref to arg you give - leaves wl and index as is (wl and index may not match)
   alias gitcoindex='git checkout-index -a'                                                      # Refresh wl from index
-  alias gitcln='git clean -d -n'								# Clean wl (dry-run), deleting unstage files also (reset --hard doesn't anymore)
-  alias gitcl='git clean -d'									# Clean wl (real), deleting unstage files also (reset --hard doesn't anymore)
+  alias gitcln='git clean -d -n'                                                                # Clean wl (dry-run), deleting unstage files also (reset --hard doesn't anymore)
+  alias gitcl='git clean -d'                                                                    # Clean wl (real), deleting unstage files also (reset --hard doesn't anymore)
   alias gitdf='git diff --name-only'                                                            # Diff, producing only names that changed (provide branch name for diff between current and other branch - remote/branch also)
   alias gitdfstat='git diff --numstat'                                                          # Diff, producing number stats
   alias gitdfstaged='git diff --cached'                                                         # Diff what you've staged
@@ -200,7 +213,8 @@ function _darwin_aliases() {
   alias l@='ls -alh@'
 
   # Run screen savers as wallpaper until Ctrl-C
-  alias ssaswp='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
+  alias ssaswp='/System/Library/Frameworks/ScreenSaver.framework/Resources/\
+ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 
   # Dock
   #alias insertSpacer='defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'
@@ -283,6 +297,9 @@ function _darwin_aliases() {
   # Sysadmin
   alias diagnosisreport='sudo sysdiagnose -f ~lpjharri/Desktop'
   alias infoaboutanymac='mactracker'
+
+  # Brew and Cask
+  alias cask2upgrade='brewcasklist.sh |awk -v RS="" '"'"'{ if ($3 != $6) print $2,"needs to be upgradedd" }'"'"
 
 }
 
