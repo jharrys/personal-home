@@ -49,7 +49,7 @@ let g:syntastic_python_checkers=['python', 'pylint']
   set omnifunc=syntaxcomplete#Complete      " Turns on omni completion, not usually enabled by default
   set cursorline
   set cursorcolumn
-  
+
   " Indentation settings
   "set noautoindent        " I indent my code myself.
   set ai                  " auto indentation; does not interfere with other indent settings; simply copies previous line
@@ -350,3 +350,9 @@ nmap <D-]> >>
 nmap <D-[> <<
 vmap <D-[> <gv
 vmap <D-]> >gv
+
+" Uncomment the following to have Vim jump to the last position when reopening a file
+if has("autocmd")
+   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
