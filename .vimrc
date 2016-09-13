@@ -49,6 +49,8 @@ let g:syntastic_python_checkers=['python', 'pylint']
   set omnifunc=syntaxcomplete#Complete      " Turns on omni completion, not usually enabled by default
   set cursorline
   set cursorcolumn
+  "hi CursorLine
+  hi CursorColumn cterm=NONE ctermbg=lightblue ctermfg=black   "background lightblue, foreground black
 
   " Indentation settings
   "set noautoindent        " I indent my code myself.
@@ -87,7 +89,7 @@ iab <// </C-X><C-O>     " Autocomplete markup tags (remapping C-X, C-O)
   set showmode            " Show current mode.
   set ruler               " Show the line and column numbers of the cursor.
   set number              " Show the line numbers on the left side.
-  set formatoptions+=o    " Continue comment marker in new lines.
+  " set formatoptions+=o    " Continue comment marker in new lines.
   set textwidth=0         " Hard-wrap long lines as you type them.
   set expandtab           " Insert spaces when TAB is pressed.
   set tabstop=2           " Render TABs using this many spaces.
