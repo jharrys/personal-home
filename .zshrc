@@ -199,7 +199,9 @@ export CLICOLOR=1
 export CLICOLOR_FORCE=1       # Force colors through non-tty streams such as less
 export LSCOLORS=exfxcxdxbxegedabagacad
 
-CDPATH='~/mounts:/Volumes:~/development:~/development/buildarea:~/development/source_control:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn'
+CDPATH="~/mounts:/Volumes:~/development:~/development/buildarea:~/development/source_control"
+CDPATH="${CDPATH}:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn"
+CDPATH="${CDPATH}:~/development/source_control/playground:~/development/source_control/openshift:~/development/source_control/esa"
 export CDPATH
 
 # Weblogic
