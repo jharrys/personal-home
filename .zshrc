@@ -99,6 +99,9 @@ export LESS="-S -n -r"
 unsetopt INC_APPEND_HISTORY
 setopt EXTENDED_GLOB
 
+# setting EXTENDED_GLOB breaks git-rev syntax (i.e., HEAD^ ... you'd have to escape ^ -> HEAD\^) the proper fix is to set NO_NOMATCH
+setopt NO_NOMATCH
+
 # Setup python environment, if there is a virtual one installed inside home directory
 if [ -d ~/.pyenv ]; then
   export PYENV_ROOT="$HOME/.pyenv"
