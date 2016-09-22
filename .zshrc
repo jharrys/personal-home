@@ -214,6 +214,9 @@ DOMAIN_HOME=~/local/wldomains/jland
 
 export MW_HOME DOMAIN_HOME USER_MEM_ARGS
 
+# Node environment
+export NODE_PATH="/usr/local/lib/node_modules"
+
 # Where to default store the screen shots (make sure the directory exists)
 # defaults write com.apple.screencapture location ~/Dekstop/Screenshots
 
