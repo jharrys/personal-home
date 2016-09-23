@@ -60,6 +60,7 @@ configuration/Sublime Text 2/Backup
 # .m* - for .mintty
 .m2
 .mcop
+.metadata
 .mozilla
 .mplayer
 .multitail*
