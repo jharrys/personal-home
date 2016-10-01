@@ -161,5 +161,5 @@
 	template = ~/.stCommitMsg
 [log]
 	showSignature = true
-[color "diff"]
-	old = red strike
+;[color "diff"]
+;	old = red strike
