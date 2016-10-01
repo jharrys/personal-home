@@ -296,9 +296,13 @@ function _darwin_aliases() {
   # Sysadmin
   alias diagnosisreport='sudo sysdiagnose -f ~lpjharri/Desktop'
   alias infoaboutanymac='mactracker'
+  alias cleaniconcache='sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \; \
+  ;sudo find /private/var/folders -name com.apple.dock.iconcache -exec rm {} \; \
+  ;sudo rm -rf /Library/Caches/com.apple.iconservices.store'                                                                                                    # clean mac os x icon caches
 
   # Brew and Cask
   alias cask2upgrade='brewcasklist.sh |awk -v RS="" '"'"'{ if ($3 != $6) print $2,"needs to be upgradedd" }'"'"
+  alias upgradecask='for x in `cask2upgrade |cut -f 1 -d ":"`; do brew cask uninstall $x; brew cask install $x; done'
 
   # Chrome
   alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'
