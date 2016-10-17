@@ -1587,10 +1587,12 @@
 	<string>3649 669 445 129 2560 0 2560 1440 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>2829 139 606 456 2560 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>217 453 1018 447 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>29 291 850 609 0 0 1440 900 </string>
+	<string>425 517 1200 609 0 0 1920 1200 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -4217,6 +4219,10 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
+	<integer>1</integer>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -4392,7 +4398,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-05T01:25:56Z</date>
+	<date>2016-10-13T22:54:21Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -4422,6 +4428,7 @@
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Notes</string>
+		<string>Recent Directories</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
@@ -4453,7 +4460,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.8</string>
+	<string>3.0.10</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

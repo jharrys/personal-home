@@ -243,11 +243,6 @@ function _darwin_aliases() {
   alias cafs='caffeinate -s'                                                                                                                                    # caffeinate -s keeps system alive when on AC
   alias cafpid='caffeinate -w'                                                                                                                                  # caffeinate -w expects a PID and stays alive until PID exits
 
-  # MacVim Editor
-  alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'                                                                                                   # MacVim
-  alias gvimt='/Applications/MacVim.app/Contents/MacOS/Vim -g --remote-tab-silent'                                                                              # MacVim open in existing instance as a tab
-  alias gvim-diff='/Applications/MacVim.app/Contents/MacOS/Vim -g -d'                                                                                           # MacVim in diff mode like vimdiff
-
   # Virtual Box applications
   export DEFAULTVM="Fedora 13"                                                                                                                                  # Set the default VM to work against
   alias v='VBoxManage --nologo'
