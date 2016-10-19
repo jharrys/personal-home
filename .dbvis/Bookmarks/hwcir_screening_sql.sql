@@ -5,6 +5,7 @@ FROM
     HWCIR_SCREENING.SCR_USER
 WHERE
     SCR_USER.USER_NAME='${username}$';
+    
 /* Adding a new user to SCR */
 INSERT
 INTO
@@ -39,6 +40,7 @@ INTO
     NULL,
     '${username}$'
     );
+    
 /* Receive alerts; alert_method_id (1 for email, 2 for pager), evaluation_model_id get model and
 location_group_id */
 INSERT
@@ -74,6 +76,7 @@ INTO
     ${surveyid||(null)||BigDecimal}$,
     ${locationid||(null)||BigDecimal}$
     );
+
 /* Add user reviews of alerts; location_group_id, scr_user, survey_id (should match
 location_group_id choice) */
 INSERT
@@ -107,11 +110,13 @@ INTO
             user_name='${username}$' ),
     ${surveyid||(null)||BigDecimal}$
     );
-/* delete user */
+
+/* delete user and dependencies (receiving alerts and reviewing alerts) by their ID in SCR_USER */
 delete from HWCIR_SCREENING.EVAL_MDL_ALRT_RECI where EVAL_MDL_ALRT_RECI.ALERT_RECIPIENT_ID=${userid||(null)||BigDecimal}$;
 delete from HWCIR_SCREENING.SURVEY_REVIEW_USER_LOC_GROUP where SURVEY_REVIEW_USER_LOC_GROUP.REVIEW_USER_ID=${userid||(null)||BigDecimal}$;
 delete from HWCIR_SCREENING.SCR_USER where SCR_USER.ID=${userid||(null)||BigDecimal}$;
-/* remove specific user from receiving any alerts */
+
+/* remove specific user from receiving any alerts by their LASTNAME in SCR_USER */
 delete from HWCIR_SCREENING.EVAL_MDL_ALRT_RECI where alert_recipient_id=(select id from scr_user where scr_user.LAST_NAME='${userlastname}$');
 
 /* Join query to identify data_drive_event data - use to smoke test and compare with production */
@@ -173,6 +178,7 @@ INSERT INTO EVAL_MDL_ALRT_RECI (ID, ALERT_METHOD_ID, ALERT_RECIPIENT_ID, EVALUAT
 INSERT INTO EVAL_MDL_ALRT_RECI (ID, ALERT_METHOD_ID, ALERT_RECIPIENT_ID, EVALUATION_MODEL_ID, LOCATION_GROUP_ID) VALUES (hibernate_sequence.nextval, 1, ${userid}$, 7, 35);
 INSERT INTO EVAL_MDL_ALRT_RECI (ID, ALERT_METHOD_ID, ALERT_RECIPIENT_ID, EVALUATION_MODEL_ID, LOCATION_GROUP_ID) VALUES (hibernate_sequence.nextval, 1, ${userid}$, 7, 36);
 INSERT INTO EVAL_MDL_ALRT_RECI (ID, ALERT_METHOD_ID, ALERT_RECIPIENT_ID, EVALUATION_MODEL_ID, LOCATION_GROUP_ID) VALUES (hibernate_sequence.nextval, 1, ${userid}$, 7, 37);
+
 /*
 ** Adding myself to all reviews
 */
