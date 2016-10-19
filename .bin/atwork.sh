@@ -1,5 +1,5 @@
 #!/bin/sh
-[ $# -lt 1 ] && echo "usage: $0 working|not-working" && return 1
+[ $# -lt 1 ] && echo "usage: $0 working|not-working" && exit 1
 
 if [ "$1" = "working" ]; then
   touch ~/.ssh/at-ihc-work
