@@ -288,12 +288,13 @@ function _darwin_aliases() {
   alias tagbins='tag -a "bin & libs"'
   alias untagbins='tag -r "bin & libs"'
 
-  # Sysadmin
-  alias diagnosisreport='sudo sysdiagnose -f ~lpjharri/Desktop'
-  alias infoaboutanymac='mactracker'
-  alias cleaniconcache='sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \; \
+  # Sysadmin - starts with sys_
+  alias sys_diagnosisreport='sudo sysdiagnose -f ~lpjharri/Desktop'
+  alias sys_infoaboutanymac='mactracker'
+  alias sys_cleaniconcache='sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \; \
   ;sudo find /private/var/folders -name com.apple.dock.iconcache -exec rm {} \; \
   ;sudo rm -rf /Library/Caches/com.apple.iconservices.store'                                                                                                    # clean mac os x icon caches
+  alias sys_resetdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;say DNScache flushed and reset'
 
   # Brew and Cask
   alias cask2upgrade='brewcasklist.sh |awk -v RS="" '"'"'{ if ($3 != $6) print $2,"needs to be upgradedd" }'"'"
