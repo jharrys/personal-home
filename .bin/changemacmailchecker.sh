@@ -4,7 +4,7 @@
 PROPERTY="include when getting new mail"
 
 if [ "$1" = "working" ]; then
-  osascript -e "tell application \"Mail\"" -e "set ${PROPERTY} of account \"Work\" to true" -e "set ${PROPERTY} of account \"HWCIR\" to true" -e "end tell"
+  osascript -e "tell application \"Mail\"" -e "set ${PROPERTY} of account \"Work\" to true" -e "set ${PROPERTY} of account \"HWCIR\" to true" -e "set ${PROPERTY} of account \"Johnnie\" to false" -e "end tell"
 else
-  osascript -e "tell application \"Mail\"" -e "set ${PROPERTY} of account \"Work\" to false" -e "set ${PROPERTY} of account \"HWCIR\" to false" -e "end tell"
+  osascript -e "tell application \"Mail\"" -e "set ${PROPERTY} of account \"Work\" to false" -e "set ${PROPERTY} of account \"HWCIR\" to false" -e "set ${PROPERTY} of account \"Johnnie\" to true" -e "end tell"
 fi
