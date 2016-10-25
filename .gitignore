@@ -142,7 +142,8 @@ tmux_resurrect*
 !Templates
 !.config/powerline
 !.aliases
-!configuration/dbvisualizer/settings.jar
+!.configuration/dbvisualizer/settings.jar
+!.configuration/intellij/settings.jar
 !.dbvis/Bookmarks/
 !.dbvis/Monitors/
 !.config/git
