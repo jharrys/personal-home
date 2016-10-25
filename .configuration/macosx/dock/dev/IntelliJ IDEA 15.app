@@ -1,1 +1,0 @@
-/Applications/IntelliJ IDEA 15.app
