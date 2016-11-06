@@ -1,4 +1,4 @@
-usage="usage:\t$0 list\n\t$0 set DOMAIN"
+usage="usage:\t$0 list\n\t$0 set DOMAIN\n\t$0 cd"
 [ $# -lt 1 ] && echo $usage && return 1
 
 DOMAIN_ROOT=/Users/lpjharri/local/wldomains
@@ -20,4 +20,8 @@ elif [ "$1" = "set" ]; then
   [ $# -lt 2 ] && echo "${red}currently set to:${reset} ${yellow}${DOMAIN_HOME}${reset}"  && return 1
   export DOMAIN_HOME=${DOMAIN_ROOT}/$2
   echo "${red}reset to:${reset} ${yellow}${DOMAIN_HOME}${reset}"
+
+elif [ "$1" = "cd" ]; then
+  cd $DOMAIN_HOME
+  pwd
 fi
