@@ -1590,9 +1590,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>2829 139 606 456 2560 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>217 453 1018 447 0 0 1440 900 </string>
+	<string>3154 967 796 473 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>425 517 1200 609 0 0 1920 1200 </string>
+	<string>285 240 850 609 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -4338,7 +4338,7 @@
 	<key>PasteFromClipboard</key>
 	<false/>
 	<key>PasteTabToStringTabStopSize</key>
-	<integer>4</integer>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -4398,7 +4398,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-10-13T22:54:21Z</date>
+	<date>2016-11-04T20:15:04Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -4460,7 +4460,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.10</string>
+	<string>3.0.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
