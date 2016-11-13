@@ -1,0 +1,19 @@
+# After running, this function will cd to the new directory
+
+# $1 = new branch name
+# $2 = new directory name (usually outside of the working repository)
+# $3 = branch to base new branch off of
+
+usage="usage:\t$0 new-branch-name new-directory-name existing-branch-name"
+[ $# -lt 3 ] && echo $usage && return 1
+
+git worktree add -b $1 $2 $3
+
+# cd to the new directory
+cd $2
+
+echo "\n\n"
+echo "When finished with this, move out of the directory and remove it to clean up."
+echo "Changed to current dir:"
+pwd
+
