@@ -58,8 +58,9 @@ setopt share_history
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Set mail notifier variables
-mailpath=(/var/mail/lpjharri'?New mail arrived!')
-export mailpath
+MAILCHECK=15
+mailpath=(/var/mail/lpjharri)
+export mailpath MAILCHECK
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
