@@ -1592,7 +1592,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>3154 967 796 473 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>285 240 850 609 0 0 1440 900 </string>
+	<string>68 123 850 753 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -4379,6 +4379,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/lpjharri/.configuration/macosx/iterm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -4398,7 +4400,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-04T20:15:04Z</date>
+	<date>2016-11-18T16:47:44Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
