@@ -73,7 +73,7 @@ plugins=(lol common-aliases git sudo mvn history brew extract python tmux osx zs
 # fix for atom not being able to download (redirect is not being followed)
 export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
 
-export PATH=$HOME/.bin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$HOME/.bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
