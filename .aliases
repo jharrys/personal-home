@@ -193,6 +193,7 @@ function _base_aliases() {
   alias mgrep='grep -RIl --exclude-dir target'                                                                                                                  # a maven grep for code (I skip binary files, l print file names) & exclude target dir
   alias mexec='echo mvn exec:java -Dexec.cleanupDaemonThreads=false -Dexec.mainClass='                                                                          # echoes the maven command for executing a java program
   alias mpurge='mvn dependency:purge-local-repository'                                                                                                          # need to be in the project you are working on; this will delete and redownload all deps from ~/.m2
+  alias hwdeployfile='mvn deploy:deploy-file -Durl=http://lpv-hwmaven01.co.ihc.com:8081/nexus/content/repositories/HWCIR -DrepositoryId=hwcir-nexus'            # deploy file to the hwcir nexus repo
   alias -g mdebug='-Dmaven.surefire.debug'                                                                                                                      # allows debugger to be attached; use mdebug anywhere inside the command line; so "mvn clean install mdebug" mdebug is replaced with debug
   alias -g mdg='-X'                                                                                                                                             # supplied anywhere on the command line for mvn starts mvn in with debug level logging
 
@@ -218,6 +219,10 @@ function _darwin_aliases() {
   # Run screen savers as wallpaper until Ctrl-C
   alias ssaswp='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'                  # make screensaver act as your wallpaper
 
+  # Speed up time machine - use carefully since it ignores processor priority
+  alias tmspeedup='sudo sysctl debug.lowpri_throttle_enabled=0'
+  alias tmnormal='sudo sysctl debug.lowpri_throttle_enabled=1'
+
   # Dock
   #alias insertSpacer='defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'
 
@@ -235,9 +240,6 @@ function _darwin_aliases() {
   # General system aliases
   alias showall='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
   alias hideall='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
-
-  # Text editor
-  alias text='open /Applications/Atom.app'
 
   # Caffeinate - an internal MacOS utility to keep the system from sleeping
   # all aliases accept '-t seconds' for timeout value
