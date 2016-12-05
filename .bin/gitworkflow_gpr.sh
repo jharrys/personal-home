@@ -87,11 +87,12 @@ function request_cleanup() {
 
 # trap signals
 trap "cleanup ABRT" ABRT
-#trap "cleanup EXIT" EXIT
 trap "cleanup HUP" HUP
 trap "cleanup INT" INT
 trap "cleanup QUIT" QUIT
 trap "cleanup TERM" TERM
+
+trap '[ "$?" -eq 0 ] || cleanup' EXIT
 
 ##################################################
 # main work starts here
@@ -140,7 +141,8 @@ fi
 cd ${TEMP_AREA}
 
 echo "----------------------------------------------"
-echo "Temp worktree setup, now in ${TEMP_AREA}"
+echo "Temp worktree setup."
+echo "Worktree created in ${TEMP_AREA}"
 echo "----------------------------------------------"
 
 ##################################################
@@ -164,7 +166,7 @@ git checkout ${TMP_BRANCH_NAME} &>/dev/null
 git branch -D zzz &>/dev/null
 
 echo "----------------------------------------------"
-echo "Merge succeeded - see ${MERGE_OUTPUT_FILE}
+echo "Merge succeeded - see ${MERGE_OUTPUT_FILE}"
 echo "----------------------------------------------"
 
 ##################################################
