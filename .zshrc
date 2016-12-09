@@ -238,8 +238,11 @@ MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
 MAVEN_OPTS="-Xmx1024m"
 export MAVEN_HOME MAVEN_OPTS
 
+# Tomcat app server
+CATALINA_HOME=/usr/local/Cellar/tomcat/8.5.8
+
 # My Path statement
-PATH=~/.bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/Applications/subit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$PATH
+PATH=~/.bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/Applications/subit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$CATALINA_HOME/bin:$PATH
 export PATH
 
 # Run powerline for zsh - powerline is installed as 'pip install --user powerline-status'
