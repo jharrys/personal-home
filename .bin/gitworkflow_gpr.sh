@@ -4,22 +4,43 @@
 # author:       j. harris
 # created:      2016-12-2
 #
+# EXIT CODES
+# 4 - maven compile or test failures (see output for detals)
+# 3 - git merge failure (see output for details)
+# 2 = git worktree add failure
+# 1 = git fetch failure (fetching the pull request)
+# 127 = cleanup of the $TEMP_AREA failed
+#
 # the full git pull request
 ##################################################
 
 if [ $# -lt 1 ];
 then
-    echo "usage: $0 pull-request-number"
-    exit 1
+  echo 'usage: $0 pull-request-number
+
+  EXIT CODES:
+  127 = error cleaning the temp area
+  126 = this usage help screen
+  4 = maven errors with compilation or test failures
+  3 = git merge error (see output for details)
+  2 = git worktree add error
+  1 = git error fetching pull request
+  '
+  exit 126
 fi
 
 ##################################################
 # setup script variables
 ##################################################
 
+# 4=mvn error;3=git merge error;2=git worktree error;1=git fetch error
+EXIT_CONDITION=0
+
+# 1=YES;0=NO
+CLEANUP=1
+
 ORIGINAL_DIR=$(pwd)
 SCRIPT_NAME=$(basename $0)
-echo $SCRIPT_NAME
 PROJECT_NAME=$(basename $ORIGINAL_DIR)
 WORK_DIR=/tmp
 TEMP_AREA=${WORK_DIR}/${PROJECT_NAME}
@@ -35,11 +56,11 @@ MERGE_OUTPUT_FILE=${WORK_DIR}/${SCRIPT_NAME%%.*}-merge-output.${DATE}
 
 if [ -e ${TEMP_AREA} ];
 then
-    echo "\n"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    echo "${TEMP_AREA} already exists, cannot continue until it is cleaned up."
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    exit 1
+  echo "\n"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  echo "${TEMP_AREA} already exists, cannot continue until it is cleaned up."
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  exit 1
 fi
 
 ##################################################
@@ -47,38 +68,47 @@ fi
 ##################################################
 
 function cleanup() {
+
+  trap 'exit ${RC}' EXIT
+
+  if [ ${CLEANUP} -eq 1 ]; then
     cd $ORIGINAL_DIR
-    
+
     if [ "${TEMP_AREA}" == "/tmp/" ];
     then
-        echo "\n"
-        echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-        echo "Unable to clean up tmp area"
-        echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-        return 127
+      echo "\n"
+      echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+      echo "Unable to clean up tmp area"
+      echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+      return 127
     fi
-    
+
     rm -rf ${TEMP_AREA}
-    
+
     git worktree prune &>/dev/null
-    
+
     git branch -D ${TMP_BRANCH_NAME} &>/dev/null
-    
+
     echo "Removed ${TEMP_AREA} and git branch ${TMP_BRANCH_NAME}"
+  else
+    echo "\n"
+    echo "Did not clean up. When done remember to:"
+    echo "rm -rf ${TEMP_AREA}; git worktree prune; git branch -D ${TMP_BRANCH_NAME}"
+  fi
 }
 
 function request_cleanup() {
-    echo "Do you want to cleanup?"
-    read -s -n 1 answer
-    
-    if [ "${answer}" == "Y" -o "${answer}" == "y" ];
-    then
-        cleanup
-    else
-        echo "\n"
-        echo "Did not clean up. When done remember to:"
-        echo "rm -rf ${TEMP_AREA}; git worktree prune; git branch -D ${TMP_BRANCH_NAME}"
-    fi
+  echo "Do you want to cleanup?"
+  read -s -n 1 answer
+
+  if [ "${answer}" == "Y" -o "${answer}" == "y" ];
+  then
+    CLEANUP=1
+  else
+    CLEANUP=0
+  fi
+
+  cleanup
 }
 
 ##################################################
@@ -92,7 +122,7 @@ trap "cleanup INT" INT
 trap "cleanup QUIT" QUIT
 trap "cleanup TERM" TERM
 
-trap '[ "$?" -eq 0 ] || cleanup' EXIT
+trap 'RC=$?;request_cleanup' EXIT
 
 ##################################################
 # main work starts here
@@ -109,13 +139,16 @@ echo "----------------------------------------------"
 
 git fetch origin refs/pull-requests/${PULL_REQUEST_NUMBER}/from:${TMP_BRANCH_NAME} &>/dev/null
 
-if [ $? -gt 0 ];
+EXIT_CONDITION=$?
+
+if [ ${EXIT_CONDITION} -gt 0 ];
 then
-    echo "\n"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    echo "FAILED: to checkout ${PULL_REQUEST_NUMBER} into the local branch ${TMP_BRANCH_NAME}"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    exit 1
+  echo "\n"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  echo "FAILED: to checkout ${PULL_REQUEST_NUMBER} into the local branch ${TMP_BRANCH_NAME}"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+  exit 1
 fi
 
 echo "----------------------------------------------"
@@ -128,14 +161,16 @@ echo "----------------------------------------------"
 
 git worktree add $TEMP_AREA ${TMP_BRANCH_NAME} &>/dev/null
 
-if [ $? -gt 0 ];
-then
-    echo "\n"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    echo "FAILED: setting up the work tree in ${TEMP_AREA} for pull request ${PULL_REQUEST_NUMBER}"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+EXIT_CONDITION=$?
 
-    exit 1
+if [ ${EXIT_CONDITION} -gt 0 ];
+then
+  echo "\n"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  echo "FAILED: setting up the work tree in ${TEMP_AREA} for pull request ${PULL_REQUEST_NUMBER}"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+  exit 2
 fi
 
 cd ${TEMP_AREA}
@@ -152,14 +187,16 @@ echo "----------------------------------------------"
 git checkout -b zzz master &>/dev/null
 git merge ${TMP_BRANCH_NAME} &>${MERGE_OUTPUT_FILE}
 
-if [ $? -gt 0 ];
+EXIT_CONDITION=$?
+
+if [ ${EXIT_CONDITION} -gt 0 ];
 then
-    echo "\n"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    echo "MERGE FAILURE: read ${MERGE_OUTPUT_FILE}"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    cleanup
-    exit 2
+  echo "\n"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  echo "MERGE FAILURE: read ${MERGE_OUTPUT_FILE}"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+  exit 3
 fi
 
 git checkout ${TMP_BRANCH_NAME} &>/dev/null
@@ -178,27 +215,27 @@ echo "Please wait as we compile and test the merged code ..."
 
 mvn clean package javadoc:aggregate test -Dtest=\*Integ,\*Test &>${MAVEN_OUTPUT_FILE}
 
-if [ $? -gt 0 ];
+EXIT_CONDITION=$?
+
+if [ ${EXIT_CONDITION} -gt 0 ];
 then
-    echo "\n"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    echo "              FAILURE with compilation or tests"
-    echo "              dsee ${MAVEN_OUTPUT_FILE}"
-    echo ""
-    echo "rerun: mvn clean package javadoc:aggregate test -Dtest=\*Integ,\*Test"
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    echo "\n"
-    
-    request_cleanup
-    
-    exit 3
+  echo "\n"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  echo "              FAILURE with compilation or tests"
+  echo "              see ${MAVEN_OUTPUT_FILE}"
+  echo ""
+  echo "rerun: mvn clean package javadoc:aggregate test -Dtest=\*Integ,\*Test"
+  echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  echo "\n"
+
+  exit 4
 fi
 
 echo "\n"
 echo "___---___---___---___---___---___---___---___---___---"
-echo "              EVERYTHING PASSED!!!"
-echo "              see ${MAVEN_OUTPUT_FILE}"
+echo "  EVERYTHING PASSED!!!"
+echo "  see ${MAVEN_OUTPUT_FILE}"
 echo "___---___---___---___---___---___---___---___---___---"
 echo "\n"
 
-request_cleanup
+exit 0
