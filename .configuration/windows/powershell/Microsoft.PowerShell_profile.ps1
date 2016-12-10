@@ -41,7 +41,7 @@ Foreach-Object {
  Set-Alias -name ( $_.name -replace "-","") -value $_.name -description MrEd_Alias
 } #end Get-Command
 
-New-Alias -name p -value Get-Profile -description "Open my powershell profile in Sublime"
+New-Alias -name p -value Get-Profile -description "Open my powershell profile in brackets"
 New-Alias -name slog -value Start-Transcript -description "Start logging my powershell commands"
 New-Alias -name plog -value Stop-Transcript -description "Stop logging my powershell commands"
 New-Alias -name grep -value Select-String -description "grep for string"
@@ -55,9 +55,10 @@ New-Alias -name jcp -value Do-Checkpoint -description "Create a Windows 7 Restor
 New-Alias -name lcp -value Get-ComputerRestorePoint -description "List the Windows 7 Restore Points"
 
 # *** PS Drive ***
-New-PSDrive -PSProvider filesystem -Root ${env:programw6432}\Oracle\VirtualBox -Name VBox | Out-Null
-New-PSDrive -PSProvider filesystem -Root S:\LP\User\lpjharri -Name shome | Out-Null
-New-PSDrive -PSProvider filesystem -Root E:\ -Name papps | Out-Null
+#New-PSDrive -PSProvider filesystem -Root ${env:programw6432}\Oracle\VirtualBox -Name VBox | Out-Null
+#New-PSDrive -PSProvider filesystem -Root E:\ -Name papps | Out-Null
+New-PSDrive -PSProvider filesystem -Root X:\ -Name shome | Out-Null
+New-PSDrive -PSProvider filesystem -Root C:\Users\lpjharri -Name home | Out-Null
 
 # *** Function ***
 
@@ -66,11 +67,13 @@ Function Do-Checkpoint([String] $Description="John Checkpoint")
 	Checkpoint-Computer -Description $Description
 }
 
+<# - No longer using portable apps
 Function Start-PortableApps
 {
 	cd papps:
 	.\Start.exe
 }
+#>
 
 Function Show-VBoxMachine
 {
@@ -120,15 +123,18 @@ Function Tips
 	Write-Host 'You can send email to. Use Send-MailMessage'
 }
 
-Function emailme([string] $To = "john.harris@imail.org", [string] $Subject = "From Powershell 3.0 cmdlet", [string] $Body = "Forgot to include body to the email", [string] $Attachment = $null)
+<#
+    The -Attachment parameter expects a string that is the /path/to/file
+#>
+Function emailme([string] $To = "johnnie.harris@imail.org", [string] $Subject = "From Powershell 3.0 cmdlet", [string] $Body = "Forgot to include body to the email", [string] $Attachment = $null)
 {
 
 	Process {
 		$Attachment = $_
 		if(($Attachment -eq $null) -or ($Attachment -eq "")) {
-			Send-MailMessage -To $To -SmtpServer "smtp.co.ihc.com" -Port 25 -From "john.harris@imail.org" -Subject $Subject -Body $Body
+			Send-MailMessage -To $To -SmtpServer "smtp.co.ihc.com" -Port 25 -From "johnnie.harris@imail.org" -Subject $Subject -Body $Body
 		} else {
-			Send-MailMessage -To $To -SmtpServer "smtp.co.ihc.com" -Port 25 -From "john.harris@imail.org" -Subject $Subject -Body $Body -Attachment $Attachment
+			Send-MailMessage -To $To -SmtpServer "smtp.co.ihc.com" -Port 25 -From "johnnie.harris@imail.org" -Subject $Subject -Body $Body -Attachment $Attachment
 		}
 	}
 }
@@ -162,7 +168,7 @@ Function Play-SystemSounds
 
 Function Get-Profile
 {
-	sublime_text $profile
+	brackets $profile
 }	# end function get-profile
 
 Function Get-CmdletsWithMoreThanOneAlias
@@ -186,3 +192,23 @@ Function FormatDriveAndCopyFiles([string] $source, [string] $driveletter, [strin
 	robocopy "$source" "${driveletter}:" /S
 	[media.SystemSounds]::("Hand").play()
 }
+
+function isadmin
+ {
+   # Returns true/false
+   ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
+ }
+ 
+ function elevate-me
+ {
+    if (-NOT (isadmin)) {
+        Start-Process powershell.exe -Verb runAs
+    } else {
+        Write-Host "Already elevated."
+    }
+ }
+ 
+ function setproxy
+ {
+    [System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials
+ }

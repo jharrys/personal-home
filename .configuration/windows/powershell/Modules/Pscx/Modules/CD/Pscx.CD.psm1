@@ -12,8 +12,17 @@ Set-StrictMode -Version Latest
 $backwardStack = new-object System.Collections.ArrayList
 $forewardStack = new-object System.Collections.ArrayList
 
+# When the module removed, set the cd alias back to something reasonable.
+# We could use the original cd alias but most of the time it's going to be set to Set-Location.
+# And you may have loaded another module in between stashing the "original" cd alias that
+# modifies the cd alias.  So setting it back to the "original" may not be the right thing to
+# do anyway.
+$ExecutionContext.SessionState.Module.OnRemove = {
+    Set-Alias cd Set-Location -Scope Global -Option AllScope -Force
+}.GetNewClosure()
+
 # We are going to replace the PowerShell default "cd" alias with the CD function defined below.
-Set-Alias cd Set-LocationEx -Force -Scope Global -Option AllScope -Description "PSCX alias"
+Set-Alias cd Pscx\Set-LocationEx -Force -Scope Global -Option AllScope -Description "PSCX alias"
 
 <#
 .SYNOPSIS
@@ -93,24 +102,24 @@ function Set-LocationEx
     
     Begin 
     {
-		Set-StrictMode -Version Latest
-		
-		# String resources
-		Import-LocalizedData -BindingVariable msgTbl -FileName Messages
-		              
+        Set-StrictMode -Version Latest
+        
+        # String resources
+        Import-LocalizedData -BindingVariable msgTbl -FileName Messages
+                      
         function SetLocationImpl($path, [switch]$IsLiteralPath)
         {
-			if ($pscmdlet.ParameterSetName -eq 'LiteralPath' -or $IsLiteralPath)
-			{
-				Write-Debug   "Setting location to literal path: '$path'"
-				Set-Location -LiteralPath $path -UseTransaction:$UseTransaction
-			}
-			else
-			{
-				Write-Debug   "Setting location to path: '$path'"
-				Set-Location $path -UseTransaction:$UseTransaction
-	        }
-	        
+            if ($pscmdlet.ParameterSetName -eq 'LiteralPath' -or $IsLiteralPath)
+            {
+                Write-Debug   "Setting location to literal path: '$path'"
+                Set-Location -LiteralPath $path -UseTransaction:$UseTransaction
+            }
+            else
+            {
+                Write-Debug   "Setting location to path: '$path'"
+                Set-Location $path -UseTransaction:$UseTransaction
+            }
+            
             if ($PassThru)
             {
                 Write-Output $ExecutionContext.SessionState.Path.CurrentLocation
@@ -118,39 +127,39 @@ function Set-LocationEx
             else
             {
                 # If not passing thru, then check for user options of other info to display.
-				if ($Pscx:Preferences['CD_GetChildItem'])
-				{
-					Get-ChildItem
-				} 
-				elseif ($Pscx:Preferences['CD_EchoNewLocation'])
-				{
-					Write-Host $ExecutionContext.SessionState.Path.CurrentLocation
-				}
+                if ($Pscx:Preferences['CD_GetChildItem'])
+                {
+                    Get-ChildItem
+                } 
+                elseif ($Pscx:Preferences['CD_EchoNewLocation'])
+                {
+                    Write-Host $ExecutionContext.SessionState.Path.CurrentLocation
+                }
             }
         }
     }
         
     Process 
     {
-		if ($pscmdlet.ParameterSetName -eq 'Path')
-		{
-			Write-Debug "Path parameter received: '$Path'"
-			$aPath = $Path
-		}
-		else
-		{
-			Write-Debug "LiteralPath parameter received: '$LiteralPath'"
-			$aPath = $LiteralPath
-		}
-		
-		if ($UnboundArguments -and $UnboundArguments.Count -gt 0)
-		{	
-			$OFS=','
-			Write-Debug "Appending unbound arguments to path: '$UnboundArguments'"
-			$aPath = $aPath + " " + ($UnboundArguments -join ' ')
-		}
-				
-		# If no input, dump contents of backward and foreward stacks
+        if ($pscmdlet.ParameterSetName -eq 'Path')
+        {
+            Write-Debug "Path parameter received: '$Path'"
+            $aPath = $Path
+        }
+        else
+        {
+            Write-Debug "LiteralPath parameter received: '$LiteralPath'"
+            $aPath = $LiteralPath
+        }
+        
+        if ($UnboundArguments -and $UnboundArguments.Count -gt 0)
+        {	
+            $OFS=','
+            Write-Debug "Appending unbound arguments to path: '$UnboundArguments'"
+            $aPath = $aPath + " " + ($UnboundArguments -join ' ')
+        }
+                
+        # If no input, dump contents of backward and foreward stacks
         if (!$aPath) 
         {
             # Command to dump the backward & foreward stacks
@@ -179,8 +188,8 @@ function Set-LocationEx
             return
         }
         
-		Write-Debug "Processing arg: '$aPath'"
-		
+        Write-Debug "Processing arg: '$aPath'"
+        
         $currentPathInfo = $ExecutionContext.SessionState.Path.CurrentLocation
         
         # Expand ..[.]+ out to ..\..[\..]+
@@ -203,7 +212,7 @@ function Set-LocationEx
             {        
                 $lastNdx = $backwardStack.Count - 1
                 $prevPath = $backwardStack[$lastNdx]
-				SetLocationImpl $prevPath -IsLiteralPath
+                SetLocationImpl $prevPath -IsLiteralPath
                 [void]$forewardStack.Insert(0, $currentPathInfo.Path)
                 $backwardStack.RemoveAt($lastNdx)
             }
@@ -217,7 +226,7 @@ function Set-LocationEx
             else 
             {
                 $nextPath = $forewardStack[0]
-				SetLocationImpl $nextPath -IsLiteralPath        
+                SetLocationImpl $nextPath -IsLiteralPath        
                 [void]$backwardStack.Add($currentPathInfo.Path)
                 $forewardStack.RemoveAt(0)
             }
@@ -234,7 +243,7 @@ function Set-LocationEx
             elseif ($num -lt $backstackSize) 
             {
                 $selectedPath = $backwardStack[$num]
-				SetLocationImpl $selectedPath -IsLiteralPath
+                SetLocationImpl $selectedPath -IsLiteralPath
                 [void]$forewardStack.Insert(0, $currentPathInfo.Path)
                 $backwardStack.RemoveAt($num)
                 
@@ -251,7 +260,7 @@ function Set-LocationEx
             {
                 [int]$ndx = $num - ($backstackSize + 1)
                 $selectedPath = $forewardStack[$ndx]
-				SetLocationImpl $selectedPath -IsLiteralPath
+                SetLocationImpl $selectedPath -IsLiteralPath
                 [void]$backwardStack.Add($currentPathInfo.Path)
                 $forewardStack.RemoveAt($ndx)
                 
@@ -270,16 +279,16 @@ function Set-LocationEx
         }
         else
         {
-			$driveName = ''
+            $driveName = ''
             if ($ExecutionContext.SessionState.Path.IsPSAbsolute($aPath, [ref]$driveName) -and
                 !(Test-Path -LiteralPath $aPath -PathType Container)) 
             {
                 # File or a non-existant path - handle the case of "cd $profile" when the profile script doesn't exist
                 $aPath = Split-Path $aPath -Parent
-				Write-Debug "Path is not a container, attempting to set location to parent: '$aPath'"
+                Write-Debug "Path is not a container, attempting to set location to parent: '$aPath'"
             }
 
-			SetLocationImpl $aPath                                  
+            SetLocationImpl $aPath                                  
                                    
             $forewardStack.Clear()
             
@@ -301,19 +310,19 @@ function Set-LocationEx
 # SIG # Begin signature block
 # MIIfUwYJKoZIhvcNAQcCoIIfRDCCH0ACAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUdUfEbSgG/6tvq62nplH1PCGc
-# UlSgghqFMIIGajCCBVKgAwIBAgIQBmQBRumA4A5goU2PREpZWDANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUUrHnN0NGkD/VLT5ejQcfLt9q
+# 2COgghqFMIIGajCCBVKgAwIBAgIQAwGaAjr/WLFr1tXq5hfwZjANBgkqhkiG9w0B
 # AQUFADBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYD
 # VQQLExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQDExhEaWdpQ2VydCBBc3N1cmVk
-# IElEIENBLTEwHhcNMTQwNTIwMDAwMDAwWhcNMTUwNjAzMDAwMDAwWjBHMQswCQYD
+# IElEIENBLTEwHhcNMTQxMDIyMDAwMDAwWhcNMjQxMDIyMDAwMDAwWjBHMQswCQYD
 # VQQGEwJVUzERMA8GA1UEChMIRGlnaUNlcnQxJTAjBgNVBAMTHERpZ2lDZXJ0IFRp
 # bWVzdGFtcCBSZXNwb25kZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
-# AQCpiRj2PPRxOH/sRrYt+MkDJSUJPTbcGk2M2As/ngcmXBWQ5G8amisbEZ6DdtNU
-# Byvkg0KmO23s8/OdbI9WmoGp2cCvETiimoDikBT8EZdCplCdLqmz4EhXLwRJGvXX
-# XSOboHcQ7HPFbxrtzdYTFFtV0PBBMEZIwC56AqrgDo4R/eMkyjA7+Zinu+AnqWkT
-# yNrOfjX84UX3fPJkFEhBmAMfzojKaB4Qj/GUodhsK/C9a5GFldk7hUyWkC/xLedY
-# AyOA1MzR6FqmUhoRrmNHWqqzPyJgUfb+0rmNBC0/tas1depk00z60EB1kgQmpcIv
-# LOHb68Fr75j00CQ1jx7AFBZBAgMBAAGjggM1MIIDMTAOBgNVHQ8BAf8EBAMCB4Aw
+# AQCjZF38fLPggjXg4PbGKuZJdTvMbuBTqZ8fZFnmfGt/a4ydVfiS457VWmNbAklQ
+# 2YPOb2bu3cuF6V+l+dSHdIhEOxnJ5fWRn8YUOawk6qhLLJGJzF4o9GS2ULf1ErNz
+# lgpno75hn67z/RJ4dQ6mWxT9RSOOhkRVfRiGBYxVh3lIRvfKDo2n3k5f4qi2LVkC
+# YYhhchhoubh87ubnNC8xd4EwH7s2AY3vJ+P3mvBMMWSN4+v6GYeofs/sjAw2W3rB
+# erh4x8kGLkYQyI3oBGDbvHN0+k7Y/qpA8bLOcEaD6dpAoVk62RUJV5lWMJPzyWHM
+# 0AjMa+xiQpGsAsDvpPCJEY93AgMBAAGjggM1MIIDMTAOBgNVHQ8BAf8EBAMCB4Aw
 # DAYDVR0TAQH/BAIwADAWBgNVHSUBAf8EDDAKBggrBgEFBQcDCDCCAb8GA1UdIASC
 # AbYwggGyMIIBoQYJYIZIAYb9bAcBMIIBkjAoBggrBgEFBQcCARYcaHR0cHM6Ly93
 # d3cuZGlnaWNlcnQuY29tL0NQUzCCAWQGCCsGAQUFBwICMIIBVh6CAVIAQQBuAHkA
@@ -325,18 +334,18 @@ function Set-LocationEx
 # bABpAHQAeQAgAGEAbgBkACAAYQByAGUAIABpAG4AYwBvAHIAcABvAHIAYQB0AGUA
 # ZAAgAGgAZQByAGUAaQBuACAAYgB5ACAAcgBlAGYAZQByAGUAbgBjAGUALjALBglg
 # hkgBhv1sAxUwHwYDVR0jBBgwFoAUFQASKxOYspkH7R7for5XDStnAs0wHQYDVR0O
-# BBYEFDT8D0Z+q7fZa134U3JF5gSR08L7MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6
+# BBYEFGFaTSS2STKdSip5GoNL9B6Jwcp9MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6
 # Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEuY3JsMDig
 # NqA0hjJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURD
 # QS0xLmNybDB3BggrBgEFBQcBAQRrMGkwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3Nw
 # LmRpZ2ljZXJ0LmNvbTBBBggrBgEFBQcwAoY1aHR0cDovL2NhY2VydHMuZGlnaWNl
 # cnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcnQwDQYJKoZIhvcNAQEFBQAD
-# ggEBABBAkLNxn/AeOwLcP7xMFecOORLAhkAWGqBlyJNbwwewpIhED5CUR141wwWy
-# /tidHtT0t37GByFeZg/lNbKkHwQqQjDmJ08nYjTAZpTCAi9HeSZKnUpcBLUESPMr
-# eUkaRxS8FuXHuGdQIL2sxLT9qyGALGCmG6t87wc8QO5pGE3WJ+I0WeEpQiOzPUOd
-# bh6XxN2C+PKhFPiN/GZ9ZOxANwEE3kxVTj/TIvhGzy5YwMuwpb7g5RuLSFyyEZEC
-# zLlc7P0edSX+fiUWuiwShB/b8Q75BFOy+E2cBkYzcXWGhuNUD9frs9VYrytah8Sg
-# MA0zxqbxML7V+381vsbij9kZ75QwggabMIIFg6ADAgECAhAK3lreshTkdg4UkQS9
+# ggEBAJ0lfhszTbImgVybhs4jIA+Ah+WI//+x1GosMe06FxlxF82pG7xaFjkAneNs
+# hORaQPveBgGMN/qbsZ0kfv4gpFetW7easGAm6mlXIV00Lx9xsIOUGQVrNZAQoHuX
+# x/Y/5+IRQaa9YtnwJz04HShvOlIJ8OxwYtNiS7Dgc6aSwNOOMdgv420XEwbu5AO2
+# FKvzj0OncZ0h3RTKFV2SQdr5D4HRmXQNJsQOfxu19aDxxncGKBXp2JPlVRbwuwqr
+# HNtcSCdmyKOLChzlldquxC5ZoGHd2vNtomHpigtt7BIYvfdVVEADkitrwlHCCkiv
+# sNRu4PQUCjob4489yq9qjXvc2EQwggabMIIFg6ADAgECAhAK3lreshTkdg4UkQS9
 # ucecMA0GCSqGSIb3DQEBBQUAMG8xCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdp
 # Q2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xLjAsBgNVBAMTJURp
 # Z2lDZXJ0IEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBLTEwHhcNMTMwOTEwMDAw
@@ -448,23 +457,23 @@ function Set-LocationEx
 # Z2ljZXJ0LmNvbTEuMCwGA1UEAxMlRGlnaUNlcnQgQXNzdXJlZCBJRCBDb2RlIFNp
 # Z25pbmcgQ0EtMQIQCt5a3rIU5HYOFJEEvbnHnDAJBgUrDgMCGgUAoHgwGAYKKwYB
 # BAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAc
-# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU/bnZ
-# bvX8bqs6EVlTQNePHG60v6cwDQYJKoZIhvcNAQEBBQAEggEAHevPOdfgopZQ07VI
-# ppsUsS9yvInea9ojNSMgmEAtAfm48JU57LGlxSEG8Q44YmNkzJdI2V0nyQxhSDK1
-# GM+GH1ZzhMAu68QBzrqO/WtckIwJYvZjxWbUC2XWSoaXb7M69c4hPyKpfwVASH6h
-# LIrjhpX+qe3mq/ldocb5FRCZNTcbcXJeRrRmiRkc/wbVTfWgNQ+IJxcaGYGz5B5J
-# wv03/aMScL7dbrrGVLLKNtHCgawUPoudhchjyKkezQYvu9BTo86qLdlKFdJn21u0
-# urBwLXJIcwYw+tHs9xK+lFH+NlZZKJWD0bONAIOBaLJ9Ou0lFeT2tj4FJzdaLJr/
-# CYgi/aGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYT
+# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQUzLSd
+# xReHT5ngbXxPNFrghYTpfgIwDQYJKoZIhvcNAQEBBQAEggEAdgPuwJcde2KI0EH1
+# Z7vmluXj9YSAl+ayMN41HKUQLdTRwbYrhY2nZaT3oSfIExyH4g8GRoe5f0d50bN8
+# 6xs/u67Vt3LpCGbQMKCPOWyEUkpS1ctXld+ZwP8s1yoMDtE5sVl8WNtWnABsb2Lc
+# bsspI2v0ggJUUS7w5ElfgIApnXCsAUjSlBwBhUnbA4FvIAHk/PrEeqWDmNLZMMlw
+# 0etAPok8y1p57B9D9+FJJpKtikAT98L3h4NBQxz22fwQkyCpvDQGz4uOOY/XiBbn
+# Iyn9r7NqxY2kgjEAd3FbHg34LQ0ntwOGaj6y3a8WU4rUbpHX4nIebHvV7mK5j77r
+# R+OWtqGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYT
 # AlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2Vy
-# dC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQBmQBRumA
-# 4A5goU2PREpZWDAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
-# ATAcBgkqhkiG9w0BCQUxDxcNMTQxMDI0MDEzMjU2WjAjBgkqhkiG9w0BCQQxFgQU
-# EzHMKOxf5W3CUT5Ogs3ITf/8+yEwDQYJKoZIhvcNAQEBBQAEggEAIEMr88i2Oibl
-# iE2o6BIGrV4TBsw/Mzn/dWZYmKCHb3uAIWbXKWte/bEiUnpxuCBvWYy1a9GK5pF4
-# HJlwBW/XgtMvV5vuyUviFSafSiJBdvEdN8C4QjnOuCLzEb1ATTxE2Isch/kvh2ZW
-# PYb7IdOCkslwvROdoi6x/M0EcajMJfELySgzgpxT64ZjjaRgW1kXgJNaECXdQ93m
-# srzPRVLBGDkdB8yVHJkXTb7/FWicq7CHc/PC1dCuap4Hg0qxGyn47a4a3/IxSBsZ
-# 1zG7UAAbfyxKBYyG4l47e80td3EZOuPnCT+VOgmq3UGwxLBiMnjNa1znKRFlFP1k
-# mxCYLldP1Q==
+# dC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQAwGaAjr/
+# WLFr1tXq5hfwZjAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
+# ATAcBgkqhkiG9w0BCQUxDxcNMTYwNjMwMDM1OTEyWjAjBgkqhkiG9w0BCQQxFgQU
+# X9eyAACFJjuNZfAB8SvXuOp5f2EwDQYJKoZIhvcNAQEBBQAEggEAYCCSVIVk4DjG
+# dfxGjjz0KHLcCyRGX+XurVPJF7iYahjHQ53fcwo6UeIPOH4eYEcm1JhUUA2Iu9nw
+# IZp37MBIPZVac5hj59n+G6rVyCsxbODAMzP/Q6z00xSmUuOjwPFYXMnE9I4E/Lpz
+# qKjjQJ/f/5H4egcThnyNtakERMLufVtVVudnZ2aUI9/c6GzQgkNCzfdHEvnS5lGe
+# HIkwxNmluudR5pExddkiahXJPwisOgeP59HJbP3ztCvgVRtxA66qBY9H0wI60TvK
+# 7MoWa7dl011GREbVPceRQALwHxnkrgJZHyem6xqUAfCpvMJ28HfLILw7gb1mbVz/
+# Pp74S92JeQ==
 # SIG # End signature block

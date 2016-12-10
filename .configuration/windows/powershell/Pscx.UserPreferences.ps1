@@ -22,7 +22,7 @@
     CD_EchoNewLocation = $false       # Display new provider location after using cd (Set-LocationEx).
                                       # Mutually exclusive with CD_GetChildItem.
 
-    TextEditor = 'atom'        # Default text editor used by the Edit-File function
+    TextEditor = 'brackets'           # Default text editor used by the Edit-File function
 
     PromptTheme = 'Modern'            # Prompt string and window title updates.  To enable, first
                                       # set the ModulesToImport setting for Prompt below to $true.

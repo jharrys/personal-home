@@ -1,5 +1,5 @@
 ﻿TOPIC
-    PowerShell Community Extensions (version 3.2.0.0)
+    PowerShell Community Extensions (version 3.2.2)
 
 SHORT DESCRIPTION
     Describes the Windows PowerShell Community Extensions (PSCX) module and 
@@ -14,7 +14,7 @@ LONG DESCRIPTION
     create some of those cmdlets and make them available to the community.
         
 POWERSHELL COMPATIBILITY
-    PSCX 3.2 is compiled against .NET 4.0 and consequently works only in 
+    PSCX 3.x is compiled against .NET 4 and consequently works only in 
     Windows PowerShell 3.0 and above. If you need Windows PowerShell 2.0 
     support, download PSCX 2.1.  If you need Windows PowerShell 1.0 support, 
     download PSCX 1.2.
@@ -44,7 +44,7 @@ PREFERENCE VARIABLES
                                    # Mutually exclusive with 
                                    # CD_EchoNewLocation.
                                    
-    CD_EchoNewLocation = $true     # Display new provider location after using 
+    CD_EchoNewLocation = $false    # Display new provider location after using 
                                    # cd (Set-LocationEx).
                                    # Mutually exclusive with CD_GetChildItem.
     
@@ -218,7 +218,7 @@ CMDLETS
         pattern like '(?=\r$)'. 
         
     Get-FileTail
-        This implentation efficiently tails the cotents of a file by reading 
+        This implentation efficiently tails the contents of a file by reading 
         lines from the end rather then processing the entire file. This behavior 
         is crucial for efficiently tailing large log files and large log files 
         over a network. You can also specify the Wait parameter to have the 
@@ -488,21 +488,10 @@ FUNCTIONS
     Get-Command -Module Pscx* -CommandType Function
     The current PSCX functions are listed below:
 
-    Add-DirectoryLength
-        Calculates the sizes of the specified directory and adds that size as a 
-        "Length" NoteProperty to the input DirectoryInfo object. 
-        
-    Add-ShortPath
-        Adds the file or directory's short path as a "ShortPath" NoteProperty to 
-        each input object. 
-        
-    Dismount-VHD
-        Dismounts a Virtual Hard Drive (VHD) file. 
-        
-    Edit-HostProfile (ehp)
+    Edit-HostProfile
         Opens the current user's profile for the current host in a text editor. 
         
-    Edit-Profile (ep)
+    Edit-Profile
         Opens the current user's "all hosts" profile in a text editor. 
         
     Enable-OpenPowerShellHere
@@ -516,7 +505,7 @@ FUNCTIONS
     Get-Help
         Displays information about Windows PowerShell commands and concepts. 
         
-    Get-Parameter (gpar)
+    Get-Parameter
         Enumerates the parameters of one or more commands. 
         
     Get-ScreenCss
@@ -535,56 +524,53 @@ FUNCTIONS
         Invokes the specified batch file and retains any environment variable 
         changes it makes. 
         
-    Invoke-Elevated (su)
+    Invoke-Elevated
         Runs the specified command in an elevated context. 
         
-    Invoke-GC (igc)
+    Invoke-GC
         Invokes the .NET garbage collector to clean up garbage objects. 
         
-    Invoke-Method (call)
+    Invoke-Method
         Function to call a single method on an incoming stream of piped objects. 
         
-    Invoke-NullCoalescing (??)
+    Invoke-NullCoalescing
         Similar to the C# ?? operator e.g. name = value ?? String.Empty 
         
-    Invoke-Ternary (?:)
+    Invoke-Ternary
         Similar to the C# ? : operator e.g. name = (value != null) ? String.Empty 
         : value 
         
     less
         Less provides better paging of output from cmdlets. 
         
-    Mount-VHD
-        Mounts a Virtual Hard Drive (VHD) file. 
-        
     Out-Speech
         Outputs text as spoken words. 
         
-    QuoteList (ql)
+    QuoteList
         Convenience function for creating an array of strings without requiring 
         quotes or commas. 
         
-    QuoteString (qs)
+    QuoteString
         Creates a string from each parameter by concatenating each item using 
         $OFS as the separator. 
         
-    Resolve-ErrorRecord (rver)
+    Resolve-ErrorRecord
         Resolves the PowerShell error code to a textual description of the error. 
         
-    Resolve-HResult (rvhr)
+    Resolve-HResult
         Resolves the hresult error code to a textual description of the error. 
         
-    Resolve-WindowsError (rvwer)
+    Resolve-WindowsError
         Resolves a Windows error number a textual description of the error. 
         
-    Set-LocationEx (cd)
+    Set-LocationEx
         CD function that tracks location history allowing easy navigation to 
         previous locations. 
         
-    Set-ReadOnly (sro)
+    Set-ReadOnly
         Sets a file's read only status to true making it read only. 
         
-    Set-Writable (swr)
+    Set-Writable
         Sets a file's read only status to false making it writable. 
         
     Show-Tree
@@ -601,35 +587,35 @@ PSCX ALIASES
     Get-Command -Module Pscx* -CommandType Alias
     The current PSCX defined aliases are listed below:
 
-    ?:            : alias for Invoke-Ternary function
-    ??            : alias for Invoke-NullCoalescing function
-    call          : alias for Invoke-Method function
-    cvxml         : alias for Convert-Xml cmdlet
-    e             : alias for Edit-File cmdlet
-    ehp           : alias for Edit-HostProfile function
-    ep            : alias for Edit-Profile function
-    fhex          : alias for Format-Hex cmdlet
-    fxml          : alias for Format-Xml cmdlet
-    gcb           : alias for Get-Clipboard cmdlet
-    gpar          : alias for Get-Parameter function
-    gtn           : alias for Get-TypeName cmdlet
-    igc           : alias for Invoke-GC function
-    ln            : alias for New-HardLink cmdlet
-    lorem         : alias for Get-LoremIpsum cmdlet
-    nho           : alias for New-HashObject filter
-    ocb           : alias for Out-Clipboard cmdlet
-    ql            : alias for QuoteList function
-    qs            : alias for QuoteString function
-    Resize-Bitmap : alias for Set-BitmapSize cmdlet
-    rver          : alias for Resolve-ErrorRecord function
-    rvhr          : alias for Resolve-HResult function
-    rvwer         : alias for Resolve-WindowsError function
-    skip          : alias for Skip-Object cmdlet
-    sro           : alias for Set-ReadOnly function
-    su            : alias for Invoke-Elevated function
-    swr           : alias for Set-Writable function
-    tail          : alias for Get-FileTail cmdlet
-    touch         : alias for Set-FileTime cmdlet
+    ?:            : alias for Pscx\Invoke-Ternary function
+    ??            : alias for Pscx\Invoke-NullCoalescing function
+    call          : alias for Pscx\Invoke-Method function
+    cvxml         : alias for Pscx\Convert-Xml cmdlet
+    e             : alias for Pscx\Edit-File cmdlet
+    ehp           : alias for Pscx\Edit-HostProfile function
+    ep            : alias for Pscx\Edit-Profile function
+    fhex          : alias for Pscx\Format-Hex cmdlet
+    fxml          : alias for Pscx\Format-Xml cmdlet
+    gcb           : alias for Pscx\Get-Clipboard cmdlet
+    gpar          : alias for Pscx\Get-Parameter function
+    gtn           : alias for Pscx\Get-TypeName cmdlet
+    igc           : alias for Pscx\Invoke-GC function
+    ln            : alias for Pscx\New-HardLink cmdlet
+    lorem         : alias for Pscx\Get-LoremIpsum cmdlet
+    nho           : alias for Pscx\New-HashObject filter
+    ocb           : alias for Pscx\Out-Clipboard cmdlet
+    ql            : alias for Pscx\QuoteList function
+    qs            : alias for Pscx\QuoteString function
+    Resize-Bitmap : alias for Pscx\Set-BitmapSize cmdlet
+    rver          : alias for Pscx\Resolve-ErrorRecord function
+    rvhr          : alias for Pscx\Resolve-HResult function
+    rvwer         : alias for Pscx\Resolve-WindowsError function
+    skip          : alias for Pscx\Skip-Object cmdlet
+    sro           : alias for Pscx\Set-ReadOnly function
+    su            : alias for Pscx\Invoke-Elevated function
+    swr           : alias for Pscx\Set-Writable function
+    tail          : alias for Pscx\Get-FileTail cmdlet
+    touch         : alias for Pscx\Set-FileTime cmdlet
 
 UTILITY APPLICATIONS
     Less-394
@@ -709,28 +695,12 @@ MISCELLANOUS FEATURES
     PS> Enable-OpenPowerShellHere
 
 FEEDBACK
-    Please submit any feedback, including defects and enhancement requests, 
-    to either the discussions forums at:
+    Please submit any feedback, including defects and enhancement requests at: 
 
-    http://pscx.codeplex.com/Thread/List.aspx
+    https://github.com/Pscx/Pscx/issues
 
-    or via the Issue Tracker at:
-
-    http://pscx.codeplex.com/WorkItem/List.aspx
-
-    We are also interested in suggestions you may have for cmdlets.  Over
-    time, we hope to be able to add some custom providers but that greatly
-    depends on recruiting some more developers for the PSCX project.
-
-CONTRIBUTING TO PSCX
-    If you are:
-    
-    A) A software developer with experience programming in C# 
-    B) Passionate about Windows PowerShell 
-    C) Interested in contributing your coding talents to the project, please
-       drop me an email at:
-    
-       r_keith_hill@hotmail.com.
+    We are also interested in suggestions you may have for generap purpose 
+	cmdlets.
 
 CREDITS
     This is a list of people and/or groups who have directly or indirectly

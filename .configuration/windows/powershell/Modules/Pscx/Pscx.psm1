@@ -119,20 +119,20 @@ if ($args.Length -gt 0)
 # -----------------------------------------------------------------------
 # Cmdlet aliases
 # -----------------------------------------------------------------------
-Set-Alias gtn   Get-TypeName    -Description "PSCX alias"
-Set-Alias fhex  Format-Hex      -Description "PSCX alias"
-Set-Alias cvxml Convert-Xml     -Description "PSCX alias"
-Set-Alias fxml  Format-Xml      -Description "PSCX alias"
-Set-Alias gcb   Get-Clipboard   -Description "PSCX alias"
-Set-Alias ocb   Out-Clipboard   -Description "PSCX alias"
-Set-Alias lorem Get-LoremIpsum  -Description "PSCX alias"
-Set-Alias ln    New-HardLink    -Description "PSCX alias"
-Set-Alias touch Set-FileTime    -Description "PSCX alias"
-Set-Alias tail  Get-FileTail    -Description "PSCX alias"
-Set-Alias skip  Skip-Object     -Description "PSCX alias"
+Set-Alias gtn   Pscx\Get-TypeName    -Description "PSCX alias"
+Set-Alias fhex  Pscx\Format-Hex      -Description "PSCX alias"
+Set-Alias cvxml Pscx\Convert-Xml     -Description "PSCX alias"
+Set-Alias fxml  Pscx\Format-Xml      -Description "PSCX alias"
+Set-Alias gcb   Pscx\Get-Clipboard   -Description "PSCX alias"
+Set-Alias ocb   Pscx\Out-Clipboard   -Description "PSCX alias"
+Set-Alias lorem Pscx\Get-LoremIpsum  -Description "PSCX alias"
+Set-Alias ln    Pscx\New-HardLink    -Description "PSCX alias"
+Set-Alias touch Pscx\Set-FileTime    -Description "PSCX alias"
+Set-Alias tail  Pscx\Get-FileTail    -Description "PSCX alias"
+Set-Alias skip  Pscx\Skip-Object     -Description "PSCX alias"
 
 # Compatibility alias
-Set-Alias Resize-Bitmap Set-BitmapSize -Description "PSCX alias"
+Set-Alias Resize-Bitmap Pscx\Set-BitmapSize -Description "PSCX alias"
 
 # -----------------------------------------------------------------------
 # Load nested modules selected by user
@@ -235,19 +235,19 @@ Export-ModuleMember -Alias * -Function * -Cmdlet *
 # SIG # Begin signature block
 # MIIfUwYJKoZIhvcNAQcCoIIfRDCCH0ACAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUpU+OtkLkOYMdSIWcu26Irybd
-# 8uSgghqFMIIGajCCBVKgAwIBAgIQBmQBRumA4A5goU2PREpZWDANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUwzUCw/QPMxUDXv+dsvH/IcEX
+# u0WgghqFMIIGajCCBVKgAwIBAgIQAwGaAjr/WLFr1tXq5hfwZjANBgkqhkiG9w0B
 # AQUFADBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYD
 # VQQLExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQDExhEaWdpQ2VydCBBc3N1cmVk
-# IElEIENBLTEwHhcNMTQwNTIwMDAwMDAwWhcNMTUwNjAzMDAwMDAwWjBHMQswCQYD
+# IElEIENBLTEwHhcNMTQxMDIyMDAwMDAwWhcNMjQxMDIyMDAwMDAwWjBHMQswCQYD
 # VQQGEwJVUzERMA8GA1UEChMIRGlnaUNlcnQxJTAjBgNVBAMTHERpZ2lDZXJ0IFRp
 # bWVzdGFtcCBSZXNwb25kZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
-# AQCpiRj2PPRxOH/sRrYt+MkDJSUJPTbcGk2M2As/ngcmXBWQ5G8amisbEZ6DdtNU
-# Byvkg0KmO23s8/OdbI9WmoGp2cCvETiimoDikBT8EZdCplCdLqmz4EhXLwRJGvXX
-# XSOboHcQ7HPFbxrtzdYTFFtV0PBBMEZIwC56AqrgDo4R/eMkyjA7+Zinu+AnqWkT
-# yNrOfjX84UX3fPJkFEhBmAMfzojKaB4Qj/GUodhsK/C9a5GFldk7hUyWkC/xLedY
-# AyOA1MzR6FqmUhoRrmNHWqqzPyJgUfb+0rmNBC0/tas1depk00z60EB1kgQmpcIv
-# LOHb68Fr75j00CQ1jx7AFBZBAgMBAAGjggM1MIIDMTAOBgNVHQ8BAf8EBAMCB4Aw
+# AQCjZF38fLPggjXg4PbGKuZJdTvMbuBTqZ8fZFnmfGt/a4ydVfiS457VWmNbAklQ
+# 2YPOb2bu3cuF6V+l+dSHdIhEOxnJ5fWRn8YUOawk6qhLLJGJzF4o9GS2ULf1ErNz
+# lgpno75hn67z/RJ4dQ6mWxT9RSOOhkRVfRiGBYxVh3lIRvfKDo2n3k5f4qi2LVkC
+# YYhhchhoubh87ubnNC8xd4EwH7s2AY3vJ+P3mvBMMWSN4+v6GYeofs/sjAw2W3rB
+# erh4x8kGLkYQyI3oBGDbvHN0+k7Y/qpA8bLOcEaD6dpAoVk62RUJV5lWMJPzyWHM
+# 0AjMa+xiQpGsAsDvpPCJEY93AgMBAAGjggM1MIIDMTAOBgNVHQ8BAf8EBAMCB4Aw
 # DAYDVR0TAQH/BAIwADAWBgNVHSUBAf8EDDAKBggrBgEFBQcDCDCCAb8GA1UdIASC
 # AbYwggGyMIIBoQYJYIZIAYb9bAcBMIIBkjAoBggrBgEFBQcCARYcaHR0cHM6Ly93
 # d3cuZGlnaWNlcnQuY29tL0NQUzCCAWQGCCsGAQUFBwICMIIBVh6CAVIAQQBuAHkA
@@ -259,18 +259,18 @@ Export-ModuleMember -Alias * -Function * -Cmdlet *
 # bABpAHQAeQAgAGEAbgBkACAAYQByAGUAIABpAG4AYwBvAHIAcABvAHIAYQB0AGUA
 # ZAAgAGgAZQByAGUAaQBuACAAYgB5ACAAcgBlAGYAZQByAGUAbgBjAGUALjALBglg
 # hkgBhv1sAxUwHwYDVR0jBBgwFoAUFQASKxOYspkH7R7for5XDStnAs0wHQYDVR0O
-# BBYEFDT8D0Z+q7fZa134U3JF5gSR08L7MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6
+# BBYEFGFaTSS2STKdSip5GoNL9B6Jwcp9MH0GA1UdHwR2MHQwOKA2oDSGMmh0dHA6
 # Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEuY3JsMDig
 # NqA0hjJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURD
 # QS0xLmNybDB3BggrBgEFBQcBAQRrMGkwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3Nw
 # LmRpZ2ljZXJ0LmNvbTBBBggrBgEFBQcwAoY1aHR0cDovL2NhY2VydHMuZGlnaWNl
 # cnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcnQwDQYJKoZIhvcNAQEFBQAD
-# ggEBABBAkLNxn/AeOwLcP7xMFecOORLAhkAWGqBlyJNbwwewpIhED5CUR141wwWy
-# /tidHtT0t37GByFeZg/lNbKkHwQqQjDmJ08nYjTAZpTCAi9HeSZKnUpcBLUESPMr
-# eUkaRxS8FuXHuGdQIL2sxLT9qyGALGCmG6t87wc8QO5pGE3WJ+I0WeEpQiOzPUOd
-# bh6XxN2C+PKhFPiN/GZ9ZOxANwEE3kxVTj/TIvhGzy5YwMuwpb7g5RuLSFyyEZEC
-# zLlc7P0edSX+fiUWuiwShB/b8Q75BFOy+E2cBkYzcXWGhuNUD9frs9VYrytah8Sg
-# MA0zxqbxML7V+381vsbij9kZ75QwggabMIIFg6ADAgECAhAK3lreshTkdg4UkQS9
+# ggEBAJ0lfhszTbImgVybhs4jIA+Ah+WI//+x1GosMe06FxlxF82pG7xaFjkAneNs
+# hORaQPveBgGMN/qbsZ0kfv4gpFetW7easGAm6mlXIV00Lx9xsIOUGQVrNZAQoHuX
+# x/Y/5+IRQaa9YtnwJz04HShvOlIJ8OxwYtNiS7Dgc6aSwNOOMdgv420XEwbu5AO2
+# FKvzj0OncZ0h3RTKFV2SQdr5D4HRmXQNJsQOfxu19aDxxncGKBXp2JPlVRbwuwqr
+# HNtcSCdmyKOLChzlldquxC5ZoGHd2vNtomHpigtt7BIYvfdVVEADkitrwlHCCkiv
+# sNRu4PQUCjob4489yq9qjXvc2EQwggabMIIFg6ADAgECAhAK3lreshTkdg4UkQS9
 # ucecMA0GCSqGSIb3DQEBBQUAMG8xCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdp
 # Q2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xLjAsBgNVBAMTJURp
 # Z2lDZXJ0IEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBLTEwHhcNMTMwOTEwMDAw
@@ -382,23 +382,23 @@ Export-ModuleMember -Alias * -Function * -Cmdlet *
 # Z2ljZXJ0LmNvbTEuMCwGA1UEAxMlRGlnaUNlcnQgQXNzdXJlZCBJRCBDb2RlIFNp
 # Z25pbmcgQ0EtMQIQCt5a3rIU5HYOFJEEvbnHnDAJBgUrDgMCGgUAoHgwGAYKKwYB
 # BAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAc
-# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU8GEI
-# DWrKa6ZAu2PBB7cPgLenfZowDQYJKoZIhvcNAQEBBQAEggEAUGX7WWN8yvGkuMtc
-# RksMoEphjmFmnWwN6WwOh5bIya9kvre0og5jsUMXc8kznbLI19EGvcl2capjOnCk
-# hZ9ezpkFRFN9bWflyYKGCjAcv816SQPn9kz3I0kdjMrkpMPhN2ltqgdL8Lj0ITRW
-# xikynFqw3wPZ/GTuy7i6cp4f85NHPSVs98BxpKaO/ZoQc3GcaMEUEwW5DmzM3liU
-# 89FuiZIqZ2PLIW+XTr8uGmxwbaHilT8fejCMD4TuhCQTkmhalsD2dDxivFFS8/YR
-# CP7YpIY62SiS17MPwcW9z8hKmsrXDHEJyRs6l8dRPLp5vcjacx3KtCVv9yHY4+7w
-# q+PFSKGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYT
+# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQUgc3I
+# 7hUraxaiS9PpZ2EEfKs5WYwwDQYJKoZIhvcNAQEBBQAEggEAAqLKTdsZqIYg9r+1
+# lnQGl8ksJnHc7AAUewNI/UVGvbC6dkxf56WmEpLTcL8rA2ixs4myzjIEhdA3zSj2
+# CFFRkQmhwS2SJWvyUQgvE7bpoDHtZkmsJ5bJ6eCWW1htzszR4/kfb8hc7nftDbSz
+# yDzjU197jPsrfMfwMwq02L/zVDmuitwfyVFGRAy9rvcGZhmCF3Wusz1gsapJqO8a
+# N7Fys9o6poz5aVa6pVbmhVQ26nyOPzKr9BRV2e8rYhE+dxmO9/zZsB1PmgGyDh5o
+# w0JiReLrxRrgZzKxgCDWbknTWV6+p+2x8/BrM+mDFczvyohSr25+nPH9bT1upj3A
+# iIeGK6GCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYT
 # AlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2Vy
-# dC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQBmQBRumA
-# 4A5goU2PREpZWDAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
-# ATAcBgkqhkiG9w0BCQUxDxcNMTQxMDI0MDEzMzAxWjAjBgkqhkiG9w0BCQQxFgQU
-# LLygf2FrLeS3XDZlkNJebfgAh40wDQYJKoZIhvcNAQEBBQAEggEAAREVXRSHAmQM
-# khFvpwBP9FDKcfSP/kmf0DDykQBQZ7RionX/CXufSmyt/rW5z9EpTdA8k/aY+s51
-# hIqDPgVYw9GKK48D6+pbbzycVo08xy9pZFq302xsgsYsWfr+Tb10dJImJptYAHu0
-# ZXx7TsBynL7jmnc/1BpHHJCSJlKVrjsHlwcAj4XXncwjqi5tPhdzmz4WX8B421+o
-# x6BQd4QVCnijTRyhZDRxqPghmLCwV/1Kmp2FF+T5mmksPm2ajjhhnHG0tIebCm9f
-# tWk7gjA0onKvfYLh9WF0L9Ex/cP9lIZ6pLrXBVmSi/DBGxsWx69QYWl1CbrW+TQu
-# MTWCdUdb/Q==
+# dC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQAwGaAjr/
+# WLFr1tXq5hfwZjAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
+# ATAcBgkqhkiG9w0BCQUxDxcNMTYwNjMwMDM1OTE3WjAjBgkqhkiG9w0BCQQxFgQU
+# 1GaNtlqWS0pp+XszLDOsBD23AqcwDQYJKoZIhvcNAQEBBQAEggEAIySGva2cXUHB
+# FFg/X9qLLtB6POIjklYeUENtMHZnFOVzZU1bcFGgRlWWHQunxznMH+L/IrXLRtpN
+# ZafwGDw0E94+2tQsAjuaRnNwN9LP4bD3eN+fMlzK/AxqW7NIx5je98FG3UBNIfW8
+# nuYgy+rDSxK27+xy+jl7Ma0q0X5ADgd6XLGDukpmpgpduoOnSXgFR7zJ6Ybb4CNG
+# wFxkzd7eCctyEazk05hKo3V3Ke2gUh1h3ocrIq45u2N7qF6sXTfRrWAbSYBdil0S
+# vZckdSb340Bl7rYI6F+lMI/rijhKWWaglZQjCULB6faLzKSWZs4C1pFF1pZPrmME
+# 7LEHbiKHqw==
 # SIG # End signature block
