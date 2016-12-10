@@ -264,9 +264,11 @@ export CDPATH
 # Powerline Environment - nice prompt for commandline and VIM
 # Identify Python site-packages site
 #powerline-daemon
-PYTHONSITE=$(python -m site --user-site)
-. $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
+#PYTHONSITE=$(python -m site --user-site)
+#. $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
 #. /home/lpjharri/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#
+cd ~lpjharri
 }
 
 #
