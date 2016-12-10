@@ -257,17 +257,15 @@ PYTHONSITE=$(python -m site --user-site)
 #         cygwin setup
 #######################################################################################
 function _cygwinsetup() {
-# Path Setup
-CDPATH='~:~/winhome/Documents:~/winhome/Documents/SourceControl'
+
+# CD Path Setup
+CDPATH='~:~/winhome/Documents:~/winhome/Development/source_control:~/winhome/Development/source_control/hwcir:~/winhome/Development/source_control/hwcir/git:~/winhome/Development/source_control/openshift:~/winhome/Development/source_control/bitbucket-cloud'
 export CDPATH
 
-# Powerline Environment - nice prompt for commandline and VIM
-# Identify Python site-packages site
-#powerline-daemon
-#PYTHONSITE=$(python -m site --user-site)
-#. $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
-#. /home/lpjharri/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#
+# Java is set through Windows - no need to set it here
+
+# Maven is set through Windows - no need to set it here
+
 cd ~lpjharri
 }
 
