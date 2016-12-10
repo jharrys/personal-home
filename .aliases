@@ -169,8 +169,8 @@ function _base_aliases() {
   alias gremoteupstream='git remote add upstream'                                                                                                               # gremoteupstream URL (sets the upstream remote branch to fetch from when upstream is diff from push): 'git fetch upstream'
   alias gpushdefault='git config remote.pushdefault origin; git config push.default current'                                                                    # set the remote name to be the default to push to; then set the branch to be the 'current' one you are on
   alias gfu='git fetch upstream'
-  alias gclonesubmodulesold='git submodule update --init --recursive'                                                                                           # Old way (pre 1.6.5) of getting submodules on newly cloned project
-  alias gclonesubmodules='git clone --recursive -j8'                                                                                                            # New way of cloning and downloading submodules
+  alias gsubget='git submodule update --init --recursive'                                                                                                       # Old way (pre 1.6.5) of getting submodules on newly cloned project
+  alias gclone='git clone --recursive -j 8'                                                                                                                     # clone using recursive and jobs to clone submodules                                                                                                            # New way of cloning and downloading submodules
 
   # Maven stuff
   alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                                                                                # clean my local repository
