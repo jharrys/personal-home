@@ -1,10 +1,23 @@
 @echo off
 
+set SOURCE=%USERPROFILE%\Development\source_control
+set CONFIG=%USERPROFILE%\.configuration
+set BIN=%USERPROFILE%\.bin
+set CHOME=\Cygwin\home\lpjharri
+
 :: Aliases for Windows cmd
 
 DOSKEY l=dir $*
 DOSKEY ll=dir $*
-DOSKEY e=brackets %USERPROFILE%\.configuration\windows\aliases.env
+DOSKEY al=brackets %USERPROFILE%\.configuration\windows\aliases.cmd
+
+:: Directory aliases
+
+DOSKEY src=cd %SOURCE%
+DOSKEY hwcir=cd %SOURCE%\hwcir\git
+DOSKEY chome=cd %CHOME%
+DOSKEY bin=cd %BIN%
+DOSKEY config=cd %CONFIG%
 
 :: Git aliases
 
@@ -15,6 +28,8 @@ DOSKEY gph=git push fromhome master
 DOSKEY gst=git status
 DOSKEY gstl=git stash list
 DOSKEY gstv=git stash save
+DOSKEY gp=git pull
+DOSKEY gpu=git push
 
 :: Maven aliases
 
