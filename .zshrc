@@ -262,6 +262,10 @@ function _cygwinsetup() {
 CDPATH='~:~/winhome/Documents:~/winhome/Development/source_control:~/winhome/Development/source_control/hwcir:~/winhome/Development/source_control/hwcir/git:~/winhome/Development/source_control/openshift:~/winhome/Development/source_control/bitbucket-cloud'
 export CDPATH
 
+# Modify path to place cygwin/bin at the front
+PATH=/bin:$PATH
+export PATH
+
 # Java is set through Windows - no need to set it here
 
 # Maven is set through Windows - no need to set it here
