@@ -1,47 +1,106 @@
-#
-#	JJ-08-27-2012
-#	John Harris, ESA, 05/01/2011
-#	Version 2.0 - Updated 3/24/2014
-# Version 1.0 - Created 05/01/2011
-#
+<#
+    ================================================================================================================
 
-#
-# How PowerShell loads modules
-# 1. \Windows\System32\WindowsPowerShell\v1.0\Modules - only the 64-bit Powershell will load modules from here
-# 2. \Windows\SysWOW64\WindowsPowerShell\v1.0\Modules - only the 32-bit Powershell will load modules from here
-# 3. ~\Documents\WindowsPowerShell\v1.0\Modules - either Powershell will load from here
-# Copy the Pscx directory [as of 3.2.0 the msi installs it in \Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx] to one of the 3 above.
-#
-# How PowerShell loads profiles
-# You can have four different profiles in Windows PowerShell. The profiles are listed in load order. The most specific profiles have precedence over less specific profiles where they apply.
-# 1. %windir%\system32\WindowsPowerShell\v1.0\profile.ps1
-#     This profile applies to all users and all shells.
-# 2. %windir%\system32\WindowsPowerShell\v1.0\ Microsoft.PowerShell_profile.ps1
-#     This profile applies to all users, but only to the Microsoft.PowerShell shell.
-# 3. %UserProfile%\My Documents\WindowsPowerShell\profile.ps1
-#     This profile applies only to the current user, but affects all shells.
-# 4. %UserProfile%\My Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-#     This profile applies only to the current user and the Microsoft.PowerShell shell.
+        JJ-08-27-2012
+        John Harris, ESA, 05/01/2011
 
-# *** Imports / Modules ***
+        Version 3.0 - Updated 12/10/2016
+        Version 2.0 - Updated 3/24/2014
+        Version 1.0 - Created 05/01/2011
 
-# Pscx version 3.2.0 (http://pscx.codeplex.com/) - Installed by JJ on 03/24/2015
+        How PowerShell loads modules
+        1. \Windows\System32\WindowsPowerShell\v1.0\Modules - only the 64-bit Powershell will load modules from here
+        2. \Windows\SysWOW64\WindowsPowerShell\v1.0\Modules - only the 32-bit Powershell will load modules from here
+        3. ~\Documents\WindowsPowerShell\v1.0\Modules - either Powershell will load from here
+
+        Copy the Pscx directory [as of 3.2.0 the msi installs it in \Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx] to one of the 3 above.
+
+        How PowerShell loads profiles
+
+        You can have four different profiles in Windows PowerShell. The profiles are listed in load order. The most specific profiles have precedence over less specific profiles where they apply.
+        1. %windir%\system32\WindowsPowerShell\v1.0\profile.ps1
+            This profile applies to all users and all shells.
+        2. %windir%\system32\WindowsPowerShell\v1.0\ Microsoft.PowerShell_profile.ps1
+            This profile applies to all users, but only to the Microsoft.PowerShell shell.
+        3. %UserProfile%\My Documents\WindowsPowerShell\profile.ps1
+            This profile applies only to the current user, but affects all shells.
+        4. %UserProfile%\My Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+            This profile applies only to the current user and the Microsoft.PowerShell shell.
+
+    ================================================================================================================
+#>
+
+<#
+    ================================================================================================================
+        Imports / Modules
+    ================================================================================================================
+#>
+
+# Pscx version 3.2.2 (http://pscx.codeplex.com/) - Upgraded by JJ on 12/9/2016
 Import-Module Pscx -arg ~\Documents\WindowsPowerShell\Pscx.UserPreferences.ps1
 
-# *** Variables ***
+<#
+    ================================================================================================================
+        Variables
+    ================================================================================================================
+#>
+$SOURCE="${env:userprofile}\Development\source_control"
+$CONFIG="${env:userprofile}\.configuration"
+$BIN="${env:userprofile}\.bin"
+$CHOME="c:\Cygwin\home\lpjharri"
+
 New-Variable -name ProfileFolder -Value (Split-Path $PROFILE -Parent)
 New-Variable -name temp -value $([io.path]::gettemppath()) -Description "Temp directory"
 New-Variable -name vboxdevmachine -value "ESA Application Design" -Description "holds the name of the VirtualBox machine I use"
 
-# *** Aliases ***
+<#
+    ================================================================================================================
+        PS-Drive
+    ================================================================================================================
+#>
 
-# cmdlet's are named Verb-Noun, this sets an alias for each cmdlet to VerbNoun (without the dash)
+#New-PSDrive -PSProvider filesystem -Root ${env:programw6432}\Oracle\VirtualBox -Name VBox | Out-Null
+#New-PSDrive -PSProvider filesystem -Root E:\ -Name papps | Out-Null
+New-PSDrive -PSProvider filesystem -Root X:\ -Name shome | Out-Null
+New-PSDrive -PSProvider filesystem -Root C:\Users\lpjharri -Name home | Out-Null
+New-PSDrive -PSProvider filesystem -Root $SOURCE -Name source | Out-Null
+New-PSDrive -PSProvider filesystem -Root $CONFIG -Name config | Out-Null
+New-PSDrive -PSProvider filesystem -Root $BIN -Name bin | Out-Null
+New-PSDrive -PSProvider filesystem -Root $CHOME -Name chome | Out-Null
+
+<#
+    ================================================================================================================
+        Aliases
+    ================================================================================================================
+#>
+
+<#
+    //////////////////////////////////////////////////////
+    
+    cmdlet's are named Verb-Noun, this sets an alias for 
+    each cmdlet to VerbNoun (without the dash)
+    
+    /////////////////////////////////////////////////////
+#>
+
 Get-Command -CommandType cmdlet |
 Foreach-Object {
  Set-Alias -name ( $_.name -replace "-","") -value $_.name -description MrEd_Alias
 } #end Get-Command
 
+<#
+    /////////////////////////////////////////////////////
+    
+    aliases
+    
+    /////////////////////////////////////////////////////
+#>
+
+##### REGULAR #####
 New-Alias -name p -value Get-Profile -description "Open my powershell profile in brackets"
+New-Alias -name al -value Edit-CmdAliases -description "Edit my windows cmd alias file"
+Set-Alias ll dir
+Set-Alias l dir
 New-Alias -name slog -value Start-Transcript -description "Start logging my powershell commands"
 New-Alias -name plog -value Stop-Transcript -description "Stop logging my powershell commands"
 New-Alias -name grep -value Select-String -description "grep for string"
@@ -54,26 +113,32 @@ New-Alias -name papp -value Start-PortableApps -description "Start the PortableA
 New-Alias -name jcp -value Do-Checkpoint -description "Create a Windows 7 Restore Point"
 New-Alias -name lcp -value Get-ComputerRestorePoint -description "List the Windows 7 Restore Points"
 
-# *** PS Drive ***
-#New-PSDrive -PSProvider filesystem -Root ${env:programw6432}\Oracle\VirtualBox -Name VBox | Out-Null
-#New-PSDrive -PSProvider filesystem -Root E:\ -Name papps | Out-Null
-New-PSDrive -PSProvider filesystem -Root X:\ -Name shome | Out-Null
-New-PSDrive -PSProvider filesystem -Root C:\Users\lpjharri -Name home | Out-Null
-
-# *** Function ***
+<#
+    ================================================================================================================
+        Miscellaneous Functions
+    ================================================================================================================
+#>
 
 Function Do-Checkpoint([String] $Description="John Checkpoint")
 {
 	Checkpoint-Computer -Description $Description
 }
 
-<# - No longer using portable apps
+<#
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+No longer using portable apps
+
 Function Start-PortableApps
 {
 	cd papps:
 	.\Start.exe
 }
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
 #>
+
+<# 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+Not using vbox right now
 
 Function Show-VBoxMachine
 {
@@ -98,6 +163,8 @@ Function Stop-VBoxMachine
 	cd vbox:
 	.\VBoxManage.exe controlvm $vboxdevmachine acpipowerbutton
 }
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#>
 
 Function Tips
 {
@@ -171,6 +238,11 @@ Function Get-Profile
 	brackets $profile
 }	# end function get-profile
 
+Function Edit-CmdAliases
+{
+    Edit-File ${CONFIG}\windows\aliases.cmd
+}
+
 Function Get-CmdletsWithMoreThanOneAlias
 {
 	Get-Alias |
@@ -212,3 +284,125 @@ function isadmin
  {
     [System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials
  }
+ 
+<#
+    ================================================================================================================
+        Maven Functions
+    ================================================================================================================
+#> 
+
+function m {
+
+    # The other functions passing their "$args" parameter comes in as a string on the final index
+    # if this gets passed in to the executable it doesn't parse it as separate params
+    # so doing this split will ensure each index string with a space in it is moved into its own
+    # index in the new array arrayified
+    $arrayified = $args.split(" ")
+        
+    & mvn $arrayified
+}
+
+function mc {
+    m clean $args
+}
+
+function mcp {
+    m clean package $args
+}
+
+function mcpskip {
+    m clean package -DskipTests $args
+}
+
+function mci {
+    m clean install $args
+}
+
+function mciskip {
+    m clean install -DskipTests $args
+}
+
+function mi {
+    m install $args
+}
+
+function miskip {
+    m install -DskipTests $args
+}
+
+function mp {
+    m package $args
+}
+
+function mpskip {
+    m package -DskipTests $args
+}
+
+function mtest {
+    m test $args
+}
+
+function minstallfile {
+    &mvn install:install-file $args
+}
+
+function mpurge {
+    m dependency:purge-local-repository $args
+}
+
+function hwdeployfile {
+    &mvn deploy:deploy-file -Durl=http://lpv-hwmaven01.co.ihc.com:8081/nexus/content/repositories/HWCIR -DrepositoryId=hwcir-nexus $args
+}
+
+<#
+    ================================================================================================================
+        Git Functions
+    ================================================================================================================
+#>
+
+function g {
+
+    # The other functions passing their "$args" parameter comes in as a string on the final index
+    # if this gets passed in to the executable it doesn't parse it as separate params
+    # so doing this split will ensure each index string with a space in it is moved into its own
+    # index in the new array arrayified
+    $arrayified = $args.split(" ")
+        
+    & git $arrayified
+}
+
+function gclone {
+    g clone --recursive $args
+}
+
+function gsubget {
+    g submodule update --init --recursive $args
+}
+
+function gfu {
+    g fetch upstream
+}
+
+function gph {
+    g push fromhome master
+}
+
+function gst {
+    g status
+}
+
+function gstl {
+    g stash list
+}
+
+function gstv {
+    g stash save
+}
+
+function gp {
+    g pull
+}
+
+function gpu {
+    g push
+}
