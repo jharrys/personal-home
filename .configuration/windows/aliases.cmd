@@ -1,6 +1,7 @@
 @echo off
 
 set SOURCE=%USERPROFILE%\Development\source_control
+set APPS=%USERPROFILE%\Documents\Applications
 set CONFIG=%USERPROFILE%\.configuration
 set BIN=%USERPROFILE%\.bin
 set CHOME=\Cygwin\home\lpjharri
@@ -10,6 +11,9 @@ set CHOME=\Cygwin\home\lpjharri
 DOSKEY l=dir $*
 DOSKEY ll=dir $*
 DOSKEY al=brackets %USERPROFILE%\.configuration\windows\aliases.cmd
+DOSKEY p=brackets %USERPROFILE%\.configuration\windows\powershell\Microsoft.PowerShell_profile.ps1
+DOSKEY mysqlstart=powershell -command mysqlstart
+DOSKEY mysqlstop=powershell -command mysqlstop
 
 :: Directory aliases
 
@@ -18,6 +22,7 @@ DOSKEY hwcir=cd %SOURCE%\hwcir\git
 DOSKEY chome=cd %CHOME%
 DOSKEY bin=cd %BIN%
 DOSKEY config=cd %CONFIG%
+DOSKEY apps=cd %APPS%
 
 :: Git aliases
 

@@ -48,6 +48,7 @@ $SOURCE="${env:userprofile}\Development\source_control"
 $CONFIG="${env:userprofile}\.configuration"
 $BIN="${env:userprofile}\.bin"
 $CHOME="c:\Cygwin\home\lpjharri"
+$APPS="${env:userprofile}\Documents\Applications"
 
 New-Variable -name ProfileFolder -Value (Split-Path $PROFILE -Parent)
 New-Variable -name temp -value $([io.path]::gettemppath()) -Description "Temp directory"
@@ -67,6 +68,7 @@ New-PSDrive -PSProvider filesystem -Root $SOURCE -Name source | Out-Null
 New-PSDrive -PSProvider filesystem -Root $CONFIG -Name config | Out-Null
 New-PSDrive -PSProvider filesystem -Root $BIN -Name bin | Out-Null
 New-PSDrive -PSProvider filesystem -Root $CHOME -Name chome | Out-Null
+New-PSDrive -PSProvider filesystem -Root $APPS -Name apps | Out-Null
 
 <#
     ================================================================================================================
@@ -284,6 +286,28 @@ function isadmin
  {
     [System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials
  }
+ 
+<#
+    ================================================================================================================
+        Mysql Functions
+    ================================================================================================================
+#>
+
+function mysqlstart {
+    if (-NOT (isadmin)) {
+        Start-Process net -ArgumentList "start mysql" -Verb runas 
+    } else {
+        &net start mysql
+    }
+}
+
+function mysqlstop {
+    if (-NOT (isadmin)) {
+        Start-Process net -ArgumentList "stop mysql" -Verb runas
+    } else {
+        &net stop mysql
+    }
+}
  
 <#
     ================================================================================================================

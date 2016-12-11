@@ -14,7 +14,7 @@
 #
 # ---------------------------------------------------------------------------
 @{
-    ShowModuleLoadDetails = $true     # Display module load details during Import-Module
+    ShowModuleLoadDetails = $false     # Display module load details during Import-Module
 
     CD_GetChildItem = $false          # Display the contents of new provider location after using
                                       # cd (Set-LocationEx).  Mutually exclusive with CD_EchoNewLocation.
