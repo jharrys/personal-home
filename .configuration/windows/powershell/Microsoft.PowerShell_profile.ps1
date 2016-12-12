@@ -49,6 +49,7 @@ $CONFIG="${env:userprofile}\.configuration"
 $BIN="${env:userprofile}\.bin"
 $CHOME="c:\Cygwin\home\lpjharri"
 $APPS="${env:userprofile}\Documents\Applications"
+$WLDOMAIN="${env:userprofile}\local\wldomains"
 
 New-Variable -name ProfileFolder -Value (Split-Path $PROFILE -Parent)
 New-Variable -name temp -value $([io.path]::gettemppath()) -Description "Temp directory"
@@ -69,6 +70,7 @@ New-PSDrive -PSProvider filesystem -Root $CONFIG -Name config | Out-Null
 New-PSDrive -PSProvider filesystem -Root $BIN -Name bin | Out-Null
 New-PSDrive -PSProvider filesystem -Root $CHOME -Name chome | Out-Null
 New-PSDrive -PSProvider filesystem -Root $APPS -Name apps | Out-Null
+New-PSDrive -PSProvider filesystem -Root $WLDOMAIN -Name wldomain | Out-Null
 
 <#
     ================================================================================================================

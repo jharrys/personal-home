@@ -5,6 +5,7 @@ set APPS=%USERPROFILE%\Documents\Applications
 set CONFIG=%USERPROFILE%\.configuration
 set BIN=%USERPROFILE%\.bin
 set CHOME=\Cygwin\home\lpjharri
+set WLDOMAIN=%USERPROFILE%\local\wldomains
 
 :: Aliases for Windows cmd
 
@@ -23,6 +24,7 @@ DOSKEY chome=cd %CHOME%
 DOSKEY bin=cd %BIN%
 DOSKEY config=cd %CONFIG%
 DOSKEY apps=cd %APPS%
+DOSKEY wldomain=cd %WLDOMAIN%
 
 :: Git aliases
 
