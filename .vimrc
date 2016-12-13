@@ -35,7 +35,6 @@ let g:syntastic_python_checkers=['python', 'pylint']
 
 " General {
   set dir=~/.vimbackup,~/tmp,/var/tmp,/tmp
-  set undodir=~/.vimbackup,~/tmp,/var/tmp,/tmp
   set backspace=indent,eol,start      " Allow backspace over everything in insert mode.
   set guifont=Monaco:h11
   set noswapfile
@@ -44,13 +43,17 @@ let g:syntastic_python_checkers=['python', 'pylint']
   set ttyfast
   set nowrap
   set ffs=unix,dos,mac      " Set unix as default file system type
-  set undofile              " A persistent undo per file
   set clipboard=unnamed     " Allow access to the mac os x system clipboard; if using iterm2 uncheck 'Allow clipboard access to terminal apps'
   set omnifunc=syntaxcomplete#Complete      " Turns on omni completion, not usually enabled by default
   set cursorline
   set cursorcolumn
   "hi CursorLine
   hi CursorColumn cterm=NONE ctermbg=lightblue ctermfg=black   "background lightblue, foreground black
+
+  if has('persistent_undo')
+    set undodir=~/.vimbackup,~/tmp,/var/tmp,/tmp
+    set undofile              " A persistent undo per file
+  endif
 
   " Indentation settings
   "set noautoindent        " I indent my code myself.
