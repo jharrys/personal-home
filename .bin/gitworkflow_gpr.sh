@@ -134,6 +134,11 @@ echo "Starting the pull request workflow"
 echo "----------------------------------------------"
 
 ##################################################
+# set up environment; ensure we have latest
+##################################################
+git checkout master &>/dev/null && git pull &>/dev/null || echo "\n Failed pulling master branch"
+
+##################################################
 # fetch pull request into a new branch
 ##################################################
 
