@@ -14,6 +14,7 @@
 #################################
 ####################################################################
 
+alias sudome='sudo -E su -m'
 alias dl='dnf list installed'
 alias dr='dnf remove -y'
 alias dli='dnf localinstall -y --nogpgcheck'
