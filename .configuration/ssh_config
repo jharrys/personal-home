@@ -5,6 +5,9 @@ TCPKeepAlive no
 ServerAliveInterval 60
 ServerAliveCountMax 10
 
+# Quiet any banners (alternatively you can use the -q switch for each run)
+LogLevel QUIET
+
 # This enables persistent connections; this will cause connections to
 # hang around for 2 hours after logging out.
 ControlPersist 2h
