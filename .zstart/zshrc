@@ -1,0 +1,234 @@
+####################################################################
+#################################
+#############
+#
+# Johnnie Harris
+# 2016-12-20
+#
+# This contains common configurations across all platforms.
+# It is sourced by each of the {platform}/.zshrc.
+#
+#############
+#################################
+####################################################################
+
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="agnoster"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# HISTORY SETTINGS
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+export HIST_STAMPS="mm/dd/yyyy"
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export HISTCONTROL=ignoredups
+export SAVEHIST=10000
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt share_history
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(lol common-aliases git sudo mvn history brew extract python tmux osx zsh-syntax-highlighting web-search zsh-navigation-tools scd copyfile johnnie-colored-man-pages man copydir dircycle jsontools docker encode64)
+
+##################################################################
+###########################
+###########
+#####
+# Environment settings
+#####
+###########
+###########################
+##################################################################
+
+# Setup H2
+export H2HOME="/Users/lpjharri/Applications/h2"
+
+# PATH variable
+export PATH=/usr/local/sbin:$HOME/.bin:/usr/local/bin:$H2HOME/bin:$PATH
+
+# oh-my-zsh variable
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+export EDITOR='vim'
+export GIT_EDITOR='vim -f'
+
+# Less options
+export LESS="-S -n -r"
+
+# SET options
+unsetopt INC_APPEND_HISTORY
+setopt EXTENDED_GLOB
+setopt NO_NOMATCH   # setting EXTENDED_GLOB breaks git-rev syntax (i.e., HEAD^ ... you'd have to escape ^ -> HEAD\^) the proper fix is to set NO_NOMATCH
+
+##################################################################
+###########################
+###########
+#####
+# Python user configuration
+#####
+###########
+###########################
+##################################################################
+
+# Setup python environment, if there is a virtual one installed inside home directory
+if [ -d ~/.pyenv ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PYENV_VERSION=2.7.9
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
+
+##################################################################
+###########################
+###########
+#####
+# Mailcheck configuration
+#####
+###########
+###########################
+##################################################################
+
+MAILCHECK=15
+mailpath=(/var/mail/lpjharri)
+export mailpath MAILCHECK
+
+##################################################################
+###########################
+###########
+#####
+# User Aliases
+#####
+###########
+###########################
+##################################################################
+
+. $ZSTART/aliases
+
+##################################################################
+###########################
+###########
+#####
+# User Functions
+#####
+###########
+###########################
+##################################################################
+
+fpath=(~/.zfuncs $fpath)
+for d in ~/.zfuncs
+    do autoload `\ls $d`
+done
+
+##################################################################
+###########################
+###########
+#####
+# ZSH Help Files - as described in http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Accessing-On_002dLine-Help
+#####
+###########
+###########################
+##################################################################
+
+export HELPDIR=~/.zsh_help
+unalias run-help
+autoload run-help
+
+##################################################################
+###########################
+###########
+#####
+# Homebrew configuration
+#####
+###########
+###########################
+##################################################################
+
+export HOMEBREW_GITHUB_API_TOKEN=363214089b27eb70e2ac015ddf93cf9b5738864a
+
+##################################################################
+###########################
+###########
+#####
+# User setProxy
+#####
+###########
+###########################
+##################################################################
+
+if [ -f ~/.ssh/at-ihc-work ]; then
+  setProxy set
+else
+  setProxy unset
+fi
+
+##################################################################
+###########################
+###########
+#####
+# Miscellaneous options to run at the end
+#####
+###########
+###########################
+##################################################################
+
+
+# oh-my-zsh adds a deprecated environment variable. this disables it.
+unset GREP_OPTIONS
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Setup my ZSH syntax highlighting options
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern) # by default only main is turned on
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=blue'
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('sudo *' 'fg=white,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('ssh *' 'fg=white,bg=blue')

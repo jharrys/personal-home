@@ -1,0 +1,26 @@
+####################################################################
+#################################
+#############
+# Linux Aliases
+#
+# Johnnie Harris
+# 2016-12-20
+#
+# This contains aliases for the linux platform.
+#
+# comments are all indented to column 97
+#
+#############
+#################################
+####################################################################
+
+alias dl='dnf list installed'
+alias dr='dnf remove -y'
+alias dli='dnf localinstall -y --nogpgcheck'
+
+# Locate database
+alias updatelocate='sudo updatedb'
+
+# CIFS/SMB Mounts
+alias mtnexus='sudo mkdir -p /mnt/nexus;sudo mount -t cifs //sasamba.co.ihc.com/lpjharri /mnt/nexus -o user=CO\\lpjharri,uid=lpjharri,gid=webdev,file_mode=0770,dir_mode=0770;cd /mnt/nexus'
+alias umtnexus='sudo umount /mnt/nexus'

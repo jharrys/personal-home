@@ -1,0 +1,113 @@
+####################################################################
+#################################
+#############
+# Mac OS X Aliases
+#
+# Johnnie Harris
+# 2016-12-20
+#
+# This contains aliases for the mac platform.
+#
+# comments are all indented to column 97
+#
+#############
+#################################
+####################################################################
+
+# re alias ls --color (doesn't work on bsd)
+unalias ls
+alias l@='ls -alh@'
+
+# Run screen savers as wallpaper until Ctrl-C
+alias ssaswp='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'                  # make screensaver act as your wallpaper
+
+# Speed up time machine - use carefully since it ignores processor priority
+alias tmspeedup='sudo sysctl debug.lowpri_throttle_enabled=0'
+alias tmnormal='sudo sysctl debug.lowpri_throttle_enabled=1'
+
+# Dock
+#alias insertSpacer='defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'
+
+# Update locate database
+alias updatelocate='sudo /usr/libexec/locate.updatedb'                                                                                                        # update the mac os x locate database
+
+# for setting JAVA environment
+alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'                                                                                             # setup the jdk home environment for 1.7
+alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'                                                                                             # setup the jdk home environment for 1.8
+
+# chflags - changes file flags - using it here to unhide hidden directories
+alias unhide='chflags nohidden'
+alias hide='chflags hidden'
+
+# General system aliases
+alias showall='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
+alias hideall='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
+
+# Caffeinate - an internal MacOS utility to keep the system from sleeping
+# all aliases accept '-t seconds' for timeout value
+alias cafd='caffeinate -d -w $$ &'                                                                                                                            # caffeinate -d keeps display active; keep in the foreground
+alias cafu='caffeinate -u'                                                                                                                                    # caffeinate -u keeps system alive while current user is logged in
+alias cafs='caffeinate -s'                                                                                                                                    # caffeinate -s keeps system alive when on AC
+alias cafpid='caffeinate -w'                                                                                                                                  # caffeinate -w expects a PID and stays alive until PID exits
+
+# Virtual Box applications
+export DEFAULTVM="Fedora 13"                                                                                                                                  # Set the default VM to work against
+alias v='VBoxManage --nologo'
+alias vlist='VBoxManage --nologo list runningvms'
+alias vc='echo "DefaultVM: $DEFAULTVM";VBoxManage --nologo controlvm "$DEFAULTVM"'
+alias vs='echo "DefaultVM: $DEFAULTVM";VBoxManage --nologo startvm "$DEFAULTVM"'
+
+# Query AddressBook
+alias qadd="sqlite3 -separator ',' ~/Library/Application\ Support/AddressBook/AddressBook-v22.abcddb \"select e.ZADDRESSNORMALIZED,p.ZFIRSTNAME,p.ZLASTNAME,p.ZORGANIZATION from ZABCDRECORD as p, ZABCDEMAILADDRESS as e WHERE e.ZOWNER=p.Z_PK;\""
+
+# MySQL
+alias mysql='/usr/local/mysql/bin/mysql'
+alias mysqladmin='/usr/local/mysql/bin/mysqladmin'
+alias mysqlstart='sudo /usr/local/mysql/support-files/mysql.server start'
+alias mysqlstop='sudo /usr/local/mysql/support-files/mysql.server stop'
+alias mysqlrestart='sudo /usr/local/mysql/support-files/mysql.server restart'
+alias mysqlstat='sudo /usr/local/mysql/support-files/mysql.server status'
+alias mysql='sudo /usr/local/mysql/support-files/mysql.server'
+
+# Work related aliases
+alias worksecrets='open ~/Documents/Work/HWCIR.kdbx'
+alias mysecrets='open ~/Google\ Drive/Me/tumbler/john.kdbx'
+
+# Spotlight
+alias stopSpotlight='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'
+alias startSpotlight='sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'
+
+# Tagging files - uses the 'tag' application installed via brew
+alias tagmedia='tag -a "media & photos"'
+alias untagmedia='tag -r "media & photos"'
+alias tagco='tag -a "check out"'
+alias untagco='tag -r "check out"'
+alias tagbook='tag -a "books & references"'
+alias untagbook='tag -r "books & references"'
+alias taghow='tag -a "how-to"'
+alias untaghow='tag -r "how-to"'
+alias tagr='tag -a "r rated"'
+alias untagr='tag -r "r rated"'
+alias tagsource='tag -a "source code"'
+alias untagsource='tag -r "source code"'
+alias taghistory='tag -a "historical"'
+alias untaghistory='tag -r "historical"'
+alias tagbins='tag -a "bin & libs"'
+alias untagbins='tag -r "bin & libs"'
+
+# Sysadmin - starts with sys_
+alias sys_diagnosisreport='sudo sysdiagnose -f ~lpjharri/Desktop'
+alias sys_infoaboutanymac='mactracker'
+alias sys_cleaniconcache='sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \; \
+;sudo find /private/var/folders -name com.apple.dock.iconcache -exec rm {} \; \
+;sudo rm -rf /Library/Caches/com.apple.iconservices.store'                                                                                                    # clean mac os x icon caches
+alias sys_resetdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;say DNScache flushed and reset'
+alias sys_sleep='sudo shutdown -s'
+
+# Brew and Cask
+alias cask2upgrade='brewcasklist.sh |awk -v RS="" '"'"'{ if ($3 != $6) print $2,"needs to be upgradedd" }'"'"
+alias upgradecask='for x in `cask2upgrade |cut -f 1 -d ":"`; do brew cask uninstall $x; brew cask install $x; done'
+
+# Chrome
+alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
+alias chromessldebug='SSLKEYLOGFILE=/Users/lpjharri/tmp/sslkey.txt open /Applications/Google\ Chrome.app'

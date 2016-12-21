@@ -1,0 +1,18 @@
+####################################################################
+#################################
+#############
+# Cygwin Aliases
+#
+# Johnnie Harris
+# 2016-12-20
+#
+# This contains aliases for the cygwin platform.
+#
+# comments are all indented to column 97
+#
+#############
+#################################
+####################################################################
+
+alias wroam='cd ${HOME}/winhome/AppData/Roaming/Microsoft/Windows'
+alias wlibs='cd ${HOME}/winhome/AppData/Roaming/Microsoft/Windows/Libraries'
