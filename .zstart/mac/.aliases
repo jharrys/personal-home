@@ -19,7 +19,7 @@ unalias ls
 alias l@='ls -alh@'
 
 # sudo
-alias sudome='sudo -E -s'
+alias sudome='(unset CLICOLOR_FORCE;sudo -E -s)'
 
 # Run screen savers as wallpaper until Ctrl-C
 alias ssaswp='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'                  # make screensaver act as your wallpaper

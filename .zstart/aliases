@@ -28,7 +28,6 @@ alias cp='cp -i'
 alias vi='gvimt'
 alias getw='wget -N -r -nH -nd --no-parent'
 alias pdr='powerline-daemon --replace'
-alias sudome='sudo -E su -m'
 
 ###### Find ######
 alias findnewer='find . -newerct'                                                                                                                             # findnewerthan '5 minutes ago'
