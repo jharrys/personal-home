@@ -86,12 +86,3 @@ export PATH=~/.bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/App
 
 . ${ZSTARTPLATFORM}/.aliases
 
-#******************************************
-# start powerline
-# powerline is installed as 'pip install --user powerline-status'
-#******************************************
-
-# Identify Python site-packages site
-#powerline-daemon
-PYTHONSITE=$(python -m site --user-site)
-. $PYTHONSITE/powerline/bindings/zsh/powerline.zsh
