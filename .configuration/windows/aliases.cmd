@@ -15,6 +15,7 @@ DOSKEY al=brackets %USERPROFILE%\.configuration\windows\aliases.cmd
 DOSKEY p=brackets %USERPROFILE%\.configuration\windows\powershell\Microsoft.PowerShell_profile.ps1
 DOSKEY mysqlstart=powershell -command mysqlstart
 DOSKEY mysqlstop=powershell -command mysqlstop
+DOSKEY regfix=powershell -command regfix
 
 :: Directory aliases
 

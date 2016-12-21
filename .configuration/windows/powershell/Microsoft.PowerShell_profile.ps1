@@ -87,10 +87,16 @@ New-PSDrive -PSProvider filesystem -Root $WLDOMAIN -Name wldomain | Out-Null
     /////////////////////////////////////////////////////
 #>
 
+<#
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Disable for now
+
 Get-Command -CommandType cmdlet |
 Foreach-Object {
  Set-Alias -name ( $_.name -replace "-","") -value $_.name -description MrEd_Alias
 } #end Get-Command
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#>
 
 <#
     /////////////////////////////////////////////////////
@@ -288,6 +294,16 @@ function isadmin
  {
     [System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials
  }
+ 
+<#
+    ================================================================================================================
+        Admin Functions
+    ================================================================================================================
+#>
+
+function regfix {
+    Start-Process regedit -ArgumentList "/i /s ${env:userprofile}\.configuration\windows\registry\disable-elevate-notifications.reg" -Verb runas
+}
  
 <#
     ================================================================================================================
