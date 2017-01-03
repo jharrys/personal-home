@@ -210,8 +210,8 @@ alias -g mdg='-X'                                                               
 # RC (my ssh run command)
 alias rcls='rc ls -jj -h'
 alias rcll='rc ls -al -jj -h'
-alias rcnotmux='rc touch \\~/tmp/notmux -jj -h'
-alias rcrmnotmux='rc rm -f \\~/tmp/notmux -jj -h'
+alias rcnotmux='rc touch /home/lpjharri/tmp/notmux -jj -h'
+alias rcrmnotmux='rc rm -f /home/lpjharri/tmp/notmux -jj -h'
 
 # Help
 alias help-sshfs='echo sshfs user@host:path /mount/point -o volname=VOL -o moreoptions'                                                                       # how to execute sshfs; volname is a OSX Fuse option
