@@ -1,0 +1,60 @@
+local RCHOST=~/tmp/.rchost
+local RCOMMAND=""
+local remotecommand=""
+local host=""
+
+# -jj marks the end of the remote command and the start of normal options
+# i wanted getopts options to be at the end of the command so that i can create aliases that i can place options at the end of the command
+
+while [[ ${1} != "-jj" ]]; do
+  RCOMMAND+="$1 "
+  [ $# -eq 1 ] && echo "the option -jj needs to be included to mark the end of free text commands and the beginning of valid options" && return 1
+  shift
+done
+
+shift
+
+# Remove trailing space
+RCOMMAND=${RCOMMAND%% }
+
+while getopts "h:t" opt; do
+  case $opt in
+    h)
+      host=$OPTARG
+      ;;
+    t)
+      pty="-t"
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      return 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      return 1
+      ;;
+  esac
+done
+
+# shift all the parsed arguments to leave everything else that wasn't parsed
+shift $((OPTIND-1))
+
+if [[ -n $host ]];then
+  echo $host >${RCHOST}
+else
+  if [ -e ${RCHOST} ]; then
+    host=$(<${RCHOST})
+  else
+    echo "Couldn't find host - please supply host option with -h"
+    return 1
+  fi
+fi
+
+if [[ -n ${RCOMMAND} ]]; then
+  remotecommand=${RCOMMAND}
+fi
+
+remotecommand+=" $@"
+
+echo "ssh $pty $host $remotecommand"
+
