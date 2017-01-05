@@ -22,6 +22,7 @@ alias l@='ls -alh@'
 alias sudome='(unset CLICOLOR_FORCE;sudo -E -s)'
 
 # tmux
+alias tx='(unset CLICOLOR_FORCE;tmux)'
 alias tmuxcc='(unset CLICOLOR_FORCE;tmux -CC)'
 
 # Run screen savers as wallpaper until Ctrl-C
