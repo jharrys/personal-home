@@ -39,7 +39,7 @@ export CDPATH
 
 MW_HOME=~/local/appservers/wls-12.1.3
 USER_MEM_ARGS="-Xmx1024m -XX:MaxPermSize=256m"
-DOMAIN_HOME=~/local/wldomains/jland
+DOMAIN_HOME=~/local/wldomains/carma
 
 export MW_HOME DOMAIN_HOME USER_MEM_ARGS
 
