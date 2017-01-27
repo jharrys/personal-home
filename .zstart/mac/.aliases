@@ -21,6 +21,11 @@ alias l@='ls -alh@'
 # sudo
 alias sudome='(unset CLICOLOR_FORCE;sudo -E -s)'
 
+# cups system
+alias statcups='sudo launchctl list |grep cupsd'
+alias stopcups='sudo launchctl unload -w /System/Library/LaunchDaemons/org.cups.cupsd.plist'
+alias startcups='sudo launchctl load -w /System/Library/LaunchDaemons/org.cups.cupsd.plist'
+
 # tmux
 alias tx='(unset CLICOLOR_FORCE;tmux)'
 alias tmuxcc='(unset CLICOLOR_FORCE;tmux -CC)'
