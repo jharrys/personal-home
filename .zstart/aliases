@@ -196,7 +196,8 @@ alias mtest='mvn test'                                                          
 alias minstallfile='mvn install:install-file'                                                                                                                 # mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy
 alias mreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'                                                                                   # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
 alias mdelprojrepo='mvn build-helper:remove-project-artifact'                                                                                                 # removes the full project from the .m2 local repository
-alias mversion='mvn versions:set -DgenerateBackupPoms=false'                                                                                                  # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
+alias mver='mvn versions:set -DnewVersion='                                                                                                                   # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
+alias mrev='mvn versions:revert'                                                                                                                              # requires reverts changes made by mvn versions:set
 alias marchlocal='mvn archetype:generate -DarchetypeCatalog=local'                                                                                            # generate using archetype but get it from the local catalog
 alias mtestreport='mvn surefire-report:report; mvn site -DgenerateReports=false; open target/site/surefire-report.html'
 alias mgencss='mvn site -DgenerateReports=false'                                                                                                              # generate images and css for reports, not full site
