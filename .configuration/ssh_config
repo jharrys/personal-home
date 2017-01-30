@@ -65,6 +65,11 @@ ForwardAgent yes
 HostName lpv-hwdevdb01.co.ihc.com
 User lpjharri
 
+Host verdb1
+ForwardAgent yes
+HostName lpv-hwverdb01.co.ihc.com
+User lpjharri
+
 Host prddb1
 ForwardAgent yes
 HostName lpv-hwprddb01.co.ihc.com
