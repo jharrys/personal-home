@@ -108,6 +108,9 @@ alias web='python -m SimpleHTTPServer'                                          
 alias fnung='find / \( -nouser -o -nogroup \) -print'                                                                                                         # find files/dirs with no user or no group
 alias uneven='findUnevenPermissions.py'                                                                                                                       # find uneven permissions
 
+###### Jar / zip ######
+alias catz='unzip -p'                                                                                                                                        # catz FILE.jar PATH/TO/FILE-to-list.txt
+
 ###### Wget ########
 alias wget-asfirefox='wget --user-agent="Mozilla/5.0 (X11; U; \
                     Linux i686; en-US; rv:1.9.0.3) Gecko/2008092416 Firefox/3.0.3"'
