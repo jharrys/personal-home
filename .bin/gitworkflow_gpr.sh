@@ -14,19 +14,31 @@
 # the full git pull request
 ##################################################
 
-if [ $# -lt 1 ];
-then
-  echo 'usage: $0 pull-request-number
+##################################################
+# usage
+##################################################
+function usage() {
+  echo 'usage: ' $1 '[-m user@address] [-o] pull-request-number
+
+  -m user@address will email the generated output to the email address
+  -o will display the output in realtime
 
   EXIT CODES:
   127 = error cleaning the temp area
   126 = this usage help screen
+  125 = invalid arguments
   4 = maven errors with compilation or test failures
   3 = git merge error (see output for details)
   2 = git worktree add error
   1 = git error fetching pull request
   '
   exit 126
+}
+
+# Check that we have at least 1 argument
+if [ $# -lt 1 ];
+then
+  usage $0
 fi
 
 ##################################################
@@ -44,11 +56,53 @@ SCRIPT_NAME=$(basename $0)
 PROJECT_NAME=$(basename $ORIGINAL_DIR)
 WORK_DIR=/tmp
 TEMP_AREA=${WORK_DIR}/${PROJECT_NAME}
-PULL_REQUEST_NUMBER=$1
-TMP_BRANCH_NAME=${1}_GPR
+PULL_REQUEST_NUMBER=""
+TMP_BRANCH_NAME=""
 DATE=$(date "+%Y%m%d-%H%M%S")
 MAVEN_OUTPUT_FILE=${WORK_DIR}/${SCRIPT_NAME%%.*}-maven-output.${DATE}
 MERGE_OUTPUT_FILE=${WORK_DIR}/${SCRIPT_NAME%%.*}-merge-output.${DATE}
+ALL_OUTPUT_FILE=${WORK_DIR}/${SCRIPT_NAME%%.*}-all-output.${DATE}
+EMAIL=""
+OUTPUT=false
+MERGE_BUILD_SUCCESS=false
+
+##################################################
+# parse command line options
+# support the following options:
+# -m email@address (sends output to email address)
+# -o (displays output in realtime)
+##################################################
+while getopts "m:oh" opt; do
+  case $opt in
+    m)
+      EMAIL=$OPTARG
+      ;;
+    o)
+      OUTPUT=true
+      ;;
+    h)
+      usage $0
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      return 125
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      return 125
+      ;;
+  esac
+done
+
+# shift all the parsed arguments to leave everything else that wasn't parsed
+shift $((OPTIND-1))
+
+PULL_REQUEST_NUMBER=$@
+TMP_BRANCH_NAME=${PULL_REQUEST_NUMBER}_GPR
+
+if [ -z "$PULL_REQUEST_NUMBER" ]; then
+  usage $0
+fi
 
 ##################################################
 # ensure TEMP_AREA is clean
@@ -70,6 +124,10 @@ fi
 function cleanup() {
 
   trap 'exit ${RC}' EXIT
+
+  if [ -n "$EMAIL" -a "$EXIT_CONDITION" -gt "0" ]; then
+    send_email
+  fi
 
   if [ ${CLEANUP} -eq 1 ]; then
     cd $ORIGINAL_DIR
@@ -109,6 +167,26 @@ function request_cleanup() {
   fi
 
   cleanup
+}
+
+function send_email() {
+  if [ "$MERGE_BUILD_SUCCESS" = "true" ]; then
+    STATUS="SUCCESSFUL"
+  else
+    STATUS="FAILED"
+  fi
+
+  echo "<<<<< OUTPUT OF MERGE >>>>>" > $ALL_OUTPUT_FILE
+  echo "" >> $ALL_OUTPUT_FILE
+  cat $MERGE_OUTPUT_FILE >> $ALL_OUTPUT_FILE 2>/dev/null
+  echo "" >> $ALL_OUTPUT_FILE
+  echo "=======================================================================================================================================================" >> $ALL_OUTPUT_FILE
+  echo "" >> $ALL_OUTPUT_FILE
+  echo "<<<<< OUTPUT OF MAVEN COMPILATION AND TESTINGS" >> $ALL_OUTPUT_FILE
+  cat $MAVEN_OUTPUT_FILE >> $ALL_OUTPUT_FILE 2>/dev/null
+  echo "" >> $ALL_OUTPUT_FILE
+  echo "=======================================================================================================================================================" >> $ALL_OUTPUT_FILE
+  mail -s "Build for PR# ${PULL_REQUEST_NUMBER} for project ${PROJECT_NAME}: ${STATUS}" ${EMAIL} <${ALL_OUTPUT_FILE}
 }
 
 ##################################################
@@ -190,7 +268,12 @@ echo "----------------------------------------------"
 ##################################################
 
 git checkout -b zzz master &>/dev/null
-git merge ${TMP_BRANCH_NAME} &>${MERGE_OUTPUT_FILE}
+
+if [ "$OUTPUT" = "true" ]; then
+  git merge ${TMP_BRANCH_NAME} |tee ${MERGE_OUTPUT_FILE}
+else
+  git merge ${TMP_BRANCH_NAME} &>${MERGE_OUTPUT_FILE}
+fi
 
 EXIT_CONDITION=$?
 
@@ -218,7 +301,11 @@ echo "----------------------------------------------"
 echo "\n"
 echo "Please wait as we compile and test the merged code ..."
 
-mvn clean package javadoc:aggregate test -Dtest=\*Integ,\*Test &>${MAVEN_OUTPUT_FILE}
+if [ "$OUTPUT" = "true" ]; then
+  mvn clean package javadoc:aggregate test -Dtest=\*Integ,\*Test |tee ${MAVEN_OUTPUT_FILE}
+else
+  mvn clean package javadoc:aggregate test -Dtest=\*Integ,\*Test &>${MAVEN_OUTPUT_FILE}
+fi
 
 EXIT_CONDITION=$?
 
@@ -236,11 +323,17 @@ then
   exit 4
 fi
 
+MERGE_BUILD_SUCCESS=true
+
 echo "\n"
 echo "___---___---___---___---___---___---___---___---___---"
 echo "  EVERYTHING PASSED!!!"
 echo "  see ${MAVEN_OUTPUT_FILE}"
 echo "___---___---___---___---___---___---___---___---___---"
 echo "\n"
+
+if [ -n "$EMAIL" ]; then
+  send_email
+fi
 
 exit 0

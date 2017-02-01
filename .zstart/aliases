@@ -175,13 +175,17 @@ alias gitrmtag='read -p "tag: " BR;git push origin :refs/tags/$BR'              
 alias gru='read -p "remote: " RM;git remote update ${RM:-origin}'                                                                                             # remote update without pulling, then git status will show appropriate info
 alias gsync='git pull --rebase origin master'                                                                                                                 # Sync with master if you have unpublished commits
 alias gck='git fetch && git log ..origin/master'                                                                                                              # Check upstream master to see if there are any changes to bring down
-alias gpr='git-stash-pull-request'                                                                                                                            # Checkout a git bitbucket server pull request; this maps to a personal .zfuncs
+alias gspr='git-stash-pull-request'                                                                                                                           # Checkout a git bitbucket server pull request; this maps to a personal .zfuncs
 alias gph='git push fromhome master'                                                                                                                          # Git push to bitbucket.org but from home
 alias gremoteupstream='git remote add upstream'                                                                                                               # gremoteupstream URL (sets the upstream remote branch to fetch from when upstream is diff from push): 'git fetch upstream'
 alias gpushdefault='git config remote.pushdefault origin; git config push.default current'                                                                    # set the remote name to be the default to push to; then set the branch to be the 'current' one you are on
 alias gfu='git fetch upstream'
 alias gsubget='git submodule update --init --recursive'                                                                                                       # Old way (pre 1.6.5) of getting submodules on newly cloned project
 alias gclone='git clone --recursive -j 8'                                                                                                                     # clone using recursive and jobs to clone submodules                                                                                                            # New way of cloning and downloading submodules
+alias gpr='gitworkflow_gpr.sh -m johnnie.harris@imail.org -o'
+alias gprm='gitworkflow_gpr.sh -m johnnie.harris@imail.org'
+alias gpro='gitworkflow_gpr.sh -o'
+alias gprr='gitworkflow_gpr.sh'
 
 # Maven stuff
 alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                                                                                # clean my local repository
