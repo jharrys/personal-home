@@ -71,8 +71,9 @@ MERGE_BUILD_SUCCESS=false
 # support the following options:
 # -m email@address (sends output to email address)
 # -o (displays output in realtime)
+# -y (don't ask to cleanup, go ahead and cleanup)
 ##################################################
-while getopts "m:oh" opt; do
+while getopts "m:oyh" opt; do
   case $opt in
     m)
       EMAIL=$OPTARG
@@ -82,6 +83,9 @@ while getopts "m:oh" opt; do
       ;;
     h)
       usage $0
+      ;;
+    y)
+      CLEANUP_REQUESTED=true
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -156,14 +160,19 @@ function cleanup() {
 }
 
 function request_cleanup() {
-  echo "Do you want to cleanup?"
-  read -s -n 1 answer
-
-  if [ "${answer}" == "Y" -o "${answer}" == "y" ];
+  if [ -n "${CLEANUP_REQUESTED}" ];
   then
     CLEANUP=1
   else
-    CLEANUP=0
+    echo "Do you want to cleanup?"
+    read -s -n 1 answer
+
+    if [ "${answer}" == "Y" -o "${answer}" == "y" ];
+    then
+      CLEANUP=1
+    else
+      CLEANUP=0
+    fi
   fi
 
   cleanup
