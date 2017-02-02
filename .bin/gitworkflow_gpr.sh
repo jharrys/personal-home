@@ -335,10 +335,12 @@ fi
 MERGE_BUILD_SUCCESS=true
 
 echo "\n"
-echo "___---___---___---___---___---___---___---___---___---"
-echo "  EVERYTHING PASSED!!!"
-echo "  see ${MAVEN_OUTPUT_FILE}"
-echo "___---___---___---___---___---___---___---___---___---"
+echo "---___---___---___---___---___---___---___---___---___---___---"
+echo ""
+echo "                EVERYTHING PASSED!!!"
+echo "       see ${MAVEN_OUTPUT_FILE}"
+echo ""
+echo "___---___---___---___---___---___---___---___---___---___---___"
 echo "\n"
 
 if [ -n "$EMAIL" ]; then
