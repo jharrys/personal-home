@@ -1,1 +1,0 @@
-/Applications/Microsoft Remote Desktop.app
