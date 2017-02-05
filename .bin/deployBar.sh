@@ -1,5 +1,7 @@
 #!/bin/sh
 
+BARJARPATH=~/.bin/bar-util.jar
+
 function usage {
   echo "usage: $1 [-h host] [-p port] [-H] deploy /path/to/bar/file|undeploy deployId"
   echo ""
@@ -47,5 +49,5 @@ COMMAND=$*
 
 #echo "java -jar ~/.bin/bar-util.jar -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND} ${COMMANDARG}"
 #java -jar ~/.bin/bar-util.jar -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND} ${COMMANDARG}
-java -jar ~/.bin/bar-util.jar -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND}
+java -jar ${BARJARPATH} -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND}
 
