@@ -38,11 +38,14 @@ done
 # shift all the parsed arguments to leave everything else that wasn't parsed
 shift $((OPTIND-1))
 
-COMMAND=$1
-echo $COMMAND
-shift
-COMMANDARG=$1
+COMMAND=$*
 
-echo "java -jar ~/.bin/bar-util.jar -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND} ${COMMANDARG}"
-java -jar ~/.bin/bar-util.jar -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND} ${COMMANDARG}
+#COMMAND=$1
+#echo $COMMAND
+#shift
+#COMMANDARG=$1
+
+#echo "java -jar ~/.bin/bar-util.jar -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND} ${COMMANDARG}"
+#java -jar ~/.bin/bar-util.jar -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND} ${COMMANDARG}
+java -jar ~/.bin/bar-util.jar -d com.mysql.jdbc.Driver -u jdbc:mysql://${HOST}:${PORT}/activiti_carma?autoReconnect=true -U ActivitiCarma -p ActivitiCarma ${COMMAND}
 
