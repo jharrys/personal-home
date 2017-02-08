@@ -16,6 +16,28 @@
 
 [ $# -lt 3 ] && echo "usage: $0 -n NAME -f PATH/TO/FILE -t TARGET" && exit 1
 
+while getopts "n:f:t:" opt; do
+  case $opt in
+    n)
+      NAME=$OPTARG
+      ;;
+    f)
+      FILE=$OPTARG
+      ;;
+    t)
+      TARGET=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      return 125
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      return 125
+      ;;
+  esac
+done
+
 if [ -z "$WL_USER" -o -z "$WL_PASS" -o -z "$WL_ADMIN_URL" ]; then
     echo "Enter WL_USER"
     read WL_USER
@@ -30,7 +52,7 @@ MANAGEAPPSCRIPT=~/.bin/manageApplication.py
 
 WLHOME=/Users/lpjharri/local/appservers/wls-12.1.3
 
-	export CLASSPATH=${JAVA_HOME}/lib/tools.jar:${WLHOME}/wlserver/server/lib/weblogic_sp.jar:${WLHOME}/wlserver/server/lib/weblogic.jar:${WLHOME}/wlserver/../oracle_common/modules/net.sf.antcontrib_1.1.0.0_1-0b3/lib/ant-contrib.jar:${WLHOME}/wlserver/modules/features/oracle.wls.common.nodemanager_2.0.0.0.jar:
+export CLASSPATH=${JAVA_HOME}/lib/tools.jar:${WLHOME}/wlserver/server/lib/weblogic_sp.jar:${WLHOME}/wlserver/server/lib/weblogic.jar:${WLHOME}/wlserver/../oracle_common/modules/net.sf.antcontrib_1.1.0.0_1-0b3/lib/ant-contrib.jar:${WLHOME}/wlserver/modules/features/oracle.wls.common.nodemanager_2.0.0.0.jar:
 
-	java -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust -Dweblogic.security.SSL.protocolVersion=TLS1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.0 weblogic.WLST $MANAGEAPPSCRIPT -u $WL_USER -p $WL_PASS -a $WL_ADMIN_URL -n pec-war-1.0.0 -f /tmp/pec-war-1.0.0.war -t carma1
+java -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust -Dweblogic.security.SSL.protocolVersion=TLS1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.0 weblogic.WLST $MANAGEAPPSCRIPT -u $WL_USER -p $WL_PASS -a $WL_ADMIN_URL -n $NAME -f $FILE -t $TARGET
 
