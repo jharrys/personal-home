@@ -64,6 +64,9 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt share_history
 
+# Key bindings here
+bindkey '\e#' pound-insert                # insert '#' at beginning of line to comment out, NOTE reissuing this on a commented line will remove the # and issue the command
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 

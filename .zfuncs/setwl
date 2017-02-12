@@ -1,0 +1,17 @@
+[ $# -lt 1 ] && echo "usage: $0 set|unset" && return 1
+
+if [ "$1" = "set" ]; then
+
+    echo "Enter WL_USER"
+    read WL_USER
+    echo "Enter WL_PASS"
+    read -s WL_PASS
+    echo "Enter WL_ADMIN_URL"
+    read WL_ADMIN_URL
+    export WL_USER WL_PASS WL_ADMIN_URL
+
+elif [ "$1" = "unset" ]; then
+    unset WL_USER
+    unset WL_PASS
+    unset WL_ADMIN_URL
+fi
