@@ -80,6 +80,21 @@ ForwardAgent yes
 HostName lpv-hwprddb01.co.ihc.com
 User lpjharri
 
+Host devnlp1
+ForwardAgent yes
+HostName lpv-hwdevnlp01.co.ihc.com
+User lpjharri
+
+Host vernlp1
+ForwardAgent yes
+HostName lpv-hwvernlp01.co.ihc.com
+User lpjharri
+
+Host vernlp2
+ForwardAgent yes
+HostName lpv-hwvernlp02.co.ihc.com
+User lpjharri
+
 ######################################################################
 # Personal Systems
 ######################################################################

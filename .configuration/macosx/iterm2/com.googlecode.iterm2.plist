@@ -4100,11 +4100,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>115 63 606 456 0 0 1440 900 </string>
+	<string>269 140 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>464 196 937 465 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>60 182 1333 609 0 0 1440 900 </string>
+	<string>2842 106 1758 609 2560 0 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -6925,7 +6925,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-12-23T01:23:54Z</date>
+	<date>2017-02-13T00:23:33Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -6956,8 +6956,7 @@
 	<integer>10</integer>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Notes</string>
-		<string>Recent Directories</string>
+		<string>Command History</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
@@ -15192,7 +15191,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.13</string>
+	<string>3.0.14</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
