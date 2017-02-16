@@ -45,6 +45,9 @@ fi
 # setup script variables
 ##################################################
 
+# Setup pipes to return last non-zero exit code
+set -o pipefail
+
 # 4=mvn error;3=git merge error;2=git worktree error;1=git fetch error
 EXIT_CONDITION=0
 
@@ -157,6 +160,8 @@ function cleanup() {
     echo "Did not clean up. When done remember to:"
     echo "rm -rf ${TEMP_AREA}; git worktree prune; git branch -D ${TMP_BRANCH_NAME}"
   fi
+
+  set +o pipefail
 }
 
 function request_cleanup() {
@@ -346,5 +351,7 @@ echo "\n"
 if [ -n "$EMAIL" ]; then
   send_email
 fi
+
+set +o pipefail
 
 exit 0
