@@ -22,6 +22,9 @@ function usage() {
 
   -m user@address will email the generated output to the email address
   -o will display the output in realtime
+  -y will automatically cleanup (remove the tmp area)
+  -n will automatically not cleanup
+  -j skip "javadoc:aggregate"
 
   EXIT CODES:
   127 = error cleaning the temp area
@@ -68,6 +71,7 @@ ALL_OUTPUT_FILE=${WORK_DIR}/${SCRIPT_NAME%%.*}-all-output.${DATE}
 EMAIL=""
 OUTPUT=false
 MERGE_BUILD_SUCCESS=false
+JAVADOC="javadoc:aggregate"
 
 ##################################################
 # parse command line options
@@ -76,7 +80,7 @@ MERGE_BUILD_SUCCESS=false
 # -o (displays output in realtime)
 # -y (don't ask to cleanup, go ahead and cleanup)
 ##################################################
-while getopts "m:oyh" opt; do
+while getopts "m:oynjh" opt; do
   case $opt in
     m)
       EMAIL=$OPTARG
@@ -89,6 +93,12 @@ while getopts "m:oyh" opt; do
       ;;
     y)
       CLEANUP_REQUESTED=true
+      ;;
+    n)
+      CLEANUP_REQUESTED=false
+      ;;
+    j)
+      unset JAVADOC
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -165,14 +175,19 @@ function cleanup() {
 }
 
 function request_cleanup() {
-  if [ -n "${CLEANUP_REQUESTED}" ];
+  if [ -z "${CLEANUP_REQUESTED}" ];
   then
-    CLEANUP=1
-  else
     echo "Do you want to cleanup?"
     read -s -n 1 answer
 
     if [ "${answer}" == "Y" -o "${answer}" == "y" ];
+    then
+      CLEANUP=1
+    else
+      CLEANUP=0
+    fi
+  else
+    if [ "${CLEANUP_REQUESTED}" = "true" ];
     then
       CLEANUP=1
     else
@@ -200,7 +215,15 @@ function send_email() {
   cat $MAVEN_OUTPUT_FILE >> $ALL_OUTPUT_FILE 2>/dev/null
   echo "" >> $ALL_OUTPUT_FILE
   echo "=======================================================================================================================================================" >> $ALL_OUTPUT_FILE
-  mail -s "Build for PR# ${PULL_REQUEST_NUMBER} for project ${PROJECT_NAME}: ${STATUS}" ${EMAIL} <${ALL_OUTPUT_FILE}
+
+  FILESIZE=$(stat -f%z ${ALL_OUTPUT_FILE})
+
+  if [ $FILESIZE -gt 1048576 ];
+  then
+  	gzip -c ${ALL_OUTPUT_FILE} | uuencode maven-output-results.txt.gz | mail -s "Build for PR# ${PULL_REQUEST_NUMBER} for project ${PROJECT_NAME}: ${STATUS}" ${EMAIL}
+  else
+    mail -s "Build for PR# ${PULL_REQUEST_NUMBER} for project ${PROJECT_NAME}: ${STATUS}" ${EMAIL} <${ALL_OUTPUT_FILE}
+  fi
 }
 
 ##################################################
@@ -316,9 +339,9 @@ echo "\n"
 echo "Please wait as we compile and test the merged code ..."
 
 if [ "$OUTPUT" = "true" ]; then
-  mvn clean package javadoc:aggregate test -Dtest=\*Integ,\*Test |tee ${MAVEN_OUTPUT_FILE}
+  mvn clean package cobertura:cobertura -Dcobertura.report.format=html $JAVADOC test -Dtest=\*Integ,\*Test -DfailIfNoTests=false |tee ${MAVEN_OUTPUT_FILE}
 else
-  mvn clean package javadoc:aggregate test -Dtest=\*Integ,\*Test &>${MAVEN_OUTPUT_FILE}
+  mvn clean package cobertura:cobertura -Dcobertura.report.format=html $JAVADOC test -Dtest=\*Integ,\*Test -DfailIfNoTests=false &>${MAVEN_OUTPUT_FILE}
 fi
 
 EXIT_CONDITION=$?
