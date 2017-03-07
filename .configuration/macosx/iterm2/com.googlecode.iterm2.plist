@@ -4100,11 +4100,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 140 606 456 0 0 2560 1440 </string>
+	<string>115 0 599 519 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>464 196 937 465 0 0 1440 900 </string>
+	<string>432 137 918 512 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2842 106 1758 609 2560 0 2560 1440 </string>
+	<string>143 280 850 609 0 0 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -4324,6 +4324,7 @@
 			<key>Bound Hosts</key>
 			<array>
 				<string>ac02qq0ecg8wm.co.ihc.com</string>
+				<string>dj2v2t32.co.ihc.com</string>
 			</array>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -6925,7 +6926,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-13T00:23:33Z</date>
+	<date>2017-03-06T20:44:43Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
