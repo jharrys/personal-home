@@ -24,5 +24,5 @@ elif [ $# -lt 1 ]; then
   echo $LISTING |grep -v "\!" |xargs brew cask info |sed -n -f ~/.bin/brewcask.sed
 fi
 
-echo "Apps no longer in homebrew/cask:"
-echo $LISTING|grep "\!"
+#echo "Apps no longer in homebrew/cask:"
+#echo $LISTING|grep "\!"
