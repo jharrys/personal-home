@@ -4102,9 +4102,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 72 599 388 0 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>432 137 918 512 0 0 2560 1440 </string>
+	<string>198 285 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>143 676 850 609 0 0 2560 1440 </string>
+	<string>155 98 850 609 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -6926,7 +6926,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-24T21:18:20Z</date>
+	<date>2017-03-27T14:35:59Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -6954,10 +6954,9 @@
 	<key>ThreeFingerEmulates</key>
 	<true/>
 	<key>TmuxDashboardLimit</key>
-	<integer>10</integer>
+	<integer>2</integer>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Command History</string>
 		<string>Notes</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
