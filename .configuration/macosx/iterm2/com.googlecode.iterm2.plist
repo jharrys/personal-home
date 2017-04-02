@@ -32,6 +32,14 @@
 	<true/>
 	<key>Control</key>
 	<integer>1</integer>
+	<key>Coprocess MRU</key>
+	<array>
+		<string>/Users/lpjharri/tmp/iterm2-send-zmodem.sh</string>
+		<string>/Users/lpjharri/tmp/t.py</string>
+		<string>~/tmp/t.py</string>
+		<string>~/tmp/t.sh</string>
+		<string>t.sh</string>
+	</array>
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
@@ -3994,6 +4002,8 @@
 	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
@@ -4043,7 +4053,7 @@
 	<key>NSColorPanelMode</key>
 	<string>7</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Google Drive/Wallpaper/regular</string>
+	<string>~/tmp</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{954, 628}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -4100,11 +4110,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 72 599 388 0 0 2560 1440 </string>
+	<string>115 32 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>198 285 796 473 0 0 1440 900 </string>
+	<string>514 224 918 512 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>155 98 850 609 0 0 1440 900 </string>
+	<string>32 0 850 609 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -4350,13 +4360,13 @@
 				<key>Alpha Component</key>
 				<real>0.25</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.99820190668106079</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.91000000000000003</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.65000000000000002</real>
+				<real>0.0</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -4368,7 +4378,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -4799,7 +4809,7 @@
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
-			<real>0.0055132515822784809</real>
+			<real>0.46019580696202533</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -4962,6 +4972,19 @@
 			</array>
 			<key>Sync Title</key>
 			<false/>
+			<key>Tab Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.99836933612823486</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.33712905645370483</real>
+				<key>Red Component</key>
+				<real>0.16568893194198608</real>
+			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
@@ -4976,6 +4999,14 @@
 					<key>regex</key>
 					<string></string>
 				</dict>
+				<dict>
+					<key>action</key>
+					<string>AlertTrigger</string>
+					<key>parameter</key>
+					<string>Build finished successfully!</string>
+					<key>regex</key>
+					<string>\[INFO\] BUILD SUCCESS</string>
+				</dict>
 			</array>
 			<key>Unlimited Scrollback</key>
 			<true/>
@@ -4986,7 +5017,7 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use Cursor Guide</key>
-			<false/>
+			<true/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Tab Color</key>
@@ -6767,6 +6798,8 @@
 	<true/>
 	<key>NoSyncSuppressBroadcastInputWarning_selection</key>
 	<integer>0</integer>
+	<key>NoSyncSuppressCoprocessTriggerWarning</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>486435614.47510397</real>
 	<key>NoSyncTimeOfLastPromo</key>
@@ -6926,7 +6959,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-27T14:35:59Z</date>
+	<date>2017-03-31T20:16:23Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -6940,7 +6973,7 @@
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.10738681891025642</real>
+	<real>0.10000000000000001</real>
 	<key>SwitchPaneModifier</key>
 	<integer>5</integer>
 	<key>SwitchTabModifier</key>
@@ -6948,7 +6981,7 @@
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
 	<key>TabStyle</key>
-	<integer>3</integer>
+	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>1</integer>
 	<key>ThreeFingerEmulates</key>
@@ -15194,7 +15227,7 @@
 	<key>iTerm Version</key>
 	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>1</integer>
+	<integer>5</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 	<key>kCPKUseSystemColorPicker</key>

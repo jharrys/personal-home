@@ -121,8 +121,9 @@ alias brewdump='brew bundle dump'                                               
 alias brewcheck='brew bundle check'                                                                                                                           # See if your Brewfile needs updating
 alias brewexecute='brew bundle'                                                                                                                               # Executes install of Brewfile
 alias brewclean='brew bundle cleanup'                                                                                                                         # removes all brews not listed in Brewfile
-alias cask2upgrade='brewcasklist.sh |awk -v RS="" '"'"'{ if ($3 != $6) print $2,"needs to be upgradedd" }'"'"
-alias upgradecask='for x in `cask2upgrade |cut -f 1 -d ":"`; do brew cask uninstall $x; brew cask install $x; done'
+alias brewup='brew update && brew upgrade && brew cleanup'
+alias cask-check='brewcasklist.sh |awk -v RS="" '"'"'{ if ($3 != $6) print $2,"needs to be upgradedd" }'"'"
+alias upgrade-cask='for x in `cask-check |cut -f 1 -d ":"`; do brew cask uninstall $x; brew cask install $x; done; brew cask cleanup'
 
 # Chrome
 alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
