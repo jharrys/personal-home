@@ -3,7 +3,7 @@
 # Stops the Carma application server and services¬
 
 OLDDIR=$(pwd)
-SLEEPCOUNT=30
+SLEEPCOUNT=15
 
 echo "Attempting a normal shutdown ..."
 sudo /usr/local/mysql/support-files/mysql.server stop > /dev/null 2>&1 &
