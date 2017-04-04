@@ -28,9 +28,18 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 # cdpath settings
 #******************************************
 
-CDPATH="~/mounts:/Volumes:~/development:~/development/buildarea:~/development/source_control"
-CDPATH="${CDPATH}:~/development/source_control/hwcir:~/development/source_control/hwcir/git:~/development/source_control/hwcir/svn"
-CDPATH="${CDPATH}:~/development/source_control/playground:~/development/source_control/openshift:~/development/source_control/esa"
+CDPATH="~/mounts"
+CDPATH="${CDPATH}:/Volumes"
+CDPATH="${CDPATH}:~/development"
+CDPATH="${CDPATH}:~/development/source_control"
+CDPATH="${CDPATH}:~/development/source_control/bitbucket-cloud"
+CDPATH="${CDPATH}:~/development/source_control/contracts"
+CDPATH="${CDPATH}:~/development/source_control/general"
+CDPATH="${CDPATH}:~/development/source_control/hwcir"
+CDPATH="${CDPATH}:~/development/source_control/hwcir/git"
+CDPATH="${CDPATH}:~/development/source_control/hwcir/svn"
+CDPATH="${CDPATH}:~/development/source_control/mike-git"
+CDPATH="${CDPATH}:~/development/source_control/openshift"
 export CDPATH
 
 #******************************************
