@@ -89,8 +89,11 @@ plugins=(lol common-aliases git sudo mvn history brew extract python tmux osx zs
 # Setup H2
 export H2HOME="/Users/lpjharri/Applications/h2"
 
+# Setup go
+export GOPATH="/Users/lpjharri/Development/source_control/go"
+
 # PATH variable
-export PATH=/usr/local/sbin:$HOME/.bin:/usr/local/bin:$H2HOME/bin:$PATH
+export PATH=/usr/local/sbin:$HOME/.bin:/usr/local/bin:$H2HOME/bin:$(go env GOPATH)/bin:$PATH
 
 # oh-my-zsh variable
 source $ZSH/oh-my-zsh.sh
