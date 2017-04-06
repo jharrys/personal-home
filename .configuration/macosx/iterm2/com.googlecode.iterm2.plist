@@ -4112,9 +4112,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>115 32 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>514 224 918 512 0 0 1440 900 </string>
+	<string>255 315 918 381 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>32 0 850 609 0 0 1440 900 </string>
+	<string>2 132 1403 609 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -6736,6 +6736,19 @@
 			</array>
 			<key>Sync Title</key>
 			<false/>
+			<key>Tab Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.11147268116474152</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.0</real>
+				<key>Red Component</key>
+				<real>0.72583019733428955</real>
+			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
@@ -6753,6 +6766,8 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use Italic Font</key>
+			<true/>
+			<key>Use Tab Color</key>
 			<true/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
@@ -6959,7 +6974,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-31T20:16:23Z</date>
+	<date>2017-04-05T16:33:30Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
