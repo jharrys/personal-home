@@ -1,0 +1,1 @@
+uid=547254124(lpjharri) gid=20(staff) groups=20(staff),5(operator),12(everyone),62(netaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),399(com.apple.access_ssh),501(access_bpf),33(_appstore),100(_lpoperator),204(_developer),395(com.apple.access_ftp),398(com.apple.access_screensharing)
