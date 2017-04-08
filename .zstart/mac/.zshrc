@@ -28,7 +28,8 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 # cdpath settings
 #******************************************
 
-CDPATH="~/mounts"
+CDPATH="~/"
+CDPATH="${CDPATH}:~/mounts"
 CDPATH="${CDPATH}:/Volumes"
 CDPATH="${CDPATH}:~/development"
 CDPATH="${CDPATH}:~/development/source_control"

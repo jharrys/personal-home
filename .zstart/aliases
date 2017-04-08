@@ -148,6 +148,7 @@ alias dry='patch -Np1 --dry-run'                                                
 alias dp='LC_ALL=C TZ=UTC diff -aNru'                                                                                                                         # Create a unified patch from diff - add the "original target > file.patch"
 
 # GIT stuff
+alias git-redl='git fetch --all; git reset --hard origin/master'                                                                                              # Reset the whole repository with all the files clean
 alias gitinit='git init'                                                                                                                                      # gitinit - creates bare git (use "git add .")
 alias gitinitbare='git init --bare'                                                                                                                           # gitinitbare /some/dirproject.git - creates git repo without work local files
 alias gitrepo='git clone'                                                                                                                                     # gitrepo ~/existing/repo ~/new/repo -OR- gitrepo ssh://john@host/srv/git/some.git
