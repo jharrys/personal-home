@@ -40,6 +40,7 @@ configuration/Sublime Text 2/Backup
 .config/*
 .cups
 .dbvis/*
+.directory
 .e*
 .f*
 # .g* - .gitignore and others should not be ignored
