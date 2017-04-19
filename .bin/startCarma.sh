@@ -8,9 +8,17 @@ unset TAIL
 
 DOMAIN_HOME="/Users/lpjharri/local/wldomains/carma"
 NOHUPLOG="${DOMAIN_HOME}/logs/nohup-carma.log"
+MSG="$0 [-h] [-t] [-l] [-m]\n\n-t:\ttamjunctionsimul\n-l\ttail file\n-m\tstart mysql"
 
-while getopts "mtl" opt; do
+$colored_fg_yellow
+[ $# -lt 1 ] && echo $MSG && $type_reset && exit 1
+
+while getopts "mtlh" opt; do
   case $opt in
+    h)
+      $colored_fg_yellow; echo $MSG; $type_reset
+      exit 1
+      ;;
     m)
       OUTPUT=$(sudo /usr/local/mysql/support-files/mysql.server start)
       $colored_fg_magenta; echo $OUTPUT; $type_reset
@@ -25,11 +33,11 @@ while getopts "mtl" opt; do
       ;;
     \?)
       echo "Invavlid option: -$OPTARG" >&2
-      return 125
+      exit 125
       ;;
     :)
       echo "Option -$OPTARG requires an argument." >&2
-      return 125
+      exit 125
       ;;
   esac
 done
