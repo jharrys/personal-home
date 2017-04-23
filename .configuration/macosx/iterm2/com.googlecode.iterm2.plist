@@ -4112,9 +4112,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>115 32 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>231 185 918 512 0 0 1440 900 </string>
+	<string>55 466 918 381 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>10 16 1403 881 0 0 1440 900 </string>
+	<string>16 135 1410 609 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -5198,12 +5198,16 @@
 			<true/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.11764705882352941</real>
+				<real>0.48480737209320068</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.14509803921568626</real>
+				<real>0.44079643487930298</real>
 				<key>Red Component</key>
-				<real>0.47843137254901957</real>
+				<real>0.44962155818939209</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -6984,7 +6988,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-20T17:07:40Z</date>
+	<date>2017-04-23T01:25:11Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -15252,7 +15256,7 @@
 	<key>iTerm Version</key>
 	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>5</integer>
+	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 	<key>kCPKUseSystemColorPicker</key>
