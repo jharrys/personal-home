@@ -86,6 +86,9 @@ plugins=(lol common-aliases git sudo mvn history brew extract python tmux osx zs
 ###########################
 ##################################################################
 
+# Source my colors file
+source ~/.bin/colors.sh
+
 # Setup H2
 export H2HOME="/Users/lpjharri/Applications/h2"
 
