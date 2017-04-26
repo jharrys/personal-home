@@ -1,0 +1,10 @@
+## Created by Johnnie Harris on 2017-04-25
+#
+## Given a jar/war/ear or any other archived java program, this will read out the contents of the META-INF/MANIFEST.MF
+
+[ $# -lt 1 ] && echo 'usage: readmanifest "app.jar/war/ear/bar"' && return 1
+
+APP=$1
+
+unzip -q -c $APP META-INF/MANIFEST.MF
+

@@ -1,0 +1,21 @@
+## Created by Johnnie Harris on 2017-04-25
+#
+## Given a library name such as "hdd-manager" looks through all the poms recursively through a directory structure to find all
+## applications that depend on it.
+
+[ $# -lt 1 ] && echo 'usage: mvnfindlibs "library-name"' && return 1
+
+LIB=$1
+OUTPUT=($(find . -name "pom.xml" -exec grep -l "$LIB" {} \; |grep -v "$LIB"))
+FINALOUTPUT=()
+
+for x in $OUTPUT
+do
+FINALOUTPUT+=$(echo $x | sed -n 's#.*/\([^/]*\)/pom\.xml#\1#gp')
+done
+
+for y in $FINALOUTPUT
+do
+echo $y
+done
+

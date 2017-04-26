@@ -204,8 +204,6 @@ alias mtest='mvn test'                                                          
 alias minstallfile='mvn install:install-file'                                                                                                                 # mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy
 alias mreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'                                                                                   # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
 alias mdelprojrepo='mvn build-helper:remove-project-artifact'                                                                                                 # removes the full project from the .m2 local repository
-alias mver='mvn versions:set -DnewVersion='                                                                                                                   # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
-alias mrev='mvn versions:revert'                                                                                                                              # requires reverts changes made by mvn versions:set
 alias marchlocal='mvn archetype:generate -DarchetypeCatalog=local'                                                                                            # generate using archetype but get it from the local catalog
 alias mtestreport='mvn surefire-report:report; mvn site -DgenerateReports=false; open target/site/surefire-report.html'
 alias mgencss='mvn site -DgenerateReports=false'                                                                                                              # generate images and css for reports, not full site
@@ -215,6 +213,16 @@ alias mpurge='mvn dependency:purge-local-repository'                            
 alias mvn-deploy='mvn deploy:deploy-file -Durl=http://lpv-hwmaven01.co.ihc.com:8081/nexus/content/repositories/HWCIR -DrepositoryId=hwcir-nexus'            # usage: hwdeployfile -DpomFile=/path/to/pom.xml -Dfile=/path/to/artifact; ensure settings.xml has <server> with respositoryId=hwcir-nexus
 alias -g mdebug='-Dmaven.surefire.debug'                                                                                                                      # allows debugger to be attached; use mdebug anywhere inside the command line; so "mvn clean install mdebug" mdebug is replaced with debug
 alias -g mdg='-X'                                                                                                                                             # supplied anywhere on the command line for mvn starts mvn in with debug level logging
+
+## mvn versions ##
+alias mverset='mvn versions:set'
+alias mverrmsn='mvn versions:set -DremoveSnapshot=true -Dversions-maven-plugin.version=2.3'
+alias mvernew='mvn versions:set -DnewVersion='                                                                                                                   # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
+alias mverunr='mvn versions:use-next-releases -Dincludes='
+alias mverulsn='mvn versions:use-latest-snapshots -Dincludes='
+alias mvercom='mvn versions:commit'                                                                                                                              # requires reverts changes made by mvn versions:set
+alias mverrev='mvn versions:revert'                                                                                                                              # requires reverts changes made by mvn versions:set
+
 
 # RC (my ssh run command)
 alias rcls='rc ls -jj -h'

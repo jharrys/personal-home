@@ -57,10 +57,11 @@ alias hideall='defaults write com.apple.finder AppleShowAllFiles NO; killall Fin
 
 # Caffeinate - an internal MacOS utility to keep the system from sleeping
 # all aliases accept '-t seconds' for timeout value
-alias cafd='caffeinate -d -w $$ &'                                                                                                                            # caffeinate -d keeps display active; keep in the foreground
-alias cafu='caffeinate -u'                                                                                                                                    # caffeinate -u keeps system alive while current user is logged in
-alias cafs='caffeinate -s'                                                                                                                                    # caffeinate -s keeps system alive when on AC
-alias cafpid='caffeinate -w'                                                                                                                                  # caffeinate -w expects a PID and stays alive until PID exits
+# can use $$ for current process
+# can use nohup with &
+alias cafdw='caffeinate -d -w'                                                                                                                            # caffeinate -d keeps display active; keep in the foreground
+alias cafiw='caffeinate -i -w'                                                                                                                            # caffeinate -d keeps display active; keep in the foreground
+alias cafsw='caffeinate -s -w'                                                                                                                                    # caffeinate -s keeps system alive when on AC
 
 # Virtual Box applications
 export DEFAULTVM="Fedora 13"                                                                                                                                  # Set the default VM to work against
