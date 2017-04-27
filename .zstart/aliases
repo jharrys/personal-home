@@ -187,6 +187,7 @@ alias gpr='gitworkflow_gpr.sh -m johnnie.harris@imail.org -o'
 alias gprm='gitworkflow_gpr.sh -m johnnie.harris@imail.org'
 alias gpro='gitworkflow_gpr.sh -o'
 alias gprr='gitworkflow_gpr.sh'
+alias gtv='git tag -l --sort=-v:refname'
 
 # Maven stuff
 alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                                                                                # clean my local repository
@@ -211,6 +212,7 @@ alias mgrep='grep -RIl --exclude-dir target'                                    
 alias mexec='echo mvn exec:java -Dexec.cleanupDaemonThreads=false -Dexec.mainClass='                                                                          # echoes the maven command for executing a java program
 alias mpurge='mvn dependency:purge-local-repository'                                                                                                          # need to be in the project you are working on; this will delete and redownload all deps from ~/.m2
 alias mvn-deploy='mvn deploy:deploy-file -Durl=http://lpv-hwmaven01.co.ihc.com:8081/nexus/content/repositories/HWCIR -DrepositoryId=hwcir-nexus'            # usage: hwdeployfile -DpomFile=/path/to/pom.xml -Dfile=/path/to/artifact; ensure settings.xml has <server> with respositoryId=hwcir-nexus
+alias mreadpom='[ -e pom.xml ] && cat pom.xml |less'
 alias -g mdebug='-Dmaven.surefire.debug'                                                                                                                      # allows debugger to be attached; use mdebug anywhere inside the command line; so "mvn clean install mdebug" mdebug is replaced with debug
 alias -g mdg='-X'                                                                                                                                             # supplied anywhere on the command line for mvn starts mvn in with debug level logging
 
@@ -218,8 +220,9 @@ alias -g mdg='-X'                                                               
 alias mverset='mvn versions:set'
 alias mverrmsn='mvn versions:set -DremoveSnapshot=true -Dversions-maven-plugin.version=2.3'
 alias mvernew='mvn versions:set -DnewVersion='                                                                                                                   # requires -DnewVersion=X.Y.Z; set new versions in poms and children poms
-alias mverunr='mvn versions:use-next-releases -Dincludes='
-alias mverulsn='mvn versions:use-latest-snapshots -Dincludes='
+alias mverur='mvn versions:use-releases'
+alias mverunr='mvn versions:use-next-releases'
+alias mverulsn='mvn versions:use-latest-snapshots'
 alias mvercom='mvn versions:commit'                                                                                                                              # requires reverts changes made by mvn versions:set
 alias mverrev='mvn versions:revert'                                                                                                                              # requires reverts changes made by mvn versions:set
 

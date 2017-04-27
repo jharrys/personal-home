@@ -1,0 +1,10 @@
+## Created by Johnnie Harris on 2017-04-26
+#
+## Tags a git commit; uses a normal tag with a comment
+
+[ $# -lt 1 ] && echo 'usage: gt x.y.z' && return 1
+
+TAG=$1
+
+git tag -m "$TAG" $TAG
+
