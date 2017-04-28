@@ -197,6 +197,11 @@ prompt_history() {
   prompt_segment white black '%!'
 }
 
+# Time
+prompt_time() {
+  prompt_segment violet white '%T'
+}
+
 # Virtualenv: current working virtualenv
 prompt_virtualenv() {
   local virtualenv_path="$VIRTUAL_ENV"
@@ -233,4 +238,11 @@ build_prompt() {
   prompt_end
 }
 
+build_rprompt() {
+  prompt_time
+}
+
 PROMPT='%{%f%b%k%}$(build_prompt) '
+
+RPROMPT='$(build_rprompt) '
+
