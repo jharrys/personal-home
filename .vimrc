@@ -95,8 +95,8 @@ iab <// </C-X><C-O>     " Autocomplete markup tags (remapping C-X, C-O)
   " set formatoptions+=o    " Continue comment marker in new lines.
   set textwidth=0         " Hard-wrap long lines as you type them.
   set expandtab           " Insert spaces when TAB is pressed.
-  set tabstop=2           " Render TABs using this many spaces.
-  set shiftwidth=2        " Indentation amount for < and > commands.
+  set tabstop=4           " Render TABs using this many spaces.
+  set shiftwidth=4        " Indentation amount for < and > commands.
   "duplicate line cmd-d
   map <D-d> yyp
   set noerrorbells        " No beeps.
