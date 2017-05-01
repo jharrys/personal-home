@@ -194,14 +194,17 @@ alias mvnremoverepo='\rm -r ~/.m2/repository/'                                  
 alias mh='mvn help:help -Ddetail=true'                                                                                                                        # helpmemaven
 alias mc='mvn clean'                                                                                                                                          # mvn clean
 alias mcp='GITCOMMIT=$(git rev-parse HEAD);mvn clean package -Dbuild.revision=$GITCOMMIT'                                                                     # mvn clean package
+alias mcp='GITCOMMIT=$(git rev-parse HEAD);mvn clean package -Dbuild.revision=$GITCOMMIT -Dtest=\*Test,\*Integ'                                               # mvn clean package with all tests
 alias mcpskip='GITCOMMIT=$(git rev-parse HEAD);mvn clean package -Dmaven.test.skip=true -Dbuild.revision=$GITCOMMIT'                                          # mvn clean package and skip all the tests
 alias mci='GITCOMMIT=$(git rev-parse HEAD);mvn clean install -Dbuild.revision=$GITCOMMIT'                                                                     # mvn clean install
+alias mci='GITCOMMIT=$(git rev-parse HEAD);mvn clean install -Dbuild.revision=$GITCOMMIT -Dtest=\*Test,\*Integ'                                               # mvn clean install with all tests
 alias mciskip='GITCOMMIT=$(git rev-parse HEAD);mvn clean install -Dmaven.test.skip=true -Dbuild.revision=$GITCOMMIT'                                          # mvn clean package and skip all the tests
 alias mp='GITCOMMIT=$(git rev-parse HEAD);mvn package -Dbuild.revision=$GITCOMMIT'                                                                            # mvn package without the clean
 alias mpskip='GITCOMMIT=$(git rev-parse HEAD);mvn package -Dmaven.test.skip=true -Dbuild.revision=$GITCOMMIT'                                                 # mvn package and skip all the tests
 alias mi='GITCOMMIT=$(git rev-parse HEAD);mvn install -Dbuild.revision=$GITCOMMIT'                                                                            # mvn install without the clean
 alias miskip='GITCOMMIT=$(git rev-parse HEAD);mvn install -Dmaven.test.skip=true -Dbuild.revision=$GITCOMMIT'                                                 # mvn install and skip all the tests
 alias mtest='mvn test'                                                                                                                                        # mntest -Dtest=fqclassname - run a single test, give the fqcn
+alias mta='mvn test -Dtest=\*Test,\*Integ'
 alias minstallfile='mvn install:install-file'                                                                                                                 # mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy
 alias mreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'                                                                                   # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
 alias mdelprojrepo='mvn build-helper:remove-project-artifact'                                                                                                 # removes the full project from the .m2 local repository
@@ -211,8 +214,8 @@ alias mgencss='mvn site -DgenerateReports=false'                                
 alias mgrep='grep -RIl --exclude-dir target'                                                                                                                  # a maven grep for code (I skip binary files, l print file names) & exclude target dir
 alias mexec='echo mvn exec:java -Dexec.cleanupDaemonThreads=false -Dexec.mainClass='                                                                          # echoes the maven command for executing a java program
 alias mpurge='mvn dependency:purge-local-repository'                                                                                                          # need to be in the project you are working on; this will delete and redownload all deps from ~/.m2
-alias mvn-deploy='mvn deploy:deploy-file -Durl=http://lpv-hwmaven01.co.ihc.com:8081/nexus/content/repositories/HWCIR -DrepositoryId=hwcir-nexus'            # usage: hwdeployfile -DpomFile=/path/to/pom.xml -Dfile=/path/to/artifact; ensure settings.xml has <server> with respositoryId=hwcir-nexus
-alias mreadpom='[ -e pom.xml ] && cat pom.xml |less'
+alias mvn-deploy='mvn deploy:deploy-file -Durl=http://lpv-hwmaven01.co.ihc.com:8081/nexus/content/repositories/HWCIR -DrepositoryId=hwcir-nexus'              # usage: hwdeployfile -DpomFile=/path/to/pom.xml -Dfile=/path/to/artifact; ensure settings.xml has <server> with respositoryId=hwcir-nexus
+alias mrp='[ -e pom.xml ] && cat pom.xml |less'
 alias -g mdebug='-Dmaven.surefire.debug'                                                                                                                      # allows debugger to be attached; use mdebug anywhere inside the command line; so "mvn clean install mdebug" mdebug is replaced with debug
 alias -g mdg='-X'                                                                                                                                             # supplied anywhere on the command line for mvn starts mvn in with debug level logging
 
