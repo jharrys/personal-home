@@ -52,17 +52,23 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # HISTORY SETTINGS
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-export HIST_STAMPS="mm/dd/yyyy"
 export HISTFILE=~/.zsh_history
-export HISTSIZE=10000
-export HISTCONTROL=ignoreboth
-export SAVEHIST=10000
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt share_history
+export HISTSIZE=999999999
+export SAVEHIST=
+setopt APPEND_HISTORY            # Sessions will append to history file instead of replacing it
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+#setopt INC_APPEND_HISTORY        # (Turn off if SHARE_HISTORY enabled) Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # Key bindings here
 bindkey '\e#' pound-insert                # insert '#' at beginning of line to comment out, NOTE reissuing this on a commented line will remove the # and issue the command
@@ -113,7 +119,7 @@ export LESS="-S -n -r"
 # SET options
 unsetopt INC_APPEND_HISTORY
 setopt EXTENDED_GLOB
-setopt NO_NOMATCH   # setting EXTENDED_GLOB breaks git-rev syntax (i.e., HEAD^ ... you'd have to escape ^ -> HEAD\^) the proper fix is to set NO_NOMATCH
+setopt NO_NOMATCH   # setting EXTENDED_GLOB breaks git-rev syntax (i.e., HEAD^ ... youd have to escape ^ -> HEAD\^) the proper fix is to set NO_NOMATCH
 
 ##################################################################
 ###########################
@@ -169,10 +175,18 @@ export mailpath MAILCHECK
 ###########################
 ##################################################################
 
+# I need to change the TERM var to get functions
+# to load under the IntelliJ IDEA Terminal. The color when doing /bin/ls would not
+# disable ... so the best way was to set TERM to something else.
+OLDTERM=$TERM
+TERM=xterm-old
 fpath=(~/.zfuncs $fpath)
 for d in ~/.zfuncs
-    do autoload `\ls $d`
+do
+    a=($(/bin/ls $d))
+    autoload $a
 done
+TERM=$OLDTERM
 
 ##################################################################
 ###########################
@@ -185,7 +199,7 @@ done
 ##################################################################
 
 export HELPDIR=~/.zsh_help
-unalias run-help
+unalias run-help &>/dev/null
 autoload run-help
 
 ##################################################################
