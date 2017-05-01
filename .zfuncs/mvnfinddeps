@@ -3,7 +3,7 @@
 ## Given a library name such as "hdd-manager" looks through all the poms recursively through a directory structure to find all
 ## applications that depend on it.
 
-[ $# -lt 1 ] && echo 'usage: mvnfindlibs "library-name"' && return 1
+[ $# -lt 1 ] && echo 'usage: mvnfinddeps "library-name"' && return 1
 
 LIB=$1
 OUTPUT=($(find . -name "pom.xml" -exec grep -l "$LIB" {} \; |grep -v "$LIB"))
