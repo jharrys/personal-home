@@ -29,6 +29,14 @@ alias vi='gvimt'
 alias getw='wget -N -r -nH -nd --no-parent'
 alias pdr='powerline-daemon --replace'
 
+###### Edit startup files ######
+alias cdzr='cd $ZSTART'
+alias cdzd='cd $ZDOTDIR'
+# edit common aliases
+alias eal='vim ${ZSTART}/aliases'
+# edit platform aliases
+alias epal='vim ${ZDOTDIR}/.aliases'
+
 ###### Find ######
 alias findnewer='find . -newerct'                                                                                                                             # findnewerthan '5 minutes ago'
 
@@ -102,6 +110,8 @@ fi
 alias r='fc'                                                                                                                                                  # "r 10" or "r 10 20"; rerun 10 or rerun 10 through 20 (can also be given as string)
 alias rl='fc -l'                                                                                                                                              # "rl 10 20" - lists history 10 to 20
 alias rr='fc -s'                                                                                                                                              # "rr old=new 10" - rerun command 10 sub old with new (instead of 10, can use string)
+alias histbackup='fc -A ~/.configuration/zsh_history'
+alias histrestore="fc -R ~/.configuration/zsh_history; fc -W"
 alias hsync='history -a ; history -n'                                                                                                                         # sync history
 
 alias web='python -m SimpleHTTPServer'                                                                                                                        # with no arg, the server is listening on 8000
@@ -194,17 +204,17 @@ alias mvnremoverepo='\rm -r ~/.m2/repository/'                                  
 alias mh='mvn help:help -Ddetail=true'                                                                                                                        # helpmemaven
 alias mc='mvn clean'                                                                                                                                          # mvn clean
 alias mcp='GITCOMMIT=$(git rev-parse HEAD);mvn clean package -Dbuild.revision=$GITCOMMIT'                                                                     # mvn clean package
-alias mcp='GITCOMMIT=$(git rev-parse HEAD);mvn clean package -Dbuild.revision=$GITCOMMIT -Dtest=\*Test,\*Integ'                                               # mvn clean package with all tests
+alias mcp='GITCOMMIT=$(git rev-parse HEAD);mvn clean package -Dbuild.revision=$GITCOMMIT -Dtest=\*Test,\*Integ -DfailIfNoTests=false'                         # mvn clean package with all tests
 alias mcpskip='GITCOMMIT=$(git rev-parse HEAD);mvn clean package -Dmaven.test.skip=true -Dbuild.revision=$GITCOMMIT'                                          # mvn clean package and skip all the tests
 alias mci='GITCOMMIT=$(git rev-parse HEAD);mvn clean install -Dbuild.revision=$GITCOMMIT'                                                                     # mvn clean install
-alias mci='GITCOMMIT=$(git rev-parse HEAD);mvn clean install -Dbuild.revision=$GITCOMMIT -Dtest=\*Test,\*Integ'                                               # mvn clean install with all tests
+alias mci='GITCOMMIT=$(git rev-parse HEAD);mvn clean install -Dbuild.revision=$GITCOMMIT -Dtest=\*Test,\*Integ -DfailIfNoTests=false'                         # mvn clean install with all tests
 alias mciskip='GITCOMMIT=$(git rev-parse HEAD);mvn clean install -Dmaven.test.skip=true -Dbuild.revision=$GITCOMMIT'                                          # mvn clean package and skip all the tests
 alias mp='GITCOMMIT=$(git rev-parse HEAD);mvn package -Dbuild.revision=$GITCOMMIT'                                                                            # mvn package without the clean
 alias mpskip='GITCOMMIT=$(git rev-parse HEAD);mvn package -Dmaven.test.skip=true -Dbuild.revision=$GITCOMMIT'                                                 # mvn package and skip all the tests
 alias mi='GITCOMMIT=$(git rev-parse HEAD);mvn install -Dbuild.revision=$GITCOMMIT'                                                                            # mvn install without the clean
 alias miskip='GITCOMMIT=$(git rev-parse HEAD);mvn install -Dmaven.test.skip=true -Dbuild.revision=$GITCOMMIT'                                                 # mvn install and skip all the tests
 alias mtest='mvn test'                                                                                                                                        # mntest -Dtest=fqclassname - run a single test, give the fqcn
-alias mta='mvn test -Dtest=\*Test,\*Integ'
+alias mta='mvn test -Dtest=\*Test,\*Integ -DfailIfNoTests=false'
 alias minstallfile='mvn install:install-file'                                                                                                                 # mvninstfile -Dfile=myfile.jar -DgroupId=xxxx -DartifactId=yyyy
 alias mreleaseprep='mvn release:prepare -DpreparationGoals="clean install"'                                                                                   # -Dversion=1 -Dpackaging=jar -DgeneratePom=true
 alias mdelprojrepo='mvn build-helper:remove-project-artifact'                                                                                                 # removes the full project from the .m2 local repository
