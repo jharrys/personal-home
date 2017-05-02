@@ -54,7 +54,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HISTORY SETTINGS
 export HISTFILE=~/.zsh_history
 export HISTSIZE=999999999
-export SAVEHIST=
+export SAVEHIST=999999999
 setopt APPEND_HISTORY            # Sessions will append to history file instead of replacing it
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
