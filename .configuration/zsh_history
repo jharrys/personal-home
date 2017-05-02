@@ -1,0 +1,1796 @@
+: 1492918630:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+  grep hdd-manager $x\
+done
+: 1492918642:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+  grep -l hdd-manager $x\
+done
+: 1492918671:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+  grep -il hdd-manager $x\
+done
+: 1492918708:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+  grep -hl hdd-manager $x\
+done
+: 1492918713:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+  grep -h hdd-manager $x\
+done
+: 1492918723:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+  grep -H hdd-manager $x\
+done
+: 1492918752:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+  grep -H -A 2 hdd-manager $x\
+done
+: 1492918788:0;cd clinicaldata-manager
+: 1492918922:0;mvn versions:display-dependency-updates
+: 1492919005:0;mvn versions:use-next-snapshots 
+: 1492919181:0;mvn versions:use-next-snapshots -Dincludes=org.ihc.hwcir*:*
+: 1492919245:0;for x in 'cat build-order.txt'\
+do\
+echo $x\
+done
+: 1492919270:0;for x in $(cat build-order.txt)\
+do\
+echo $x\
+done
+: 1492919308:0;for x in $(cat build-order.txt)\
+do\
+mci -f $x/pom.xml\
+done
+: 1492919365:0;cp build-order.txt
+: 1492919370:0;cp build-order.txt t.txt
+: 1492919371:0;vim t.txt
+: 1492919402:0;for x in $(cat t.txt)\
+do\
+mci -f ./$x/pom.xml\
+done
+: 1492919444:0;for x in $(cat build-order.txt)\
+do\
+mciskip -f ./$x/pom.xml\
+done
+: 1492919504:0;mcp -f ./pts-manager/pom.xml
+: 1492919603:0;for x in $(cat build-order.txt)\
+do\
+  mvn -f ./$x/pom.xml versions:use-next-snapshots -Dincludes=org.ihc.hwcir*:*\
+done
+: 1492928519:0;brewcasklist.sh L
+: 1492928635:0;brew cask ls -1 L
+: 1492928674:0;brew cask ls -1 | xargs brew cask info
+: 1492928713:0;brew cask ls -1 | xargs brew cask info |sed -n -f ~/.bin/brewcask.sed
+: 1492928736:0;vim ~/.bin/brewcask.sed
+: 1492929332:0;echo $PATH
+: 1492929379:0;brew prune
+: 1492929401:0;cd /usr/local/lib
+: 1492929409:0;ll libsymsea.dylib
+: 1492929421:0;strings libsymsea.dylib
+: 1492929424:0;strings libsymsea.dylib L
+: 1492999350:0;https://yts.ag/torrent/download/2E6963C50EDF6A44CB2A645EF9F2E76381E24D2Ccd ~/tmp
+: 1492999362:0;stream2chromecast.py All.Roads.Lead.To.Rome.2015.720p.BluRay.x264-\[YTS.AG\].mp4
+: 1492999386:0;stream2chromecast.py -stop
+: 1492999413:0;stream2chromecast.py -devicename Fireplace -stop
+: 1492999462:0;kill -9 69880
+: 1492999762:0;stream2chromecast.py -devicename Master -pause
+: 1492999823:0;stream2chromecast.py -devicename Master -stop
+: 1492999851:0;pgrep -f -i stream
+: 1492999856:0;kill -9 70186
+: 1492999913:0;stream2chromecast.py -devicename Master All.Roads.Lead.To.Rome.2015.720p.BluRay.x264-\[YTS.AG\].mp4
+: 1493000264:0;rm -f t.txt
+: 1493000343:0;#find . -name "pom.xml" -exec 
+: 1493000357:0;blah=./bpmn/bpmn-manager/pom.xml
+: 1493000381:0;echo ${blah%*pom.xml}
+: 1493000429:0;for x in $(find . -name "pom.xml")\
+do\
+  echo ${x%*pom.xml)\
+done
+: 1493000455:0;for x in $(find . -name "pom.xml")\
+do\
+  gst ${x%*pom.xml}\
+done
+: 1493000809:0;oldpwd=$(pwd)\
+for x in $(find . -name "pom.xml")\
+do\
+  cd ${x%*pom.xml}\
+  pwd\
+  gst\
+  cd $oldpwd\
+done
+: 1493000996:0;top
+: 1493003880:0;stream2chromecast.py
+: 1493004022:0;mv All.Roads.Lead.To.Rome.2015.720p.BluRay.x264-\[YTS.AG\].mp4 /Volumes/YERTLE
+: 1493013181:0;edit brewcask.sed
+: 1493013188:0;bbedit brewcask.sed
+: 1493013622:0;vim $(which brewcasklist.sh )
+: 1493013641:0;brew cask ls -1 | xargs brew cask info L
+: 1493066620:0;cd /Users/lpjharri/development/source_control/hwcir/git/uber/fhir-manager
+: 1493066679:0;for x in $(find . -name "pom.xml")\
+do\
+echo $x\
+done
+: 1493066703:0;for x in $(find . -name "pom.xml")\
+do\
+echo ${x%*pom.xml}\
+done
+: 1493066768:0;oldpwd=$(pwd)\
+for x in $(find . -name "pom.xml")\
+do\
+cd ${x%*pom.xml}\
+gco .\
+cd $oldpwd\
+done
+: 1493066855:0;oldpwd=$(pwd)\
+for x in $(find . -name "pom.xml")\
+do\
+cd ${x%*pom.xml}\
+rm -f pom.xml.versionsBackup\
+cd $oldpwd\
+done
+: 1493067084:0;mvn versions:dependency-updates-report
+: 1493067190:0;mvn versions:dependency-updates-report -Dincludes=org.ihc.hwcir.*:*
+: 1493067368:0;mvn versions:use-next-releases
+: 1493067704:0;mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.nextMinorVersion}.0-SNAPSHOT
+: 1493067852:0;mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.0
+: 1493067963:0;mvn release:prepare
+: 1493068115:0;mvn versions:set nextSnapshot
+: 1493068143:0;mvn versions:set -DnextSnapshot
+: 1493068659:0;cd ~/.m2/repository
+: 1493068688:0;cd org/codehaus/mojo
+: 1493068696:0;cd versions-maven-plugin
+: 1493069034:0;mvn dependency:get -Dartifact=org.codehaus.mojo:versions-maven-plugin:2.3
+: 1493069045:0;rm -rf 2.1 2.2
+: 1493069346:0;mvn -version
+: 1493069475:0;cd 1
+: 1493069502:0;mv versions-maven-plugin-2.3.jar /tmp/
+: 1493069507:0;mv versions-maven-plugin-2.3.pom /tmp/
+: 1493069510:0;rm -rf 2.3
+: 1493069538:0;jar xf ../versions-maven-plugin-2.3.jar
+: 1493069580:0;mvn install:install-file -Dfile=./versions-maven-plugin-2.3.jar
+: 1493069608:0;#mvn install:install-file -Dfile=./versions-maven-plugin-2.3.jar -DpomFile=./pom
+: 1493069679:0;vim resolver-status.properties
+: 1493069704:0;:q
+: 1493069735:0;rm -rf versions-maven-plugin
+: 1493069739:0;cd /tmp/
+: 1493069774:0;cd 2.3
+: 1493069780:0;4
+: 1493070388:0;gcam "Released version 1.7.0."
+: 1493070634:0;for x in $(cat build-order.txt)\
+do\
+  mvn -f ./$x/pom.xml versions:use-releases -Dincludes=org.ihc.hwcir*:*\
+done
+: 1493070880:0;cd ihc/hwcir
+: 1493070885:0;cd fhir
+: 1493070896:0;5
+: 1493070934:0;mvn versions:use-latest-releases -Dinclude=org.ihc.hwcir.*:*
+: 1493070972:0;mvn versions:use-latest-releases -DInclude=org.ihc.hwcir.*:*
+: 1493071244:0;for x in $(cat build-order.txt)\
+do\
+  mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:*\
+done
+: 1493071422:0;git help status
+: 1493071596:0;git diff-index
+: 1493071607:0;git diff-index HEAD
+: 1493071614:0;git diff-index HEAD --
+: 1493071641:0;git diff-index --quiet HEAD
+: 1493071706:0;test -z "$(git diff-index --name-only HEAD --)" || echo blah
+: 1493071750:0;test -z "$(git diff-index --name-only HEAD --)" || echo DIRTY
+: 1493072938:0;mvn versions:set -DremoveSnapshot
+: 1493073090:0;gcam "Released 1.12.0."
+: 1493073165:0;gd origin/master/HEAD^
+: 1493073171:0;gd origin/master HEAD^
+: 1493073252:0;oldpwd=$(pwd)\
+for x in $(find . -name "pom.xml")\
+do\
+cd ${x%*pom.xml}\
+gst\
+cd $oldpwd\
+done
+: 1493073272:0;ll ~/.bin
+: 1493073297:0;cat ~/.bin/colors.sh
+: 1493073567:0;source ~/.bin/colors.sh\
+oldpwd=$(pwd)\
+for x in $(find . -name "pom.xml")\
+do\
+cd ${x%*pom.xml}\
+${colored_fg_yellow};echo $(pwd);${type_reset}\
+gst\
+cd $oldpwd\
+done
+: 1493073796:0;tput
+: 1493073804:0;man tput
+: 1493073825:0;tput clear
+: 1493073838:0;tput setaf 3
+: 1493073842:0;echo hh
+: 1493073857:0;tput setaf 4;echo hello
+: 1493073919:0;source ~/.bin/colors.sh
+: 1493073932:0;${colored_fg_yellow};echo hello
+: 1493073947:0;tput setaf 3;echo hello
+: 1493073973:0;eval ${colored_fg_yellow};echo hello
+: 1493073976:0;eval ${colored_fg_yellow};echo blue
+: 1493073998:0;eval ${colored_fg_yellow};echo blue;eval ${type_reset}; echo jjjj
+: 1493074017:0;eval ${colored_fg_yellow};echo blue;eval ${type_reset}; echo jjjj;eval ${colord_fg_green};echo blahakdk
+: 1493074029:0;eval ${colored_fg_yellow};echo blue; echo jjjj;eval ${colord_fg_green};echo blahakdk
+: 1493074081:0;blah='eval tput setaf 3'
+: 1493074087:0;${blah}; echo hello
+: 1493074401:0;for x in {0..8}; do \
+    for i in {30..37}; do \
+        for a in {40..47}; do \
+            echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "\
+        done\
+        echo\
+    done\
+done\
+echo ""
+: 1493074429:0;vim ~/.bin/display-all-colors.sh
+: 1493074453:0;chmod +x ~/.bin/display-all-colors.sh
+: 1493074466:0;~/.bin/display-all-colors.sh
+: 1493074653:0;${colored_fg_yellow}
+: 1493074681:0;\[$colored_fg_yellow\]
+: 1493074829:0;%{%F{green}%}
+: 1493074847:0;%F{green}
+: 1493074864:0;%F{${colored_fg_yello}}
+: 1493075071:0;${colored_fg_red}
+: 1493075645:0;vim display-all-colors.sh
+: 1493075773:0;. ./colors.sh
+: 1493075785:0;display-my-colors
+: 1493075799:0;rm -f display-all-colors.sh
+: 1493075819:0;eval ${colored_fg_red}
+: 1493075828:0;echo "hello my name is Johnny"
+: 1493075842:0;eval ${colored_fg_red}; echo "Hello my name is roddy"
+: 1493075845:0;echo blah
+: 1493075900:0;eval ${colored_fg_red}; echo "Hello my name is roddy"; eval ${type_reset}; eval ${colored_fg_green}; echo "blodddy"
+: 1493075947:0;cat .cc_device_cache
+: 1493075956:0;rm -f .cc_device_cache
+: 1493076014:0;eval ${colored_bg_cyan}; echo yabadabadoo
+: 1493076060:0;alias ga
+: 1493076065:0;alias gaa
+: 1493076077:0;ga .bin/colors.sh
+: 1493076091:0;gc "Updated colors.sh with a function to display all colors."
+: 1493076100:0;gc -m "Updated colors.sh with a function to display all colors."
+: 1493076128:0;gcam "sourced in my colors.sh."
+: 1493076540:0;oldpwd=$(pwd)\
+for x in $(find . -name "pom.xml")\
+do\
+cd ${x%*pom.xml}\
+eval ${colored_fg_yellow}; gst; eval ${type_reset}\
+cd $oldpwd\
+done
+: 1493076558:0;oldpwd=$(pwd)\
+for x in $(find . -name "pom.xml")\
+do\
+cd ${x%*pom.xml}\
+eval ${colored_fg_yellow}; pwd; eval ${type_reset}\
+gst\
+cd $oldpwd\
+done
+: 1493077330:0;cat ~/.m2/repository/org/ihc/hwcir/protocols/service/care-process-manager
+: 1493077355:0;ll ~/.m2/repository/org/ihc/hwcir/protocols/service/care-process-manager
+: 1493078789:0;for x in $(cat build-order.txt)\
+do\
+  eval ${colored_fg_yellow};pwd;eval ${type_reset}\
+  mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:*\
+done
+: 1493078948:0;find . -name "pom.xml" -exec grep care-process-manager {} \;
+: 1493078954:0;find . -name "pom.xml" -exec grep -H care-process-manager {} \;
+: 1493079111:0;echo $?
+: 1493079205:0;rm -f pom.xml.versionsBackup
+: 1493079340:0;vim $(which brewcasklist.sh)
+: 1493079389:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e '/^Updated/'
+: 1493079847:0;#mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n '/^Updated/'
+: 1493079849:0;man sed
+: 1493079899:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n '/Updated/p'
+: 1493080239:0;blah=("one" "two")
+: 1493080251:0;echo ${blah[0]}
+: 1493080403:0;echo $blah[0]
+: 1493080407:0;echo $blah[1]
+: 1493080414:0;echo ${blah[1]}
+: 1493080419:0;echo ${blah[2]}
+: 1493080533:0;bl=3
+: 1493080566:0;${bl:|blah}
+: 1493080582:0;${3:|blah}
+: 1493080996:0;a=(1 2 4)
+: 1493081005:0;b=(1 3 5)
+: 1493081027:0;${a:*b}
+: 1493081042:0;c=${a:*b}
+: 1493081061:0;c=${a:|b}
+: 1493081216:0;c+=9
+: 1493081232:0;$c[3]
+: 1493081276:0;echo ${a:*}
+: 1493081646:0;${c#}
+: 1493081657:0;${#c}
+: 1493081661:0;echo ${#c}
+: 1493081670:0;echo c[1]
+: 1493081675:0;echo $c[1]
+: 1493081679:0;echo $c[2]
+: 1493081683:0;echo $c[3]
+: 1493081685:0;echo $c[4]
+: 1493081689:0;echo $c[5]
+: 1493081696:0;echo ${#a}
+: 1493081726:0;my=('blue' 'blah' 1 3 5 7 'red')
+: 1493081735:0;echo ${#my}
+: 1493081906:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e '/Updated/p' -e '/care-process-anager/p'
+: 1493081954:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e '/Updated/p' -e 's/care-process-anager/&/p'
+: 1493082021:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e '/Updated/p' -e 's/:.*:/&/p'
+: 1493082141:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated.*:(.*):/\1/p'
+: 1493082270:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated.*:\(.*\):/\1/p'
+: 1493082687:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |perl -pe 's/.*Updated.*:\(.*?\):/\1/p'
+: 1493082717:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |perl -pe 's/.*Updated.*:\(.*?\):/\1/'
+: 1493083698:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated.*\(:.*:\)/\1/p'
+: 1493083792:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*\(Updated[^:].*:.*:\)/\1/p'
+: 1493084338:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*\(Updated[^:]*:.*:\)/\1/p'
+: 1493084367:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated\([^:]*:.*:\)/\1/p'
+: 1493084401:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated\([^:]*:[^:]*:\)/\1/p'
+: 1493084436:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated\([^:]*:[^:]*:\)/BLAH\1BLAH/p'
+: 1493084474:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated[^:]*:\([^:]*:\)/BLAH\1BLAH/p'
+: 1493084515:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated[^:]*:\([^:]*\):/BLAH\1BLAH/p'
+: 1493084633:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated[^:]*:\([^:]*\):/BLAH\1BLAH/'
+: 1493084689:0;HH=$(mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n -e 's/.*Updated[^:]*:\([^:]*\):/BLAH\1BLAH/p')
+: 1493084728:0;HH=$(mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n 's/.*Updated[^:]*:\([^:]*\):/BLAH\1BLAH/gp')
+: 1493085004:0;HH=$(mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n 's/.*Updated[^:]*:\([^:]*\):.*/BLAH\1BLAH/gp')
+: 1493085028:0;HH=$(mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n 's/.*Updated[^:]*:\([^:]*\):.*/\1/gp')
+: 1493085123:0;HH=$(mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')
+: 1493085593:0;echo $my
+: 1493085608:0;[ -z $my ] && echo "blah"
+: 1493085615:0;[ -z "$my" ] && echo "blah"
+: 1493085620:0;[ -n "$my" ] && echo "blah"
+: 1493085628:0;me=
+: 1493085637:0;[ -n "$me" ] && echo "blah"
+: 1493085643:0;[ -z "$me" ] && echo "blah"
+: 1493085712:0;for x in $(cat build-order.txt)\
+do\
+  OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Uploaded[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+\
+  [ -n $OUTPUT ] && eval ${colored_fg_yellow};echo $OUTPUT;${type_reset}\
+done
+: 1493085732:0;for x in $(cat build-order.txt)\
+do\
+  OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Uploaded[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+\
+  [ -n $OUTPUT ] && eval ${colored_fg_yellow};echo $OUTPUT;eval ${type_reset}\
+done
+: 1493085776:0;for x in $(cat build-order.txt)\
+do\
+  OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Uploaded[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+\
+  [ -n $OUTPUT ] && echo $OUTPUT\
+done
+: 1493085834:0;history |tail
+: 1493085874:0;OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Uploaded[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')
+: 1493085912:0;mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Uploaded[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp'
+: 1493085968:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* 
+: 1493086047:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Uploaded[^:]*:\([^:]*\):/\1/p'
+: 1493086093:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Uploaded[^:]/p'
+: 1493086102:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n '/.*Uploaded[^:]/p'
+: 1493086151:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n '/.*Uploaded[^:]*/p'
+: 1493086188:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n '/.*Uploaded [^:]*/p'
+: 1493086255:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* |sed -n 's/.*Updated[^:]*:\([^:]*\):.*/BLAH\1BLAH/gp\
+'
+: 1493086329:0;#for x in $(cat build-order.txt)\
+#do\
+  #OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+#\
+  #[ -n $OUTPUT ] && echo $OUTPUT\
+#done
+: 1493086337:0;for x in $(cat build-order.txt)\
+do\
+  OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+\
+  [ -n $OUTPUT ] && echo $OUTPUT\
+done
+: 1493086397:0;for x in $(cat build-order.txt)\
+do\
+  OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+\
+  [ -n "$OUTPUT" ] && echo $OUTPUT\
+done
+: 1493086480:0;for x in $(cat build-order.txt)\
+do\
+  OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+\
+  eval ${colored_fg_yellow}; echo $x; eval ${type_reset}\
+  [ -n "$OUTPUT" ] && echo $OUTPUT\
+done
+: 1493086546:0;for x in $(cat build-order.txt)\
+do\
+  OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+\
+  [ -n "$OUTPUT" ] && eval ${colored_fg_yellow}; echo $x; eval ${type_reset} && echo $OUTPUT\
+done
+: 1493086609:0;OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')
+: 1493086631:0;OUTPUT=$(mvn -f ./hdd-manager/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')
+: 1493086641:0;echo $OUTPUT
+: 1493086648:0;[ -n "$OUTPUT" ] && echo empty
+: 1493086653:0;[ -z "$OUTPUT" ] && echo empty
+: 1493086799:0;for x in $(cat build-order.txt)\
+do\
+  OUTPUT=$(mvn -f ./$x/pom.xml versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:* | sed -n 's/.*Updated[^:]*:\([^:]*\):.*to version \(.*\)/\1:\2/gp')\
+\
+  if [ -n "$OUTPUT" ]; then\
+    eval ${colored_fg_yellow}; echo $x; eval ${type_reset}\
+    echo $OUTPUT\
+  fi\
+done
+: 1493087187:0;cd ../pe-app
+: 1493087205:0;../pec
+: 1493087522:0;cd ~/mounts/jenkins/hwmaven/hwjenkins-share/fhir-manager/212
+: 1493087549:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./fhir-manager-1.7.0.jar
+: 1493087599:0;vim carma-war.iml
+: 1493087660:0;cd ~/.m2/repository/org/codehaus/mojo/versions-maven-plugin
+: 1493087671:0;cat maven-metadata-hwcir.xml
+: 1493087680:0;cat maven-metadata-local.xml
+: 1493087686:0;cat resolver-status.properties
+: 1493087731:0;mvn install:install-file -Dfile=./versions-maven-plugin-2.3.jar -DpomFile=./versions-maven-plugin-2.3.pom
+: 1493087760:0;2
+: 1493087763:0;rm -rf 2.2
+: 1493087771:0;rm -rf maven-metadata-hwcir.xml*
+: 1493088314:0;mvn help:effective-pom
+: 1493088443:0;mvn help:effective-pom > out.xml
+: 1493088448:0;bbedit out.xml
+: 1493088667:0;git help diff
+: 1493088675:0;git help
+: 1493088698:0;gd --no-pager
+: 1493088702:0;alias gd
+: 1493088714:0;git --no-pager diff
+: 1493088743:0;gcam "Released version 1.10.0 with updated dep cpm of 1.12.0."
+: 1493088801:0;gcam "Released update with dep cpm of 1.12.0."
+: 1493089036:0;../../care-process-manager/30
+: 1493089055:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./care-process-manager-1.12.0.jar
+: 1493090353:0;cat pom.xmlL
+: 1493090421:0;cd 33
+: 1493090434:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./carma-war.war
+: 1493091005:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/fhir-manager/ --user lpjharri:q55f3ixx
+: 1493091087:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/fhir-manager/lastSuccessfulBuild --user lpjharri:q55f3ixx
+: 1493091095:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/fhir-manager/build --user lpjharri:q55f3ixx
+: 1493091576:0;cd ~/.m2/repository/org/ihc/hwcir/
+: 1493091663:0;cd protocols/service
+: 1493092002:0;cd /Users/lpjharri/development/source_control/hwcir/git/uber/care-process-manager
+: 1493092102:0;cd ../care-process-manager
+: 1493092189:0;git log --summary 
+: 1493092206:0;git log --full-diff 
+: 1493092228:0;alias |grep git log
+: 1493092232:0;alias |grep "git log"
+: 1493092282:0;cd ../fhir-manager
+: 1493092285:0;git log -p
+: 1493093561:0;git log 32e7dbd7ceec7c1f70454ac0eea827951e4b691a
+: 1493093599:0;git help show
+: 1493093661:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/fhir-manager/lastSuccessfulBuild/api/json\?pretty\=true --user lpjharri:q55f3ixx
+: 1493093902:0;git show 32e7dbd7ceec7c1f70454ac0eea827951e4b691a
+: 1493096536:0;mvn versions:set -DnextSnapshot=true -Dversions-maven-plugin.version=2.3
+: 1493096825:0;gcam "Rolled to version 1.8.0-SNAPSHOT."
+: 1493096909:0;find . -name "pom.xml" -exec grep "fhir-manager" {} \;
+: 1493096956:0;mvn versions:use-latest-snapshots
+: 1493096968:0;git versions:revert
+: 1493097015:0;cat ../fhir-manager/pom.xml L
+: 1493097076:0;mvn versions:set -DnextSnapshot=true
+: 1493097133:0;gcam "Rolled to version 1.13.0-SNAPSHOT."
+: 1493097160:0;find . -name "pom.xml" -exec grep -H "care-process-manager" {} \;
+: 1493097186:0;mvn versions:use-latest-snapshots -Dincludes=org.ihc.hwcir.fhir:*
+: 1493097195:0;mvn versions:use-latest-snapshots -Dincludes=org.ihc.hwcir.*:*
+: 1493097208:0;mvn versions:revert
+: 1493097269:0;mvn versions:use-latest-snapshots -Dincludes=org.ihc.hwcir.protocols.service:*
+: 1493097345:0;gcam "Rolled to version 2.1.0-SNAPSHOT."
+: 1493097378:0;gcam "Rolled version to 1.11.0-SNAPSHOT."
+: 1493097393:0;find . -name "pom.xml" -exec grep -H "carma-war" {} \;
+: 1493097412:0;find . -name "pom.xml" -exec grep -H "pe-carma" {} \;
+: 1493097487:0;cd fhir-manager
+: 1493097497:0;rm -v pom.xml.versionsBackup
+: 1493097782:0;rm -rf pom.xml.versionsBackup
+: 1493098649:0;gd --index
+: 1493098680:0;gcam "Updated dock shortcut."
+: 1493098759:0;find . -name "pom.xml" -exec grep -H "fhir-manager" {} \;
+: 1493098771:0;find . -name "pom.xml" -exec grep -l "fhir-manager" {} \;
+: 1493098828:0;echo $($(find . -name "pom.xml" -exec grep -l "fhir-manager" {} \;)%%*pom.xml)
+: 1493098844:0;HH=(find . -name "pom.xml" -exec grep -l "fhir-manager" {} \;)
+: 1493098881:0;HH=$($(find . -name "pom.xml" -exec grep -l "fhir-manager" {} \;)%%*pom.xml)
+: 1493098894:0;HH=$(find . -name "pom.xml" -exec grep -l "fhir-manager" {} \;)
+: 1493098906:0;echo $HH
+: 1493098957:0;echo $HH[3]
+: 1493098960:0;echo $HH[4]
+: 1493099140:0;HH=($(find . -name "pom.xml" -exec grep -l "fhir-manager" {} \;))
+: 1493099146:0;echo ${#HH}
+: 1493099156:0;echo $HH[1]
+: 1493099159:0;echo $HH[2]
+: 1493099179:0;echo ${HH[2]%*pom.xml}
+: 1493099187:0;echo ${HH[2]%*/pom.xml}
+: 1493099206:0;echo ${HH[2]#*/pom.xml}
+: 1493099228:0;echo ${HH[2]#pom.xml*}
+: 1493099306:0;B=($(find . -name "pom.xml" -exec grep -l "fhir-manager" {} \;))
+: 1493099310:0;A=()
+: 1493099313:0;echo $A
+: 1493099315:0;echo $B
+: 1493099326:0;$B[1]
+: 1493099329:0;echo $B[1]
+: 1493099393:0;echo ${${A[1]}}[1]
+: 1493099399:0;echo ${${A[1]}}
+: 1493099404:0;echo ${${A[1]}[1]}
+: 1493099428:0;A=($B)
+: 1493099476:0;A=(B)
+: 1493099483:0;echo $A[1]
+: 1493099489:0;echo $A[1][1]
+: 1493099501:0;echo ${$A[1]}[1]
+: 1493100341:0;TARGET=blue
+: 1493100365:0;CONFIG=($(P)TARGET})
+: 1493100390:0;echo $CONFIG
+: 1493100404:0;echo $TARGET
+: 1493100492:0;echo ${#CONFIG}
+: 1493100538:0;foo=bar
+: 1493100541:0;bar=baz
+: 1493100543:0;echo $foo
+: 1493100546:0;echo $bar
+: 1493100563:0;echo ${(P)foo}
+: 1493100581:0;echo ${(P)${foo}}
+: 1493100623:0;config=(${(P)}${foo})
+: 1493100626:0;echo $config
+: 1493100649:0;echo $config[1]
+: 1493100684:0;echo ${(P)config[0]}
+: 1493100688:0;echo ${(P)config[1]}
+: 1493100707:0;foo=blah
+: 1493100712:0;echo ${(P)config}
+: 1493100838:0;CONFIG=\$$TARGET
+: 1493100867:0;echo ${CONFI[*]}
+: 1493100888:0;dev=(server1 user1 target1)
+: 1493100897:0;TARGET=dev
+: 1493100909:0;eval CONFIG=\$$TARGET
+: 1493100918:0;echo ${CONFIG[1]}
+: 1493100932:0;echo ${CONFIG[*]}
+: 1493100999:0;dev[2]=blha1
+: 1493101003:0;echo $dev
+: 1493101010:0;echo $CONFIG[1]
+: 1493101018:0;echo $CONFIG[4]
+: 1493101041:0;CONFIG=(${(P)TARGET})
+: 1493101044:0;echo $CONFIG[3]
+: 1493101047:0;echo $CONFIG[2]
+: 1493101187:0;b=("blah" "yellow" "black")
+: 1493101233:0;a=(${(P)b})
+: 1493101235:0;echo 4a
+: 1493101332:0;c=b
+: 1493101345:0;a=(${(P)c})
+: 1493101352:0;echo $q[1]
+: 1493101357:0;echo $a[1]
+: 1493101360:0;echo $a[2]
+: 1493101390:0;echo ${c}
+: 1493101452:0;a=("yellow" "green" "blue")
+: 1493101463:0;b=("one" "two" "three")
+: 1493101472:0;c=a
+: 1493101474:0;d=b
+: 1493101520:0;e=(${(P)c} ${(P)d})
+: 1493101523:0;echo $e[1]
+: 1493101528:0;echo $e[3]
+: 1493101530:0;echo $e[4]
+: 1493101533:0;echo $e[5]
+: 1493101598:0;echo $e[$c]
+: 1493101626:0;echo $e[a]
+: 1493101700:0;e=(${c})
+: 1493101833:0;e=(${(P)c})
+: 1493101853:0;e=(c d)
+: 1493101933:0;f=(${(P)b})
+: 1493101980:0;f=(${(P)${(P)b}})
+: 1493101995:0;f=(${(P)${(P)e}})
+: 1493102010:0;f=(${(P)e})
+: 1493102024:0;echo $e
+: 1493102056:0;e=(a b)
+: 1493102066:0;f=(${(P)e[2]})
+: 1493102521:0;f=(${(P)e[1]})
+: 1493102524:0;echo $f
+: 1493102679:0;echo $b
+: 1493102684:0;c=(a b)
+: 1493102701:0;d=(${(P)c[2]})
+: 1493104388:0;for ((i=1; i<${#d}; i++))\
+do\
+echo $d[i]\
+done
+: 1493104404:0;for ((i=0; i<${#d}; i++))\
+do\
+echo $d[i]\
+done
+: 1493104606:0;for ((i=0; i<${#c}; i++))\
+do\
+d=(${(P)c[i]})\
+done
+: 1493104682:0;for ((i=1; i<${#c}; i++))\
+do\
+d=(${(P)c[i]})\
+for ((j=1; j<${#d}; j++))\
+do\
+  echo $d[j]\
+done\
+done
+: 1493104707:0;for ((i=1; i<=${#c}; i++))\
+do\
+d=(${(P)c[i]})\
+for ((j=1; j<=${#d}; j++))\
+do\
+  echo $d[j]\
+done\
+done
+: 1493104902:0;cd mqueue
+: 1493104907:0;../postfix
+: 1493104927:0;locate mbox
+: 1493104974:0;mail -f ./mbox
+: 1493105056:0;pwd
+: 1493105674:0;chmod +x ~/tmp/recurse.sh
+: 1493105679:0;chmod +x ~/tmp
+: 1493105682:0;chmod +x ~/tmp/
+: 1493105689:0;ll ~/tmp/
+: 1493105717:0;~/tmp/recurse.sh
+: 1493105746:0;~/tmp/recurse.sh fhir-manager
+: 1493106062:0;find . -name "pom.xml" -exec grep -l hdd-manager {} \;
+: 1493106099:0;~/tmp/recurse.sh hdd-manager
+: 1493106336:0;a=("a" "b" "c")
+: 1493106347:0;b=("1" "2" "3")
+: 1493106352:0;c=()
+: 1493106356:0;c+=a
+: 1493106360:0;c+=b
+: 1493106367:0;echo $c
+: 1493106398:0;d=(${(P)c[1]})
+: 1493106400:0;echo $d
+: 1493106920:0;ðƒ¿¤ƒ€
+: 1493106931:0;echo ðƒ¿¤ƒ€
+: 1493107713:0;sudo shutdown -s +90
+: 1493136750:0;find . -name "pom.xml" -exec grep -l "care-process-manager" {}\;
+: 1493136763:0;find . -name "pom.xml" -exec grep -l "care-process-manager" {} \;
+: 1493137197:0;gpr 7
+: 1493137474:0;mvn versions:use-next-releases -Dincludes=org.ihc.hwcir.protocols.service:*
+: 1493137522:0;mvn versions:use-next-release -Dincludes=org.ihc.hwcir.protocols.service:*
+: 1493137545:0;mvn versions:use-latest-release -Dincludes=org.ihc.hwcir.protocols.service:*
+: 1493137557:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.protocols.service:*
+: 1493137653:0;mvn versions:use-latest-releases -Dincludes=org.ihc.hwcir.*:*
+: 1493137698:0;mvn versions:help
+: 1493137831:0;mvn versions:set -DremoveSnapshot=true
+: 1493137857:0;git versions:commit
+: 1493137953:0;gcam "Released version 1.13.0."
+: 1493138111:0;cd ~/mounts/jenkins
+: 1493138138:0;cd ~/mounts/jenkins/hwmaven/hwjenkins-share/care-process-manager/33
+: 1493138156:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./care-process-manager-1.13.0.jar
+: 1493138250:0;gcam "Released 1.11.0 with care-process-mgr 1.13.0."
+: 1493138357:0;mvn versions:use-releases -Dincludes=org.ihc.hwcir.*:*
+: 1493138433:0;cat pom.xml H
+: 1493138443:0;cat pom.xml |head 20
+: 1493138446:0;cat pom.xml |head -20
+: 1493138470:0;gcam "Released 2.1.0 with cpm 1.13.0."
+: 1493138749:0;gcam "Rolled to 1.14.0-SNAPSHOT."
+: 1493138768:0;cd -
+: 1493139127:0;gcam "Rolled to 1.12.0-SNAPSHOT."
+: 1493151107:0;cd /Users/lpjharri/development/source_control/hwcir/git/uber/pe-carma
+: 1493151120:0;gpr 94
+: 1493152257:0;mvn versions:set -DremoveSnapshot=true -Dversions-maven-plugin.version=2.3
+: 1493152296:0;gcam "Released 2.1.0."
+: 1493152351:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/PE%20\(Carma\)/build --user lpjharri:q55f3ixx
+: 1493152486:0;cd ~/mounts/jenkins/hwmaven/hwjenkins-share/pe-carma/327
+: 1493152618:0;scp PE-V2.1.0-201704252032.jar dev1:.
+: 1493152624:0;scp PE-V2.1.0-201704252032.jar ver1:.
+: 1493152668:0;cp PE-V2.1.0-201704252032.jar $DOMAIN_HOME/hwcir-properties/bpmn/protocol-lib
+: 1493152671:0;cd $DOMAIN_HOME/hwcir-properties/bpmn/protocol-lib
+: 1493152682:0;rm -f PE-V2.0.0-201703302226.jar
+: 1493152692:0;chmod +r PE-V2.1.0-201704252032.jar
+: 1493152730:0;activiti-deploy.sh -h localhost -p 3306 deploy ./PE-V2.1.0-201704252032.bar
+: 1493152756:0;activiti-deploy.sh -h lpv-hwdevdb01.co.ihc.com -p 3307 deploy ./PE-V2.1.0-201704252032.bar
+: 1493152773:0;activiti-deploy.sh -h lpv-hwvaldb01.co.ihc.com -p 3307 deploy ./PE-V2.1.0-201704252032.bar
+: 1493152780:0;activiti-deploy.sh -h lpv-hwvaldb01.co.ihc.com -p 3306 deploy ./PE-V2.1.0-201704252032.bar
+: 1493153105:0;cd hwcir-properties/bpmn/protocol-lib
+: 1493153257:0;gco -b 1.11.0 88025c2e3be19dea1068a88cc6fd3fa648f34f8c
+: 1493153274:0;git tag -m "1.11.0" 1.11.0
+: 1493153294:0;gb -D 1.11.0
+: 1493153347:0;gco -b 170 32e7dbd7ceec7c1f70454ac0eea827951e4b691a
+: 1493153513:0;gco -b 170 e9a3be8683121f8a13777dcb8db625c195a771ba
+: 1493153527:0;git tag -m "1.7.0" 1.7.0
+: 1493153545:0;gb -d 170
+: 1493153568:0;gco -b 180 ae6d71fb529fe91568e3b750a87ac29f679fefc5
+: 1493153586:0;git tag -m "1.8.0" 1.8.0
+: 1493153603:0;gb -d 180
+: 1493153638:0;gco -b 110 026ef8bb4c1f9c945be73ba28ab9f76611437c2a
+: 1493153656:0;git tag -m "1.10.0" 1.10.0
+: 1493153674:0;gb -d 110
+: 1493153708:0;gco -b 12 f4f49065f215b3564626d5a8299d7ae0601e227b
+: 1493153722:0;git tag -m "1.12.0" 1.12.0
+: 1493153732:0;gb -d 12
+: 1493153755:0;gco -b 13 2a83062417a77632f90d3c6f65637917aacab835
+: 1493153769:0;git tag -m "1.13.0" 1.13.0
+: 1493153780:0;gb -d 13
+: 1493153903:0;gco -b 210 ab96c69190b36a889a360cba125cacc54122630b
+: 1493153934:0;git tag -m "2.1.0" 2.1.0
+: 1493154319:0;git tag
+: 1493154329:0;gb -d 210
+: 1493154527:0;cd ~/mounts/jenkins/hwmaven/hwjenkins-share/carma-war/37
+: 1493154538:0;cp carma-war.war $DOMAIN_HOME/autodeploy
+: 1493155849:0;cd /Users/lpjharri/.configuration/
+: 1493155880:0;for x in $(cat hwcir_systems)\
+do\
+echo $x\
+done
+: 1493155899:0;for x in $(cat hwcir_systems)\
+do\
+rcrmnotmux $x\
+done
+: 1493156286:0;cd /Users/lpjharri/Development/source_control/hwcir/git/uber/pe-carma
+: 1493156315:0;mvn versions:commit
+: 1493156338:0;gcam "Rolled to version 2.2.0-SNAPSHOT."
+: 1493158156:0;sudo vim /etc/sudoers
+: 1493159764:0;jar xf ../carma-war.war
+: 1493159772:0;cat META-INF/MANIFEST.MF
+: 1493159790:0;vim web.xml
+: 1493159812:0;take tmp2
+: 1493159817:0;jar xf ../pec-war-1.1.0.war
+: 1493159821:0;cd WEB-INF
+: 1493159827:0;less web.xml
+: 1493159838:0;less weblogic.xml
+: 1493159898:0;.../tmp2
+: 1493159903:0;cd tmp2/WEB-INF
+: 1493159915:0;cd tmp/WEB-INF
+: 1493159918:0;vim weblogic.xml
+: 1493159935:0;rm -rf tmp2
+: 1493159951:0;jar cfm ../blah.war META-INF/MANIFEST.MF *
+: 1493159980:0;mv carma-war.war carma-war.war.ori
+: 1493159992:0;mv carma-war.war.ori ..
+: 1493160006:0;mv blah.war carma-war-1.11.0.war
+: 1493160056:0;vim ~/.bin/colors.sh
+: 1493160093:0;vim $(which startCarma.sh)
+: 1493160250:0;cd /Users/lpjharri/.bin
+: 1493160272:0;. colors.sh
+: 1493160300:0;vim colors.sh
+: 1493163734:0;gcam "Fixed function declaration in colors.sh - name was not legal."
+: 1493166071:0;nohup cafd &
+: 1493166087:0;cafd
+: 1493166093:0;ps -ef |grep caf
+: 1493166104:0;kill -9 %1
+: 1493166108:0;cafd &
+: 1493166129:0;man caffeinate
+: 1493166257:0;alias cafd
+: 1493166262:0;echo $$
+: 1493166305:0;pgrep -f -i virtual
+: 1493166311:0;ps -ef |grep virtual
+: 1493166325:0;ps aux |grep virtual
+: 1493166345:0;man pgrep
+: 1493166372:0;pgrep -f -l -i virtual
+: 1493166426:0;ps aux |grep 60309
+: 1493166474:0;caffeinate -i VirtualBoxVM
+: 1493166493:0;caffeinate -i VirtualBoxVM.app
+: 1493166508:0;caffeinate -i make
+: 1493166612:0;caffeinate -i -w 60309
+: 1493166620:0;caffeinate -i -w 60309 &
+: 1493166629:0;kill %1
+: 1493166633:0;jobs
+: 1493166642:0;nohup caffeinate -i -w 60309 &
+: 1493166652:0;ps -ef |grep caff
+: 1493166711:0;alias |grep caff
+: 1493166921:0;rm -f nohup.out
+: 1493166927:0;man nohup
+: 1493166985:0;vim .zstart/mac/.aliases
+: 1493167115:0;alias |grep L
+: 1493167119:0;alias
+: 1493167130:0;ll L
+: 1493168941:0;which L
+: 1493169109:0;alias L
+: 1493169151:0;grep NUL *
+: 1493169156:0;grep NUL .*
+: 1493169370:0;alias |grep mv
+: 1493170999:0;grep MAN *
+: 1493171007:0;which
+: 1493171030:0;functions
+: 1493171035:0;functions |grep MANIF
+: 1493171148:0;less jarExplodeEar
+: 1493171160:0;less jarGrep
+: 1493171196:0;less findText
+: 1493171215:0;less findX
+: 1493171366:0;vim setProxy
+: 1493171534:0;find . -name "pom.xml" -exec grep -l "pe-carma" {} \;
+: 1493171846:0;find . -name "pom.xml" -exec grep -l "hdd-manager" {} \; 
+: 1493171866:0;find . -name "pom.xml" -exec grep -l "hdd-manager" {} \; |echo blue
+: 1493171903:0;cd ~/.bin
+: 1493171906:0;grep xargs *
+: 1493172132:0;find . -name "pom.xml" -exec sh -c 'echo blah-$0' {} \;
+: 1493172169:0;find . -name "pom.xml" -exec grep -l "hdd-manager" {} \; |echo blue-$0
+: 1493172217:0;find . -name "pom.xml" -exec grep -l "hdd-manager" {} \; -exec sh -c 'echo blah-$0' {} \;
+: 1493173355:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo blah-$0' {} \;
+: 1493173481:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0#./*}' {} \;
+: 1493173584:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0##./*/}' {} \;
+: 1493173633:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%%/.*/pom.xml}' {} \;
+: 1493173651:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%%*/pom.xml}' {} \;
+: 1493173666:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%*/*/pom.xml}' {} \;
+: 1493173763:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%*/pom.xml}' {} \;
+: 1493173797:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0#./*/}' {} \;
+: 1493173833:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0#./*/*}' {} \;
+: 1493173843:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0#./*/pom.xml}' {} \;
+: 1493173872:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%%./*/pom.xml}' {} \;
+: 1493173879:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0##./*/pom.xml}' {} \;
+: 1493174044:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%./*/pom.xml}' {} \;
+: 1493174050:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%pom.xml}' {} \;
+: 1493174301:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${${0%/*/pom.xml}#./}' {} \;
+: 1493174319:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%/*/pom.xml}' {} \;
+: 1493174329:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%/pom.xml}' {} \;
+: 1493174504:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%/pom.xml}' {} \; -exec sh -c 'echo ${0#./} {} \;
+: 1493174515:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%/pom.xml}' {} \; -exec sh -c 'echo ${0#./}' {} \;
+: 1493174588:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \; -exec sh -c 'echo ${0%/pom.xml}' {} \; 
+: 1493174643:0;find . -name "pom.xml" -exec grep -q -l "fhir-manager" {} \; -exec sh -c 'echo ${0%/pom.xml}' {} \; 
+: 1493174664:0;man xargs
+: 1493174909:0;find . -name "pom.xml" -exec grep -l "hdd-manager" {} \; |xargs -J str ${str%pom.xml}
+: 1493174927:0;find . -name "pom.xml" -exec grep -l "hdd-manager" {} \; |xargs -J str echo ${str%pom.xml}
+: 1493174967:0;find . -name "pom.xml" -exec grep -l -q "hdd-manager" {} \; |xargs -J 0 echo ${0%/pom.xml}
+: 1493175167:0;mvnfindlibs carma-war
+: 1493175355:0;mvnfindlibs protocol-manager
+: 1493175394:0;blah=bpmn/task-manager
+: 1493175425:0;echo ${blah%/*}
+: 1493175433:0;blue=report-manager
+: 1493175440:0;echo ${blue%/*}
+: 1493175624:0;red=./bpmn/task-manager/pom.xml
+: 1493176458:0;echo $x |sed -n 's#\.\/\([^\/]*\)#\1#gp'
+: 1493176497:0;echo $x |sed -n 's#\.\/\([^/]*\)#\1#gp'
+: 1493176506:0;echo $x |sed -n 's#\./\([^/]*\)#\1#gp'
+: 1493176522:0;echo $x |sed -n 's#\./([^/]*)#\1#gp'
+: 1493176557:0;echo $x |sed -n 's#\./\([^/]*\)/#\1#gp'
+: 1493176603:0;x=process-manager/pom.xml
+: 1493176626:0;echo $x |sed -n 's#\.?/\?([^/]*\)/.*#\1#gp'
+: 1493176636:0;echo $x |sed -n 's#\.?/?\([^/]*\)/.*#\1#gp'
+: 1493176744:0;x=/process-manager/pom.xml
+: 1493176771:0;x=./process-manager/pom.xml
+: 1493176772:0;echo $x |sed -n 's#\.?/\([^/]*\)/.*#\1#gp'
+: 1493176785:0;echo $x |sed -n 's#\./\([^/]*\)/.*#\1#gp'
+: 1493177034:0;echo $x |sed -n 's#.*\([^/]*\)/pom\.xml#\1#gp'
+: 1493177072:0;echo $x
+: 1493177087:0;x=/a/b/c/d/process-manager/pom.xml
+: 1493177104:0;x=./bpmn/task-manager/pom.xml
+: 1493177105:0;echo $x |sed -n 's#.*/\([^/]*\)/pom\.xml#\1#gp'
+: 1493177336:0;LIB=hdd-manager
+: 1493177339:0;find . -name "pom.xml" -exec grep -q -l "$LIB" {} \; |grep -v "$LIB"
+: 1493177360:0;find . -name "pom.xml" -exec grep -q -l "hdd-manager" {} \;
+: 1493177364:0;find . -name "pom.xml" -exec grep -l "hdd-manager" {} \;
+: 1493177372:0;find . -name "pom.xml" -exec grep -l "hdd-manager" {} \; |grep -v "hdd-manager"
+: 1493177532:0;a=$(mvnfindlibs "hdd-manager")
+: 1493177545:0;a=($(mvnfindlibs "hdd-manager"))
+: 1493177547:0;echo $a[3]
+: 1493177550:0;echo $a[4]
+: 1493178021:0;a=()
+: 1493178029:0;a[2]="hello"
+: 1493178041:0;a[1]="bye"
+: 1493178054:0;a[0]="blue"
+: 1493178059:0;a[5]="blue"
+: 1493178073:0;unset a
+: 1493178265:0;typeset -A assoc
+: 1493178275:0;assoc["red"]=1
+: 1493178292:0;assoc["blue"]=2
+: 1493178294:0;echo $assoc
+: 1493178307:0;echo ${assoc["red"]}
+: 1493178330:0;cd uber
+: 1493178355:0;unset x
+: 1493178542:0;x=1
+: 1493178562:0;for a in $(cat build-order.txt)\
+do\
+echo $a\
+done
+: 1493178931:0;for a in $(cat build-order.txt)\
+do\
+  x+=1\
+echo $a\
+done\
+echo $x
+: 1493179075:0;y=1
+: 1493179081:0;y+=1
+: 1493179104:0;(y+=1)
+: 1493179119:0;let y=1
+: 1493179124:0;let y+=1
+: 1493179126:0;echo $y
+: 1493179158:0;history T
+: 1493179199:0;let y=1\
+for a in $(cat build-order.txt)\
+do\
+  let y+=1\
+echo $a\
+done\
+echo $y
+: 1493179218:0;let y=0\
+for a in $(cat build-order.txt)\
+do\
+  let y+=1\
+echo $a\
+done\
+echo $y
+: 1493179322:0;let y=0\
+typeset -A myarray\
+for a in $(cat build-order.txt)\
+do\
+  let y+=1\
+  myarray[$a]=$y\
+done\
+echo $myarray
+: 1493179492:0;a=(b c d)
+: 1493179502:0;for x in $a\
+do\
+echo $x\
+done
+: 1493179660:0;let y=0\
+typeset -A myarray\
+for a in $(cat build-order.txt)\
+do\
+  let y+=1\
+  myarray[$a]=$y\
+done\
+echo $myarray\
+\
+found=("care-process-manager" "fhir-manager" "clinicaldata-manager" "protocol-manager" "report-manager")\
+middle=()\
+\
+for i in $found\
+do\
+  index=${myarray[$i]}\
+  echo $i has value of $index\
+done
+: 1493180308:0;exist=1
+: 1493180350:0;if [ -z "$exist" ]; then echo "does not exist"; fi
+: 1493180373:0;if [ $exist -lt 1 ]; then echo "does not exist"; fi
+: 1493180409:0;let exist=1
+: 1493180420:0;if [[ $exist -lt 2 ]]; then echo "does not exist"; fi
+: 1493180438:0;exist=0
+: 1493180440:0;if [[ $exist -lt 3 ]]; then echo "does not exist"; fi
+: 1493180452:0;exist=
+: 1493180453:0;if [[ $exist -lt 0 ]]; then echo "does not exist"; fi
+: 1493180461:0;if [[ $exist -lt 1 ]]; then echo "does not exist"; fi
+: 1493182475:0;let y=0\
+typeset -A myarray\
+typeset -A sortedarray\
+\
+for a in $(cat build-order.txt)\
+do\
+  let y+=1\
+  myarray[$a]=$y\
+done\
+echo $myarray\
+\
+found=("care-process-manager" "fhir-manager" "clinicaldata-manager" "protocol-manager" "report-manager")\
+middle=()\
+\
+for libtoadd in $found\
+do\
+  priority=${myarray[$libtoadd]}\
+  sortedarray[$priority]=$libtoadd\
+done\
+\
+for z in "${(@k)sortedarray}"\
+do\
+  echo "$z -> $sortedarray[$z]"\
+done
+: 1493182753:0;a=(5 3 4 1 2)
+: 1493182760:0;sort $a
+: 1493182765:0;echo $a |sort
+: 1493182777:0;man sort
+: 1493182832:0;echo $a |sort -n
+: 1493182855:0;sort -n - <$a
+: 1493182991:0;echo $a
+: 1493183035:0;echo ${(k0n)a}
+: 1493183049:0;echo ${(0n)a}
+: 1493183102:0;typeset -A jj
+: 1493183127:0;jj=(2 a 1 b 3 c)
+: 1493183165:0;echo ${(k0n)jj}
+: 1493183180:0;echo ${(0n)jj}
+: 1493183197:0;echo (${(0n)jj})
+: 1493183236:0;echo (${(On)jj})
+: 1493183241:0;echo (${(kOn)jj})
+: 1493183292:0;echo ${(kOn)jj}
+: 1493183305:0;echo ${(On)jj}
+: 1493183670:0;echo ${(kon)jj}
+: 1493183679:0;echo ${(o)jj}
+: 1493183782:0;sh
+: 1493184690:0;echo $sorted
+: 1493183914:0;bash
+: 1493184690:0;#1493183922
+: 1493184690:0;array=(3 1 2 5 4)
+: 1493184690:0;#1493183940
+: 1493184690:0;sorted=($(sort <<<"${array[*]}"))
+: 1493184690:0;#1493183943
+: 1493184690:0;echo $array
+: 1493184260:0;#requires zsh\
+let y=0\
+typeset -A myarray\
+typeset -A sortedarray\
+\
+for a in $(cat build-order.txt)\
+do\
+  let y+=1\
+  myarray[$a]=$y\
+done\
+echo $myarray\
+\
+found=("care-process-manager" "fhir-manager" "clinicaldata-manager" "protocol-manager" "report-manager")\
+middle=()\
+\
+for libtoadd in $found\
+do\
+  priority=${myarray[$libtoadd]}\
+  sortedarray[$priority]=$libtoadd\
+done\
+\
+for z in "${(@k)sortedarray}"\
+do\
+  echo "$z -> $sortedarray[$z]"\
+done
+: 1493184300:0;chmod +x createbuildorder.zsh
+: 1493184444:0;cd ../knowledge-manager
+: 1493184487:0;less pom.xml
+: 1493184554:0;cd bpmn/
+: 1493184581:0;cat knowledge-manager/pom.xml L
+: 1493184589:0;cat bpmn-manager/pom.xml L
+: 1493185121:0;vim ~/tmp/createbuildorder.zsh
+: 1493185316:0;take tmp
+: 1493185344:0;unzip -q -c ../carma-war-1.11.0.war META-INF/MANIFEST.MF
+: 1493185698:0;chmod +x mvnfindlibs
+: 1493185728:0;vim readmanifest
+: 1493185738:0;less mvnfindlibs
+: 1493185872:0;chmod +x readmanifest
+: 1493185887:0;readmanifest pec-war-1.1.0.war
+: 1493185903:0;cd /Users/lpjharri/development/source_control/hwcir/git/ihc-nix-home
+: 1493185920:0;cp ~/.zfuncs/readmanifest .
+: 1493185957:0;cp ~/.zfuncs/mvnfindlibs .
+: 1493185966:0;chmod +x *
+: 1493185993:0;git commit -m "Added readmanifest and mvnfindlibs; changed perms for all."
+: 1493186177:0;git commit -m "Added aliases, functions mvnfindlibs and readmanifest."
+: 1493186343:0;cd mounts/jenkins/hwmaven/hwjenkins-share/fhir-manager/203
+: 1493186350:0;readmanifest fhir-manager-1.4.0-SNAPSHOT.jar
+: 1493186392:0;grep unzip *
+: 1493186437:0;cd Downloads
+: 1493186443:0;rm -rf .*
+: 1493187210:0;cd /tmp
+: 1493187227:0;rm -rf wifi*
+: 1493187232:0;rm -rf versions*
+: 1493187238:0;rm -rf stream*
+: 1493187250:0;rm -rf pulse*
+: 1493187258:0;rm -rf gitwork*
+: 1493187275:0;rm -rf .vbox-lpjharri-ipc/
+: 1493187297:0;rm -rf symc00009a00/symc0000ef2a/
+: 1493187335:0;rm -rf symc00009a00/ symc0000ef2a/ symc00012462/ symc00013611/ symc00013bff/ symc00013fe5/ symc0001486d/ symc00018343/
+: 1493194153:0;sudo shutdown -s +45
+: 1493218212:0;alias cafi
+: 1493218216:0;alias cafiw
+: 1493226189:0;gpr 18
+: 1493226471:0;cd pec
+: 1493226479:0;../pec-war
+: 1493226537:0;alias mverunr
+: 1493226589:0;mverunr org.ihc.hwcir.*:*
+: 1493226778:0;rm -f $DOMAIN_HOME/autodeploy/pec-war-1.1.0.war
+: 1493227146:0;cp pec-war/target/pec-war-1.2.0.war $DOMAIN_HOME/autodeploy
+: 1493227325:0;gcam "Release 1.2.0."
+: 1493227334:0;alias |grep tag
+: 1493227367:0;git tag -m "1.2.0" 1.2.0
+: 1493227576:0;vim pec/pom.xml
+: 1493227603:0;vim pec-war/pom.xml
+: 1493227716:0;cd ~/mounts/jenkins/hwmaven/hwjenkins-share/carma-war/78
+: 1493227749:0;cd ~/mounts/jenkins/hwmaven/hwjenkins-share
+: 1493227764:0;l L
+: 1493227780:0;cd pe-client-war
+: 1493227786:0;cd 2017-04-26
+: 1493227818:0;rm -f *.0-SNAPSHOT*
+: 1493242937:0;rm -f $DOMAIN_HOME/autodeploy/carma-war-1.11.0.war
+: 1493242946:0;cp carma-war-1.12.0-SNAPSHOT $DOMAIN_HOME/autodeploy
+: 1493242951:0;cp carma-war-1.12.0-SNAPSHOT $DOMAIN_HOME/autodeploy/
+: 1493242964:0;cp carma-war-1.12.0-SNAPSHOT.war $DOMAIN_HOME/autodeploy/
+: 1493244470:0;git clone https://github.com/spring-guides/gs-scheduling-tasks.git
+: 1493244474:0;cd gs-scheduling-tasks
+: 1493244484:0;cd complete
+: 1493244491:0;cd main
+: 1493244493:0;cd java
+: 1493244505:0;ofd
+: 1493246224:0;mverulsn org.ihc.hwcir.*:*
+: 1493246329:0;alias blah='echo b='
+: 1493246339:0;blah org.ihc.hwcir.*:*
+: 1493246555:0;mverulsn -Dincludes=org.ihc.hwcir.process:*
+: 1493246700:0;[ -e pom.xml ] && echo exists
+: 1493247272:0;mverulsn -Dincludes=org.ihc.hwcir.protocols.service:*
+: 1493251673:0;cd $DOMAIN_HOME/hwcir-properties/processor
+: 1493253672:0;cp target/carma-war-1.12.0-SNAPSHOT.war $DOMAIN_HOME/autodeploy
+: 1493253768:0;man wait
+: 1493253773:0;run-help wait
+: 1493261322:0;mciskip
+: 1493261339:0;mcp;\cp target/carma-war-1.12.0-SNAPSHOT.war $DOMAIN_HOME/autodeploy
+: 1493261368:0;cat processor.properties
+: 1493262504:0;git commit -m "fogbugz 7131: implemented cleanup process with a timer."
+: 1493262651:0;gcam "Released 1.2.0."
+: 1493262744:0;mverunr -Dinclude=org.ihc.hwcir.process:*
+: 1493262775:0;mverunr -Dincludes=org.ihc.hwcir.process:*
+: 1493262876:0;cd /Users/lpjharri/.zstart/
+: 1493262940:0;care-process-manager
+: 1493262958:0;mverur -Dincludes=org.ihc.hwcir.process:*
+: 1493263336:0;less readmanifest
+: 1493263338:0;cat readmanifest
+: 1493263412:0;alias gts
+: 1493263548:0;git help tag
+: 1493263625:0;git help for-each-ref
+: 1493263802:0;git tag -l --sort=v:refname
+: 1493263811:0;git tag -l --sort=-v:refname
+: 1493263831:0;vim alias
+: 1493263896:0;vim .aliases
+: 1493263907:0;which gtv
+: 1493263914:0;sort -V
+: 1493263917:0;sort --help
+: 1493263950:0;alias gtv
+: 1493263968:0;chmod +x gt
+: 1493264034:0;which gt
+: 1493264428:0;cd '/Applications/IntelliJ IDEA.app/Contents/plugins/terminal/'
+: 1493264512:0;cd /Users/lpjharri/.zstart/mac
+: 1493264567:0;cat .zshenv
+: 1493264641:0;echo $ZDOTDIR
+: 1493264820:0;gt 1.2.0
+: 1493264980:0;cp gt gtm
+: 1493264983:0;vim gtm
+: 1493265015:0;cd /Users/lpjharri/Development/source_control/hwcir/git/uber/care-process-manager
+: 1493265017:0;mvn build-helper:parse-version
+: 1493265043:0;echo ${parsedVersion.majorVersion}
+: 1493265051:0;env
+: 1493265102:0;mvn build-helper:parse-version echo ${parsedVersion.majorVersion}
+: 1493265430:0;gcam "Released 1.14.0."
+: 1493265438:0;gt 1.14.0
+: 1493265550:0;gcam "Updated weblogic.xml to have a root context so that we can deploy war with any name on it."
+: 1493265580:0;mverur -Dincludes=org.ihc.hwcir.protocols.service:*
+: 1493265646:0;gcam "Released 1.12.0 with cpm 1.14.0."
+: 1493265665:0;gd --cached 
+: 1493265670:0;gc origin/master
+: 1493265696:0;gt 1.12.0
+: 1493265769:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/process-manager/build --user lpjharri:q55f3ixx
+: 1493265854:0;cd ~/mounts/jenkins/hwmaven/hwjenkins-share/process-manager/5
+: 1493265871:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./process-manager-1.2.0.jar
+: 1493265959:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/care-process-manager/build --user lpjharri:q55f3ixx
+: 1493265995:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/Care%20Process%20Manager/build --user lpjharri:q55f3ixx
+: 1493266217:0;cd mounts/jenkins/hwmaven/hwjenkins-share
+: 1493266230:0;cd 36
+: 1493266236:0;cat pom.xml
+: 1493266241:0;cat pom.xml L
+: 1493266256:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./care-process-manager-1.14.0.jar
+: 1493266320:0;gd origin/master
+: 1493266372:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/Carma%20War/build --user lpjharri:q55f3ixx
+: 1493266389:0;gp --tags 
+: 1493266487:0;less gtm
+: 1493266494:0;rm -f gtm
+: 1493266888:0;d
+: 1493266894:0;3
+: 1493266898:0;cd carma-war/40
+: 1493266910:0;cp carma-war-1.12.0.war $DOMAIN_HOME/autodeploy
+: 1493266917:0;fg
+: 1493266922:0;bg
+: 1493266939:0;rm -f $DOMAIN_HOME/autodeploy/carma-war-1.12.0-SNAPSHOT.war
+: 1493267039:0;gcam "Rolled to 1.3.0-SNAPSHOT."
+: 1493267093:0;gcam "Rolled to 1.15.0-SNAPSHOT"
+: 1493267133:0;gcam "Rolled to 1.13.0-SNAPSHOT"
+: 1493267228:0;cd hwcir-properties
+: 1493267453:0;scp -rp processor dev1:./tmp/
+: 1493267910:0;select-window -t @55
+: 1493267913:0;send-keys -t %55 0xd
+: 1493267913:0;send-keys -t %55 0x6c
+: 1493267917:0;detach
+: 1493268150:0;rcrmnotmux ver1
+: 1493268249:0;scp -rp processor ver1:./tmp/
+: 1493268716:0;cd autodeploy
+: 1493269280:0;ssh dev1
+: 1493269602:0;scp carma-war-1.12.0.war ver1:.
+: 1493270185:0;scp pec-war-1.2.0.war ver1:.
+: 1493270619:0;ssh ver1
+: 1493271967:0;git commit -m "Added alias and the gt function."
+: 1493272006:0;cd /Users/lpjharri/development/source_control/hwcir/git/uber/pe-app
+: 1493272067:0;cd pec-war
+: 1493272069:0;cd target
+: 1493272120:0;mcp -Pprod
+: 1493272157:0;cd pec-war/target
+: 1493272213:0;find . -name "pom.xml" -exec echo {} \;
+: 1493272229:0;find . -maxdepth 1 -name "pom.xml" -exec echo {} \;
+: 1493272236:0;find . -maxdepth 2 -name "pom.xml" -exec echo {} \;
+: 1493272275:0;find . -maxdepth 2 -name "pom.xml" -exec mvn -f {} clean \;
+: 1493274136:0;cd /Users/lpjharri/Development/source_control/hwcir/git/uber/pe-app
+: 1493311428:0;startmds
+: 1493314501:0;less recurse.sh
+: 1493314706:0;./recurse.sh hdd-manager
+: 1493314714:0;vim recurse.sh
+: 1493314909:0;mvnfindlibs
+: 1493314940:0;blah=($(mvnfindlibs))
+: 1493314950:0;blah=($(mvnfindlibs hdd-manager))
+: 1493314953:0;echo $blah
+: 1493319735:0;cd /Users/lpjharri/.zfuncs
+: 1493319738:0;vim gt
+: 1493319953:0;vim mvnfindlibs
+: 1493320429:0;gpr 6
+: 1493320578:0;gitworkflow_gpr.sh
+: 1493320604:0;rm -rf /tmp/pts-manager; git worktree prune; git branch -D 6_GPR
+: 1493320606:0;gpr -j 6
+: 1493322212:0;mvnfindlibs hdd-manager
+: 1493322393:0;mvnfindlibs pts-manager
+: 1493322406:0;mvnfindlibs fhir-manager
+: 1493322423:0;mvnfindlibs bpmn
+: 1493322637:0;mvnfindlibs report-manager
+: 1493322662:0;mvnfindlibs process-manager
+: 1493322674:0;mvnfindlibs care-process-manager
+: 1493322694:0;vim $(mvnfindlibs )
+: 1493322707:0;vim $(which mvnfindlibs )
+: 1493322726:0;vim ~/.zfuncs/mvnfindlibs
+: 1493322786:0;cd ~/.zfuncs/
+: 1493322794:0;mv mvnfindlibs mvnfinddeps
+: 1493325489:0;cd /Users/lpjharri/Development/source_control/hwcir/git/uber/pts-manager
+: 1493326272:0;groovysh
+: 1493326398:0;vim src/main/java/org/ihc/hwcir/protocols/service/CareProcessServices.java
+: 1493329917:0;mvnfinddeps protocol-manager
+: 1493330816:0;gpr 8
+: 1493330989:0;gpr -y 27
+: 1493331172:0;gco -b fogbugz-7148_Spring_Annotation fogbugz-7148_Spring_Annotation 
+: 1493331200:0;gfu
+: 1493331203:0;gfo
+: 1493331259:0;gco -b me fogbugz-7148_Spring_Annotation 
+: 1493331264:0;alias gco
+: 1493331281:0;gco -b me origin/fogbugz-7148_Spring_Annotation 
+: 1493331292:0;gb -D me
+: 1493331300:0;gco -b fogbugz-7148_Spring_Annotation origin/fogbugz-7148_Spring_Annotation 
+: 1493331338:0;mvn clean package -Dtests=Integ\*
+: 1493331362:0;vim $(which gitworkflow_gpr.sh )
+: 1493331382:0;mvn clean package -Dtest=\*Integ
+: 1493332368:0;mvnfinddeps care-process-manager
+: 1493332378:0;mvnfinddeps process-manager
+: 1493332447:0;mvnfinddeps pe-carma
+: 1493332479:0;date
+: 1493332538:0;alias |grep mver
+: 1493337395:0;cd /Users/lpjharri/Downloads
+: 1493337410:0;brew search hyperspace
+: 1493337420:0;brew search hyperspace2
+: 1493337431:0;brew search Hyper
+: 1493337441:0;brew cask search hyper
+: 1493337451:0;brew cask search electric
+: 1493337460:0;brew cask search Hyper
+: 1493337469:0;brew cask info hyper
+: 1493337485:0;brew cask install electric-sheep
+: 1493337670:0;brew tap akerl/casks
+: 1493337675:0;brew cask install hyperspace-halyard
+: 1493337685:0;rm -rf *
+: 1493341224:0;mcpskip
+: 1493343223:0;gd knowledge-manager
+: 1493343469:0;mcp -Dtest=\*Integ,\*Test
+: 1493344436:0;mvnfinddeps bpmn
+: 1493344447:0;mvnfinddeps knowledge-manager
+: 1493344453:0;mvnfinddeps task-manager
+: 1493344458:0;mvnfinddeps bpmn-manager
+: 1493344511:0;cat use-latest.sh
+: 1493344570:0;~/tmp/createbuildorder.zsh
+: 1493344631:0;less mvnfinddeps
+: 1493344978:0;mvnfinddeps hdd-manager
+: 1493345047:0;vim build-order.txt
+: 1493346540:0;tmspeedup
+: 1493346547:0;stopmds
+: 1493347195:0;gcam "Fixed km-spring removing declaration to create bean for km."
+: 1493347216:0;git commit --amend 
+: 1493347353:0;mvn versions:set
+: 1493347379:0;gd pom.xml
+: 1493347389:0;gd bpmn-manager/pom.xml
+: 1493347473:0;hdd-manager
+: 1493347693:0;alias mreadpom
+: 1493349246:0;find ~/.m2/repository -iname "*hdd-manager*pom.xml"
+: 1493349257:0;find ~/.m2/repository -iname "*hdd-manager*.pom"
+: 1493349295:0;find ~/.m2/repository -iname "*hdd-manager/*/"
+: 1493349316:0;find ~/.m2/repository -type d -iname "*hdd-manager/*/"
+: 1493349321:0;find ~/.m2/repository -type d -iname "*hdd-manager*"
+: 1493349517:0;. ~/.zstart/aliases
+: 1493349538:0;. /Users/lpjharri/.zstart/aliases
+: 1493349702:0;...
+: 1493349932:0;mverrev
+: 1493349984:0;cd /Users/lpjharri/Development/source_control/hwcir/git/uber/hdd-manager
+: 1493349992:0;find ~/.m2/repository -iname "*hdd-manager*"
+: 1493350190:0;cat task-manager/pom.xml L
+: 1493350237:0;mci -DTest=\*Integ
+: 1493350325:0;cd ../clinicaldata-manager
+: 1493350391:0;mverur -Dorg.ihc.hwcir.*:*
+: 1493350397:0;mverur -Dincludes=org.ihc.hwcir.*:*
+: 1493350471:0;1
+: 1493350630:0;mverunr -Dincludes=org.ihc.hwcir.*:*
+: 1493350703:0;../bpmn-manager
+: 1493350724:0;find ~/.m2/repository -iname "*bpmn*"
+: 1493350790:0;mverunr -Dincludes=org.ihc.hwcir.*:*;mvercom;mverrmsn;mvercom
+: 1493350984:0;mverrmsn
+: 1493351108:0;find ~/.m2/repository -iname "*fhir*"
+: 1493351137:0;gco pom.xml
+: 1493351232:0;mverunr -Dincludes=org.ihc.hwcir.*:*;mverrmsn;mvercom;mci
+: 1493351345:0;mverunr -Dincludes=org.ihc.hwcir.*:*;mverrmsn;mvercom;mcp
+: 1493351408:0;ll $DOMAIN_HOME/autodeploy
+: 1493351412:0;ll $DOMAIN_HOME/autodeploy/
+: 1493351415:0;ls $DOMAIN_HOME/autodeploy/
+: 1493351429:0;alias l
+: 1493351440:0;\ls -l
+: 1493351472:0;rm -f carma-war-1.12.0.war
+: 1493351799:0;vim hwcir-properties/processor/processor.properties
+: 1493351926:0;cd /Users/lpjharri/Development/source_control/hwcir/git/uber/carma-war
+: 1493351933:0;cd src
+: 1493351937:0;cd main/resources
+: 1493351939:0;vim log4j2.xml
+: 1493352243:0;cat build-order.txt
+: 1493352253:0;cd care-process-manager
+: 1493352301:0;vim createbuildorder.zsh
+: 1493352572:0;echo care-process-manager
+: 1493352589:0;echo care-process-manager |grep -v -w "process-manager"
+: 1493352621:0;echo care-process-manager |grep -e "[^-]process-manager"
+: 1493352634:0;echo process-manager |grep -e "[^-]process-manager"
+: 1493352642:0;echo process-manager |grep -e "[^-]*process-manager"
+: 1493352649:0;echo care-process-manager |grep -e "[^-]*process-manager"
+: 1493352688:0;echo care-process-manager |grep -w "process-manager"
+: 1493352702:0;echo care-process-manager |grep -w "-process-manager"
+: 1493352742:0;man grep
+: 1493352796:0;~/tmp/createbuildorder.zsh process-manager
+: 1493353614:0;../hwcir-properties
+: 1493353616:0;cd processor
+: 1493353870:0;cd /Volumes/knox
+: 1493353873:0;cd Back
+: 1493353876:0;cd Backups.backupdb
+: 1493353879:0;cd AC02QQ0ECG8WM
+: 1493353897:0;du -s .
+: 1493353904:0;sudome
+: 1493353917:0;du -s *
+: 1493354064:0;tmutil delete /Volumes/knox/Backups.backupdb/AC02QQ0ECG8WM/2016-10-05-010413
+: 1493354068:0;sudo tmutil delete /Volumes/knox/Backups.backupdb/AC02QQ0ECG8WM/2016-10-05-010413
+: 1493354140:0;cat $DOMAIN_HOME/hwcir-properties/processor/processor.properties
+: 1493354410:0;vim processor.properties
+: 1493354580:0;cd carma-war
+: 1493355084:0;~/tmp/createbuildorder.zsh clinicaldata-manager
+: 1493355091:0;~/tmp/createbuildorder.zsh fhir-manager
+: 1493355192:0;~/tmp/createbuildorder.zsh bpmn
+: 1493355227:0;~/tmp/createbuildorder.zsh report-manager
+: 1493355242:0;~/tmp/createbuildorder.zsh care-process-manager
+: 1493355251:0;~/tmp/createbuildorder.zsh hdd-manager
+: 1493355256:0;~/tmp/createbuildorder.zsh protocol-manager
+: 1493355279:0;../hdd-manager
+: 1493355319:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/hdd-manager/build --user lpjharri:q55f3ixx
+: 1493355443:0;../pts-manager
+: 1493355524:0;#gcam "Released 1.3.0."
+: 1493355553:0;gcam "Released 1.3.0."
+: 1493355573:0;gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/pts-manager/build --user lpjharri:q55f3ixx
+: 1493355639:0;../clinicaldata-manager
+: 1493355716:0;gcam "Released 1.6.0";gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/clinicaldata-manager/build --user lpjharri:q55f3ixx
+: 1493355893:0;gcam "Released 1.8.0";gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/fhir-manager/build --user lpjharri:q55f3ixx
+: 1493355993:0;../p
+: 1493355996:0;gcam "Released 1.5.0";gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/protocol-manager/build --user lpjharri:q55f3ixx
+: 1493356105:0;gcam "Released 1.4.0."
+: 1493356152:0;gb -d fogbugz-7148_Spring_Annotation 
+: 1493356173:0;cd task-manager
+: 1493356209:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/bpmn/build --user lpjharri:q55f3ixx
+: 1493356298:0;ssh maven
+: 1493356557:0;gcam "Released 1.3.0";gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/report-manager/build --user lpjharri:q55f3ixx
+: 1493356645:0;gcam "Released 1.3.0";gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/process-manager/build --user lpjharri:q55f3ixx
+: 1493356749:0;cp pom.xml ..
+: 1493356762:0;gd HEAD^
+: 1493356799:0;cp ../pom.xml .
+: 1493356834:0;rm -f ../pom.xml
+: 1493356853:0;gcam "Released 1.15.0";gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/care-process-manager/build --user lpjharri:q55f3ixx
+: 1493356899:0;../pe-carma
+: 1493356950:0;sudo tmutil delete /Volumes/knox/Backups.backupdb/AC02QQ0ECG8WM/2016-10-18-104515
+: 1493356964:0;gcam "Released 2.2.0";gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/pe-carma/build --user lpjharri:q55f3ixx
+: 1493357044:0;gcam "Released 1.13.0";gp;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/carma-war/build --user lpjharri:q55f3ixx
+: 1493357185:0;find . -maxdepth 2 -name "pom.xml"
+: 1493357202:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+echo $x\
+done
+: 1493357239:0;for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+echo ${x%/pom.xml}\
+done
+: 1493357351:0;OLD=$(pwd)\
+for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+cd ${x%/pom.xml}\
+mverset\
+mvercom\
+gcam "Rolled to next snapshot."\
+gp\
+mci\
+done
+: 1493357510:0;OLD=$(pwd)\
+for x in $(find . -maxdepth 2 -name "pom.xml")\
+do\
+cd ${x%/pom.xml}\
+mverset\
+mvercom\
+gcam "Rolled to next snapshot."\
+gp\
+mci\
+cd $OLD\
+done
+: 1493358005:0;cd pe-app
+: 1493358039:0;mverset
+: 1493358064:0;gd HEAD^^
+: 1493358077:0;mvercom
+: 1493358121:0;gcam "Reverted back to 1.3.0-SNAPSHOT. I mistakenly moved up a snapshot without any release."
+: 1493358284:0;cd mounts/jenkins/hwmaven/hwjenkins-share/hdd-manager/157
+: 1493358335:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./hdd-manager-1.4.0.jar
+: 1493358360:0;../../pts-manager/24
+: 1493358369:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./*.jar
+: 1493358378:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./\*.jar
+: 1493358420:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./pts-manager-1.3.0.jar
+: 1493358434:0;../../clinicaldata-manager/207
+: 1493358456:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./clinicaldata-manager.jar
+: 1493358468:0;../../fhir-manager/218
+: 1493358494:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./fhir-manager.jar
+: 1493358506:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./fhir-manager-1.8.0.jar
+: 1493358523:0;../../protocol-manager/62
+: 1493358689:0;../61
+: 1493358697:0;../40
+: 1493358700:0;../62
+: 1493358811:0;../162
+: 1493358833:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./protocol-manager.jar
+: 1493358854:0;../../bpmn
+: 1493358861:0;cd 77
+: 1493358877:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./pom.xml
+: 1493358913:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./target/bpmn-manager-1.4.0.jar
+: 1493358923:0;../knowledge-manager
+: 1493358944:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./target/knowledge-manager-1.4.0.jar
+: 1493358953:0;../task-manager
+: 1493358956:0;l target
+: 1493358969:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./target/task-manager-1.4.0.jar
+: 1493358994:0;../../../report-manager/41
+: 1493359006:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./report-manager-1.3.0.jar
+: 1493359020:0;../../process-manager/7
+: 1493359040:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./process-manager-1.3.0.jar
+: 1493359057:0;../../care-process-manager/41
+: 1493359085:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./care-process-manager-1.15.0.jar
+: 1493359100:0;../../pe-carma/330
+: 1493359119:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./PE-V2.2.0-201704280522.jar
+: 1493359129:0;../../carma-war/43
+: 1493359135:0;#mvn-deploy -DpomFile=./pom.xml -Dfile=./
+: 1493359146:0;mvn-deploy -DpomFile=./pom.xml -Dfile=./carma-war-1.13.0.war
+: 1493360270:0;vim pom.xml
+: 1493360301:0;vim .vimrc
+: 1493361286:0;vim blah
+: 1493361304:0;echo hello 
+: 1493361312:0;ll
+: 1493361405:0;curl -X POST http://lpv-hwmaven01.co.ihc.com:8080/job/pts-manager/build --user lpjharri:q55f3ixx
+: 1493361408:0;df -h
+: 1493361416:0;eject
+: 1493361419:0;eject knox
+: 1493361466:0;cd ~/.m2/
+: 1493361471:0;cat settings.xml L
+: 1493361867:0;echo 1 2 3 4 5
+: 1493361885:0;echo 1
+: 1493361891:0;echo echo
+: 1493362181:0;cd /Users/lpjharri/.zstart
+: 1493363626:0;cd ~/mounts/jenkins/hwmaven/hwjenkins-share/carma-war
+: 1493363633:0;cd 44
+: 1493363681:0;../45
+: 1493363691:0;../43
+: 1493363692:0;mreadpom
+: 1493363706:0;cp carma-war-1.13.0.war $DOMAIN_HOME/autodeploy
+: 1493364243:0;cd /Volumes
+: 1493364254:0;cd /Users/lpjharri/Desktop
+: 1493364276:0;pgrep -f -i mysql
+: 1493364286:0;stopmysql.sh
+: 1493364421:0;cd /Users/lpjharri/.oh-my-zsh
+: 1493364425:0;cd custom
+: 1493364427:0;cd themes
+: 1493364435:0;vim jaxis.zsh-theme
+: 1493366114:0;echo hello
+: 1493396998:0;git co -b fogbugz
+: 1493397005:0;gb -d fogbugz
+: 1493397018:0;gb co -b 70d3711a161f4c887ddf1027ab5ab89f77e5ce01
+: 1493397024:0;gco -b 70d3711a161f4c887ddf1027ab5ab89f77e5ce01
+: 1493397175:0;gb -d 70d3711a161f4c887ddf1027ab5ab89f77e5ce01
+: 1493397208:0;git co -b me 70d3711a16
+: 1493397461:0;gclean
+: 1493399003:0;cd /Users/lpjharri/development/source_control/hwcir/git/uber
+: 1493399012:0;cat .git/config
+: 1493399020:0;cd ~/tmp
+: 1493399025:0;git clone https://lpjharri@git.co.ihc.com/scm/hwcir/bpmn.git
+: 1493399058:0;cd ~/.m2
+: 1493399061:0;cd repository
+: 1493399064:0;cd org/ihc
+: 1493399074:0;mv hwcir hwcir.original
+: 1493399101:0;gco -b 70d3711a16 70d3711a16
+: 1493399281:0;mc
+: 1493399444:0;cd knowledge-manager
+: 1493399452:0;cd src/main/resources
+: 1493399455:0;vim km-spring.xml
+: 1493399464:0;....
+: 1493399555:0;mcp -Dtest=\*Test
+: 1493399595:0;../
+: 1493399612:0;cd bpmn-manager
+: 1493399653:0;rm -rf bpmn
+: 1493400053:0;cd /Users/lpjharri/development/source_control/hwcir/git/uber/bpmn
+: 1493400142:0;gcam "Reversed un-needed changes made caused by bad testing by me (Johnnie)."
+: 1493400318:0;rm -rf hwcir hwcir.original
+: 1493400337:0;gpr 10
+: 1493401338:0;../protocol-manager
+: 1493401358:0;gpr 59
+: 1493401469:0;../report-manager
+: 1493402348:0;git add -i
+: 1493402356:0;git help add
+: 1493402506:0;gco .groovy
+: 1493402530:0;git commit -m "Updated jaxis theme so prompt shows time."
+: 1493402544:0;git add -p
+: 1493402561:0;alias gc
+: 1493402577:0;git help commit
+: 1493402593:0;gc
+: 1493403017:0;vim .zstart/zshrc
+: 1493403553:0;echo $fpath
+: 1493403959:0;cd tmp
+: 1493403966:0;touch hello.jar
+: 1493403972:0;touch pom.xml
+: 1493404007:0;compdef '_files -g "*.jar"' mvn-deploy
+: 1493404072:0;alias mvn-deploy
+: 1493404161:0;compdef
+: 1493404166:0;man compdef
+: 1493404171:0;compdef -h
+: 1493404175:0;compdef --help
+: 1493404180:0;compdef -?
+: 1493404188:0;run-help compdef
+: 1493404353:0;which _brew
+: 1493404380:0;../.oh-my-zsh
+: 1493404387:0;find . -name "_*"
+: 1493404418:0;find . -name "_*" |grep brew
+: 1493404422:0;find . -name "_*" |grep _br
+: 1493404453:0;vim /plugins/gitfast/_git
+: 1493404460:0;cd /plugins/gitfast/_git
+: 1493404463:0;cd /plugins/gitfast/
+: 1493404475:0;cd ./plugins/gitfast/
+: 1493404478:0;vim _git
+: 1493404651:0;cd .zfuncs
+: 1493404674:0;compdef _gnu_generic setProxy
+: 1493404979:0;touch blah.log
+: 1493405029:0;zstyle ':completion:*:*:-redirect-,2>,*:*' file-patterns '*.log'
+: 1493405095:0;compdef '_files -g "*.log"' '-redirect-,2>,-default-'
+: 1493405342:0;compdef '_files -g "*.jar"' '-value-,file,-default-'
+: 1493405354:0;rm blah.log
+: 1493405358:0;touch blah.jar
+: 1493405381:0;compdef '_files -g "*.jar"' '-value-,-Dfile,-default-'
+: 1493405486:0;zstyle ':completion:*:*:-value-,-Dfile,*:*' file-patters '*.jar'
+: 1493405584:0;compdef _mvn -value-,-default-,_default-
+: 1493405806:0;compadd mvn-deploy bar blah
+: 1493405839:0;cd ..
+: 1493405843:0;cd .bin
+: 1493405849:0;cp wl-deploy.sh
+: 1493405857:0;cp wl-deploy.sh ~/tmp/me.sh
+: 1493405862:0;cd /Users/lpjharri/tmp
+: 1493406294:0;tmux list-sessions
+: 1493406315:0;tmux list-sessions && print ta
+: 1493406675:0;./me.sh
+: 1493406700:0;which compctl
+: 1493406710:0;compctl
+: 1493406729:0;vim me.sh
+: 1493406747:0;compctl -K tln ta
+: 1493406904:0;ta
+: 1493406910:0;tln
+: 1493406923:0;which tln
+: 1493406935:0;unalias ta
+: 1493406948:0;. ./me.sh
+: 1493406951:0;which ta
+: 1493406994:0;tmux
+: 1493407029:0;tmux -h
+: 1493407038:0;man tmux
+: 1493407138:0;alias tmux
+: 1493407146:0;tmux new-session
+: 1493407177:0;ta 1
+: 1493407186:0;ta 2
+: 1493407215:0;man compctl
+: 1493407250:0;run-help compctl
+: 1493435570:0;gco .
+: 1493435614:0;../bpmn
+: 1493435750:0;gco -b 3123f066fe 3123f066fe
+: 1493435785:0;gt
+: 1493435796:0;ll ~/.zfuncs L
+: 1493435812:0;cat gt
+: 1493435825:0;cat ~/.zfuncs/gt
+: 1493435840:0;git tag -m "1.4.0" 1.4.0
+: 1493435855:0;gb -d 3123f066fe
+: 1493435880:0;gco -b 140 1.4.0
+: 1493435903:0;gb -d 140
+: 1493436505:0;gl
+: 1493436512:0;gl --tags
+: 1493436569:0;gco me 31f76a0983b3248fb7b70a8d41ab506cbd4d6cf4
+: 1493436574:0;gco -b me 31f76a0983b3248fb7b70a8d41ab506cbd4d6cf4
+: 1493436593:0;gt 1.3.0
+: 1493436706:0;gco -b me 39a5a7e3b050a7650c5fc3ca583b8314713555b3
+: 1493436722:0;gt 1.15.0
+: 1493436727:0;gp --tags
+: 1493436735:0;gco master;gb -d me
+: 1493436745:0;../fhir-manager
+: 1493436774:0;gco -b me 31f583adb1f2253c0eb28fce55434ee78fa885f4
+: 1493436793:0;gt 1.8.0;gp --tags;gco master
+: 1493436797:0;gtv
+: 1493436806:0;gb -d me
+: 1493436813:0;git show 1.8.0
+: 1493436829:0;cd bpmn
+: 1493436854:0;cd ../carma-war
+: 1493436932:0;gco -b me 2e6f41d74cca548042bc664781fd0c9246bcb110;gt 1.13.0;gp --tags;gco master;gb -d me
+: 1493436944:0;gba
+: 1493436963:0;clinicaldata-manager
+: 1493436996:0;gco -b me 121269b185dbe790574689cbc1fa528448d64c37;gt 1.6.0;gp --tags;gco master;gb -d me
+: 1493437008:0;git show 1.6.0
+: 1493437021:0;cd hdd-manager
+: 1493437053:0;gco -b me 6db3ff03a65a37f24751d80eecc4168c437a5118;gt 1.4.0;gp --tags;gco master;gb -d me
+: 1493437058:0;git show 1.4.0
+: 1493437071:0;cd pe-carma
+: 1493437103:0;gco -b me 1aba5a32f31b78a2403daa435a5468040717a0ea;gt 2.2.0;gp --tags;gco master;gb -d me
+: 1493437117:0;git show 2.2.0
+: 1493437129:0;protocol-manager
+: 1493437169:0;gco -b me e76dd09e6ce4232ef1c80ff14783e3c47b5ba134;gt 1.5.0;gp --tags;gco master;gb -d me
+: 1493437172:0;gtv L
+: 1493437177:0;git show 1.5.0
+: 1493437184:0;cd pts-manager
+: 1493437205:0;gco -b me 9926373c576870bf464791ba1195681c52196edd;gt 1.3.0;gp --tags;gco master;gb -d me
+: 1493437219:0;cd report-manager
+: 1493437253:0;gco -b me 6e1e6f04f303e12df9c1f4ab6494691b180b79fc;gt 1.3.0;gp --tags;gco master;gb -d me
+: 1493437260:0;git show 1.3.0
+: 1493438041:0;process-manager
+: 1493438249:0;mrp
+: 1493438358:0;mci -Dtest=\*Test,\*Integ
+: 1493438533:0;mverulsn -Dincludes=org.ihc.hwcir.*:*
+: 1493438577:0;mcp -Dtest=\*Test,\*Integ
+: 1493438617:0;vim aliases
+: 1493438862:0;cd $DOMAIN_HOME/autodeploy
+: 1493438867:0;rm -f carma-war-1.13.0.war
+: 1493438873:0;rm -rf tmp
+: 1493442309:0;pgrep -f -i weblogic
+: 1493442324:0;cd $DOMAIN_HOME
+: 1493442326:0;cd logs
+: 1493442329:0;less nohup-carma.log
+: 1493442426:0;stopCarma.sh
+: 1493442451:0;eject Yertle
+: 1493442970:0;brew update && brew upgrade && brew cleanup
+: 1493444353:0;cask-check
+: 1493444363:0;cask-upgrade
+: 1493502288:0;mcp
+: 1493607695:0;cd process-manager
+: 1493607703:0;git reset
+: 1493607724:0;gco -b "fixes"
+: 1493607744:0;git commit -m "Several fixes and added Unit tests."
+: 1493607772:0;gp --set-upstream origin fixes
+: 1493607892:0;git commit -m "Modified to use ProcessManagerService interface instead of impl."
+: 1493607915:0;glog
+: 1493607938:0;gco -b fix-process-manager
+: 1493607942:0;gco master
+: 1493607950:0;git reset --hard HEAD^
+: 1493607964:0;gco fix-process-manager
+: 1493607965:0;git log
+: 1493607985:0;gp --set-upstream origin fix-process-manager
+: 1493609057:0;cd /Applications
+: 1493609085:0;cd IntelliJ\ IDEA.app
+: 1493609089:0;cd Contents
+: 1493609095:0;cd plugins
+: 1493609110:0;cd terminal
+: 1493609118:0;cd lib
+: 1493609121:0;..
+: 1493609133:0;vim jediterm-bash.in
+: 1493609304:0;cat zshrc L
+: 1493609887:0;for d in ~/.zfuncs\
+do\
+ echo "loading $d"\
+ autoload `\ls $d`\
+done\
+\
+
+: 1493609889:0;fc
+: 1493609923:0;for d in $(ls -1 ~/.zfuncs)\
+do\
+ echo "loading $d"\
+ autoload `\ls $d`\
+done\
+\
+
+: 1493610005:0;cd ~/.zstart
+: 1493610056:0;ls ~/.zfuncs)
+: 1493610063:0;ls ~/.zfuncs
+: 1493610110:0;for d in $(ls ~/.zfuncs/)\
+do\
+ echo "loading $d"\
+ autoload `\ls $d`\
+done\
+\
+
+: 1493610178:0;rm -f blah.jar
+: 1493610251:0;cd ~/.zfuncs
+: 1493610387:0;$'\033'\[31msetProxy$'\033'\[39\;49m$'\033'\[0m set
+: 1493610426:0;$'\033'\[31msetIhc$'\033'\[39\;49m$'\033'\[0m
+: 1493610464:0;echo $LSCOLORS
+: 1493610475:0;unset LSCOLORS
+: 1493610591:0;cd ~/.zstart/mac
+: 1493610594:0;vim .zstar
+: 1493611165:0;\ls
+: 1493611185:0;\ls ~/.zfuncs
+: 1493611719:0;which \ls
+: 1493611840:0;CLICOLOR=0
+: 1493611847:0;CLICOLOR_FORCE=0
+: 1493611849:0;/bin/ls
+: 1493611857:0;which /bin/ls
+: 1493611867:0;echo $CLICOLOR
+: 1493611875:0;echo $CLICOLOR_FORCE
+: 1493611954:0;TERM=xterm-old
+: 1493611955:0;ls
+: 1493612231:0;ls --color=none
+: 1493612245:0;ls -C none
+: 1493612248:0;ls -c none
+: 1493612250:0;man ls
+: 1493612410:0;cd mac
+: 1493612414:0;vim .zshrc
+: 1493612426:0;mail
+: 1493612490:0;run-help echo
+: 1493612498:0;man echo
+: 1493612504:0;man builtin
+: 1493612511:0;man alias
+: 1493612515:0;run-help alias
+: 1493613194:0;gd
+: 1493613203:0;gd .zstart/zshrc
+: 1493613225:0;git add .zstart/zshrc
+: 1493613283:0;git commit -m "Fixed zshrc so it loads in Intellij correctly." -m "Added lots of history settings." -m "Fixed loading of autoload functions under intellij."
+: 1493613292:0;gd .zstart
+: 1493613308:0;git add .zstart/
+: 1493613324:0;git commit -m "Fixed and added mvn aliases."
+: 1493613333:0;gaa
+: 1493613350:0;git commit -m "Renamed and fixed mvnfindlibs to mvnfinddeps."
+: 1493613352:0;gst
+: 1493613358:0;gp
+: 1493613388:0;git log -show
+: 1493613394:0;git help log
+: 1493613416:0;alias |grep log
+: 1493613429:0;glp
+: 1493613435:0;glo
+: 1493613442:0;glgp
+: 1493613498:0;wldomain
+: 1493613501:0;wldomain list
+: 1493613520:0;ll ~/.zfuncs
+: 1493613611:0;_tslist
+: 1493613619:0;_tslist L
+: 1493613654:0;less ~/.zstart/aliases
+: 1493613681:0;_tsWhoHasFileOpen
+: 1493613691:0;fuser
+: 1493613711:0;cd .zstart
+: 1493613714:0;vim zshrc
+: 1493613725:0;_tsWhoHasFileOpen zshrc
+: 1493613741:0;_tsWhoHasFileOpen ~/.zstart/zshrc
+: 1493613753:0;_tsWhoHasFileOpen ~/.zstart/zshrc -u
+: 1493613768:0;alias _tsWhoHasFileOpen
+: 1493613797:0;fuser -f ~/.zstart/zshrc
+: 1493613802:0;fuser -fu ~/.zstart/zshrc
+: 1493613830:0;cd /
+: 1493613844:0;_tsLargeFiles
+: 1493613870:0;_tsLargestDirs
+: 1493653487:0;cd /Users/lpjharri/Development/source_control/hwcir/git/uber/process-manager
+: 1493653491:12;gpr 1
+: 1493653525:0;alias mci
+: 1493653551:2;mci
+: 1493653908:0;../process-manager
+: 1493653921:0;../care-process-manager
+: 1493653924:10;mvn clean install
+: 1493653939:0;../carma-war
+: 1493653944:4;mvn clean package
+: 1493653954:2;cp target/carma-war-*.war $DOMAIN_HOME/autodeploy
+: 1493653960:4;mysqlstart
+: 1493653971:202;startCarma.sh -t -l
+: 1493655571:0;clear
+: 1493655589:25977;cafdw $$
+: 1493681450:0;: 1493678894:0;vim sd.ksh
+: 1493678969:0;cp sd.ksh me.ksh
+: 1493679043:0;man -k dos
+: 1493679089:0;vim me.ksh
+: 1493679101:0;./me.ksh
+: 1493679109:0;rm -f me.ksh
+: 1493679180:0;./sd
+: 1493679336:0;./sd.ksh brewcask.sed
+: 1493679466:0;less brewcask.sed
+: 1493679783:0;echo $LIST |grep -v "\!" |xargs brew cask info > out.txt
+: 1493679788:0;cat out.txt
+: 1493679814:0;lt
+: 1493679828:0;sed -n -f ~/.bin/brewcask.sed out.txt
+: 1493679861:0;./sd.ksh
+: 1493679914:0;./sd.ksh ~/.bin/brewcask.sed out.txt
+: 1493679934:0;./sd.ksh ~/.bin/brewcask.sed -n -f out.txt
+: 1493679993:0;sd.ksh
+: 1493680082:0;./sd.ksh -- ~/.bin/brewcask.sed -n -f out.txt
+: 1493680286:0;brewcasklist.sh
+: 1493680332:0;sd.ksh brewcasklist.sh
+: 1493680388:0;grep echon *
+: 1493680404:0;brew search echon
+: 1493680423:0;vim sd.ksh
+: 1493680438:0;expr
+: 1493680441:0;man expr
+: 1493680444:0;man echon
+: 1493680596:0;ksh
+: 1493681508:0;cd
+: 1493681508:0;la
+: 1493681526:0;cd .configuration
+: 1493681526:0;l
+: 1493681580:3;history L
+: 1493681589:0;history > outhist
+: 1493681592:11;vim outhist
+: 1493681612:0;cd ~/
+: 1493681677:0;man fc
+: 1493681681:0;run-help fc
+: 1493682062:10;vim .zsh_history
+: 1493682076:0;history
+: 1493682084:4;man history
+: 1493682111:0;fc -W jj.hist
