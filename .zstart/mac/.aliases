@@ -21,6 +21,10 @@ alias l@='ls -alh@'
 # sudo
 alias sudome='(unset CLICOLOR_FORCE;sudo -E -s)'
 
+# force an smbfs share for jenkins (the automount doesn't always work on this server)
+alias jmt='mkdir -p /tmp/jenkinsshare;mount -o -s,-f=777,-d=777 -t smbfs //lpjharri@sasamba.co.ihc.com /tmp/jenkinsshare'
+alias jumt='umount /tmp/jenkinsshare;rmdir /tmp/jenkinsshare'
+
 # cups system
 alias statcups='sudo launchctl list |grep cupsd'
 alias stopcups='sudo launchctl unload -w /System/Library/LaunchDaemons/org.cups.cupsd.plist'

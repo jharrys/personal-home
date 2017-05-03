@@ -74,6 +74,8 @@ defaults write com.apple.screencapture location ~/Desktop/Screenshots
 #******************************************
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"    # keeps the java icon out of the mac os x dock
+
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
 export MAVEN_OPTS="-Xmx1024m"
