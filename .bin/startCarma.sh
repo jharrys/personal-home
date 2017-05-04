@@ -9,6 +9,8 @@ unset TAIL
 DOMAIN_HOME="/Users/lpjharri/local/wldomains/carma"
 NOHUPLOG="${DOMAIN_HOME}/logs/nohup-carma.log"
 MSG="$0 [-h] [-t] [-l] [-m]\n\n-t:\ttamjunctionsimul\n-l\ttail file\n-m\tstart mysql"
+JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true ${JAVA_TOOL_OPTIONS}"
+export JAVA_TOOL_OPTIONS
 
 $colored_fg_yellow
 [ $# -lt 1 ] && echo $MSG && $type_reset && exit 1
