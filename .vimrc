@@ -265,6 +265,14 @@ iab <// </C-X><C-O>     " Autocomplete markup tags (remapping C-X, C-O)
   nnoremap <leader>hl :set hlsearch!<CR>        " toggle search hilight on/off
   nnoremap <F3> :set hlsearch!<CR>              " use F3 to toggle search hilight on/off
   map <leader>ss :setlocal spell!<CR>
+
+  "duplicate lines
+  nmap <C-d> mzyyp`z
+  vmap <C-d> mzyyp`z
+  "moving line Up
+  nnoremap <S-Up> :m .-2<CR>==
+  "moving line Down
+  nnoremap <S-Down> :m .+1<CR>==
 " }
 
 " Plug Settings {
