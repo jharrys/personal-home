@@ -4114,9 +4114,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>115 32 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>436 183 796 473 0 0 1440 900 </string>
+	<string>898 926 918 512 683 900 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>440 190 997 705 0 0 1440 900 </string>
+	<string>754 1473 2355 817 683 900 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -5205,13 +5205,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.48480737209320068</real>
+				<real>0.14658661186695099</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.44079643487930298</real>
+				<real>0.035382930189371109</real>
 				<key>Red Component</key>
-				<real>0.44962155818939209</real>
+				<real>0.058213811367750168</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -7038,7 +7038,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-06T04:37:46Z</date>
+	<date>2017-05-09T04:11:38Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Selection Respects Soft Boundaries</key>
