@@ -47,6 +47,9 @@ alias dock-elixir-bash='docker run -it --rm elixir bash'                        
 
 ###### Find ######
 alias findnewer='find . -newerct'                                                                                                                             # findnewerthan '5 minutes ago'
+alias fnung='find / \( -nouser -o -nogroup \) -print'                                                                                                         # find files/dirs with no user or no group
+alias fnotuser='find . -not -user'                                                                                                                            # find files not owned by me
+alias fnotme='find . -not -user $(whoami)'                                                                                                                    # find files that are not mine
 
 ###### Less ######
 alias lessq='less -F'                                                                                                                                         # less, but quit if all fits in one page
@@ -123,8 +126,6 @@ alias histrestore="fc -R ~/.configuration/zsh_history; fc -W"
 alias hsync='history -a ; history -n'                                                                                                                         # sync history
 
 alias web='python -m SimpleHTTPServer'                                                                                                                        # with no arg, the server is listening on 8000
-alias fnung='find / \( -nouser -o -nogroup \) -print'                                                                                                         # find files/dirs with no user or no group
-alias uneven='findUnevenPermissions.py'                                                                                                                       # find uneven permissions
 
 ###### Jar / zip ######
 alias catz='unzip -p'                                                                                                                                        # catz FILE.jar PATH/TO/FILE-to-list.txt
