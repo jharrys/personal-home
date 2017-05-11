@@ -101,9 +101,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment yellow black
+      prompt_segment 196 black
     else
-      prompt_segment green black
+      prompt_segment 017 black
     fi
 
     if [[ -e "${repo_path}/BISECT_LOG" ]]; then
@@ -199,7 +199,7 @@ prompt_history() {
 
 # Time
 prompt_time() {
-  prompt_segment violet white '%T'
+  prompt_segment violet 010 '%T'
 }
 
 # Virtualenv: current working virtualenv
