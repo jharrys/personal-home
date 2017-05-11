@@ -41,6 +41,10 @@ alias eam='vim ${ZSTART}/aliases'
 # edit platform aliases
 alias eap='vim ${ZDOTDIR}/.aliases'
 
+###### Docker ######
+alias dock-elixir='docker run -it --rm elixir'                                                                                                                # an elixir environment for developing elixir apps or learning
+alias dock-elixir-bash='docker run -it --rm elixir bash'                                                                                                      # an elixir environment for developing elixir apps or learning
+
 ###### Find ######
 alias findnewer='find . -newerct'                                                                                                                             # findnewerthan '5 minutes ago'
 
