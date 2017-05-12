@@ -208,6 +208,7 @@ alias gpro='gitworkflow_gpr.sh -o'
 alias gprr='gitworkflow_gpr.sh'
 alias gtv='git tag -l --sort=-v:refname'
 alias gpot='git push && git push --tags'
+alias gtl='git push -q origin :refs/tags/latest-release; git tag -f -m "latest-release" latest-release'
 
 # Maven stuff
 alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                                                                                # clean my local repository
