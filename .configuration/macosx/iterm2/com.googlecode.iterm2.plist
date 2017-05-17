@@ -4114,9 +4114,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>115 32 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>898 926 918 512 683 900 2560 1440 </string>
+	<string>46 86 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>754 1473 2355 817 683 900 2560 1440 </string>
+	<string>0 19 1435 881 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -7038,7 +7038,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-09T04:11:38Z</date>
+	<date>2017-05-17T03:04:09Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Selection Respects Soft Boundaries</key>
@@ -7075,6 +7075,7 @@
 		<string>Jobs</string>
 		<string>Paste History</string>
 		<string>Recent Directories</string>
+		<string>Command History</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
