@@ -1,0 +1,5 @@
+**Character files** : These are also device files that provide unbuffered serial access to system hardware components. They work by providing a way of communication with devices by transferring data one character at a time.
+
+**Block files** : These are device files that provide buffered access to system hardware components. They provide a method of communication with device drivers through the file system.
+
+One important aspect about block files is that they can transfer a large block of data and information at a given time.

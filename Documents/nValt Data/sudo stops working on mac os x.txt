@@ -1,0 +1,22 @@
+Received errors trying to sudo. “permission denied reading sudoers file”.
+
+The Intermountain laptops don’t use the wheel group. 
+
+The entry in the sudoers file uses the group %admin, which I had. I did multiple “id” and “groups” command and compared it to Darin which was the same.
+
+The only other thing I did not check was the rights on the root file system.
+
+!!! Actually this makes sense. This happened after I turned on File Sharing in Preferences, trying to share over SMB protocol my mac to my windows … something didn’t work well … and then I turned it off - my sudo privileges changed right after this !!!
+
+1. I had to use time drive to restore the hard drive, I was lucky to have a copy from late the previous day.
+2. Found this on <http://stackoverflow.com/questions/36264655/lost-permission-for-sudo-in-osx-el-captain>
+
+I had the same issue and in my case the permissions of the root folder got corrupted. What people overlook is that / is in fact also a real, normal directory and just like every directory it has ownership and permissions. Ownership should be root:wheel and permission should be 755(that's rwxr-xr-x).
+
+The easiest way to restore both was starting Script Editor and then typing and running that script:
+
+**do shell script "/usr/sbin/chown root:wheel /" with administrator privileges
+do shell script "/bin/chmod 755 /" with administrator privileges**
+
+You are prompted for admin password and then chown and chmod come to the rescue. After that sudo was working again.
+

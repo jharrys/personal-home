@@ -1,0 +1,19 @@
+1. startup mysql
+
+```
+mysqld --skip-grant-tables
+```
+
+2. then start mysql console doing
+
+```
+$ mysql -u root mysql
+$mysql> UPDATE user SET Password=PASSWORD('my_password') where USER='root';
+$mysql> FLUSH PRIVILEGES;
+```
+
+3. if you get unknown field password try this
+
+```
+update user set authentication_string=password('my_password') where user='root';
+```

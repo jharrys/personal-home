@@ -1,0 +1,9 @@
+## Per command
+
+        java -Djava.awt.headless=true …
+
+## Globally
+
+* add to rc startup scripts
+
+        export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"

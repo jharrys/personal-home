@@ -1,0 +1,25 @@
+<plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/${project.artifactId}-${project.version}/WEB-INF/lib</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${basedir}/netica</directory>
+                  <includes>
+                    <include>NeticaJ.jar</include>
+                  </includes>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>

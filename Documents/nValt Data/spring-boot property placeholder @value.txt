@@ -1,0 +1,45 @@
+To set a default value for property placeholder :
+
+${property:default value}
+Few examples :
+
+//@PropertySource("classpath:/config.properties}")
+//@Configuration
+
+@Value("${mongodb.url:127.0.0.1}")
+private String mongodbUrl;
+
+@Value("#{'${mongodb.url:172.0.0.1}'}")
+private String mongodbUrl;
+
+@Value("#{config['mongodb.url']?:'127.0.0.1'}")
+private String mongodbUrl;
+
+In order to make this work you will need to use @propertysource to configure a particular file to read.
+
+ANOTHER WAY TO GET TO THE APPLICATION.PROPERTIES FILE is to use Spring’s org.springframework.core.env.Environment
+
+All properties it gets in Application.properties end up in its environment.
+
+So just do the following for a property called cache.directory.name in the application.properties file:
+
+CACHE_DIR_NAME = environment.getProperty("cache.directory.name") == null ? "filecache" : environment.getProperty("cache" +
+                ".directory.name");
+
+===============
+Using Spring Expressions
+
+@Value Examples
+To set a default value in Spring expression, use Elvis operator :
+
+#{expression?:default value}
+Few examples :
+
+@Value("#{systemProperties['mongodb.port'] ?: 27017}")
+private String mongodbPort;
+
+@Value("#{config['mongodb.url'] ?: '127.0.0.1'}")
+private String mongodbUrl;
+
+@Value("#{aBean.age ?: 21}")
+private int age;

@@ -1,0 +1,13 @@
+sorting associative arrays basics
+        sort by key numeric ascending: ${(kon)myarray}
+        sort by key number descendin: ${(kOn)myarray}
+        sort by key alpha ascending: ${(ko)myarray}
+        sort by key alpha descendin: ${(kO)myarray}
+        sort by val - remove “k” from all the above.
+        
+        typeset -A assoc_array
+        assoc_array=(k1 v1 k2 v2 k3 v3)
+        
+        for k in "${(@k)assoc_array}"; do
+          echo "$k -> $assoc_array[$k]"
+        done

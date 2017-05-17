@@ -1,0 +1,16 @@
+## All Inclusive Rate
+
+* usually $20/hr higher than market rate
+
+## Market Rate
+* if travel is required then the following applies:
+    * market rate is $80/hr, then *all inclusive rate* is $100/hr
+    * so T&E (Travel & Expense) is $20/hr
+        * T&E == flight, food, hotel, car, public, transport
+        * ensure they spell out what T&E is defined in their company
+        * **check to see if hotel has corporate rate for company**
+
+## T&M (Time & Material)
+* burn rate: the rate per month the company expects you to log against T&M.
+
+*NB: These are 2012 numbers*

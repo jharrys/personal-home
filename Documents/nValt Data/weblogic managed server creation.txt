@@ -1,0 +1,22 @@
+HWCIR Managed Server Instance
+
+* Use Weblogic web console to create new managed server
+* Names of new managed servers should be same as the directory name in filesystem
+* Located under /usr/local/beaapps/hwapp/servers/SERVER-INSTANCES-HERE
+* hwapp represents the Weblogic instance (i.e., 12.1.1 or 12.1.3)
+    * hwapp is Weblogic version 12.1.1
+    * hwapp-ver is Weblogic version 12.1.3
+* copy an existing managed server
+    * cp -ar /usr/local/beaapps/hwapp/servers/existing /usr/local/beaapps/hwapp/servers/new
+    * cd /usr/local/beaapps/hwapp/servers/new
+    * remove all files except
+        * hwcir-properties
+        * ihcstartscript.sh
+        * security
+        * startManagedWebLogic.sh
+        * stop.sh
+* If you have multiple managed servers on different systems put those in the right place (i.e., screening1, screening2)
+    * directory names should match under file system so example:
+    * lpv-hwverapp01:/usr/local/beaapps/hwapp/servers/screening1
+    * lpv-hwverapp02:/usr/local/beaapps/hwapp/servers/screening2
+    * both directories match the name you created in the web console

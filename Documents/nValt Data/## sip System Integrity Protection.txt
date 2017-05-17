@@ -1,0 +1,7 @@
+* csrutil status
+
+* boot to recovery mode
+* csrutil disable // to disable SIP
+* csrutil enable // to enable SIP
+
+* Reboot Mac and hold down Command + R simultaneously until you hear the startup chime ... choose Terminal

@@ -1,0 +1,4 @@
+* defaults write com.apple.screencapture type jpg
+* killall SystemUIServer
+
+you can change to PDF, PNG, GIF and TIFF.

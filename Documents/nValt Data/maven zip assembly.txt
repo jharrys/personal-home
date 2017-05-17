@@ -1,0 +1,44 @@
+Here is the full reference [document](https://books.sonatype.com/mvnref-book/reference/index.html) 
+
+### Modify pom.xml with assembly plugin and a pointer to the assembly descriptor
+
+    * Note1: it’s bound to the package phase and it runs the “assembly:single” goal.
+    * Note2: it looks for assembly/assembly.xml file for instructions on how to assemble … the directory and filename can be anything
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>create-zip</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>assembly/assembly.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
+### Create the assembly descriptor: based on the above pom.xml we would create it in the base project /assembly/assembly.xml
+
+        <assembly xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+                  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+            <id>distribution</id>
+            <formats>
+                <format>zip</format>
+            </formats>
+            <files>
+                <file>
+                    <source>target/${project.artifactId}.jar</source>
+                </file>
+                <file>
+                    <source>target/classes/application.properties</source>
+                </file>
+            </files>
+        </assembly>

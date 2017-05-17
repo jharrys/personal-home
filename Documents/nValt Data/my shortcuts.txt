@@ -1,0 +1,148 @@
+# Legend
+⌘ = Command     
+⌥ = ALT  
+⌃ = Control    
+⇧ = Shift  
+⎋ = Esc   
+ ⇥ = Tab   
+ ⏏ = Eject    
+ ⌫ = Back space (back delete)   
+ ⌦ = Forward delete   
+ ⏎ = Enter   
+ ↖︎ = Home
+ ↘︎ = End
+ ⇞ = Page Up
+ ⇟ = Page Down   
+
+ ---
+
+# Mac Shortcuts 
+[Great Reference for Mac Shortcuts][macshortcuts][^macshortcuts]
+
+|Shortcut| |Description| 
+|:----- |-----|:-----|
+|⇧⌘L||Search with Google|
+|⇧⌘V||New NValt from Selection|
+|⌃F2||Menu|
+|⌃F3||Dock|
+|⌃F4||Window Focus|
+|⌃F5||Window Toolbar|
+|⌃F8||Status Menu (right side)|
+|⌘⌥N||Not Center|
+
+[macshortcuts]: http://www.danrodney.com/mac/
+---
+
+# HipChat Shortcuts
+
+|Shortcut| |Description| 
+|:----- |-----|:-----|
+|/clear||clear history|
+|/available||status available|
+|/away||status away|
+|/dnd||do not disturb|
+|/topic 'topic'||change to topic 'topic'|
+|/part||leave room - must be in the room|
+|/join 'room name'||join 'room name'|
+|/code 'some code'||'some code' shown in a block of text with different background|
+|/quote 'some quote'||'some quote' shown as a quote|
+|/me 'saying something'||shows "Johnnie saying something"|
+|s/mispelled/corrected||corrects the spelling of a mispelled word above|
+|(emoji)||i.e., (thumbs up)|
+
+---
+
+# Zsh Shortcuts
+
+|Shortcut| |Description| 
+|:----- |-----|:-----|
+|n-options||display all available zsh options|
+|n-kill||display all processes to be killed|
+|n-history||display history|
+|n-aliases||display aliases|
+|n-cd||display directories to change to|
+|n-env||display env variables|
+|n-functions||display all available functions|
+|n-panelize 'cmd'||display cmd output in a panel|
+|!abc:p||print last command starting with 'abc'|
+|⌃-_||undo last change|
+|⌃-W||delete word in front|
+|⌃-U||clear whole line|
+|bindkey||list all bindings in zsh|
+|⌥-A||execute current command line and show command with cursor positioned same in next line|
+|⌥-D||delete word after cursor|
+|⌥-B||move backward one word|
+|⌥-F||move forward one word|
+|⌥-U||transform word after cursor to uppercase|
+|⌥-L||transform word after cursor to lowercase|
+|⌥-C||capital letter cursor is under|
+|⌥-'||quote line|
+|x <UP>||shows history for commands starting with 'x'|
+|kill x⇥||shows ps info for things starting with 'x'|
+|ls -⇥||shows list of possible options for 'ls'|
+|ls \*(m0)||can use glob patterns with commands to send options (modified 0)|
+|ls -lh \*\*/\*(Lm+20)||recursively search for files over 20mb|
+|wc -l \*\*/\*.clj||line count recursively for files ending with clj|
+|⌃-X,⌃-E||bring current command into $EDITOR to edit|
+|take||create directory and change into it|
+|....||cd ../../..|
+|/||cd /|
+|1||cd -|
+|7||cd +7|
+|d||lists last used directories (dirs -v)|
+
+---
+
+### Zsh Mac Aliases
+
+|Shortcut| |Description| 
+|:----- |-----|:-----|
+|copyfile||Copies the __contents__ of the given file to the system clipboard|
+|copydir||Copies the pathname of the current directory to the system clipboard|
+|⌃⇧←||dir cycle previous|
+|⌃⇧→||dir cycle next|
+|tab||open current directory in a new tab|
+|x||extract most types of compressed files|
+|zsh_stats||list stats of the most commonly used commands/aliases|
+|ofd||open current directory in finder window|
+|pfd||print out directory of finder|
+|pfs||print out directory of selection in finder|
+|cdf||cd to directory in finder|
+|pushdf||pushd to current finder directory|
+|quick-look||open up in preview|
+|man-preview||open man page in preview|
+
+---
+
+### Zsh Git Aliases
+
+|Shortcut| |Description| 
+|:----- |-----|:-----|
+|g||git|
+|gsb||short status|
+|gpd||git pull dry-run|
+|gb||git branch|
+|gaa||git add all|
+
+---
+
+# IntelliJ Shortcuts
+
+|Shortcut| |Description| 
+|:----- |-----|:-----|
+|⌘[ or ]||navigate back/fwd|
+|⌘B||nav declaration|
+|⌘⌥B||nav implementation|
+|F3||Bookmark|
+|⌘F3||list Bookmarks|
+|⌃H||type hierarchy|
+|⌃⌥H||call hierarchy|
+|⇧⌘H||method hierarchy|
+|⇧⌘T||nav to Test|
+|⌘F12||show file structure|
+|⇧⌃⌥↑||nav to previous change|
+|⇧⌃⌥↓||nav to next change|
+|F2||nav to next hilighted error|
+|⇧F2||nav to previous hilighted error|
+
+[^macshortcuts]: Great link for mac shortcut keys http://www.danrodney.com/mac/

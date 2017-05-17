@@ -1,0 +1,12 @@
+1. install dependent libraries
+        yum install gcc kernel-devel make ncurses-devel -y
+1. download tmux 
+        curl -OL https://github.com/tmux/tmux/releases/download/2.0/tmux-2.0.tar.gz
+1. download libevent
+        curl -OL https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
+1. cd libevent
+        ./configure —prefix=/usr/local; make; sudo make install
+1. cd tmux
+        LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local; sudo make install
+1. remove the old tmux installed by yum
+        sudo yum remove tmux

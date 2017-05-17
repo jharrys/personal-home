@@ -1,0 +1,6 @@
+1. installed the iscan (see if i can remove it - have it in my downloads)
+2. installed sane
+3. installed xsane (see if i can remove it)
+4. check dnf install log for any others i installed
+5. it uses the /etc/sane.d/epson2.conf configuration
+6. to get it working i modified /etc/sane.d/epson2.conf and added entry “net 10.0.0.203” right to the scanner - autodetect is not working

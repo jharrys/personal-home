@@ -1,0 +1,15 @@
+# Indentation recommendation
+* Do NOT mix spaces and tabs
+* Prefer spaces to tabs
+* Use 4 spaces for indentation
+* Convert tabs to 4 spaces 
+
+
+* in vi/vim configure your .vimrc as
+>filetype plugin indent on  
+>" show existing tab with 4 spaces width  
+>set tabstop=4  
+>" when indenting with '>', use 4 spaces width  
+>set shiftwidth=4  
+>"On pressing tab, insert 4 spaces  
+>set expandtab  

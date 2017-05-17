@@ -1,0 +1,15 @@
+If two files are very similar, then the context diff will show many replicated contentx. In 1999, GNU diff propoesed the Unified diff, it merges contents of f1 and f2.
+We add a -u option to diff
+$ diff -u f1 f2
+The result
+     --- f1 2012-08-29 16:45:41.000000000 +0800 　　+++ f2 2012-08-29 16:45:51.000000000 +0800 　　@@ -1,7 +1,7 @@ 　　 a 　　 a 　　 a 　　-a 　　+b 　　 a 　　 a 　　 a
+The first part is still the file information
+     --- f1 2012-08-29 16:45:41.000000000 +0800 　　+++ f2 2012-08-29 16:45:51.000000000 +0800
+"---" indicates file before change,"+++" indicates file after change
+The second part uses two @ to indicate the change location
+     @@ -1,7 +1,7 @@
+the -1,7 consists of 3 parts, '-' indicates the first file (f1), '1' indicates line 1,'7' indicates consecutive 7 lines. The meaning of this expression is that the following is the 7 lines of the first file starting from line 1.
+"+1,7" means 7 lines of the second file starting from line 1.
+The third part shows the content changes
+      a 　　 a 　　 a 　　-a 　　+b 　　 a 　　 a 　　 a
+except the changes, it will also show 3 lines in the file before and after the change. It will merge the surrounding content, that's why it is called unified diff. There is a mark character at the beginning of each line. If it's blank, then no change, if it's '-', then the line is deleted, if it's '+', then the line is added.

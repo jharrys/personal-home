@@ -1,0 +1,16 @@
+Required Python 2.6+
+
+1. yum install git
+2. yum install python-pip
+3. ----- the pip install commands should be run by normal user, not root ... but i messed up, so reason for chmod ----
+4. pip install powerline-status
+5. pip install --upgrade pip
+6. pip install argparse
+7. cd /usr/lib/python2.[67]/site-packages
+8. chmod -R go+rx pip
+9. chmod -R go+rx pip-8.1.1.dist-info
+10. chmod -R go+rx powerline
+11. chmod -R go+rx powerline_status-2.3-py2.7.egg-info
+12. chmod -R go+rx argparse*
+13. As yourself
+14. chsh (to change shell to zsh)

@@ -1,0 +1,8 @@
+## adding a certificate to the root certs of a jdk
+
+1. change to JAVA_HOME
+2. cd jre/lib/security
+3. cp cacerts cacerts.original
+4. keytool -import -v -trustcacerts -file /path/to/some.crt -keystore cacerts -storepass changeit
+
+that’s it!

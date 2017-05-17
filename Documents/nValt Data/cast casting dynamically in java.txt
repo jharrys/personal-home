@@ -1,0 +1,11 @@
+I want to cast dynamically in Java.
+
+If I have an object of type Object and it’s type as a string in another variable as in this example:
+
+public void convertMeToRealType(Object o, String stringType) {
+    Class class = Class.forName(stringType);
+    Object newObject = class.cast(o);
+}
+
+It’s not true dynamic casting, but it lets you know that the object can be cast to newObject and the newObject can be placed into
+some array of stringType’s super type.

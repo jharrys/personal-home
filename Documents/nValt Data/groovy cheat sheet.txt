@@ -1,0 +1,164 @@
+#!/usr/bin/env groovy       <=============== EXAMPLE OF MAKING A GROOVY SCRIPT A SHELL SCRIPT
+        
+        println "Hello Groovy World"
+        
+        // execute a single shell command
+        //println "ls -al".execute().text
+        
+        // execute multiple shell commands
+        //println "ls /usr/bin & ls /Users".execute().text
+        
+        // wait from a shell command to finish before continuing
+        //def p = "sleep 10".execute()
+        //p.waitFor()
+        //println "echo sleep ended".execute().text
+        
+        // get env properties
+        println "java version ${System.getProperty("java.version")}"
+        println "platform ${System.getProperty("os.name")}"
+        println "platform v ${System.getProperty("os.version")}"
+        println "user home ${System.getProperty("user.home")}"
+        
+        // env variables
+        //System.env.each{println it}
+        
+        // here doc
+        def date = new Date()
+        def here = """
+        Dear ${System.getProperty("user.home")},
+        
+        today is ${date}.
+        """
+        println here
+        
+        // arrays
+        def myarray = ["john", "baxter", "shelby"]
+        def strarray = ["a", "b", "c"] as String[]
+        def setarray = ["d", "e", "f"] as Set
+        
+        println myarray[1]
+        println myarray.getAt(2)
+        println "-----"
+        
+        myarray << "kassi"
+        myarray.each { println it }
+        
+        println("---")
+        def family = ["dad": "john", "son": "bax"]
+        println family.dad
+        println family.get("son")
+        family.put("son2", "shelby")
+        family.daughter = "kassi"
+        family.each { println "${it.value} is ${it.key}" }
+        
+        // blocks and closures
+        def hello = { println "Hi ${it}" }
+        hello("johnnie")
+        
+        println("----")
+        
+        println("build information:")
+        // first get a list of all jobs
+        def buildsRestRequest = "http://lpv-hwmaven01.co.ihc.com:8080/job/process-manager/api/json"
+        def restUrl2 = new URL(buildsRestRequest)
+        def rest2response = restUrl2.text
+        def doc2 = new groovy.json.JsonSlurper().parseText(rest2response)
+        
+        listOfBuilds = []
+        
+        doc2.builds.each {
+            listOfBuilds << it.number
+        }
+        
+        println "build has ${listOfBuilds.size()} builds"
+        
+        listOfBuilds.each { println it }
+        
+        for (int x = 0; x < listOfBuilds.size(); x++) {
+            boolean found = false
+            def buildnum = listOfBuilds.getAt(x)
+            def rest3url = new URL("http://lpv-hwmaven01.co.ihc.com:8080/job/process-manager/${buildnum}/api/json")
+            println("rest3url is: ${rest3url}")
+            def doc3 = new groovy.json.JsonSlurper().parseText(rest3url.text)
+            doc3.changeSet.items.each {
+                String str = it
+                if (str.toLowerCase().contains("release")) {
+                    println("commit id: ${it.commitId}")
+                    println " build number is: ${listOfBuilds.getAt(x)}"
+                    found = true
+                    return true
+                }
+            }
+            if (found) {
+                println("found")
+                break
+            } else {
+                println("not found")
+            }
+        }
+        
+        // in unix prompts are executed directly on the tty device (not outputstream)
+        // with java/groovy we can redirect the external input and output to tty and java/groovy will capture those
+        // and input will be redirected to the java/groovy app
+        command = ['bash', '-c', 'mvn versions:set </dev/tty >/dev/tty']
+        def process = new ProcessBuilder(command).directory(new File(System.properties.'user.dir')).redirectErrorStream(true).start()
+        process.waitFor()
+        
+        
+        String s1 = "John"
+        String s2 = "Harris"
+        Boolean aBoolean = null
+        char s3 = '\u00F1'
+        byte b = 128
+        short i = 32769
+        int c =
+        
+        System.out.printf("Hello %n [%1s] %n [%2s] %n [%3B] %n [%4c] %n [%5d] %n [%6d] %n", s2, s1, aBoolean, s3, b, i)
+        return null
+        
+        // SQL Code
+        /*
+        Make sure the jdbc driver is added as part of the classpath. For example from groovysh -classpath
+         */
+        import groovy.sql.Sql
+        
+        configuration = [
+            'url' : 'jdbc:oracle:thin:@ldap://oracleldapvip:389/tacdev50,cn=OracleContext,dc=co,dc=ihc,dc=com',
+            'user': 'clinical_services',
+            'pass': 'clinical_services']
+        sql = Sql.newInstance(configuration.url, configuration.user, configuration.pass, 'oracle.jdbc.driver.OracleDriver')
+        res = sql.firstRow('select * from service_point_definition')
+        println res
+        println(res.id)
+        println res.description
+        
+        res = sql.eachRow('select * from service_point_definition', {
+            println("${it.id} = ${it.description}")
+        })
+        
+        
+        ////////////////////
+        import groovy.sql.Sql
+        import java.text.DateFormat
+        import java.text.SimpleDateFormat
+        
+        def getAlerts() {
+            configuration = [
+                    'url' : 'jdbc:mysql://localhost:3306/carma_protoman',
+                    'user': 'protocol_carma',
+                    'pass': 'protocol_carma']
+            alertSql = Sql.newInstance(configuration.url, configuration.user, configuration.pass, 'com.mysql.jdbc.Driver')
+            enrollSql = Sql.newInstance(configuration.url, configuration.user, configuration.pass, 'com.mysql.jdbc.Driver')
+            updateAlert = Sql.newInstance(configuration.url, configuration.user, configuration.pass, 'com.mysql.jdbc.Driver')
+        
+        
+            enrollSql.eachRow('select id, account_id, patient_id, event_date from protocol_enroll where event_type_ncid=50425414', {
+                enrollSql.eachRow("select id, created_date from alert_event where account_id=$it.account_id and patient_id" +
+                        "=$it.patient_id and created_date > $it.event_date")
+                println first
+        
+            })
+        }
+        
+        getAlerts()
+        

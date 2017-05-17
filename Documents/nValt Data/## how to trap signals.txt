@@ -1,0 +1,117 @@
+#-----------------------------------------------------------
+    # Creates a function when called
+    # exits only if the USR1 signal (kill -10) on Linux is
+    # triggered; all other signals ignored
+    #
+    # kill -9 or KILL cannot be trapped
+    #-----------------------------------------------------------
+    #!/bin/bash
+    function trapped() {
+            if [ "$1" = "USR1" ]; then
+                    echo "Got me with $1 trap!"
+                    exit
+            else
+                    echo "Received $1 trap, continuing..."
+            fi
+    }
+    
+    trap "trapped ABRT" ABRT
+    trap "trapped EXIT" EXIT
+    trap "trapped HUP" HUP
+    trap "trapped INT" INT
+    trap "trapped KILL" KILL        #Won't work
+    trap "trapped QUIT" QUIT
+    trap "trapped TERM" TERM
+    trap "trapped USR1" USR1
+    
+    # loop indefinitely
+    while (( 1 )); do
+            :       # noop
+    done
+    
+# how to reset a trap you've set
+
+    trap - SIGNAL_SPEC    # Where SIGNAL_SPEC is one of like INT, HUP, TERM, QUIT, etc...
+    
+    # or in bash, to do all quickly
+    trap - {0..38}
+    
+# how bash startup or initialization files work and best recommendations
+
+    /etc/profile : Global login environment for Bourne and similar logins
+    /etc/bashrc or /etc/bash.bashrc: Global environment file for interactive bash subshells
+    /etc/bash_completion: if it exists, used by Ian Macdonald's programmable completion library
+    /etc/inputrc: Global GNU readline configuration for the readline engine
+    ~/.bashrc: Personal environment file for interactive bash subshells; place aliases, functions and prompts here
+    ~/.bash_profile: Personal profile for bash login shells; recommend to source ~/.bashrc and then ignore
+    ~/.bash_login: Personal profile file for Bourne login shells; only used by bash if ~/.bash_profile is not present; recommend to ignore
+    ~/.profile: Personal profile file for Bourne login shells; only used by bash if ~/.bash_profile and ~/.bash_login are not present; recommend to ignore unless using other shells
+    ~/.bash_history: Personal storage file for shell command history
+    ~/.bash_logout: Executed when you logout; recommend to place cleanup routines here; only executed on a clean logout
+    ~/.inputrc: Personal customizations for GNU Readline.
+
+# On a simple RedHat Linux system, with only .bash_profile and .bashrc in my home dir
+
+### Invoking a login shell (i.e. bash -l)
+1. Executes only .bash_profile
+
+### Invoking an interactive subshell (i.e., bash from the command line)
+1. Executes only .bashrc
+
+### How to do a root check, verify userid is currently executing
+
+    if [ "$(id -u)" != "0" ] ; then
+      echo "This script must be run as root."
+      exit
+    fi
+
+### Provide a usage help screen
+
+    usage() {
+        echo "Usage:"
+        echo "$0 [OPTIONS] <stuff>"
+        echo "Description of CMD"
+        echo
+        echo "  OPTIONS:"
+        echo "    --help             Display usage and exit"
+    }
+
+### looping over params sent in
+
+    BASE_DIR=/tmp
+    while [ ${#} -ne 0 ]; do
+        arg="$1"
+        case "$arg" in
+            --help)
+                usage 0
+                ;;
+            --dir)
+                shift
+                BASE_DIR=$1
+                ;;
+            --*)
+                echo "Unknown option $arg (use --help)"
+                exit 1
+                ;;
+            *)
+                echo "Too many arguments (use --help)"
+                exit 1
+                ;;
+        esac
+        shift
+    done
+
+### making sure a basedir exists (shortcut)
+
+    if [ ! -d "$BASE_DIR" ]; then
+        mkdir -p "$BASE_DIR"
+        [ $? != 0 ] && echo "Unable to create directory $BASE_DIR" && exit 1
+    fi
+
+### very silent copies
+
+    cp -fapRd SRC DEST 2> /dev/null
+
+### bzipping (logs & other things)
+
+    tar -cjf $TARBALL $(echo $DIR | sed -e 's/^\/$BASE_DIR\/[^\/]*\///g')

@@ -1,0 +1,27 @@
+# Reasons of ignoring these argument is permanent generation has been removed in HotSpot for JDK8 because of following drawbacks
+
+Fixed size at startup – difficult to tune.
+Internal Hotspot types were Java objects : Could move with full GC, opaque, not strongly typed and hard to debug, needed meta-metadata.
+Simplify full collections : Special iterators for metadata for each collector
+Want to deallocate class data concurrently and not during GC pause
+Enable future improvements that were limited by PermGen.
+The Permanent Generation (PermGen) space has completely been removed and is kind of replaced by a new space called Metaspace. The consequences of the PermGen removal is that obviously the PermSize and MaxPermSize JVM arguments are ignored and you will never get a java.lang.OutOfMemoryError: PermGen error.
+
+# Advantages of MetaSpace
+
+Take advantage of Java Language Specification property : Classes and associated metadata lifetimes match class loader’s
+Per loader storage area – Metaspace
+Linear allocation only
+No individual reclamation (except for RedefineClasses and class loading failure)
+No GC scan or compaction
+No relocation for metaspace objects
+Metaspace Tuning
+
+The maximum metaspace size can be set using the -XX:MaxMetaspaceSize flag, and the default is unlimited, which means that only your system memory is the limit. The -XX:MetaspaceSize tuning flag defines the initial size of metaspace If you don’t specify this flag, the Metaspace will dynamically re-size depending of the application demand at runtime.
+
+Change enables other optimizations and features in the future
+
+Application class data sharing
+Young collection optimizations, G1 class unloading
+Metadata size reductions and internal JVM footprint projects
+There is improved GC performace also. More detail

@@ -1,0 +1,3 @@
+dscl . list /Users
+
+dscacheutil -q user

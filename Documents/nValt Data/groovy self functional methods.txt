@@ -1,0 +1,30 @@
+Groovy has extension classes and methods. These are normal java classes that are used to extend other classes with additional functionality without having their source code.
+
+For example you can extend the functionality of Java’s String class by using an extension class.
+
+To load the extension classes groovy requires you to declare these methods/classes in a certain way inside the META-INF/services directory. They have to be present on the classpath at runtime.
+
+You can have static and instance methods, but they have to be declared in different classes (they can’t live together).
+
+***
+The first argument of the method (static or instance) corresponds to the receiver of the message, in other words the extended instance.
+
+E.g.,
+
+```
+class StaticStringExtension {
+    static String greeting(String self) {
+        ‘Hello, world!’
+    }
+}
+```
+
+The parameter to greeting, self, refers to the instance of the String which greeting() is being called on.
+
+It is not used, hence it would be called:
+
+```
+String.greeting() // which results in “Hello, world!”
+```
+
+***

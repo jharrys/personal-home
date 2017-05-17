@@ -1,0 +1,14 @@
+# lpr -o job-hold-until=<WHEN>
+
+    WHEN can be:
+    
+        indefinite (hold until released)
+        day-time (600 - 1800)
+        night (1800 - 600)
+        second-shift (1600 - 0000)
+        third-shift (0000 - 800)
+        weekend (sat, sun)
+        HH:MM (UTC time)
+        
+# lp -i job-id -H resume (release HELD job)
+        

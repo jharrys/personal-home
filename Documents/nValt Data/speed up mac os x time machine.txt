@@ -1,0 +1,29 @@
+warning! danger! this will adjust processor priority which may cause potential issues
+
+your cpu will throttle up!
+
+sudo sysctl debug.lowpri_throttle_enabled=0
+
+reverse: reboot or 
+sudo sysctl debug.lowpri_throttle_enabled=1
+
+if you want it to occur with every reboot:
+
+create a file named something like “speedup-time-machine.plist” with the contents from below and drop it into /Library/LaunchDaemons then issue “launchctl load /Library/LaunchDaemons/speedup-time-machine.plist”
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Copy under /Library/LaunchDaemons and issue sudo launchctl load /Library/LaunchDaemons/fix-el-capitan-slow-time-machine-speed.plist -->
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>fix-el-capitan-slow-time-machine-speed</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/sbin/sysctl</string>
+      <string>debug.lowpri_throttle_enabled=0</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+  </dict>
+</plist>

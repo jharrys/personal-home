@@ -1,0 +1,12 @@
+Adding an excel diff tool for git to call.
+
+I used a free tool from https://github.com/na-ka-na/ExcelCompare.
+
+1. Placed their script executable (excel_cmp) in my ~/.bin with their dist (contains needed jar files)
+2. .bin is in my path already
+3. Created a ~/.config/git/attributes file with
+    *.xls   diff=excel
+    *.xlsx  diff=excel
+4. Added to my ~/.gitconfig
+    [diff "excel"]
+        command = excel_cmp

@@ -1,0 +1,10 @@
+In the development cycle, upgrading to new versions of libraries requires the __npm install__ be executed, after modifying the versions in the package.js file.
+
+But switching between branches does not allow for node to simply restart and execute in the right environment. Here are the commands that need to be executed to update the environment with what the package.js and other dependencies define.
+
+1. npm cache clean
+2. rm -rf node_modules
+3. rm -rf typings (do not delete typings.json, keep this stored in SCCS)
+4. npm install (this will also recreate the typings directory automatically)
+5. npm start
+

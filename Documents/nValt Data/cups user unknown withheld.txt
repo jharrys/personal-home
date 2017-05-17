@@ -1,0 +1,5 @@
+1. cd /etc/cups
+2. cp cupsd.conf cupsd.conf.johnnie
+3. sudo vim cupsd.conf
+4. change “JobPrivateValues” to be set to “none” (note there may be several sections)
+5. Restart cupsd

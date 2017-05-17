@@ -1,0 +1,13 @@
+I concluded that nobody could really hear the difference between a raw CD track and an MP3 using a decent encoder at a variable bit rate averaging around 160kbps. Any bit rate higher than that was just wasting space on your device and your bandwidth for no rational reason. So-called "high resolution audio" was recently thoroughly debunked for very similar reasons.
+
+Articles last month revealed that musician Neil Young and Apple's Steve Jobs discussed offering digital music downloads of 'uncompromised studio quality'. Much of the press and user commentary was particularly enthusiastic about the prospect of uncompressed 24 bit 192kHz downloads. 24/192 featured prominently in my own conversations with Mr. Young's group several months ago.
+
+Unfortunately, there is no point to distributing music in 24-bit/192kHz format. Its playback fidelity is slightly inferior to 16/44.1 or 16/48, and it takes up 6 times the space.
+
+There are a few real problems with the audio quality and 'experience' of digitally distributed music today. 24/192 solves none of them. While everyone fixates on 24/192 as a magic bullet, we're not going to see any actual improvement.
+
+The authors of LAME must have agreed with me, because the typical, standard, recommended, default way of encoding any old audio input to MP3 …
+lame --preset standard "cd-track-raw.wav" "cd-track-encoded.mp3"
+
+
+… now produces variable bit rate MP3 tracks at a bitrate of around 192kbps on average.

@@ -1,0 +1,38 @@
+# Introduction
+
+Typings is the simple way to manage and install TypeScript definitions. It uses typings.json, which can resolve to the Typings Registry, GitHub, NPM, Bower, HTTP and local files. Packages can use type definitions from various sources and different versions, knowing they will never conflict for users.
+
+# Typings.json file should not be edited manually
+
+# This is how it should look like
+
+        {
+                "globalDependencies": 
+            {
+                "core-js": "registry:dt/core-js#0.0.0+20160725163759",
+                "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
+                "node": "registry:dt/node#6.0.0+20160909174046"
+            }
+        }
+
+
+# Auto generate the typings.json file (hard to find on the net)
+
+        npm run typings -- install dt~core-js --save --global 
+        npm run typings -- install dt~node --save --global 
+        npm run typings -- install dt~jasmine --save --global 
+
+# Different sources
+
+* npm - dependencies from NPM
+* github - dependencies directly from GitHub (E.g. Duo, JSPM)
+* bitbucket - dependencies directly from Bitbucket
+* bower - dependencies from Bower
+* common - "standard" libraries without a known "source"
+* shared - shared library functionality
+* lib - shared environment functionality (mirror of shared) (--global)
+* env - environments (E.g. atom, electron) (--global)
+* global - global (window.<var>) libraries (--global)
+* dt - typings from DefinitelyTyped (usually --global)
+
+# dt refers to the __DefinitelyTyped__ repositories

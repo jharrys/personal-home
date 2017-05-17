@@ -1,0 +1,13 @@
+### To access file system through nio do:
+
+        Path path = Paths.get(“path”, “to”, “file”); // creates a /path/to/file
+
+#### Create a hard link (works on linux, mac and windows 7 and higher)
+
+        Path destination = Paths.get(“some”, “file”); // file /some/file
+        Path source = Paths.get(“original”, “file”); // file /original/file
+        Files.createLink(destination, source) // creates a hard link
+
+### Copy
+
+        Files.copy(source, destination);

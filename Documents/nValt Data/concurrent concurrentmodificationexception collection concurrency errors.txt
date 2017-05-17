@@ -1,0 +1,66 @@
+### Single Threaded Environment
+  
+    After the creation of the iterator , structure is modified at any time by any method other than iterator's own remove method. 
+  
+### Multiple Threaded Environment 
+
+    If one thread is modifying the structure of the collection while other thread is iterating over it .
+
+================================================
+
+        Map<String,Long> cachedMessages = new HashMap<>();
+        
+        // add to cachedMessages
+        
+        void cleaner() {
+        
+                long currentTime = (new Date()).getTime();
+        
+                // keys is a Set view backed by the Map (So now you are iterating the Map via the Set)
+                Set<String> keys = cachedMessages.keySet();
+        
+                for (String key : keys) {
+        
+                    // get the time value then add the snooze time, if it's greater than current time then it's past it's snooze time
+                    // and should be cleaned out
+                    long snoozeExpireTime = cachedMessages.get(key) + this.snoozeMillis;
+                    if (currentTime > snoozeExpireTime) {
+                    
+                        remove is being called through the Map NOT the iterator —> this causes a concurrentmodificationexception because you are currently iterating through the Set
+                        cachedMessages.remove(key);
+                    }
+                }
+                this.nextCleanTime = currentTime + CLEANCACHECYCLETIME;
+        
+            }
+            
+            =========================
+            
+            Map<String,Long> cachedMessages = new HashMap<>();
+            
+            void cleaner() {
+    
+            LOGGER.debug("cleaner called...");
+    
+            long currentTime = (new Date()).getTime();
+    
+            Iterator<Map.Entry<String, Long>> it = cachedMessages.entrySet().iterator();
+    
+            while (it.hasNext()) {
+                Map.Entry<String, Long> entry = it.next();
+    
+                LOGGER.debug("cleaning entry: {}", entry.getKey());
+    
+                // get the time value then add the snooze time, if it's greater than current time then it's past it's snooze time
+                // and should be cleaned out
+                long snoozeExpireTime = entry.getValue() + this.snoozeMillis;
+                if (currentTime > snoozeExpireTime) {
+                    LOGGER.debug("removing entry: {}", entry.getKey());
+                    it.remove();  // <====== this is the key … remove via the iterator and NOT directly via the map
+                }
+            }
+    
+            this.nextCleanTime = currentTime + cleanCacheMillis;
+            LOGGER.debug("next clean time is in {} seconds", (nextCleanTime / 1000L));
+    
+        }

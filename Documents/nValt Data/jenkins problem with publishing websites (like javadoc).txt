@@ -1,0 +1,13 @@
+See the following article:
+https://wiki.jenkins-ci.org/display/JENKINS/Configuring+Content+Security+Policy
+
+Security policy was updated with Jenkins 1.641 which affects any plugins that try to publish content.
+
+For javadoc you need to set the parameter -Dhudson.model.DirectoryBrowserSupport.CSP
+
+to
+
+default-src 'none'; img-src 'self'; style-src 'self'; child-src 'self'; frame-src 'self';
+
+on our system you need to set this java option in /etc/sysconfig/jenkins in the param called
+JENKINS_JAVA_OPTIONS

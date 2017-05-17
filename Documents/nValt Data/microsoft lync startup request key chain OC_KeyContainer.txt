@@ -1,0 +1,8 @@
+Microsoft Lync wants to use the "OC_KeyContainer_useraddress" keychain
+
+If you type your password it fails.
+
+Easy fix:
+1. Go to ~/Library
+2. navigate to “Keychains” directory
+3. Delete all files named “OC_KeyContainer_*useremailaddress*”

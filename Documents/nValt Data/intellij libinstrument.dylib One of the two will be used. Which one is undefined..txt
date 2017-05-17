@@ -1,0 +1,11 @@
+## It is a long standing bug with jdk
+
+Intellij 2017.1 started showing this up but it’s benign, just annoying.
+
+To get rid of the error add 
+
+idea.no.launcher=true
+
+to idea.properties
+
+You can do this from Intellij’s Help menu (Edit Custom Properties)

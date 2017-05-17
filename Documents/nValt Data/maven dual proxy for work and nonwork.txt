@@ -1,0 +1,5 @@
+The ~/.m2/settings.xml file defines the proxy settings. To make it work automatically across work and non-work environment I modify the "nonProxyHost" variable to reference an environment variable. The environment variable is called NOPROXY and is set in mac os x by the controlplane context switcher app I installed.
+
+The controlplane context switcher runs a zfunction called setProxy (my creation) and sets the env var called NOPROXY.
+
+For non-work NOPROXY is set to "*" so all dns hosts are told to avoid the proxy. For work I set it to the appropriate values for IHC.

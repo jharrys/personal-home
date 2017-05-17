@@ -1,0 +1,41 @@
+# SQL and params
+log4j.logger.org.hibernate.SQL=debug
+log4j.logger.org.hibernate.type.descriptor.sql=trace
+
+—then format—
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence>
+   <persistence-unit name="my-persistence-unit">
+       <description>Hibernate Tips</description>
+       <provider>
+           org.hibernate.jpa.HibernatePersistenceProvider
+       </provider>
+       <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+       <properties>
+           <property name="hibernate.format_sql" value="true" />
+
+           ...
+       </properties>
+   </persistence-unit>
+</persistence>
+
+
+# Get statistics
+
+<persistence>
+    <persistence-unit name="my-persistence-unit">
+        <description>Hibernate Tips</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.generate_statistics" value="true" />
+            …
+        </properties>
+    </persistence-unit>
+</persistence>
+
+—OR—
+
+Statistics stats = sessionFactory.getStatistics();
+long queryCount = stats.getQueryExecutionCount();
+long collectionFetchCount = stats.getCollectionFetchCount();

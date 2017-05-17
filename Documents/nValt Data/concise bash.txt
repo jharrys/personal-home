@@ -1,0 +1,122 @@
+### line ###
+1. bind -P : list my key bindings
+1. bind -p : same as above but consumable by inputrc
+1. c-x c-v : bash version
+1. c-x c-e : invoke editor on current command and execute
+1. meta-r : revert line
+1. meta-# : comment line
+1. c-x ! : possible command completions
+1. meta-/, c-x / : filename completion
+1. c-meta-y : insert the 1st arg to previous command
+1. meta-. : insert last arg to previous command
+1. c-o : if using c-p to go through history and you find the command you want, use c-o it will execute the command and then give you the next command from history to execute
+
+## concise bash ##
+
+### use of $1,$2... ###
+
+    # normal
+    shift
+    echo "$@"
+
+    # better
+    echo "${@:2}"
+
+### default value of parameter ###
+
+arg=${1:-0} # arg = 0 if $1 is not set
+
+### arithmatic calculation ###
+
+    $ a=`expr a + 1` # NORMAL
+    $ a=1; let a++; let a+=2 # CONCISE
+
+### real filename of soft link ###
+
+    $ readlink /usr/bin/python
+
+### ASCII code of a character ###
+
+    $ printf '%02x' "'+" # <--- Way One
+    $ echo -n '+' | od -tx1 -An | tr -d ' ' # <--- Way Two
+
+### process return value ###
+normal way
+
+    echo abcdee |grep -q abcd
+    if [ $? -eq 0 ]; then
+      echo 'Found'
+    else
+      echo 'Not Found'
+    fi
+
+concise way
+
+    if echo abcdee |grep -q abc; then
+      echo 'Found'
+    else
+      echo 'Not Found'
+    fi
+
+most concise
+
+    echo abcdee |grep -q abc && echo 'Found' || echo 'Not Found'
+
+### redirect out & err ###
+
+    # you are redirecting 2 to where 1 used to point
+    # fd's are not object references! think of them as values and not refs
+    grep "abc" test.txt 2>&1 1>/dev/null # <--- WRONG!
+
+    # this is right
+    grep "abc" test.txt 1>/dev/null 2>&1 # <--- RIGHT!
+    grep "abc" test.txt &>/dev/null # <--- CONCISE
+
+### awk ###
+
+    sudo xm li |grep vm_name |awk'{print $2}'
+    sudo xm li |awk'/vm_name/{print $2}' # <--- BEST
+
+### concatenate all lines of a file with comma(,)
+
+    $ cat /tmp/test.txt
+    1
+    2
+    3
+
+    $ sed ':a;$!N;s/\n/,/;ta' /tmp/test.txt
+    1,2,3
+
+    $ paste -sd, /tmp/test.txt # <--- BEST
+    1,2,3
+
+### filter duplicates ###
+
+    $ sort /tmp/test.txt -u # <--- BEST
+
+### grep to find IP 10.0.0.1 ###
+
+    $ grep '10.0.0.1\>' /tmp/ip.list # <--- NORMAL
+    $ grep -w '10.0.0.1' /tmp/ip.list # <--- GOOD USE OF -w
+
+###history###
+1. !! : last command
+1. !$
+1. !# : refers to the entire command line typed so far
+1. !N : nth command
+1. !-N : current command line minus n
+1. !STRING : most recent command _starting_ with __string__
+1. !?STRING? : most recent command _containing_ __string__
+1. ^STRING^string^ : repeats last command replacing STRING with string
+1. meta-<, meta-> : move to first line in history, move to last line in history
+1. __HISTIGNORE__ (colon separated patterns) - add 'export proxy' to list
+    1. __better yet__ add ' *'  - so all commands that start with a space are ignored
+
+###manipulate history###
+1. history -a : append new lines since beginning of session
+1. history -c : clear the history list (does not delete file - just from memory)
+1. history -d offset : delete history entry at position _offset_
+1. history -r : read history file and append to history list
+
+###watch command for cygwin###
+1. procps package is one package that contains watch

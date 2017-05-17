@@ -1,0 +1,49 @@
+# Deductibles
+
+Mostly applies to medical procedures or visits.
+
+If a family hits their __family deductible__ then it’s like every individual has met their individual deductible.
+
+Otherwise, an individuals deductible applies.
+
+Example:
+John has a medical procedure and has to fork out $400 for the service. The rest of the family has not had any procedures, so the family deductibe has met $400 of the $1050 it has to meet. 
+
+Since he met the individual deductible of $350, the future procedures for John are taken care of by the insurance, he only needs to worry about the copay.
+
+The rest of the family members still continue to pay until they reach their own deductible of $350.
+
+OR
+
+Until all the deductibles across all the individuals hits the $1050 mark.
+
+## 2015
+
+* Individual : $350
+* Family : $350 * 3 = $1050 (no more than 3 members are expected to pay to meet the deductible)
+
+========
+
+# Out Of Pocket Maximum (OOPM)
+
+OOPM applies to prescriptions as well as the rest of whatever you pay from your pocket for medical services.
+
+If a family hits their __family oopm__ then it’s like every individual has met their individual OOPM.
+
+Otherwise, an individuals oopm applies.
+
+Example:
+John has a medical procedure then between office visits and prescriptions he spends $4000 out of pocket. The rest of the family has not had any procedures, so the family oopm has met $4000 of the $6000 it has to meet. 
+
+Since he met the individual oopm of $3000, the future prescriptions for John are taken care of by the insurance 100%.
+
+The rest of the family members still continue to pay until they reach their own deductible of $3000.
+
+OR
+
+Until all the deductibles across all the individuals hits the $6000 mark.
+
+## 2015
+
+* Individual : $3000
+* Family : $3000 * 2 = $6000 (no more than 2 members are expected to pay to meet the oopm)

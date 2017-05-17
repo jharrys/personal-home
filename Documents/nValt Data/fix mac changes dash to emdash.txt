@@ -1,0 +1,6 @@
+Double dash gets turned into an emdash by mac. This is actually part of the mac system preferences in the keyboard preference. 
+
+To change do the following:
+
+* from the context menu on the edit screen **un-check** >Substitutions >Smart Dashes
+* or from the menu >Edit>Substitutions>Smart Dashes and **un-check**

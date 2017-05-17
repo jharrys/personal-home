@@ -1,0 +1,6 @@
+mac os x still acts like the external display is connected …
+
+on El Capitan works with the following:
+
+open System Preferences -> Display
+hold the Option key down and the “Gather Windows” turns to “Detect Displays”, click and it’ll reset

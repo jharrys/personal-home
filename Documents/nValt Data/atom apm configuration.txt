@@ -1,0 +1,10 @@
+## Setting proxy
+
+* apm config set proxy "http://user:pass@server:port"
+* apm config set http-proxy "http://user:pass@server:port"
+* apm config set https-proxy "http://user:pass@server:port"
+
+## Fix for behind corporate firewalls - Mac OS X/Linux
+
+* export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist  
+

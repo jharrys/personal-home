@@ -1,0 +1,17 @@
+The idea is to have a special directory outside of jenkins where we can drop the built artifacts (jenkins has plugins that will let you do that such as Artifact Deployer). This external directory is then exported as a cifs or nfs share
+
+The problem is with the permissions. Here is the physical layout of one of our jenkins systems.
+
+Jenkins install:
+/usr/local/jenkins
+
+Artifact directory that will be where the artifacts are saved and exported from:
+/srv/share
+
+Jenkins needs to be able to create directories directly under /srv/share. The permissions need to be such that the export will work and the remote mounts (such as from my local desktop) can correctly see the directories and files.
+
+The latest build of jenkins we are using is 1.656 and it seems this is needed as of this build.
+
+Add "umask 002" to the init script /etc/init.d/jenkins just above the line that starts the service.
+
+Not the ideal solution but the only one we've found that works with jenkins.

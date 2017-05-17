@@ -1,0 +1,23 @@
+# Installing for the first time
+
+1. brew install /homebrew/fuse/ntfs-3g
+1. link the new ntfs-3g
+    1. Restart your mac (to disable SIP)
+    2. Hold down COMMAND-R while restarting
+    3. Enter recovery mode
+    4. Start terminal
+    5. csrutil disable
+    6. restart mac into normal mode
+    7. sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.original
+    8. sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
+    9. Restart mac into recovery mode
+    10. csrutil enable
+    11. Restart mac into normal mode
+
+# Troubleshooting
+
+1. If it won't mount check the logs under /var/log/mount-ntfs-3g.log
+2. if you get an error like "dyld: Library not loaded: /usr/local/opt/gettext/lib/libintl.8.dylib"
+    1. do "brew uninstall ntfs-3g"
+    2. followed by "brew install ntfs-3g"
+    3. all the symlinks will still work, now try reconnecting the drive and mounting - should work

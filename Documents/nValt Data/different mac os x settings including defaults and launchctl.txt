@@ -1,0 +1,84 @@
+1. Disable animations when opening and closing windows.
+
+   defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+2. Disable animations when opening a Quick Look window.
+
+    defaults write -g QLPanelAnimationDuration -float 0
+
+3. Accelerated playback when adjusting the window size (Cocoa applications).
+
+    defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+4. Disable animation when opening the Info window in OS X Finder (cmd⌘ + i).
+
+    defaults write com.apple.finder DisableAllAnimations -bool true
+
+5. Disable animations when you open an application from the Dock.
+
+    defaults write com.apple.dock launchanim -bool false
+
+6. Make all animations faster that are used by Mission Control.
+
+    defaults write com.apple.dock expose-animation-duration -float 0.1
+
+7. Disable the delay when you hide the Dock
+
+    defaults write com.apple.Dock autohide-delay -float 0
+
+8. Disable the animation when you sending and replying an e-mail
+
+    defaults write com.apple.mail DisableReplyAnimations -bool true
+    defaults write com.apple.mail DisableSendAnimations -bool true
+
+9. Disable the standard delay in rendering a Web page.
+
+    defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
+
+10. The keyboard react faster to keystrokes (not equally useful for everyone
+
+    defaults write NSGlobalDomain KeyRepeat -int 0
+
+# undo changes made above
+    defaults delete domain key
+
+Example: To undo the adjustment number 10, type the command:
+
+    defaults delete NSGlobalDomain KeyRepeat
+    
+# Show icons for drives, servers and removable media on desktop by default
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+
+# Show file extensions by default in finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show status bar in finder by default
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Don't show .DS_Store files on network volumes by default
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Allow text selection in Quick Look/Preview in Finder by default
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+# Set dock animation fast and group by app
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock "expose-group-by-app" -bool true
+
+# Set dock to autohide and make delay fast
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+
+# Quit printer queue view after printing finished
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Check for software updates daily
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Dim keyboard backlight after 5 minutes non-use
+defaults write com.apple.BezelServices kDimTime -int 300
+
+# Enable locate.updatedb to run automatically
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+

@@ -1,0 +1,65 @@
+# Use tmutil to manage backups dones by time machine
+
+* sudo tmutil delete /Volumes/drive_name/Backups.backupdb/mac_name/YYYY-MM-DD-hhmmss
+
+# What is MobileBackups?
+
+Incorporated in all OS versions after 10.7 Lion and is used to store backups of your data when you're not attached to your Time Machine storage device.
+
+The backups done aren't normal copies. OS X manages them as links and references the files, even after you've deleted them. So it's not using up the full space. It's possible to disable MobileBackups, but OS X manages the space and time based on your storage needs - the advice is to leave it alone.
+
+Just understand that you cannot manage this MobileBackups through time machine or through tmutil.
+
+The following will disable this type of local backups
+* /.MobileBackups and /Volume/MobileBackups are hard linked to each other
+* sudo tmutil disablelocal
+
+-------------------------------
+# Full Reset of Time Machine
+
+This will reset the connection to your backup destination, and replace the preferences file containing your settings for Time Machine:   the destination, options, and any exclusions.  If it's corrupted, Time Machine may not work properly, if at all.
+
+It will not delete anything in your backups, or cause Time Machine to start a new set of backups.
+
+1. On the Time Machine Preferences window, turn Time Machine OFF and be sure a backup is not running (turning Time Machine off won't cancel a backup that's already running).  If in doubt, see item #D6.   
+
+2. If you're backing-up some things, but not everything, on any external HDs, connect them temporarily (otherwise those exclusions won't appear in the next step, so you might forget them, and won't be able to re-enter them in step 6).  
+
+3. Click the Options button on the preferences window.  Note everything in the exclusions box, and the settings of the other options (perhaps via a screen print), then click Cancel to return to the main window.  Then quit System Preferences.
+
+4. If you're backing-up to an external HD, eject, disconnect, and power it off for a few moments, then reconnect it.  
+
+5. Delete the file /Library/Preferences/com.apple.TimeMachine.plist  (in your top-level Library folder, not the Library folder inside your home folder, where most user preferences are).
+(A Spotlight search won't find it, and neither will a Finder search, unless you include System Files).
+If you have trouble finding it, from a Finder menubar, select Go > Go to Folder, copy /Library/Preferences to the prompt and click Go.  Scroll down until you find com.apple.TimeMachine.plist
+Or you can navigate to it, by opening your Startup Drive, usually named "Macintosh HD," via the Finder.    If you have a problem finding the file, see item #A7.)
+
+6. Go back into Time Machine Preferences.  If your backup drive is still selected, the contents of the old file are still there.  Restart your Mac, and delete the file again.
+Re-select your backup drive, and re-enter any exclusions and other options you noted in step 3.   If you're backing-up any external HDs, they'll be excluded automatically, so remove those exclusions.  If you're not sure how to do that, see Time Machine FAQ #10.
+Note:  If you're backing-up to an external HD, it's shown automatically, in gray, and you can't remove it.  Any drives or partitions that aren't formatted for a Mac can't be backed-up by Time Machine, so they'll also be shown in gray, and can't be removed.  
+The oldest and latest backup dates won't appear on this window until the next backup is done.  "None" does not mean the backups are lost, just that the dates haven't been re-loaded.
+
+7. A 120-second countdown to a backup should appear.  If you close the preferences window, it should begin immediately.
+
+# My experience
+
+## 3/15/2016 ... Actually saw the backup fully paused (no blinking LED, no activity, but in the midst of a backup) - as soon as I stopped Spotlight, the LED activated, the backup resumed counting of MB completed and finished within a minute. Definitely something to do with Spotlight.
+
+1. Did a full reset, still didn't work.
+2. Symptoms:
+    * slow
+    * sometimes it seemed to stick on something for a long time or forever
+    * led on external drive would stop blinking
+    * seemed never to complete
+3. Killed old backups by reformatting drive
+    * formatted OS X Extended, Journaled, Encrypted (not case sensitive)
+4. Stopped spotlight
+    * sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+5. Repaired permissions
+    * sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /
+6. MAKE SURE TO REBOOT - a full reboot
+7. Once restarted, run backup
+
+## STOP Spotlight from indexing Time Machine backup drive
+1. Use System Preferences -> Spotlight -> Privacy to turn it off
+2. OR "mdutil -i off /Volumes/VolumeName"

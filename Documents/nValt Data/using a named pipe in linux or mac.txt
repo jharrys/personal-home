@@ -1,0 +1,14 @@
+### Pipes or Named Pipes are files that allow inter-process communication by connecting the output of one process to the input of another
+
+        > cd tmp
+        > mkfifo pipe1
+        > echo “John” > pipe1
+        
+this shell will block until the 2nd shell reads the data
+        
+In another shell
+
+        > cd tmp
+        > while read line; do echo “Hello, ‘$line’”; done<pipe1
+        
+        

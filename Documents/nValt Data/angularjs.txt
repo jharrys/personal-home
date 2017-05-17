@@ -1,0 +1,10 @@
+# Definitions
+* Good resource is found [here][1]
+
+* __compile__
+> What does it mean to "compile" an HTML template? For AngularJS, "compilation" means attaching directives to the HTML to make it interactive. The reason we use the term "compile" is that the recursive process of attaching directives mirrors the process of compiling source code in compiled programming languages.
+
+* __link__
+> Directives that want to modify the DOM typically use the link option to register DOM listeners as well as update the DOM. It is executed after the template has been cloned and is where directive logic will be put.
+
+[1]: https://docs.angularjs.org/guide/directive "Angular Docs"

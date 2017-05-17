@@ -1,0 +1,69 @@
+# Global
+|Keys||Description|
+|------|---------------|
+|⌘⌥space|  |open finder|
+|^⌘⌥i|  |Startup iTerm|
+|^⌘⌥l|  |Startup Lync|
+|^⌘⌥O|  |Startup Outlook|
+|^⌘space| |Emoji keyboard|
+
+
+# Dialog Boxes
+
+|Keys||Description|
+|------|---------------|
+|⌘⇧.|  |toggle hidden files/directories|
+|⌘⇧G|  |go to folder|
+|⌘R|      |show file in finder|
+|⌘.|  |close dialog box|
+
+# Windows
+
+|Keys|Description|
+|------|---------------|
+|⌘click title|show folders|
+|⌥click triangle|open all folders within selected folder|
+|⌘⌥H|hide all other windows|
+|⌘power|full screen|
+|⌘⌥W|close all windows|
+
+# Dragging
+
+|Keys|Description|
+|------|---------------|
+|⌘drag|move|
+|⌥drag|copy|
+|⌘⌥drag|alias|
+
+# Finder
+
+|Keys|Description|
+|------|---------------|
+|⌘dbl click|open folder in separate window|
+|⌘⌫|move selected to trash|
+
+# Bootups
+
+|Keys|Description|
+|------|---------------|
+|⌘R|while booting; goes into restore mode|
+
+# Power options
+
+|Keys|Description|  
+|------|---------------|  
+|Power|tap to turn on Mac or wake mac from sleep|  
+|  |hold for __1.5 seconds__ while Mac is awake to display dialog|  
+|  |hold for __5 seconds__ to force Mac to turn off|  
+|⌘^Power|Force Mac to restart|  
+|⌘⌥Power|Put Mac to sleep|  
+|⇧^Power|Put display to sleep|  
+|⌘⌥^Power|Quit all apps, shut down Mac. Will ask to save docs.|  
+|⌘⇧Q|Log out of OS X, but confirm|  
+|⌘⌥⇧Q|Log out of OS X immediately, no confirmation|  
+
+
+
+----------------
+
+⌘⌥⇧→←↩⌫

@@ -1,0 +1,18 @@
+I need to build from a specific tag one day and rather than play with git to back out of things I decided to modify the existing jenkins build to build from a specific tag … here are the steps to configure jenkins to build off of a tag…
+
+
+## from stack overflow: http://stackoverflow.com/questions/10195900/jenkins-git-plugin-how-to-build-specific-tag
+
+None of these answers were sufficient for me, using Jenkins CI v.1.555, Git Client plugin v.1.6.4, and Git plugin 2.0.4.
+
+I wanted a job to build for one Git repository for one specific, fixed (i.e., non-parameterized) tag. I had to cobble together a solution from the various answers plus the "build a Git tag" blog post cited by Thilo.
+
+Make sure you push your tag to the remote repository with git push --tags
+In the "Git Repository" section of your job, under the "Source Code Management" heading, click "Advanced".
+In the field for Refspec, add the following text: +refs/tags/*:refs/remotes/origin/tags/*
+Under "Branches to build", "Branch specifier", put */tags/<TAG_TO_BUILD> (replacing <TAG_TO_BUILD> with your actual tag name).
+Adding the Refspec for me turned out to be critical. Although it seemed the git repositories were fetching all the remote information by default when I left it blank, the Git plugin would nevertheless completely fail to find my tag. Only when I explicitly specified "get the remote tags" in the Refspec field was the Git plugin able to identify and build from my tag.
+
+Update 2014-5-7: Unfortunately, this solution does come with an undesirable side-effect for Jenkins CI (v.1.555) and the Git repository push notification mechanism à la Stash Webhook to Jenkins: any time any branch on the repository is updated in a push, the tag build jobs will also fire again. This leads to a lot of unnecessary re-builds of the same tag jobs over and over again. I have tried configuring the jobs both with and without the "Force polling using workspace" option, and it seemed to have no effect. The only way I could prevent Jenkins from making the unnecessary builds for the tag jobs is to clear the Refspec field (i.e., delete the +refs/tags/*:refs/remotes/origin/tags/*).
+
+If anyone finds a more elegant solution, please edit this answer with an update. I suspect, for example, that maybe this wouldn't happen if the refspec specifically was +refs/tags/<TAG TO BUILD>:refs/remotes/origin/tags/<TAG TO BUILD> rather than the asterisk catch-all. For now, however, this solution is working for us, we just remove the extra Refspec after the job succeeds.

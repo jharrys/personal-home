@@ -1,0 +1,22 @@
+## Accessing a Spring property programmatically to use in debug statements etc
+
+* Add this to your spring.xml
+  * ignore-unresolvable is needed so that spring will continue resolving for other xml files and not stop here
+  * can use “classpath:” or “file:”
+
+        <context:property-placeholder location="classpath:foo.properties" ignore-unresolvable=“true” />
+
+* Add this to the class you want to access properties from
+
+        @Value(“${jdbc.url}”)
+        private String jdbc-url;
+        
+        // OR
+        
+        @Value(“${jdbc.url:ADEFAULTURL}”)
+
+* Note: to make the DEFAULT work I also had to include in the same class, a class level annotation:
+        
+        @PropertySource(
+        value = {"file:hwcir-properties/processor/processor.properties"},
+        ignoreResourceNotFound = true)

@@ -1,0 +1,77 @@
+## Footnotes
+example of footnote defined later[^blah1].
+
+example of inline footnote here.[^this is the actual note]
+
+[^blah1]: tis is the actual foot note
+
+***
+
+## Definitions lists
+
+Apple
+: a juciy fruit; red and curvaceous
+
+Banana
+: it is yellow and eaten by monkeys. Provides lots of potassium and good for depression sleeping.
+
+Orange
+: a citrus fruit that is of the colour orange (mix of blue and yello)
+
+- - -
+
+## quoting 
+
+> quote level 1
+
+>> quote level 2
+
+* * *
+
+## Images
+
+![**normal** image](https://s-media-cache-ak0.pinimg.com/736x/18/62/4c/18624c78b3b61c56b3639c7aaa222871.jpg)
+
+![**reference** image] [ref_id] 
+
+[ref_id]: https://s-media-cache-ak0.pinimg.com/736x/7c/0f/0c/7c0f0c2bdb16d759541d2d61fe2cdac8.jpg (Some title here)
+
+## Linking and referencing
+
+A reference to [Google](http://google.com/)
+
+A link as a reference [U Of U] [id]
+
+[id]: http://www.utah.edu (Optional title here)
+
+Undefined links [ihc][], [yahoo][] and [msn][]
+
+[ihc]: http://intermountain.net/
+[yahoo]: http://www.yahoo.com
+[msn]: http://search.msn.com
+
+* * *
+
+## Tables
+
+|           |       Grouping        ||
+header 1|header 2 | header 3
+|:---|:---:|---:|
+|pipes at beg. are |blah blue blee|optional|
+dividing line bet. head/table must be there||have 3 dashes, colons align
+column1|this spans two cells||
+column1|column2|column3
+
+New section   |      More          |       More |
+rowx|rowy|rowz
+blah1|blah2|blah3
+[my own table caption]
+
+a caption can have a label allowing you to create an anchor to the [table][my own table caption]. if no label, then the caption is the label.
+
+\*\* The blank line before "New section" is supposed to add a horizontal line to show a different section ... doesn't work with nvalt.
+
+
+
+
+

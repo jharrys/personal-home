@@ -1,0 +1,11 @@
+1. net stop wuauserv
+2. net stop bits
+3. re-run 'net stop wuauserv' until it's completely stopped (doesn't always stop)
+4. delete everything from C:\Windows\SoftwareDistribution
+5. keep deleting and making sure 'net stop wuauserv' is stopped
+6. after all is deleted
+7. net start wuauserv
+8. net start bits
+9. run windows update again
+
+Referenced from: http://www.thewindowsclub.com/windows-update-stuck-downloading-updates

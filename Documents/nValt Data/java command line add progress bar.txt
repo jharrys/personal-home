@@ -1,0 +1,44 @@
+>public class HelloWorld{
+>
+>   private static class Progress extends Thread {
+>
+>    public boolean inProgress = true;
+>    
+>    public void run() {
+>
+>        while (inProgress) {
+>
+>            try {
+>
+>                System.out.print(".");
+>                Thread.sleep(1000); // wait for 1 second before progressing.
+>            } catch (InterruptedException e) {
+>
+>            }
+>
+>        }
+>
+>        System.out.println();
+>
+>    }
+>
+>    }
+>
+>     public static void main(String []args){
+>
+>         Progress p = new Progress();
+>
+>         p.start(); // Kick off progress thread.
+>        
+>        try {
+>
+>            Thread.sleep(10000); // wait for 10 sec just to see progress.
+>
+>        } catch (InterruptedException e) {
+>
+>        }
+>
+>        Progress.inProgress = false; // Mark the state as done.
+>     }
+>
+> }

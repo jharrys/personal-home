@@ -1,0 +1,12 @@
+### how to negate word matches; negative word matches
+
+1. use the [^] syntax, but with the word in parenthesis - without parenthesis ^ applies to a character
+2. had project where I wanted to match a line: log4j.appender.someText.File=/path/to/file *but* did not want to match a line if it was: log4j.appender.LOGFILE.File=/path/to/file
+
+        sed -n '/log4j\.appender\.[^(LOGFILE)].*\..*File=/p'
+        
+explanation:
+
+        \.  == escapes the period so it simply means period
+        .* == find 0 or more alphanumeric charactor
+        /p == print what matched

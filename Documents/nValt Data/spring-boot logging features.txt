@@ -1,0 +1,39 @@
+See the spring boot logging [reference](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html)
+
+# Spring boot logging features
+
+1. application.properties
+
+    logging.config=
+    
+    ———
+    
+    Depending on the loggin system, the following files will be loaded:
+    
+    Logback …. logback-spring.xml, logback-spring.groovy, logback.xml or logback.groovy
+    
+    Log4j2 …. log4j2-spring.xml or log4j2.xml
+    
+    JDK (Java Util Logging) …. logging.properties
+    
+    __NOTE: Spring recommends the “-spring“ variants for the file names__
+    
+    ———
+    
+    org.springframework.boot.logging.LoggingSystem=(fully-qualified class name of a __LoggingSystem__ ) OR “none” to completely disable logging
+    
+    __if these (below) are not specified or blank, all logging by default goes to console__    
+    
+    logging.file= (a specific file to write to)
+    
+    logging.path= (where to write the spring.log file)
+    
+3. levels
+    
+    logging.level.root=
+    
+    logging.level.org.springframework.web=
+    
+    logging.level.org.hibernate=
+    
+5. d

@@ -1,0 +1,49 @@
+Method references are a way to concisely reference a method that meets certain specs (an existing functional interface). More importantly, they are used in place of closures or lambda expressions.
+
+I used the word “concisely” because it’s somewhat synctatic sugar … really cuts down on having to write out a lambda expression.
+
+Method references are not invocations of the method, but are references.
+
+**The Lambda Expressions (Closures) way:**
+
+        // Setup list
+        List<Jedi> jedis = asList(new Jedi("Obi-wan", 80),
+        new Jedi("Anakin", 25),
+        new Jedi("Yoda", 500));
+        
+        // Using the closure
+        List<String> names = map(jedi -> jedi.getName() , jedis);
+        
+**The Method Reference way:**
+
+        // Setup list
+        List<Jedi> jedis = asList(new Jedi("Obi-wan", 80),
+        new Jedi("Anakin", 25),
+        new Jedi("Yoda", 500));
+        
+        // Using method reference
+        List<String> names = map(Jedi::getName , jedis);
+        
+—
+
+**The closure way:**
+
+        List<Integer> numbers = asList(1,2,3,4,5,6,7,8,9);
+        forEach(n -> { System.out.println(n); }, numbers);
+        
+**The method reference way:**
+
+        List<Integer> numbers = asList(1,2,3,4,5,6,7,8,9);
+        forEach(System.out::println}, numbers);
+        
+—
+
+We can use lambda expressions to implement functional interfaces. However we can implement functional interfaces by using method references.
+
+**This is important if we have pre-existing code (legacy code) that we want to use to implement a functional interface.**
+
+This is a functional interface:
+
+        public interface Predicate<T> {
+            public void test(T t);
+        }

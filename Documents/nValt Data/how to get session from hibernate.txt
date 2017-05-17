@@ -1,0 +1,7 @@
+# simple
+
+Session sess = (Session) entitymanager.getDelegate();
+
+# why?
+
+sess.createCriteria() or other things required from Session

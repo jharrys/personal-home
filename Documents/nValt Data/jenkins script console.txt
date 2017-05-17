@@ -1,0 +1,9 @@
+This is a groovy script console.
+Use println to print to output, using System.out will print to log.
+
+http://jenkins-server/script
+
+To set or get a system property do something like:
+
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
+println(System.getProperty("hudson.model.DirectoryBrowserSupport.CSP"))

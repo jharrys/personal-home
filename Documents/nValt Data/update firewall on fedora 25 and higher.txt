@@ -1,0 +1,8 @@
+# needed for chromecast
+sudo firewall-cmd --permanent --add-port=32768-61000/udp
+
+# reload firewall after changes
+sudo firewall-cmd —reload
+
+# needed for stream2chromecast casting
+sudo firewall-cmd —permanent —add-port=8765/tcp

@@ -1,0 +1,3 @@
+# Add DDL/DML to JDBC Url so sql is executed on connection
+
+String url = "jdbc:h2:mem:test;INIT=runscript from '~/create.sql'\\;runscript from '~/init.sql'";
