@@ -4116,7 +4116,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>46 86 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 19 1435 881 0 0 1440 900 </string>
+	<string>95 63 1277 737 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -7072,7 +7072,6 @@
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Notes</string>
-		<string>Jobs</string>
 		<string>Paste History</string>
 		<string>Recent Directories</string>
 		<string>Command History</string>

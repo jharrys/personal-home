@@ -1,1 +1,0 @@
-/Applications/Parallels Desktop.app
