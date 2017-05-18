@@ -8460,13 +8460,13 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>4 437 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
-	<string>705 5 735 382 0 0 1440 900 </string>
+	<string>1388 988 735 382 683 900 2560 1440 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>115 32 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>0 355 918 512 0 0 1440 900 </string>
+	<string>2223 974 918 512 683 900 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>43 98 1347 609 0 0 1440 900 </string>
+	<string>688 1007 2551 1297 683 900 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -8667,7 +8667,7 @@
 				<real>0.99714100360870361</real>
 			</dict>
 			<key>Badge Text</key>
-			<string>branch=\(user.gitBranch)</string>
+			<string></string>
 			<key>Blend</key>
 			<real>0.15475011208118541</real>
 			<key>Blink Allowed</key>
@@ -9566,7 +9566,7 @@
 				<real>1</real>
 			</dict>
 			<key>Badge Text</key>
-			<string>\(session.username)</string>
+			<string>\(session.hostname)</string>
 			<key>Blend</key>
 			<real>0.43470052083333333</real>
 			<key>Blink Allowed</key>
@@ -10437,7 +10437,7 @@
 				<real>1</real>
 			</dict>
 			<key>Badge Text</key>
-			<string></string>
+			<string>\(session.hostname)</string>
 			<key>Blend</key>
 			<real>0.32407537545913301</real>
 			<key>Blink Allowed</key>
@@ -11375,7 +11375,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-17T03:04:09Z</date>
+	<date>2017-05-18T03:30:45Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Selection Respects Soft Boundaries</key>
