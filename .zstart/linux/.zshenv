@@ -31,4 +31,3 @@ esac
 export ZSTARTPLATFORM
 
 export ZDOTDIR=${ZSTARTPLATFORM}
-
