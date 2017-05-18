@@ -50,6 +50,8 @@ let g:syntastic_python_checkers=['python', 'pylint']
   "hi CursorLine
   hi CursorColumn cterm=NONE ctermbg=lightblue ctermfg=black   "background lightblue, foreground black
 
+  set switchbuf=usetab      "switching to the next buffer will do it in the current tab with either a split window or in the current tab - below set F8 to switch to next buffer
+
   if has('persistent_undo')
     set undodir=~/.vimbackup,~/tmp,/var/tmp,/tmp
     set undofile              " A persistent undo per file
@@ -273,6 +275,11 @@ iab <// </C-X><C-O>     " Autocomplete markup tags (remapping C-X, C-O)
   nnoremap <S-Up> :m .-2<CR>==
   "moving line Down
   nnoremap <S-Down> :m .+1<CR>==
+
+  "bind F8 and S-F8 to switch buffer
+  nnoremap <F8> :sbnext<CR>
+  nnoremap <S-F8> :sbprevious<CR>
+
 " }
 
 " Plug Settings {
