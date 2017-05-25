@@ -64,7 +64,7 @@ def deployApplication():
 
 	try:
 		print 'Deploying the application ' +deploymentName+ '\n'
-		deploy(deploymentName,deploymentFile,targets=deploymentTarget,upload = 'True')
+		deploy(deploymentName,deploymentFile,targets=deploymentTarget,upload='true')
 		startApplication(deploymentName)
 	except:
 		print 'Error during the deployment of ' +deploymentName+ '\n'

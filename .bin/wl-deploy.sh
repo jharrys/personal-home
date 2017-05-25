@@ -55,4 +55,5 @@ WLHOME=/Users/lpjharri/local/appservers/wls-12.1.3
 export CLASSPATH=${JAVA_HOME}/lib/tools.jar:${WLHOME}/wlserver/server/lib/weblogic_sp.jar:${WLHOME}/wlserver/server/lib/weblogic.jar:${WLHOME}/wlserver/../oracle_common/modules/net.sf.antcontrib_1.1.0.0_1-0b3/lib/ant-contrib.jar:${WLHOME}/wlserver/modules/features/oracle.wls.common.nodemanager_2.0.0.0.jar:
 
 java -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust -Dweblogic.security.SSL.protocolVersion=TLS1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.0 weblogic.WLST $MANAGEAPPSCRIPT -u $WL_USER -p $WL_PASS -a $WL_ADMIN_URL -n $NAME -f $FILE -t $TARGET
+#java -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust -Dweblogic.security.SSL.protocolVersion=TLS1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.0 weblogic.Deployer -user $WL_USER -password $WL_PASS -adminurl $WL_ADMIN_URL -upload $FILE -targets $TARGET -deploy
 
