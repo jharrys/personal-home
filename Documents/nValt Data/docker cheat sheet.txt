@@ -3,6 +3,26 @@
 image == the specification of the guest; the Dockerfile basically  
 container == an image that has been started; it’s running image 
 
+## Examples
+
+* View logs of a running container
+
+        > docker logs <container-id>
+
+* Detach from connected container shell without killing running instance (only works if container was initiated "run -t -i" -t=tty -i=interactive)
+
+        > Ctrl+p + Ctrl+q
+        
+* Attach to a shell to interact
+
+        > start the container (docker run -i -t <container-name>)
+        --- later on ---
+        > docker exec -i -t <container-name> /bin/bash
+
+* Other way to attach (doesn't always provide a shell to interact with)
+
+        > docker attach <container-name>
+
 ## Cheat sheet
 
         docker help <command>           # get help for command
