@@ -3,6 +3,7 @@
 # Terminology
 What we need to do is create a **tap** (Github repository) that contains a **formula** (install script) that adds a **Keg** (downloaded script) to our **Cellar** (list of locally installed scripts).
 
+
 # Adding a tap (repository)
 * Based on a repository in github
 * A tap is basically a github repository

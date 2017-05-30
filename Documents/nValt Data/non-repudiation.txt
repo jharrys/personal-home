@@ -22,7 +22,7 @@ In IT non-repudiation is about having proof that an author did, in fact, author 
 __More importantly, this proof can be verified without the author's consent.__
 
 * Asymmetric Cryptography allows for verification of author WITHOUT author consent.
-** A public key alone doesn't mean much, you still need to reliably associate a public key with an owner (author)
-** This is where _certificates_ come into play. _certificates_ contain identity along with the public key.
-** _certificates_ are signed by a Certification Authority (CA). Since this falls under non-repudiation as well, then the CA must be honest and have a good reputation
-** X.509 Certificates have a non-repudiation bit in the keyusage attribute, to identify the intended use of this key (see rfc 5280)
+    * A public key alone doesn't mean much, you still need to reliably associate a public key with an owner (author)
+    * This is where _certificates_ become important; _certificates_ contain identity along with the public key.
+    * _certificates_ are signed by a Certification Authority (CA). Since this falls under non-repudiation as well, then the CA must be honest and have a good reputation
+    * X.509 Certificates have a non-repudiation bit in the keyusage attribute, to identify the intended use of this key (see rfc 5280)
