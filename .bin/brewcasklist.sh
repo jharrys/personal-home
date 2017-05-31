@@ -6,7 +6,7 @@
 
 usage="usage:\t$0 \n\t$0 toupdate|tu"
 
-LISTING=$(brew cask ls -1)
+LISTING=$(brew cask ls -1 2>/dev/null)
 
 if [ "$1" = "-h" -o "$1" = "--help" ]; then
   $colored_fg_magenta
