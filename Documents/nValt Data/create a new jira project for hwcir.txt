@@ -1,0 +1,20 @@
+## For our migration from fogbugz I chose the following name/KEY pair
+
+* HWCIR Carma (HCAR)
+* HWCIR Pulmonary Embolism Protocol - Carma (HPEC)
+* HWCIR Screening Framework (HSF)
+
+## Describes the steps to take to create a new Jira Project
+
+####(as of version 7.3.6)
+
+1. Choose Create Project
+2. Type of Project: "Scrum Software Development"
+3. Name: "HWCIR Blah Blah" - choose a good KEY (HBB)
+4. After creation, click on Project Settings (bottom left corner)
+5. Select **Workflows**
+6. Click on **Switch Scheme**
+7. In the *scheme* drop down box select **default**
+
+In these projects we want to use the default workflow scheme, which seems to suit our needs. Unfortunately when creating the projects in our dev and local systems the "default" scheme would not be applied, so I had to do this work around.
+

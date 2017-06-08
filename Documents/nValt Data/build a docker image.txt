@@ -1,0 +1,87 @@
+## This describes how to create an image in Docker
+#### (using ahaasler/jira as a base)
+
+1. first create a directory that will serve as your **context** with your source
+
+        /tmp/myjira
+        
+1. this directory will contain the Dockerfile, scripts and any other files you need to build the image
+1. we will use **ahaasler/jira-base:alpine-8u102b14-server-jre** as the base image
+1. we will add the latest jira-software instead
+
+        download and place atlassian-jira-software-7.3.6.tar.gz in /tmp/myjira
+
+1. /new-core is where the unzipped/untarred atlassian-jira will be (docker automatically knows it's a tar/gz file - does not look at filename, looks at internal file structure)
+1. here is the Dockerfile - not the **RUN** section
+
+        FROM ahaasler/jira-base:alpine-8u102b14-server-jre
+        MAINTAINER Adrian Haasler García <dev@adrianhaasler.com>
+
+        # Configuration
+        ENV JIRA_VERSION 7.3.6
+
+        # Get environment variables for building
+        ARG SOURCE_COMMIT
+        ARG SOURCE_TAG
+        ARG BUILD_DATE
+
+        # Build-time metadata as defined at http://label-schema.org
+        LABEL org.label-schema.build-date=$BUILD_DATE \
+        org.label-schema.name="jira" \
+        org.label-schema.description="A Docker image for Jira" \
+        org.label-schema.url="https://www.atlassian.com/software/jira/core" \
+        org.label-schema.vcs-ref=$SOURCE_COMMIT \
+        org.label-schema.vcs-url="https://github.com/ahaasler/docker-jira" \
+        org.label-schema.version=$SOURCE_TAG \
+        org.label-schema.schema-version="1.0"
+
+        # Add tar.gz file
+        ADD atlassian-jira-software-7.3.6.tar.gz /new-core
+
+        # Download and install jira in /opt with proper permissions and clean unnecessary files
+        RUN mkdir -p /opt/jira \
+        && cp -rp /new-core/atlassian-jira-software-7.3.6-standalone/* /opt/jira \
+        && chown -R root:root /opt/jira \
+        && chown -R 547:root /opt/jira/logs /opt/jira/temp /opt/jira/work \
+        && rm -rf /new-core
+        
+        # Copy the mysql connector
+        COPY mysql-connector-java-5.1.42-bin.jar /opt/jira/lib
+
+        # Add jira customizer and launcher
+        COPY launch.sh /launch
+
+        # Make jira customizer and launcher executable
+        RUN chmod +x /launch
+
+        # Expose ports
+        EXPOSE 8080
+
+        # Workdir
+        WORKDIR /opt/jira
+
+        # Launch jira
+        ENTRYPOINT ["/launch"]
+
+1. /tmp/myjira now looks like this:
+
+        total 531032
+        -rw-r--r--  1 lpjharri  staff   1.4K Jun  8 15:56 Dockerfile
+        -rw-r--r--@ 1 lpjharri  staff   258M Jun  7 16:24 atlassian-jira-software-7.3.6.tar.gz
+        -rwxr-xr-x  1 lpjharri  staff   1.6K Jun  6 18:10 launch.sh*
+        -rw-r--r--@ 1 lpjharri  staff   973K Jun  6 15:31 mysql-connector-java-5.1.42-bin.jar
+
+1. the Dockerfile has instructions to install the atlassian-jira-software.
+1. the Dockerfile has instructions to place the mysql-connector in /opt/jira/lib
+1. the Dockerfile has instructions to make /opt/jira the **working folder**
+1. the Dockerfile has instructions to place launch.sh at the root of the container and renamed as /launch
+1. i'm not placeing the Dockerfile in here as it is big, but the important parts are in here
+1. from within /tmp/myjira execute the following build command
+
+        docker build -t jharrys/jaxis:jira-736 .
+        
+1. -t gives the image a tag name: **jharrys/jaxis** is my repository on docker hub. **jira-736** is the tag for this image.
+2. right now the image lives locally on your system within docker; to publish it to your docker hub you need to push
+
+        docker push jharrys/jaxis:jira-736
+        
