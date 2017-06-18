@@ -30,6 +30,9 @@ alias statcups='sudo launchctl list |grep cupsd'
 alias stopcups='sudo launchctl unload -w /System/Library/LaunchDaemons/org.cups.cupsd.plist'
 alias startcups='sudo launchctl load -w /System/Library/LaunchDaemons/org.cups.cupsd.plist'
 
+# power management
+alias batt='pmset -g batt'
+
 # tmux
 alias tx='(unset CLICOLOR_FORCE;tmux)'
 alias tmuxcc='(unset CLICOLOR_FORCE;tmux -CC)'

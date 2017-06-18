@@ -101,9 +101,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment 196 black
+      prompt_segment 197 black
     else
-      prompt_segment 017 black
+      prompt_segment 244 black
     fi
 
     if [[ -e "${repo_path}/BISECT_LOG" ]]; then
@@ -189,7 +189,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue black '%~'
+  prompt_segment 117 black $(shrink_path -t)
 }
 
 # Command number
