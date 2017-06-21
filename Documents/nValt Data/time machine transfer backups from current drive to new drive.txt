@@ -1,0 +1,49 @@
+[Source](https://support.apple.com/en-us/HT202380 "Permalink to Time Machine: How to transfer backups from a current backup drive to a new backup drive")
+
+# Time Machine: How to transfer backups from a current backup drive to a new backup drive
+
+Learn how to transfer your existing Time Machine backups to a new drive to use for your Time Machine backups.
+
+If you want to switch to a different Time Machine backup drive, use these steps to move your existing backups.
+
+## Check the format of your new backup drive
+
+1. Connect the new backup drive to your Mac.
+2. Open Disk Utility (located in the Utilities folder).
+3. In Disk Utility, select the new drive's icon to make sure it has a GUID partition and is formatted as Mac OS Extended (Journaled). You can check this from the "Format:" line at the bottom of the Disk Utility window. If your new backup drive is not formatted this way, [reformat it][1], selecting the option for Mac OS Extended (Journaled) with a GUID partition. Back up any important data from your new drive before you format it.
+
+## Set permissions on your new backup drive
+
+1. Open a new Finder window. 
+2. In the sidebar of the Finder window, click the icon of the new backup drive. 
+3. Choose Get Info from the File menu.
+4. Make sure "Ignore ownership on this volume" at the bottom of the "Sharing & Permissions" section of the Get Info window is deselected (unchecked).
+
+## Temporarily turn Time Machine off
+
+1. Choose System Preferences from the Apple menu.
+2. Click the Time Machine icon in the System Preferences window.
+3. Slide the Time Machine switch to Off.
+
+## Copy your backup data from your original drive to your new drive
+
+1. Open a new Finder window. In the Finder sidebar, click the icon of the original backup drive.
+2. Open a new Finder window. In the Finder sidebar, click the icon of the new backup drive.
+3. Drag the folder "Backups.backupdb" from the original backup drive to the top level of the new backup drive.
+4. Enter an administrator name and password, then click OK to start the copying process. 
+
+Copying your backup data might take some time to complete, depending on the size of your backup.
+
+## Set Time Machine to use your new drive
+
+1. After the copy has finished, open Time Machine preferences from System Preferences. 
+2. Click Select Disk in the Time Machine preferences window.
+3. Select the new backup drive, then click Use Disk.
+
+Your Time Machine backups are now saved on your new backup drive.
+
+Published Date: Apr 28, 2017
+
+[1]: http://support.apple.com/kb/HT201723
+
+  
