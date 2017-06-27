@@ -4,7 +4,12 @@
 # author:       j. harris
 # created:      2016-12-2
 #
+# NOTE: The current working directory (where you run this command from)
+# should contain the pom.xml you want to run, otherwise you will be
+# either testing the wrong code or the script will end with a maven error.
+#
 # EXIT CODES
+# 5 - maven pom.xml could not be found
 # 4 - maven compile or test failures (see output for detals)
 # 3 - git merge failure (see output for details)
 # 2 = git worktree add failure
@@ -19,6 +24,10 @@
 ##################################################
 function usage() {
   echo 'usage: ' $1 '[-m user@address] [-o] pull-request-number
+
+  NOTE: The current working directory (where you run this command from)
+  should contain the pom.xml you want to run, otherwise you will be
+  either testing the wrong code or the script will end with a maven error.
 
   -m user@address will email the generated output to the email address
   -o will display the output in realtime
@@ -324,12 +333,30 @@ then
   exit 3
 fi
 
-git checkout ${TMP_BRANCH_NAME} &>/dev/null
-git branch -D zzz &>/dev/null
-
 echo "----------------------------------------------"
 echo "Merge succeeded - see ${MERGE_OUTPUT_FILE}"
 echo "----------------------------------------------"
+
+##################################################
+# verify that pom.xml exists in ORIGINAL_DIR
+##################################################
+POM=./pom.xml
+if [ ! -e "${POM}" ]
+then
+  WD=$(basename ${ORIGINAL_DIR})
+
+  if [ -e "${WD}/pom.xml" ]
+  then
+    cd ./${WD}
+  else
+    echo "\n"
+    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    echo "ERROR: Unable to find pom.xml to execute. Execute script from the directory with the pom.xml you want to run."
+    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+    exit 5
+  fi
+fi
 
 ##################################################
 # mvn package with unit & integ tests & javadoc
@@ -359,6 +386,9 @@ then
 
   exit 4
 fi
+
+git checkout ${TMP_BRANCH_NAME} &>/dev/null
+git branch -D zzz &>/dev/null
 
 MERGE_BUILD_SUCCESS=true
 
