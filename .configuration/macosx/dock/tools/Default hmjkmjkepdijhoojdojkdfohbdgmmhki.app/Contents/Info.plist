@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>13F1077</string>
+	<string>16C68</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -19,11 +19,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1.17212.1118</string>
+	<string>3.1.17264.1078</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>3029.110</string>
+	<string>3071.115</string>
 	<key>CrAppModeProfileDir</key>
 	<string>Default</string>
 	<key>CrAppModeProfileName</key>
@@ -39,7 +39,7 @@
 	<key>CrBundleIdentifier</key>
 	<string>com.google.Chrome</string>
 	<key>CrBundleVersion</key>
-	<string>58.0.3029.110</string>
+	<string>59.0.3071.115</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTSDKBuild</key>
