@@ -29,13 +29,13 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 #******************************************
 
 CDPATH="~/"
-CDPATH="${CDPATH}:~/mounts"
 CDPATH="${CDPATH}:/Volumes"
 CDPATH="${CDPATH}:~/development"
 CDPATH="${CDPATH}:~/development/source_control"
 CDPATH="${CDPATH}:~/development/source_control/bitbucket-cloud"
 CDPATH="${CDPATH}:~/development/source_control/contracts"
 CDPATH="${CDPATH}:~/development/source_control/general"
+CDPATH="${CDPATH}:~/development/source_control/eor"
 CDPATH="${CDPATH}:~/development/source_control/hwcir"
 CDPATH="${CDPATH}:~/development/source_control/hwcir/git"
 CDPATH="${CDPATH}:~/development/source_control/hwcir/svn"
