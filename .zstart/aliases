@@ -15,6 +15,19 @@
 #################################
 ####################################################################
 
+###### Alias suffixes ######
+alias -s mp4=vlc
+alias -s mkv=vlc
+alias -s m4a=vlc
+alias -s mov=vlc
+alias -s mp3=vlc
+alias -s mpeg=vlc
+alias -s mpg=vlc
+alias -s rm=vlc
+alias -s wav=vlc
+alias -s xml=less
+
+
 ###### Base ########
 alias ls='ls --color'
 alias lr='ls -AlhR'                                                                                                                                           # list recursively
