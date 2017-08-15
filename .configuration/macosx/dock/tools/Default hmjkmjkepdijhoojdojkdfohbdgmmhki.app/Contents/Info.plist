@@ -19,11 +19,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1.17264.1078</string>
+	<string>3.1.17325.1420</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>3071.115</string>
+	<string>3112.90</string>
 	<key>CrAppModeProfileDir</key>
 	<string>Default</string>
 	<key>CrAppModeProfileName</key>
@@ -39,7 +39,7 @@
 	<key>CrBundleIdentifier</key>
 	<string>com.google.Chrome</string>
 	<key>CrBundleVersion</key>
-	<string>59.0.3071.115</string>
+	<string>60.0.3112.90</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTSDKBuild</key>
