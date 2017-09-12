@@ -14,6 +14,12 @@
 #******************************************
 # execute the common zshrc
 #******************************************
+if [ -z "$ZSTART" ]
+    then
+        ZSTART=~/.zstart
+        ZSTARTPLATFORM=${ZSTART}/mac
+fi
+
 . ${ZSTART}/zshrc
 
 #******************************************
