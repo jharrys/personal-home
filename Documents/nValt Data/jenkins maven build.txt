@@ -1,0 +1,109 @@
+## pom file
+
+    <build>
+        <plugins>
+            <!-- do this for maven-war-plugin & maven-ear-plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven-jar-plugin.version}</version>
+                <configuration>
+                    <archive>
+                        <!-- To be passed in by the build system as -Dbuild.number=${BUILD_NUMBER}
+                            -Dbuild.revision=${GIT_COMMIT} -->
+                        <manifestSections>
+                            <manifestSection>
+                                <name>${project.name}</name>
+                                <manifestEntries>
+                                    <Library-Version>${project.version}</Library-Version>
+                                    <Jenkins-Build-ID>${build.number}</Jenkins-Build-ID>
+                                    <Git-Commit>${build.revision}</Git-Commit>
+                                    <Time-Of-Build>${maven.build.timestamp}</Time-Of-Build>
+                                </manifestEntries>
+                            </manifestSection>
+                        </manifestSections>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${findbugs-maven-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven-surefire-report-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${maven-project-info-reports-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions-maven-plugin.version}</version>
+            </plugin>
+            <!-- skip deployment if library deployed to mvn repo already exists -->
+            <plugin>
+                <groupId>org.honton.chas</groupId>
+                <artifactId>exists-maven-plugin</artifactId>
+                <version>${exists-maven-plugin.version}</version>
+                <configuration>
+                    <skipIfSnapshot>true</skipIfSnapshot>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>remote</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!-- This is used for publishing the artifact to a maven repository (ie Nexus) -->
+    <distributionManagement>
+        <repository>
+            <id>hwcir-nexus</id>
+            <url>http://lpv-hwmaven01.co.ihc.com:8081/nexus/content/repositories/HWCIR</url>
+        </repository>
+    </distributionManagement>
+</project>
+
+## Jenkins maven command
+
+    clean install checkstyle:checkstyle -Dcheckstyle.config.location="/usr/local/jenkins/hwcir_sun_checks.xml" findbugs:findbugs cobertura:cobertura -Dcobertura.report.format=xml javadoc:aggregate -Dbuild.number=${BUILD_NUMBER} -Dbuild.revision=${GIT_COMMIT}
