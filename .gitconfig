@@ -3,7 +3,7 @@
 [user]
 	; ** define a name with the OS in mind
 	name = Johnnie Harris
-	email = johnnie.harris@imail.org
+	email = jharris@sofi.org
 	signingkey = BEE6BE35
 
 # Configure core options
@@ -153,7 +153,7 @@
     cmd = /usr/local/bin/diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"
 [difftool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
