@@ -1,0 +1,4 @@
+location=$(pwd)
+cd ~/git/dev-compose-env #change to your dev-compose-env root location
+docker-compose "$@"
+cd $location
