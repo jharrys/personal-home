@@ -138,3 +138,8 @@ alias cask-upgrade='for x in `cask-check |cut -f 1 -d ":"`; do brew cask uninsta
 # Chrome
 alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
 alias chromessldebug='SSLKEYLOGFILE=/Users/lpjharri/tmp/sslkey.txt open /Applications/Google\ Chrome.app'
+
+# Docker aliases
+alias dm=docker-machine-alias
+alias dc=docker-compose-alias
+alias dfo=docker-forward

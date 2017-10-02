@@ -50,16 +50,6 @@ CDPATH="${CDPATH}:~/development/source_control/openshift"
 export CDPATH
 
 #******************************************
-# weblogic settings
-#******************************************
-
-MW_HOME=~/local/appservers/wls-12.1.3
-USER_MEM_ARGS="-Xmx1024m -XX:MaxPermSize=256m"
-DOMAIN_HOME=~/local/wldomains/carma
-
-export MW_HOME DOMAIN_HOME USER_MEM_ARGS
-
-#******************************************
 # nodejs settings
 #******************************************
 
@@ -83,14 +73,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 #export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"    # keeps the java icon out of the mac os x dock
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-export MAVEN_HOME=/usr/local/Cellar/maven/3.3.9
-export MAVEN_OPTS="-Xmx1024m"
-
-#******************************************
-# tomcat settings
-#******************************************
-
-CATALINA_HOME=/usr/local/Cellar/tomcat/8.5.8
 
 #******************************************
 # additional path settings
@@ -98,9 +80,15 @@ CATALINA_HOME=/usr/local/Cellar/tomcat/8.5.8
 
 export PATH=~/.bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/Applications/subgit-3.0.0/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$MW_HOME/wlserver/server/bin:$CATALINA_HOME/bin:$PATH
 
+
+#******************************************
+# docker startup
+#******************************************
+#docker-machine start sofi
+#eval $(docker-machine env sofi)
+
 #******************************************
 # source platform aliases
 #******************************************
-
 . ${ZSTARTPLATFORM}/.aliases
 
