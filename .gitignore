@@ -41,6 +41,7 @@ configuration/Sublime Text 2/Backup
 .cups
 .dbvis/*
 .directory
+.docker
 .e*
 .f*
 # .g* - .gitignore and others should not be ignored
