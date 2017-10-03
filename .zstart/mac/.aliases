@@ -139,11 +139,13 @@ alias cask-upgrade='for x in `cask-check |cut -f 1 -d ":"`; do brew cask uninsta
 alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
 alias chromessldebug='SSLKEYLOGFILE=/Users/lpjharri/tmp/sslkey.txt open /Applications/Google\ Chrome.app'
 
-# Docker aliases
+# Docker / SoFi aliases
 alias dm=docker-machine-alias
 alias dc=docker-compose-alias
 alias dfo=docker-forward
-alias dmstart='dm start sofi && eval $(docker-machine env sofi)'
-alias dmstop='dm stop sofi'
+alias dmenv='eval $(docker-machine env sofi)'
+alias dmstart='dm-start-sofi'
+alias dmstop='eval $(docker-machine env sofi); dfo stop && echo "docker-forward stopped!"; dm stop sofi'
 alias cddc='cd ~/git/dev-compose-env'
+alias regconsul='~/git/dev-compose-env/consul-register-service.sh'
 

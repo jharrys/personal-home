@@ -82,10 +82,10 @@ export PATH=~/.bin:/usr/local/sbin:~/Library/Python/2.7/bin:/usr/local/bin:~/App
 
 
 #******************************************
-# docker startup
+# docker: check if docker-machine is up (using VirtualBox in headless mode)
 #******************************************
-#docker-machine start sofi
-#eval $(docker-machine env sofi)
+DMPID=$(pgrep -f sofi)
+[ $? -eq 0 ] && eval $(docker-machine env sofi)
 
 #******************************************
 # source platform aliases

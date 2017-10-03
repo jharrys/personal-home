@@ -1,0 +1,12 @@
+docker-machine start sofi
+
+eval $(docker-machine env sofi)
+
+DFPID=$(pgrep -f docker-forward)
+
+if [ $? -eq 1 ]
+then
+    echo "Starting docker-forward..."
+    docker-forward start
+fi
+
