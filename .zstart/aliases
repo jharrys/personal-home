@@ -43,16 +43,16 @@ alias getw='wget -N -r -nH -nd --no-parent'
 alias pdr='powerline-daemon --replace'
 
 ###### Edit startup files ######
-alias cdzm='cd $ZSTART'
-alias cdzp='cd $ZDOTDIR'
+alias cdmz='cd $ZSTART'
+alias cdpz='cd $ZDOTDIR'
 # edit main zshrc
-alias ezm='vim ${ZSTART}/zshrc'
+alias emz='vim ${ZSTART}/zshrc'
 # edit platform zshrc
-alias ezp='vim ${ZDOTDIR}/.zshrc'
+alias epz='vim ${ZDOTDIR}/.zshrc'
 # edit main aliases
-alias eam='vim ${ZSTART}/aliases'
+alias ema='vim ${ZSTART}/aliases'
 # edit platform aliases
-alias eap='vim ${ZDOTDIR}/.aliases'
+alias epa='vim ${ZDOTDIR}/.aliases'
 
 ###### Docker ######
 alias dock-elixir='docker run -it --rm elixir'                                                                                                                # an elixir environment for developing elixir apps or learning
