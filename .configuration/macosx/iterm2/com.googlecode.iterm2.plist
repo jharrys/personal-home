@@ -8453,9 +8453,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>710 238 599 388 0 0 3440 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>800 253 796 473 0 0 3440 1440 </string>
+	<string>799 214 918 512 0 0 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 3440 1436 0 0 3440 1440 </string>
+	<string>76 425 1505 900 0 0 3440 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -8679,10 +8679,7 @@
 				<string>1</string>
 			</dict>
 			<key>Bound Hosts</key>
-			<array>
-				<string>ac02qq0ecg8wm.co.ihc.com</string>
-				<string>dj2v2t32.co.ihc.com</string>
-			</array>
+			<array/>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -9325,6 +9322,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Thin Strokes</key>
+			<integer>4</integer>
 			<key>Transparency</key>
 			<real>0.39911704881656801</real>
 			<key>Triggers</key>
@@ -11278,7 +11277,7 @@
 		<string>A2338116-C2AC-401D-A763-5EF954FF7788</string>
 	</dict>
 	<key>UseBorder</key>
-	<false/>
+	<true/>
 	<key>UseCompactLabel</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
