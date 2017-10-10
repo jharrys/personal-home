@@ -50,6 +50,7 @@ configuration/Sublime Text 2/Backup
 .gimp*
 .gitkraken/
 .gn*
+.gradle/
 .groovy/
 .gs*
 .gt*
