@@ -77,6 +77,7 @@ configuration/Sublime Text 2/Backup
 .p2
 .pip
 .pki*
+.psql_history
 .pulse*
 .pyenv
 .q*
