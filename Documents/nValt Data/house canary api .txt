@@ -3,6 +3,8 @@
 * url = https://account.housecanary.com/api-settings
 * key/secret
  
+ 
     hc_api_key: test_M4HBGRUBJDYY8KOW0HHA
+    
     
     hc_api_secret: u9CuPhZf1OsFVWMTkjYVWgqWwRItjn3P
