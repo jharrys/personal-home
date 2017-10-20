@@ -157,8 +157,6 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
-[commit]
-	template = ~/.stCommitMsg
 [log]
 	showSignature = true
 
