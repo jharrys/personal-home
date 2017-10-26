@@ -1,8 +1,0 @@
-## Need
-
-* borrower object
-    * borrower id
-    * borrower - all address info (street 1 & 2, zip code, units)
-    * email
-* operator?
-    * id or username (for created_by field in database) 
