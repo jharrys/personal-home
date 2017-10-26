@@ -36,6 +36,7 @@ configuration/Sublime Text 2/Backup
 .a*
 .bash_history
 .boswars
+.bzr*
 .cache
 .config/*
 .cups
