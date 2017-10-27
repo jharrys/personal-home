@@ -80,7 +80,7 @@ bindkey '\e#' pound-insert                # insert '#' at beginning of line to c
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases git sudo mvn history brew tmux osx zsh-syntax-highlighting zsh-navigation-tools scd copyfile johnnie-colored-man-pages man copydir dircycle jsontools docker encode64 shrink-path)
+plugins=(common-aliases git sudo gradle sbt history brew tmux osx zsh-syntax-highlighting zsh-navigation-tools scd copyfile johnnie-colored-man-pages man copydir dircycle docker shrink-path)
 
 ##################################################################
 ###########################
