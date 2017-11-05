@@ -1,0 +1,2 @@
+git stash@{0}:filename
+        
