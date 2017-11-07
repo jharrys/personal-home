@@ -1,0 +1,284 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pere",
+				"peregrine-messages"
+			],
+			[
+				"hom",
+				"homevalue-dbmigrate"
+			],
+			[
+				"borr",
+				"borrower_value_report"
+			],
+			[
+				"value",
+				"value_report_id"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 239.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 131.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jharris/git/dev-compose-env"
+	],
+	"file_history":
+	[
+		"/Users/jharris/git/dev-compose-env/docker-compose.yml",
+		"/Users/jharris/Desktop/sofistyle.xml",
+		"/Users/jharris/git/dev-compose-env/env/secret/homevalue",
+		"/Users/jharris/git/dev-compose-env/env/config/homevalue",
+		"/Users/jharris/tmp/mydocker.yml",
+		"/Users/jharris/Desktop/Clipping 2017-11-03 at 09.13.17.txt",
+		"/Users/jharris/git/home-value-db/.git/COMMIT_EDITMSG",
+		"/Users/jharris/git/home-value-db/src/main/resources/db/migration/V2.1__create-tables.sql",
+		"/Users/jharris/git/home-value-db/bamboo/testBuild",
+		"/Users/jharris/.git/COMMIT_EDITMSG",
+		"/Users/jharris/git/home-value-db/testDbSetup/dropAndCreate.sql",
+		"/Users/jharris/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/README.md",
+		"/Users/jharris/Desktop/intro.md",
+		"/Users/jharris/Library/Application Support/Sublime Text 3/Packages/WordCount/WordCount.sublime-settings",
+		"/Users/jharris/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/Users/jharris/Desktop/sofi-intellij-code-style.xml",
+		"/Users/jharris/git/home_value-db/bamboo/testBuild",
+		"/Users/jharris/git/home_value-db/bamboo/testNewBuild",
+		"/Users/jharris/Downloads/avm_full_sample.json",
+		"/Users/jharris/Downloads/avm_full_sample (1).json",
+		"/Users/jharris/git/house-canary-db/README.md",
+		"/Users/jharris/git/house-canary-db/build.sbt",
+		"/Users/jharris/git/house-canary-db/bamboo/artifactory-push",
+		"/Users/jharris/git/house-canary-db/dropAndMigrate.sh",
+		"/Users/jharris/git/house-canary-db/testDbSetup/loadData.sh",
+		"/Users/jharris/git/house-canary-db/src/main/bash/latestdb",
+		"/Users/jharris/git/house-canary-db/src/main/bash/latest_releasedb",
+		"/Users/jharris/git/house-canary-db/src/main/resources/db/migration/V2.1__create-tables.sql",
+		"/Users/jharris/git/house-canary-db/src/main/resources/db/migration/V1.1__initial-DDL.sql",
+		"/Users/jharris/Desktop/avm_short_sample.json",
+		"/Users/jharris/Desktop/avm_full_sample.json",
+		"/Users/jharris/git/house-canary-db/src/main/java/com/sofi/db/CoreMigrator.java",
+		"/Users/jharris/Desktop/avm_full_json_sample.json",
+		"/Users/jharris/git/sofi-infra/bamboo/scripts/docker.gradle.build.pl",
+		"/Users/jharris/git/dev-compose-env/README.ssl.md",
+		"/Users/jharris/git/dev-compose-env/config/web/sofi-web.conf",
+		"/Users/jharris/git/dev-compose-env/config/web/nginx.conf",
+		"/Users/jharris/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"peregrine-messages",
+			"profiles",
+			"peregrine",
+			"home",
+			"home-va",
+			"home-value-ser",
+			"postgres",
+			"auth-dbmigrate",
+			"customers",
+			"authorize",
+			"home",
+			"-dbmigrate",
+			"finicity"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "dev-compose.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

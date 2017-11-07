@@ -21,10 +21,6 @@ alias l@='ls -alh@'
 # sudo
 alias sudome='(unset CLICOLOR_FORCE;sudo -E -s)'
 
-# force an smbfs share for jenkins (the automount doesn't always work on this server)
-alias jmt='mkdir -p /tmp/jenkinsshare;mount -o -s,-f=777,-d=777 -t smbfs //lpjharri@sasamba.co.ihc.com /tmp/jenkinsshare'
-alias jumt='umount /tmp/jenkinsshare;rmdir /tmp/jenkinsshare'
-
 # cups system
 alias statcups='sudo launchctl list |grep cupsd'
 alias stopcups='sudo launchctl unload -w /System/Library/LaunchDaemons/org.cups.cupsd.plist'
@@ -59,6 +55,7 @@ alias unhide='chflags nohidden'
 alias hide='chflags hidden'
 
 # General system aliases
+# hint: with SIERRA use cmd-shift-. to hide/unhide hidden files
 alias showall='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
 alias hideall='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
 
@@ -70,27 +67,10 @@ alias cafdw='caffeinate -d -w'                                                  
 alias cafiw='caffeinate -i -w'                                                                                                                            # caffeinate -d keeps display active; keep in the foreground
 alias cafsw='caffeinate -s -w'                                                                                                                                    # caffeinate -s keeps system alive when on AC
 
-# Virtual Box applications
-export DEFAULTVM="Fedora 13"                                                                                                                                  # Set the default VM to work against
-alias v='VBoxManage --nologo'
-alias vlist='VBoxManage --nologo list runningvms'
-alias vc='echo "DefaultVM: $DEFAULTVM";VBoxManage --nologo controlvm "$DEFAULTVM"'
-alias vs='echo "DefaultVM: $DEFAULTVM";VBoxManage --nologo startvm "$DEFAULTVM"'
-
 # Query AddressBook
 alias qadd="sqlite3 -separator ',' ~/Library/Application\ Support/AddressBook/AddressBook-v22.abcddb \"select e.ZADDRESSNORMALIZED,p.ZFIRSTNAME,p.ZLASTNAME,p.ZORGANIZATION from ZABCDRECORD as p, ZABCDEMAILADDRESS as e WHERE e.ZOWNER=p.Z_PK;\""
 
-# MySQL
-alias mysql='/usr/local/mysql/bin/mysql'
-alias mysqladmin='/usr/local/mysql/bin/mysqladmin'
-alias mysqlstart='sudo /usr/local/mysql/support-files/mysql.server start'
-alias mysqlstop='sudo /usr/local/mysql/support-files/mysql.server stop'
-alias mysqlrestart='sudo /usr/local/mysql/support-files/mysql.server restart'
-alias mysqlstat='sudo /usr/local/mysql/support-files/mysql.server status'
-alias mysql='sudo /usr/local/mysql/support-files/mysql.server'
-
 # Work related aliases
-alias worksecrets='open ~/Documents/Work/HWCIR.kdbx'
 alias mysecrets='open ~/Google\ Drive/Me/tumbler/john.kdbx'
 
 # Spotlight
@@ -131,9 +111,9 @@ alias brewdump='brew bundle dump'                                               
 alias brewcheck='brew bundle check'                                                                                                                           # See if your Brewfile needs updating
 alias brewexecute='brew bundle'                                                                                                                               # Executes install of Brewfile
 alias brewclean='brew bundle cleanup'                                                                                                                         # removes all brews not listed in Brewfile
-alias brewup='brew update && brew upgrade && brew cleanup'
 alias cask-check='brewcasklist.sh |awk -v RS="" '"'"'{ if ($3 != $6) print $2,"needs to be upgradedd" }'"'"
 alias cask-upgrade='for x in `cask-check |cut -f 1 -d ":"`; do brew cask uninstall $x; brew cask install $x; done; brew cask cleanup'
+alias brewup='brew update && brew upgrade && cask-upgrade && brew cleanup'
 
 # Chrome
 alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
@@ -148,4 +128,9 @@ alias dmstart='dm-start-sofi'
 alias dmstop='eval $(docker-machine env sofi); dfo stop && echo "docker-forward stopped!"; dm stop sofi'
 alias cddc='cd ~/git/dev-compose-env'
 alias regconsul='~/git/dev-compose-env/consul-register-service.sh'
-
+alias dcu='dc up'
+alias dcud='dc up -d'
+alias dcd='dc down'
+alias dct='dc logs'
+alias dctf='dc logs -f'
+alias dcp='dc ps'
