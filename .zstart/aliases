@@ -222,6 +222,8 @@ alias gprr='gitworkflow_gpr.sh'
 alias gtv='git tag -l --sort=-v:refname'
 alias gpot='git push && git push --tags'
 alias gtl='git push -q origin :refs/tags/latest-release; git tag -f -m "latest-release" latest-release'
+alias gmt='git mergetool --no-prompt'
+alias gdl='git difftool --no-prompt'
 
 # Maven stuff
 alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                                                                                # clean my local repository
