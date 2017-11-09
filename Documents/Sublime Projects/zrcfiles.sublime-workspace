@@ -23,6 +23,23 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/jharris/.zstart/aliases",
+			"settings":
+			{
+				"buffer_size": 30350,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jharris/.zstart/mac/.aliases",
+			"settings":
+			{
+				"buffer_size": 7267,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -97,6 +114,8 @@
 	],
 	"file_history":
 	[
+		"/Users/jharris/Desktop/Project.xml",
+		"/Users/jharris/.zstart/mac/.aliases",
 		"/Users/jharris/git/dev-compose-env/docker-compose.yml",
 		"/Users/jharris/Desktop/sofistyle.xml",
 		"/Users/jharris/git/dev-compose-env/env/secret/homevalue",
@@ -138,7 +157,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -152,6 +171,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"merge"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -169,8 +189,86 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/jharris/.zstart/aliases",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30350,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21966,
+								21966
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 1664,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2512.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/jharris/.zstart/mac/.aliases",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 7267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 526,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1299.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

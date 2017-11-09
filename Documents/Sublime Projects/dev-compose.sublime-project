@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/Users/jharris/git/dev-compose-env"
+		},
+		{
+			"path": "/Users/jharris/git/sofi-infra"
 		}
 	]
 }

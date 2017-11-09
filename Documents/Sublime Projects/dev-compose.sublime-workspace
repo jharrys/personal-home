@@ -92,10 +92,14 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jharris/git/dev-compose-env"
+		"/Users/jharris/git/sofi-infra",
+		"/Users/jharris/git/sofi-infra/bamboo",
+		"/Users/jharris/git/sofi-infra/bamboo/scripts"
 	],
 	"file_history":
 	[
+		"/Users/jharris/git/sofi-infra/bamboo/scripts/db-artifactory-push",
+		"/Users/jharris/git/sofi-infra/bamboo/scripts/createVersionTxt",
 		"/Users/jharris/git/dev-compose-env/docker-compose.yml",
 		"/Users/jharris/Desktop/sofistyle.xml",
 		"/Users/jharris/git/dev-compose-env/env/secret/homevalue",
@@ -184,11 +188,6 @@
 			"sheets":
 			[
 			]
-		},
-		{
-			"sheets":
-			[
-			]
 		}
 	],
 	"incremental_find":
@@ -208,12 +207,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -224,7 +217,6 @@
 		"rows":
 		[
 			0.0,
-			0.5,
 			1.0
 		]
 	},
@@ -270,6 +262,15 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		]
 	},
 	"show_minimap": true,
 	"show_open_files": false,
