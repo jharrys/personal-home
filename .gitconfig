@@ -95,24 +95,9 @@
     pushtag = push --tags
     pushih = push ihc master
 
-# Configure merge attributes
-# ** define tools based on cygwin, windows or linux
-[merge]
-	tool = diffmerge
-	conflictstyle = diff3
-
-[diff]
-    ; follow & diff renames
-    ; options are true/false which does basic rename detection, or copies (copy) which will also detect copies
-    renames = copies
-	tool = diffmerge
-
-[diff "excel"]
-    command = excel_cmp
-
 # Configure http proxy settings
 [http]
-    ;proxy = http://lpjharri:JJk5llNn@proxylp.ihc.com:8080
+    ;proxy = http://lpjharri:blah@proxylp.ihc.com:8080
 
 # Settings to allow for instantly browsing my working repository in gitweb
 [instaweb]
@@ -146,17 +131,42 @@
     ; cmd = /cygdrive/c/Users/lpjharri/AppData/Local/Google/Chrome/Application/chrome.exe
 [push]
 	default = current
+
+# Configure merge attributes
+# ** define tools based on cygwin, windows or linux
+[merge]
+	tool = diffmerge
+	conflictstyle = diff3
+
+[diff]
+	tool = diffmerge
+    renames = copies
+
+[diff "excel"]
+    command = excel_cmp
+
+#[difftool "intellij"]
+#	cmd = /usr/local/bin/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+
+#[mergetool "intellij"]
+#    cmd = /usr/local/bin/idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+#    trustExitCode = true
+
 [difftool "diffmerge"]
-	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+    cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+
 [mergetool "diffmerge"]
 	trustExitCode = true
     cmd = /usr/local/bin/diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"
+
 [difftool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
 	path =
+
 [mergetool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
+
 [log]
 	showSignature = true
 
