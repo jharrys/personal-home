@@ -23,6 +23,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/jharris/git/dev-compose-env/docker-compose.yml",
+			"settings":
+			{
+				"buffer_size": 87943,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -92,9 +100,7 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jharris/git/sofi-infra",
-		"/Users/jharris/git/sofi-infra/bamboo",
-		"/Users/jharris/git/sofi-infra/bamboo/scripts"
+		"/Users/jharris/git/dev-compose-env"
 	],
 	"file_history":
 	[
@@ -141,7 +147,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -155,6 +161,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"discovery",
+			"home-value",
+			"peregrine-documents",
+			"postgres",
 			"peregrine-messages",
 			"profiles",
 			"peregrine",
@@ -185,8 +195,84 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/jharris/git/dev-compose-env/docker-compose.yml",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 87943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								52788,
+								52788
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 3776,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 30148.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/jharris/git/dev-compose-env/docker-compose.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 87943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81684,
+								81684
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 46679.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -207,6 +293,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -217,6 +309,7 @@
 		"rows":
 		[
 			0.0,
+			0.5,
 			1.0
 		]
 	},
@@ -243,12 +336,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/Documents/Sublime Projects/zrcfiles.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -262,15 +359,6 @@
 	"selected_group": 0,
 	"settings":
 	{
-		"last_automatic_layout":
-		[
-			[
-				0,
-				0,
-				1,
-				1
-			]
-		]
 	},
 	"show_minimap": true,
 	"show_open_files": false,

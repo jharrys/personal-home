@@ -27,7 +27,7 @@
 			"file": "/Users/jharris/.zstart/aliases",
 			"settings":
 			{
-				"buffer_size": 30350,
+				"buffer_size": 30341,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -36,7 +36,8 @@
 			"file": "/Users/jharris/.zstart/mac/.aliases",
 			"settings":
 			{
-				"buffer_size": 7267,
+				"buffer_size": 7339,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -171,6 +172,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gclean",
 			"merge"
 		],
 		"highlight": true,
@@ -189,7 +191,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -198,15 +200,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 30350,
+						"buffer_size": 30341,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								21966,
-								21966
+								16534,
+								16534
 							]
 						],
 						"settings":
@@ -226,47 +228,38 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2512.0,
+						"translation.y": 2654.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "/Users/jharris/.zstart/mac/.aliases",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7267,
+						"buffer_size": 7339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4156,
+								4158
 							]
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 526,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1299.0,
+						"translation.y": 1216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
