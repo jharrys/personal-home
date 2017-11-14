@@ -27,7 +27,7 @@
 			"file": "/Users/jharris/git/dev-compose-env/docker-compose.yml",
 			"settings":
 			{
-				"buffer_size": 87943,
+				"buffer_size": 89001,
 				"line_ending": "Unix"
 			}
 		}
@@ -100,10 +100,16 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jharris/git/dev-compose-env"
+		"/Users/jharris/git/dev-compose-env",
+		"/Users/jharris/git/dev-compose-env/env",
+		"/Users/jharris/git/dev-compose-env/env/config",
+		"/Users/jharris/git/dev-compose-env/env/secret"
 	],
 	"file_history":
 	[
+		"/Users/jharris/Downloads/sofi_comm_tools/README.md",
+		"/Users/jharris/git/dev-compose-env/env/secret/firebase",
+		"/Users/jharris/git/dev-compose-env/env/config/firebase",
 		"/Users/jharris/git/sofi-infra/bamboo/scripts/db-artifactory-push",
 		"/Users/jharris/git/sofi-infra/bamboo/scripts/createVersionTxt",
 		"/Users/jharris/git/dev-compose-env/docker-compose.yml",
@@ -161,6 +167,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"firebase:",
 			"discovery",
 			"home-value",
 			"peregrine-documents",
@@ -201,18 +208,18 @@
 				{
 					"buffer": 0,
 					"file": "/Users/jharris/git/dev-compose-env/docker-compose.yml",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 87943,
+						"buffer_size": 89001,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								52788,
-								52788
+								0,
+								0
 							]
 						],
 						"settings":
@@ -220,7 +227,7 @@
 							"WordCount":
 							{
 								"changes": 0,
-								"count": 3776,
+								"count": 3813,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -230,47 +237,11 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 30148.0,
+						"translation.x": 14.0,
+						"translation.y": 29340.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "/Users/jharris/git/dev-compose-env/docker-compose.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 87943,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								81684,
-								81684
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 46679.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -293,12 +264,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -309,7 +274,6 @@
 		"rows":
 		[
 			0.0,
-			0.5,
 			1.0
 		]
 	},
