@@ -33,6 +33,14 @@
 			}
 		},
 		{
+			"file": "/Users/jharris/.zstart/zshrc",
+			"settings":
+			{
+				"buffer_size": 8110,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/Users/jharris/.zstart/mac/.aliases",
 			"settings":
 			{
@@ -191,7 +199,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -231,11 +239,48 @@
 						"translation.y": 2654.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "/Users/jharris/.zstart/zshrc",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 8110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 632,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "/Users/jharris/.zstart/mac/.aliases",
 					"semi_transient": false,
 					"settings":
@@ -259,7 +304,7 @@
 						"translation.y": 1216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

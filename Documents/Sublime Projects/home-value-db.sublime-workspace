@@ -23,6 +23,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/jharris/tmp/sofi_comm_tools/README.md",
+			"settings":
+			{
+				"buffer_size": 599,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -31,10 +39,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 239.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "mar",
 		"selected_items":
 		[
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"package",
 				"Package Control: Install Package"
@@ -42,14 +58,6 @@
 			[
 				"Package Control: ",
 				"Package Control: Install Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"mar",
-				"Markdown Preview: Preview in Browser"
 			],
 			[
 				"list",
@@ -72,7 +80,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 412.0
+		"width": 508.0
 	},
 	"console":
 	{
@@ -92,10 +100,18 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jharris/git/home-value-db"
+		"/Users/jharris/git/home-value-db",
+		"/Users/jharris/git/home-value-db/src",
+		"/Users/jharris/git/home-value-db/src/main",
+		"/Users/jharris/git/home-value-db/src/main/resources",
+		"/Users/jharris/git/home-value-db/src/main/resources/db",
+		"/Users/jharris/git/home-value-db/src/main/resources/db/migration"
 	],
 	"file_history":
 	[
+		"/Users/jharris/git/home-value-db/src/main/resources/db/migration/V2.1__create-tables.sql",
+		"/Users/jharris/git/home-value-db/README.md",
+		"/Users/jharris/git/peregrine-client/out.txt",
 		"/Users/jharris/git/home-value-service/out.txt",
 		"/Users/jharris/Downloads/sofi_comm_tools/README.md",
 		"/Users/jharris/git/dev-compose-env/env/secret/firebase",
@@ -109,7 +125,6 @@
 		"/Users/jharris/tmp/mydocker.yml",
 		"/Users/jharris/Desktop/Clipping 2017-11-03 at 09.13.17.txt",
 		"/Users/jharris/git/home-value-db/.git/COMMIT_EDITMSG",
-		"/Users/jharris/git/home-value-db/src/main/resources/db/migration/V2.1__create-tables.sql",
 		"/Users/jharris/git/home-value-db/bamboo/testBuild",
 		"/Users/jharris/.git/COMMIT_EDITMSG",
 		"/Users/jharris/git/home-value-db/testDbSetup/dropAndCreate.sql",
@@ -174,8 +189,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/jharris/tmp/sofi_comm_tools/README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97,
+								97
+							]
+						],
+						"settings":
+						{
+							"parser": "github",
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax",
+							"target": "browser"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
