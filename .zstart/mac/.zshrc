@@ -42,6 +42,8 @@ CDPATH="${CDPATH}:~/Google Drive/Development"
 CDPATH="${CDPATH}:~/Google Drive/Development/Archive"
 export CDPATH
 
+cdpath=(~/ /Volumes ~/Documents ~/git ~/Google\ Drive/Development ~/Google\ Drive/Development/Archive)
+
 #******************************************
 # nodejs settings
 #******************************************
