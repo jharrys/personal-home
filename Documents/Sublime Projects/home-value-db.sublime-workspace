@@ -24,10 +24,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/jharris/tmp/sofi_comm_tools/README.md",
+			"file": "/Users/jharris/git/home-value-db/README.md",
 			"settings":
 			{
-				"buffer_size": 599,
+				"buffer_size": 2055,
 				"line_ending": "Unix"
 			}
 		}
@@ -109,6 +109,7 @@
 	],
 	"file_history":
 	[
+		"/Users/jharris/tmp/sofi_comm_tools/README.md",
 		"/Users/jharris/git/home-value-db/src/main/resources/db/migration/V2.1__create-tables.sql",
 		"/Users/jharris/git/home-value-db/README.md",
 		"/Users/jharris/git/peregrine-client/out.txt",
@@ -194,26 +195,35 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/jharris/tmp/sofi_comm_tools/README.md",
+					"file": "/Users/jharris/git/home-value-db/README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 599,
+						"buffer_size": 2055,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97,
-								97
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"parser": "github",
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 237,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
 							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax",
-							"target": "browser"
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

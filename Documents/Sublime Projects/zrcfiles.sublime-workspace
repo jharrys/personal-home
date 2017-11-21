@@ -33,10 +33,11 @@
 			}
 		},
 		{
-			"file": "/Users/jharris/.zstart/zshrc",
+			"file": "/Users/jharris/.zstart/mac/.zshrc",
 			"settings":
 			{
-				"buffer_size": 8110,
+				"buffer_size": 2806,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -180,13 +181,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CDPATH",
 			"gclean",
 			"merge"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 		],
@@ -221,15 +223,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 1664,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
@@ -244,19 +237,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/jharris/.zstart/zshrc",
-					"semi_transient": true,
+					"file": "/Users/jharris/.zstart/mac/.zshrc",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8110,
+						"buffer_size": 2806,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1135,
+								1135
 							]
 						],
 						"settings":
@@ -264,7 +257,7 @@
 							"WordCount":
 							{
 								"changes": 0,
-								"count": 632,
+								"count": 135,
 								"modified": false,
 								"selection": false,
 								"status": -1,
