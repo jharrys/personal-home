@@ -27,7 +27,8 @@
 			"file": "/Users/jharris/git/dev-compose-env/docker-compose.yml",
 			"settings":
 			{
-				"buffer_size": 89001,
+				"buffer_size": 89445,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -211,23 +212,23 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 89001,
+						"buffer_size": 89445,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								82938,
+								82938
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 0,
-								"count": 3813,
+								"changes": 66,
+								"count": 3844,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -237,8 +238,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 14.0,
-						"translation.y": 29340.0,
+						"translation.x": 0.0,
+						"translation.y": 46936.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
