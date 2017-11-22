@@ -27,7 +27,7 @@
 			"file": "/Users/jharris/git/dev-compose-env/docker-compose.yml",
 			"settings":
 			{
-				"buffer_size": 89445,
+				"buffer_size": 89438,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -40,10 +40,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 239.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "markd",
 		"selected_items":
 		[
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
 			[
 				"package",
 				"Package Control: Install Package"
@@ -81,7 +85,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 412.0
+		"width": 508.0
 	},
 	"console":
 	{
@@ -101,13 +105,13 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jharris/git/dev-compose-env",
-		"/Users/jharris/git/dev-compose-env/env",
-		"/Users/jharris/git/dev-compose-env/env/config",
-		"/Users/jharris/git/dev-compose-env/env/secret"
+		"/Users/jharris/git/kraken",
+		"/Users/jharris/git/kraken/config"
 	],
 	"file_history":
 	[
+		"/Users/jharris/git/kraken/config/config.json",
+		"/Users/jharris/git/kraken/README.md",
 		"/Users/jharris/Downloads/sofi_comm_tools/README.md",
 		"/Users/jharris/git/dev-compose-env/env/secret/firebase",
 		"/Users/jharris/git/dev-compose-env/env/config/firebase",
@@ -168,6 +172,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"homevalue-db",
+			"homevalue",
 			"firebase:",
 			"discovery",
 			"home-value",
@@ -212,22 +218,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 89445,
+						"buffer_size": 89438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								82938,
-								82938
+								82931,
+								82931
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 66,
+								"changes": 5,
 								"count": 3844,
 								"modified": false,
 								"selection": false,
@@ -239,12 +245,17 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 46936.0,
+						"translation.y": 46810.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -265,11 +276,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
