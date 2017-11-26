@@ -1,5 +1,3 @@
-####################################################################
-#################################
 #############
 #
 # Johnnie Harris
@@ -9,8 +7,6 @@
 # It is sourced by each of the {platform}/.zshrc.
 #
 #############
-#################################
-####################################################################
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -82,15 +78,11 @@ bindkey '\e#' pound-insert                # insert '#' at beginning of line to c
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(common-aliases git sudo gradle sbt history brew tmux osx zsh-syntax-highlighting zsh-navigation-tools scd copyfile johnnie-colored-man-pages man copydir dircycle docker shrink-path)
 
-##################################################################
-###########################
 ###########
 #####
 # Environment settings
 #####
 ###########
-###########################
-##################################################################
 
 # Source my colors file
 source ~/.bin/colors.sh
@@ -121,15 +113,11 @@ unsetopt INC_APPEND_HISTORY
 setopt EXTENDED_GLOB
 setopt NO_NOMATCH   # setting EXTENDED_GLOB breaks git-rev syntax (i.e., HEAD^ ... youd have to escape ^ -> HEAD\^) the proper fix is to set NO_NOMATCH
 
-##################################################################
-###########################
 ###########
 #####
 # Python user configuration
 #####
 ###########
-###########################
-##################################################################
 
 # Setup python environment, if there is a virtual one installed inside home directory
 if [ -d ~/.pyenv ]; then
@@ -139,41 +127,29 @@ if [ -d ~/.pyenv ]; then
   eval "$(pyenv init -)"
 fi
 
-##################################################################
-###########################
 ###########
 #####
 # Mailcheck configuration
 #####
 ###########
-###########################
-##################################################################
 
 MAILCHECK=15
 mailpath=(/var/mail/jharris)
 export mailpath MAILCHECK
 
-##################################################################
-###########################
 ###########
 #####
 # User Aliases
 #####
 ###########
-###########################
-##################################################################
 
 . $ZSTART/aliases
 
-##################################################################
-###########################
 ###########
 #####
 # User Functions
 #####
 ###########
-###########################
-##################################################################
 
 # I need to change the TERM var to get functions
 # to load under the IntelliJ IDEA Terminal. The color when doing /bin/ls would not
@@ -188,41 +164,29 @@ do
 done
 TERM=$OLDTERM
 
-##################################################################
-###########################
 ###########
 #####
 # ZSH Help Files - as described in http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Accessing-On_002dLine-Help
 #####
 ###########
-###########################
-##################################################################
 
 export HELPDIR=~/.zsh_help
 unalias run-help &>/dev/null
 autoload run-help
 
-##################################################################
-###########################
 ###########
 #####
 # Homebrew configuration
 #####
 ###########
-###########################
-##################################################################
 
 export HOMEBREW_GITHUB_API_TOKEN=363214089b27eb70e2ac015ddf93cf9b5738864a
 
-##################################################################
-###########################
 ###########
 #####
 # Miscellaneous options to run at the end
 #####
 ###########
-###########################
-##################################################################
 
 
 # oh-my-zsh adds a deprecated environment variable. this disables it.
