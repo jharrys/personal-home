@@ -1,5 +1,3 @@
-####################################################################
-#################################
 #############
 # Mac OS X Aliases
 #
@@ -11,8 +9,6 @@
 # comments are all indented to column 97
 #
 #############
-#################################
-####################################################################
 
 # re alias ls --color (doesn't work on bsd)
 unalias ls
@@ -121,8 +117,8 @@ alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-s
 alias chromessldebug='SSLKEYLOGFILE=/Users/lpjharri/tmp/sslkey.txt open /Applications/Google\ Chrome.app'
 
 # Docker / SoFi aliases
-alias dm=docker-machine-alias
-alias dc=docker-compose-alias
+alias dm=docker-machine
+alias dc=docker-compose
 alias dfo=docker-forward
 alias dmenv='eval $(docker-machine env sofi)'
 alias dmstart='dm-start-sofi'
