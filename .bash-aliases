@@ -130,6 +130,63 @@ function _base_aliases() {
   alias dp='LC_ALL=C TZ=UTC diff -aNru'                                                         # Create a unified patch from diff - add the "original target > file.patch"
 
   # GIT stuff
+  # base stuff
+  alias g='git'
+  alias ga='git add'
+  alias gaa='git add --all'
+  alias gap='git apply'
+  alias gapa='git add --patch'
+  alias gau='git add --update'
+  alias gba='git branch -a'
+  alias gbd='git branch -d'
+  alias gbD='git branch -D'
+  alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+  alias gbl='git blame -b -w'
+  alias gbnm='git branch --no-merged'
+  alias gbr='git branch --remote'
+  alias gbs='git bisect'
+  alias gbsb='git bisect bad'
+  alias gbsg='git bisect good'
+  alias gbsr='git bisect reset'
+  alias gbss='git bisect start'
+  alias gc='git commit -v'
+  alias 'gc!'='git commit -v --amend'
+  alias gca='git commit -v -a'
+  alias 'gca!'='git commit -v -a --amend'
+  alias gst='git status'
+  alias gl='git pull'
+  alias gsta='git stash save'
+  alias gstaa='git stash apply'
+  alias gstc='git stash clear'
+  alias gstd='git stash drop'
+  alias gstl='git stash list'
+  alias gstp='git stash pop'
+  alias gsts='git stash show --text'
+  alias glg='git log --stat'
+  alias glgg='git log --graph'
+  alias glgga='git log --graph --decorate --all'
+  alias glgm='git log --graph --max-count=10'
+  alias glgp='git log --stat -p'
+  alias glo='git log --oneline --decorate'
+  alias glog='git log --oneline --decorate --graph'
+  alias gloga='git log --oneline --decorate --graph --all'
+  alias glol='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
+  alias glola='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all'
+  alias glp=_git_log_prettily
+  alias glum='git pull upstream master'
+  alias gm='git merge'
+  alias gma='git merge --abort'
+  alias gmom='git merge origin/master'
+  alias gmt='git mergetool --no-prompt'
+  alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
+  alias gmum='git merge upstream/master'
+  alias gp='git push'
+  alias gpd='git push --dry-run'
+  alias gph='git push fromhome master'
+  alias gpoat='git push origin --all && git push origin --tags'
+  alias gpot='git push && git push --tags'
+
+  # mine
   alias gitinit='git init'									# gitinit - creates bare git (use "git add .")
   alias gitinitbare='git init --bare'                                                           # gitinitbare /some/dirproject.git - creates git repo without work local files
   alias gitrepo='git clone'									# gitrepo ~/existing/repo ~/new/repo -OR- gitrepo ssh://john@host/srv/git/some.git
@@ -144,10 +201,6 @@ function _base_aliases() {
   alias gitcleancheckout='git checkout -f'                                                      # Throws away ALL UN-committed work, leaving new files untouched (never committed before) - and checks out CLEAN.
   alias gitconfig='git config --global'                                                         # Apply aliases or other configs globally: gitconfig alias.co checkout - sets up co for checkout
   alias gitlistcommittedfiles='git ls-files'
-  alias gitstashlist='git stash list'
-  alias gitstashsave='git stash save'                                                           # gitsavestash "Put message here to remind you of what you stashed"
-  alias gitstashclear='git stash clear'                                                         # delete stash
-  alias gitstash='git stash apply'                                                              # Load back the stash
   alias gitbrlist='git branch -a'                                                               # List both remote & local branches
   alias gitchp='git cherry-pick'                                                                # gitchp SHA1-COMMIT - merges SHA1-COMMIT into current branch
   alias gitaddp='git add -p'                                                                    # gitaddp - let's you pick the changes interactively as your shown diffs
