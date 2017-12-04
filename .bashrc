@@ -37,7 +37,6 @@ function _commonsetup() {
 	export HISTIGNORE=' *'
 
 	# setup cd path
-	CDPATH="~/"
 	CDPATH="${CDPATH}:/Volumes"
 	CDPATH="${CDPATH}:~/Documents"
 	CDPATH="${CDPATH}:~/git"
