@@ -40,7 +40,6 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias vi='gvimt'
 alias getw='wget -N -r -nH -nd --no-parent'
-alias pdr='powerline-daemon --replace'
 
 ###### Edit startup files ######
 alias cdmz='cd $ZSTART'
@@ -96,16 +95,6 @@ alias trycolors='eval $( dircolors -b ~/.configuration/linux/dircolors.txt ); ls
 ###### Rsync ########
 # [a](rlptogD) [v]erbose [u]pdate [z]compress [h]umanreadable [P]partial,progress
 alias rsync='rsync -avuzhP --partial'                                                                                                                         # rsync SOURCE DEST; for excluding to --exclude=PATTERN
-alias rsyncjohnbk='rsync -avuz --progress --exclude=*.vdi \
-                --exclude=Work\ Center/BioInformatics\ Center/UDOH* \
-                --exclude=Work\ Center/BioInformatics\ Center/smpi* \
-                --exclude=Workspaces/* --exclude=.Trash/* /Users/john \
-                john@zax:/mnt/nethome'
-alias rsyncPicToshibaAsSource='rsync -avuzhP ${HOME}/winhome/Mounts/toshiba/pictures/'
-alias rsyncnet2JJ='rsync -avuzhP --delete ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/ \
-                ~/my_apps/'
-alias rsyncJJ2net='rsync -avuzhP --delete ~/my_apps/ \
-                ~/mounts/lpjharri_on_tl/AppsInstalledOnWorkLaptop/'
 
 ###### Time savers ########
 alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; \
