@@ -271,6 +271,23 @@ function _base_aliases() {
   alias help-subgit='echo subgit import --svn-url URL-TOP-NOT-TRUNK --authors-file file'        # subgit conversion utility - produces good .gitignore and .gitattributes
   alias help-macnet='echo networksetup -listallhardwareports'                                   # lists all networking hardware ports on the mac os x
   alias help-caffeinate='man caffeinate'                                                        # disables sleep mode - checkout the man page
+
+  # Docker / SoFi aliases
+  alias dm=docker-machine
+  alias dc=docker-compose
+  alias dfo=docker-forward
+  alias dmenv='eval $(docker-machine env sofi)'
+  alias dmstart='dm-start-sofi'
+  alias dmstop='eval $(docker-machine env sofi); dfo stop && echo "docker-forward stopped!"; dm stop sofi'
+  alias cddc='cd ~/git/dev-compose-env'
+  alias regconsul='~/git/dev-compose-env/consul-register-service.sh'
+  alias dcu='dc up'
+  alias dcud='dc up -d'
+  alias dcd='dc down'
+  alias dct='dc logs'
+  alias dctf='dc logs -f'
+  alias dcp='dc ps'
+  alias dcr='perl ~/git/sofi-infra/bamboo/scripts/docker.gradle.build.pl'
 }
 
 ##
@@ -385,23 +402,6 @@ function _darwin_aliases() {
   # Chrome
   alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
   alias chromessldebug='SSLKEYLOGFILE=/Users/lpjharri/tmp/sslkey.txt open /Applications/Google\ Chrome.app'
-
-  # Docker / SoFi aliases
-  alias dm=docker-machine
-  alias dc=docker-compose
-  alias dfo=docker-forward
-  alias dmenv='eval $(docker-machine env sofi)'
-  alias dmstart='dm-start-sofi'
-  alias dmstop='eval $(docker-machine env sofi); dfo stop && echo "docker-forward stopped!"; dm stop sofi'
-  alias cddc='cd ~/git/dev-compose-env'
-  alias regconsul='~/git/dev-compose-env/consul-register-service.sh'
-  alias dcu='dc up'
-  alias dcud='dc up -d'
-  alias dcd='dc down'
-  alias dct='dc logs'
-  alias dctf='dc logs -f'
-  alias dcp='dc ps'
-  alias dcr='perl ~/git/sofi-infra/bamboo/scripts/docker.gradle.build.pl'
 
 }
 
