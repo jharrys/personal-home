@@ -38,7 +38,7 @@ alias lld='ls -Alh |grep ^d'                                                    
 alias lls='ls -lhSr'                                                                                                                                          # list detail by size reverse order
 alias mv='mv -i'
 alias cp='cp -i'
-alias vi='gvimt'
+alias vi='vim'
 alias getw='wget -N -r -nH -nd --no-parent'
 
 ###### Edit startup files ######
