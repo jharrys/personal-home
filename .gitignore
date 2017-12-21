@@ -58,6 +58,7 @@ configuration/Sublime Text 2/Backup
 
 .h*
 # .i* - for .inputrc
+.idea-build/
 .install4j*
 .iv*
 .j*
