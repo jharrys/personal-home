@@ -1,31 +1,36 @@
+# 1/10/2018 - **** description and functionality are not correct ... in the middle of fixing but had to do something else.
+
 # When you make a commit and have NOT pushed it yet and want to back out to a previous commit for the master branch
-# $1 = new temporary branch name; forcing the user to enter a name and not default to something as this is a destructive function
-[ $# -lt 1 ] && echo "WARNING: Destructive;When you make a commit and have NOT pushed it. You MUST BE ON THE COMMIT (detached HEAD)  that you want to make the new MASTER. \$1 = temp branch" && return 1
+# $1 = new branch name; forcing the user to enter a name and not default to something as this is a destructive function
+
+[ $# -lt 1 ] && echo "WARNING: Destructive\n\nWhen you make a commit and have NOT pushed it. You MUST BE ON THE COMMIT (detached HEAD) that you want to make the new MASTER. \$1 = temp branch" && return 1
 
 local tmpname
 
-# Verify that branch name given does not exist, otherwise rename
+# If given branch name $1 exists then append TMP to use a non-existant branch name
 git rev-parse --quiet --verify "$1"
 if [ "$?" = "0" ]; then
-  tmpname="${1}OLD"
-  git branch -m "$1" "$tmpname" > /dev/null
+  tmpname="${1}TMP"
 fi
+
+# Do the actual rename of the branch $1
+git branch -m "$1" "$tmpname" > /dev/null
 
 # Create a temporary git branch referencing the current detached head and checkout the temporary branch
 git checkout --quiet -b $1
-[ "$?" -gt "0" ] && "Error on step 1 trying to create and checkout $1" && return 1
+[ "$?" -gt "0" ] && echo "Error on step 1 trying to create and checkout $1" && return 1
 
 # Set master to point to the newly created temporary branch and checkout master
 git checkout --quiet -B master $1
-[ "$?" -gt "0" ] && "Error on step 2 trying to set master to $1" && return 1
+[ "$?" -gt "0" ] && echo "Error on step 2 trying to set master to $1" && return 1
 
 # Delete the temporary branch
 git branch -D $1 > /dev/null
-[ "$?" -gt "0" ] && "Error on step 3 trying to delete $1" && return 1
+[ "$?" -gt "0" ] && echo "Error on step 3 trying to delete $1" && return 1
 
 # If temporary branch name already existed and we renamed it, rename it back
 [ -n "$tmpname" ] && (git branch -m "$tmpname" "$1")
 # note error looks for greater than 1 (the git branch error will return 128)
-[ "$?" -gt "1" ] && "Error on step 4 trying to rename $tmpname to $1" && return 1
+[ "$?" -gt "1" ] && echo "Error on step 4 trying to rename $tmpname to $1" && return 1
 
 unset tmpname
