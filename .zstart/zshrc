@@ -113,6 +113,9 @@ unsetopt INC_APPEND_HISTORY
 setopt EXTENDED_GLOB
 setopt NO_NOMATCH   # setting EXTENDED_GLOB breaks git-rev syntax (i.e., HEAD^ ... youd have to escape ^ -> HEAD\^) the proper fix is to set NO_NOMATCH
 
+# Alternate SBT version
+export SBT_ALTERNATE=0.13.16
+
 ###########
 #####
 # Python user configuration

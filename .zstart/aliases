@@ -257,6 +257,8 @@ alias mverulsn='mvn versions:use-latest-snapshots'
 alias mvercom='mvn versions:commit'                                                                                                                              # requires reverts changes made by mvn versions:set
 alias mverrev='mvn versions:revert'                                                                                                                              # requires reverts changes made by mvn versions:set
 
+## sbt ##
+alias sbtt='sbt -Dsbt.version=${SBT_ALTERNATE}'
 
 # RC (my ssh run command)
 alias rcls='rc ls -jj -h'
