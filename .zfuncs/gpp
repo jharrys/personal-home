@@ -5,21 +5,26 @@
 
 git fetch --quiet
 
-echo "\n\n"
-eval $colored_fg_red
-echo "#############################"
-echo "        Files changed"
-echo "#############################"
-eval $type_reset
-echo "\n"
-git --no-pager diff --color=always --name-only HEAD...origin
+output=$(git --no-pager diff --color=always --name-only HEAD...origin)
 
-echo "\n\n"
-eval $colored_fg_yellow
-echo "#############################"
-echo "        Full diff"
-echo "#############################"
-eval $type_reset
-echo "\n"
-git --no-pager diff --color=always HEAD...origin
+if [ -n "$output" ];
+then
+    echo "\n\n"
+    eval $colored_fg_red
+    echo "#############################"
+    echo "        Files changed"
+    echo "#############################"
+    eval $type_reset
+    echo "\n"
+    echo $output
+
+    echo "\n\n"
+    eval $colored_fg_yellow
+    echo "#############################"
+    echo "        Full diff"
+    echo "#############################"
+    eval $type_reset
+    echo "\n"
+    git --no-pager diff --color=always HEAD...origin
+fi
 
