@@ -95,13 +95,14 @@ alias tagbins='tag -a "bin & libs"'
 alias untagbins='tag -r "bin & libs"'
 
 # Sysadmin - starts with sys_
-alias sys_diagnosisreport='sudo sysdiagnose -f ~lpjharri/Desktop'
+alias sys_diagnosisreport='sudo sysdiagnose -f ~/Desktop'
 alias sys_infoaboutanymac='mactracker'
 alias sys_cleaniconcache='sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \; \
 ;sudo find /private/var/folders -name com.apple.dock.iconcache -exec rm {} \; \
 ;sudo rm -rf /Library/Caches/com.apple.iconservices.store'                                                                                                    # clean mac os x icon caches
 alias sys_resetdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;say DNScache flushed and reset'
 alias sys_sleep='sudo shutdown -s'
+alias sys_machine='sysctl -n machdep.cpu.brand_string'
 
 # Brew and Cask
 alias bb='brew bundle --file=~/.configuration/homebrew/Brewfile'                                                                                                                               # Executes install of Brewfile
