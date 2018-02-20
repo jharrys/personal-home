@@ -124,6 +124,7 @@ alias dfo=docker-forward
 alias dmenv='eval $(docker-machine env sofi)'
 alias dmstart='dm-start-sofi'
 alias dmstop='eval $(docker-machine env sofi); dfo stop && echo "docker-forward stopped!"; dm stop sofi'
+alias dmstat='dm status sofi'
 alias cddc='cd ~/git/dev-compose-env'
 alias regconsul='~/git/dev-compose-env/consul-register-service.sh'
 alias dcu='dc up'
