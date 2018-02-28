@@ -214,6 +214,7 @@ alias gtl='git push -q origin :refs/tags/latest-release; git tag -f -m "latest-r
 alias gmt='git mergetool --no-prompt'
 alias gdl='git difftool --no-prompt'
 alias gbD='git branch -D'
+alias gbDr='git push origin --delete'
 
 # Maven stuff
 alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                                                                                # clean my local repository
