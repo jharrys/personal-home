@@ -54,8 +54,38 @@ alias ema='vim ${ZSTART}/aliases'
 alias epa='vim ${ZDOTDIR}/.aliases'
 
 ###### Docker ######
-alias dock-elixir='docker run -it --rm elixir'                                                                                                                # an elixir environment for developing elixir apps or learning
-alias dock-elixir-bash='docker run -it --rm elixir bash'                                                                                                      # an elixir environment for developing elixir apps or learning
+alias dinfo='docker info'
+alias dcls='docker ps'
+alias dils='docker image ls'
+alias dvls='docker volume ls'
+alias dnls='docker network ls'
+alias dprs='docker system prune --all --force --volumes'
+alias dpri='docker image prune'
+alias dprc='docker container prune'
+alias dprv='docker volume prune'
+alias dprn='docker network prune'
+
+###### Docker Compose ######
+alias dc=docker-compose
+alias dcu='dc up'
+alias dcud='dc up -d'
+alias dcd='dc down'
+alias dct='dc logs'
+alias dctf='dc logs -f'
+alias dcp='dc ps'
+
+###### Docker Machine ######
+alias dm=docker-machine
+
+###### Docker SoFi ######
+alias cddc='cd ~/git/dev-compose-env'
+alias dmenv='eval $(docker-machine env sofi)'
+alias dmstart='dm-start-sofi'
+alias dmstop='eval $(docker-machine env sofi); dfo stop && echo "docker-forward stopped!"; dm stop sofi'
+alias dmstat='dm status sofi'
+alias regconsul='~/git/dev-compose-env/consul-register-service.sh'
+alias dfo=docker-forward
+alias dcr='perl ~/git/sofi-infra/bamboo/scripts/docker.gradle.build.pl'
 
 ###### Find ######
 alias findnewer='find . -newerct'                                                                                                                             # findnewerthan '5 minutes ago'
