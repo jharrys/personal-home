@@ -83,6 +83,7 @@ configuration/Sublime Text 2/Backup
 .psql_history
 .pulse*
 .pyenv
+.python_history
 .q*
 .Real*
 .r*

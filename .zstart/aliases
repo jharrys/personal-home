@@ -55,7 +55,7 @@ alias epa='vim ${ZDOTDIR}/.aliases'
 
 ###### Docker ######
 alias dinfo='docker info'
-alias dcls='docker ps'
+alias dls='docker ps'
 alias dils='docker image ls'
 alias dvls='docker volume ls'
 alias dnls='docker network ls'
