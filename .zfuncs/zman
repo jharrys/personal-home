@@ -1,0 +1,3 @@
+# zshall contains doc for everything
+# E.g., zman HIST_IGNORE_SPACE
+PAGER="less -g -s '+/^       "$1"'" man zshall
