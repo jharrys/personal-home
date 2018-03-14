@@ -74,6 +74,14 @@ alias dct='dc logs'
 alias dctf='dc logs -f'
 alias dcp='dc ps'
 
+###### SoFi Docker Compose ######
+alias sdcp='cd ~/git/dev-compose-env && dc ps'
+alias sdcu='cd ~/git/dev-compose-env && dc up'
+alias sdcud='cd ~/git/dev-compose-env && dc up -d'
+alias sdcd='cd ~/git/dev-compose-env && dc down'
+alias sdct='cd ~/git/dev-compose-env && dc logs'
+alias sdctf='cd ~/git/dev-compose-env && dc logs -f'
+
 ###### Docker Machine ######
 alias dm=docker-machine
 
