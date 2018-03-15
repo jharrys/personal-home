@@ -1,0 +1,43 @@
+# 2018-03-14
+# by Johnnie H.
+
+# Given a directory that holds 1 or more repos, list all repos not on master
+
+# $1 = directory of git repos
+
+usage="usage:\t$0 directory-holding-repos"
+[ $# -lt 1 ] && echo $usage && return 1
+
+# source type settings
+. colors.sh
+
+oldcli=CLICOLOR
+oldclif=CLICOLOR_FORCE
+unset CLICOLOR
+unset CLICOLOR_FORCE
+oldpwd=$(pwd)
+startingdir=$1
+
+trap "cd $oldpwd; return" ABRT HUP INT QUIT TERM EXIT
+
+cd $startingdir
+
+for x in *
+do
+  cd $x
+  result=$(git rev-parse --abbrev-ref HEAD) || break
+
+  if [[ "$result" != "master" && "$result" != "develop" && "$result" != "migrations" ]]
+  then
+    eval $colored_fg_yellow
+    echo "$x: $result"
+    eval $type_reset
+  fi
+
+  cd $startingdir
+done
+
+CLICOLOR=oldcli
+CLICOLOR_FORCE=oldclif
+
+cd $oldpwd

@@ -1,0 +1,36 @@
+# 2018-03-14
+# by Johnnie H.
+
+# Update a directory full of git repositories
+
+# $1 = directory of git repos
+
+usage="usage:\t$0 directory-holding-repos"
+[ $# -lt 1 ] && echo $usage && return 1
+
+oldcli=CLICOLOR
+oldclif=CLICOLOR_FORCE
+unset CLICOLOR
+unset CLICOLOR_FORCE
+oldpwd=$(pwd)
+
+trap "cd $oldpwd; return" ABRT
+trap "cd $oldpwd; return" HUP
+trap "cd $oldpwd; return" INT
+trap "cd $oldpwd; return" QUIT
+trap "cd $oldpwd; return" TERM
+
+cd $1
+
+for x in $(ls)
+do
+  cd $x
+  echo $x
+  git pull
+  cd $oldpwd
+done
+
+CLICOLOR=oldcli
+CLICOLOR_FORCE=oldclif
+
+cd $oldpwd
