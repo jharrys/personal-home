@@ -8484,7 +8484,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>710 238 606 469 0 0 3440 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>755 838 918 452 0 0 3440 1440 </string>
+	<string>755 799 918 512 0 0 3440 1440 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 466 592 584 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -11460,11 +11460,11 @@
 			<key>HotKey Window AutoHides</key>
 			<true/>
 			<key>HotKey Window Dock Click Action</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>HotKey Window Floats</key>
 			<false/>
 			<key>HotKey Window Reopens On Activation</key>
-			<false/>
+			<true/>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -11898,7 +11898,7 @@
 			<key>Scrollback Lines</key>
 			<integer>0</integer>
 			<key>Scrollback With Status Bar</key>
-			<false/>
+			<true/>
 			<key>Scrollback in Alternate Screen</key>
 			<true/>
 			<key>Selected Text Color</key>
@@ -12093,7 +12093,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>5</integer>
+			<integer>2</integer>
 			<key>Working Directory</key>
 			<string>/Users/lpjharri</string>
 		</dict>
