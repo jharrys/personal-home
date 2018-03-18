@@ -1,1 +1,0 @@
-/Applications/Microsoft OneNote.app
