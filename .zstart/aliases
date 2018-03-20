@@ -75,13 +75,13 @@ alias dctf='dc logs -f'
 alias dcp='dc ps'
 
 ###### SoFi Docker Compose ######
-alias sdcp='cd ~/git/dev-compose-env && dc ps && cd -'
-alias sdcu='cd ~/git/dev-compose-env && dc up && cd -'
-alias sdcud='cd ~/git/dev-compose-env && dc up -d && cd -'
-alias sdcd='cd ~/git/dev-compose-env && dc down && cd -'
-alias sdct='cd ~/git/dev-compose-env && dc logs && cd -'
-alias sdctf='cd ~/git/dev-compose-env && dc logs -f && cd -'
-alias sdcpl='cd ~/git/dev-compose-env && time dc pull --parallel && cd -'
+alias sdcp='dc -f ~/git/dev-compose-env/docker-compose.yml ps'
+alias sdcu='dc -f ~/git/dev-compose-env/docker-compose.yml up'
+alias sdcud='dc -f ~/git/dev-compose-env/docker-compose.yml up -d'
+alias sdcd='dc -f ~/git/dev-compose-env/docker-compose.yml dc down'
+alias sdct='dc -f ~/git/dev-compose-env/docker-compose.yml dc logs'
+alias sdctf='dc -f ~/git/dev-compose-env/docker-compose.yml dc logs -f'
+alias sdcpl='dc -f ~/git/dev-compose-env/docker-compose.yml time dc pull --parallel'
 
 ###### Docker Machine ######
 alias dm=docker-machine
