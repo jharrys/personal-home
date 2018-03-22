@@ -255,6 +255,7 @@ alias gdl='git difftool --no-prompt'
 alias gba='git --no-pager branch --all'
 alias gbD='git branch -D'
 alias gbDr='git push origin --delete'
+alias ggc='git gc --aggressive --prune=all'
 
 # Maven stuff
 alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                                                                                # clean my local repository
