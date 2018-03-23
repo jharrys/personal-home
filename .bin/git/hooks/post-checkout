@@ -1,0 +1,10 @@
+#! /bin/bash
+
+branch_name=$(git symbolic-ref -q HEAD)
+branch_name=${branch_name##refs/heads/}
+branch_name=${branch_name:-HEAD}
+
+if [[ ! $branch_name =~ ^feature.*|^master|^HEAD ]];
+then 
+	echo -e "\033[41mBranch name does not begin with feature!\033[0m"
+fi

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+git symbolic-ref --short HEAD |grep -i "/sofi-"
+result=$?
+
+if [[  "$2" != "commit" ]]
+then
+  if [ $result = 0 ]
+  then
+	sed -i.old "1s;^;SOFI-$(git symbolic-ref --short HEAD | grep -o '[0-9]\{5,\}'): ;" $1
+  fi
+fi

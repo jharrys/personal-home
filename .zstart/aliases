@@ -224,12 +224,12 @@ alias gitcleancheckout='git checkout -f'                                        
 alias gitconfig='git config --global'                                                                                                                         # Apply aliases or other configs globally: gitconfig alias.co checkout - sets up co for checkout
 alias gls='git ls-files'
 alias gstl='git --no-pager stash list'
-alias gsta='git stash save'                                                                                                                           # gitsavestash "Put message here to remind you of what you stashed"
+alias gsta='git stash push'                                                                                                                           # gitsavestash "Put message here to remind you of what you stashed"
 alias gstc='git stash clear'                                                                                                                         # delete stash
 alias gstaa='git stash apply'  
 alias gstd='git stash drop'                                                                                                                            # Load back the stash
 alias gitchp='git cherry-pick'                                                                                                                                # gitchp SHA1-COMMIT - merges SHA1-COMMIT into current branch
-alias gitaddp='git add -p'                                                                                                                                    # gitaddp - let's you pick the changes interactively as your shown diffs
+alias gapa='git add --patch'                                                                                                                                    # gitaddp - let's you pick the changes interactively as your shown diffs
 alias gsquash='git rebase -i'                                                                                                                              # gitrebasei HEAD~3 - interactively rewrite history; delete pick to remove commit, 'edit' & 'squash'
 alias gitrmbr='read -p "branch: " BR;git push origin :$BR'                                                                                                    # delete remote branch on origin - git push origin :remotebranch
 alias gitrmtag='read -p "tag: " BR;git push origin :refs/tags/$BR'                                                                                            # delete remote tag on origin - git push origin :remotetag
@@ -256,6 +256,8 @@ alias gba='git --no-pager branch --all'
 alias gbD='git branch -D'
 alias gbDr='git push origin --delete'
 alias ggc='git gc --aggressive --prune=all'
+alias gcm='git checkout master'
+alias gcmsg='git commit -m'
 
 # Maven stuff
 alias mvnremoverepo='\rm -r ~/.m2/repository/'                                                                                                                # clean my local repository
