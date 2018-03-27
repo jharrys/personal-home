@@ -76,8 +76,8 @@ alias dcp='dc ps'
 
 ###### SoFi Docker Compose ######
 alias sdcp='dc -f ~/git/dev-compose-env/docker-compose.yml ps'
-alias sdcu='dc -f ~/git/dev-compose-env/docker-compose.yml up'
-alias sdcud='dc -f ~/git/dev-compose-env/docker-compose.yml up -d'
+alias sdcu='cd ~/git/dev-compose-env; dc up'
+alias sdcud='cd ~/git/dev-compose-env; dc up -d'
 alias sdcd='dc -f ~/git/dev-compose-env/docker-compose.yml down'
 alias sdct='dc -f ~/git/dev-compose-env/docker-compose.yml logs'
 alias sdctf='dc -f ~/git/dev-compose-env/docker-compose.yml logs -f'
