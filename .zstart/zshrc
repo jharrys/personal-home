@@ -22,13 +22,7 @@ ZSH_THEME="jaxis"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -37,7 +31,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -69,32 +63,15 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 # Key bindings here
 bindkey '\e#' pound-insert                # insert '#' at beginning of line to comment out, NOTE reissuing this on a commented line will remove the # and issue the command
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(common-aliases git sudo gradle sbt history brew tmux osx zsh-syntax-highlighting zsh-navigation-tools scd copyfile johnnie-colored-man-pages man copydir dircycle docker shrink-path)
 
-###########
-#####
 # Environment settings
-#####
-###########
 
 # Source my colors file
 source ~/.bin/colors.sh
 
-# Setup H2
-export H2HOME="/Users/lpjharri/Applications/h2"
-
-# Setup go
-export GOPATH="/Users/lpjharri/Development/source_control/go"
-
 # PATH variable
-export PATH=/usr/local/sbin:$HOME/.bin:/usr/local/bin:$H2HOME/bin:$(go env GOPATH)/bin:$PATH
+export PATH=/usr/local/sbin:$HOME/.bin:/usr/local/bin:$PATH
 
 # oh-my-zsh variable
 source $ZSH/oh-my-zsh.sh
@@ -103,6 +80,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 export EDITOR='vim'
+
 export GIT_EDITOR='vim -f'
 
 # Less options
@@ -116,43 +94,22 @@ setopt NO_NOMATCH   # setting EXTENDED_GLOB breaks git-rev syntax (i.e., HEAD^ .
 # Alternate SBT version
 export SBT_ALTERNATE=0.13.16
 
-###########
-#####
-# Python user configuration
-#####
-###########
-
-# Setup python environment, if there is a virtual one installed inside home directory
-if [ -d ~/.pyenv ]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PYENV_VERSION=2.7.9
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
-
-###########
-#####
 # Mailcheck configuration
-#####
-###########
 
 MAILCHECK=15
 mailpath=(/var/mail/jharris)
 export mailpath MAILCHECK
 
-###########
-#####
-# User Aliases
-#####
-###########
+# Global aliases
+if [ -d $ZSTART/aliases.d ];
+then
+    for a in $(ls $ZSTART/aliases.d/*.aliases)
+    do
+        source $a
+    done
+fi
 
-. $ZSTART/aliases
-
-###########
-#####
 # User Functions
-#####
-###########
 
 # I need to change the TERM var to get functions
 # to load under the IntelliJ IDEA Terminal. The color when doing /bin/ls would not
@@ -167,30 +124,17 @@ do
 done
 TERM=$OLDTERM
 
-###########
-#####
 # ZSH Help Files - as described in http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Accessing-On_002dLine-Help
-#####
-###########
 
 export HELPDIR=~/.zsh_help
 unalias run-help &>/dev/null
 autoload run-help
 
-###########
-#####
 # Homebrew configuration
-#####
-###########
 
 export HOMEBREW_GITHUB_API_TOKEN=363214089b27eb70e2ac015ddf93cf9b5738864a
 
-###########
-#####
 # Miscellaneous options to run at the end
-#####
-###########
-
 
 # oh-my-zsh adds a deprecated environment variable. this disables it.
 unset GREP_OPTIONS

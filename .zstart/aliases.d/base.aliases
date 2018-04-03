@@ -1,0 +1,137 @@
+#
+# Johnnie Harris
+# 2016-12-20
+#
+# This contains aliases common to all platforms.
+# It is sourced by the {platform}/.aliases
+#
+# ALIASES
+# comments are all indented to column 97
+#
+
+###### Alias suffixes ######
+alias -s mp4=vlc
+alias -s mkv=vlc
+alias -s m4a=vlc
+alias -s mov=vlc
+alias -s mp3=vlc
+alias -s mpeg=vlc
+alias -s mpg=vlc
+alias -s rm=vlc
+alias -s wav=vlc
+alias -s xml=less
+
+###### Base ########
+alias ls='ls --color'
+alias lr='ls -AlhR'                                                                                                                                           # list recursively
+alias lt='ls -ltrh'                                                                                                                                           # list detail sort by time reversed
+alias ll='ls -lh'                                                                                                                                             # list detail
+alias la='ls -Alh'                                                                                                                                            # list detail showing hidden, hiding . and ..
+alias lld='ls -Alh |grep ^d'                                                                                                                                  # list detail just directories
+alias lls='ls -lhSr'                                                                                                                                          # list detail by size reverse order
+alias mv='mv -i'
+alias cp='cp -i'
+alias vi='vim'
+alias getw='wget -N -r -nH -nd --no-parent'
+
+###### Edit startup files ######
+alias cdmz='cd $ZSTART'
+alias cdpz='cd $ZDOTDIR'
+# edit main zshrc
+alias emz='vim ${ZSTART}/zshrc'
+# edit platform zshrc
+alias epz='vim ${ZDOTDIR}/.zshrc'
+# edit main aliases
+alias ema='vim ${ZSTART}/aliases'
+# edit platform aliases
+alias epa='vim ${ZDOTDIR}/.aliases'
+
+###### Find ######
+alias findnewer='find . -newerct'                                                                                                                             # findnewerthan '5 minutes ago'
+alias fnung='find / \( -nouser -o -nogroup \) -print'                                                                                                         # find files/dirs with no user or no group
+alias fnotuser='find . -not -user'                                                                                                                            # find files not owned by me
+alias fnotme='find . -not -user $(whoami)'                                                                                                                    # find files that are not mine
+
+###### Less ######
+alias lessq='less -F'                                                                                                                                         # less, but quit if all fits in one page
+alias lesst='less +F'                                                                                                                                         # less and tail -f
+
+###### Screen or tmux ########
+alias screen='screen ${SHELL} -l'
+
+###### IP Performance ########
+alias testperfasserver='iperf -s'                                                                                                                             # runs as a server
+alias testperfasclient='iperf -c'                                                                                                                             # needs host name to test against
+
+###### Dig command (nslookup replacement) ########
+alias digr='dig +short -x'                                                                                                                                    # reverse dns lookup with short display
+alias digs='dig +short'                                                                                                                                       # normal lookup with short display
+alias digns='dig NS +noall +answer'                                                                                                                           # lookup NS with only answer section
+alias digmx='dig MX +noall +answer'                                                                                                                           # lookup MX records
+alias digany='dig ANY +noall +answer'                                                                                                                         # lookup ANY records
+
+###### Printer ########
+alias prls='lpstat -p'                                                                                                                                        # list all printers
+alias prd='lpadmin -d'                                                                                                                                        # set default printer to "printername"
+alias prjobs='lpq -a'                                                                                                                                         # list print jobs across all queues
+alias prjob='lpq -P'                                                                                                                                          # list print job for specific printer
+alias prdisableall='ls /etc/cups/ppd |cut -d "." -f1 |xargs -I{} cupsdisable {}'
+alias prenableall='ls /etc/cups/ppd |cut -d "." -f1 |xargs -I{} cupsenable {}'
+
+###### Colors ########
+alias trycolors='eval $( dircolors -b ~/.configuration/linux/dircolors.txt ); ls'
+
+###### Rsync ########
+# [a](rlptogD) [v]erbose [u]pdate [z]compress [h]umanreadable [P]partial,progress
+alias rsync='rsync -avuzhP --partial'                                                                                                                         # rsync SOURCE DEST; for excluding to --exclude=PATTERN
+
+###### Time savers ########
+alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; \
+            alias | cut -d " " -f 2- | egrep "^_ts"'
+alias _tsLargestDirs='find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn'
+alias _tsLargeFiles='find . -size +1000000 -ls'
+alias _tsWhoHasFileOpen='fuser'
+
+###### History ########
+alias r='fc'                                                                                                                                                  # "r 10" or "r 10 20"; rerun 10 or rerun 10 through 20 (can also be given as string)
+alias rl='fc -l'                                                                                                                                              # "rl 10 20" - lists history 10 to 20
+alias rr='fc -s'                                                                                                                                              # "rr old=new 10" - rerun command 10 sub old with new (instead of 10, can use string)
+alias histbackup='fc -A ~/.configuration/zsh_history'
+alias histrestore="fc -R ~/.configuration/zsh_history; fc -W"
+alias hsync='history -a ; history -n'                                                                                                                         # sync history
+
+alias web='python -m SimpleHTTPServer'                                                                                                                        # with no arg, the server is listening on 8000
+
+###### Jar / zip ######
+alias catz='unzip -p'                                                                                                                                        # catz FILE.jar PATH/TO/FILE-to-list.txt
+
+###### XML ########
+alias tidyxml='tidy -i -q -w 0 -xml'
+
+###### Strings and Binary files ########
+alias binstr='strings -a'                                                                                                                                     # binstr binfile (searches full file and certain sections from TK_STRINGS_DEFAULT_SECTIONS)
+alias binstrn='strings -n'                                                                                                                                    # binstrn 2 binfile (returns strings >=2)
+alias binstrm='strings -f'                                                                                                                                    # binstrf /bin/* (searches all bin files)
+alias binstro='strings -o'                                                                                                                                    # binstro binfile (returns strings with their octal offset)
+
+###### RPM ########
+alias alien='alien -r'                                                                                                                                        # To convert deb to rpm
+
+##### Sysadmin ######
+alias topOpenFiles='lsof / |awk '"'"'{ if($7 > 1048576) \
+                  print $7/1048576 "MB" "" $9 "" $1 }'"'"' \
+                  |sort -n -u |tail'                                                                                                                        # top 10 largest open files
+
+# Patching
+alias dry='patch -Np1 --dry-run'                                                                                                                              # Do a dry run of the patch - add the "< file.patch"
+alias dp='LC_ALL=C TZ=UTC diff -aNru'                                                                                                                         # Create a unified patch from diff - add the "original target > file.patch"
+
+## sbt ##
+alias sbtt='sbt -Dsbt.version=${SBT_ALTERNATE}'
+
+# RC (my ssh run command)
+alias rcls='rc ls -jj -h'
+alias rcll='rc ls -al -jj -h'
+alias rcnotmux='rc touch /home/jharris/tmp/notmux -jj -h'
+alias rcrmnotmux='rc rm -f /home/jharris/tmp/notmux -jj -h'
+

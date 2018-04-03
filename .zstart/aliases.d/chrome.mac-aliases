@@ -1,0 +1,3 @@
+alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
+alias chromessldebug='SSLKEYLOGFILE=/Users/jharris/tmp/sslkey.txt open /Applications/Google\ Chrome.app'
+

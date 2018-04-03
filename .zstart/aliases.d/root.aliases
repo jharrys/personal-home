@@ -1,0 +1,14 @@
+# things that need to be run with root access
+
+if [ $UID -ne 0 ]; then
+  alias reboot='sudo reboot'
+  alias useradd='sudo /usr/sbin/useradd'
+  alias adduser='sudo /usr/sbin/useradd'
+  alias userdel='sudo /usr/sbin/userdel -f'
+  alias deluser='sudo /usr/sbin/userdel -f'
+  alias newgroupnogid='sudo /usr/sbin/groupadd'
+  alias newgroupgid='read -p "gid? " GID;sudo /usr/sbin/groupadd --gid ${GID}'
+  alias adduser2group='read -p "groups(separate by ,)? " \
+                      GR;sudo /usr/sbin/usermod --append --groups ${GR}'
+fi
+

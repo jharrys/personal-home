@@ -85,5 +85,12 @@ DMPID=$(pgrep -f sofi)
 #******************************************
 # source platform aliases
 #******************************************
-. ${ZSTARTPLATFORM}/.aliases
+# Global aliases
+if [ -d $ZSTART/aliases.d ];
+then
+    for a in $(\ls $ZSTART/aliases.d/*.mac-aliases)
+    do
+        source $a
+    done
+fi
 

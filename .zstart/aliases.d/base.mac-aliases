@@ -104,15 +104,3 @@ alias sys_resetdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponde
 alias sys_sleep='sudo shutdown -s'
 alias sys_machine='sysctl -n machdep.cpu.brand_string'
 
-# Brew and Cask
-alias bb='brew bundle --file=~/.configuration/homebrew/Brewfile'                                                                                                                               # Executes install of Brewfile
-alias bbd='brew bundle dump --force --file=~/.configuration/homebrew/Brewfile'                                                                                                                             # Creates a new Brewfile
-alias bbc='brew bundle check --file=~/.configuration/homebrew/Brewfile'                                                                                                                           # See if your Brewfile needs updating
-alias bbcl='brew bundle cleanup --file=~/.configuration/homebrew/Brewfile'                                                                                                                         # removes all brews not listed in Brewfile
-alias bcu='brew update && brew upgrade --greedy && brew cleanup'
-alias bcch='brewcasklist.sh |awk -v RS="" '"'"'{ if ($3 != $6) print $2,"needs to be upgradedd" }'"'"
-alias bcupg='for x in `bcch |cut -f 1 -d ":"`; do brew cask uninstall $x; brew cask install $x; done; brew cask cleanup'
-
-# Chrome
-alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
-alias chromessldebug='SSLKEYLOGFILE=/Users/lpjharri/tmp/sslkey.txt open /Applications/Google\ Chrome.app'

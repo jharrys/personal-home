@@ -1,0 +1,12 @@
+alias wget-asfirefox='wget --user-agent="Mozilla/5.0 (X11; U; \
+                    Linux i686; en-US; rv:1.9.0.3) Gecko/2008092416 Firefox/3.0.3"'
+alias wget-back='wget -b'                                                                                                                                     # Backgrounds wget download: "get-back http://my.favorite.com/file.zip"
+alias wget-verify='wget --spider'                                                                                                                             # Verifies that url works: "get-verify http://my.favorite.com/file.zip"
+alias wget-resume='wget -c'                                                                                                                                   # Resume partially downloaded file: "wget-resume http://my.favorite.com/file.zip"
+alias wget-retry='wget --tries=30'                                                                                                                            # Default retries is 20, this ups it to 30: "wget-retry http://my.favorite.com/file.zip"
+alias wget-mirror='wget --mirror -p --convert-links -P'                                                                                                       # Download full website; -p download all to properly display html; --convert-links for local viewing; -P tell it where to save
+# "wget-mirror ./DIR-OF-MY-FAV-SITE-MIRRORED http://my.favorite.com"
+alias wget-reject='wget --reject='                                                                                                                            # Specify types to Reject such as gif: "wget-reject gif http://my.favorite.com"
+alias wget-log-err='wget -o'                                                                                                                                  # Log stderr to specified file: "wget-log-err ./err.log http://my.favorite.com"
+alias wget-accept='wget -r -A'                                                                                                                                # Download recursively, Accept types specified: "wget-accept pdf http://pdf.favorites.com"
+

@@ -1,0 +1,82 @@
+# gitinit - creates bare git (use "git add .")
+alias gitinit='git init'
+alias gitinitbare='git init --bare'
+
+# gitinitbare /some/dirproject.git - creates git repo without work local files
+alias git-redl='git fetch --all; git reset --hard origin/master'                                                                                              # Reset the whole repository with all the files clean
+alias gitrepo='git clone'                                                                                                                                     # gitrepo ~/existing/repo ~/new/repo -OR- gitrepo ssh://john@host/srv/git/some.git
+alias gitcoindex='git checkout-index -a'                                                                                                                      # Refresh wl from index
+alias gitcln='git clean -d -n'                                                                                                                                # Clean wl (dry-run), deleting unstage files also (reset --hard doesn't anymore)
+alias gitcl='git clean -d'                                                                                                                                    # Clean wl (real), deleting unstage files also (reset --hard doesn't anymore)
+alias gdf='git --no-pager diff --name-only'                                                                                                                            # Diff, producing only names that changed (provide branch name for diff between current and other branch - remote/branch also)
+alias gitdfstat='git --no-pager diff --numstat'                                                                                                                          # Diff, producing number stats
+alias gdfc='git --no-pager diff --cached'                                                                                                                         # Diff what you've staged
+alias gitcleancheckout='git checkout -f'                                                                                                                      # Throws away ALL UN-committed work, leaving new files untouched (never committed before) - and checks out CLEAN.
+alias gitconfig='git config --global'                                                                                                                         # Apply aliases or other configs globally: gitconfig alias.co checkout - sets up co for checkout
+alias gls='git ls-files'
+
+# Stash
+alias gstl='git --no-pager stash list'
+alias gsta='git stash push'                                                                                                                           # gitsavestash "Put message here to remind you of what you stashed"
+alias gstc='git stash clear'                                                                                                                         # delete stash
+alias gstaa='git stash apply'
+alias gstd='git stash drop'                                                                                                                            # Load back the stash
+
+# git stash only some files
+alias gstf='git stash -p'
+
+# cherry pick a commit
+alias gitchp='git cherry-pick'                                                                                                                                # gitchp SHA1-COMMIT - merges SHA1-COMMIT into current branch
+
+# git add some changes from file
+alias gapa='git add --patch'
+
+# squash commits interactively
+alias gsquash='git rebase -i'                                                                                                                              # gitrebasei HEAD~3 - interactively rewrite history; delete pick to remove commit, 'edit' & 'squash'
+
+# extract a file from some branch
+function gsfb {
+    local branch=$1
+    local file=$2
+    git --no-pager show ${branch}:${file}
+}
+
+alias gitrmbr='read -p "branch: " BR;git push origin :$BR'                                                                                                    # delete remote branch on origin - git push origin :remotebranch
+alias gitrmtag='read -p "tag: " BR;git push origin :refs/tags/$BR'                                                                                            # delete remote tag on origin - git push origin :remotetag
+alias gru='read -p "remote: " RM;git remote update ${RM:-origin}'                                                                                             # remote update without pulling, then git status will show appropriate info
+alias gsync='git pull --rebase origin master'                                                                                                                 # Sync with master if you have unpublished commits
+alias gck='git fetch && git --no-pager log ..origin/master'                                                                                                              # Check upstream master to see if there are any changes to bring down
+alias gspr='git-stash-pull-request'                                                                                                                           # Checkout a git bitbucket server pull request; this maps to a personal .zfuncs
+alias gph='git push fromhome master'                                                                                                                          # Git push to bitbucket.org but from home
+alias gremoteupstream='git remote add upstream'                                                                                                               # gremoteupstream URL (sets the upstream remote branch to fetch from when upstream is diff from push): 'git fetch upstream'
+alias gpushdefault='git config remote.pushdefault origin; git config push.default current'                                                                    # set the remote name to be the default to push to; then set the branch to be the 'current' one you are on
+alias gfu='git fetch upstream'
+alias gsubget='git submodule update --init --recursive'                                                                                                       # Old way (pre 1.6.5) of getting submodules on newly cloned project
+alias gclone='git clone --recursive -j 8'                                                                                                                     # clone using recursive and jobs to clone submodules                                                                                                            # New way of cloning and downloading submodules
+alias gpr='gitworkflow_gpr.sh -m johnnie.harris@imail.org -o'
+alias gprm='gitworkflow_gpr.sh -m johnnie.harris@imail.org'
+alias gpro='gitworkflow_gpr.sh -o'
+alias gprr='gitworkflow_gpr.sh'
+alias gtv='git tag -l --sort=-v:refname'
+alias gpot='git push && git push --tags'
+alias gtl='git push -q origin :refs/tags/latest-release; git tag -f -m "latest-release" latest-release'
+alias gmt='git mergetool --no-prompt'
+alias gdl='git difftool --no-prompt'
+alias gba='git --no-pager branch --all'
+alias gbD='git branch -D'
+alias gbDr='git push origin --delete'
+alias ggc='git gc --aggressive --prune=all'
+alias gcm='git checkout master'
+alias gcmsg='git commit -m'
+
+# log actual changes in a file
+alias glp='git log -p'
+
+# log changes for specific lines of file
+function gll {
+    local start=$1
+    local end=$2
+    local file=$3
+    git log -L ${start},${end}:${file}
+}
+

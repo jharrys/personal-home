@@ -20,7 +20,14 @@
 ## source platform aliases
 ##******************************************
 
-. ${ZSTARTPLATFORM}/.aliases
+# Global aliases
+if [ -d $ZSTART/aliases.d ];
+then
+    for a in $(\ls $ZSTART/aliases.d/*.linux-aliases)
+    do
+        source $a
+    done
+fi
 
 #******************************************
 # other options
