@@ -114,6 +114,8 @@ alias gsrch='git log -S'
 # diffs
 # -----------------------------------
 
+alias gd='git diff'
+
 # diff, names only
 alias gdno='gn diff --name-only' 
 
@@ -169,6 +171,12 @@ alias gbm='git branch -m'
 # delete local branch/force delete if not merged
 alias gbd='git branch -d'
 alias gbdf='git branch -D'
+
+# delete all merged branches 
+alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+
+# delete all local branches
+alias gbdl='git branch | grep -v "master" | xargs git branch -D'
 
 # delete remote branch or (git push origin :remote-branch-name)
 alias gbdr='git push origin --delete'
