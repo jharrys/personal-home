@@ -116,6 +116,10 @@ alias gsrch='git log -S'
 
 alias gd='git diff'
 
+# diff and merge gui tools
+alias gdt='git difftool -y'
+alias gmt='git mergetool -y'
+
 # diff, names only
 alias gdno='gn diff --name-only' 
 
@@ -273,13 +277,6 @@ alias gcld='git clean -d -f'
 
 # clean ignored files (remove them)
 alias gcli='git clean -X -f'
-
-# -----------------------------------
-# tooling
-# -----------------------------------
-
-alias gmt='git mergetool --no-prompt'
-alias gdl='git difftool --no-prompt'
 
 # -----------------------------------
 # my personal git functions

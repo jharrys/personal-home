@@ -1,3 +1,14 @@
 alias chromenocors='open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir'                                                      # set args for Chrome 48 and up to disable cors
 alias chromessldebug='SSLKEYLOGFILE=/Users/jharris/tmp/sslkey.txt open /Applications/Google\ Chrome.app'
 
+# See https://developers.google.com/web/updates/2017/04/headless-chrome for more on chrome headless api
+
+# screenshot
+alias chss='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --screenshot'
+
+# screenshot pdf
+alias chpdf='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --print-to-pdf'
+
+# dump innertHtml
+alias chdu='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --dump-dom'
+
