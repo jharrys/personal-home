@@ -117,8 +117,8 @@ alias gsrch='git log -S'
 alias gd='git diff'
 
 # diff and merge gui tools
-alias gdt='git difftool -y'
-alias gmt='git mergetool -y'
+alias gdt='git difftool'
+alias gmt='git mergetool --prompt'
 
 # diff, names only
 alias gdno='gn diff --name-only' 
