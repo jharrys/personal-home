@@ -121,7 +121,7 @@ alias gdt='git difftool'
 alias gmt='git mergetool --prompt'
 
 # diff, names only
-alias gdno='gn diff --name-only' 
+alias gdno='gn diff --name-status' 
 
 # diff, stats
 alias gdnum='gn diff --numstat'
