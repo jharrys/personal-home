@@ -25,6 +25,16 @@ alias startcups='sudo launchctl load -w /System/Library/LaunchDaemons/org.cups.c
 # power management
 alias batt='pmset -g batt'
 
+# add/remove Quit on Finder menu item
+alias aquit='defaults write com.apple.finder QuitMenuItem -bool true; killall Finder'
+alias rquit='defaults write com.apple.finder QuitMenuItem -bool false; killall Finder'
+
+# add recent apps/docs/net/servers to dock
+alias adock='defaults write com.apple.dock persistent-others -array-add '\''{"tile-data" = {"list-type" = 1;}; "tile-type" = "recents-tile";}'\''; killall Dock'
+
+# look at email log stream
+alias email-log='log stream --predicate '\''(process=="smtpd") || (process == "smtp")'\'' --info'
+
 # tmux
 alias tx='(unset CLICOLOR_FORCE;tmux)'
 alias tmuxcc='(unset CLICOLOR_FORCE;tmux -CC)'
