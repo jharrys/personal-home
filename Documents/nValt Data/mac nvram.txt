@@ -4,6 +4,8 @@
 * nvram variablename
 * e.g., 'nvram SystemAudioVolume' or 'nvram boot-args'
 
+# As of 2017 and newer Macs apple has shutoff the startup chime (don’t think it can be enabled)
+
 # Clear all nvram from cli
 * nvram -c
 
