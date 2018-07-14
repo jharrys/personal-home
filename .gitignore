@@ -101,6 +101,7 @@ configuration/Sublime Text 2/Backup
 .x*
 .y*
 .zcompdump*
+.zoomus
 .zsh_history
 .zsh-update
 
