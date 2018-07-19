@@ -63,7 +63,7 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 # Key bindings here
 bindkey '\e#' pound-insert                # insert '#' at beginning of line to comment out, NOTE reissuing this on a commented line will remove the # and issue the command
 
-plugins=(common-aliases git sudo gradle sbt history brew tmux osx zsh-syntax-highlighting zsh-navigation-tools scd copyfile johnnie-colored-man-pages man copydir dircycle docker shrink-path)
+plugins=(common-aliases git sudo gradle sbt history brew tmux osx zsh-syntax-highlighting zsh-navigation-tools scd copyfile johnnie-colored-man-pages man copydir dircycle docker shrink-path rand-quote)
 
 # Environment settings
 
