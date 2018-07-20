@@ -13,6 +13,7 @@ rubygems
 #
 # Miscellaneous
 #
+.%*.png
 .CFUserTextEncoding
 .DCOPserver*
 .*DS_Store*
