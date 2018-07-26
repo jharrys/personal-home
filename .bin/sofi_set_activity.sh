@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# 2018-07-01
+# by Johnnie H.
+# Assigns then completes an activity given its ID.
+
 [ $# -lt 2 ] && echo "usage: $0 HOST ACTIVITY_ID" && exit 1
 
 host=$1
