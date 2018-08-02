@@ -150,3 +150,4 @@ ZSH_HIGHLIGHT_STYLES[builtin]='fg=blue'
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bg=red')
 ZSH_HIGHLIGHT_PATTERNS+=('sudo *' 'fg=white,bg=red')
 ZSH_HIGHLIGHT_PATTERNS+=('ssh *' 'fg=white,bg=blue')
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
