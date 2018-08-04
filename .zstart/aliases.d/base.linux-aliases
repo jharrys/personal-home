@@ -22,6 +22,10 @@ alias dli='dnf localinstall -y --nogpgcheck'
 # Locate database
 alias updatelocate='sudo updatedb'
 
-# CIFS/SMB Mounts
-alias mtnexus='sudo mkdir -p /mnt/nexus;sudo mount -t cifs //sasamba.co.ihc.com/lpjharri /mnt/nexus -o user=CO\\lpjharri,uid=lpjharri,gid=webdev,file_mode=0770,dir_mode=0770;cd /mnt/nexus'
-alias umtnexus='sudo umount /mnt/nexus'
+# Java
+alias jinfo='java -XX:+PrintFlagsFinal -version'
+alias jmaxheap='jinfo |grep HeapSize'
+
+#Tmux
+alias tcc='tmux -CC'
+alias tcca='tcc attach'
