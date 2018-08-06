@@ -8413,7 +8413,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -8480,17 +8480,17 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1161 150 445 416 0 0 1680 1027 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
-	<string>592 449 735 382 0 0 3440 1440 </string>
+	<string>207 283 735 382 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 142 606 469 0 0 1680 1050 </string>
+	<string>710 237 606 469 0 0 3440 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>981 218 796 486 0 0 3440 1440 </string>
+	<string>328 168 918 485 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 466 592 584 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 803 3440 637 0 0 3440 1440 </string>
+	<string>0 621 1680 429 0 0 1680 1050 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -10591,7 +10591,7 @@
 			<key>HotKey Window Animates</key>
 			<true/>
 			<key>HotKey Window AutoHides</key>
-			<false/>
+			<true/>
 			<key>HotKey Window Dock Click Action</key>
 			<integer>2</integer>
 			<key>HotKey Window Floats</key>
@@ -11433,7 +11433,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-30T21:22:09Z</date>
+	<date>2018-08-03T22:24:46Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -11478,7 +11478,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1521950976</real>
+	<real>1533166208</real>
 	<key>URLHandlersByGuid</key>
 	<dict>
 		<key>ssh</key>
