@@ -9,6 +9,7 @@ alias dpri='docker image prune'
 alias dprc='docker container prune'
 alias dprv='docker volume prune'
 alias dprn='docker network prune'
+alias dstat='docker stats --no-stream --format "{{.Name}}\t{{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}" |column -t |sort -h --key=4.1'
 
 # Docker compose
 alias dc=docker-compose

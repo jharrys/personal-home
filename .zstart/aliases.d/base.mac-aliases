@@ -114,3 +114,6 @@ alias sys_resetdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponde
 alias sys_sleep='sudo shutdown -s'
 alias sys_machine='sysctl -n machdep.cpu.brand_string'
 
+# Suffix aliases
+alias -s html=google-chrome
+
