@@ -85,6 +85,7 @@ export GIT_EDITOR='vim -f'
 
 # Less options
 export LESS="-S -n -r"
+export LESSOPEN="|lesspipe.sh %s"
 
 # SET options
 unsetopt INC_APPEND_HISTORY
