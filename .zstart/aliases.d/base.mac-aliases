@@ -56,6 +56,7 @@ alias updatelocate='sudo /usr/libexec/locate.updatedb'                          
 alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'                                                                                             # setup the jdk home environment for 1.7
 alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); export PATH=$JAVA_HOME/bin:$PATH'                                                           # setup the jdk home environment for 1.8
 alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 9.0); export PATH=$JAVA_HOME/bin:$PATH'                                                           # setup the jdk home environment for 1.8
+alias setJdk11='export JAVA_HOME=$(/usr/libexec/java_home -v 11.0); export PATH=$JAVA_HOME/bin:$PATH'                                                           # setup the jdk home environment for 1.8
 
 # chflags - changes file flags - using it here to unhide hidden directories
 alias unhide='chflags nohidden'
