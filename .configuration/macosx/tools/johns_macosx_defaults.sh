@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Enable at/atq/atrm/batch; man atrun
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
+
 # Show icons for drives, servers and removable media on desktop by default
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 
