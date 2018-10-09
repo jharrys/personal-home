@@ -33,7 +33,8 @@ alias rquit='defaults write com.apple.finder QuitMenuItem -bool false; killall F
 alias adock='defaults write com.apple.dock persistent-others -array-add '\''{"tile-data" = {"list-type" = 1;}; "tile-type" = "recents-tile";}'\''; killall Dock'
 
 # look at email log stream
-alias email-log='log stream --predicate '\''(process=="smtpd") || (process == "smtp")'\'' --info'
+# mac os x uses postfix natively; man postfix for all other cmds; postcat, postconf, postqueue (mailq)
+alias email-log='log stream --predicate '\''(process=="master") || (process=="qmgr") || (process=="pickup") || (process=="cleanup") || (process=="smtpd") || (process == "smtp")'\'' --level debug'
 
 # tmux
 alias tx='(unset CLICOLOR_FORCE;tmux)'

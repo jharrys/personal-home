@@ -135,3 +135,14 @@ alias rcll='rc ls -al -jj -h'
 alias rcnotmux='rc touch /home/jharris/tmp/notmux -jj -h'
 alias rcrmnotmux='rc rm -f /home/jharris/tmp/notmux -jj -h'
 
+# cool cal functions
+ycal ()
+{
+cal -y | GREP_COLORS="mt=07;32" \grep --color=always -EC 6 " $1 |^$1 " | GREP_COLORS="sl=11;33:mt=07;33" \grep --color=always -B2 -A6 '[A-Z][a-z] '
+}
+
+mcal ()
+{
+cal -m $1 | GREP_COLORS="mt=07;32" \grep --color=always -EC 6 " $2 |^$2 " | GREP_COLORS="sl=11;33:mt=07;33" \grep --color=always -B2 -A6 '[A-Z][a-z] '
+}
+
