@@ -84,7 +84,7 @@ export EDITOR='vim'
 export GIT_EDITOR='vim -f'
 
 # Less options
-export LESS="-S -n -r"
+export LESS="-S -N -R"
 export LESSOPEN="|lesspipe.sh %s"
 
 # SET options
