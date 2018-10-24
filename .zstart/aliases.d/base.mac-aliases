@@ -119,3 +119,8 @@ alias sys_machine='sysctl -n machdep.cpu.brand_string'
 # Suffix aliases
 alias -s html=google-chrome
 
+# directory services aliases
+alias dusers='dscl . -list /Users'
+alias dgroups='dscl . -list /Groups'
+alias dgrplist='dscacheutil -q group -a name' #dscl . -read /Groups/admin
+
