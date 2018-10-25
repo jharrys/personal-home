@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'Raimondi/delimitMate'
   Plug 'davidosomething/vim-jsdoc'
+  Plug 'udalov/kotlin-vim'
 
 call plug#end()
 
