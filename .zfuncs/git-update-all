@@ -22,7 +22,7 @@ trap "cd $oldpwd; return" TERM
 
 cd $1
 
-for x in $(ls)
+for x in $(find . -type d -depth 1)
 do
   cd $x
   echo $x
