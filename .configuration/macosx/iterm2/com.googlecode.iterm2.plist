@@ -8418,7 +8418,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~/Library/Preferences/IntelliJIdea2018.2/scratches</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -8496,7 +8496,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 142 606 469 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>83 334 918 512 0 0 3440 1440 </string>
+	<string>316 105 918 514 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 466 592 584 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -9359,6 +9359,25 @@
 					<string>very_high</string>
 					<key>regex</key>
 					<string>\btelnet:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\b</string>
+				</dict>
+				<dict>
+					<key>actions</key>
+					<array>
+						<dict>
+							<key>action</key>
+							<integer>1</integer>
+							<key>parameter</key>
+							<string>https://sofiinc.atlassian.net/browse/\0</string>
+							<key>title</key>
+							<string>Open JIRA ticket</string>
+						</dict>
+					</array>
+					<key>notes</key>
+					<string>jira text</string>
+					<key>precision</key>
+					<string>very_high</string>
+					<key>regex</key>
+					<string>\b(sofi|SOFI)\b-(\d+)</string>
 				</dict>
 			</array>
 			<key>Sync Title</key>
@@ -11180,6 +11199,25 @@
 					<key>regex</key>
 					<string>\btelnet:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\b</string>
 				</dict>
+				<dict>
+					<key>actions</key>
+					<array>
+						<dict>
+							<key>action</key>
+							<integer>1</integer>
+							<key>parameter</key>
+							<string>https://sofiinc.atlassian.net/browse/\0</string>
+							<key>title</key>
+							<string>Open JIRA ticket</string>
+						</dict>
+					</array>
+					<key>notes</key>
+					<string>jira text</string>
+					<key>precision</key>
+					<string>very_high</string>
+					<key>regex</key>
+					<string>\b(sofi|SOFI)\b-(\d+)</string>
+				</dict>
 			</array>
 			<key>Space</key>
 			<integer>-1</integer>
@@ -11271,6 +11309,8 @@
 	<true/>
 	<key>NoSyncSuppressBroadcastInputWarning_selection</key>
 	<integer>0</integer>
+	<key>NoSyncSuppressCaptureOutputToolNotVisibleWarning</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>528059947.72699797</real>
 	<key>NoSyncTipsToNotShow</key>
@@ -11445,7 +11485,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-19T23:41:49Z</date>
+	<date>2018-11-15T19:03:07Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -21204,7 +21244,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.1beta5</string>
+	<string>3.2.6beta3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
