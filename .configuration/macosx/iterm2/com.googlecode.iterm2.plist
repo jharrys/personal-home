@@ -46,6 +46,17 @@
 	<false/>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>echo "git checkout feature/sofi-62441-activities-pact-poc"</string>
+		<string>echo "git checkout feature/sofi-57113-share-test-util-src"</string>
+		<string>echo "git checkout feature/sofi-61738-initiate-prefund-npe"</string>
+		<string>echo "git status"</string>
+		<string>cd /Users/jharris/git/student-loan-consumers;git status</string>
+		<string>cd /Users/jharris/git/student-loan-consumers;git ls</string>
+		<string>osascript -e 'do shell script "git status"'</string>
+		<string>osascript -e 'do shell script "echo blahhhh"'</string>
+		<string>osascript -e 'do shell script "ls -al"'</string>
+		<string>osascript -e 'do shell script echo khk"'</string>
+		<string>osascript -e 'do shell script "git log"'</string>
 		<string></string>
 		<string>/Users/lpjharri/tmp/iterm2-send-zmodem.sh</string>
 		<string>/Users/lpjharri/tmp/t.py</string>
@@ -8496,11 +8507,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 142 606 469 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>316 105 918 514 0 0 1680 1050 </string>
+	<string>594 301 1018 447 0 0 3440 1440 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 466 592 584 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 646 1680 404 0 0 1680 1050 </string>
+	<string>0 246 1680 804 0 0 1680 1050 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -11218,6 +11229,25 @@
 					<key>regex</key>
 					<string>\b(sofi|SOFI)\b-(\d+)</string>
 				</dict>
+				<dict>
+					<key>actions</key>
+					<array>
+						<dict>
+							<key>action</key>
+							<integer>3</integer>
+							<key>parameter</key>
+							<string>echo "git checkout \0"</string>
+							<key>title</key>
+							<string>gco branch</string>
+						</dict>
+					</array>
+					<key>notes</key>
+					<string>git feature branch</string>
+					<key>precision</key>
+					<string>high</string>
+					<key>regex</key>
+					<string>(\bfeature\b/.*)</string>
+				</dict>
 			</array>
 			<key>Space</key>
 			<integer>-1</integer>
@@ -11485,7 +11515,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-15T19:03:07Z</date>
+	<date>2018-11-20T01:28:46Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
