@@ -67,6 +67,7 @@ configuration/Sublime Text 2/Backup
 .l*
 # .m* - for .mintty
 .m2
+.markdownNavigator
 .mcop
 .metadata
 .mix
