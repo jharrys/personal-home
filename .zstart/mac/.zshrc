@@ -73,7 +73,7 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 # additional path settings
 #******************************************
 
-export PATH=~/.bin:/usr/local/sbin:/usr/local/opt/python@2/libexec/bin:/usr/local/bin:$JAVA_HOME/bin:$PATH
+export PATH=$PATH:/usr/local/opt/python@2/libexec/bin:$JAVA_HOME/bin
 
 
 #******************************************

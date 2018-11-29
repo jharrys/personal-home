@@ -31,20 +31,20 @@ alias lld='ls -Alh |grep ^d'                                                    
 alias lls='ls -lhSr'                                                                                                                                          # list detail by size reverse order
 alias mv='mv -i'
 alias cp='cp -i'
-alias vi='vim'
+alias vi='/usr/local/bin/vim'
 alias getw='wget -N -r -nH -nd --no-parent'
 
 ###### Edit startup files ######
 alias cdmz='cd $ZSTART'
 alias cdpz='cd $ZDOTDIR'
 # edit main zshrc
-alias emz='vim ${ZSTART}/zshrc'
+alias emz='vi ${ZSTART}/zshrc'
 # edit platform zshrc
-alias epz='vim ${ZDOTDIR}/.zshrc'
+alias epz='vi ${ZDOTDIR}/.zshrc'
 # edit main aliases
-alias ema='vim ${ZSTART}/aliases'
+alias ema='vi ${ZSTART}/aliases'
 # edit platform aliases
-alias epa='vim ${ZDOTDIR}/.aliases'
+alias epa='vi ${ZDOTDIR}/.aliases'
 
 ###### Find ######
 alias findnewer='find . -newerct'                                                                                                                             # findnewerthan '5 minutes ago'

@@ -71,7 +71,7 @@ plugins=(common-aliases copydir copyfile dircycle docker git history osx urltool
 source ~/.bin/colors.sh
 
 # PATH variable
-export PATH=/usr/local/sbin:$HOME/.bin:/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/sbin:$HOME/.bin
 
 # oh-my-zsh variable
 source $ZSH/oh-my-zsh.sh
@@ -79,9 +79,9 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-export EDITOR='vim'
+export EDITOR='/usr/local/bin/vim'
 
-export GIT_EDITOR='vim -f'
+export GIT_EDITOR='/usr/local/bin/vim -f'
 
 # Less options
 export LESS="-S -R"
