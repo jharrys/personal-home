@@ -192,6 +192,8 @@ bindkey -M isearch " " magic-space
 # End setup special type of alisases
 # ----------------------------------
 
+# SoFi Kraken
+export KRAKEN_TOKEN=25593e3f-ae4b-4c68-8d80-f5f3cf4e63a9
 
 # Setup my ZSH syntax highlighting options
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern) # by default only main is turned on
