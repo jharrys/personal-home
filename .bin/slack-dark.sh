@@ -64,18 +64,18 @@ if [ "$reset" = "true" ]; then
     curl 'https://raw.githubusercontent.com/valiander/slackdark/master/reset' > $filebackup
   fi
 
-  cp $filebackup $file
+  \cp $filebackup $file
 elif [ "$darken" = "true" ]; then
   # This command will quit slack and overwrite the file needed to change your css entries.
   # This will also return your slack app back to normal, aside from the theme changes.
   # To set the dark theme, paste this into your command prompt:
   osascript -e 'quit app "slack"'
-  if [ "$update" = "true" ]; then
-    cp $filebackup $filedark
+  if [ ! -e $filedark -o "$update" = "true" ]; then
+    \cp $filebackup $filedark
     curl 'https://raw.githubusercontent.com/valiander/slackdark/master/darktheme' >> $filedark
   fi
 
-  cp $filedark $file
+  \cp $filedark $file
 
   # This is going to quit slack and append the changes to the end of the file.
   # Its important to quit and restart slack every time we change this file so that the changes take effect.
