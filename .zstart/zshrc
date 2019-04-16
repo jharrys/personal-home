@@ -195,6 +195,15 @@ bindkey -M isearch " " magic-space
 # SoFi Kraken
 export KRAKEN_TOKEN=25593e3f-ae4b-4c68-8d80-f5f3cf4e63a9
 
+# ----------------------------------
+# PG user info needed for the perf-test app
+# ----------------------------------
+export PGUSER=
+export PGHOST=localhost
+export PGPASSWORD=
+export PGDATABASE=sofi_performance
+export PGPORT=15900
+
 # Setup my ZSH syntax highlighting options
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern) # by default only main is turned on
 typeset -A ZSH_HIGHLIGHT_STYLES
