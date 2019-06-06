@@ -79,8 +79,8 @@ export PATH=$PATH:/usr/local/opt/python@2/libexec/bin:$JAVA_HOME/bin
 #******************************************
 # docker: check if docker-machine is up (using VirtualBox in headless mode)
 #******************************************
-DMPID=$(pgrep -f sofi)
-[ $? -eq 0 ] && eval $(docker-machine env sofi)
+#DMPID=$(pgrep -f sofi)
+#[ $? -eq 0 ] && eval $(docker-machine env sofi)
 
 #******************************************
 # source platform aliases
