@@ -101,6 +101,7 @@ configuration/Sublime Text 2/Backup
 .vimbackup
 .viminfo
 .vnc
+.vscode
 .w*
 .x*
 .y*
