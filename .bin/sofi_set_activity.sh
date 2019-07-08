@@ -25,8 +25,8 @@ function run() {
   fi
 }
 
-checkout_cmd="curl -s -X GET http://${host}:9019/w/api/v1/activity/checkoutActivity/bbdab2f76d0fbf8a6c860fda9b681fd159937cbe0acfe76d6a213beeb35b2f24/${activity_id}"
-complete_cmd="curl -s -X POST http://${host}:9019/w/api/v1/activity/completeActivity/bbdab2f76d0fbf8a6c860fda9b681fd159937cbe0acfe76d6a213beeb35b2f24/3236/${activity_id}/CMPLT"
+checkout_cmd="curl -s -X GET http://${host}:9020/w/api/v1/activity/checkoutActivity/bbdab2f76d0fbf8a6c860fda9b681fd159937cbe0acfe76d6a213beeb35b2f24/${activity_id}"
+complete_cmd="curl -s -X POST http://${host}:9020/w/api/v1/activity/completeActivity/bbdab2f76d0fbf8a6c860fda9b681fd159937cbe0acfe76d6a213beeb35b2f24/3236/${activity_id}/CMPLT"
 
 run "$checkout_cmd" "checkout"
 echo "$activity_id checked out"
