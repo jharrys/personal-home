@@ -30,9 +30,9 @@ ssh ${host} "cat > ${target_dir}/.git/config" << EOF
   precomposeunicode = true
   commitGraph = true
 [remote "origin"]
-  url = jaxis5@bitbucket.org:jaxis5/vm_home.git
+  url = git@gitlab.com:jharris-sofi/vm_home.git
   fetch = +refs/heads/*:refs/remotes/origin/*
-  pushurl = jaxis5@bitbucket.org:jaxis5/vm_home.git
+  pushurl = git@gitlab.com:jharris-sofi/vm_home.git
 
 [branch "master"]
   remote = origin
