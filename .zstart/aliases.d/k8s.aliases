@@ -1,0 +1,15 @@
+# define functions
+kc_find_dependents() {
+    # looks for services that are dependent on given ($1) service
+    # as opposed to kubectl logs deps - which looks for dependencies
+    # TODO: make it handle mac vs linux grep versions
+    grep -RPzl "(?s)STARTUP_DEPENDENCIES\n *value\:[^\n]*${1}" ~/sofi-kubernetes/deployments/*
+}
+alias kc="kubectl"
+alias kcs="kubectl sofi"
+alias kbu="kustomize build"
+alias kapp="kustomize build | kubectl apply -f -"
+alias unready="watch -n 1 \"kubectl get pods | awk '{ split(\\\$2,a,\\\"/\\\"); if (a[1] != a[2]) { print \\\$0 }; }' | grep -v 'Completed'\""
+alias kcsdp='kubectl sofi delete pod'
+alias kcsdep='kubectl sofi logs deps'
+alias kcsddp='kc_find_dependents'
