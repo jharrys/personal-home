@@ -71,7 +71,7 @@ plugins=(common-aliases copydir copyfile dircycle docker git history osx urltool
 source ~/.bin/colors.sh
 
 # PATH variable
-export PATH=$PATH:/usr/local/sbin:$HOME/.bin
+export PATH=/Users/jharris/git/sofi-kubernetes/scripts/server-helpers/k8s-alias:$PATH:/usr/local/sbin:$HOME/.bin
 
 # oh-my-zsh variable
 source $ZSH/oh-my-zsh.sh
