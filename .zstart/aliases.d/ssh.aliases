@@ -1,0 +1,4 @@
+# see if tunnels exist for client (forward tunnels) - run from client to see the listen port¬
+alias tunnf='sudo lsof -i -n -P |egrep "\<ssh\>"'
+# see if tunnels exist for server (reverse tunnels) - run on remote to see the listen port¬
+alias tunnr='sudo lsof -i -n -P |egrep "\<sshd\>"'
