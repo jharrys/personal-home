@@ -17,6 +17,3 @@ alias regconsul='~/git/dev-compose-env/consul-register-service.sh'
 alias dfo=docker-forward
 alias dcr='perl ~/git/sofi-infra/bamboo/scripts/docker.gradle.build.pl'
 
-# SoFi Kraken
-alias cdk='cd ~/git/sofi-kubernetes'
-

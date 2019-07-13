@@ -5,6 +5,16 @@ kc_find_dependents() {
     # TODO: make it handle mac vs linux grep versions
     grep -RPzl "(?s)STARTUP_DEPENDENCIES\n *value\:[^\n]*${1}" ~/sofi-kubernetes/deployments/*
 }
+cds() {
+    # cd to overlays directly - e.g., cds stage or cds base
+    dir=$(unset CLICOLOR_FORCE; $HOME/git/sofi-kubernetes/scripts/server-helpers/cds.sh $@)
+    cd $dir
+}
+cdk() {
+    # cd between services in deployment - e.g., cdk activities
+    dir=$(unset CLICOLOR_FORCE; $HOME/git/sofi-kubernetes/scripts/server-helpers/cdk.sh $@)
+    cd $dir
+}
 alias kc="kubectl"
 alias kcs="kubectl sofi"
 alias kbu="kustomize build"
