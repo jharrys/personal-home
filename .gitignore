@@ -40,6 +40,7 @@ configuration/Sublime Text 2/Backup
 .bzr*
 .cache
 .config/*
+.cpan/
 .cups
 .dbvis/*
 .directory
