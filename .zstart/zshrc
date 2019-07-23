@@ -142,6 +142,12 @@ unset GREP_OPTIONS
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# it2git - placed after .iterm2_shell_integration.zsh
+function iterm2_print_user_vars() {
+    it2git
+}
+
+
 # ----------------------------------
 # Begin setup special type of alisases
 #  Placed near the end so that the binding of
