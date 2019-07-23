@@ -59,10 +59,6 @@ function parse-dirs {
 
 alias galias='cat ~/.zstart/aliases.d/git.aliases'
 alias gn='git --no-pager'
-alias gco='git checkout'
-
-# checkout master
-alias gcom='git checkout master'
 
 # throw away local changes when checking out
 alias gcof='git checkout -f'
@@ -77,24 +73,12 @@ alias ginit='git init'
 # gitinitbare /some/dirproject.git - creates git repo without work local files
 alias ginitbare='git init --bare'
 
-# clone repo with submodules - do it recursively
-alias gclone='git clone --recursive -j 8' 
-
 # -----------------------------------
 # pull & fetches
 # -----------------------------------
 
-alias gl='git pull'
-
 # Reset the whole repository with all the files clean
 alias glforce='git fetch --all; git reset --hard origin/master'
-
-# do a pull by rebase (not merge)
-alias glr='git pull --rebase'
-
-# fetch everything and prune remote branches that no longer exist remotely
-alias gfa='git fetch --all --prune'
-alias gfu='git fetch upstream'
 
 # -----------------------------------
 # commits
@@ -114,20 +98,14 @@ alias gsrch='git log -S'
 # diffs
 # -----------------------------------
 
-alias gd='git diff'
-
 # diff and merge gui tools
-alias gdt='git difftool'
-alias gmt='git mergetool --prompt'
+alias gdtool='git difftool'
 
 # diff, names only
-alias gdno='gn diff --name-status' 
+alias gdno='gn diff --name-status'
 
 # diff, stats
 alias gdnum='gn diff --numstat'
-
-# diff of staging
-alias gdc='gn diff --cached' 
 
 # -----------------------------------
 # reports
@@ -143,7 +121,7 @@ alias gpfc='git ls-tree --name-only -r'
 alias gpconf='git diff --name-only --diff-filter=U'
 
 # print all files changed in commit "gpchc sha1"
-alias gpchc='git diff-tree --no-commit-id --name-only -r'
+alias gdt='git diff-tree --no-commit-id --name-only -r'
 
 # print changes to a file "gpfile filename"//if "gpfile" then will show changes to all
 alias gpfile='git log -p'
@@ -176,7 +154,7 @@ alias gbm='git branch -m'
 alias gbd='git branch -d'
 alias gbdf='git branch -D'
 
-# delete all merged branches 
+# delete all merged branches
 alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
 
 # delete all local branches
@@ -265,7 +243,7 @@ alias gtshow='git describe --tags --abbrev=0'
 # -----------------------------------
 
 # update all submodules (aka=git submodule update --init --recursive)
-alias gsubpl='git submodule foreach git pull' 
+alias gsubpl='git submodule foreach git pull'
 
 # -----------------------------------
 # gc, fc, cleaning
