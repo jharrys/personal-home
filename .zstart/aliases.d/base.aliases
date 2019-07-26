@@ -146,3 +146,16 @@ mcal ()
 cal -m $1 | GREP_COLORS="mt=07;32" \grep --color=always -EC 6 " $2 |^$2 " | GREP_COLORS="sl=11;33:mt=07;33" \grep --color=always -B2 -A6 '[A-Z][a-z] '
 }
 
+# lsof
+alias loi='lsof -i -n -P' # show all open i4 and i6 ports without port or dns resolution
+alias lod='lsof +D' # recurse through subdirectories
+alias lon='lsof -c' # search by name; can have multiple -c
+alias lou='lsof -u' # search user; can do \^jharris to find not jharris
+alias lop='lsof -p' # search by pid
+# -t tells lsof to output only pids
+alias loit='lsof -t -i -n -P'
+alias lodt='lsof -t +D'
+alias lont='lsof -t -c'
+alias lout='lsof -t -u'
+alias lopt='lsof -t -p'
+alias loip='lsof -i :' # look for port
