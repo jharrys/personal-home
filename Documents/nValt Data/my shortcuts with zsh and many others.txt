@@ -56,6 +56,24 @@
 
 |Shortcut| |Description| 
 |:----- |-----|:-----|
+|!:2<tab>||pull and expand 3rd arg from last command|
+|⌥-L||execute ls|
+|⌥-A||execute current command line and show command with cursor positioned same in next line|
+|⌥-Q||clear curr cmd, execute new cmd you give, bring back cleared cmd|
+|^-O||if you went back in history, then this runs cmd and calls next cmd in history|
+|⌥-#||toggle comment of current cmd|
+|^-U,^-Y||clear cmd into copy ring, paste it back|
+|⌥-P||call last cmd run|
+|⌥-D||delete word after cursor|
+|⌥-B||move backward one word|
+|⌥-F||move forward one word|
+|⌥-U||transform word after cursor to uppercase|
+|⌥-L||transform word after cursor to lowercase|
+|⌥-C||capital letter cursor is under|
+|⌥-'||quote line|
+|⌃-_||undo last change|
+|⌃-W||delete word in front|
+|⌃-U||clear whole line|
 |n-options||display all available zsh options|
 |n-kill||display all processes to be killed|
 |n-history||display history|
@@ -65,18 +83,7 @@
 |n-functions||display all available functions|
 |n-panelize 'cmd'||display cmd output in a panel|
 |!abc:p||print last command starting with 'abc'|
-|⌃-_||undo last change|
-|⌃-W||delete word in front|
-|⌃-U||clear whole line|
 |bindkey||list all bindings in zsh|
-|⌥-A||execute current command line and show command with cursor positioned same in next line|
-|⌥-D||delete word after cursor|
-|⌥-B||move backward one word|
-|⌥-F||move forward one word|
-|⌥-U||transform word after cursor to uppercase|
-|⌥-L||transform word after cursor to lowercase|
-|⌥-C||capital letter cursor is under|
-|⌥-'||quote line|
 |x <UP>||shows history for commands starting with 'x'|
 |kill x⇥||shows ps info for things starting with 'x'|
 |ls -⇥||shows list of possible options for 'ls'|
