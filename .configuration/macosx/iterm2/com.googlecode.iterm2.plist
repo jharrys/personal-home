@@ -8440,7 +8440,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/tmp</string>
+	<string>~/Google Drive/Wallpaper/regular</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -8522,7 +8522,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 466 592 584 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 742 3440 698 0 0 3440 1440 </string>
+	<string>0 592 1680 458 0 0 1680 1050 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -8700,7 +8700,9 @@
 			<key>Background Image Is Tiled</key>
 			<false/>
 			<key>Background Image Location</key>
-			<string>/Users/lpjharri/Google Drive/Wallpaper/regular/black-honeycomb-wallpaper.jpg</string>
+			<string>/Users/jharris/Google Drive/Wallpaper/regular/3d-abstract-wallpaper-desktop-background-For-desktop-Wallpaper.jpg</string>
+			<key>Background Image Mode</key>
+			<integer>2</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -8714,10 +8716,20 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Badge Font</key>
+			<string>Helvetica-Bold</string>
+			<key>Badge Max Height</key>
+			<real>0.33000000000000002</real>
+			<key>Badge Max Width</key>
+			<real>0.34999999999999998</real>
+			<key>Badge Right Margin</key>
+			<real>5</real>
 			<key>Badge Text</key>
 			<string>\(user.kraken)</string>
+			<key>Badge Top Margin</key>
+			<real>0.0</real>
 			<key>Blend</key>
-			<real>0.32407537545913301</real>
+			<real>0.36261939124521547</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -8805,6 +8817,8 @@
 			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -9552,6 +9566,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Title Components</key>
+			<integer>513</integer>
 			<key>Transparency</key>
 			<real>0.3402125634517767</real>
 			<key>Triggers</key>
@@ -12186,12 +12202,13 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.0beta10</string>
-		<string>3.3.0beta13</string>
-		<string>3.3.0beta16</string>
-		<string>3.3.0beta12</string>
-		<string>3.3.0beta15</string>
 		<string>3.3.0beta11</string>
+		<string>3.3.0beta16</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.0beta10</string>
+		<string>3.3.0beta15</string>
+		<string>3.3.0</string>
+		<string>3.3.0beta12</string>
 	</array>
 	<key>NoSyncAutoBurialReveal</key>
 	<true/>
@@ -12216,9 +12233,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {3440, 1440}}</string>
+		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{0, 776}</string>
+		<string>{269, 595}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -12229,7 +12246,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>576042598.73331404</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>137</integer>
+	<integer>142</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -13335,7 +13352,7 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
-	<false/>
+	<true/>
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>RightOption</key>
@@ -13349,7 +13366,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-01T17:09:49Z</date>
+	<date>2019-08-03T03:17:39Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -23123,7 +23140,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.0beta16</string>
+	<string>3.3.0</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
