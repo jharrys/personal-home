@@ -8512,17 +8512,19 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1161 150 445 416 0 0 1680 1027 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
-	<string>1480 448 735 382 0 0 3440 1440 </string>
+	<string>1795 992 735 382 0 0 3440 1440 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>1520 983 400 129 0 0 3440 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1410 786 620 392 0 0 3440 1440 </string>
+	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 110 599 501 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>530 174 918 452 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
-	<string>127 466 592 584 0 0 1680 1050 </string>
+	<string>332 856 592 584 0 0 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 592 1680 458 0 0 1680 1050 </string>
+	<string>0 803 3440 637 0 0 3440 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -8700,7 +8702,7 @@
 			<key>Background Image Is Tiled</key>
 			<false/>
 			<key>Background Image Location</key>
-			<string>/Users/jharris/Google Drive/Wallpaper/regular/3d-abstract-wallpaper-desktop-background-For-desktop-Wallpaper.jpg</string>
+			<string>/Users/jharris/Google Drive/Wallpaper/regular/pattern_light_shadow_texture_55272_1920x1080.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -8729,7 +8731,7 @@
 			<key>Badge Top Margin</key>
 			<real>0.0</real>
 			<key>Blend</key>
-			<real>0.36261939124521547</real>
+			<real>0.81558330877098861</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -9234,7 +9236,7 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
-			<true/>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -9569,7 +9571,7 @@
 			<key>Title Components</key>
 			<integer>513</integer>
 			<key>Transparency</key>
-			<real>0.3402125634517767</real>
+			<real>0.52675483819796964</real>
 			<key>Triggers</key>
 			<array>
 				<dict>
@@ -9780,6 +9782,8 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
+			<key>Background Image Mode</key>
+			<integer>2</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -9796,7 +9800,7 @@
 			<key>Badge Text</key>
 			<string></string>
 			<key>Blend</key>
-			<real>0.5</real>
+			<real>0.60379147873711336</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -10331,7 +10335,7 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
-			<true/>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -10870,7 +10874,7 @@
 			<key>Thin Strokes</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.29999999999999999</real>
+			<real>0.28831099302030455</real>
 			<key>Triggers</key>
 			<array>
 				<dict>
@@ -12202,13 +12206,23 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.0beta11</string>
-		<string>3.3.0beta16</string>
-		<string>3.3.0beta13</string>
+		<string>3.3.3beta1</string>
 		<string>3.3.0beta10</string>
-		<string>3.3.0beta15</string>
-		<string>3.3.0</string>
+		<string>3.3.0beta11</string>
+		<string>3.3.2beta1</string>
 		<string>3.3.0beta12</string>
+		<string>3.3.3</string>
+		<string>3.3.1</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.0beta15</string>
+		<string>3.3.3beta2</string>
+		<string>3.3.0beta16</string>
+		<string>3.3.5beta1</string>
+		<string>3.3.4</string>
+		<string>3.3.2</string>
+		<string>3.3.2beta2</string>
+		<string>3.3.4beta1</string>
+		<string>3.3.0</string>
 	</array>
 	<key>NoSyncAutoBurialReveal</key>
 	<true/>
@@ -12233,9 +12247,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{0, 0}, {3440, 1440}}</string>
 		<key>topLeft</key>
-		<string>{269, 595}</string>
+		<string>{2246, 948}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -12244,9 +12258,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>4CA968D1-CFCF-4EE0-A570-2C2220AFACC7</string>
 	<key>NoSyncLastTipTime</key>
-	<real>576042598.73331404</real>
+	<real>588530831.38400996</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>142</integer>
+	<integer>228</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -12627,6 +12641,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.currentSession.termid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>id</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -12724,6 +12746,14 @@
 				<true/>
 				<key>name</key>
 				<string>currentTab.currentSession.user.gitPushCount</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>number</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -12908,17 +12938,17 @@
 		<array>
 			<dict>
 				<key>isTerminal</key>
-				<false/>
+				<true/>
 				<key>name</key>
-				<string>currentSession</string>
+				<string>currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
-				<integer>1</integer>
+				<integer>0</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession</string>
+				<string>currentSession.user.gitDirty</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -13132,17 +13162,17 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
+				<false/>
 				<key>name</key>
-				<string>currentSession.terminalWindowName</string>
+				<string>currentSession</string>
 				<key>nonterminalContext</key>
-				<integer>0</integer>
+				<integer>1</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.user.gitDirty</string>
+				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -13278,7 +13308,10 @@
 		<string>0075</string>
 		<string>0076</string>
 		<string>0077</string>
+		<string>0078</string>
 	</array>
+	<key>NoSyncTurnOffBracketedPasteOnHostChange</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -13366,9 +13399,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-03T03:17:39Z</date>
+	<date>2019-09-27T16:45:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUSkippedVersion</key>
+	<string>3.3.5beta2</string>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -13425,7 +13460,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1555990144</real>
+	<real>1569271680</real>
 	<key>URLHandlersByGuid</key>
 	<dict>
 		<key>ssh</key>
@@ -23140,7 +23175,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.0</string>
+	<string>3.3.4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
