@@ -231,3 +231,9 @@ VALUES (2049, 'MORT', '1.0', NULL, NULL, 35059, NULL, NULL, NULL, NULL, NULL, NU
         0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-09-10 17:45:42', NULL, 1, NULL, NULL, NULL, NULL,
         NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 300000.00, NULL, NULL, NULL, NULL, 'Approve', NULL,
         'then@test.com', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, NULL);
+
+-- for resetting customer partyId #
+SELECT setval(pg_get_serial_sequence('customers.party', 'party_id'), 2500000) FROM party limit 1;
+
+-- make sure next val gives correct #
+select nextval('party_party_id_seq'::regclass);
