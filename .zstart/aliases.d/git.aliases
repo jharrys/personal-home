@@ -267,3 +267,7 @@ alias gprr='gitworkflow_gpr.sh'
 
 # Checkout a git bitbucket server pull request; this maps to a personal .zfuncs
 alias gspr='git-stash-pull-request'
+
+# search git log for specific file
+# example: git log -all --full-history -- "**/thefile.*"
+alias ghfile='git log --all --full-history -- '
