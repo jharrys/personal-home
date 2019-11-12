@@ -1,0 +1,45 @@
+Host *
+# Make connections resilient (short outages will be reconnected)
+# this configuration will reconnect if outage is 10 minutes or less
+TCPKeepAlive no
+ServerAliveInterval 60
+ServerAliveCountMax 10
+
+# Quiet any banners (alternatively you can use the -q switch for each run)
+LogLevel QUIET
+
+# This enables persistent connections; this will cause connections to
+# hang around for 2 hours after logging out.
+ControlPersist 2h
+
+ControlMaster auto
+ControlPath ~/.ssh/connections/%r_%h_%p
+#LogLevel DEBUG3
+
+######################################################################
+# Work Systems
+######################################################################
+Host kraken-* kraken-*.sofitest.com dev-* dev-*.sofitest.com qa-* qa-*.sofitest.com
+StrictHostKeyChecking no
+UserKnownHostsFile /dev/null
+
+Host bitbucket.org
+IdentityFile ~/.ssh/sofi_id_rsa
+HostName bitbucket.org
+
+######################################################################
+# Personal Systems
+######################################################################
+
+Host mygithub.com
+IdentityFile ~/.ssh/home_rsa
+User <home-email>
+Port 443
+Hostname ssh.github.com
+
+Host mybitbucket.org
+IdentityFile ~/.ssh/home_rsa
+User <usery>
+Port 443
+HostName altssh.bitbucket.org
+
