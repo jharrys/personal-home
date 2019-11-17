@@ -1,0 +1,6 @@
+#HOME=/opt
+PATH=/Users/jharris/.bin:/usr/local/bin:/usr/bin:/bin
+SHELL=/usr/bin/zsh
+#MAILTO=email@example.com
+# minute hour dayofmonth month dayofweek
+36 22 * * 1-5 "brew update && brew upgrade && brew cleanup"
