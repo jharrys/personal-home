@@ -1,0 +1,3 @@
+alias kls='kafka-topics --list --bootstrap-server ${KRAKEN_HOST:-kraken-dev-17}.sofitest.com:9092'
+alias ktm='kafka-avro-console-consumer --bootstrap-server ${KRAKEN_HOST:-kraken-dev-17}.sofitest.com:9092 --property schema.registry.url=http://${KRAKEN_HOST:-kraken-dev-17}.sofitest.com:8081 --topic com.sofi.banking.schemas.BankingKycCheckUnsuccessful --from-beginning'
+alias krettime='kafka-topics --zookeeper ${KRAKEN_HOST:-kraken-dev-17}.sofitest.com:2181 --alter --topic com.sofi.banking.schemas.BankingKycCheckUnsuccessful --config retention.ms=604800000 --partitions 6'
