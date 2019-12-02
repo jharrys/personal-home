@@ -1,4 +1,5 @@
 alias bb='brew bundle --file=~/.configuration/homebrew/Brewfile'                                                                                                                               # Executes install of Brewfile
+alias bbi='brew bundle --file=~/.configuration/homebrew/Brewfile install --no-upgrade'
 alias bbd='brew bundle dump --force --file=~/.configuration/homebrew/Brewfile'                                                                                                                             # Creates a new Brewfile
 alias bbc='brew bundle check --file=~/.configuration/homebrew/Brewfile'                                                                                                                           # See if your Brewfile needs updating
 alias bbcl='brew bundle cleanup --file=~/.configuration/homebrew/Brewfile'                                                                                                                         # removes all brews not listed in Brewfile
