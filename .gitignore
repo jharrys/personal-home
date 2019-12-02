@@ -103,6 +103,7 @@ configuration/Sublime Text 2/Backup
 .viminfo
 .vnc
 .vscode
+.vscode-react-native
 .w*
 .x*
 .y*
