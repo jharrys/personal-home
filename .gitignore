@@ -104,6 +104,7 @@ configuration/Sublime Text 2/Backup
 .vnc
 .vscode
 .vscode-react-native
+.vs-kubernetes
 .w*
 .x*
 .y*
