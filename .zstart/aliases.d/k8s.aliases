@@ -15,11 +15,26 @@ cdk() {
     dir=$(unset CLICOLOR_FORCE; $HOME/git/sofi-kubernetes/scripts/server-helpers/cdk.sh $@)
     cd $dir
 }
-alias kc="kubectl"
-alias kcs="kubectl sofi"
-alias kbu="kustomize build"
-alias kapp="kustomize build | kubectl apply -f -"
-alias unready="watch -n 1 \"kubectl get pods | awk '{ split(\\\$2,a,\\\"/\\\"); if (a[1] != a[2]) { print \\\$0 }; }' | grep -v 'Completed'\""
-alias kcsdp='kubectl sofi delete pod'
-alias kcsdep='kubectl sofi logs deps'
-alias kcsddp='kc_find_dependents'
+kc_it() {
+    # starts interactive session using bash
+    kubectl sofi exec $1 -d bash
+}
+kc_tail() {
+    # k8s logs follower
+    kubectl sofi logs "$@" -f
+}
+kc_reup() {
+    # k8s re-pull and apply
+    kubectl sofi pull $1; kubectl sofi apply $1
+}
+
+# aliases below
+alias k="kubectl"
+alias kup="kubectl sofi up qa-stack-startup money-ops-ui banking banking-ui banking-statements money-users zen-proxy"
+alias kunr="watch -n 1 \"kubectl get pods | awk '{ split(\\\$2,a,\\\"/\\\"); if (a[1] != a[2]) { print \\\$0 }; }' | grep -v 'Completed'\""
+alias kdelp='kubectl sofi delete pod'
+alias kdep='kubectl sofi logs deps'
+alias kden='kc_find_dependents'
+alias kit='kc_it'
+alias ktail='kc_tail'
+alias kreup='kc_reup'
