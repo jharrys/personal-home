@@ -32,7 +32,13 @@ kc_ver() {
 }
 kc_tail() {
     # k8s logs follower
-    kubectl sofi logs "$@" -f
+    service=$1
+    shift
+    if [[ -z "$@" ]]; then
+        kubectl sofi logs "${service}" -f -c "${service}" -t 20
+    else
+        kubectl sofi logs "${service}" -f -c "${service}" "$@"
+    fi
 }
 kc_reup() {
     # k8s re-pull and apply
