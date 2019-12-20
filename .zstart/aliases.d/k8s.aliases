@@ -16,8 +16,19 @@ cdk() {
     cd $dir
 }
 kc_it() {
-    # starts interactive session using bash
-    kubectl sofi exec $1 -d bash
+    # execs into container and runs given command; if no command runs bash
+    var1=$1
+    shift
+    pod=$(kubectl sofi describe pod ${var1} |sed -n 's/^Name: *\(.*\)/\1/p')
+    [[ -z "${pod}" ]] && echo "${var1} not found, exiting" && return 1
+    if [[ -z "$@" ]]; then
+        kubectl exec ${pod} -i -t -- bash
+    else
+        kubectl exec ${pod} -i -t -- "$@"
+    fi
+}
+kc_ver() {
+    kc_it $1 ls -al data/sofi/bin |grep $1
 }
 kc_tail() {
     # k8s logs follower
@@ -32,9 +43,11 @@ kc_reup() {
 alias k="kubectl"
 alias kup="kubectl sofi up qa-stack-startup money-ops-ui banking banking-ui banking-statements money-users zen-proxy"
 alias kunr="watch -n 1 \"kubectl get pods | awk '{ split(\\\$2,a,\\\"/\\\"); if (a[1] != a[2]) { print \\\$0 }; }' | grep -v 'Completed'\""
+alias kdel='kubectl sofi delete'
 alias kdelp='kubectl sofi delete pod'
 alias kdep='kubectl sofi logs deps'
 alias kden='kc_find_dependents'
 alias kit='kc_it'
+alias kver='kc_ver'
 alias ktail='kc_tail'
 alias kreup='kc_reup'
