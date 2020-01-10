@@ -88,13 +88,6 @@ alias glforce='git fetch --all; git reset --hard origin/master'
 alias gcaa='ammend-author'
 
 # -----------------------------------
-# search
-# -----------------------------------
-
-# "gsrch 'some-text-to-look-for'"
-alias gsrch='git log -S'
-
-# -----------------------------------
 # diffs
 # -----------------------------------
 
@@ -268,6 +261,27 @@ alias gprr='gitworkflow_gpr.sh'
 # Checkout a git bitbucket server pull request; this maps to a personal .zfuncs
 alias gspr='git-stash-pull-request'
 
+# -----------------------------------
+# git log functions
+# -----------------------------------
+alias gcount='git shortlog -sn'
+alias glg='git log --stat'
+alias glgg='git log --graph'
+alias glgga='git log --graph --decorate --all'
+alias glgm='git log --graph --max-count=10'
+alias glgp='git log --stat -p'
+alias glo='git log --oneline --decorate'
+alias glod='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'
+alias glods='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'' --date=short'
+alias glog='git log --oneline --decorate --graph'
+alias gloga='git log --oneline --decorate --graph --all'
+alias glol='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'
+alias glola='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
+alias glols='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --stat'
+alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 # search git log for specific file
 # example: git log -all --full-history -- "**/thefile.*"
 alias ghfile='git log --all --full-history -- '
+
+# "gsrch 'some-text-to-look-for'"
+alias gsrch='git log -S'
