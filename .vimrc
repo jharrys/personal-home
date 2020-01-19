@@ -54,7 +54,7 @@ let g:syntastic_python_checkers=['python', 'pylint']
   set switchbuf=usetab      "switching to the next buffer will do it in the current tab with either a split window or in the current tab - below set F8 to switch to next buffer
 
   if has('persistent_undo')
-    set undodir=~/.vimbackup,~/tmp,/var/tmp,/tmp
+    "set undodir=~/.vimbackup,~/tmp,/var/tmp,/tmp
     set undofile              " A persistent undo per file
   endif
 
