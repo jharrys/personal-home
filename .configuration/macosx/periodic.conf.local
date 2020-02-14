@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# This file should be in /etc/periodic.conf.local and overrides variables in defaults/periodic.conf
+# only need to override specific variables; defaults/periodic.conf should not be updated.
+#
+
+# Daily options
+
+daily_output="jharris"			# user or /file
+
+# Weekly options
+
+weekly_output="jharris"			# user or /file
+
+# Monthly options
+
+monthly_output="jharris"			# user or /file
+
