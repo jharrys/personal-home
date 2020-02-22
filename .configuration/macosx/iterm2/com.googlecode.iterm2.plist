@@ -8489,7 +8489,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>586 546 620 392 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 500 1792 620 0 0 1792 1120 </string>
+	<string>0 691 1792 429 0 0 1792 1120 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -8722,6 +8722,8 @@
 			<integer>120</integer>
 			<key>Command</key>
 			<string></string>
+			<key>Cursor Boost</key>
+			<real>0.0</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -8754,7 +8756,7 @@
 				<string>0</string>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -9905,7 +9907,7 @@
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Boost</key>
-			<real>0.0</real>
+			<real>0.019873595505617979</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -9924,9 +9926,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.9268307089805603</real>
+				<real>0.93303808055313064</real>
 				<key>Red Component</key>
-				<real>0.70213186740875244</real>
+				<real>0.7274017333984375</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -9938,7 +9940,7 @@
 				<string>0</string>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -10397,7 +10399,7 @@
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
-			<real>0.46019580696202533</real>
+			<real>0.37615411931818182</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -10973,11 +10975,13 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use Cursor Guide</key>
-			<false/>
+			<true/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Tab Color</key>
 			<true/>
+			<key>Use Underline Color</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -12267,7 +12271,7 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use Cursor Guide</key>
-			<false/>
+			<true/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Tab Color</key>
@@ -14683,14 +14687,14 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{574, 892}</string>
+		<string>{499, 631}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>D227DADC-7270-437A-B3D6-50BAC0E95EA7</string>
 	<key>NoSyncLastTipTime</key>
-	<real>604007399.03567302</real>
+	<real>604008343.21083999</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>45</integer>
+	<integer>47</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -15587,53 +15591,73 @@
 	<real>600813508.815148</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
-		<string>0017</string>
-		<string>0029</string>
-		<string>0001</string>
-		<string>0013</string>
-		<string>0025</string>
-		<string>0037</string>
-		<string>0021</string>
-		<string>0033</string>
-		<string>0041</string>
-		<string>0006</string>
-		<string>0018</string>
-		<string>0002</string>
-		<string>0014</string>
-		<string>0026</string>
-		<string>0038</string>
-		<string>0010</string>
-		<string>0022</string>
-		<string>000</string>
-		<string>0034</string>
 		<string>0030</string>
-		<string>0042</string>
-		<string>0007</string>
-		<string>0019</string>
-		<string>0003</string>
-		<string>0015</string>
-		<string>0027</string>
-		<string>0039</string>
-		<string>0011</string>
 		<string>0023</string>
-		<string>0035</string>
-		<string>0031</string>
-		<string>0043</string>
-		<string>0008</string>
-		<string>0004</string>
 		<string>0016</string>
-		<string>0028</string>
-		<string>0000</string>
-		<string>0012</string>
-		<string>0024</string>
-		<string>0036</string>
-		<string>0020</string>
-		<string>0032</string>
-		<string>0044</string>
-		<string>0040</string>
 		<string>0009</string>
+		<string>0059</string>
+		<string>0002</string>
+		<string>0045</string>
+		<string>0038</string>
+		<string>0052</string>
+		<string>0017</string>
+		<string>0031</string>
+		<string>0024</string>
+		<string>0010</string>
+		<string>0046</string>
+		<string>0003</string>
+		<string>0039</string>
+		<string>0053</string>
+		<string>0060</string>
+		<string>0025</string>
+		<string>0018</string>
+		<string>0032</string>
+		<string>0011</string>
+		<string>0047</string>
+		<string>0004</string>
+		<string>0054</string>
+		<string>0061</string>
+		<string>0033</string>
+		<string>0026</string>
+		<string>0019</string>
+		<string>0040</string>
+		<string>0012</string>
+		<string>0048</string>
 		<string>0005</string>
+		<string>0055</string>
+		<string>0062</string>
+		<string>0041</string>
+		<string>0034</string>
+		<string>0027</string>
+		<string>0013</string>
+		<string>0049</string>
+		<string>0006</string>
+		<string>0020</string>
+		<string>0056</string>
+		<string>0063</string>
+		<string>0042</string>
+		<string>0035</string>
+		<string>0028</string>
+		<string>0021</string>
+		<string>0014</string>
+		<string>0007</string>
+		<string>0057</string>
+		<string>0064</string>
+		<string>0000</string>
+		<string>0029</string>
+		<string>0050</string>
+		<string>0043</string>
+		<string>0036</string>
+		<string>0022</string>
+		<string>0015</string>
+		<string>0008</string>
+		<string>0058</string>
+		<string>0001</string>
+		<string>0037</string>
+		<string>000</string>
 		<string>0044</string>
+		<string>0051</string>
+		<string>0065</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
