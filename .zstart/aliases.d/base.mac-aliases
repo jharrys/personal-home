@@ -14,6 +14,13 @@
 unalias ls
 alias l@='ls -alh@'
 
+# the apropos is broken in macos - the idea is to create a workaround as follows
+# mkdir -p ~/workarounds
+# sed -e 66s@/usr/lib@@ /usr/bin/apropos > ~/workarounds/apropos.macos_10.15.3
+# diff /usr/bin/apropos ~/workarounds/apropos.macos_10.15.3
+alias apropos=~/workarounds/apropos.macos_10.15.3
+alias whatis=~/workarounds/apropos.macos_10.15.3
+
 # sudo
 alias sudome='(unset CLICOLOR_FORCE;sudo -E -s)'
 
