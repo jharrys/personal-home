@@ -39,6 +39,7 @@ configuration/Sublime Text 2/Backup
 .boswars
 .bzr*
 .cache
+.cocoapods
 .config/*
 .cpan/
 .cups
