@@ -196,8 +196,8 @@ alias glst='git ls-files -t'
 # list only UN-tracked files without the ignored files
 alias glsu='git ls-files --others --exclude-standard'
 
-# list only ignored files
-alias glsi='git ls-files --others -i --exclude-standard'
+# list ignored files that are in the index - these files don't belong in the repo probably
+alias glsi='git ls-files --exclude-standard --ignored'
 
 # -----------------------------------
 # Stash
