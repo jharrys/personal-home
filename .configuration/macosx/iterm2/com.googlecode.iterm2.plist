@@ -8491,7 +8491,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>586 546 620 392 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>347 74 970 599 0 0 1792 1120 </string>
+	<string>0 691 1792 429 0 0 1792 1120 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
@@ -9995,7 +9995,7 @@
 			<key>HotKey Window Animates</key>
 			<true/>
 			<key>HotKey Window AutoHides</key>
-			<false/>
+			<true/>
 			<key>HotKey Window Dock Click Action</key>
 			<integer>2</integer>
 			<key>HotKey Window Floats</key>
@@ -12333,7 +12333,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>604815973.93343496</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>88</integer>
+	<integer>90</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
