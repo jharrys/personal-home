@@ -1,7 +1,0 @@
-# To undeploy
-
-        java -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust -Dweblogic.security.SSL.protocolVersion=TLS1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.0 weblogic.Deployer -adminurl t3s://lpv-hwdevapp01:9200 -username weblogic -password h0m3rman -undeploy -name pec-war-1.0.0
-        
-# To deploy
-
-        java -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust -Dweblogic.security.SSL.protocolVersion=TLS1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.0 weblogic.Deployer -adminurl t3s://lpv-hwdevapp01:9200 -username weblogic -password h0m3rman -deploy -targets carma1 -upload ./pec-war-1.0.0.war

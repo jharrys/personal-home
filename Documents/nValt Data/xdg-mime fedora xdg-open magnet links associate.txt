@@ -1,6 +1,0 @@
-# how to modify associations for xdg-open
-
-## specifically associate the magnet links/URL to the app deluge in fedora
-
-        xdg-mime default fedora-deluge.desktop x-scheme-handler/magnet
-

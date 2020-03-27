@@ -1,9 +1,0 @@
-in the “To:” address right in
-
-[fax:1800XXXYYYY]
-
-Then attach your file.
-
-Didn’t work on the Mac OS outlook 2016 email client.
-
-Did it from OWA.

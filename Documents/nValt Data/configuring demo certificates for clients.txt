@@ -1,6 +1,0 @@
-To use SSL in development mode between a client such as Eclipse and WebLogic Server, configure the demo certificates in the JVM for both the client and the server:
-
-1. Copy MW_HOME/wlserver_12.1/server/lib/cacerts to the jre/lib/security directory of the client's JVM. For example, if you are using Eclipse with its default JDK, copy cacerts to MW_HOME/jdk160_11/jre/lib/security.
-2. Copy MW_HOME/wlserver_12.1/server/lib/cacerts to the jre/lib/security directory of the WebLogic Server's JVM. For a domain using JRockit, copy cacerts to MW_HOME/jrockit_160_05/jre/lib/security.
-3. Restart both WebLogic Server and the client. 
-As an alternative, you can import the certificates, rather than copying the cacerts files.

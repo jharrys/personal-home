@@ -1,9 +1,0 @@
-# Install a new package provider like NuGet
-
-# Powershell <=5.0 won’t proxy correctly through firewall so run
-
-[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials
-
-# Then to install the provider run (e.g., below uses the NuGet provider as example)
-
- Install-PackageProvider -name NuGet -MinimumVersion 2.8.5.201 -Force

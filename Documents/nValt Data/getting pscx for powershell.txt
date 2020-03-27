@@ -1,7 +1,0 @@
-# install nuget package provider
-
- Install-PackageProvider -name NuGet -MinimumVersion 2.8.5.201 -Force
- 
-# Download the pscx module (downloading it to the relative path directory called tmp)
-
- Save-Module -name Pscx -path tmp

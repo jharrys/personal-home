@@ -1,8 +1,0 @@
-In maven versions 2.1.0-M1 and greater the variable maven.build.timestamp is available.
-Previously you needed a plugin.
-
-<properties>
-   <timestamp>${maven.build.timestamp}</timestamp>
-
-   <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-</properties>

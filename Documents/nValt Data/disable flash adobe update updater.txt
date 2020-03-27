@@ -1,1 +1,0 @@
-defaults write com.adobe.AdobeUpdater.Admin Disable.Update -bool yes

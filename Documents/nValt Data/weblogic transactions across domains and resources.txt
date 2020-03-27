@@ -1,7 +1,0 @@
-WASP link is [here](https://wasp.co.ihc.com/hosts/lpv-hwvalapp01/domains/hwdiscover)
-
-The scope of a transaction refers to the environment in which the transaction is performed. 
-
-WebLogic Server **supports transactions on standalone servers, between non-clustered servers, between clustered servers within a domain, and between domains**. 
-
-To enable inter-domain transaction support, see Configuring Secure Inter-Domain and Intra-Domain Transaction Communication.
