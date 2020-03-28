@@ -131,7 +131,8 @@ alias dusers='dscl . -list /Users'
 alias dgroups='dscl . -list /Groups'
 alias dgrplist='dscacheutil -q group -a name' #dscl . -read /Groups/admin
 
-# cli markdown viewer
-rmd () {
-    pandoc $1 | lynx -stdin
+# quick-look viewer for markdown
+ql () {
+  (( $# > 0 )) && qlmanage -p $* &>/dev/null &
 }
+
