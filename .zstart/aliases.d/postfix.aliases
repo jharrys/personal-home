@@ -1,0 +1,11 @@
+# 2020-03-30
+# aliases relating to mail/postfix specifically (which is installed by default on macosx)
+
+alias emq='postqueue -p'         # no args - 'mailq' also works
+alias emv='postcat -vq'          # args - is the message ID so emailv XXXXX
+alias emf='postqueue -f'         # no args - flush the queue and send email immediately 'postfix flush'
+alias emda='postsuper -d ALL'    # no args - delete all email queued up
+alias emdf='postsuper -d ALL deferred'    # no args - delete all email queued up that have been deferred
+alias emd='postsuper -d'        # args - XXXX which is the mail_queue_id
+# below used on macosx - need to stream through their log journal
+alias email-log='log stream --predicate '\''(process=="master") || (process=="qmgr") || (process=="pickup") || (process=="cleanup") || (process=="smtpd") || (process == "smtp")'\'' --level debug'
