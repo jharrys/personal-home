@@ -35,7 +35,8 @@ let mapleader="\<SPACE>"
 let g:syntastic_python_checkers=['python', 'pylint']
 
 " General {
-  set dir=~/.vimbackup,~/tmp,/var/tmp,/tmp
+  set directory=~/.vim/.swp//
+  set backupdir=~/.vim/.backup//
   set backspace=indent,eol,start      " Allow backspace over everything in insert mode.
   set guifont=Monaco:h11
   set noswapfile
@@ -54,7 +55,7 @@ let g:syntastic_python_checkers=['python', 'pylint']
   set switchbuf=usetab      "switching to the next buffer will do it in the current tab with either a split window or in the current tab - below set F8 to switch to next buffer
 
   if has('persistent_undo')
-    "set undodir=~/.vimbackup,~/tmp,/var/tmp,/tmp
+    set undodir=~/.vim/.undo//
     set undofile              " A persistent undo per file
   endif
 
@@ -186,7 +187,7 @@ iab <// </C-X><C-O>     " Autocomplete markup tags (remapping C-X, C-O)
   autocmd BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 
-  " Remove trailing spaces before saving text files
+  "git@ssh.dev.azure.com:v3/jharrys0375/church_home/church_home Remove trailing spaces before saving text files
   " http://vim.wikia.com/wiki/Remove_trailing_spaces
   autocmd BufWritePre * :call StripTrailingWhitespace()
   function! StripTrailingWhitespace()
