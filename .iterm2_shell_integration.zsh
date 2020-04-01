@@ -156,4 +156,4 @@ if [[ -o interactive ]]; then
     printf "\033]1337;ShellIntegrationVersion=10;shell=zsh\007"
   fi
 fi
-alias imgcat=~/.iterm2/imgcat;alias imgls=~/.iterm2/imgls;alias it2api=~/.iterm2/it2api;alias it2attention=~/.iterm2/it2attention;alias it2check=~/.iterm2/it2check;alias it2copy=~/.iterm2/it2copy;alias it2dl=~/.iterm2/it2dl;alias it2getvar=~/.iterm2/it2getvar;alias it2git=~/.iterm2/it2git;alias it2setcolor=~/.iterm2/it2setcolor;alias it2setkeylabel=~/.iterm2/it2setkeylabel;alias it2ul=~/.iterm2/it2ul;alias it2universion=~/.iterm2/it2universion
+alias imgcat=${HOME}/.iterm2/imgcat;alias imgls=${HOME}/.iterm2/imgls;alias it2api=${HOME}/.iterm2/it2api;alias it2attention=${HOME}/.iterm2/it2attention;alias it2check=${HOME}/.iterm2/it2check;alias it2copy=${HOME}/.iterm2/it2copy;alias it2dl=${HOME}/.iterm2/it2dl;alias it2getvar=${HOME}/.iterm2/it2getvar;alias it2git=${HOME}/.iterm2/it2git;alias it2setcolor=${HOME}/.iterm2/it2setcolor;alias it2setkeylabel=${HOME}/.iterm2/it2setkeylabel;alias it2ul=${HOME}/.iterm2/it2ul;alias it2universion=${HOME}/.iterm2/it2universion
