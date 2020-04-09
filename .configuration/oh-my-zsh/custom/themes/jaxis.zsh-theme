@@ -240,6 +240,7 @@ build_prompt() {
 
 build_rprompt() {
   prompt_time
+  battery_pct_prompt
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
