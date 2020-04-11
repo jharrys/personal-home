@@ -63,7 +63,7 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 # Key bindings here
 bindkey '\e#' pound-insert                # insert '#' at beginning of line to comment out, NOTE reissuing this on a commented line will remove the # and issue the command
 
-plugins=(common-aliases battery copydir copyfile dircycle docker git history osx urltools scd shrink-path zsh-navigation-tools aws)
+plugins=(common-aliases battery jj-copybuffer copydir copyfile dircycle docker git history osx urltools shrink-path zsh-navigation-tools)
 
 # Environment settings
 
