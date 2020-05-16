@@ -142,6 +142,26 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # it2git - placed after .iterm2_shell_integration.zsh
 function iterm2_print_user_vars() {
     it2git
+    
+    # set based on day
+    local day=$(date '+%A')
+    case $day in
+        Monday|Tuesday)
+            iterm2_set_user_var funny 🐙
+            ;;
+        Wednesday|Thursday)
+            iterm2_set_user_var funny 🐶
+            ;;
+        Friday)
+            iterm2_set_user_var funny 🦋
+            ;;
+        Saturday|Sunday)
+            iterm2_set_user_var funny 🍄
+            ;;
+        *)
+            iterm2_set_user_var funny 🌧
+    esac
+
 }
 
 
