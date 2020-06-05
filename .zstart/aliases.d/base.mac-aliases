@@ -54,6 +54,10 @@ alias ssaswp='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenS
 alias tmspeedup='sudo sysctl debug.lowpri_throttle_enabled=0'
 alias tmnormal='sudo sysctl debug.lowpri_throttle_enabled=1'
 
+# keyboard repeat
+alias repeaton='defaults write -g ApplePressAndHoldEnabled -bool true'
+alias repeatoff='defaults write -g ApplePressAndHoldEnabled -bool false'
+
 # Dock
 #alias insertSpacer='defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'
 
