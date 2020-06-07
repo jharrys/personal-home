@@ -64,7 +64,7 @@ defaults write com.apple.screencapture location ~/Desktop/Screenshots
 # Maven - installed via brew
 #******************************************
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v 14)
 #export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"    # keeps the java icon out of the mac os x dock
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
