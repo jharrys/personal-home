@@ -174,3 +174,4 @@ tmux_resurrect*
 !.dbvis/Bookmarks/
 !.dbvis/Monitors/
 !.config/git
+!.config/znt

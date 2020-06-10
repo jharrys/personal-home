@@ -55,8 +55,8 @@ alias tmspeedup='sudo sysctl debug.lowpri_throttle_enabled=0'
 alias tmnormal='sudo sysctl debug.lowpri_throttle_enabled=1'
 
 # keyboard repeat
-alias repeaton='defaults write -g ApplePressAndHoldEnabled -bool true'
-alias repeatoff='defaults write -g ApplePressAndHoldEnabled -bool false'
+alias sys_repeaton='defaults write -g ApplePressAndHoldEnabled -bool false'
+alias sys_repeatoff='defaults write -g ApplePressAndHoldEnabled -bool true'
 
 # Dock
 #alias insertSpacer='defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'
@@ -127,6 +127,7 @@ alias sys_cleaniconcache='sudo find /private/var/folders/ -name com.apple.dock.i
 alias sys_resetdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;say DNScache flushed and reset'
 alias sys_sleep='sudo shutdown -s'
 alias sys_machine='sysctl -n machdep.cpu.brand_string'
+alias sys_delquarantine='xattr -d com.apple.quarantine'     # provide a filename of app to remove quarantine from or preferences -> security & privacy -> General
 
 # Suffix aliases
 alias -s html=google-chrome
