@@ -27,6 +27,7 @@ alias lr='ls -AlhR'                                                             
 alias lt='ls -ltrh'                                                                                                                                           # list detail sort by time reversed
 alias ll='ls -lh'                                                                                                                                             # list detail
 alias la='ls -Alh'                                                                                                                                            # list detail showing hidden, hiding . and ..
+alias lrt='ls -1Fcrtl'
 alias lld='ls -Alh |grep ^d'                                                                                                                                  # list detail just directories
 alias lls='ls -lhSr'                                                                                                                                          # list detail by size reverse order
 alias mv='mv -i'
