@@ -8491,9 +8491,13 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>586 546 620 392 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 691 1792 429 0 0 1792 1120 </string>
+	<string>0 393 1792 727 0 0 1792 1120 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
+	<key>NeverWarnAboutShortLivedSessions_5EDC14C4-9592-4ED8-9C59-0FAEC4D997B5</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_5EDC14C4-9592-4ED8-9C59-0FAEC4D997B5_selection</key>
+	<integer>0</integer>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A2338116-C2AC-401D-A763-5EF954FF7788_selection</key>
@@ -12318,16 +12322,18 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.10</string>
-		<string>3.3.8</string>
-		<string>3.3.10beta3</string>
-		<string>3.3.9beta1</string>
-		<string>3.3.8beta5</string>
-		<string>3.3.8beta4</string>
 		<string>3.3.7</string>
+		<string>3.3.8beta5</string>
+		<string>3.3.8</string>
+		<string>3.3.11</string>
+		<string>3.3.8beta4</string>
+		<string>3.3.9beta1</string>
+		<string>3.3.10</string>
+		<string>3.3.10beta1</string>
 		<string>3.3.9</string>
 		<string>3.3.10beta2</string>
-		<string>3.3.10beta1</string>
+		<string>3.3.11beta1</string>
+		<string>3.3.10beta3</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
@@ -12349,7 +12355,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>604815973.93343496</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>114</integer>
+	<integer>127</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -13435,11 +13441,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-04T03:28:36Z</date>
+	<date>2020-06-10T02:40:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>1514243514</integer>
+	<integer>3754395817</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -29579,7 +29585,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.10</string>
+	<string>3.3.11</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
