@@ -1,0 +1,16 @@
+#############
+# Zsh Aliases
+#
+# Johnnie Harris
+# 2020-06-12
+#
+# This contains aliases for zsh
+#
+# comments are all indented to column 97
+#
+#############
+alias nh='n-history'
+alias nk='n-kill'
+alias na='n-aliases'
+alias ne='n-env'
+alias nf='n-functions'
