@@ -9883,8 +9883,18 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Badge Font</key>
+			<string>Helvetica-Bold</string>
+			<key>Badge Max Height</key>
+			<real>0.29999999999999999</real>
+			<key>Badge Max Width</key>
+			<real>0.5</real>
+			<key>Badge Right Margin</key>
+			<real>80</real>
 			<key>Badge Text</key>
-			<string>\funny</string>
+			<string>\(user.funny)</string>
+			<key>Badge Top Margin</key>
+			<real>0.0</real>
 			<key>Blend</key>
 			<real>0.60379147873711336</real>
 			<key>Blink Allowed</key>
@@ -12322,7 +12332,7 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.7</string>
+		<string>3.3.10beta3</string>
 		<string>3.3.8beta5</string>
 		<string>3.3.8</string>
 		<string>3.3.11</string>
@@ -12333,7 +12343,7 @@
 		<string>3.3.9</string>
 		<string>3.3.10beta2</string>
 		<string>3.3.11beta1</string>
-		<string>3.3.10beta3</string>
+		<string>3.3.7</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
@@ -12346,7 +12356,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{430, 863}</string>
+		<string>{430, 864}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -12355,7 +12365,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>604815973.93343496</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>131</integer>
+	<integer>132</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
