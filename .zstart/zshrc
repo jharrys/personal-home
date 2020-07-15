@@ -60,9 +60,6 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-# Key bindings here
-bindkey '\e#' pound-insert                # insert '#' at beginning of line to comment out, NOTE reissuing this on a commented line will remove the # and issue the command
-
 plugins=(common-aliases battery jj-copybuffer copydir copyfile dircycle docker git history osx urltools shrink-path zsh-navigation-tools)
 
 # Environment settings
@@ -142,7 +139,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # it2git - placed after .iterm2_shell_integration.zsh
 function iterm2_print_user_vars() {
     it2git
-    
+
     # set based on day
     local day=$(date '+%A')
     case $day in
@@ -208,9 +205,6 @@ expand-alias-space() {
 }
 zle -N expand-alias-space
 
-bindkey " " expand-alias-space
-bindkey -M isearch " " magic-space
-
 # ----------------------------------
 # End setup special type of alisases
 # ----------------------------------
@@ -223,6 +217,14 @@ export PGHOST=localhost
 export PGPASSWORD=
 export PGDATABASE=sofi_performance
 export PGPORT=15900
+
+# Key bindings here
+bindkey " " expand-alias-space          # type an alias then type M-space - it will expand what the alias is
+bindkey -M isearch " " magic-space        # to see it work type "!1" and press spacebar - this will autocomplete history command number 1
+bindkey '\e#' pound-insert                # insert '#' at beginning of line to comment out, NOTE reissuing this on a commented line will remove the # and issue the command
+bindkey -s "^[l" "^Q echo; ls -al^J"      # M-l will run "echo; ls -al"
+bindkey "^X^B" vi-find-prev-char          # CXCB will search for character backwards in current line
+bindkey '\ez' vi-repeat-find              # repeat list find either back/for
 
 # Setup my ZSH syntax highlighting options
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern) # by default only main is turned on
