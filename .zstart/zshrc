@@ -106,18 +106,20 @@ fi
 
 # User Functions
 
+### not sure if this is needed any more 8/2/2020
 # I need to change the TERM var to get functions
 # to load under the IntelliJ IDEA Terminal. The color when doing /bin/ls would not
 # disable ... so the best way was to set TERM to something else.
-OLDTERM=$TERM
-TERM=xterm-old
+#OLDTERM=$TERM
+#TERM=xterm-old
+TERM=xterm-256color
 fpath=(~/.zfuncs $fpath)
 for d in ~/.zfuncs
 do
     a=($(/bin/ls $d))
     autoload $a
 done
-TERM=$OLDTERM
+#TERM=$OLDTERM
 
 # ZSH Help Files - as described in http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Accessing-On_002dLine-Help
 
