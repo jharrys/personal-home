@@ -72,7 +72,7 @@
 		<string>/Users/lpjharri/tmp/iterm2-send-zmodem.sh</string>
 	</array>
 	<key>CopyLastNewline</key>
-	<false/>
+	<true/>
 	<key>CopySelection</key>
 	<true/>
 	<key>Custom Color Presets</key>
@@ -8391,6 +8391,8 @@
 	<false/>
 	<key>FocusFollowsMouse</key>
 	<true/>
+	<key>FocusOnRightOrMiddleClick</key>
+	<true/>
 	<key>FsTabDelay</key>
 	<real>1</real>
 	<key>HapticFeedbackForEsc</key>
@@ -8424,7 +8426,7 @@
 	<key>HotkeyModifiers</key>
 	<integer>1835305</integer>
 	<key>IRMemory</key>
-	<integer>500</integer>
+	<integer>750</integer>
 	<key>JobName</key>
 	<true/>
 	<key>LeftCommand</key>
@@ -8436,7 +8438,7 @@
 	<key>Mark Alert Action</key>
 	<string>Post Notification</string>
 	<key>MaxVertically</key>
-	<false/>
+	<true/>
 	<key>NSNavLastRootDirectory</key>
 	<string>/Applications</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -8493,7 +8495,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>586 546 620 392 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 653 1792 467 0 0 1792 1120 </string>
+	<string>0 691 1792 429 0 0 1792 1120 </string>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_5EDC14C4-9592-4ED8-9C59-0FAEC4D997B5</key>
@@ -8781,6 +8783,8 @@
 			<string>No</string>
 			<key>Custom Directory</key>
 			<string>Recycle</string>
+			<key>Custom Window Title</key>
+			<string></string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Disable Printing</key>
@@ -8834,6 +8838,8 @@
 			<false/>
 			<key>HotKey Window Reopens On Activation</key>
 			<true/>
+			<key>Icon</key>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -9247,13 +9253,15 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 14</string>
+			<string>FiraCode-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
+			<key>Prevent Opening in a Tab</key>
+			<false/>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Reduce Flicker</key>
@@ -9835,6 +9843,8 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use Cursor Guide</key>
+			<true/>
+			<key>Use Custom Window Title</key>
 			<true/>
 			<key>Use Italic Font</key>
 			<true/>
@@ -11422,6 +11432,8 @@
 			<string>No</string>
 			<key>Custom Directory</key>
 			<string>Recycle</string>
+			<key>Custom Window Title</key>
+			<string>tmux</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Disable Printing</key>
@@ -11888,7 +11900,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 14</string>
+			<string>FiraCode-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -12479,6 +12491,8 @@
 			<false/>
 			<key>Use Cursor Guide</key>
 			<true/>
+			<key>Use Custom Window Title</key>
+			<true/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Tab Color</key>
@@ -12498,19 +12512,25 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.10beta2</string>
-		<string>3.3.7</string>
+		<string>3.3.10beta3</string>
 		<string>3.3.8beta5</string>
 		<string>3.3.8</string>
 		<string>3.3.12</string>
+		<string>3.4.0beta2</string>
 		<string>3.3.11</string>
 		<string>3.3.8beta4</string>
 		<string>3.3.9beta1</string>
 		<string>3.3.10</string>
 		<string>3.3.10beta1</string>
-		<string>3.4.0beta1</string>
 		<string>3.3.9</string>
 		<string>3.3.11beta1</string>
-		<string>3.3.10beta3</string>
+		<string>3.4.0beta1</string>
+		<string>3.3.7</string>
+	</array>
+	<key>NoSyncBFPRecents</key>
+	<array>
+		<string>Fira Code</string>
+		<string>Menlo</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
@@ -12523,7 +12543,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{21, 1036}</string>
+		<string>{22, 1109}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -12534,7 +12554,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>616477030.24677002</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>145</integer>
+	<integer>148</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -13698,7 +13718,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-08-03T01:09:27Z</date>
+	<date>2020-08-03T02:36:59Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -13749,6 +13769,8 @@
 	<true/>
 	<key>TmuxDashboardLimit</key>
 	<integer>2</integer>
+	<key>TmuxUnpauseAutomatically</key>
+	<true/>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Notes</string>
@@ -29842,7 +29864,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.4.0beta1</string>
+	<string>3.4.0beta2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
