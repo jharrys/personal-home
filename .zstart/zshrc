@@ -84,6 +84,9 @@ export GIT_EDITOR='/usr/local/bin/vim -f'
 export LESS="-S -R"
 export LESSOPEN="|lesspipe.sh %s"
 
+# AWS Profile
+export AWS_PROFILE=default
+
 # SET options
 unsetopt INC_APPEND_HISTORY
 setopt EXTENDED_GLOB
