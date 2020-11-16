@@ -57,3 +57,4 @@ awk -F '\t' '{pv += $4; v += $5; uv += $6} END {print "pageviews="pv, "visitors=
 awk -F '\t' '{pv += $4; v += $5; uv += $6} END {print "pageviews="pv, "visitors="v, "uniquev="uv}' 6.txt
 aws s3 cp ./6.txt s3://tealium-data-migration-dev/20190106.txt
 aws s3 cp ./6.txt s3://tealium-data-migration-dev/20190106.txt
+xcode-select --install
