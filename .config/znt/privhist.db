@@ -58,3 +58,6 @@ awk -F '\t' '{pv += $4; v += $5; uv += $6} END {print "pageviews="pv, "visitors=
 aws s3 cp ./6.txt s3://tealium-data-migration-dev/20190106.txt
 aws s3 cp ./6.txt s3://tealium-data-migration-dev/20190106.txt
 xcode-select --install
+git config pull.rebase false
+find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %
+find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %
