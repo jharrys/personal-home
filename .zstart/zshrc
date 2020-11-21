@@ -149,19 +149,19 @@ function iterm2_print_user_vars() {
     local day=$(date '+%A')
     case $day in
         Monday|Tuesday)
-            iterm2_set_user_var funny 🐙
+            iterm2_set_user_var funny ⚔️
             ;;
         Wednesday|Thursday)
-            iterm2_set_user_var funny 🐶
+            iterm2_set_user_var funny ⚓️
             ;;
         Friday)
-            iterm2_set_user_var funny 🦋
+            iterm2_set_user_var funny 🚁
             ;;
         Saturday|Sunday)
-            iterm2_set_user_var funny 🍄
+            iterm2_set_user_var funny 🛩
             ;;
         *)
-            iterm2_set_user_var funny 🌧
+            iterm2_set_user_var funny 🚧
     esac
 
 }
