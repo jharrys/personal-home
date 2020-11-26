@@ -61,3 +61,4 @@ xcode-select --install
 git config pull.rebase false
 find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %
 find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %
+launchctl load -w ~/Library/LaunchAgents/com.johnnie.brew.updates.plist

@@ -4,11 +4,11 @@ today="$(date '+%F')"
 exists=0
 
 file="$(date '+%F-%H%M')-brew-update.log"
-file=/Users/jharrys/tmp/bcu/${file}
+file=/Users/jharris/tmp/bcu/${file}
 
-for x in /Users/jharrys/tmp/bcu/*.log
+for x in /Users/jharris/tmp/bcu/*.log
 do
-  if [ ${x%-????-brew-update.log} = "/Users/jharrys/tmp/bcu/$today" ]
+  if [ ${x%-????-brew-update.log} = "/Users/jharris/tmp/bcu/$today" ]
   then
     exit 0
   fi
