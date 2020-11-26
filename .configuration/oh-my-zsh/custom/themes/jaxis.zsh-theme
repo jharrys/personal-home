@@ -202,6 +202,14 @@ prompt_time() {
   prompt_segment violet 010 '%T'
 }
 
+prompt_gitstash() {
+  stashed=$(git --no-pager stash list 2>/dev/null |wc -l)
+  stashed=${stashed//[[:space:]]}
+  if [ $stashed -gt 0 ]; then
+    prompt_segment 137 black ${stashed//[[:space:]]}
+  fi
+}
+
 # Virtualenv: current working virtualenv
 prompt_virtualenv() {
   local virtualenv_path="$VIRTUAL_ENV"
@@ -233,6 +241,7 @@ build_prompt() {
   prompt_history
   prompt_dir
   prompt_git
+  prompt_gitstash
   prompt_bzr
   prompt_hg
   prompt_end
