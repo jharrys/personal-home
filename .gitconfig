@@ -130,6 +130,8 @@
 
     ; the absolute path to the executable
     ; cmd = /cygdrive/c/Users/lpjharri/AppData/Local/Google/Chrome/Application/chrome.exe
+[pull]
+	rebase = false
 [push]
 	default = current
 
