@@ -63,3 +63,10 @@ find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "bu
 find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %
 launchctl load -w ~/Library/LaunchAgents/com.johnnie.brew.updates.plist
 launchctl load -w ~/Library/LaunchAgents/com.johnnie.brew.updates.plist
+for x in $(find . ! -path . -type d -maxdepth 1)\
+do\
+cd $x\
+echo $x\
+git pull\
+cd ..\
+done
