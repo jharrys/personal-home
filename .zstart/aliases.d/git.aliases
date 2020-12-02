@@ -3,21 +3,21 @@
 # -----------------------------------
 
 # extract a file from some branch
-function extract-file-from-branch {
+function git-extract-file-from-branch {
   local branch=$1
   local file=$2
   git --no-pager show ${branch}:${file}
 }
 
 # commits in branch2 that are NOT in branch1 (long hand 'git log ^branch1 branch2')
-function diff-commits-between-branches {
+function git-diff-commits-between-branches {
   local branch1=$1
   local branch2=$2
   git --no-pager log ${branch1}..${branch2}
 }
 
 # log changes for specific lines of file
-function log-lines-changed {
+function git-log-lines-changed {
   local start=$1
   local end=$2
   local file=$3
@@ -25,7 +25,7 @@ function log-lines-changed {
 }
 
 # checkout a single file from a stash, given the stash number (starting with 0 as the latest stash)
-function extract-file-from-stash {
+function git-stash-extract-file {
   local stash_num=$1
   local filename=$2
   git checkout stash@{${stash_num}} -- $filename >/dev/null 2>&1
@@ -37,8 +37,8 @@ function extract-file-from-stash {
   fi
 }
 
-# ammend a commit with a new author
-function ammend-author {
+# amend a commit with a new author
+function git-amend-author {
   local new_author=$1
   git commit --amend --author='${new_author}'
 }
@@ -88,7 +88,7 @@ alias glforce='git fetch --all; git reset --hard origin/master'
 # -----------------------------------
 
 # ammend author "gcaa 'Author Name <email@address.com>'"
-alias gcaa='ammend-author'
+alias gcaa='git-amend-author'
 
 # -----------------------------------
 # diffs
@@ -123,13 +123,13 @@ alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gpfile='git log -p'
 
 # print all the lines changed between line X and line Y: "gpll 1 50 filename" or regex "gpll "
-alias gpll='log-lines-changed'
+alias gpll='git-log-lines-changed'
 
 # print changes in remote master that need to be pulled
 alias gpup='git fetch && gn log ..origin/master'
 
 # print commits in branch2 not in branch1 "gpbdiff branch1 branch2"
-alias gpbdiff='diff-commits-between-branches'
+alias gpbdiff='git-diff-commits-between-branches'
 
 # -----------------------------------
 # branch work
@@ -163,7 +163,7 @@ alias gbdr='git push origin --delete'
 alias gba='gn branch -a'
 
 # extract file from branch "gbex branch file"
-alias gbex='extract-file-from-branch'
+alias gbex='git-extract-file-from-branch'
 
 # find which branch contains a specific commit "gbwhere sha1"
 alias gbwhere='git branch -a --contains'
@@ -213,7 +213,7 @@ alias gstaa='git stash apply'
 alias gstd='git stash drop'
 
 # checkout a file from stash (either tracked or un-tracked)
-alias gsco='extract-file-from-stash'
+alias gsco='git-stash-extract-file'
 
 # interactive stashing
 alias gstf='git stash -p'
