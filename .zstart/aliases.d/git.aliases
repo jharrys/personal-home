@@ -141,7 +141,7 @@ alias gb='gn branch'
 alias gbmm='git branch --merged master'
 
 # remove branches that have already been merged to master
-alias gbrmm='git branch --merged master |grep -v '^\*\| master' |xargs -n 1 git branch -d'
+alias gbrmm="git branch --merged master |grep -v '^\*\| master' |xargs -n 1 git branch -d"
 
 # rename branch "gbm new-name" or "gbm old-name new-name"
 alias gbm='git branch -m'
