@@ -63,6 +63,9 @@ alias gn='git --no-pager'
 # throw away local changes when checking out
 alias gcof='git checkout -f'
 
+# add/commit normal config files like znt history files and iterm2 config
+alias gccf='git commit -a -m "Update config files."'
+
 # -----------------------------------
 # initialization
 # -----------------------------------
