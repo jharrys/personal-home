@@ -12606,7 +12606,7 @@
 			<key>title</key>
 			<string>clean build artifacts</string>
 			<key>value</key>
-			<string>find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %</string>
+			<string>find . -type d -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %</string>
 		</dict>
 	</array>
 	<key>SoundForEsc</key>
@@ -12641,9 +12641,9 @@
 	<true/>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Notes</string>
-		<string>Recent Directories</string>
 		<string>Snippets</string>
+		<string>Notes</string>
+		<string>Command History</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
