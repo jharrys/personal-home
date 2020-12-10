@@ -5,5 +5,5 @@ alias bbc='brew bundle check --file=~/.configuration/homebrew/Brewfile'         
 alias bbcl='brew bundle cleanup --file=~/.configuration/homebrew/Brewfile'                                                                                                                         # removes all brews not listed in Brewfile
 alias bcu='brew update && brew upgrade && brew cleanup'
 alias bcch='brewcasklist.sh tu'
-alias bcupg='for x in `bcch |cut -f 1 -d ":"`; do brew cask uninstall $x; brew cask install $x; done; brew cleanup'
+alias bcupg='for x in `bcch |cut -f 1 -d ":"`; do brew uninstall --cask $x; brew install --cask $x; done; brew cleanup'
 
