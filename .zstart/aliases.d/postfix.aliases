@@ -9,3 +9,4 @@ alias emdf='postsuper -d ALL deferred'    # no args - delete all email queued up
 alias emd='postsuper -d'        # args - XXXX which is the mail_queue_id
 # below used on macosx - need to stream through their log journal
 alias email-log='log stream --predicate '\''(process=="master") || (process=="qmgr") || (process=="pickup") || (process=="cleanup") || (process=="smtpd") || (process == "smtp")'\'' --level debug'
+alias ehashpasswd='sudo postmap /etc/postfix/sasl_passwd' # in gmail generate a one time app password, then run this command
