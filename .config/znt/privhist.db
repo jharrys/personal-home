@@ -70,3 +70,4 @@ echo $x\
 git pull\
 cd ..\
 done
+xcode-select -print-path
