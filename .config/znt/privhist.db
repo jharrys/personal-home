@@ -72,3 +72,4 @@ cd ..\
 done
 xcode-select -print-path
 ssh jharrys@192.168.0.133 "cat ~/Documents/gh.asc" > tmp/gh.asc
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
