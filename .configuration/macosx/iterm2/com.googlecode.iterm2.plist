@@ -12653,7 +12653,6 @@
 	<array>
 		<string>Snippets</string>
 		<string>Notes</string>
-		<string>Command History</string>
 		<string>Recent Directories</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
