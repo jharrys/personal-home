@@ -3,7 +3,7 @@ alias bbi='brew bundle --file=~/.configuration/homebrew/Brewfile install --no-up
 alias bbd='brew bundle dump --force --file=~/.configuration/homebrew/Brewfile'                                                                                                                             # Creates a new Brewfile
 alias bbc='brew bundle check --file=~/.configuration/homebrew/Brewfile'                                                                                                                           # See if your Brewfile needs updating
 alias bbcl='brew bundle cleanup --file=~/.configuration/homebrew/Brewfile'                                                                                                                         # removes all brews not listed in Brewfile
-alias bcu='brew update && brew upgrade && brew cleanup'
+alias bcu='brew update && brew upgrade --greedy && brew cleanup'
 alias bcch='brewcasklist.sh tu'
 alias bcupg='for x in `bcch |cut -f 1 -d ":"`; do brew uninstall --cask $x; brew install --cask $x; done; brew cleanup'
 
