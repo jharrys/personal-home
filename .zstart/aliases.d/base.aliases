@@ -84,7 +84,7 @@ alias trycolors='eval $( dircolors -b ~/.configuration/linux/dircolors.txt ); ls
 
 ###### Rsync ########
 # [a](rlptogD) [v]erbose [u]pdate [z]compress [h]umanreadable [P]partial,progress
-alias rsync='rsync -avuzhP --partial'                                                                                                                         # rsync SOURCE DEST; for excluding to --exclude=PATTERN
+alias rsync='rsync -avuzhP'                                                                                                                         # rsync SOURCE DEST; for excluding to --exclude=PATTERN
 
 ###### Time savers ########
 alias _tslist='alias | cut -d " " -f 2-; echo "---------- TIME SAVERS --------"; \
