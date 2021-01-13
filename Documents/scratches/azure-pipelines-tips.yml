@@ -1,4 +1,8 @@
 # Sample template I created for Azure Pipelines from one of my projects
+# Big Note: there are some items you can only control from the UI even for the yaml pipeline.
+# Open the UI, click on the pipeline you want -> Edit pipeline -> 3 dot menu -> Triggers -> this gets you in to the UI
+# things like "Label source" on success or all the time, or "workspace" clean options.
+# look at https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git?view=azure-devops&tabs=yaml find "Label sources" - still only UI, no yaml that I could fine (1/12/2021).
 # Note: use of trigger
 # Note: use of variable groups (these are set in the UI ahead of time, but declared in variables to be used in template)
 # Note Important: use of "workspace: clean: all" to clean out previous builds - not sure of all things, but AZ does retain memory of previous builds
