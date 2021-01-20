@@ -75,3 +75,4 @@ ssh jharrys@192.168.0.133 "cat ~/Documents/gh.asc" > tmp/gh.asc
 git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 git remote add gitlab git@gitlab.com:harris.johnny/cm-audiorecordings.git\
 
+git rev-list --left-right --count main...origin/main |tr -s \\t '|'
