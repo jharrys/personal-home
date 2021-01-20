@@ -12548,75 +12548,82 @@
 	<array>
 		<dict>
 			<key>title</key>
-			<string>clean build files</string>
+			<string>remove build files</string>
 			<key>value</key>
 			<string>find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>read manifest.mf from jar</string>
+			<string>cat manifest.mf</string>
 			<key>value</key>
 			<string>unzip -p *.jar META-INF/MANIFEST.MF</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>docker machine start &amp; eval</string>
+			<string>docker start|eval</string>
 			<key>value</key>
 			<string>dm start;eval $(docker-machine env default)</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>docker run -it --entrypoint /bin/bash a…</string>
+			<string>docker interactive</string>
 			<key>value</key>
 			<string>docker run -it --entrypoint /bin/bash audiorecordings</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>CI=true dive audiorecordings:latest</string>
+			<string>dive stats</string>
 			<key>value</key>
 			<string>CI=true dive audiorecordings:latest</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>docker image inspect --format "{{.Creat…</string>
+			<string>docker inspect</string>
 			<key>value</key>
 			<string>docker image inspect --format "{{.Created}}" </string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>sudo /Library/Application\ Support/Virt…</string>
+			<string>vbox restart</string>
 			<key>value</key>
 			<string>sudo /Library/Application\ Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh restart</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>mvn -T 6 dependency:sources dependency:…</string>
+			<string>maven depencencies</string>
 			<key>value</key>
 			<string>mvn -T 6 dependency:sources dependency:resolve -Dclassifier=javadoc</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>print -l *(m+5)</string>
+			<string>ls files &gt; 5 days old</string>
 			<key>value</key>
 			<string>print -l *(m+5)</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>aws s3 ls --human-readable s3://audiore…</string>
+			<string>s3 listing</string>
 			<key>value</key>
 			<string>aws s3 ls --human-readable s3://audiorecordings-prod/processed/ G 413696.wav</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>open -a "Google Chrome" --args --inspect</string>
+			<string>chrome debug mode</string>
 			<key>value</key>
 			<string>open -a "Google Chrome" --args --inspect</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>clean build artifacts</string>
+			<string>git ahead|behind</string>
 			<key>value</key>
-			<string>find . -type d -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %</string>
+			<string>git rev-list --left-right --count main...origin/main |tr -s \\t '|'
+</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>git dirs status</string>
+			<key>value</key>
+			<string>parse-dirs "git rev-list --left-right --count main...origin/main |tr -s \\\\t '|'"</string>
 		</dict>
 	</array>
 	<key>SoundForEsc</key>
