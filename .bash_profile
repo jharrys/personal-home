@@ -6,3 +6,4 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # Do everything in .bashrc
+source "$HOME/.cargo/env"

@@ -179,3 +179,4 @@ elif $cygwin; then
 else
 	_linuxsetup
 fi
+source "$HOME/.cargo/env"
