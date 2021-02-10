@@ -84,6 +84,7 @@ configuration/Sublime Text 2/Backup
 .openshift
 # .p* - for .profile
 .p2
+.papyrus
 .pip
 .pki*
 .psql_history
