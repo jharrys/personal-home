@@ -32,4 +32,3 @@ export ZSTARTPLATFORM
 
 export ZDOTDIR=${ZSTARTPLATFORM}
 
-source "$HOME/.cargo/env"
