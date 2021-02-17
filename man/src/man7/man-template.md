@@ -304,6 +304,16 @@ should pipe input and output through `iconv`:
 -h, \--help
 :   Show usage message.
 
+# FILES
+
+*~/.hellorc*
+
+:   Per-user default dedication file.
+
+*/etc/hello.conf*
+
+:   Global default dedication file.
+
 # TEMPLATES
 
 When the `-s/--standalone` option is used, pandoc uses a template to

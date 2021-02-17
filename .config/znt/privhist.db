@@ -77,3 +77,12 @@ git remote add gitlab git@gitlab.com:harris.johnny/cm-audiorecordings.git\
 
 git rev-list --left-right --count main...origin/main |tr -s \\t '|'
 sudo postfix start
+git remote set-head origin -a
+git push -u origin main
+dns-sd -L EPSON4AC177 _tcp
+dns-sd -L EPSON4AC177 local
+dns-sd -q "EPSON ET-3760 Series"
+dns-sd -q "EPSON ET-3760 Series" _ipp._tcp
+dns-sd -B _printer._tcp
+dns-sd -L "John Harris MacBook Pro (16-inch, 2019)"
+dns-sd -L "John Harris MacBook Pro (16-inch, 2019)" _ssh
