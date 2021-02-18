@@ -13992,6 +13992,18 @@
 			<key>value</key>
 			<string>parse-dirs "git rev-list --left-right --count main...origin/main |tr -s \\\\t '|'"</string>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>generate man</string>
+			<key>value</key>
+			<string>pandoc --standalone --to man networking-notes.7.md -o networking-notes.7</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>ssh using mdns</string>
+			<key>value</key>
+			<string>ssh jharrys@Johns-MacBook-Pro.local</string>
+		</dict>
 	</array>
 	<key>SoundForEsc</key>
 	<false/>
