@@ -86,3 +86,5 @@ dns-sd -q "EPSON ET-3760 Series" _ipp._tcp
 dns-sd -B _printer._tcp
 dns-sd -L "John Harris MacBook Pro (16-inch, 2019)"
 dns-sd -L "John Harris MacBook Pro (16-inch, 2019)" _ssh
+launchctl unload ~/Library/LaunchAgents/com.johnnie.brew.updates.plist
+launchctl load ~/Library/LaunchAgents/com.johnnie.brew.updates.plist
