@@ -13914,72 +13914,96 @@
 	<key>Snippets</key>
 	<array>
 		<dict>
+			<key>guid</key>
+			<string>052177fee13b0d31a27b520cd60ba279be115b5ca67bf98c7ac1cfa256183112</string>
 			<key>title</key>
 			<string>remove build files</string>
 			<key>value</key>
 			<string>find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>07023c11f00d66dcb9a4b88e7dfcc5cb694600cadfc3e7a554559d15bdbdb33d</string>
 			<key>title</key>
 			<string>cat manifest.mf</string>
 			<key>value</key>
 			<string>unzip -p *.jar META-INF/MANIFEST.MF</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>b71f8a3bd31ada90538d0a4542a8c6d4ac7c4e17fb206ccc8967493daad103dc</string>
 			<key>title</key>
 			<string>docker start|eval</string>
 			<key>value</key>
 			<string>dm start;eval $(docker-machine env default)</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>49d107ac84b2cf091d0a8be6b5d767c40b5339c00df24bb5569b2528403e083d</string>
 			<key>title</key>
 			<string>docker interactive</string>
 			<key>value</key>
 			<string>docker run -it --entrypoint /bin/bash audiorecordings</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>8d9ed82f9950a3531db685af780313e016c2fd7c55886d65e05077be3efe4f22</string>
 			<key>title</key>
 			<string>dive stats</string>
 			<key>value</key>
 			<string>CI=true dive audiorecordings:latest</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>dc399bce9571c93e6d185b00beba9bcb0ee06dc0300d6df31a1b121b83c4074d</string>
 			<key>title</key>
 			<string>docker inspect</string>
 			<key>value</key>
 			<string>docker image inspect --format "{{.Created}}" </string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>f09046628e10392b71bc4e0330f40b8590091944080b431aa840e3822a55b73f</string>
 			<key>title</key>
 			<string>vbox restart</string>
 			<key>value</key>
 			<string>sudo /Library/Application\ Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh restart</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>20a697f31d46b133ef94ebf85a0b9042f1f4cb3fa414695342658a94ce0016d1</string>
 			<key>title</key>
 			<string>maven depencencies</string>
 			<key>value</key>
 			<string>mvn -T 6 dependency:sources dependency:resolve -Dclassifier=javadoc</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>cbb48508363be0ec633ed57a721ccfec4e542a2739341b3ae966657773ea16ee</string>
 			<key>title</key>
 			<string>ls files &gt; 5 days old</string>
 			<key>value</key>
 			<string>print -l *(m+5)</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>e07ed23727d8f53d6501b69a4fb964456832fd46463458033aeabb663a0265a2</string>
 			<key>title</key>
 			<string>s3 listing</string>
 			<key>value</key>
 			<string>aws s3 ls --human-readable s3://audiorecordings-prod/processed/ G 413696.wav</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>c5a126c4d7c235a62968283b26fdfbce830d2f3974374bbed8c0dddf5a810d74</string>
 			<key>title</key>
 			<string>chrome debug mode</string>
 			<key>value</key>
 			<string>open -a "Google Chrome" --args --inspect</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>bc74b1ea6af6acbdb8212a43f9afcf0212e05104b5cc1f2f7e12ac356948d004</string>
 			<key>title</key>
 			<string>git ahead|behind</string>
 			<key>value</key>
@@ -13987,22 +14011,36 @@
 </string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>b6b274c541871db658dd39a66a1384b48ffda23c14892adde7c531f7411cbf7f</string>
 			<key>title</key>
 			<string>git dirs status</string>
 			<key>value</key>
 			<string>parse-dirs "git rev-list --left-right --count main...origin/main |tr -s \\\\t '|'"</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>6f70811a3edc5c2f4e4585028ef09996778e034c601a57ba78fa4c7490214293</string>
 			<key>title</key>
 			<string>generate man</string>
 			<key>value</key>
 			<string>pandoc --standalone --to man networking-notes.7.md -o networking-notes.7</string>
 		</dict>
 		<dict>
+			<key>guid</key>
+			<string>27a5b7070292bd999b73d5a482f2f5519f8a6b70aaf9500c4a32b49b1f2d2e44</string>
 			<key>title</key>
 			<string>ssh using mdns</string>
 			<key>value</key>
 			<string>ssh jharrys@Johns-MacBook-Pro.local</string>
+		</dict>
+		<dict>
+			<key>guid</key>
+			<string>9764856A-5F73-48DC-864E-F390A97AE139</string>
+			<key>title</key>
+			<string>clear dns cache</string>
+			<key>value</key>
+			<string>sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache</string>
 		</dict>
 	</array>
 	<key>SoundForEsc</key>
