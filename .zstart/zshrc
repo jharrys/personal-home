@@ -60,7 +60,7 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-plugins=(gradle common-aliases battery jj-copybuffer copydir copyfile dircycle docker git history osx urltools shrink-path zsh-navigation-tools)
+plugins=(nvm gradle common-aliases battery jj-copybuffer copydir copyfile dircycle docker git history osx urltools shrink-path zsh-navigation-tools)
 
 # Environment settings
 
@@ -68,7 +68,7 @@ plugins=(gradle common-aliases battery jj-copybuffer copydir copyfile dircycle d
 source ~/.bin/colors.sh
 
 # PATH variable
-export PATH=$PATH:/usr/local/sbin:$HOME/.bin:/usr/local/opt/node@12/bin
+export PATH=$PATH:/usr/local/sbin:$HOME/.bin
 
 # oh-my-zsh variable
 source $ZSH/oh-my-zsh.sh
@@ -79,6 +79,10 @@ export LANG=en_US.UTF-8
 export EDITOR='/usr/local/bin/vim'
 
 export GIT_EDITOR='/usr/local/bin/vim -f'
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Less options
 export LESS="-S -R"
