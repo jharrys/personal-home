@@ -90,3 +90,6 @@ launchctl unload ~/Library/LaunchAgents/com.johnnie.brew.updates.plist
 launchctl load ~/Library/LaunchAgents/com.johnnie.brew.updates.plist
 dns-sd -G v4 Johns-MacBook-Pro.local
 dns-sd -Z _ssh
+export PATH=/usr/local/opt/node@12/bin:$PATH
+export PATH="/usr/local/opt/node@12/bin:$PATH\
+"
