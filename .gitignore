@@ -101,6 +101,7 @@ configuration/Sublime Text 2/Backup
 .u*
 # .v* - for .vimrc
 .vboxclient*
+.venv/
 .vmc_*
 .vimbackup
 .viminfo
@@ -148,6 +149,7 @@ MyApps
 Network
 nethome
 Pictures
+PyCharmProjects/
 Public
 PurchasedSoftware
 Sites
