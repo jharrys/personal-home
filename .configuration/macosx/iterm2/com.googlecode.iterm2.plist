@@ -13920,6 +13920,8 @@
 			<string>remove build files</string>
 			<key>value</key>
 			<string>find . -type d -maxdepth 2 -name "target" -or -name "node_modules" -or -name "build" |xargs -J % rm -rf %</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13928,6 +13930,8 @@
 			<string>cat manifest.mf</string>
 			<key>value</key>
 			<string>unzip -p *.jar META-INF/MANIFEST.MF</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13936,6 +13940,8 @@
 			<string>docker start|eval</string>
 			<key>value</key>
 			<string>dm start;eval $(docker-machine env default)</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13944,6 +13950,8 @@
 			<string>docker interactive</string>
 			<key>value</key>
 			<string>docker run -it --entrypoint /bin/bash audiorecordings</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13952,6 +13960,8 @@
 			<string>dive stats</string>
 			<key>value</key>
 			<string>CI=true dive audiorecordings:latest</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13960,6 +13970,8 @@
 			<string>docker inspect</string>
 			<key>value</key>
 			<string>docker image inspect --format "{{.Created}}" </string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13968,6 +13980,8 @@
 			<string>vbox restart</string>
 			<key>value</key>
 			<string>sudo /Library/Application\ Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh restart</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13976,6 +13990,8 @@
 			<string>maven depencencies</string>
 			<key>value</key>
 			<string>mvn -T 6 dependency:sources dependency:resolve -Dclassifier=javadoc</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13984,6 +14000,8 @@
 			<string>ls files &gt; 5 days old</string>
 			<key>value</key>
 			<string>print -l *(m+5)</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -13992,6 +14010,8 @@
 			<string>s3 listing</string>
 			<key>value</key>
 			<string>aws s3 ls --human-readable s3://audiorecordings-prod/processed/ G 413696.wav</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -14000,6 +14020,8 @@
 			<string>chrome debug mode</string>
 			<key>value</key>
 			<string>open -a "Google Chrome" --args --inspect</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -14009,6 +14031,8 @@
 			<key>value</key>
 			<string>git rev-list --left-right --count main...origin/main |tr -s \\t '|'
 </string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -14017,6 +14041,8 @@
 			<string>git dirs status</string>
 			<key>value</key>
 			<string>parse-dirs "git rev-list --left-right --count main...origin/main |tr -s \\\\t '|'"</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -14025,6 +14051,8 @@
 			<string>generate man</string>
 			<key>value</key>
 			<string>pandoc --standalone --to man networking-notes.7.md -o networking-notes.7</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -14033,6 +14061,8 @@
 			<string>ssh using mdns</string>
 			<key>value</key>
 			<string>ssh jharrys@Johns-MacBook-Pro.local</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>guid</key>
@@ -14041,6 +14071,18 @@
 			<string>clear dns cache</string>
 			<key>value</key>
 			<string>sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>guid</key>
+			<string>A7528D9F-4F3A-4F6F-A0CE-4E30C3ABB95A</string>
+			<key>title</key>
+			<string>test tcp without telnet, nc or any other tools</string>
+			<key>value</key>
+			<string>timeout 1 bash -c '&amp;lt;/dev/tcp/216.58.207.46/443 &amp;amp;&amp;amp; echo Port is open || echo Port is closed' || echo Connection timeout</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>SoundForEsc</key>
