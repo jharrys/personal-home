@@ -98,6 +98,7 @@ configuration/Sublime Text 2/Backup
 .s*
 # .t*
 .tig*
+.tmp*
 .u*
 # .v* - for .vimrc
 .vboxclient*
