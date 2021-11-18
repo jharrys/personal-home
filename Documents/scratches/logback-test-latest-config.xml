@@ -1,0 +1,17 @@
+<!--
+config changed - this is current way to do it (2021).
+this allows us to turn off verbose logging: mvn test -Droot_level=off
+-->
+<configuration>
+    <!-- definition of appender STDOUT -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] %level %logger - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="${root_level:-INFO}">
+        <!-- appender referenced after it is defined -->
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

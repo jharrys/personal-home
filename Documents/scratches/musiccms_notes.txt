@@ -1,0 +1,103 @@
+9/28/2021
+
+Prep for language exports:
+
+1. if alpha lane, get all from language table
+
+SELECT *
+FROM content_language cl
+ORDER BY iso_code;
+
+2. else if staging lane, get subset of language table
+
+SELECT DISTINCT cl.*
+FROM content_language cl
+         JOIN content_collection cc ON cl.id = cc.language_id
+WHERE cc.approved = TRUE
+ORDER BY iso_code;
+
+3. iterate through each iso_code from 1 or 2
+
+4. call v5_export_language(destination, lane, lang, force)
+  a. create new catalog row using: export_catalog (store version into previous_catalog_version)
+
+  SELECT cc.*
+FROM content_catalog cc
+         JOIN content_language cl ON cl.id = cc.language_id
+WHERE cc.`schema` = 5
+  AND cc.lane = 'staging'
+  AND cl.id = 41
+  AND cc.packaging_success_date IS NOT NULL
+ORDER BY cc.packaging_success_date DESC
+LIMIT 1;
+
+  - new_catalog_version = previous_catalog_version + 1
+  - update or create to Catalog(schema_version=5, lane=same, language=same, version=new, packaging_started_date=now())
+  - clear/reset document_ids_by_type SONG,FRONTMATTER,BACKMATTER,ARTICLE.
+  - catalog == lane + language_id specifies a catalog and each new release of lane+language_id is a new version with a new catalog_id
+
+  b. use sqlite3 to connect /tmp/mcms/catalog.sqlite & build schema & fill with data
+    - get schema from content/schema/schema_vX.sql (currently X==5)
+    - export data to sqlite: Publication and ~~PublicationMedia (not being populated, ignore)~~
+
+  c. export each collection type of: Publications, Folders, Documents, Sources, Topics, Indexes, FTS, Metadata
+    - Publications attached to new catalog
+    - Documents attached to new catalog
+    - Metadata attaches to new catalog
+
+  d. Publications (new catalog)
+
+SELECT *
+FROM content_collection cc
+JOIN content_language cl ON cl.id = cc.language_id
+JOIN content_collectiontype c ON c.id = cc.collection_type_id
+JOIN content_catalog cc2 ON cc2.id = cc.published_v5_catalog_id
+WHERE cl.id=1;
+
+      - update published_v5_catalog_id to newly incremented catalog version (from step 4)
+
+  e. Folders
+      - get translated folder names
+SELECT cf.slug, COALESCE(ct.title, cf.default_title) AS title
+FROM content_folder cf
+         LEFT OUTER JOIN content_trfolder ct ON cf.id = ct.folder_id;
+
+      - get folder items (complex - finish later)
+
+  f. Documents (new catalog)
+      - if lane=='staging'
+      SELECT cc.*, cl.*, c.*
+FROM content_collection cc
+         JOIN content_language cl ON cl.id = cc.language_id
+         JOIN content_collectiontype c ON c.id = cc.collection_type_id
+WHERE cc.language_id = 3
+  AND cc.approved = TRUE;
+
+      - else
+      SELECT cc.*, cl.*, c.*
+FROM content_collection cc
+         JOIN content_language cl ON cl.id = cc.language_id
+         JOIN content_collectiontype c ON c.id = cc.collection_type_id
+WHERE cc.language_id = 3;
+
+      - loop through result set and query https://tech.churchofjesuschrist.org/mobile/mcms/api/v2/{}/languages/{}/publications/{}?includeRefData=1&includePlaylists=0
+        this is a json document; parse it.
+
+      - need document model here.
+        example here: https://tech.churchofjesuschrist.org/mobile/mcms/api/v2/stage/languages/eng/publications/childrens-songbook?includeRefData=1&includePlaylists=0
+        example of blank body: https://tech.churchofjesuschrist.org/mobile/mcms/api/v2/stage/languages/eng/publications/youth-music?includeRefData=1&includePlaylists=0
+        example of frontmatter: https://tech.churchofjesuschrist.org/mobile/mcms/api/v2/stage/languages/eng/publications/songs-of-devotion-for-everyday-listening?includeRefData=1&includePlaylists=0
+        example of no body but front and backmatter: https://tech.churchofjesuschrist.org/mobile/mcms/api/v2/stage/languages/eng/publications/using-the-hymnbook?includeRefData=1&includePlaylists=0
+
+      - loop through songs, chapters and song_media
+        insert into document, document_media and publication_document
+  g. Sources
+
+  h. Topics
+
+  i. Indexes
+
+  j. FTS
+
+  k. Metadata (new catalog)
+

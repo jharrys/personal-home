@@ -1,0 +1,186 @@
+# Trigger Azure Function - Titan
+#
+# More information can be found in the Azure Functions documentation,
+# as well as examples on how to pass test data to a function:
+# https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#passing-test-data-to-a-function
+#
+# Make sure to update the below calls to suit your function host and port.
+#
+# Call the following endpoint to locally run HTTP and webhook-triggered functions:
+
+GET http://{{host}}:{{port}}/api/Titan{{token}}
+
+###
+
+GET http://{{host}}:{{port}}/api/ClearQueueReaderState?code=843Wo43FYEISL35x5VowXurJR9iseRlWDOj75ZENxJDLeGA/oJkcOw==
+
+###
+
+# Call the following administrative endpoint to trigger non-HTTP functions:
+
+POST http://{{host}}:{{port}}/admin/functions/Titan{{token}}
+Content-Type: application/json
+
+{
+  "input": '{
+  "Id": 0,
+  "FileId": "123_000_11Sean",
+  "LangIsoA3": "eng",
+  "Media": [
+    {
+      "MediaType": "video",
+      "Files": [
+        {
+          "MimeType": "audio/mpeg",
+          "Filename": "sometestfile-1080p.mp4",
+          "SubFileType": null,
+          "Resolution": "1080p",
+          "BitRate": null,
+          "Duration": 10,
+          "Size": 10,
+          "TitanAssetId": "C0E812A557D2F35C01AFBB8F00C393FF506TFILE",
+          "Locations": [
+            {
+              "LocationType": "download",
+              "Path": "HTTPS://SomeTestPath-1080p.mp4",
+              "Stream": null
+            },
+            {
+              "LocationType": "ovp",
+              "Path": null,
+              "Stream": {
+                "AccountId": 48,
+                "VideoId": 5839983252001,
+                "PlayerId": "default",
+                "Id": 123,
+                "RefId": "Some Ref"
+              }
+            },
+            {
+              "LocationType": "youtube",
+              "Path": "https://youtu.be/sGhQym_vhFU",
+              "Stream": null
+            }
+          ]
+        },
+        {
+          "MimeType": "audio/mpeg",
+          "Filename": "sometestfile-720p.mp4",
+          "SubFileType": null,
+          "Resolution": "720p",
+          "BitRate": null,
+          "Duration": 10,
+          "Size": 10,
+          "TitanAssetId": "C0E812A557D2F35C01AFBB8F00C393FF506TFILE",
+          "Locations": [
+            {
+              "LocationType": "download",
+              "Path": "HTTPS://SomeTestPath-720p.mp4",
+              "Stream": null
+            }
+          ]
+        },
+        {
+          "MimeType": "audio/mp4",
+          "Filename": "sometestfile-360p.mp4",
+          "SubFileType": null,
+          "Resolution": "360p",
+          "BitRate": null,
+          "Duration": 10,
+          "Size": 10,
+          "TitanAssetId": "C0E812A557D2F35C01AFBB8F00C393FF506TFILE",
+          "Locations": [
+            {
+              "LocationType": "download",
+              "Path": "HTTPS://SomeTestPath-320p.mp4",
+              "Stream": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "MediaType": "image",
+      "Files": [
+        {
+          "MimeType": "image/jpeg",
+          "Filename": "sometestfile.jpeg",
+          "SubFileType": null,
+          "Resolution": null,
+          "BitRate": null,
+          "Duration": 0,
+          "Size": 100,
+          "TitanAssetId": "C0E812A557D2F35C01AFBB8F00C393FF506IMAGE",
+          "Locations": [
+            {
+              "LocationType": "download",
+              "Path": "HTTPS://SomeTestPath.jpeg",
+              "Stream": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "MediaType": "caption",
+      "Files": [
+        {
+          "MimeType": "text/vtt",
+          "Filename": "sometestcaption.vtt",
+          "SubFileType": null,
+          "Resolution": null,
+          "BitRate": null,
+          "Duration": 0,
+          "Size": 1,
+          "TitanAssetId": null,
+          "Locations": [
+            {
+              "LocationType": "download",
+              "Path": "https://download-caption-eng.vtt",
+              "Stream": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "PublicationType": "Manual",
+  "Title": "Some Title",
+  "Speaker": "Some Speaker",
+  "Keywords": [
+    "1 Keyword",
+    "2 Keyword"
+  ],
+  "Topics": [
+    "1 Topic",
+    "2 Topic"
+  ],
+  "Preparer": "Preparer throw 7",
+  "IpClearance": "Download and Streaming",
+  "IpCode": null,
+  "LanguageBaseFilename": "2018-12-0010-he-was-born-for-you-eng",
+  "TrackId": 0,
+  "WorkId": 1234,
+  "Creator": "The Creator",
+  "Department": "Office Communication Services",
+  "Classification": "Public",
+  "Genre": "A Genre",
+  "Description": "A Test Description",
+  "Artist": "The Artist",
+  "Composer": "Test Composer",
+  "PublishYear": 2021,
+  "PublishMonth": 1,
+  "TitanAssetId": "C0E812A557D2F35C01AFBB8F00C393FF506TESTS",
+  "WorkSha": "C0E812A557D2F35C01AFBB8F00C393FF506TESHA",
+  "TrackSha": null,
+  "RestrictedTo": null,
+  "VoiceType": null,
+  "Album": "Test Album",
+  "HlsDisributionUri": "https://somehls",
+  "RedisTimestamp": "0001-01-01T00:00:00",
+  "JobId": "00000000-0000-0000-0000-000000000000",
+  "MessageType": 11,
+  "ReplyTo": 1,
+  "DeadLetterRetryNumber": 0
+}'
+}

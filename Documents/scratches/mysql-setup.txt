@@ -1,0 +1,15 @@
+~/.my.cnf
+[client]
+password="password"
+
+# new mysql system (no root password)
+mysql -u root -p
+create user 'jharrys'@'%' identified by 'password';
+grant all on *.* to 'jharrys'@'%' with grant options;
+flush privileges;
+create database some_database;
+use some_database;
+
+# import from sql file (have ~/.my.cnf setup so no password is required)
+# may need to modify export.sql at top to "use some_database;"
+mysql < export.sql
