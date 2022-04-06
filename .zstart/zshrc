@@ -237,6 +237,10 @@ bindkey -s "^[;" "^Q echo; ls -lh^J"      # M-l will run "echo; ls -al"
 bindkey "^X^B" vi-find-prev-char          # CXCB will search for character backwards in current line
 bindkey '\ez' vi-repeat-find              # repeat list find either back/for
 
+# For debugging SSL/TLS/HTTPS
+SSLKEYLOGFILE=~/tmp/sslkeyfile
+launchctl setenv SSLKEYLOGFILE $SSLKEYLOGFILE
+
 # Setup my ZSH syntax highlighting options
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern) # by default only main is turned on
 typeset -A ZSH_HIGHLIGHT_STYLES
