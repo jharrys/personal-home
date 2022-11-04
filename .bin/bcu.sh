@@ -16,7 +16,7 @@ done
 
 mkdir -p $(dirname $file)
 echo "*** update of brew" > $file
-/usr/local/bin/brew update 2>/dev/null >> $file
+/usr/local/bin/brew update -f 2>/dev/null >> $file
 echo "*** upgrade of brew" >> $file
 /usr/local/bin/brew upgrade --greedy 2>/dev/null >> $file
 echo "*** cleanup of brew" >> $file
