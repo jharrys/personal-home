@@ -93,3 +93,4 @@ dns-sd -Z _ssh
 export PATH=/usr/local/opt/node@12/bin:$PATH
 export PATH="/usr/local/opt/node@12/bin:$PATH\
 "
+rm -f *(m+3)
