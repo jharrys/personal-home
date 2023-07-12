@@ -1,3 +1,0 @@
-### How to find Oracle's date time format
-
-        SELECT value FROM nls_session_parameters WHERE parameter='NLS_DATE_FORMAT';

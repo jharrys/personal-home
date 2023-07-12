@@ -1,3 +1,0 @@
-# How to tell what Oracle version
-
-    SELECT * FROM V$VERSION;

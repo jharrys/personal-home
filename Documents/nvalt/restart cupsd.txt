@@ -1,2 +1,0 @@
-1. sudo launchctl stop org.cups.cupsd
-2. sudo launchctl start org.cups.cupsd

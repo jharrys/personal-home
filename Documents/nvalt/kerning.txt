@@ -1,2 +1,0 @@
-* To adjust the spacing between letters or characters in a piece of text to be printed.
-* Make letters overlap.

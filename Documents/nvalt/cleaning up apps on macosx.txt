@@ -1,7 +1,0 @@
-Directories to look at for removing cache, support files, etc.
-
-1. ~/Library/Application Support
-2. ~/Library/Caches
-3. ~/Library/Preferences
-4. ~/Library/Saved Application State
-5. ~/Library/PreferencePanes

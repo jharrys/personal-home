@@ -1,3 +1,0 @@
-Received error with sudoers on my mac os x. I get a “permission denied accessing sudoers file.”
-
-The sudoers

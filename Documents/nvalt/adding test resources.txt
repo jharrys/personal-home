@@ -1,5 +1,0 @@
-<testResources>
-      <testResource>
-        <directory>${project.basedir}/netica</directory>
-      </testResource>
-    </testResources>

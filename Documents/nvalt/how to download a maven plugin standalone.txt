@@ -1,5 +1,0 @@
-mvn org.apache.maven.plugins:maven-dependency-plugin:2.6:get -Dartifact=GROUPID:ARTIFACTID:VERSION
-
-Example:
-
-        mvn org.apache.maven.plugins:maven-dependency-plugin:2.6:get -Dartifact=org.apache.maven.plugins:maven-archetype-plugin:3.0.0

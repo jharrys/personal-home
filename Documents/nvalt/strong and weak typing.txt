@@ -1,7 +1,0 @@
-# Strong and weak typing
-
-*Main article: [Strongly typed programming language](http://en.wikipedia.org/wiki/Strongly_typed_programming_language)*
-
-A type system is said to feature **strong typing** when it specifies one or more restrictions on how operations involving values of different data types can be intermixed. A computer language that implements strong typing will prevent the successful execution of an operation on arguments that have the wrong type.
-
-**Weak typing** means that a language implicitly converts (or casts) types when used.

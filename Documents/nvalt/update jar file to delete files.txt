@@ -1,9 +1,0 @@
-jar -u doesn’t support removing files, use instead the unix ‘zip’ utility
-
-to delete a file:
-
-zip -d some.jar fileA
-
-to delete a directory:
-
-zip -d some.jar dirA/*      # this will delete all files under dirA, and then dirA itself

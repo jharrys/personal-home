@@ -1,5 +1,0 @@
-* -I : ignore binaries
-* -n, --line-number: line numbers
-* -l : only file names reported out
-* --exclude
-* --include

@@ -1,5 +1,0 @@
-* Main article: [Automatic parallelization](http://en.wikipedia.org/wiki/Automatic_parallelization)*
-
-Automatic parallelization of a sequential program by a compiler is the holy grail of parallel computing. Despite decades of work by compiler researchers, automatic parallelization has had only limited success.[40]
-
-Mainstream parallel programming languages remain either explicitly parallel or (at best) partially implicit, in which a programmer gives the compiler directives for parallelization. A few fully implicit parallel programming languages exist—SISAL, Parallel Haskell, and (for FPGAs) Mitrion-C.

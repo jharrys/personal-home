@@ -1,6 +1,0 @@
-man page for mount_smbfs on mac says to use options like -f and -d for setting permissions. Also -s for forcing a new session on the server.
-
-to do this from the command line is:
-
-mount -o -s, -f=777, -d=777 -t smbfs //domain;user:password@server/server_share local_share
-

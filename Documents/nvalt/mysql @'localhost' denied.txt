@@ -1,3 +1,0 @@
-trying to login from localhost (i.e., root@localhost, lpjharri@localhost) gets a user denied.
-
-This is because in default installs there is a user ''@'localhost' that is set to be denied login. It is ok to remove this user to allow localhost logins.
