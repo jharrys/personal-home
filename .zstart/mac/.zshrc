@@ -75,8 +75,8 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 export PATH=$PATH:/usr/local/opt/python@2/libexec/bin:$JAVA_HOME/bin
 
-# setup rust environment
-source "$HOME/.cargo/env"
+# setup rust environment - removed on 7/13/2023
+# source "$HOME/.cargo/env"
 #******************************************
 # docker: check if docker-machine is up (using VirtualBox in headless mode)
 #******************************************

@@ -61,7 +61,8 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-plugins=(nvm gradle common-aliases battery jj-copybuffer copydir copyfile dircycle docker git history osx urltools shrink-path zsh-navigation-tools)
+# uri for plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+plugins=(aliases battery common-aliases copybuffer copyfile copypath dircycle docker git gradle history macos nvm shrink-path urltools zsh-navigation-tools)
 
 # Environment settings
 
@@ -237,9 +238,9 @@ bindkey -s "^[;" "^Q echo; ls -lh^J"      # M-l will run "echo; ls -al"
 bindkey "^X^B" vi-find-prev-char          # CXCB will search for character backwards in current line
 bindkey '\ez' vi-repeat-find              # repeat list find either back/for
 
-# For debugging SSL/TLS/HTTPS
-SSLKEYLOGFILE=~/tmp/sslkeyfile
-launchctl setenv SSLKEYLOGFILE $SSLKEYLOGFILE
+# For debugging SSL/TLS/HTTPS - uncomment when debugging stuff that uses ssl
+#SSLKEYLOGFILE=~/tmp/sslkeyfile
+#launchctl setenv SSLKEYLOGFILE $SSLKEYLOGFILE
 
 # Setup my ZSH syntax highlighting options
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern) # by default only main is turned on
