@@ -62,7 +62,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # uri for plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-plugins=(aliases battery common-aliases copybuffer copyfile copypath dircycle docker git gradle history macos nvm shrink-path urltools zsh-navigation-tools)
+plugins=(aliases battery common-aliases copybuffer copyfile copypath dircycle docker git gradle history jsontools macos nvm shrink-path ssh-agent urltools zsh-navigation-tools)
 
 # Environment settings
 
