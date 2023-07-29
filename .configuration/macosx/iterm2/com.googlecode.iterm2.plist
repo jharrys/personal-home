@@ -8674,11 +8674,11 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>120</integer>
+			<integer>240</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Boost</key>
-			<real>0.019873595505617979</real>
+			<real>0.021199482549888845</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -8691,15 +8691,15 @@
 			<key>Cursor Guide Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.0607757568359375</real>
+				<real>0.31809282302856445</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.73377156257629395</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.93303805589675892</real>
+				<real>0.61754987398776529</real>
 				<key>Red Component</key>
-				<real>0.7274017333984375</real>
+				<real>0.26063967736858729</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -8711,7 +8711,7 @@
 				<string>0</string>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>2</integer>
+			<integer>1</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -8729,7 +8729,7 @@
 			<key>Draw Powerline Glyphs</key>
 			<true/>
 			<key>Flashing Bell</key>
-			<false/>
+			<true/>
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -9189,6 +9189,8 @@
 			<string>Menlo-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
+			<key>Open Password Manager Automatically</key>
+			<true/>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -9196,15 +9198,15 @@
 			<key>Prevent Opening in a Tab</key>
 			<false/>
 			<key>Prompt Before Closing 2</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Reduce Flicker</key>
 			<false/>
 			<key>Right Option Key Sends</key>
 			<integer>2</integer>
 			<key>Rows</key>
-			<integer>25</integer>
+			<integer>32</integer>
 			<key>Screen</key>
-			<integer>-1</integer>
+			<integer>-2</integer>
 			<key>Scrollback Lines</key>
 			<integer>0</integer>
 			<key>Scrollback With Status Bar</key>
@@ -9222,12 +9224,16 @@
 			</dict>
 			<key>Selection Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<string>1</string>
+				<real>0.53252039842618615</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<string>0.8353</string>
+				<real>0.95228433609008789</real>
 				<key>Red Component</key>
-				<string>0.7098</string>
+				<real>0.91229656244921953</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -9382,7 +9388,7 @@
 				</dict>
 			</array>
 			<key>Space</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>Status Bar Layout</key>
 			<dict>
 				<key>advanced configuration</key>
@@ -9800,7 +9806,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>2</integer>
+			<integer>11</integer>
 			<key>Working Directory</key>
 			<string>/Users/lpjharri</string>
 		</dict>
