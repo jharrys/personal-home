@@ -166,6 +166,7 @@ winhome
 WorkCenter
 Workspaces
 *.hprof
+*.session
 
 # Part of the tmux-resurrect plugin
 tmux_resurrect*
