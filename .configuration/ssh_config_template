@@ -12,6 +12,11 @@ LogLevel QUIET
 # hang around for 2 hours after logging out.
 ControlPersist 2h
 
+# Disable SSH host key checking for all hosts
+# UserKnownHostsFile to /dev/null should be done to avoid prompts in non-interactive scripts
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
+
 ControlMaster auto
 ControlPath ~/.ssh/connections/%r_%h_%p
 #LogLevel DEBUG3
