@@ -1,9 +1,0 @@
-# For MacOS to set the JDK for a Homebrew installed JDK
-# requires one parameter: the jdk version installed on this machine
-# script does not check to see if argument is a valid version on this machine -- too lazy
-[ $# -lt 1 ] && echo "Need the jdk version that's installed on this machine as argument" && return 1
-jdkver=$1
-OLDJDKHOME=$JAVA_HOME
-export JAVA_HOME=$(/usr/libexec/java_home -v $jdkver)
-[[ $OLDJDKHOME == $JAVA_HOME ]] && echo "$jdkver does not exist on machine or system was already set at $jdkver" && return 0
-echo $JAVA_HOME

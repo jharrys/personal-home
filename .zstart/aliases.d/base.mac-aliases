@@ -64,10 +64,6 @@ alias sys_repeatoff='defaults write -g ApplePressAndHoldEnabled -bool true'
 # Update locate database
 alias updatelocate='sudo /usr/libexec/locate.updatedb'                                                                                                        # update the mac os x locate database
 
-# for setting JAVA environment
-alias setJdk11='export JAVA_HOME=$(/usr/libexec/java_home -v 11); export PATH=$JAVA_HOME/bin:$PATH'                                                           # setup the jdk home environment for 1.8
-alias setJdk15='export JAVA_HOME=$(/usr/libexec/java_home -v 15); export PATH=$JAVA_HOME/bin:$PATH'                                                           # setup the jdk home environment for 1.8
-
 # chflags - changes file flags - using it here to unhide hidden directories
 alias unhide='chflags nohidden'
 alias hide='chflags hidden'

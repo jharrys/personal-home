@@ -57,15 +57,21 @@ export NODE_PATH="/usr/local/lib/node_modules"
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
 #******************************************
-# java/groovy/maven settings
-# Java - installed via Oracle dmg
-# Java environment setup use /usr/libexec/java_home executable - default to jdk 8
-# Groovy - installed via brew
-# Maven - installed via brew
+# 9/21/2023
+# java: using temarin and openjdk
+# using jenv - libexec/java_home really doesn't work anymore or i don't know how to use it
+# certain directories and their children can be set for specific java versions:
+# jenv local VERSION
+# list all
+# jenv versions
+# set globally
+# jenv global VERSION
+# The system default on my work laptop is openjdk 21 "system" when jenv versions is run.
 #******************************************
+export JENV_ROOT=/usr/local/Cellar/jenv/0.5.6
+eval "$(jenv init -)"
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 20)
-#export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"    # keeps the java icon out of the mac os x dock
+export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
