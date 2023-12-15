@@ -1,0 +1,23 @@
+Xfinity Assistant (10/14/2023, 08:51:28 PM): "The Xfinity Assistant can help you resolve many issues - simply ask your question below or visit xfinity.com."
+Xfinity Assistant (10/26/2023, 09:14:15 PM): "The Xfinity Assistant can help you resolve many issues - simply ask your question below or visit xfinity.com."
+Xfinity Assistant (10/31/2023, 02:20:16 AM): "Good evening, John,Thank you for being an Xfinity customer!How can I help you today? To get started, here are some suggestions. If they're not what you're looking for, just type what you need."
+Xfinity Assistant (10/31/2023, 02:20:16 AM): "Your recent statement is available"
+	Buttons: More Details | Dismiss
+Xfinity Assistant (10/31/2023, 02:20:16 AM): "Reliably fast speeds, even at peak times when everyone's online."
+	Buttons: More Details | Dismiss
+Xfinity Assistant (10/31/2023, 02:20:16 AM): "Unlock special perks just for being a customer. There's no cost to join, no points to track, and signing up is easy."
+	Buttons: Get started | Dismiss
+	Buttons: Manage my account | Billing and payments | Troubleshooting help | Xfinity Privacy Center
+JOHN (10/31/2023, 02:20:39 AM): "was there a change in my cable plan?"
+Xfinity Assistant (10/31/2023, 02:20:39 AM): "X1 brings your live TV, sports, streaming, and music together. Easily control it all with our award-winning Voice Remote. And watch live on our Xfinity Stream app."
+Xfinity Assistant (10/31/2023, 02:20:39 AM): "How can I help you with your Xfinity TV?"
+	Buttons: Change my TV package | Add a channel | Remove a channel | Add additional TV box | View my channel lineup | Shop Offers | Troubleshoot my TV
+JOHN (10/31/2023, 02:24:11 AM): "talk to an agent"
+Xfinity Assistant (10/31/2023, 02:24:11 AM): "Thanks, I can help with most issues, but Iâll put you in touch with an agent if you need more assistance. What do you need help with today?"
+	Buttons: Billing | Internet | TV &amp; Streaming | Xfinity Voice  | Xfinity Home Security | Activation
+JOHN (10/31/2023, 02:24:22 AM): "TV &amp; Streaming"
+Xfinity Assistant (10/31/2023, 02:24:22 AM): "Need help with Xfinity TV? Like an agent, I can help you with:"
+	Buttons: TV troubleshooting | Xfinity Flex streaming box | Ordering or troubleshooting a remote | Updating TV equipment | Managing TV plan | Chat with an agent
+JOHN (10/31/2023, 02:24:30 AM): "Chat with an agent"
+Xfinity Assistant (10/31/2023, 02:24:30 AM): "Iâm sorry, weâre experiencing longer than usual wait times. There arenât any chat agents available right now, but you can call 1-800-XFINITY or try chatting again later.Here's some helpful info and common solutions for digital support:"
+	Buttons: Ask me another question | Visit My Account | Troubleshoot my service | Manage my plan | Shop Xfinity
