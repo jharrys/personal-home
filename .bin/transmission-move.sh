@@ -24,7 +24,10 @@ for file in "${SOURCE_DIR}"/*
 do
   echo "found $file" >> "${IDLOGFILE}"
   if [ "${file##*.}" == "mp4" ]; then
+    edate "Start copy!"
     cp -v "$file" $DEST_DIR >> "${IDLOGFILE}" 2>&1 &
+    wait
+    edate "End copy."
     RESULT=$?
   fi
   if [ $RESULT -gt 0 ]; then
