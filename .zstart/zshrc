@@ -101,7 +101,7 @@ setopt NO_NOMATCH   # setting EXTENDED_GLOB breaks git-rev syntax (i.e., HEAD^ .
 # Mailcheck configuration
 
 MAILCHECK=15
-mailpath=(/var/mail/jharris)
+mailpath=(/var/mail/jharrys)
 export mailpath MAILCHECK
 
 # Global aliases

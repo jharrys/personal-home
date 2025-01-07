@@ -256,8 +256,8 @@ alias gcli='git clean -X -f'
 # my personal git functions
 # -----------------------------------
 
-alias gpr='gitworkflow_gpr.sh -m jharris@sofi.org -o'
-alias gprm='gitworkflow_gpr.sh -m jharris@sofi.org'
+alias gpr='gitworkflow_gpr.sh -m jharrys@sofi.org -o'
+alias gprm='gitworkflow_gpr.sh -m jharrys@sofi.org'
 alias gpro='gitworkflow_gpr.sh -o'
 alias gprr='gitworkflow_gpr.sh'
 
