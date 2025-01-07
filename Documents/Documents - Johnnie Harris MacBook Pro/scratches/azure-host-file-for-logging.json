@@ -1,0 +1,12 @@
+{
+  "other-stuff": "here",
+  "logging": {
+    "fileLoggingMode": "always",
+    "logLevel": {
+      "default": "Information",
+      "Host.Results": "Error",
+      "Function": "Trace",
+      "Host.Aggregator": "Trace"
+    }
+  }
+}
