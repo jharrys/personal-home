@@ -1,2 +1,0 @@
-sort_by(data.unit.organizations[], &orgTypes[0].id) // all and sorted by orgTypes.id
-sort_by(data.unit.organizations[? parentUnitOrg == null], &orgTypes[0].id) // top level orgs and sorted by orgTypes.id
