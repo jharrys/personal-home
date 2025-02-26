@@ -11798,6 +11798,8 @@
 		<string>Notes</string>
 		<string>Recent Directories</string>
 	</array>
+	<key>TraditionalVisualBell</key>
+	<true/>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
 	<key>URLHandlersByGuid</key>
