@@ -101,3 +101,5 @@ then
     done
 fi
 
+
+source /Users/jharrys/.config/broot/launcher/bash/br
