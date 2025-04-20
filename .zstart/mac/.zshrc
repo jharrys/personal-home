@@ -81,6 +81,10 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 export PATH=$PATH:/usr/local/opt/python@2/libexec/bin:$JAVA_HOME/bin
 
+#******************************************
+# set manpath
+export MANPATH=$(manpath):$HOME/man
+
 # setup rust environment - removed on 7/13/2023
 # source "$HOME/.cargo/env"
 #******************************************
