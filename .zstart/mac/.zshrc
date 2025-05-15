@@ -57,22 +57,17 @@ export NODE_PATH="/usr/local/lib/node_modules"
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
 #******************************************
-# 9/21/2023
-# java: using temarin and openjdk
-# using jenv - libexec/java_home really doesn't work anymore or i don't know how to use it
-# certain directories and their children can be set for specific java versions:
-# jenv local VERSION
-# list all
-# jenv versions
-# set globally
-# jenv global VERSION
-# The system default on my work laptop is openjdk 21 "system" when jenv versions is run.
-#******************************************
-export JENV_ROOT=/usr/local/Cellar/jenv/0.5.6
+# 4/2/2025
+# precedence:
+# global (lowest priority)
+# local
+# shell (highest priority): if you set shell, then moving to a dir with local/.java-version will not work as shell version overrides
+# you can unset "jenv shell --unset"
+# ******************************************
+export PATH="$HOME/.jenv/bin:$PATH"¬
 eval "$(jenv init -)"
 
-export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec
-
+# set gradle
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 #******************************************
