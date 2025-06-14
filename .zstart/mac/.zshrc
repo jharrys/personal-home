@@ -45,6 +45,20 @@ export CDPATH
 cdpath=(~/ /Volumes ~/Documents ~/git ~/Google\ Drive/Development ~/Google\ Drive/Development/Archive)
 
 #******************************************
+# python settings (for 2 & 3)
+#******************************************
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+#******************************************
+# Rust/Cargo
+#******************************************
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+#******************************************
 # nodejs settings
 #******************************************
 
@@ -74,7 +88,7 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 # additional path settings
 #******************************************
 
-export PATH=$PATH:/usr/local/opt/python@2/libexec/bin:$JAVA_HOME/bin
+export PATH=$PATH:$JAVA_HOME/bin
 
 #******************************************
 # set manpath
