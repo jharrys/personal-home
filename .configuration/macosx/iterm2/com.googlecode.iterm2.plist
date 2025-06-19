@@ -6,6 +6,12 @@
 	<true/>
 	<key>AggressiveFocusFollowsMouse</key>
 	<true/>
+	<key>AiMaxTokens</key>
+	<integer>8192</integer>
+	<key>AiModel</key>
+	<string>llama3:latest</string>
+	<key>AitermURL</key>
+	<string>http://localhost:11434/v1/chat/completions</string>
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AlternateMouseScroll</key>
@@ -11837,7 +11843,7 @@
 				<string>1</string>
 			</dict>
 			<key>Bonjour Service Address</key>
-			<string>192.168.86.21</string>
+			<string>192.168.86.25</string>
 			<key>Bound Hosts</key>
 			<array/>
 			<key>Character Encoding</key>
@@ -11847,7 +11853,7 @@
 			<key>Columns</key>
 			<integer>120</integer>
 			<key>Command</key>
-			<string>ssh 192.168.86.21</string>
+			<string>ssh 192.168.86.25</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -11911,7 +11917,7 @@
 				<string>1</string>
 			</dict>
 			<key>Guid</key>
-			<string>04E8E0C4-9E70-4C24-9753-16474F942DA5</string>
+			<string>D0849154-538F-4174-BA4C-EB085E57813C</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -13157,7 +13163,7 @@
 				<string>1</string>
 			</dict>
 			<key>Guid</key>
-			<string>7BD3AC52-4C4C-4731-BF4D-37FE5CDB8D25</string>
+			<string>17E264EE-A66E-409B-A5DD-EADBCCDB20F3</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
