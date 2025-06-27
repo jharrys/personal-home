@@ -1,0 +1,62 @@
+# bspwm/sxhkd
+# source: https://github.com/baskerville/bspwm/blob/master/examples/sxhkdrc
+
+- name: bspwm
+  keybinds:
+    - name: terminal
+      key: super + Return
+    - name: program launcher
+      key: super + space
+    - name: reload sxhkd
+      key: super + Escape
+    - name: quit/escape bspwm
+      key: super + alt + {q,r}
+
+    - name: toggle tiled and monocle layout
+      key: super + m
+    - name: swap current node and biggest window
+      key: super + g
+    - name: send newest node to newest preselection
+      key: super + y
+
+    - name: set tiled state
+      key: super + t
+    - name: set pseudo tiled state
+      key: super + shift + t
+    - name: set floating state
+      key: super + s
+    - name: set fullscreen state
+      key: super + f
+    - name: set node to {marked, locked, sticky, private}
+      key: super + ctrl + {m, x, y, z}
+
+    - name: focus node in direction
+      key: super + h,j,k,l
+    - name: focus {parent, brother, first, second} node
+      key: super + p, b, comma, period
+    - name: focus {next, prev} window in current desktop
+      key: super + {_, shift +} c
+    - name: focus {next, prev} desktop
+      key: super + bracket{left, right}
+    - name: focus last node/desktop
+      key: super + {grave, tab}
+    - name: focus {older, newer} node in history
+      key: super + {o, i}
+    - name: focus or send to desktop
+      key: super + {_, shift +} 1-9,0
+
+    - name: preselect direction
+      key: super + ctrl + {h,j,k,l}
+    - name: preselect ratio
+      key: super + ctrl + {1-9}
+    - name: cancel preselection for focused node
+      key: super + ctrl + space
+    - name: cancel preselection for focused desktop
+      key: super + ctrl + shift + space
+
+    - name: expand window
+      key: super + alt + {h,j,k,l}
+    - name: contract window
+      key: super + alt + shift + {h,j,k,l}
+    - name: move floating window
+      key: super + {Left,Down,Up,Right}

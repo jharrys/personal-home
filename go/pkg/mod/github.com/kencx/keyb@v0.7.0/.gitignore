@@ -1,0 +1,9 @@
+*.json
+*.toml
+*.ini
+*.gitcommit
+
+testdata/keyb*
+keyb
+
+dist/

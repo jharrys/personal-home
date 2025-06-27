@@ -1,0 +1,23 @@
+# https://github.com/cheat/cheatsheets
+- name: dd
+  keybinds:
+    - name: "Backup disk partition with dd"
+      key: "dd if=/dev/sda1 of=~/localdisk_sda1.img"
+    - name: "Backup disk partition with dd and compress"
+      key: "dd if=/dev/sda1 | gzip -c > ~/localdisk_sda1.img.gz"
+    - name: "Restore disk partition with dd"
+      key: "dd if=~/localdisk_sda1.img of=/dev/sda1"
+    - name: "Restore disk partition with dd  with decompression"
+      key: "gunzip -c ~/localdisk_sda1.img.gz | dd of=/dev/sda1"
+    - name: "Every iteration, we read 512 Bytes."
+      key: "dd if=/dev/urandom of=/tmp/test.txt count=2 bs=512"
+    - name: "Create fixed size file with dd. Use sizes such as K, M and G with bs"
+      key: "dd if=/dev/zero of=/root/test bs=1024 count=1"
+    - name: "Convert text to lower case with dd and conv"
+      key: "dd if=filetoconvert.txt of=convertedfile.txt conv=lcase"
+    - name: "dd with the built-in `progress` functionality"
+      key: "dd if=/dev/zero of=/dev/null bs=128M status=progress"
+    - name: "dd with graphical return"
+      key: "dcfldd if=/dev/zero of=/dev/null bs=500K"
+    - name: "Create a 1MB file with zero allocated blocks:"
+      key: "dd if=/dev/zero of=foo1 seek=1 bs=1M count=0"
