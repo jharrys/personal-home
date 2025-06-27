@@ -45,6 +45,14 @@ export CDPATH
 cdpath=(~/ /Volumes ~/Documents ~/git ~/Google\ Drive/Development ~/Google\ Drive/Development/Archive)
 
 #******************************************
+# go settings
+#******************************************
+export GOROOT="$(brew --prefix golang)/libexec"
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN:$GOROOT/bin"
+
+#******************************************
 # python settings (for 2 & 3)
 #******************************************
 
