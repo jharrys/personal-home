@@ -1,5 +1,5 @@
 {
-  "theme": "Default",
+  "theme": "Dracula",
   "selectedAuthType": "oauth-personal",
-  "preferredEditor": "vim"
+  "preferredEditor": "idea"
 }
