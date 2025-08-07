@@ -52,7 +52,7 @@
     ; filemode = default is true; false tells git to ignore the unix filemode
     ;   **windows or cygwin set to false
     filemode = false
-	hooksPath = /Users/jharris/.bin/git/hooks
+	hooksPath = /Users/johnnie.harris/.bin/git/hooks
 
 # Configure options for commits
 [commit]

@@ -18,6 +18,8 @@
 	<integer>0</integer>
 	<key>AIVendor</key>
 	<integer>1</integer>
+	<key>Actions</key>
+	<array/>
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AggressiveFocusFollowsMouse</key>
@@ -8436,6 +8438,8 @@
 	<string>Post Notification</string>
 	<key>MaxVertically</key>
 	<true/>
+	<key>NeverBlockSystemShutdown</key>
+	<true/>
 	<key>NeverWarnAboutShortLivedSessions_0F170A65-9AB8-41BD-AE5C-64935BE8FFB9</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_5EDC14C4-9592-4ED8-9C59-0FAEC4D997B5</key>
@@ -9231,7 +9235,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>ls -al	</string>
+			<string>ls</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -10614,7 +10618,7 @@
 				<real>1</real>
 			</dict>
 			<key>Badge Text</key>
-			<string></string>
+			<string>\(user.funny)</string>
 			<key>Blend</key>
 			<real>0.51310425190077302</real>
 			<key>Blink Allowed</key>
@@ -10710,6 +10714,8 @@
 			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -11108,6 +11114,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Load Shell Integration Automatically</key>
+			<true/>
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
@@ -11877,7 +11885,7 @@
 				<string>1</string>
 			</dict>
 			<key>Bonjour Service Address</key>
-			<string>fe80::1494:a5ff:fe6b:ea8f</string>
+			<string>192.168.86.34</string>
 			<key>Bound Hosts</key>
 			<array/>
 			<key>Character Encoding</key>
@@ -11887,7 +11895,7 @@
 			<key>Columns</key>
 			<integer>120</integer>
 			<key>Command</key>
-			<string>ssh fe80::1494:a5ff:fe6b:ea8f</string>
+			<string>ssh 192.168.86.34</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -11951,7 +11959,7 @@
 				<string>1</string>
 			</dict>
 			<key>Guid</key>
-			<string>F734A66C-7FDA-46B9-A55E-3310BC0729B0</string>
+			<string>95F65F4A-F5EE-4F69-B594-BC5B3BBFAD0B</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -12910,7 +12918,7 @@
 		</dict>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
-	<false/>
+	<true/>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
@@ -12978,9 +12986,11 @@
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
-	<false/>
-	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
+	<key>PromptOnQuitEvenIfThereAreNoWindows</key>
+	<true/>
+	<key>QuitWhenAllWindowsClosed</key>
+	<false/>
 	<key>ReportRightClick</key>
 	<true/>
 	<key>RightCommand</key>
@@ -13006,7 +13016,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.29906999690358232</real>
+	<real>0.39949930181735893</real>
 	<key>SshIntegrationForURLs</key>
 	<true/>
 	<key>StatusBarPosition</key>
@@ -13026,7 +13036,7 @@
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabStyleWithAutomaticOption</key>
-	<integer>6</integer>
+	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>1</integer>
 	<key>TerminalMargin</key>
@@ -13041,9 +13051,7 @@
 	<true/>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Snippets</string>
-		<string>Notes</string>
-		<string>Recent Directories</string>
+		<string>Codecierge</string>
 	</array>
 	<key>TraditionalVisualBell</key>
 	<true/>

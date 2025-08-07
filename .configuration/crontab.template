@@ -1,5 +1,5 @@
 #HOME=/opt
-PATH=/Users/jharris/.bin:/usr/local/bin:/usr/bin:/bin
+PATH=${HOME}/.bin:/usr/local/bin:/usr/bin:/bin
 SHELL=/usr/bin/zsh
 #MAILTO=email@example.com
 # minute hour dayofmonth month dayofweek

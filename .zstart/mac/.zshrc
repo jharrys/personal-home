@@ -63,10 +63,10 @@ export MANPATH=$(manpath):$HOME/man
 source <(fzf --zsh)
 
 # br is a cool tui file explorer based on fzf
-source /Users/jharrys/.config/broot/launcher/bash/br
+source /Users/johnnie.harris/.config/broot/launcher/bash/br
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/jharrys/.docker/completions $fpath)
+fpath=(/Users/johnnie.harris/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 

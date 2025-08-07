@@ -133,8 +133,8 @@ alias sbtt='sbt -Dsbt.version=${SBT_ALTERNATE}'
 # RC (my ssh run command)
 alias rcls='rc ls -jj -h'
 alias rcll='rc ls -al -jj -h'
-alias rcnotmux='rc touch /home/jharrys/tmp/notmux -jj -h'
-alias rcrmnotmux='rc rm -f /home/jharrys/tmp/notmux -jj -h'
+alias rcnotmux='rc touch "$HOME"/tmp/notmux -jj -h'
+alias rcrmnotmux='rc rm -f "$HOME"/tmp/notmux -jj -h'
 
 # cool cal functions
 ycal ()
@@ -151,7 +151,7 @@ cal -m $1 | GREP_COLORS="mt=07;32" \grep --color=always -EC 6 " $2 |^$2 " | GREP
 alias loi='lsof -i -n -P' # show all open i4 and i6 ports without port or dns resolution
 alias lod='lsof +D' # recurse through subdirectories
 alias lon='lsof -c' # search by name; can have multiple -c
-alias lou='lsof -u' # search user; can do \^jharrys to find not jharrys
+alias lou='lsof -u' # search user; can do \^userToFind to find not userToFind
 alias lop='lsof -p' # search by pid
 # -t tells lsof to output only pids
 alias loit='lsof -t -i -n -P'

@@ -2,7 +2,7 @@
 
 cwd=$(pwd)
 
-if [[ "$cwd" =~ ^\/Users\/jharris\/git\/.* ]];
+if [[ "$cwd" =~ ^\/Users\/johnnie.harris\/git\/.* ]];
 then
 
   branch_name=$(git symbolic-ref -q HEAD)

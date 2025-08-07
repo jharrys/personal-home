@@ -1,7 +1,7 @@
 #!/bin/sh
 # copied from sofi-kubernetes/scripts/kraken-register-service.sh and made it mine without the ssh call.
 # i want to add the reverse or forward tunnel using ~C for great control.
-SCRIPTLOC="/Users/jharris/git/sofi-kubernetes/scripts"
+SCRIPTLOC="/Users/johnnie.harris/git/sofi-kubernetes/scripts"
 
 function instructions {
     RED="\033[0;31m"
