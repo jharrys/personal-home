@@ -9235,7 +9235,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>ls</string>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -9683,7 +9683,7 @@
 			<key>Open Password Manager Automatically</key>
 			<true/>
 			<key>Open Toolbelt</key>
-			<true/>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -10420,7 +10420,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>10</integer>
+			<integer>8</integer>
 			<key>Working Directory</key>
 			<string>/Users/lpjharri</string>
 		</dict>
@@ -11864,7 +11864,7 @@
 				<real>1</real>
 			</dict>
 			<key>Badge Text</key>
-			<string></string>
+			<string>\(user.funny)</string>
 			<key>Blend</key>
 			<real>0.51310425190077302</real>
 			<key>Blink Allowed</key>
@@ -11885,7 +11885,7 @@
 				<string>1</string>
 			</dict>
 			<key>Bonjour Service Address</key>
-			<string>192.168.86.34</string>
+			<string>fe80::e08f:66ff:fee2:9cbc</string>
 			<key>Bound Hosts</key>
 			<array/>
 			<key>Character Encoding</key>
@@ -11895,7 +11895,7 @@
 			<key>Columns</key>
 			<integer>120</integer>
 			<key>Command</key>
-			<string>ssh 192.168.86.34</string>
+			<string>ssh fe80::e08f:66ff:fee2:9cbc</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -11959,11 +11959,13 @@
 				<string>1</string>
 			</dict>
 			<key>Guid</key>
-			<string>95F65F4A-F5EE-4F69-B594-BC5B3BBFAD0B</string>
+			<string>10F2AED7-6B6D-4A58-B8B3-78B7EC1D199E</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -12362,6 +12364,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Load Shell Integration Automatically</key>
+			<true/>
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>

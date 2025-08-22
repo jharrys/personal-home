@@ -34,6 +34,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias vi='/usr/local/bin/vim'
 alias getw='wget -N -r -nH -nd --no-parent'
+alias rt='trash -s'
 
 ###### Edit startup files ######
 alias cdmz='cd $ZSTART'
