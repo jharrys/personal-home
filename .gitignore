@@ -37,6 +37,7 @@ configuration/Sublime Text 2/Backup
 .a*
 .bash_history
 .boswars
+.bytebase
 .bzr*
 .cache
 .cargo/

@@ -223,11 +223,11 @@ zle -N expand-alias-space
 # ----------------------------------
 # PG user info needed for the perf-test app
 # ----------------------------------
-export PGUSER=
-export PGHOST=localhost
-export PGPASSWORD=
-export PGDATABASE=sofi_performance
-export PGPORT=15900
+#export PGUSER=
+#export PGHOST=localhost
+#export PGPASSWORD=
+#export PGDATABASE=sofi_performance
+#export PGPORT=15900
 
 # Key bindings here
 bindkey " " expand-alias-space          # type an alias then type M-space - it will expand what the alias is
