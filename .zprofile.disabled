@@ -1,5 +1,5 @@
 
 
 # Added by Toolbox App
-export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/Users/johnnie.harris/Library/Application Support/JetBrains/Toolbox/scripts"
 

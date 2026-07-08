@@ -32,7 +32,7 @@ alias lld='ls -Alh |grep ^d'                                                    
 alias lls='ls -lhSr'                                                                                                                                          # list detail by size reverse order
 alias mv='mv -i'
 alias cp='cp -i'
-alias vi='/usr/local/bin/vim'
+alias vi='/usr/bin/vim'
 alias getw='wget -N -r -nH -nd --no-parent'
 alias rt='trash -s'
 
