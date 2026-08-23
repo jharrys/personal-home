@@ -9217,7 +9217,7 @@
 			<key>HotKey Key Code</key>
 			<integer>0</integer>
 			<key>HotKey Modifier Activation</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>HotKey Modifier Flags</key>
 			<integer>0</integer>
 			<key>HotKey Window Animates</key>
@@ -11885,7 +11885,7 @@
 				<string>1</string>
 			</dict>
 			<key>Bonjour Service Address</key>
-			<string>fe80::e08f:66ff:fee2:9cbc</string>
+			<string>192.168.86.54</string>
 			<key>Bound Hosts</key>
 			<array/>
 			<key>Character Encoding</key>
@@ -11895,7 +11895,7 @@
 			<key>Columns</key>
 			<integer>120</integer>
 			<key>Command</key>
-			<string>ssh fe80::e08f:66ff:fee2:9cbc</string>
+			<string>ssh 192.168.86.54</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -11938,7 +11938,7 @@
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
-			<string>grinch</string>
+			<string>podcaster</string>
 			<key>Disable Printing</key>
 			<false/>
 			<key>Disable Smcup Rmcup</key>
@@ -11959,7 +11959,7 @@
 				<string>1</string>
 			</dict>
 			<key>Guid</key>
-			<string>10F2AED7-6B6D-4A58-B8B3-78B7EC1D199E</string>
+			<string>2F3381A1-06CF-4EF5-A07B-E9BF41D5CEED</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -12373,7 +12373,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>grinch</string>
+			<string>podcaster</string>
 			<key>Non Ascii Font</key>
 			<string>Menlo-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -12394,6 +12394,8 @@
 			<integer>2</integer>
 			<key>Rows</key>
 			<integer>35</integer>
+			<key>Run Command In Login Shell</key>
+			<true/>
 			<key>Screen</key>
 			<integer>-2</integer>
 			<key>Scrollback Lines</key>
