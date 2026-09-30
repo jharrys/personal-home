@@ -33,8 +33,9 @@ do
   if [ $RESULT -gt 0 ]; then
     edate "cp did not succeed, have to do it manually."
     exit 1
+  else
+    edate "cp succeeded!"
   fi
 done
-edate "cp succeded!"
 exit 0
 
