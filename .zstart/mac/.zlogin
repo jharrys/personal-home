@@ -3,3 +3,7 @@
 # most systems start X at boot up so this is essentially useless today.
 #
 # I leave it intentionally blank for remembering zsh's process.
+
+[[ -r ${ZSTART:-~/.zstart}/zdebug.zsh ]] && source ${ZSTART:-~/.zstart}/zdebug.zsh
+zdebug_in '$ZDOTDIR/.zlogin'
+zdebug_out

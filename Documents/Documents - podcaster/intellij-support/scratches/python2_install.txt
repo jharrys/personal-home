@@ -1,0 +1,16 @@
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+python get-pip.py
+pip install virtualenv
+~/Library/Python/2.7/bin/pip  install virtualenv
+virtualenv --python=/usr/bin/python venv
+source venv/bin/activate
+
+
+for musiccms create a file call localsetup and add (no #! because you'll do 'source localsetup')
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+export CFLAGS="-I/usr/local/opt/icu4c/include"
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+

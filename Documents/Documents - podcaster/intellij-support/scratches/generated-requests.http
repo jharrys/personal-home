@@ -1,0 +1,53 @@
+###
+GET https://locationsseo-dev.churchofjesuschrist.org/seo/api/v1/facility/locations/5967075-01-01/wards
+Accept: application/json
+
+<> 2020-06-09T071444.200.json
+
+###
+###
+GET https://locationsseo-dev.churchofjesuschrist.org/seo/api/v1/facility/locations/5967075-01-01
+
+<> 2020-06-09T071320.200.json
+
+###
+GET https://locationsseo-dev.churchofjesuschrist.org/seo/api/v1/missionary/areas/253979
+
+<> 2020-06-09T071525.200.json
+
+###
+GET https://locationsseo-dev.churchofjesuschrist.org/seo/api/v1/yext/locations/5967075-01-01
+
+<> 2020-06-09T071658.200.json
+
+###
+POST https://locationsseo-dev.churchofjesuschrist.org/seo/api/v1/yext/locations/5967075-01-01
+
+<> 2020-06-09T071840.400.json
+
+###
+POST https://locationsseo-dev.churchofjesuschrist.org/seo/api/v1/yext/locations
+
+<> 2020-06-09T072955.200.json
+<> 2020-06-09T072022.502.txt
+
+###
+GET http://localhost:8080/admin/approve/items
+
+###
+POST http://localhost:8080/admin/approved/catalogs
+Content-Type: application/json
+
+[
+  {
+    "approved": true,
+    "createdAt": "2021-09-29T21:47:31.830Z",
+    "id": "string",
+    "lang": "string",
+    "name": "string",
+    "type": "DEFAULT",
+    "updatedAt": "2021-09-29T21:47:31.830Z",
+    "uri": "string",
+    "version": 0
+  }
+]

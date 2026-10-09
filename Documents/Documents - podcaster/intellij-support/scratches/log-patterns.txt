@@ -1,0 +1,5 @@
+Springboot default log pattern (also used by audiorecordings)
+%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %property{pid} --- [%thread] %logger : %msg
+
+Maven
+%d [%thread] %level %logger - %m%n

@@ -9006,7 +9006,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>5</real>
+			<real>0.10000000000000001</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -9206,6 +9206,8 @@
 			<string>5EDC14C4-9592-4ED8-9C59-0FAEC4D997B5</string>
 			<key>Has Hotkey</key>
 			<true/>
+			<key>Height Percentage</key>
+			<integer>-1</integer>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -10347,7 +10349,7 @@
 			<key>Title Components</key>
 			<integer>34</integer>
 			<key>Transparency</key>
-			<real>0.3958640286752248</real>
+			<real>0.49586402867522489</real>
 			<key>Triggers</key>
 			<array>
 				<dict>
@@ -10467,8 +10469,10 @@
 			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
+			<key>Width Percentage</key>
+			<integer>-1</integer>
 			<key>Window Type</key>
-			<integer>8</integer>
+			<integer>9</integer>
 			<key>Working Directory</key>
 			<string>/Users/lpjharri</string>
 		</dict>
@@ -11977,7 +11981,7 @@
 				<string>1</string>
 			</dict>
 			<key>Bonjour Service Address</key>
-			<string>192.168.86.54</string>
+			<string>192.168.86.34</string>
 			<key>Bound Hosts</key>
 			<array/>
 			<key>Character Encoding</key>
@@ -11987,7 +11991,7 @@
 			<key>Columns</key>
 			<integer>120</integer>
 			<key>Command</key>
-			<string>ssh 192.168.86.54</string>
+			<string>ssh 192.168.86.34</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -12051,7 +12055,7 @@
 				<string>1</string>
 			</dict>
 			<key>Guid</key>
-			<string>D1087353-FDEB-4672-9253-127E2130B709</string>
+			<string>2E0FAC02-9D90-4786-B2CD-3AA919419328</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -13152,6 +13156,8 @@
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>ShowPaneTitles</key>
+	<true/>
+	<key>ShowPaneTitlesEvenIfOnlyOnePane</key>
 	<true/>
 	<key>SmartPlacement</key>
 	<true/>

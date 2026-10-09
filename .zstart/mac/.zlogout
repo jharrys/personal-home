@@ -2,3 +2,6 @@
 # This is used mainly to clear and reset terminal settings.
 #
 # I leave it intentionally blank but for remembering zsh's process.
+
+[[ -r ${ZSTART:-~/.zstart}/zdebug.zsh ]] && source ${ZSTART:-~/.zstart}/zdebug.zsh
+zdebug '$ZDOTDIR/.zlogout -- login shell exiting'

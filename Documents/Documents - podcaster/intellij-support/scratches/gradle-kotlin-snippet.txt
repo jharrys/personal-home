@@ -1,0 +1,34 @@
+// gradle.kts finding jar artifact for project
+// unpacking said artifact into target directory
+tasks.register<Copy>("prepareArtifactForDockerizing") {
+    group = "Application"
+    description = "Copy artifact to target and explode to help anthill dockerize jar in layers."
+
+    from(zipTree(configurations.getByName("bootArchives").artifacts.files.singleFile))
+    into("$projectDir/target")
+}
+
+tasks.build {
+    finalizedBy("prepareArtifactForDockerizing")
+}
+
+// for authenticating to repositories
+// you will need to get your API token from JFrog or whatever you use
+// in the gradle file you will not store your credentials, but reference them from
+// your ~/.gradle/gradle.properties - you will hard code your mavenUser and mavenPassword here
+// with these exact variables.
+
+// then in your gradle.build.kts file you will reference those same variables as so.
+val mavenUser: String by project
+val mavenPassword: String by project
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri("https://icsrepo.churchofjesuschrist.org/artifactory/mvn")
+        credentials {
+            username = mavenUser
+            password = mavenPassword
+        }
+    }
+}

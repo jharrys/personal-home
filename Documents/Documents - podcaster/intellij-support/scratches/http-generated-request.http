@@ -1,0 +1,2 @@
+###
+GET http://localhost/yext/api/v1/missionary/areas/{{assignedUnitNumber}}
