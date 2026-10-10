@@ -138,7 +138,7 @@ unalias run-help &>/dev/null
 autoload run-help
 
 # Homebrew configuration
-
+export HOMEBREW_AUTO_UPDATE_SECS=86400 #24 hours
 export HOMEBREW_GITHUB_API_TOKEN=363214089b27eb70e2ac015ddf93cf9b5738864a
 
 # Miscellaneous options to run at the end
